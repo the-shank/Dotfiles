@@ -1,0 +1,3 @@
+- `git clone https://gitlab.com/shank/dotfiles.git`
+- `cd dotfiles`
+- `./install`
