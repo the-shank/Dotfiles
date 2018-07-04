@@ -1,0 +1,10 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.profile: profile
+    ~/.bashrc: bashrc
+    ~/.zshrc: zshrc
