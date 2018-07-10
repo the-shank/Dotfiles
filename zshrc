@@ -95,13 +95,3 @@ source $ZSH/oh-my-zsh.sh
 
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
-
-# asdf package manager
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-
-# added by Miniconda3 installer
-export PATH="/home/shank/Applications/miniconda3/bin:$PATH"
-
-# add custom binaries to PATH
-export PATH="/home/shank/.local/bin:$PATH"

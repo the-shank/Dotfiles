@@ -118,3 +118,6 @@ fi
 
 # added by Miniconda3 installer
 export PATH="/home/shank/Applications/miniconda3/bin:$PATH"
+
+# Only load Liquid Prompt in interactive shells, not from a script or from scp
+[[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
