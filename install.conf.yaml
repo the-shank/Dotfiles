@@ -1,10 +1,39 @@
+# dotfiles (using dotbot)
+#   [x] zsh
+#   [x] oh-my-zsh
+#   [x] liquidprompt
+#   [x] Create folders / Ensure folders exist
+#   [x]   ~/Code
+#   [x]   ~/Applications
+#   [x]   ~/.local/bin
+#   [x]   ~/.ansible/roles
+#   [x] config files
+#   [x]   .profile
+#   [x]   .gitconfig
+#   [x]   .bashrc
+#   [x]   .zshrc
+#   [ ] vscode plugins (https://stackoverflow.com/questions/34286515/how-to-install-visual-studio-code-extensions-from-command-line#34339780)
+#   [ ]   Gruntfuggly.activitusbar
+#   [ ]   JakeBecker.elixir-ls
+#   [ ]   ms-python.python
+#   [ ]   tomphilbin.gruvbox-themes
+#   [ ] vscode preferences
+
 - defaults:
     link:
       create: true
       relink: true
+      force: true
+    shell:
+      stderr: true
+
+- clean: ['~']
+
+- shell:
+  - [bash pre-install.sh, Running pre installation script]
 
 - link:
-    ~/.gitconfig: gitconfig
-    ~/.profile: profile
-    ~/.bashrc: bashrc
-    ~/.zshrc: zshrc
+    ~/.gitconfig:
+    ~/.profile:
+    ~/.bashrc:
+    ~/.zshrc:
