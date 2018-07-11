@@ -119,5 +119,9 @@ fi
 # added by Miniconda3 installer
 export PATH="/home/shank/Applications/miniconda3/bin:$PATH"
 
+# asdf package manager
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
