@@ -13,10 +13,14 @@
 #   [x]   .bashrc
 #   [x]   .zshrc
 #   [ ] vscode plugins (https://stackoverflow.com/questions/34286515/how-to-install-visual-studio-code-extensions-from-command-line#34339780)
+#   [ ]   felipecaputo.git-project-manager
 #   [ ]   Gruntfuggly.activitusbar
 #   [ ]   JakeBecker.elixir-ls
 #   [ ]   ms-python.python
+#   [ ]   ms-vscode.sublime-keybindings
+#   [ ]   PeterJausovec.vscode-docker
 #   [ ]   tomphilbin.gruvbox-themes
+#   [ ]   vscoss.vscode-ansible
 #   [ ] vscode preferences
 
 - defaults:
@@ -30,10 +34,13 @@
 - clean: ['~']
 
 - shell:
-  - [bash pre-install.sh, Running pre installation script]
+  - [bash pre_install.sh, Running pre installation script]
 
 - link:
     ~/.gitconfig:
     ~/.profile:
     ~/.bashrc:
     ~/.zshrc:
+
+- shell:
+  - [bash post_install.sh, Running post installation script]
