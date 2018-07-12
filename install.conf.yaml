@@ -46,5 +46,5 @@
   - [bash post_install.sh, Running post installation script]
 
 - link:
-    ~/.config/Code/settings.json: vscode/settings.json
-    ~/.config/Code/snippets: vscode/snippets
+    ~/.config/Code/User/settings.json: vscode/settings.json
+    ~/.config/Code/User/snippets: vscode/snippets
