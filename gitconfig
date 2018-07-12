@@ -3,3 +3,5 @@
 [user]
 	email = shashanksharma21@gmail.com
 	name = Shank
+[core]
+	editor = xed -w
