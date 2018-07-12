@@ -21,7 +21,7 @@
 #   [x]   PeterJausovec.vscode-docker
 #   [x]   tomphilbin.gruvbox-themes
 #   [x]   vscoss.vscode-ansible
-#   [ ] vscode preferences
+#   [x] vscode preferences
 
 - defaults:
     link:
@@ -44,3 +44,7 @@
 
 - shell:
   - [bash post_install.sh, Running post installation script]
+
+- link:
+    ~/.config/Code/settings.json: vscode/settings.json
+    ~/.config/Code/snippets: vscode/snippets
