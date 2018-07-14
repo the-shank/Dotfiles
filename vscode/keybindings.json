@@ -1,0 +1,11 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "shift+alt+right",
+        "command": "workbench.action.terminal.focusNext"
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "workbench.action.terminal.focusPrevious"
+    }
+]
