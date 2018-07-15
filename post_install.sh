@@ -7,6 +7,7 @@ EXTENSIONS=(
     "PeterJausovec.vscode-docker"
     "tomphilbin.gruvbox-themes"
     "vscoss.vscode-ansible"
+    "bungcip.better-toml"
 )
 
 for index in ${!EXTENSIONS[@]}; do

@@ -21,6 +21,7 @@
 #   [x]   PeterJausovec.vscode-docker
 #   [x]   tomphilbin.gruvbox-themes
 #   [x]   vscoss.vscode-ansible
+#   [x]   bungcip.better-toml
 #   [x] vscode preferences
 
 - defaults:
