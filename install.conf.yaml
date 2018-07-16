@@ -30,6 +30,7 @@
       relink: true
       force: true
     shell:
+      stdout: true
       stderr: true
 
 - clean: ['~']
