@@ -5,7 +5,7 @@ EXTENSIONS=(
     "ms-python.python"
     "ms-vscode.sublime-keybindings"
     "PeterJausovec.vscode-docker"
-    "tomphilbin.gruvbox-themes"
+    "jdinhlife.gruvbox"
     "vscoss.vscode-ansible"
     "bungcip.better-toml"
     "hangxingliu.vscode-nginx-conf-hint"

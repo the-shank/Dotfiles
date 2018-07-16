@@ -2,11 +2,11 @@
     // editor & workbench
     "editor.fontFamily": "Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Gruvbox Dark (Medium)",
     "editor.renderWhitespace": "all",
     "workbench.activityBar.visible": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.colorTheme": "Gruvbox Dark Medium",
 
     // git project manager
     "gitProjectManager.baseProjectsFolders": [
@@ -19,5 +19,5 @@
     "terminal.integrated.rendererType": "canvas",
 
     // python
-    "python.formatting.provider": "yapf"
+    "python.formatting.provider": "yapf",
 }
