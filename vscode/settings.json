@@ -17,5 +17,5 @@
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.rendererType": "canvas",
     // python
-    "python.formatting.provider": "yapf",
+    "python.formatting.provider": "black",
 }
