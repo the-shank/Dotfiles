@@ -44,10 +44,10 @@
     ~/.bashrc:
     ~/.zshrc:
 
-- shell:
-  - [bash post_install.sh, Running post installation script]
-
 - link:
     ~/.config/Code/User/settings.json: vscode/settings.json
     ~/.config/Code/User/keybindings.json: vscode/keybindings.json
     ~/.config/Code/User/snippets: vscode/snippets
+    
+- shell:
+  - [bash post_install.sh, Running post installation script]
