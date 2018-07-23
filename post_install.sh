@@ -9,6 +9,7 @@ EXTENSIONS=(
     "vscoss.vscode-ansible"
     "bungcip.better-toml"
     "hangxingliu.vscode-nginx-conf-hint"
+    "burkeholland.simple-timer"
 )
 
 for index in ${!EXTENSIONS[@]}; do
