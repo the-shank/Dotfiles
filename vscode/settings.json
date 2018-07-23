@@ -1,6 +1,7 @@
 {
     // editor & workbench
     "editor.fontFamily": "Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontSize": 12,
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "all",
     "editor.formatOnSave": true,
@@ -13,6 +14,7 @@
         "~/Code"
     ],
     // terminal
+    "terminal.integrated.fontSize": 12,
     "terminal.integrated.scrollback": 10000,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.rendererType": "canvas",
