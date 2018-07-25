@@ -6,6 +6,17 @@
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "all",
     "editor.formatOnSave": true,
+    // editor settings for [javascript] language
+    "[javascript]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.wordBasedSuggestions": false,
+        "editor.formatOnType": true,
+        "editor.trimAutoWhitespace": false,
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true
+    },
+    // workbench
     "workbench.editor.enablePreview": false,
     "workbench.activityBar.visible": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -22,4 +33,5 @@
     "terminal.integrated.rendererType": "canvas",
     // python
     "python.formatting.provider": "black",
+    "window.zoomLevel": 0,
 }
