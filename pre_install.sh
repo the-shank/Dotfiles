@@ -22,9 +22,15 @@ else
   echo "Oh-my-zsh already installed"
 fi
 # Change default shell
-if [ ! $SHELL = "/usr/bin/zsh" ]; then
+if [[ ! $SHELL = *zsh ]]; then
   echo 'Changing default shell to zsh'
-  chsh -s /usr/bin/zsh
+  if [[ $OSTYPE = darwin* ]]; then
+    # osx
+    chsh -s /usr/local/bin/zsh
+  else
+    # linux
+    chsh -s /usr/bin/zsh
+  fi
 else
   echo 'Already using zsh'
 fi
