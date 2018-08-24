@@ -11,6 +11,7 @@ EXTENSIONS=(
     "hangxingliu.vscode-nginx-conf-hint"
     "burkeholland.simple-timer"
     "octref.vetur"
+    "karyfoundation.theme-karyfoundation-themes"
 )
 
 for index in ${!EXTENSIONS[@]}; do
