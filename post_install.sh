@@ -10,6 +10,7 @@ EXTENSIONS=(
     "bungcip.better-toml"
     "hangxingliu.vscode-nginx-conf-hint"
     "burkeholland.simple-timer"
+    "octref.vetur"
 )
 
 for index in ${!EXTENSIONS[@]}; do

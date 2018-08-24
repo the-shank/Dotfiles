@@ -1,7 +1,7 @@
 {
     // editor & workbench
     "editor.fontFamily": "Fira Code, Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.fontSize": 13,
+    "editor.fontSize": 12,
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "all",
@@ -26,8 +26,8 @@
         "~/Code"
     ],
     // terminal
-    "terminal.integrated.fontFamily": "Ubuntu Mono, Consolas, Source Code Pro",
-    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontFamily": "Fira Code, Ubuntu Mono, Consolas, Source Code Pro",
+    "terminal.integrated.fontSize": 12,
     "terminal.integrated.scrollback": 10000,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.rendererType": "canvas",

@@ -49,5 +49,5 @@
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
     ~/Library/Application Support/Code/User/snippets: vscode/snippets
     
-# - shell:
-#   - [bash post_install.sh, Running post installation script]
+- shell:
+  - [bash post_install.sh, Running post installation script]
