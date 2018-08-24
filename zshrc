@@ -94,7 +94,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # added by Miniconda3 installer
-export PATH="/home/shank/Applications/miniconda3/bin:$PATH"
+if [[ $OSTYPE = darwin* ]]; then
+  export PATH="/usr/local/miniconda3/bin:$PATH"
+else
+  export PATH="/home/shank/Applications/miniconda3/bin:$PATH"
+fi
 
 # asdf package manager
 . $HOME/.asdf/asdf.sh
