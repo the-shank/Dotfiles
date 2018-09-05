@@ -39,7 +39,7 @@
   - [bash pre_install.sh, Running pre installation script]
 
 - link:
-    ~/.gitconfig:
+    ~/.gitconfig: gitconfig.osx
     ~/.profile:
     ~/.bashrc:
     ~/.zshrc:
