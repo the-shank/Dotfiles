@@ -93,6 +93,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# profile
+source ~/.profile
+
 # added by Miniconda3 installer
 if [[ $OSTYPE = darwin* ]]; then
   export PATH="/usr/local/miniconda3/bin:$PATH"
