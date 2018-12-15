@@ -117,7 +117,9 @@ if ! shopt -oq posix; then
 fi
 
 # added by Miniconda3 installer
-export PATH="/home/shank/Applications/miniconda3/bin:$PATH"
+. /home/shank/Applications/miniconda3/etc/profile.d/conda.sh
+conda activate
+# export PATH="/home/shank/Applications/miniconda3/bin:$PATH"
 
 # asdf package manager
 . $HOME/.asdf/asdf.sh
