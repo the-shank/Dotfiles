@@ -96,14 +96,14 @@ source $ZSH/oh-my-zsh.sh
 # profile
 source ~/.profile
 
-# added by Miniconda3 installer
-. /home/shank/Applications/miniconda3/etc/profile.d/conda.sh
-conda activate
-# if [[ $OSTYPE = darwin* ]]; then
-#   export PATH="/usr/local/miniconda3/bin:$PATH"
-# else
-#   export PATH="/home/shank/Applications/miniconda3/bin:$PATH"
-# fi
+# miniconda
+if [[ $OSTYPE = darwin* ]]; then
+  . /usr/local/miniconda3/etc/profile.d/conda.sh
+  conda activate
+else
+  . /home/shank/Applications/miniconda3/etc/profile.d/conda.sh
+  conda activate
+fi
 
 # asdf package manager
 . $HOME/.asdf/asdf.sh
@@ -114,7 +114,3 @@ source ~/.aliases
 
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
-
-# activate default conda env
-. /usr/local/miniconda3/etc/profile.d/conda.sh
-conda activate
