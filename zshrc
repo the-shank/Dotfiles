@@ -97,11 +97,13 @@ source $ZSH/oh-my-zsh.sh
 source ~/.profile
 
 # added by Miniconda3 installer
-if [[ $OSTYPE = darwin* ]]; then
-  export PATH="/usr/local/miniconda3/bin:$PATH"
-else
-  export PATH="/home/shank/Applications/miniconda3/bin:$PATH"
-fi
+. /home/shank/Applications/miniconda3/etc/profile.d/conda.sh
+conda activate
+# if [[ $OSTYPE = darwin* ]]; then
+#   export PATH="/usr/local/miniconda3/bin:$PATH"
+# else
+#   export PATH="/home/shank/Applications/miniconda3/bin:$PATH"
+# fi
 
 # asdf package manager
 . $HOME/.asdf/asdf.sh

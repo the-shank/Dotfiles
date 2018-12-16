@@ -34,4 +34,5 @@
     // python
     "python.formatting.provider": "black",
     "window.zoomLevel": 0,
+    "editor.renderControlCharacters": true,
 }
