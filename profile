@@ -28,3 +28,8 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+# set PATH to include ~/.mix
+if [ -d "$HOME/.mix" ] ; then
+    PATH="$HOME/.mix:$PATH"
+fi
