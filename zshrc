@@ -116,5 +116,5 @@ source ~/.aliases
 [[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
 
 # activate default conda env
-. /usr/local/miniconda3/etc/profile.d/conda.sh
-conda activate
+# . /usr/local/miniconda3/etc/profile.d/conda.sh
+# conda activate
