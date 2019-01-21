@@ -3,9 +3,7 @@
     "editor.fontFamily": "Fira Code, Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontSize": 13,
     "editor.fontLigatures": true,
-    "editor.minimap.enabled": false,
     "editor.renderWhitespace": "all",
-    "editor.formatOnSave": true,
     // editor settings for [javascript] language
     "[javascript]": {
         "editor.insertSpaces": true,
@@ -20,7 +18,7 @@
     "workbench.editor.enablePreview": false,
     "workbench.activityBar.visible": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.colorTheme": "Kary Pro Colors － Light",
+    "workbench.colorTheme": "Gruvbox Dark Hard",
     // git project manager
     "gitProjectManager.baseProjectsFolders": [
         "~/Code"
@@ -35,4 +33,14 @@
     "python.formatting.provider": "black",
     "window.zoomLevel": 0,
     "editor.renderControlCharacters": true,
+    "editor.formatOnSave": true,
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+    },
+    "editor.suggestOnTriggerCharacters": false,
+    "elixirLS.suggestSpecs": false,
+    "editor.parameterHints.enabled": false,
+    "editor.minimap.maxColumn": 100,
 }
