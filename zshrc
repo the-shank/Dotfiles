@@ -115,5 +115,5 @@ source ~/.aliases
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
 
-# enable iex history
+# enable IEx history
 export ERL_AFLAGS="-kernel shell_history enabled"
