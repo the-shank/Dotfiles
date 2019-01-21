@@ -7,3 +7,7 @@
 	editor = xed -w
 [color]
 	ui = auto
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
