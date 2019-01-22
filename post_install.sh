@@ -25,6 +25,7 @@ function vscode_setup()
         "bungcip.better-toml"               # Better TOML
         "PeterJausovec.vscode-docker"       # Docker
         "JakeBecker.elixir-ls"              # ElixirLS
+        "pgourlain.erlang"                  # Erlang
         "felipecaputo.git-project-manager"  # Git Project Manager
         "jdinhlife.gruvbox"                 # Gruvbox Theme
         "karyfoundation.theme-karyfoundation-themes"    # Kary Pro Colors
