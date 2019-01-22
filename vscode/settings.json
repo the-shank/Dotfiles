@@ -18,7 +18,7 @@
     "workbench.editor.enablePreview": false,
     "workbench.activityBar.visible": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "workbench.colorTheme": "Gruvbox Dark Medium",
     // git project manager
     "gitProjectManager.baseProjectsFolders": [
         "~/Code"
