@@ -1,10 +1,10 @@
 # tree
 alias tree="tree -C"
-alias t="tree"
+alias tree1="tree -L 1"
 alias tree2="tree -L 2"
 alias tree3="tree -L 3"
 alias tree4="tree -L 4"
-alias t1="t"
+alias t1="tree1"
 alias t2="tree2"
 alias t3="tree3"
 alias t4="tree4"
