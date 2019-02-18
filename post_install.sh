@@ -26,6 +26,7 @@ function vscode_setup()
         "PeterJausovec.vscode-docker"       # Docker
         "JakeBecker.elixir-ls"              # ElixirLS
         "pgourlain.erlang"                  # Erlang
+        "sleistner.vscode-fileutils"        # File Utils
         "felipecaputo.git-project-manager"  # Git Project Manager
         "jdinhlife.gruvbox"                 # Gruvbox Theme
         "karyfoundation.theme-karyfoundation-themes"    # Kary Pro Colors
