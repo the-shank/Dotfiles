@@ -1,7 +1,6 @@
 {
     // editor & workbench
-    "editor.fontFamily": "Fira Code, Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.fontSize": 13,
+    "editor.fontFamily": "Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
     "editor.renderWhitespace": "all",
     // editor settings for [javascript] language
@@ -24,8 +23,7 @@
         "~/Code"
     ],
     // terminal
-    "terminal.integrated.fontFamily": "Fira Code, Ubuntu Mono, Consolas, Source Code Pro",
-    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontFamily": "Ubuntu Mono, Consolas, Source Code Pro",
     "terminal.integrated.scrollback": 10000,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.rendererType": "canvas",
@@ -41,6 +39,8 @@
     // },
     // "editor.suggestOnTriggerCharacters": false,
     // "elixirLS.suggestSpecs": false,
-    // "editor.parameterHints.enabled": false,
+    "editor.parameterHints.enabled": false,
     "editor.minimap.maxColumn": 100,
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 15,
 }
