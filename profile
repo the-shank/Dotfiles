@@ -29,7 +29,10 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# set PATH to include ~/.mix
+# set PATH to include ~/.mix and ~/.mix/escripts
 if [ -d "$HOME/.mix" ] ; then
     PATH="$HOME/.mix:$PATH"
+fi
+if [ -d "$HOME/.mix/escripts" ] ; then
+    PATH="$HOME/.mix/escripts:$PATH"
 fi

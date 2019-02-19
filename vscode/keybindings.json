@@ -11,5 +11,9 @@
     {
         "key": "ctrl+alt+cmd+t",
         "command": "workbench.action.terminal.focusPrevious"
+    },
+    {
+        "key": "ctrl+alt+d",
+        "command": "editor.action.addSelectionToPreviousFindMatch"
     }
 ]
