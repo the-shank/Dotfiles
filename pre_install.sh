@@ -39,6 +39,21 @@ fi
 echo "Creating required directories"
 mkdir -p ~/Applications ~/.local/bin ~/Code ~/.ansible/roles
 
+
+function spaceship_prompt() 
+{
+  # Powerline Fonts
+  sudo apt-get install -y fonts-powerline
+
+  # Symlink spaceship.zsh-theme to your oh-my-zsh custom themes directory
+  ZSH_CUSTOM=$HOME/.oh-my-zsh
+  ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+  # Set ZSH_THEME="spaceship" in your .zshrc
+  # taken care of in .zshrc
+}
+spaceship_prompt
+
 # # MINICONDA
 # if [[ `which python` != *"miniconda"* ]]; then
 #   echo "Miniconda not installed. Please install and retry."; exit 1

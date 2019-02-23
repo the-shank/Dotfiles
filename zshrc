@@ -7,7 +7,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -97,13 +98,16 @@ source $ZSH/oh-my-zsh.sh
 source ~/.profile
 
 # miniconda
-if [[ $OSTYPE = darwin* ]]; then
-  . /usr/local/miniconda3/etc/profile.d/conda.sh
-  conda activate
-else
-  . /home/shank/Applications/miniconda3/etc/profile.d/conda.sh
-  conda activate
-fi
+function conda_activate()
+{
+  if [[ $OSTYPE = darwin* ]]; then
+    . /usr/local/miniconda3/etc/profile.d/conda.sh
+    conda activate
+  else
+    . /home/shank/Applications/miniconda3/etc/profile.d/conda.sh
+    conda activate
+  fi
+}
 
 # asdf package manager
 . $HOME/.asdf/asdf.sh
@@ -111,9 +115,6 @@ fi
 
 # aliases
 source ~/.aliases
-
-# Only load Liquid Prompt in interactive shells, not from a script or from scp
-[[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
 
 # enable IEx history
 export ERL_AFLAGS="-kernel shell_history enabled"
