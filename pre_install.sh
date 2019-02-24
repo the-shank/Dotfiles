@@ -35,6 +35,14 @@ else
     echo 'Already using zsh'
 fi
 
+# ZSH: autosuggestinos
+if [ -e ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ]; then
+    echo "zsh-autosuggestions directory already exists"
+else
+    echo "downloading zsh-autosuggestions"
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+fi
+
 # CREATE DIRECTORIES
 echo "Creating required directories"
 mkdir -p ~/Applications ~/.local/bin ~/Code ~/.ansible/roles
