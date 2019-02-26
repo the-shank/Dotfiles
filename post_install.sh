@@ -27,6 +27,7 @@ function vscode_setup()
             "Gruntfuggly.activitusbar"          # Activitus Bar
             "vscoss.vscode-ansible"             # Ansible
             "bungcip.better-toml"               # Better TOML
+            "alefragnani.bookmarks"             # Bookmarks
             "PeterJausovec.vscode-docker"       # Docker
             "JakeBecker.elixir-ls"              # ElixirLS
             "pgourlain.erlang"                  # Erlang
