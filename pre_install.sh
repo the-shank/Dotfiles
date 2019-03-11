@@ -39,7 +39,7 @@ fi
 echo "Creating required directories"
 mkdir -p ~/Applications ~/.local/bin ~/Code ~/.ansible/roles
 
-
+# SPACESHIP PROMPT for zsh
 function spaceship_prompt() 
 {
   # Powerline Fonts
@@ -53,14 +53,6 @@ function spaceship_prompt()
   # taken care of in .zshrc
 }
 spaceship_prompt
-
-# # MINICONDA
-# if [[ `which python` != *"miniconda"* ]]; then
-#   echo "Miniconda not installed. Please install and retry."; exit 1
-#   # TODO: install miniconda
-# else
-#   echo "Miniconda already installed"
-# fi
 
 # # VSCODE
 # if [[ ! -f `which code` ]]; then

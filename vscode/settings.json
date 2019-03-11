@@ -45,4 +45,6 @@
     "python.formatting.provider": "black",
     // elixir
     "elixirLS.suggestSpecs": false,
+    "workbench.sideBar.location": "right",
+    "workbench.statusBar.visible": true,
 }
