@@ -35,20 +35,10 @@
 
 - clean: ['~']
 
-- shell:
-  - [bash pre_install.sh, Running pre installation script]
-
 - link:
     ~/.gitconfig: gitconfig.osx
-    ~/.profile:
-    ~/.bashrc:
-    ~/.zshrc:
-    ~/.aliases:
 
 - link:
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
     ~/Library/Application Support/Code/User/snippets: vscode/snippets
-    
-- shell:
-  - [bash post_install.sh, Running post installation script]
