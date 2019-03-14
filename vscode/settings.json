@@ -1,6 +1,9 @@
 {
+    // window
+    "window.zoomLevel": 0,
     // editor
     "editor.fontFamily": "Fira Code, Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontSize": 13,
     "editor.fontLigatures": true,
     "editor.renderWhitespace": "all",
     "editor.parameterHints.enabled": false,
@@ -8,7 +11,6 @@
     "editor.minimap.enabled": false,
     "editor.renderControlCharacters": true,
     "editor.formatOnSave": true,
-    "editor.fontSize": 13,
     "editor.suggestOnTriggerCharacters": false,
     "editor.rulers": [
         80,
@@ -19,6 +21,8 @@
     "workbench.activityBar.visible": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.colorTheme": "Gruvbox Dark Medium",
+    "workbench.sideBar.location": "right",
+    "workbench.statusBar.visible": true,
     // explorer
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
@@ -45,6 +49,4 @@
     "python.formatting.provider": "black",
     // elixir
     "elixirLS.suggestSpecs": false,
-    "workbench.sideBar.location": "right",
-    "workbench.statusBar.visible": true,
 }
