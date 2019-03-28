@@ -28,6 +28,7 @@ function vscode_setup()
             "vscoss.vscode-ansible"             # Ansible
             "bungcip.better-toml"               # Better TOML
             "alefragnani.bookmarks"             # Bookmarks
+            "formulahendry.code-runner"         # Code Runner
             "PeterJausovec.vscode-docker"       # Docker
             "JakeBecker.elixir-ls"              # ElixirLS
             "pgourlain.erlang"                  # Erlang
