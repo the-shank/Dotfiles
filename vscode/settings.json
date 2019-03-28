@@ -19,6 +19,8 @@
     "workbench.activityBar.visible": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.colorTheme": "Gruvbox Dark Medium",
+    "workbench.statusBar.visible": true,
+    "workbench.sideBar.location": "right",
     // explorer
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
@@ -43,8 +45,6 @@
     },
     // python
     "python.formatting.provider": "yapf",
-    "workbench.sideBar.location": "right",
-    "workbench.statusBar.visible": true,
     "python.linting.mypyEnabled": true,
     "python.pythonPath": "/home/shank/Applications/miniconda3/bin/python",
 }
