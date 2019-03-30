@@ -35,7 +35,9 @@ function vscode_setup()
             "sleistner.vscode-fileutils"        # File Utils
             "felipecaputo.git-project-manager"  # Git Project Manager
             "jdinhlife.gruvbox"                 # Gruvbox Theme
+            "hoangnc.io-run"                    # IORun (for competitive programming)
             "karyfoundation.theme-karyfoundation-themes"    # Kary Pro Colors
+            "shengchen.vscode-leetcode"                     # LeetCode
             "hangxingliu.vscode-nginx-conf-hint"            # nginx.conf hint
             "passionkind.prettier-vscode-with-tabs"         # Prettier - JavaScript Formatter
             "ms-python.python"                  # Python
