@@ -39,6 +39,7 @@ function vscode_setup()
             "hangxingliu.vscode-nginx-conf-hint"            # nginx.conf hint
             "passionkind.prettier-vscode-with-tabs"         # Prettier - JavaScript Formatter
             "ms-python.python"                  # Python
+            "rust-lang.rust"                    # Rust
             "burkeholland.simple-timer"         # Simple Timer
             "ms-vscode.sublime-keybindings"     # Sublime Text Keymap and Settings
             "octref.vetur"                      # Vetur
