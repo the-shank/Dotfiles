@@ -36,3 +36,8 @@ fi
 if [ -d "$HOME/.mix/escripts" ] ; then
     PATH="$HOME/.mix/escripts:$PATH"
 fi
+
+# rust: cargo
+if [ -d "$HOME/.cargo/bin" ] ; then
+    PATH="$HOME/.cargo/bin:$PATH"
+fi

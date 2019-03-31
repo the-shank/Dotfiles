@@ -21,8 +21,8 @@
     "workbench.activityBar.visible": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.colorTheme": "Gruvbox Dark Medium",
-    "workbench.sideBar.location": "right",
     "workbench.statusBar.visible": true,
+    "workbench.sideBar.location": "right",
     // explorer
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
@@ -46,7 +46,7 @@
         "files.insertFinalNewline": true
     },
     // python
-    "python.formatting.provider": "black",
-    // elixir
-    "elixirLS.suggestSpecs": false,
+    "python.formatting.provider": "yapf",
+    "python.linting.mypyEnabled": true,
+    // "python.pythonPath": "/home/shank/Applications/miniconda3/bin/python",
 }

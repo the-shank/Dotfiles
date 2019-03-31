@@ -28,16 +28,20 @@ function vscode_setup()
             "vscoss.vscode-ansible"             # Ansible
             "bungcip.better-toml"               # Better TOML
             "alefragnani.bookmarks"             # Bookmarks
+            "formulahendry.code-runner"         # Code Runner
             "PeterJausovec.vscode-docker"       # Docker
             "JakeBecker.elixir-ls"              # ElixirLS
             "pgourlain.erlang"                  # Erlang
             "sleistner.vscode-fileutils"        # File Utils
             "felipecaputo.git-project-manager"  # Git Project Manager
             "jdinhlife.gruvbox"                 # Gruvbox Theme
+            "hoangnc.io-run"                    # IORun (for competitive programming)
             "karyfoundation.theme-karyfoundation-themes"    # Kary Pro Colors
+            "shengchen.vscode-leetcode"                     # LeetCode
             "hangxingliu.vscode-nginx-conf-hint"            # nginx.conf hint
             "passionkind.prettier-vscode-with-tabs"         # Prettier - JavaScript Formatter
             "ms-python.python"                  # Python
+            "rust-lang.rust"                    # Rust
             "burkeholland.simple-timer"         # Simple Timer
             "ms-vscode.sublime-keybindings"     # Sublime Text Keymap and Settings
             "octref.vetur"                      # Vetur
