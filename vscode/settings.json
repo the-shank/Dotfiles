@@ -20,7 +20,7 @@
     "workbench.editor.enablePreview": false,
     "workbench.activityBar.visible": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.colorTheme": "Gruvbox Dark Medium",
+    "workbench.colorTheme": "Base16 Light Atelier Forest",
     "workbench.statusBar.visible": true,
     "workbench.sideBar.location": "right",
     // explorer
@@ -48,5 +48,5 @@
     // python
     "python.formatting.provider": "yapf",
     "python.linting.mypyEnabled": true,
-    // "python.pythonPath": "/home/shank/Applications/miniconda3/bin/python",
+    "python.pythonPath": "/home/shank/Applications/miniconda3/bin/python",
 }

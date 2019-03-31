@@ -26,8 +26,10 @@ function vscode_setup()
     RequiredExtensions=(
             "Gruntfuggly.activitusbar"          # Activitus Bar
             "vscoss.vscode-ansible"             # Ansible
+            "andrsdc.base16-themes"             # Base16 Themes
             "bungcip.better-toml"               # Better TOML
             "alefragnani.bookmarks"             # Bookmarks
+            "ms-vscode.cpptools"                # C/C++
             "formulahendry.code-runner"         # Code Runner
             "PeterJausovec.vscode-docker"       # Docker
             "JakeBecker.elixir-ls"              # ElixirLS
