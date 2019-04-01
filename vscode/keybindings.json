@@ -9,11 +9,11 @@
         "command": "workbench.action.focusActiveEditorGroup"
     },
     {
-        "key": "ctrl+alt+cmd+t",
-        "command": "workbench.action.terminal.focusPrevious"
-    },
-    {
         "key": "ctrl+alt+d",
         "command": "editor.action.addSelectionToPreviousFindMatch"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm"
     }
 ]
