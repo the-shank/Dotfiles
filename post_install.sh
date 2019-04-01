@@ -47,6 +47,7 @@ function vscode_setup()
             "burkeholland.simple-timer"         # Simple Timer
             "ms-vscode.sublime-keybindings"     # Sublime Text Keymap and Settings
             "octref.vetur"                      # Vetur
+            "wakatime.vscode-wakatime"          # WakaTime
         )
 
     for extn in ${RequiredExtensions[@]}; do
