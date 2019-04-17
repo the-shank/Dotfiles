@@ -1,6 +1,7 @@
 {
     // window
     "window.zoomLevel": 0,
+    "window.menuBarVisibility": "toggle",
     // editor
     "editor.fontFamily": "Fira Code, Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontSize": 13,
@@ -18,14 +19,16 @@
     ],
     // workbench
     "workbench.editor.enablePreview": false,
-    "workbench.activityBar.visible": false,
+    // "workbench.activityBar.visible": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.colorTheme": "Base16 Light Atelier Forest",
+    "workbench.colorTheme": "Gruvbox Dark Medium",
     "workbench.statusBar.visible": true,
     "workbench.sideBar.location": "right",
     // explorer
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
+    // extensions
+    "extensions.autoUpdate": false,
     // git project manager
     "gitProjectManager.baseProjectsFolders": [
         "~/Code"
@@ -49,4 +52,6 @@
     "python.formatting.provider": "yapf",
     "python.linting.mypyEnabled": true,
     "python.pythonPath": "/home/shank/Applications/miniconda3/bin/python",
+    // leetcode
+    "leetcode.defaultLanguage": "python3",
 }
