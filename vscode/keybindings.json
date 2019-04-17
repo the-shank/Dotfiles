@@ -15,5 +15,20 @@
     {
         "key": "ctrl+shift+g",
         "command": "-workbench.view.scm"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "io-run.run",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-io-run.run"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "workbench.action.tasks.runTask",
+        "args": "rustfmt",
+        "when": "editorTextFocus"
     }
 ]
