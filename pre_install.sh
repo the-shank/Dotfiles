@@ -45,7 +45,7 @@ fi
 
 # CREATE DIRECTORIES
 echo "Creating required directories"
-mkdir -p ~/Applications ~/.local/bin ~/Code ~/.ansible/roles
+mkdir -p ~/Applications ~/.local/bin ~/Code ~/.ansible/roles ~/Code/UTILS/ANSIBLE-ROLES
 
 # POWERLINE FONTS
 function install_powerline_fonts() {

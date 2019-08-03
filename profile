@@ -41,3 +41,8 @@ fi
 if [ -d "$HOME/.cargo/bin" ] ; then
     PATH="$HOME/.cargo/bin:$PATH"
 fi
+
+# ansible-galaxy
+if [ -d "$HOME/Code/UTILS/ANSIBLE-ROLES" ] ; then
+    export ANSIBLE_ROLES_PATH="$HOME/Code/UTILS/ANSIBLE-ROLES"
+fi
