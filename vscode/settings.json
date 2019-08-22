@@ -1,67 +1,68 @@
 {
-    // window
-    "window.zoomLevel": 0,
-    "window.menuBarVisibility": "toggle",
-    // editor
-    "editor.fontFamily": "Monoid, Fira Code, Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.fontLigatures": true,
-    "editor.renderWhitespace": "all",
-    "editor.parameterHints.enabled": false,
-    "editor.minimap.maxColumn": 100,
-    "editor.minimap.enabled": false,
-    "editor.renderControlCharacters": true,
-    "editor.formatOnSave": true,
-    "editor.suggestOnTriggerCharacters": false,
-    "editor.lineHeight": 18,
-    "editor.fontSize": 11,
-    "editor.rulers": [
-        80,
-        100
-    ],
-    // workbench
-    "workbench.editor.enablePreview": false,
-    // "workbench.activityBar.visible": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.colorTheme": "Gruvbox Dark Medium",
-    "workbench.statusBar.visible": true,
-    "workbench.sideBar.location": "right",
-    "workbench.colorTheme": "Atom One Dark",
-    // explorer
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    // extensions
-    "extensions.autoUpdate": false,
-    // git project manager
-    "gitProjectManager.baseProjectsFolders": [
-        "~/Code"
-    ],
-    // terminal
-    "terminal.integrated.fontFamily": "Ubuntu Mono, Consolas, Source Code Pro",
-    "terminal.integrated.scrollback": 10000,
-    "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.rendererType": "canvas",
-    "terminal.integrated.fontSize": 13,
-    // editor settings for [javascript] language
-    "[javascript]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.wordBasedSuggestions": false,
-        "editor.formatOnType": true,
-        "editor.trimAutoWhitespace": false,
-        "files.trimTrailingWhitespace": true,
-        "files.insertFinalNewline": true
-    },
-    // python
-    "python.formatting.provider": "yapf",
-    "python.linting.mypyEnabled": true,
-    "python.pythonPath": "/home/shank/Applications/miniconda3/bin/python",
-    "python.condaPath": "conda",
-    // leetcode
-    "leetcode.defaultLanguage": "rust",
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "java.configuration.checkProjectSettingsExclusions": false,
-    "leetcode.hint.commandShortcut": false,
-    "leetcode.hint.configWebviewMarkdown": false,
-    "leetcode.hint.commentDescription": false,
+	// window
+	"window.zoomLevel": 0,
+	"window.menuBarVisibility": "toggle",
+	// editor
+	"editor.fontFamily": "Monoid, Fira Code, Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+	"editor.fontLigatures": true,
+	"editor.renderWhitespace": "all",
+	"editor.parameterHints.enabled": false,
+	"editor.minimap.maxColumn": 100,
+	"editor.minimap.enabled": false,
+	"editor.renderControlCharacters": true,
+	"editor.formatOnSave": true,
+	"editor.suggestOnTriggerCharacters": false,
+	"editor.lineHeight": 18,
+	"editor.suggestSelection": "first",
+	"editor.rulers": [
+		80,
+		100
+	],
+	// workbench
+	"workbench.editor.enablePreview": false,
+	// "workbench.activityBar.visible": false,
+	"workbench.editor.enablePreviewFromQuickOpen": false,
+	"workbench.statusBar.visible": true,
+	"workbench.colorTheme": "Atom One Dark",
+	"workbench.activityBar.visible": false,
+	"workbench.sideBar.location": "right",
+	// explorer
+	"explorer.confirmDragAndDrop": false,
+	"explorer.confirmDelete": false,
+	// extensions
+	"extensions.autoUpdate": false,
+	// git project manager
+	"gitProjectManager.baseProjectsFolders": [
+		"~/Code"
+	],
+	// terminal
+	"terminal.integrated.fontFamily": "Fira Code, Ubuntu Mono, Consolas, Source Code Pro",
+	"terminal.integrated.scrollback": 10000,
+	"terminal.integrated.cursorBlinking": true,
+	"terminal.integrated.rendererType": "canvas",
+	"terminal.integrated.fontSize": 13,
+	// editor settings for [javascript] language
+	"[javascript]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+		"editor.wordBasedSuggestions": false,
+		"editor.formatOnType": true,
+		"editor.trimAutoWhitespace": false,
+		"files.trimTrailingWhitespace": true,
+		"files.insertFinalNewline": true
+	},
+	// python
+	"python.formatting.provider": "yapf",
+	"python.linting.mypyEnabled": true,
+	"python.pythonPath": "/home/shank/Applications/miniconda3/bin/python",
+	"python.condaPath": "conda",
+	// java
+	"java.configuration.checkProjectSettingsExclusions": false,
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	// leetcode
+	"leetcode.defaultLanguage": "rust",
+	"leetcode.workspaceFolder": "/Users/shank/Code/ALGO/competitive_programming/leetcode",
+	"leetcode.hint.commandShortcut": false,
+	"leetcode.hint.configWebviewMarkdown": false,
+	"leetcode.hint.commentDescription": false,
 }

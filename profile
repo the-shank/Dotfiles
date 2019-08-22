@@ -46,3 +46,26 @@ fi
 if [ -d "$HOME/Code/UTILS/ANSIBLE-ROLES" ] ; then
     export ANSIBLE_ROLES_PATH="$HOME/Code/UTILS/ANSIBLE-ROLES"
 fi
+
+# Java
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home
+
+# Apache Derby
+export DERBY_INSTALL="$HOME/Applications/db-derby-10.15.1.3-bin"
+if [ -d "$DERBY_INSTALL/bin" ] ; then
+    export PATH="$PATH:$DERBY_INSTALL/bin"
+fi
+if [ -d "$DERBY_INSTALL/lib" ] ; then
+    export CLASSPATH="$DERBY_INSTALL/lib/*"
+fi
+
+# SimpleDB
+export SIMPLEDB_HOME="$HOME/Applications/SimpleDB_2.10"
+if [ -d "$SIMPLEDB_HOME" ] ; then
+    export CLASSPATH=".:$SIMPLEDB_HOME/bin:$CLASSPATH"
+fi
+
+# Homebrew
+if [ -d "/usr/local/sbin" ] ; then
+    export PATH="/usr/local/sbin:$PATH"
+fi
