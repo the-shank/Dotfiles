@@ -33,5 +33,9 @@
     {
         "key": "ctrl+shift+g",
         "command": "-workbench.view.scm"
-    }
+    },
+    {
+        "key": "shift+cmd+i",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
 ]
