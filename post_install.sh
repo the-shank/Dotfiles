@@ -24,30 +24,44 @@ function vscode_setup()
     InstalledExtensions=$(code --list-extensions)
 
     RequiredExtensions=(
-            "Gruntfuggly.activitusbar"          # Activitus Bar
-            "vscoss.vscode-ansible"             # Ansible
-            "andrsdc.base16-themes"             # Base16 Themes
-            "bungcip.better-toml"               # Better TOML
-            "alefragnani.bookmarks"             # Bookmarks
-            "ms-vscode.cpptools"                # C/C++
-            "formulahendry.code-runner"         # Code Runner
-            "PeterJausovec.vscode-docker"       # Docker
-            "JakeBecker.elixir-ls"              # ElixirLS
-            "pgourlain.erlang"                  # Erlang
-            "sleistner.vscode-fileutils"        # File Utils
-            "felipecaputo.git-project-manager"  # Git Project Manager
-            "jdinhlife.gruvbox"                 # Gruvbox Theme
-            "hoangnc.io-run"                    # IORun (for competitive programming)
-            "karyfoundation.theme-karyfoundation-themes"    # Kary Pro Colors
-            "shengchen.vscode-leetcode"                     # LeetCode
+            # LANGUAGES, FRAMEWORKS, TOOLS
+            "vscoss.vscode-ansible"                         # Ansible
+            "bungcip.better-toml"                           # Better TOML
+            "ms-vscode.cpptools"                            # C/C++
+            "ms-azuretools.vscode-docker"                   # Docker
+            "JakeBecker.elixir-ls"                          # ElixirLS
+            "pgourlain.erlang"                              # Erlang
             "hangxingliu.vscode-nginx-conf-hint"            # nginx.conf hint
+            "ms-python.python"                              # Python
+            "esbenp.prettier-vscode"                        # Prettier - Code Formatter
             "passionkind.prettier-vscode-with-tabs"         # Prettier - JavaScript Formatter
-            "ms-python.python"                  # Python
-            "rust-lang.rust"                    # Rust
-            "burkeholland.simple-timer"         # Simple Timer
-            "ms-vscode.sublime-keybindings"     # Sublime Text Keymap and Settings
-            "octref.vetur"                      # Vetur
-            "wakatime.vscode-wakatime"          # WakaTime
+            "redhat.java"                                   # Java
+            "VisualStudioExptTeam.vscodeintellicode"        # Java
+            "vscjava.vscode-java-debug"                     # Java
+            "vscjava.vscode-java-dependency"                # Java
+            "vscjava.vscode-java-pack"                      # Java
+            "vscjava.vscode-java-test"                      # Java
+            "vscjava.vscode-maven"                          # Java
+            "rust-lang.rust"                                # Rust
+            "octref.vetur"                                  # Vetur
+
+            # UTILS
+            "formulahendry.code-runner"                     # Code Runner
+            "felipecaputo.git-project-manager"              # Git Project Manager
+            "hoangnc.io-run"                                # IORun (for competitive programming)
+            "burkeholland.simple-timer"                     # Simple Timer
+            "wakatime.vscode-wakatime"                      # WakaTime
+            "Gruntfuggly.activitusbar"                      # Activitus Bar
+            "ms-vscode.sublime-keybindings"                 # Sublime Text Keymap and Settings
+            "alefragnani.bookmarks"                         # Bookmarks
+            "sleistner.vscode-fileutils"                    # File Utils
+            "shengchen.vscode-leetcode"                     # LeetCode
+
+            # THEMES
+            "akamud.vscode-theme-onedark"                   # Atom One Dark
+            "tomphilbin.gruvbox-themes"                     # Gruvbox
+            "arcticicestudio.nord-visual-studio-code"       # Nord
+            "ms-vscode.Theme-TomorrowKit"                   # Tomorrow
         )
 
     for extn in ${RequiredExtensions[@]}; do
