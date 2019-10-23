@@ -3,8 +3,8 @@
     "window.zoomLevel": 0,
     "window.menuBarVisibility": "toggle",
     // editor
-    "editor.fontFamily": "Fira Code, Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontSize": 13,
+    "editor.fontFamily": "Hasklig, Fira Code, Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
     "editor.renderWhitespace": "all",
     "editor.parameterHints.enabled": false,
@@ -21,7 +21,7 @@
     "workbench.editor.enablePreview": false,
     // "workbench.activityBar.visible": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.colorTheme": "Gruvbox Dark Medium",
+    "workbench.colorTheme": "Atom One Dark",
     "workbench.statusBar.visible": true,
     "workbench.sideBar.location": "right",
     // explorer
@@ -54,4 +54,6 @@
     "python.pythonPath": "/home/shank/Applications/miniconda3/bin/python",
     // leetcode
     "leetcode.defaultLanguage": "python3",
+    // elixir
+    "elixirLS.suggestSpecs": false,
 }

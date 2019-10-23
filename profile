@@ -41,3 +41,11 @@ fi
 if [ -d "$HOME/.cargo/bin" ] ; then
     PATH="$HOME/.cargo/bin:$PATH"
 fi
+
+# set PATH so it includes user's Android Studio bin if it exists
+if [ -d "$HOME/Applications/android-studio/bin" ] ; then
+    PATH="$HOME/Applications/android-studio/bin:$PATH"
+fi
+
+# notify when commands complete in the terminal
+source /usr/share/undistract-me/long-running.bash
