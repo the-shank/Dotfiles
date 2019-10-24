@@ -43,19 +43,24 @@ if [ -d "$HOME/.cargo/bin" ] ; then
 fi
 
 # set PATH so it includes user's Android Studio bin if it exists
-if [ -d "$HOME/Applications/android-studio/bin" ] ; then
+if [ -d "$HOME/Applications/android-studio/bin" ]; then
     PATH="$HOME/Applications/android-studio/bin:$PATH"
 fi
 
 # notify when commands complete in the terminal
-source /usr/share/undistract-me/long-running.bash
+if [ -f "/usr/share/undistract-me/long-running.bash" ]; then
+    source /usr/share/undistract-me/long-running.bash
+fi
+
 # ansible-galaxy
-if [ -d "$HOME/Code/UTILS/ANSIBLE-ROLES" ] ; then
+if [ -d "$HOME/Code/UTILS/ANSIBLE-ROLES" ]; then
     export ANSIBLE_ROLES_PATH="$HOME/Code/UTILS/ANSIBLE-ROLES"
 fi
 
 # Java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home
+if [ -d "/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home" ]; then
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home
+fi
 
 # Apache Derby
 export DERBY_INSTALL="$HOME/Applications/db-derby-10.15.1.3-bin"
