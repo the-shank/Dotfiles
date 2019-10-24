@@ -29,7 +29,7 @@
 	// git project manager
 	"gitProjectManager.baseProjectsFolders": ["~/Code"],
 	// terminal
-	"terminal.integrated.fontFamily": "Ubuntu Mono, Consolas, Source Code Pro",
+	"terminal.integrated.fontFamily": "Fira Code, Ubuntu Mono, Consolas, Source Code Pro",
 	"terminal.integrated.scrollback": 10000,
 	"terminal.integrated.cursorBlinking": true,
 	"terminal.integrated.rendererType": "canvas",
