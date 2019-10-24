@@ -109,7 +109,7 @@ function conda_activate()
     conda activate
   fi
 }
-conda_activate
+# conda_activate
 
 # asdf package manager
 . $HOME/.asdf/asdf.sh
