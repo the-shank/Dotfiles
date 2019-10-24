@@ -43,6 +43,7 @@ function vscode_setup()
             "vscjava.vscode-java-test"                      # Java
             "vscjava.vscode-maven"                          # Java
             "rust-lang.rust"                                # Rust
+            "vadimcn.vscode-lldb"                           # Rust - Debugging
             "octref.vetur"                                  # Vetur
 
             # UTILS
