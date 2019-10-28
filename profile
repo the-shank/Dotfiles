@@ -81,3 +81,6 @@ fi
 if [ -d "/usr/local/sbin" ] ; then
     export PATH="/usr/local/sbin:$PATH"
 fi
+
+# autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
