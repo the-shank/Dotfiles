@@ -3,7 +3,7 @@
 	"window.zoomLevel": 0,
 	"window.menuBarVisibility": "toggle",
 	// editor
-	"editor.fontFamily": "Fira Code, Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+	"editor.fontFamily": "Noto Sans Mono, Fira Code, Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
 	"editor.fontLigatures": true,
 	"editor.renderWhitespace": "all",
 	"editor.parameterHints.enabled": false,
@@ -29,7 +29,7 @@
 	// git project manager
 	"gitProjectManager.baseProjectsFolders": ["~/Code"],
 	// terminal
-	"terminal.integrated.fontFamily": "Fira Code, Ubuntu Mono, Consolas, Source Code Pro",
+	"terminal.integrated.fontFamily": "Noto Sans Mono, Fira Code, Ubuntu Mono, Consolas, Source Code Pro",
 	"terminal.integrated.scrollback": 10000,
 	"terminal.integrated.cursorBlinking": true,
 	"terminal.integrated.rendererType": "canvas",
@@ -59,6 +59,5 @@
 	"leetcode.hint.commandShortcut": false,
 	"leetcode.hint.configWebviewMarkdown": false,
 	"leetcode.hint.commentDescription": false,
-	"python.jediEnabled": false,
-	"editor.fontSize": 13
+	"python.jediEnabled": false
 }
