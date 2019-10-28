@@ -12,5 +12,6 @@ alias t4="tree4"
 # mit-scheme
 alias sicp="rlwrap scheme"
 
-# reset vivaldi on osx
+# reset vivaldi
 alias reset_vivaldi_osx="rm -rf \"/Users/shank/Library/Application Support/Vivaldi\""
+alias reset_vivaldi_linux="rm -rf /home/shank/.config/vivaldi/"
