@@ -1,41 +1,49 @@
 // Place your key bindings in this file to overwrite the defaults
 [
-    {
-        "key": "shift+alt+t",
-        "command": "workbench.action.terminal.focus"
-    },
-    {
-        "key": "shift+alt+e",
-        "command": "workbench.action.focusActiveEditorGroup"
-    },
-    {
-        "key": "ctrl+alt+cmd+t",
-        "command": "workbench.action.terminal.focusPrevious"
-    },
-    {
-        "key": "ctrl+alt+d",
-        "command": "editor.action.addSelectionToPreviousFindMatch"
-    },
-    {
-        "key": "shift+cmd+g",
-        "command": "-editor.action.previousMatchFindAction",
-        "when": "editorFocus"
-    },
-    {
-        "key": "shift+cmd+g",
-        "command": "-workbench.action.terminal.findPreviousTerminalFocus",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "shift+cmd+g",
-        "command": "workbench.view.scm"
-    },
-    {
-        "key": "ctrl+shift+g",
-        "command": "-workbench.view.scm"
-    },
-    {
-        "key": "shift+cmd+i",
-        "command": "workbench.action.terminal.toggleTerminal"
-    },
+	{
+		"key": "shift+alt+t",
+		"command": "workbench.action.terminal.focus"
+	},
+	{
+		"key": "shift+alt+e",
+		"command": "workbench.action.focusActiveEditorGroup"
+	},
+	{
+		"key": "ctrl+alt+cmd+t",
+		"command": "workbench.action.terminal.focusPrevious"
+	},
+	{
+		"key": "ctrl+alt+d",
+		"command": "editor.action.addSelectionToPreviousFindMatch"
+	},
+	{
+		"key": "shift+cmd+g",
+		"command": "-editor.action.previousMatchFindAction",
+		"when": "editorFocus"
+	},
+	{
+		"key": "shift+cmd+g",
+		"command": "-workbench.action.terminal.findPreviousTerminalFocus",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "shift+cmd+g",
+		"command": "workbench.view.scm"
+	},
+	{
+		"key": "ctrl+shift+g",
+		"command": "-workbench.view.scm"
+	},
+	{
+		"key": "shift+cmd+i",
+		"command": "workbench.action.terminal.toggleTerminal"
+	},
+	{
+		"key": "cmd+k t",
+		"command": "editor.action.insertSnippet",
+		"when": "editorTextFocus",
+		"args": {
+			"snippet": " [ $CURRENT_HOUR:$CURRENT_MINUTE ]"
+		}
+	}
 ]
