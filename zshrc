@@ -60,8 +60,11 @@ ZSH_THEME="spaceship"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  colored-man-pages
   git
   zsh-autosuggestions
+  vscode
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -120,3 +123,14 @@ source ~/.aliases
 
 # enable IEx history
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+# large history of commands
+HISTSIZE=10000000
+SAVEHIST=10000000
+
+# History command configuration    
+setopt HIST_IGNORE_ALL_DUPS # ignore duplicated commands history list
+setopt SHARE_HISTORY # share command history data
+
+# use peco for searching history
+source ~/.zsh/zsh-peco-history/zsh-peco-history.zsh
