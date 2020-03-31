@@ -50,7 +50,6 @@ function vscode_setup()
             "formulahendry.code-runner"                     # Code Runner
             "felipecaputo.git-project-manager"              # Git Project Manager
             "hoangnc.io-run"                                # IORun (for competitive programming)
-            "wakatime.vscode-wakatime"                      # WakaTime
             "Gruntfuggly.activitusbar"                      # Activitus Bar
             "ms-vscode.sublime-keybindings"                 # Sublime Text Keymap and Settings
             "alefragnani.bookmarks"                         # Bookmarks
