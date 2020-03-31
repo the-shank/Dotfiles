@@ -84,3 +84,9 @@ fi
 
 # autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+# git - editor
+export GIT_EDITOR=mousepad
+
+# fix shader stuttering on AMD GPU
+export RADV_PERFTEST=aco
