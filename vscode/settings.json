@@ -1,6 +1,6 @@
 {
 	// window
-	"window.zoomLevel": 0,
+	"window.zoomLevel": 0.9,
 	"window.menuBarVisibility": "toggle",
 	// editor
 	"editor.fontFamily": "Noto Sans Mono, Fira Code, Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
@@ -30,6 +30,7 @@
 	"gitProjectManager.baseProjectsFolders": ["~/Code"],
 	// terminal
 	"terminal.integrated.fontFamily": "Noto Sans Mono, Fira Code, Ubuntu Mono, Consolas, Source Code Pro",
+	"terminal.integrated.fontSize": 13,
 	"terminal.integrated.scrollback": 10000,
 	"terminal.integrated.cursorBlinking": true,
 	"terminal.integrated.rendererType": "canvas",
@@ -46,6 +47,7 @@
 	// elixir
 	"elixirLS.suggestSpecs": false,
 	// python
+	"python.jediEnabled": false,
 	"python.formatting.provider": "yapf",
 	"python.linting.mypyEnabled": true,
 	"python.pythonPath": "/home/shank/Applications/miniconda3/bin/python",
@@ -59,5 +61,5 @@
 	"leetcode.hint.commandShortcut": false,
 	"leetcode.hint.configWebviewMarkdown": false,
 	"leetcode.hint.commentDescription": false,
-	"python.jediEnabled": false
+	"editor.fontSize": 13
 }
