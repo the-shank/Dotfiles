@@ -64,7 +64,7 @@ plugins=(
   git
   zsh-autosuggestions
   vscode
-  zsh-syntax-highlighting
+  # zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
