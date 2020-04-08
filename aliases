@@ -15,3 +15,8 @@ alias sicp="rlwrap scheme"
 # reset vivaldi
 alias reset_vivaldi_osx="rm -rf \"/Users/shank/Library/Application Support/Vivaldi\""
 alias reset_vivaldi_linux="rm -rf /home/shank/.config/vivaldi/"
+
+# alias xdg-open
+if hash xdg-open 2>/dev/null; then
+    alias open=xdg-open
+fi
