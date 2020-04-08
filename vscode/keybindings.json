@@ -1,7 +1,7 @@
 // Place your key bindings in this file to overwrite the defaults
 [
 	{
-		"key": "shift+alt+t",
+		"key": "shift+alt+u",
 		"command": "workbench.action.terminal.focus"
 	},
 	{
@@ -27,20 +27,21 @@
 		"command": "workbench.action.terminal.toggleTerminal"
 	},
 	{
-		"key": "ctrl+`",
-		"command": "-workbench.action.terminal.toggleTerminal"
+		"key": "shift+alt+j",
+		"command": "workbench.action.terminal.focus",
 	},
 	{
-		"key": "ctrl+shift+l",
-		"command": "editor.action.insertCursorAtEndOfEachLineSelected",
-		"when": "editorTextFocus"
+		"key": "shift+alt+k",
+		"command": "workbench.action.focusActiveEditorGroup",
 	},
 	{
-		"key": "ctrl+`",
-		"command": "-workbench.action.terminal.toggleTerminal"
+		"key": "alt+j",
+		"command": "cursorDown",
+		"when": "textInputFocus"
 	},
 	{
-		"key": "ctrl+`",
-		"command": "-workbench.action.terminal.toggleTerminal"
-	}
+		"key": "alt+k",
+		"command": "cursorUp",
+		"when": "textInputFocus"
+	},
 ]

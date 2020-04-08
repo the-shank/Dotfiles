@@ -16,11 +16,12 @@
 	"editor.rulers": [80, 100],
 	// workbench
 	"workbench.editor.enablePreview": false,
-	// "workbench.activityBar.visible": false,
 	"workbench.editor.enablePreviewFromQuickOpen": false,
 	"workbench.colorTheme": "Atom One Dark",
 	"workbench.statusBar.visible": true,
+	"workbench.activityBar.visible": false,
 	"workbench.sideBar.location": "right",
+	"workbench.panel.defaultLocation": "left"
 	// explorer
 	"explorer.confirmDragAndDrop": false,
 	"explorer.confirmDelete": false,
@@ -61,5 +62,5 @@
 	"leetcode.hint.commandShortcut": false,
 	"leetcode.hint.configWebviewMarkdown": false,
 	"leetcode.hint.commentDescription": false,
-	"editor.fontSize": 13
+	"editor.fontSize": 13,
 }
