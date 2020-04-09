@@ -44,4 +44,14 @@
 		"command": "cursorUp",
 		"when": "textInputFocus"
 	},
+	{
+		"key": "alt+meta+right",
+		"command": "workbench.action.nextEditor",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "alt+meta+left",
+		"command": "workbench.action.previousEditor",
+		"when": "textInputFocus"
+	},
 ]
