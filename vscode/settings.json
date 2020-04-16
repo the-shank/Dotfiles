@@ -1,6 +1,4 @@
 {
-	// window
-	"window.zoomLevel": 0.9,
 	"window.menuBarVisibility": "toggle",
 	// editor
 	"editor.fontFamily": "Noto Sans Mono, Fira Code, Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
@@ -15,13 +13,13 @@
 	"editor.suggestSelection": "first",
 	"editor.rulers": [80, 100],
 	// workbench
+	"workbench.activityBar.visible": false,
 	"workbench.editor.enablePreview": false,
 	"workbench.editor.enablePreviewFromQuickOpen": false,
-	"workbench.colorTheme": "Atom One Dark",
+	"workbench.colorTheme": "Tomorrow",
 	"workbench.statusBar.visible": true,
-	"workbench.activityBar.visible": false,
 	"workbench.sideBar.location": "right",
-	"workbench.panel.defaultLocation": "left"
+	"workbench.panel.defaultLocation": "left",
 	// explorer
 	"explorer.confirmDragAndDrop": false,
 	"explorer.confirmDelete": false,
@@ -61,6 +59,5 @@
 	"leetcode.workspaceFolder": "$HOME/Code/ALGO/competitive_programming/leetcode",
 	"leetcode.hint.commandShortcut": false,
 	"leetcode.hint.configWebviewMarkdown": false,
-	"leetcode.hint.commentDescription": false,
-	"editor.fontSize": 13,
+	"leetcode.hint.commentDescription": false
 }
