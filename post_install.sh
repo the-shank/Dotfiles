@@ -49,12 +49,13 @@ function vscode_setup()
             # UTILS
             "formulahendry.code-runner"                     # Code Runner
             "felipecaputo.git-project-manager"              # Git Project Manager
-            "hoangnc.io-run"                                # IORun (for competitive programming)
             "Gruntfuggly.activitusbar"                      # Activitus Bar
             "ms-vscode.sublime-keybindings"                 # Sublime Text Keymap and Settings
             "alefragnani.bookmarks"                         # Bookmarks
             "sleistner.vscode-fileutils"                    # File Utils
             "shengchen.vscode-leetcode"                     # LeetCode
+            "aaron-bond.better-comments"                    # Better Comments
+            "foxundermoon.shell-format"                     # shell-format
 
             # THEMES
             "akamud.vscode-theme-onedark"                   # Atom One Dark
