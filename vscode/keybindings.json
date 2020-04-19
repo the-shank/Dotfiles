@@ -45,6 +45,16 @@
 		"when": "textInputFocus"
 	},
 	{
+		"key": "alt+h",
+		"command": "cursorLeft",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "alt+l",
+		"command": "cursorRight",
+		"when": "textInputFocus"
+	},
+	{
 		"key": "alt+meta+right",
 		"command": "workbench.action.nextEditor",
 		"when": "textInputFocus"
