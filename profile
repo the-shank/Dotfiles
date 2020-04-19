@@ -42,6 +42,9 @@ if [ -d "$HOME/.cargo/bin" ] ; then
     PATH="$HOME/.cargo/bin:$PATH"
 fi
 
+# rust: enable backtrace
+export RUST_BACKTRACE=full
+
 # set PATH so it includes user's Android Studio bin if it exists
 if [ -d "$HOME/Applications/android-studio/bin" ]; then
     PATH="$HOME/Applications/android-studio/bin:$PATH"
