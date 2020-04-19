@@ -46,6 +46,10 @@
       ~/.aliases:
 
 - link:
+      ~/.oh-my-zsh/themes/spaceship-prompt: zsh/themes/spaceship-prompt
+      ~/.oh-my-zsh/themes/spaceship.zsh-theme: zsh/themes/spaceship.zsh-theme
+
+- link:
       ~/.config/Code/User/settings.json: vscode/settings.json
       ~/.config/Code/User/keybindings.json: vscode/keybindings.json
       ~/.config/Code/User/snippets: vscode/snippets

@@ -191,31 +191,7 @@ function install_powerline_fonts() {
         esac
     fi
 }
-
-# SPACESHIP PROMPT =============================================================
-function spaceship_prompt() {
-    echo "Setting up spaceship prompt for zsh"
-
-    # Powerline Fonts
-    install_powerline_fonts
-
-    # Symlink spaceship.zsh-theme to your oh-my-zsh custom themes directory
-    ZSH_CUSTOM=$HOME/.oh-my-zsh
-    if [ -e "$ZSH_CUSTOM/themes/spaceship-prompt" ]; then
-        echo "> spaceship theme already downloaded"
-    else
-        git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-    fi
-    if [ -e "$ZSH_CUSTOM/themes/spaceship.zsh-theme" ]; then
-        echo "> spaceship theme already linked"
-    else
-        ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-    fi
-
-    # Set ZSH_THEME="spaceship" in your .zshrc
-    # taken care of in .zshrc
-}
-spaceship_prompt
+install_powerline_fonts
 
 # # VSCODE
 # if [[ ! -f `which code` ]]; then
