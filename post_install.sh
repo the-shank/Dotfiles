@@ -52,7 +52,7 @@ function vscode_setup()
             "Gruntfuggly.activitusbar"                      # Activitus Bar
             "ms-vscode.sublime-keybindings"                 # Sublime Text Keymap and Settings
             "alefragnani.bookmarks"                         # Bookmarks
-            "sleistner.vscode-fileutils"                    # File Utils
+            "sleistner.vscode-fileutils"                     # File Utils
             "shengchen.vscode-leetcode"                     # LeetCode
             "aaron-bond.better-comments"                    # Better Comments
             "foxundermoon.shell-format"                     # shell-format
