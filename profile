@@ -93,3 +93,6 @@ export GIT_EDITOR=mousepad
 
 # fix shader stuttering on AMD GPU
 export RADV_PERFTEST=aco
+
+# bat (replacement for cat)
+export BAT_THEME="TwoDark"

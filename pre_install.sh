@@ -59,6 +59,7 @@ function install_utils() {
         [zsh]=zsh
         [hyperfine]=hyperfine
         [lsd]=lsd
+        [bat]=bat
     )
     echo "required utils: ${UTILS[@]}"
 
