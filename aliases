@@ -9,6 +9,17 @@ alias t2="tree2"
 alias t3="tree3"
 alias t4="tree4"
 
+# lsd
+alias ls='lsd'
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lta='lt --tree'
+alias lt1='lt --depth 1'
+alias lt2='lt --depth 2'
+alias lt3='lt --depth 3'
+alias lt3='lt --depth 4'
+
 # mit-scheme
 alias sicp="rlwrap scheme"
 

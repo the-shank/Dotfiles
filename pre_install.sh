@@ -57,6 +57,8 @@ function install_utils() {
         [rg]=ripgrep
         [git]=git
         [zsh]=zsh
+        [hyperfine]=hyperfine
+        [lsd]=lsd
     )
     echo "required utils: ${UTILS[@]}"
 
@@ -176,6 +178,7 @@ function install_powerline_fonts() {
 
         Manjaro)
             yes | $INSTALL_CMD"powerline-fonts"
+            yes | $INSTALL_CMD"nerd-fonts-noto-sans-mono"
             ;;
 
         OSX)
