@@ -53,8 +53,12 @@
 
 # MISC
 - link:
+      # Okular
       ~/.config/okularrc: okular/okularrc
       ~/.config/okularpartrc: okular/okularpartrc
+      # XFCE: Terminal
+      ~/.config/xfce4/terminal/accels.scm: manjaro-xfce/accels.scm
+      ~/.config/xfce4/terminal/terminalrc: manjaro-xfce/terminalrc
 
 # VSCODE
 - link:
