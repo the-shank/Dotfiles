@@ -38,30 +38,23 @@
 - shell:
       - [bash pre_install.sh, Running pre installation script]
 
-# CONFIGS
 - link:
+      # CONFIGS
       ~/.gitconfig:
       ~/.profile:
       ~/.bashrc:
       ~/.zshrc:
       ~/.aliases:
-
-# ZSH
-- link:
+      # ZSH
       ~/.oh-my-zsh/themes/spaceship-prompt: zsh/themes/spaceship-prompt
       ~/.oh-my-zsh/themes/spaceship.zsh-theme: zsh/themes/spaceship.zsh-theme
-
-# MISC
-- link:
       # Okular
       ~/.config/okularrc: okular/okularrc
       ~/.config/okularpartrc: okular/okularpartrc
       # XFCE: Terminal
       ~/.config/xfce4/terminal/accels.scm: manjaro-xfce/accels.scm
       ~/.config/xfce4/terminal/terminalrc: manjaro-xfce/terminalrc
-
-# VSCODE
-- link:
+      # VSCODE
       ~/.config/Code/User/settings.json: vscode/settings.json
       ~/.config/Code/User/keybindings.json: vscode/keybindings.json
       ~/.config/Code/User/snippets: vscode/snippets
