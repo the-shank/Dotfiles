@@ -1,0 +1,32 @@
+[Core General]
+ExternalEditor=Custom
+ExternalEditorCommand=mousepad --line %l --column %c
+
+[Core Performance]
+TextHinting=Enabled
+
+[Dlg Presentation]
+SlidesBackgroundColor=46,52,54
+SlidesTransition=Random
+
+[Document]
+ChangeColors=true
+PaperColor=243,243,243
+RenderMode=Paper
+
+[General]
+ShellOpenFileInTabs=true
+
+[Main View]
+ShowLeftPanel=false
+SplitterSizes=200,1620
+
+[Nav Panel]
+SidebarIconSize=32
+
+[Reviews]
+AnnotationTools=<tool id="1" name="Highlighter - Yellow" type="highlight"><engine color="#fffce94f" type="TextSelector"><annotation color="#fffce94f" opacity="0.6" type="Highlight"/></engine><shortcut>1</shortcut></tool>,<tool id="2" name="Highlighter - Orange" type="highlight"><engine color="#ffffc15a" type="TextSelector"><annotation color="#ffffc15a" opacity="0.8" type="Highlight"/></engine><shortcut>2</shortcut></tool>,<tool id="3" type="underline"><engine color="#ffcc0000" type="TextSelector"><annotation color="#ffcc0000" type="Underline"/></engine><shortcut>3</shortcut></tool>,<tool id="4" type="rectangle"><engine color="#ffef2929" block="true" type="PickPoint"><annotation width="2" color="#ffef2929" type="GeomSquare"/></engine><shortcut>4</shortcut></tool>,<tool id="5" type="typewriter"><engine block="true" type="PickPoint"><annotation textColor="#cc0000" font="Noto Sans\\,9\\,-1\\,5\\,50\\,0\\,0\\,0\\,0\\,0\\,Regular" width="0" color="#00ffffff" type="Typewriter"/></engine><shortcut>5</shortcut></tool>,<tool id="6" name="Arrow" type="straight-line"><engine points="2" color="#ffef2929" type="PolyLine"><annotation width="1" color="#ffef2929" startStyle="5" endStyle="3" type="Line"/></engine><shortcut>6</shortcut></tool>,<tool id="7" type="note-linked"><engine color="#ffffff00" hoverIcon="tool-note" type="PickPoint"><annotation icon="Note" color="#ffffff00" type="Text"/></engine><shortcut>7</shortcut></tool>,<tool id="8" type="note-inline"><engine color="#ffffff00" block="true" hoverIcon="tool-note-inline" type="PickPoint"><annotation font="Noto Sans\\,9\\,-1\\,5\\,50\\,0\\,0\\,0\\,0\\,0" width="1" color="#ffffff00" type="FreeText"/></engine><shortcut>8</shortcut></tool>,<tool id="9" type="ink"><engine color="#ff00ff00" type="SmoothLine"><annotation width="2" color="#ff00ff00" type="Ink"/></engine><shortcut>9</shortcut></tool>,<tool id="10" type="straight-line"><engine points="2" color="#ffffe000" type="PolyLine"><annotation width="1" color="#ffffe000" type="Line"/></engine></tool>,<tool id="11" type="polygon"><engine points="-1" color="#ff007eee" type="PolyLine"><annotation width="1" color="#ff007eee" type="Line"/></engine></tool>,<tool id="12" type="stamp"><engine size="64" block="true" hoverIcon="okular" type="PickPoint"><annotation icon="okular" type="Stamp"/></engine></tool>
+ReviewsSearchRegularExpression=true
+
+[Zoom]
+ZoomMode=3

@@ -38,6 +38,7 @@
 - shell:
       - [bash pre_install.sh, Running pre installation script]
 
+# CONFIGS
 - link:
       ~/.gitconfig:
       ~/.profile:
@@ -45,10 +46,17 @@
       ~/.zshrc:
       ~/.aliases:
 
+# ZSH
 - link:
       ~/.oh-my-zsh/themes/spaceship-prompt: zsh/themes/spaceship-prompt
       ~/.oh-my-zsh/themes/spaceship.zsh-theme: zsh/themes/spaceship.zsh-theme
 
+# MISC
+- link:
+      ~/.config/okularrc: okular/okularrc
+      ~/.config/okularpartrc: okular/okularpartrc
+
+# VSCODE
 - link:
       ~/.config/Code/User/settings.json: vscode/settings.json
       ~/.config/Code/User/keybindings.json: vscode/keybindings.json
