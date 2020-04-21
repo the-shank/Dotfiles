@@ -52,8 +52,10 @@
       ~/.config/okularrc: okular/okularrc
       ~/.config/okularpartrc: okular/okularpartrc
       # XFCE: Terminal
-      ~/.config/xfce4/terminal/accels.scm: manjaro-xfce/accels.scm
-      ~/.config/xfce4/terminal/terminalrc: manjaro-xfce/terminalrc
+      ~/.config/xfce4/terminal/accels.scm: xfce/terminal/accels.scm
+      ~/.config/xfce4/terminal/terminalrc: xfce/terminal/terminalrc
+      # XFCE: Thunar
+      ~/.config/Thunar/accels.scm: xfce/thunar/accels.scm
       # VSCODE
       ~/.config/Code/User/settings.json: vscode/settings.json
       ~/.config/Code/User/keybindings.json: vscode/keybindings.json
