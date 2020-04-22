@@ -49,7 +49,6 @@
       ~/.oh-my-zsh/themes/spaceship-prompt: zsh/themes/spaceship-prompt
       ~/.oh-my-zsh/themes/spaceship.zsh-theme: zsh/themes/spaceship.zsh-theme
       # Okular
-      ~/.config/okularrc: okular/okularrc
       ~/.config/okularpartrc: okular/okularpartrc
       # XFCE: Terminal
       ~/.config/xfce4/terminal/accels.scm: xfce/terminal/accels.scm
