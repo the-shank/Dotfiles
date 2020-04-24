@@ -21,6 +21,7 @@
 - pacman:
       - albert
       - anki
+      - asdf-vm
       - arc-gtk-theme
       - bat
       - base-devel
@@ -33,7 +34,9 @@
       - hdparm
       - hyperfine
       - handbrake
+      - libreoffice
       - lsd
+      - muparser
       - ncdu
       - okular
       - nerd-fonts-noto-sans-mono
@@ -45,11 +48,9 @@
       - shfmt
       - simplescreenrecorder
       - tlp
-      - virtualbox
       - youtube-dl
       - zsh
-# - yay:
-#       - dict-wn
+
 #       - enpass-bin
 #       - google-chrome
 #       - libpdfium-nojs
