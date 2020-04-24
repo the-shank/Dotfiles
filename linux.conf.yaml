@@ -1,0 +1,12 @@
+- defaults:
+      link:
+          create: true
+          relink: true
+      shell:
+          stdout: true
+          stderr: true
+
+- link:
+      ~/.config/:
+          glob: true
+          path: linux-config/**/*
