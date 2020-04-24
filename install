@@ -2,18 +2,58 @@
 
 set -e
 
-DEFAULT_CONFIG_PREFIX="default"
-CONFIG_SUFFIX=".conf.yaml"
+CONFIG="base"
+SUFFIX=".conf.yaml"
 DOTBOT_DIR="dotbot"
 
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "${BASEDIR}"
+git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-for conf in ${DEFAULT_CONFIG_PREFIX} ${@}; do
-    echo "PROCESSING $conf$CONFIG_SUFFIX"
+# base.conf.yaml
+echo "PROCESSING ${CONFIG}${SUFFIX}"
+echo "=============================="
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}${SUFFIX}"
+
+source /etc/os-release
+case $ID in
+manjaro)
+    echo "OS - Manjaro"
+    echo "PROCESSING linux${SUFFIX}"
     echo "=============================="
-    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${conf}${CONFIG_SUFFIX}"
-done
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "linux${SUFFIX}" "${@}"
+    echo "PROCESSING ${ID}${SUFFIX}"
+    echo "=============================="
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${ID}${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-yay" "${@}"
+    echo "PROCESSING vscode${SUFFIX}"
+    echo "=============================="
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "vscode${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-vscode" "${@}"
+    ;;
+debian)
+    echo "OS - Debian"
+    echo "PROCESSING linux${SUFFIX}"
+    echo "=============================="
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "linux${SUFFIX}" "${@}"
+    echo "PROCESSING ${ID}${SUFFIX}"
+    echo "=============================="
+    sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${ID}${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot_plugin_aptget" "${@}"
+    echo "PROCESSING vscode${SUFFIX}"
+    echo "=============================="
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "vscode${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-vscode" "${@}"
+    ;;
+darwin)
+    echo "OS - OSX"
+    echo "PROCESSING osx${SUFFIX}"
+    echo "=============================="
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "osx${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-brew" "${@}"
+    echo "PROCESSING vscode${SUFFIX}"
+    echo "=============================="
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "vscode${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-vscode" "${@}"
+    ;;
+*)
+    echo "unknown distro ID: $ID, not doing anything special"
+    ;;
+esac

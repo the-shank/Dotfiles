@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+set -e
+
+SUFFIX=".sudo.conf.yaml"
+DOTBOT_DIR="dotbot"
+
+DOTBOT_BIN="bin/dotbot"
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+cd "${BASEDIR}"
+git submodule update --init --recursive "${DOTBOT_DIR}"
+
+source /etc/os-release
+case $ID in
+manjaro)
+    echo "OS - Manjaro"
+    echo "PROCESSING manjaro${SUFFIX}"
+    echo "=============================="
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "manjaro${SUFFIX}" "${@}"
+    ;;
+debian) ;;
+
+darwin) ;;
+
+*)
+    echo "unknown distro ID: $ID, not doing anything special"
+    ;;
+esac

@@ -1,0 +1,59 @@
+- defaults:
+      link:
+          create: true
+          relink: true
+          force: true
+      shell:
+          stdout: true
+          stderr: true
+
+- link:
+      # Okular
+      ~/.config/okularpartrc: okular/okularpartrc
+      # VSCode
+      ~/.config/Code - OSS/:
+          glob: true
+          path: linux-config/Code/**/*
+
+- shell:
+      - sudo ./install-sudo
+
+- pacman:
+      - albert
+      - anki
+      - bat
+      - base-devel
+      - calibre
+      - docker
+      - dict-wn
+      - fd
+      - htop
+      - hdparm
+      - hyperfine
+      - handbrake
+      - lsd
+      - ncdu
+      - okular
+      - nerd-fonts-noto-sans-mono
+      - powerline-fonts
+      - psensor
+      - pdfarranger
+      - redshift
+      - ripgrep
+      - shfmt
+      - simplescreenrecorder
+      - tlp
+      - virtualbox
+      - youtube-dl
+      - yay
+      - zsh
+# - yay:
+#       - dict-wn
+#       - enpass-bin
+#       - google-chrome
+#       - libpdfium-nojs
+#       - megasync
+#       - peco
+#       - sublime-text-3-imfix
+#       - vivaldi
+#       - vivaldi-ffmpeg-codecs
