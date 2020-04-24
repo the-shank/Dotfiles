@@ -1,0 +1,6 @@
+Command=stats.pl
+UseLabel=0
+Text=
+UpdatePeriod=1000
+Font=Noto Sans 10
+
