@@ -1,44 +1,13 @@
-# dotfiles (using dotbot)
-#   [x] zsh
-#   [x] oh-my-zsh
-#   [x] liquidprompt
-#   [x] Create folders / Ensure folders exist
-#   [x]   ~/Code
-#   [x]   ~/Applications
-#   [x]   ~/.local/bin
-#   [x]   ~/.ansible/roles
-#   [x] config files
-#   [x]   .profile
-#   [x]   .gitconfig
-#   [x]   .bashrc
-#   [x]   .zshrc
-#   [x] vscode plugins (https://stackoverflow.com/questions/34286515/how-to-install-visual-studio-code-extensions-from-command-line#34339780)
-#   [x]   felipecaputo.git-project-manager
-#   [x]   Gruntfuggly.activitusbar
-#   [x]   JakeBecker.elixir-ls
-#   [x]   ms-python.python
-#   [x]   ms-vscode.sublime-keybindings
-#   [x]   PeterJausovec.vscode-docker
-#   [x]   tomphilbin.gruvbox-themes
-#   [x]   vscoss.vscode-ansible
-#   [x]   bungcip.better-toml
-#   [x] vscode preferences
-
 - defaults:
-    link:
+  link:
       create: true
       relink: true
       force: true
-    shell:
+  shell:
       stdout: true
       stderr: true
 
-- clean: ['~']
-
 - link:
-    ~/.gitconfig: gitconfig.osx
-
-- link:
-    ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
-    ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.osx.json
-    ~/Library/Application Support/Code/User/snippets: vscode/snippets
+      ~/Library/Application Support/Code/:
+          glob: true
+          path: osx-config/Code/*
