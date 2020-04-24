@@ -116,14 +116,25 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# added by Miniconda3 installer
-. /home/shank/Applications/miniconda3/etc/profile.d/conda.sh
-conda activate
-# export PATH="/home/shank/Applications/miniconda3/bin:$PATH"
+# miniconda3
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/shank/Applications/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/shank/Applications/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/shank/Applications/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/shank/Applications/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
 # asdf package manager
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
-[[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
+[[ $- = *i* ]] && [[ -d ~/.liquidprompt ]] && source ~/.liquidprompt/liquidprompt
