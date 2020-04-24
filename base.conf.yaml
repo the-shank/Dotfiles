@@ -1,0 +1,43 @@
+- defaults:
+      link:
+          create: true
+          relink: true
+      shell:
+          stdout: true
+          stderr: true
+
+- clean: ['~', '~/.config']
+
+- shell:
+      - [git submodule update --init --recursive, Installing submodules]
+
+- create:
+      - ~/Applications
+      - ~/Code
+      - ~/Code/ALGO
+      - ~/Code/REFERENCE
+      - ~/Code/TMP
+      - ~/Code/UTILS
+      - ~/.local/bin
+
+- shell:
+      - [scripts/zsh.sh, Setup ZSH]
+
+- defaults:
+      link:
+          force: true
+
+- link:
+      ~/.gitconfig: others/gitconfig
+      ~/.profile: shell/profile
+      ~/.bashrc: shell/bashrc
+      ~/.zshrc: shell/zshrc
+      ~/.aliases: shell/aliases
+      ~/.oh-my-zsh/custom/themes/spaceship-prompt: zsh/themes/spaceship-prompt
+      ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme: zsh/themes/spaceship-prompt/spaceship.zsh-theme
+
+- defaults:
+      link:
+          force: false
+# - shell:
+#       - sudo ln -s /etc/pacman.conf others/pacman.conf
