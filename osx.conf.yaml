@@ -2,12 +2,11 @@
   link:
       create: true
       relink: true
-      force: true
   shell:
       stdout: true
       stderr: true
 
 - link:
-      ~/Library/Application Support/Code/:
+      ~/Library/Application Support/Code/User:
           glob: true
-          path: osx-config/Code/*
+          path: osx-config/Code/User/**/*

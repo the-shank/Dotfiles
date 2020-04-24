@@ -2,7 +2,6 @@
       link:
           create: true
           relink: true
-          force: true
       shell:
           stdout: true
           stderr: true
@@ -10,10 +9,11 @@
 - link:
       # Okular
       ~/.config/okularpartrc: okular/okularpartrc
+
       # VSCode
-      ~/.config/Code - OSS/:
-          glob: true
-          path: linux-config/Code/**/*
+      ~/.config/Code - OSS/User/snippets: linux-config/Code/User/snippets
+      ~/.config/Code - OSS/User/keybindings.json: linux-config/Code/User/keybindings.json
+      ~/.config/Code - OSS/User/settings.json: linux-config/Code/User/settings.json
 
 - shell:
       - sudo ./install-sudo
@@ -21,8 +21,10 @@
 - pacman:
       - albert
       - anki
+      - arc-gtk-theme
       - bat
       - base-devel
+      - code
       - calibre
       - docker
       - dict-wn
@@ -45,7 +47,6 @@
       - tlp
       - virtualbox
       - youtube-dl
-      - yay
       - zsh
 # - yay:
 #       - dict-wn

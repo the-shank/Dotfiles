@@ -2,12 +2,19 @@
       link:
           create: true
           relink: true
-          force: true
       shell:
           stdout: true
           stderr: true
 
 - link:
-      ~/.config/:
-          glob: true
-          path: linux-config/**/*
+      # Albert
+      ~/.config/albert/albert.conf: linux-config/albert/albert.conf
+
+      # VSCode
+      ~/.config/Code/User/snippets: linux-config/Code/User/snippets
+      ~/.config/Code/User/keybindings.json: linux-config/Code/User/keybindings.json
+      ~/.config/Code/User/settings.json: linux-config/Code/User/settings.json
+
+      # XFCE Terminal
+      ~/.config/xfce4/terminal/accels.scm: linux-config/xfce4/terminal/accels.scm
+      ~/.config/xfce4/terminal/terminalrc: linux-config/xfce4/terminal/terminalrc
