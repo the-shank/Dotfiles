@@ -19,5 +19,8 @@
       ~/.config/xfce4/terminal/accels.scm: linux-config/xfce4/terminal/accels.scm
       ~/.config/xfce4/terminal/terminalrc: linux-config/xfce4/terminal/terminalrc
 
+      # XFCE Keyboard Shortcuts
+      ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml: linux-config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+
       # Fonts
       ~/.fonts: fonts
