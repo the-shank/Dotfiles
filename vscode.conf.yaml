@@ -1,0 +1,70 @@
+- vscode:
+      # LANGUAGES, FRAMEWORKS, TOOLS:
+      vscoss.vscode-ansible:
+          status: install
+      bungcip.better-toml:
+          status: install
+      ms-vscode.cpptools:
+          status: install
+      ms-azuretools.vscode-docker:
+          status: install
+      JakeBecker.elixir-ls:
+          status: install
+      pgourlain.erlang:
+          status: install
+      hangxingliu.vscode-nginx-conf-hint:
+          status: install
+      ms-python.python:
+          status: install
+      esbenp.prettier-vscode:
+          status: install
+      passionkind.prettier-vscode-with-tabs:
+          status: install
+      redhat.java:
+          status: install
+      VisualStudioExptTeam.vscodeintellicode:
+          status: install
+      vscjava.vscode-java-debug:
+          status: install
+      vscjava.vscode-java-dependency:
+          status: install
+      vscjava.vscode-java-pack:
+          status: install
+      vscjava.vscode-java-test:
+          status: install
+      vscjava.vscode-maven:
+          status: install
+      rust-lang.rust:
+          status: install
+      vadimcn.vscode-lldb:
+          status: install
+      octref.vetur:
+          status: install
+      # UTILS:
+      formulahendry.code-runner:
+          status: install
+      felipecaputo.git-project-manager:
+          status: install
+      Gruntfuggly.activitusbar:
+          status: install
+      ms-vscode.sublime-keybindings:
+          status: install
+      alefragnani.bookmarks:
+          status: install
+      sleistner.vscode-fileutils:
+          status: install
+      shengchen.vscode-leetcode:
+          status: install
+      aaron-bond.better-comments:
+          status: install
+      foxundermoon.shell-format:
+          status: install
+      # THEMES:
+      akamud.vscode-theme-onedark:
+          status: install
+      tomphilbin.gruvbox-themes:
+          status: install
+      arcticicestudio.nord-visual-studio-code:
+          status: install
+      ms-vscode.Theme-TomorrowKit:
+          status: install
