@@ -34,7 +34,7 @@
           status: install
       vscjava.vscode-maven:
           status: install
-      rust-lang.rust:
+      matklad.rust-analyzer:
           status: install
       vadimcn.vscode-lldb:
           status: install
