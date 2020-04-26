@@ -7,6 +7,20 @@
       stderr: true
 
 - link:
-      ~/Library/Application Support/Code/User:
-          glob: true
-          path: osx-config/Code/User/**/*
+      # VSCode
+      ~/Library/Application Support/Code/User/snippets: osx-config/Code/User/snippets
+      ~/Library/Application Support/Code/User/keybindings.json: osx-config/Code/User/keybindings.json
+      ~/Library/Application Support/Code/User/settings.json: osx-config/Code/User/settings.json
+
+      # Sublime Text
+      ~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings: linux-config/sublime-text-3/Packages/User/Preferences.sublime-settings
+
+- tap:
+      - caskroom/fonts
+
+- brew:
+      - zsh
+      - mpv
+
+- cask:
+      - iglance

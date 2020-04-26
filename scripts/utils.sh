@@ -1,11 +1,11 @@
 function detect_os() {
     UNAME_A=$(uname -a)
     if grep -qi "Ubuntu" <<<$UNAME_A; then
-        OS="Ubuntu"
+        OS="ubuntu"
     elif grep -qi "Manjaro" <<<$UNAME_A; then
-        OS="Manjaro"
+        OS="manjaro"
     elif grep -qi "Darwin" <<<$UNAME_A; then
-        OS="OSX"
+        OS="darwin"
     else
         echo "unknown os: $UNAME_A"
         exit

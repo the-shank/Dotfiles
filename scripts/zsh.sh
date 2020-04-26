@@ -14,11 +14,11 @@ fi
 if [[ ! $SHELL = *zsh ]]; then
     echo 'Changing default shell to zsh'
     case $OS in
-    Ubuntu | Manjaro)
+    ubuntu | manjaro)
         chsh -s /usr/bin/zsh
         ;;
 
-    OSX)
+    darwin)
         chsh -s /usr/local/bin/zsh
         ;;
     *)
