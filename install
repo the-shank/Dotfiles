@@ -18,16 +18,17 @@ echo "PROCESSING ${CONFIG}${SUFFIX}"
 echo "=============================="
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}${SUFFIX}"
 
-source /etc/os-release
-case $ID in
+source $(dirname "$0")/scripts/utils.sh
+detect_os
+case $OS in
 manjaro)
     echo "OS - Manjaro"
     echo "PROCESSING linux${SUFFIX}"
     echo "=============================="
     "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "linux${SUFFIX}" "${@}"
-    echo "PROCESSING ${ID}${SUFFIX}"
+    echo "PROCESSING ${OS}${SUFFIX}"
     echo "=============================="
-    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${ID}${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-yay" "${@}"
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${OS}${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-yay" "${@}"
     echo "PROCESSING vscode${SUFFIX}"
     echo "=============================="
     "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "vscode${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-vscode" "${@}"
@@ -37,9 +38,9 @@ debian)
     echo "PROCESSING linux${SUFFIX}"
     echo "=============================="
     "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "linux${SUFFIX}" "${@}"
-    echo "PROCESSING ${ID}${SUFFIX}"
+    echo "PROCESSING ${OS}${SUFFIX}"
     echo "=============================="
-    sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${ID}${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot_plugin_aptget" "${@}"
+    sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${OS}${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot_plugin_aptget" "${@}"
     echo "PROCESSING vscode${SUFFIX}"
     echo "=============================="
     "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "vscode${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-vscode" "${@}"
