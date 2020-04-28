@@ -20,6 +20,7 @@
 
 - pacman:
       - albert
+      - audacity
       - anki
       - arc-gtk-theme
       - bat
@@ -28,6 +29,7 @@
       - calibre
       - docker
       - fd
+      - gnome-sound-recorder
       - htop
       - hdparm
       - hyperfine
