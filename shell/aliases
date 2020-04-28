@@ -23,6 +23,9 @@ alias ltl='ll --tree'
 alias lta='la --tree'
 alias ltla='lla --tree'
 
+# ripgrep
+alias rgi='rg -i'
+
 # bat
 alias cat='bat'
 
