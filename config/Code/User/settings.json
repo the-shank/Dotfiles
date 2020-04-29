@@ -1,9 +1,8 @@
 {
 	"window.menuBarVisibility": "toggle",
 	// editor
-	"editor.fontFamily": "Noto Sans Mono, Fira Code, Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+	"editor.fontFamily": "Noto Sans Mono Medium, Fira Code, Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
 	"editor.fontLigatures": true,
-	"editor.fontSize": 13,
 	"editor.renderWhitespace": "all",
 	"editor.parameterHints.enabled": false,
 	"editor.minimap.maxColumn": 100,
@@ -21,7 +20,6 @@
 	"workbench.activityBar.visible": false,
 	"workbench.editor.enablePreview": false,
 	"workbench.editor.enablePreviewFromQuickOpen": false,
-	"workbench.colorTheme": "Atom One Dark",
 	"workbench.statusBar.visible": true,
 	"workbench.sideBar.location": "right",
 	"workbench.panel.defaultLocation": "left",
@@ -71,5 +69,10 @@
 	"leetcode.hint.commandShortcut": false,
 	"leetcode.hint.commentDescription": false,
 	"leetcode.hint.configWebviewMarkdown": false,
-	"window.zoomLevel": 0.9
+	"window.zoomLevel": 0.9,
+	"editor.formatOnPaste": true,
+	"editor.multiCursorModifier": "ctrlCmd",
+	"editor.snippetSuggestions": "top",
+	"workbench.colorTheme": "Super One Dark",
+	"editor.fontSize": 13
 }

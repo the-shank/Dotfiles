@@ -11,9 +11,9 @@
       ~/.config/okularpartrc: okular/okularpartrc
 
       # VSCode
-      ~/.config/Code - OSS/User/snippets: linux-config/Code/User/snippets
-      ~/.config/Code - OSS/User/keybindings.json: linux-config/Code/User/keybindings.json
-      ~/.config/Code - OSS/User/settings.json: linux-config/Code/User/settings.json
+      ~/.config/Code - OSS/User/snippets: config/Code/User/snippets
+      ~/.config/Code - OSS/User/keybindings.json: config/Code/User/keybindings.json
+      ~/.config/Code - OSS/User/settings.json: config/Code/User/settings.json
 
 - shell:
       - sudo ./install-sudo

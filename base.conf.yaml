@@ -32,4 +32,4 @@
       ~/.oh-my-zsh/custom/themes/spaceship-prompt: zsh/themes/spaceship-prompt
       ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme: zsh/themes/spaceship-prompt/spaceship.zsh-theme
       ~/.local/bin/stats.pl: bin/stats.pl
-      ~/.config/youtube-dl/config: linux-config/youtube-dl/config
+      ~/.config/youtube-dl/config: config/youtube-dl/config

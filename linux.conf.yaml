@@ -8,30 +8,30 @@
 
 - link:
       # Albert
-      ~/.config/albert/albert.conf: linux-config/albert/albert.conf
+      ~/.config/albert/albert.conf: config/albert/albert.conf
 
       # VSCode
-      ~/.config/Code/User/snippets: linux-config/Code/User/snippets
-      ~/.config/Code/User/keybindings.json: linux-config/Code/User/keybindings.json
-      ~/.config/Code/User/settings.json: linux-config/Code/User/settings.json
+      ~/.config/Code/User/snippets: config/Code/User/snippets
+      ~/.config/Code/User/keybindings.json: config/Code/User/keybindings.json
+      ~/.config/Code/User/settings.json: config/Code/User/settings.json
 
       # Sublime Text
-      ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings: linux-config/sublime-text-3/Packages/User/Preferences.sublime-settings
+      ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings: config/sublime-text-3/Packages/User/Preferences.sublime-settings
 
       # XFCE Thunar
-      ~/.config/Thunar/accels.scm: linux-config/Thunar/accels.scm
-      ~/.config/Thunar/uca.xml: linux-config/Thunar/uca.xml
+      ~/.config/Thunar/accels.scm: config/Thunar/accels.scm
+      ~/.config/Thunar/uca.xml: config/Thunar/uca.xml
 
       # XFCE Terminal
-      ~/.config/xfce4/terminal/accels.scm: linux-config/xfce4/terminal/accels.scm
-      ~/.config/xfce4/terminal/terminalrc: linux-config/xfce4/terminal/terminalrc
+      ~/.config/xfce4/terminal/accels.scm: config/xfce4/terminal/accels.scm
+      ~/.config/xfce4/terminal/terminalrc: config/xfce4/terminal/terminalrc
 
       # XFCE Keyboard Shortcuts
-      ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml: linux-config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+      ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml: config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
 
       # Fonts
       ~/.fonts: fonts
 
       # MPV Media Player
-      ~/.config/mpv/input.conf: linux-config/mpv/input.conf
-      ~/.config/mpv/mpv.conf: linux-config/mpv/mpv.conf
+      ~/.config/mpv/input.conf: config/mpv/input.conf
+      ~/.config/mpv/mpv.conf: config/mpv/mpv.conf

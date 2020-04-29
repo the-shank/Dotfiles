@@ -8,12 +8,12 @@
 
 - link:
       # VSCode
-      ~/Library/Application Support/Code/User/snippets: osx-config/Code/User/snippets
-      ~/Library/Application Support/Code/User/keybindings.json: osx-config/Code/User/keybindings.json
-      ~/Library/Application Support/Code/User/settings.json: osx-config/Code/User/settings.json
+      ~/Library/Application Support/Code/User/snippets: config/Code/User/snippets
+      ~/Library/Application Support/Code/User/keybindings.json: config/Code/User/keybindings.osx.json
+      ~/Library/Application Support/Code/User/settings.json: config/Code/User/settings.json
 
       # Sublime Text
-      ~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings: linux-config/sublime-text-3/Packages/User/Preferences.sublime-settings
+      ~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings: config/sublime-text-3/Packages/User/Preferences.sublime-settings
 
 - tap:
       - caskroom/fonts
