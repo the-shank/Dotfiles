@@ -40,3 +40,11 @@ alias reset_vivaldi_linux="rm -rf /home/shank/.config/vivaldi/"
 if hash xdg-open 2>/dev/null; then
     alias open=xdg-open
 fi
+
+
+# redshift
+alias r6000='redshift -P -O 6000'
+alias r5500='redshift -P -O 5500'
+alias r5000='redshift -P -O 5000'
+alias r4500='redshift -P -O 4500'
+alias r4000='redshift -P -O 4000'
