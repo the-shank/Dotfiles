@@ -29,6 +29,7 @@
       - calibre
       - docker
       - fd
+      - flameshot
       - gnome-sound-recorder
       - htop
       - hdparm
