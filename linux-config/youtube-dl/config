@@ -1,0 +1,8 @@
+--ignore-errors
+# --no-playlist
+
+# Save in ~/Videos
+-o ~/Downloads/%(title)s.%(ext)s
+
+# Prefer 1080p or lower resolutions
+-f bestvideo[ext=webm][height<1200][fps<=30]/bestvideo[ext=mp4][height<1200][fps<=30]+bestaudio[ext=webm]/bestaudio[ext=m4a]+bestvideo[height<1200]+bestaudio/best[height<1200]/best
