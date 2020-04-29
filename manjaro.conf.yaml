@@ -48,6 +48,7 @@
       - ripgrep
       - shfmt
       - simplescreenrecorder
+      - syncthing-gtk
       - tlp
       - youtube-dl
       - zsh
