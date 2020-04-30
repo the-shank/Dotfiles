@@ -1,10 +1,14 @@
 - defaults:
-  link:
-      create: true
-      relink: true
-  shell:
-      stdout: true
-      stderr: true
+      link:
+          create: true
+          relink: true
+      shell:
+          stdout: true
+          stderr: true
+
+- shell:
+      # Fonts
+      - [cp fonts/* ~/Library/Fonts/, Copy fonts to user fonts directory]
 
 - link:
       # VSCode
@@ -19,8 +23,47 @@
       - caskroom/fonts
 
 - brew:
+      - bat
+      - cf-tool
+      - coreutils
+      - duti
+      - exercism
+      - fd
+      - ffmpeg
+      - format-udf
+      - htop
+      - hyperfine
+      - imagemagick
+      - lsd
+      - mpv --with-bundle
+      - ncdu
+      - neofetch
+      - peco
+      - ripgrep
+      - syncthing
+      - unrar
+      - unzip
+      - wget
+      - xz
+      - youtube-dl
       - zsh
-      - mpv
 
 - cask:
+      - android-file-transfer
+      - enpass
+      - gimp
+      - google-chrome
+      - handbrake
       - iglance
+      - itsycal
+      - keepingyouawake
+      - libreoffice
+      - megasync
+      - osxfuse
+      - qbittorrent
+      - spectacle
+      - sublime-text
+      - thyme
+      - visual-studio-code
+      - vivaldi
+      - vlc
