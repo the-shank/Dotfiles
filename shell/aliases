@@ -36,11 +36,10 @@ alias sicp="rlwrap scheme"
 alias reset_vivaldi_osx="rm -rf \"/Users/shank/Library/Application Support/Vivaldi\""
 alias reset_vivaldi_linux="rm -rf /home/shank/.config/vivaldi/"
 
-# alias xdg-open
+# xdg-open
 if hash xdg-open 2>/dev/null; then
     alias open=xdg-open
 fi
-
 
 # redshift
 alias r6000='redshift -P -O 6000'
@@ -48,3 +47,7 @@ alias r5500='redshift -P -O 5500'
 alias r5000='redshift -P -O 5000'
 alias r4500='redshift -P -O 4500'
 alias r4000='redshift -P -O 4000'
+
+# youtube-dl
+alias ytdl720='youtube-dl -f "bestvideo[ext=webm][height<=720]+bestaudio[ext=webm]"'
+alias ytdl1080='youtube-dl -f "bestvideo[ext=webm][height<=1080]+bestaudio[ext=webm]"'
