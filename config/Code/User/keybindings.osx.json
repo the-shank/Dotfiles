@@ -17,14 +17,12 @@
 		"command": "editor.action.addSelectionToPreviousFindMatch"
 	},
 	{
-		"key": "shift+cmd+g",
-		"command": "-editor.action.previousMatchFindAction",
-		"when": "editorFocus"
+		"key": "shift+alt+k",
+		"command": "workbench.action.terminal.focus"
 	},
 	{
-		"key": "shift+cmd+g",
-		"command": "-workbench.action.terminal.findPreviousTerminalFocus",
-		"when": "terminalFocus"
+		"key": "shift+alt+j",
+		"command": "workbench.action.focusActiveEditorGroup"
 	},
 	{
 		"key": "shift+cmd+g",
@@ -45,5 +43,13 @@
 		"args": {
 			"snippet": " [ $CURRENT_HOUR:$CURRENT_MINUTE ]"
 		}
+	},
+	{
+		"key": "ctrl+shift+h",
+		"command": "workbench.action.replaceInFiles"
+	},
+	{
+		"key": "shift+cmd+h",
+		"command": "-workbench.action.replaceInFiles"
 	}
 ]
