@@ -7,6 +7,9 @@
           stderr: true
 
 - link:
+      # CPU, Mem Usage script
+      ~/.local/bin/stats.pl: bin/stats.pl
+
       # Albert
       ~/.config/albert/albert.conf: config/albert/albert.conf
 

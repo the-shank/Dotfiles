@@ -24,12 +24,16 @@
       - [scripts/zsh.sh, Setup ZSH]
 
 - link:
-      ~/.gitconfig: others/gitconfig
+      # Shell
       ~/.profile: shell/profile
       ~/.bashrc: shell/bashrc
       ~/.zshrc: shell/zshrc
       ~/.aliases: shell/aliases
       ~/.oh-my-zsh/custom/themes/spaceship-prompt: zsh/themes/spaceship-prompt
       ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme: zsh/themes/spaceship-prompt/spaceship.zsh-theme
-      ~/.local/bin/stats.pl: bin/stats.pl
+
+      # Git
+      ~/.gitconfig: others/gitconfig
+
+      # youtube-dl
       ~/.config/youtube-dl/config: config/youtube-dl/config
