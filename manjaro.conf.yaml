@@ -35,6 +35,7 @@
       - hdparm
       - hyperfine
       - handbrake
+      - kdenlive
       - libreoffice
       - lsd
       - muparser
@@ -49,6 +50,8 @@
       - shfmt
       - simplescreenrecorder
       - syncthing-gtk
+      - task
+      - timew  # timewarrior
       - tlp
       - youtube-dl
       - zsh
