@@ -68,5 +68,7 @@
           status: install
       arcticicestudio.nord-visual-studio-code:
           status: install
+      seansassenrath.vscode-theme-superonedark:
+          status: install
       ms-vscode.Theme-TomorrowKit:
           status: install

@@ -22,7 +22,7 @@
 	"workbench.editor.enablePreviewFromQuickOpen": false,
 	"workbench.statusBar.visible": true,
 	"workbench.sideBar.location": "right",
-	"workbench.panel.defaultLocation": "left",
+	"workbench.panel.defaultLocation": "right",
 	// explorer
 	"explorer.confirmDragAndDrop": false,
 	"explorer.confirmDelete": false,

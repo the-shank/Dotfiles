@@ -27,11 +27,11 @@
 		"command": "workbench.action.terminal.toggleTerminal"
 	},
 	{
-		"key": "shift+alt+j",
+		"key": "shift+alt+k",
 		"command": "workbench.action.terminal.focus",
 	},
 	{
-		"key": "shift+alt+k",
+		"key": "shift+alt+j",
 		"command": "workbench.action.focusActiveEditorGroup",
 	},
 	{
