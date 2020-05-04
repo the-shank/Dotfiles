@@ -1,9 +1,8 @@
 {
 	"window.menuBarVisibility": "toggle",
 	// editor
-	"editor.fontFamily": "Noto Sans Mono Medium, Fira Code, Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+	"editor.fontFamily": "Noto Sans Mono, Fira Code, Ubuntu Mono, Consolas, 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
 	"editor.fontLigatures": true,
-	"editor.renderWhitespace": "all",
 	"editor.parameterHints.enabled": false,
 	"editor.minimap.maxColumn": 100,
 	"editor.minimap.enabled": false,
@@ -74,5 +73,8 @@
 	"editor.multiCursorModifier": "ctrlCmd",
 	"editor.snippetSuggestions": "top",
 	"workbench.colorTheme": "Super One Dark",
-	"editor.fontSize": 13
+	"editor.fontSize": 13,
+	"editor.cursorStyle": "block",
+	"editor.cursorSurroundingLines": 5,
+	"editor.renderWhitespace": "none"
 }
