@@ -34,3 +34,6 @@
 
       # Fonts
       ~/.fonts: fonts
+
+      # MIME type associations
+      ~/.config/mimeapps.list: config/mimeapps.list
