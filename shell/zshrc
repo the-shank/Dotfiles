@@ -138,3 +138,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# broot
+source /home/shank/.config/broot/launcher/bash/br

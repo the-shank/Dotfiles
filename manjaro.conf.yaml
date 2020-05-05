@@ -25,9 +25,11 @@
       - arc-gtk-theme
       - bat
       - base-devel
+      - broot
       - code
       - calibre
       - docker
+      - downgrade
       - fd
       - flameshot
       - gnome-sound-recorder
@@ -39,24 +41,29 @@
       - libreoffice
       - lsd
       - muparser
+      - nnn
       - ncdu
+      - neovim
       - okular
       - nerd-fonts-noto-sans-mono
       - powerline-fonts
       - psensor
       - pdfarranger
+      - qbittorrent
+      - ranger
       - redshift
       - ripgrep
       - shfmt
       - simplescreenrecorder
       - syncthing-gtk
       - task
-      - timew  # timewarrior
       - tlp
+      - tldr
       - youtube-dl
       - zsh
 
 #       - enpass-bin
+#       - exercism
 #       - google-chrome
 #       - libpdfium-nojs
 #       - megasync

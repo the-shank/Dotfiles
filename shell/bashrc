@@ -138,3 +138,6 @@ unset __conda_setup
 
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && [[ -d ~/.liquidprompt ]] && source ~/.liquidprompt/liquidprompt
+
+# broot
+source /home/shank/.config/broot/launcher/bash/br
