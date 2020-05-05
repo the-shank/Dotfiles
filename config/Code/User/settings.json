@@ -76,5 +76,6 @@
 	"editor.fontSize": 13,
 	"editor.cursorStyle": "block",
 	"editor.cursorSurroundingLines": 5,
-	"editor.renderWhitespace": "none"
+	"editor.renderWhitespace": "none",
+	"editor.lineNumbers": "relative"
 }
