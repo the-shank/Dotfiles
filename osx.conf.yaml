@@ -24,6 +24,7 @@
 
 - brew:
       - bat
+      - broot
       - cf-tool
       - coreutils
       - duti
@@ -38,8 +39,10 @@
       - mpv --with-bundle
       - ncdu
       - neofetch
+      - nnn
       - peco
       - ripgrep
+      - shellcheck
       - syncthing
       - unrar
       - unzip
