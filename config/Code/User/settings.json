@@ -68,7 +68,6 @@
 	"leetcode.hint.commandShortcut": false,
 	"leetcode.hint.commentDescription": false,
 	"leetcode.hint.configWebviewMarkdown": false,
-	"window.zoomLevel": 0.9,
 	"editor.formatOnPaste": true,
 	"editor.multiCursorModifier": "ctrlCmd",
 	"editor.snippetSuggestions": "top",
