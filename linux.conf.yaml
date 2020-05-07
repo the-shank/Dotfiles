@@ -37,3 +37,9 @@
 
       # MIME type associations
       ~/.config/mimeapps.list: config/mimeapps.list
+
+      # Ranger
+      ~/.config/ranger/rifle.conf: config/ranger/rifle.conf
+
+      # Xsession
+      ~/.xsession: config/xsession
