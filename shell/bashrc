@@ -140,4 +140,9 @@ unset __conda_setup
 [[ $- = *i* ]] && [[ -d ~/.liquidprompt ]] && source ~/.liquidprompt/liquidprompt
 
 # broot
-source /home/shank/.config/broot/launcher/bash/br
+if [[ -f /home/shank/.config/broot/launcher/bash/br ]]; then
+    source /home/shank/.config/broot/launcher/bash/br
+fi
+if [[ -f /Users/shank/Library/Preferences/org.dystroy.broot/launcher/bash/br ]]; then
+    source /Users/shank/Library/Preferences/org.dystroy.broot/launcher/bash/br
+fi
