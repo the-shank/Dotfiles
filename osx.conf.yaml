@@ -39,6 +39,7 @@
       - mpv --with-bundle
       - ncdu
       - neofetch
+      - neovim
       - nnn
       - peco
       - ripgrep

@@ -4,10 +4,15 @@
 	<icon>Terminal</icon>
 	<name>Terminal</name>
 	<unique-id>1367866030392833-1</unique-id>
-	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<command>exo-open --working-directory %d --launch TerminalEmulator</command>
 	<description></description>
 	<patterns>*</patterns>
 	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
 </action>
 <action>
 	<icon>stock_folder</icon>

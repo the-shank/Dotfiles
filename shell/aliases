@@ -42,11 +42,19 @@ if hash xdg-open 2>/dev/null; then
 fi
 
 # redshift
+
+alias r6500='redshift -P -O 6500'
+alias r0=r6500
 alias r6000='redshift -P -O 6000'
+alias r1=r6000
 alias r5500='redshift -P -O 5500'
+alias r2=r5500
 alias r5000='redshift -P -O 5000'
+alias r3=r5000
 alias r4500='redshift -P -O 4500'
+alias r4=r4500
 alias r4000='redshift -P -O 4000'
+alias r5=r4000
 
 # youtube-dl
 alias ytdl480='youtube-dl -f "bestvideo[ext=webm][height<=480]+bestaudio[ext=webm]"'
