@@ -41,3 +41,6 @@
       # MPV Media Player
       ~/.config/mpv/input.conf: config/mpv/input.conf
       ~/.config/mpv/mpv.conf: config/mpv/mpv.conf
+
+      # Neovim
+      ~/.config/nvim/init.vim: config/nvim/init.vim
