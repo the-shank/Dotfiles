@@ -29,6 +29,9 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# add gobin to PATH if it exists
+[ -d "$HOME/.local/gobin" ] && export GOBIN="$HOME/.local/gobin" && PATH="$GOBIN:$PATH"
+
 # set PATH to include ~/.mix and ~/.mix/escripts
 if [ -d "$HOME/.mix" ] ; then
     PATH="$HOME/.mix:$PATH"
@@ -89,7 +92,9 @@ fi
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # git - editor
-if hash mousepad 2>/dev/null; then
+if hash nvim 2>/dev/null; then
+    export GIT_EDITOR=nvim
+elif hash mousepad 2>/dev/null; then
     export GIT_EDITOR=mousepad
 elif hash subl 2>/dev/null; then
     export GIT_EDITOR="subl -w"

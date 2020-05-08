@@ -145,3 +145,6 @@ fi
 if [[ -f /Users/shank/Library/Preferences/org.dystroy.broot/launcher/bash/br ]]; then
     source /Users/shank/Library/Preferences/org.dystroy.broot/launcher/bash/br
 fi
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
