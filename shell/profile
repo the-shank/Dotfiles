@@ -20,79 +20,61 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
+[ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
+[ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
+
+# add gobin to PATH if it exists
+[ -d "$HOME/.local/gobin" ] && export GOBIN="$HOME/.local/gobin" && PATH="$GOBIN:$PATH"
 
 # set PATH to include ~/.mix and ~/.mix/escripts
-if [ -d "$HOME/.mix" ] ; then
-    PATH="$HOME/.mix:$PATH"
-fi
-if [ -d "$HOME/.mix/escripts" ] ; then
-    PATH="$HOME/.mix/escripts:$PATH"
-fi
+[ -d "$HOME/.mix" ] && PATH="$HOME/.mix:$PATH"
+[ -d "$HOME/.mix/escripts" ] && PATH="$HOME/.mix/escripts:$PATH"
 
 # rust: cargo
-if [ -d "$HOME/.cargo/bin" ] ; then
-    PATH="$HOME/.cargo/bin:$PATH"
-fi
+[ -d "$HOME/.cargo/bin" ] && PATH="$HOME/.cargo/bin:$PATH"
 
 # rust: enable backtrace
 export RUST_BACKTRACE=full
 
 # set PATH so it includes user's Android Studio bin if it exists
-if [ -d "$HOME/Applications/android-studio/bin" ]; then
-    PATH="$HOME/Applications/android-studio/bin:$PATH"
-fi
+[ -d "$HOME/Applications/android-studio/bin" ] && PATH="$HOME/Applications/android-studio/bin:$PATH"
 
 # notify when commands complete in the terminal
-if [ -f "/usr/share/undistract-me/long-running.bash" ]; then
-    source /usr/share/undistract-me/long-running.bash
-fi
+[ -f "/usr/share/undistract-me/long-running.bash" ] && source /usr/share/undistract-me/long-running.bash
 
 # ansible-galaxy
-if [ -d "$HOME/Code/UTILS/ANSIBLE-ROLES" ]; then
-    export ANSIBLE_ROLES_PATH="$HOME/Code/UTILS/ANSIBLE-ROLES"
-fi
+[ -d "$HOME/Code/UTILS/ANSIBLE-ROLES" ] && export ANSIBLE_ROLES_PATH="$HOME/Code/UTILS/ANSIBLE-ROLES"
 
 # Java
-if [ -d "/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home" ]; then
-    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home
-fi
+[ -d "/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home" ] && export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home
 
 # Apache Derby
 export DERBY_INSTALL="$HOME/Applications/db-derby-10.15.1.3-bin"
-if [ -d "$DERBY_INSTALL/bin" ] ; then
-    export PATH="$PATH:$DERBY_INSTALL/bin"
-fi
-if [ -d "$DERBY_INSTALL/lib" ] ; then
-    export CLASSPATH="$DERBY_INSTALL/lib/*"
-fi
+[ -d "$DERBY_INSTALL/bin" ] && export PATH="$PATH:$DERBY_INSTALL/bin"
+[ -d "$DERBY_INSTALL/lib" ] && export CLASSPATH="$DERBY_INSTALL/lib/*"
 
 # SimpleDB
 export SIMPLEDB_HOME="$HOME/Applications/SimpleDB_2.10"
-if [ -d "$SIMPLEDB_HOME" ] ; then
-    export CLASSPATH=".:$SIMPLEDB_HOME/bin:$CLASSPATH"
-fi
+[ -d "$SIMPLEDB_HOME" ] && export CLASSPATH=".:$SIMPLEDB_HOME/bin:$CLASSPATH"
 
 # Homebrew
-if [ -d "/usr/local/sbin" ] ; then
-    export PATH="/usr/local/sbin:$PATH"
-fi
+[ -d "/usr/local/sbin" ] && export PATH="/usr/local/sbin:$PATH"
 
 # autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # git - editor
-if hash mousepad 2>/dev/null; then
+if hash nvim 2>/dev/null; then
+    export GIT_EDITOR=nvim
+    export EDITOR=nvim
+elif hash mousepad 2>/dev/null; then
     export GIT_EDITOR=mousepad
+    export EDITOR=mousepad
 elif hash subl 2>/dev/null; then
     export GIT_EDITOR="subl -w"
+    export EDITOR="subl -w"
 fi
 
 # fix shader stuttering on AMD GPU
