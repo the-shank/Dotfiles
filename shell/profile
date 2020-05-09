@@ -68,10 +68,13 @@ export SIMPLEDB_HOME="$HOME/Applications/SimpleDB_2.10"
 # git - editor
 if hash nvim 2>/dev/null; then
     export GIT_EDITOR=nvim
+    export EDITOR=nvim
 elif hash mousepad 2>/dev/null; then
     export GIT_EDITOR=mousepad
+    export EDITOR=mousepad
 elif hash subl 2>/dev/null; then
     export GIT_EDITOR="subl -w"
+    export EDITOR="subl -w"
 fi
 
 # fix shader stuttering on AMD GPU
