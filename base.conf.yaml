@@ -47,4 +47,5 @@
       ~/.config/nvim/plugins.vim: config/nvim/plugins.vim
       ~/.config/nvim/settings.vim: config/nvim/settings.vim
       ~/.config/nvim/mappings.vim: config/nvim/mappings.vim
+      ~/.config/nvim/plug-config/coc.vim: config/nvim/plug-config/coc.vim
       ~/.config/nvim/coc-settings.json: config/nvim/coc-settings.json
