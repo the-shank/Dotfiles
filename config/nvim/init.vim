@@ -7,6 +7,7 @@ call plug#begin()
 
 " Theme
 Plug 'joshdick/onedark.vim'
+Plug 'nanotech/jellybeans.vim'
 
 " Utils
 Plug 'scrooloose/nerdtree'
@@ -19,7 +20,11 @@ Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " set colorscheme
-colorscheme onedark
+if has('mac')
+  colorscheme jellybeans
+elseif has('unix')
+  colorscheme onedark
+endif
 
 " nerdtree
 let g:NERDTreeShowHidden = 1
