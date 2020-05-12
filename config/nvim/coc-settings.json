@@ -1,3 +1,4 @@
 {
+    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "html", "javascript", "yaml", "json", "python", "rust", "go"],
 	"diagnostic.virtualText": true
 }

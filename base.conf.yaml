@@ -44,4 +44,7 @@
 
       # Neovim
       ~/.config/nvim/init.vim: config/nvim/init.vim
+      ~/.config/nvim/plugins.vim: config/nvim/plugins.vim
+      ~/.config/nvim/settings.vim: config/nvim/settings.vim
+      ~/.config/nvim/mappings.vim: config/nvim/mappings.vim
       ~/.config/nvim/coc-settings.json: config/nvim/coc-settings.json
