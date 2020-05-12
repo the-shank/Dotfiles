@@ -65,7 +65,7 @@ export SIMPLEDB_HOME="$HOME/Applications/SimpleDB_2.10"
 # autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-# git - editor
+# editor
 if hash nvim 2>/dev/null; then
     export GIT_EDITOR=nvim
     export EDITOR=nvim

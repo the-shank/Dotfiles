@@ -49,6 +49,7 @@
       - unzip
       - wget
       - xz
+      - yarn
       - youtube-dl
       - zsh
 
@@ -59,6 +60,7 @@
       - google-chrome
       - handbrake
       - iglance
+      - iterm2
       - itsycal
       - keepingyouawake
       - libreoffice
