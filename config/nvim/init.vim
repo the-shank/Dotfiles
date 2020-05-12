@@ -2,7 +2,9 @@
 :set number
 :set relativenumber
 
+" ****************************************************************************
 " Plugins
+" ****************************************************************************
 call plug#begin()
 
 " Theme
@@ -12,11 +14,17 @@ Plug 'joshdick/onedark.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 
+" Language Completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Fuzzy Finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 call plug#end()
+" ****************************************************************************
+" Plugins (End)
+" ****************************************************************************
 
 " set colorscheme
 colorscheme onedark
@@ -48,3 +56,11 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+
+" coc-extensions
+let g:coc_global_extensions = [
+	\'coc-go',
+	\'coc-python',
+	\'coc-json',
+	\'coc-rust-analyzer'
+	\]
