@@ -49,6 +49,7 @@
       - unzip
       - wget
       - xz
+      - yarn
       - youtube-dl
       - zsh
 
