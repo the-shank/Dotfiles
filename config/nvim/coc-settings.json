@@ -1,4 +1,13 @@
 {
     "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "html", "javascript", "yaml", "json", "python", "rust", "go"],
-	"diagnostic.virtualText": true
+	"diagnostic.virtualText": true,
+
+    // explorer
+    "explorer.width": 30,
+    "explorer.icon.enableNerdfont": true,
+    "explorer.previewAction.onHover": false,
+    "explorer.keyMappings": {
+        "<cr>": ["expandable?", "expand", "open"],
+        "v": "open:vsplit"
+    }
 }

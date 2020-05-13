@@ -27,7 +27,7 @@ set relativenumber			" Relative Line numbers
 set cursorline                          " Enable highlighting of the current line
 set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs 
-" set noshowmode                          " We don't need to see things like -- INSERT -- anymore
+set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
@@ -41,7 +41,7 @@ set autochdir                           " Your working directory will always be 
 if has('mac')
   colorscheme jellybeans
 elseif has('unix')
-  colorscheme jellybeans
-  " colorscheme onedark
+  " colorscheme jellybeans
+  colorscheme onedark
 endif
 

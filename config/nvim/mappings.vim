@@ -21,8 +21,6 @@ nnoremap <C-j>    :resize +2<CR>
 nnoremap <C-h>    :vertical resize -2<CR>
 nnoremap <C-l>    :vertical resize +2<CR>
 
-nnoremap <leader>d dd
-
 " X clipboard integration
 " <Space>c will copy entire buffer into clipboard
 noremap <leader>c :w !xsel -ib<cr><cr>
@@ -34,3 +32,9 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+
+" Use :Rg as a global search
+noremap <leader>s :Rg<CR>
+
+" Ctrl-P for quick searching files
+map <C-p> :Files<CR>
