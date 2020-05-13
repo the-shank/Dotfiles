@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function detect_os() {
     UNAME_A=$(uname -a)
     if grep -qi "Debian" <<<$UNAME_A; then
