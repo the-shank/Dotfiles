@@ -1,6 +1,8 @@
 function detect_os() {
     UNAME_A=$(uname -a)
-    if grep -qi "Ubuntu" <<<$UNAME_A; then
+    if grep -qi "Debian" <<<$UNAME_A; then
+        OS="debian"
+    elif grep -qi "Ubuntu" <<<$UNAME_A; then
         OS="ubuntu"
     elif grep -qi "Manjaro" <<<$UNAME_A; then
         OS="manjaro"
