@@ -1,4 +1,6 @@
-source $(dirname "$0")/utils.sh
+#!/bin/bash
+
+. ~/dotfiles/scripts/utils.sh
 detect_os
 
 # Check if oh-my-zsh is installed
