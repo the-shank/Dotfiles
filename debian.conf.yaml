@@ -10,48 +10,56 @@
       # Okular
       ~/.config/okularpartrc: okular/okularpartrc
 
+      # xinitrc
+      ~/.xinitrc: config/xinitrc
+
 - apt:
       - albert
       # - audacity
-      - anki
+      # - anki
       # - arc-gtk-theme
-      - bat
-      - base-devel
-      - broot
-      - code
-      - calibre
-      - docker
-      - downgrade
-      - fd
-      - flameshot
-      - gnome-sound-recorder
+      # - bat
+      # - base-devel
+      - build-essential
+      # - broot
+      # - code
+      # - calibre
+      # - docker
+      # - downgrade
+      # - fd
+      # - flameshot
+      # - gnome-sound-recorder
       - htop
-      - hdparm
-      - hyperfine
-      - handbrake
-      - kdenlive
+      # - hdparm
+      # - hyperfine
+      # - handbrake
+      # - kdenlive
       - libreoffice
-      - lsd
-      - muparser
+      # - lsd
+      # - muparser
+      - mpv
       - nnn
       - ncdu
+      - nodejs
       - neovim
       - okular
-      - nerd-fonts-noto-sans-mono
-      - powerline-fonts
-      - psensor
+      # - nerd-fonts-noto-sans-mono
+      # - powerline-fonts
+      # - psensor
       - pdfarranger
       - qbittorrent
       - ranger
       - redshift
-      - ripgrep
-      - shfmt
-      - simplescreenrecorder
-      - syncthing-gtk
-      - task
-      - tlp
-      - tldr
-      - youtube-dl
+      # - ripgrep
+      # - shfmt
+      # - simplescreenrecorder
+      # - syncthing-gtk
+      # - task
+      # - tlp
+      # - tldr
+      - unzip
+      # - youtube-dl
+      - yarnpkg
       - zsh
 
 #       - enpass-bin
