@@ -47,3 +47,12 @@ else
     echo "downloading zsh-peco-history"
     git clone https://github.com/jimeh/zsh-peco-history.git ~/.zsh/zsh-peco-history
 fi
+
+# ZSH: pure prompt
+if [ -e $HOME/.zsh/pure ]; then
+    echo "pure prompt directory already exists"
+else
+    echo "downloading pure prompt for zsh"
+    mkdir -p "$HOME/.zsh"
+    git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+fi
