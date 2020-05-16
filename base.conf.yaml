@@ -29,8 +29,6 @@
       ~/.bashrc: shell/bashrc
       ~/.zshrc: shell/zshrc
       ~/.aliases: shell/aliases
-      ~/.oh-my-zsh/custom/themes/spaceship-prompt: zsh/themes/spaceship-prompt
-      ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme: zsh/themes/spaceship-prompt/spaceship.zsh-theme
 
       # Git
       ~/.gitconfig: others/gitconfig
