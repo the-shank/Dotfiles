@@ -23,7 +23,9 @@
 
       # XFCE Thunar
       ~/.config/Thunar/accels.scm: config/Thunar/accels.scm
-      ~/.config/Thunar/uca.xml: config/Thunar/uca.xml
+      ~/.config/Thunar/uca.xml:
+        path: config/Thunar/uca.xml
+        force: true
 
       # XFCE Terminal
       ~/.config/xfce4/terminal/accels.scm: config/xfce4/terminal/accels.scm
@@ -36,7 +38,9 @@
       ~/.fonts: fonts
 
       # MIME type associations
-      ~/.config/mimeapps.list: config/mimeapps.list
+      ~/.config/mimeapps.list:
+          path: config/mimeapps.list
+          force: true
 
       # Ranger
       ~/.config/ranger/rifle.conf: config/ranger/rifle.conf
