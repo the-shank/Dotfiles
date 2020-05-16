@@ -57,6 +57,6 @@ alias r4000='redshift -P -O 4000'
 alias r5=r4000
 
 # youtube-dl
-alias ytdl480='youtube-dl -f "bestvideo[ext=webm][height<=480]+bestaudio[ext=webm]"'
-alias ytdl720='youtube-dl -f "bestvideo[ext=webm][height<=720]+bestaudio[ext=webm]"'
-alias ytdl1080='youtube-dl -f "bestvideo[ext=webm][height<=1080]+bestaudio[ext=webm]"'
+alias y480='youtube-dl -f "bestvideo[ext=webm][height<=480]+bestaudio[ext=webm]"'
+alias y720='youtube-dl -f "bestvideo[ext=webm][height<=720]+bestaudio[ext=webm]"'
+alias y1080='youtube-dl -f "bestvideo[ext=webm][height<=1080]+bestaudio[ext=webm]"'
