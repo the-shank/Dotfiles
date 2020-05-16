@@ -1,3 +1,6 @@
+# mv
+alias mv="mv -i"
+
 # tree
 alias tree="tree -C"
 alias tree1="tree -L 1"
@@ -12,16 +15,17 @@ alias t4="tree4"
 # lsd
 alias ls='lsd'
 alias ll='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
+alias lsa='ls -a'
+alias lla='ll -la'
 alias lt='ls --tree'
+alias lst='ls --tree'
 alias lt1='lt --depth 1'
 alias lt2='lt --depth 2'
 alias lt3='lt --depth 3'
 alias lt3='lt --depth 4'
-alias ltl='ll --tree'
-alias lta='la --tree'
-alias ltla='lla --tree'
+alias llt='ll --tree'
+alias llat='lla --tree'
+alias lsat='lsa --tree'
 
 # ripgrep
 alias rgi='rg -i'
@@ -42,7 +46,6 @@ if hash xdg-open 2>/dev/null; then
 fi
 
 # redshift
-
 alias r6500='redshift -P -O 6500'
 alias r0=r6500
 alias r6000='redshift -P -O 6000'
