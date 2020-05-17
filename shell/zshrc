@@ -75,6 +75,8 @@ fpath+=$HOME/.zsh/pure
 autoload -U promptinit; promptinit
 # turn on git stash status
 zstyle :prompt:pure:git:stash show yes
+# change the path color
+zstyle :prompt:pure:path color yellow
 prompt pure
 
 # User configuration
