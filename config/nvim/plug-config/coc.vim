@@ -144,6 +144,12 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
 " Explorer
-nmap <space>e :CocCommand explorer<CR>
-" nmap <space>f :CocCommand explorer --preset floating<CR>
+let g:coc_explorer_global_presets = {
+\   'floating': {
+\      'position': 'floating',
+\      'floating-height': 30,
+\   },
+\ }
+" nmap <space>d :CocCommand explorer<CR>
+nmap <space>e :CocCommand explorer --preset floating<CR>
 " autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
