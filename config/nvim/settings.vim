@@ -39,7 +39,8 @@ set autochdir                           " Your working directory will always be 
 
 " set colorscheme
 if has('mac')
-  colorscheme jellybeans
+  " colorscheme jellybeans
+  colorscheme onedark
 elseif has('unix')
   " colorscheme jellybeans
   colorscheme onedark
