@@ -49,3 +49,6 @@
       ~/.config/nvim/plug-config/coc.vim: config/nvim/plug-config/coc.vim
       ~/.config/nvim/plug-config/onedark.vim: config/nvim/plug-config/onedark.vim
       ~/.config/nvim/coc-settings.json: config/nvim/coc-settings.json
+
+      # Tmux
+      ~/.tmux.conf: config/tmux.conf

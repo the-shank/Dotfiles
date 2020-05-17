@@ -45,6 +45,8 @@
       - ripgrep
       - shellcheck
       - syncthing
+      - tmux
+      - tldr
       - unrar
       - unzip
       - wget
