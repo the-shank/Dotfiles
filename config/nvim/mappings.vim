@@ -33,8 +33,16 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
+" Left and right can switch buffers
+nnoremap <left> :bp<CR>
+nnoremap <right> :bn<CR>
+
 " Use :Rg as a global search
-noremap <leader>s :Rg<CR>
+noremap <leader>/ :Rg<CR>
+
+" <leader><leader> toggles between buffers
+nnoremap <leader><leader> <c-^>
 
 " Ctrl-P for quick searching files
 map <C-p> :Files<CR>
+nmap <leader>; :Buffers<CR>
