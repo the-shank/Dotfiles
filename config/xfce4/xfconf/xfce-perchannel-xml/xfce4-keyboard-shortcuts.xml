@@ -45,6 +45,8 @@
       <property name="&lt;Primary&gt;&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r"/>
       <property name="&lt;Alt&gt;F1" type="string" value="xfce4-popup-whiskermenu"/>
       <property name="&lt;Super&gt;d" type="string" value="xfce4-dict -c"/>
+      <property name="&lt;Alt&gt;F7" type="string" value="xbright -10"/>
+      <property name="&lt;Alt&gt;F8" type="string" value="xbright +10"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
