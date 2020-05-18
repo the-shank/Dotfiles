@@ -7,6 +7,9 @@ Plug 'airblade/vim-rooter'
 Plug 'joshdick/onedark.vim'
 Plug 'nanotech/jellybeans.vim'
 
+" commenting
+Plug 'tpope/vim-commentary'
+
 " Language Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 

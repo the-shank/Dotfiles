@@ -38,7 +38,11 @@ nnoremap <left> :bp<CR>
 nnoremap <right> :bn<CR>
 
 " Use :Rg as a global search
-noremap <leader>/ :Rg<CR>
+noremap <leader>\ :Rg<CR>
+
+" vim-commentary
+nnoremap <space>/ :Commentary<CR>
+vnoremap <space>/ :Commentary<CR>
 
 " <leader><leader> toggles between buffers
 nnoremap <leader><leader> <c-^>
