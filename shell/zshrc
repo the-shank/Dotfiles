@@ -76,7 +76,7 @@ autoload -U promptinit; promptinit
 # turn on git stash status
 zstyle :prompt:pure:git:stash show yes
 # change the path color
-zstyle :prompt:pure:path color yellow
+zstyle :prompt:pure:path color cyan
 prompt pure
 
 # User configuration
