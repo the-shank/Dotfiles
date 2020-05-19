@@ -163,3 +163,6 @@ unset __conda_setup
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# zsh-autosuggestions
+bindkey '^\' autosuggest-accept
