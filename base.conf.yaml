@@ -49,6 +49,7 @@
       ~/.config/nvim/plug-config/airline.vim: config/nvim/plug-config/airline.vim
       ~/.config/nvim/plug-config/coc.vim: config/nvim/plug-config/coc.vim
       ~/.config/nvim/plug-config/onedark.vim: config/nvim/plug-config/onedark.vim
+      ~/.config/nvim/plug-config/rnvimr.vim: config/nvim/plug-config/rnvimr.vim
       ~/.config/nvim/coc-settings.json: config/nvim/coc-settings.json
 
       # Tmux

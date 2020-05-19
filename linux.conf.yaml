@@ -44,6 +44,10 @@
 
       # Ranger
       ~/.config/ranger/rifle.conf: config/ranger/rifle.conf
+      ~/.config/ranger/rc.conf: config/ranger/rc.conf
 
       # Xsession
       ~/.xsession: config/xsession
+
+- shell:
+      - [scripts/ranger.sh, installing ranger devicons]

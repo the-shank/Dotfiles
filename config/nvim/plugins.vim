@@ -24,4 +24,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Ranger
+Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+
 call plug#end()
