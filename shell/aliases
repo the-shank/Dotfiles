@@ -63,3 +63,6 @@ alias r5=r4000
 alias y480='youtube-dl -f "bestvideo[ext=webm][height<=480]+bestaudio[ext=webm]"'
 alias y720='youtube-dl -f "bestvideo[ext=webm][height<=720]+bestaudio[ext=webm]"'
 alias y1080='youtube-dl -f "bestvideo[ext=webm][height<=1080]+bestaudio[ext=webm]"'
+
+# prime-run (for using cuda in pytorch)
+alias prime-run='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia'
