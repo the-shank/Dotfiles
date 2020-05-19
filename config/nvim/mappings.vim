@@ -38,7 +38,7 @@ nnoremap <left> :bp<CR>
 nnoremap <right> :bn<CR>
 
 " Use :Rg as a global search
-noremap <leader>\ :Rg<CR>
+noremap <leader>g :Rg<CR>
 
 " vim-commentary
 nnoremap <space>/ :Commentary<CR>
