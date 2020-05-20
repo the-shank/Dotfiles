@@ -50,6 +50,7 @@
       ~/.config/nvim/plug-config/coc.vim: config/nvim/plug-config/coc.vim
       ~/.config/nvim/plug-config/onedark.vim: config/nvim/plug-config/onedark.vim
       ~/.config/nvim/plug-config/rnvimr.vim: config/nvim/plug-config/rnvimr.vim
+      ~/.config/nvim/plug-config/signify.vim: config/nvim/plug-config/signify.vim
       ~/.config/nvim/coc-settings.json: config/nvim/coc-settings.json
 
       # Tmux

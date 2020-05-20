@@ -27,4 +27,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Ranger
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 
+" Git Gutter
+Plug 'mhinz/vim-signify'
+
 call plug#end()
