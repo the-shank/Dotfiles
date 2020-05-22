@@ -37,6 +37,9 @@ inoremap <right> <nop>
 nnoremap <left> :bp<CR>
 nnoremap <right> :bn<CR>
 
+" Leader + tab can switch buffers
+nnoremap <leader><tab> :bn<CR>
+
 " Use :Rg as a global search
 noremap <leader>g :Rg<CR>
 
