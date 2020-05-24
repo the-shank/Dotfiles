@@ -29,26 +29,30 @@
 
     // language servers
     "languageserver": {
-        "cquery": {
-            "command": "cquery",
+        "ccls": {
+            "command": "ccls",
             "args": [
-                "--log-file=/tmp/cq.log"
+                "--log-file=/tmp/ccls.log"
             ],
             "filetypes": [
                 "c",
-                "cc",
                 "cpp",
-                "c++"
+                "cuda",
+                "objc",
+                "objcpp"
             ],
             "rootPatterns": [
-                "compile_flags.txt",
+                ".ccls",
                 "compile_commands.json",
-                ".git/",
-                ".hg/"
+                ".git/"
             ],
             "initializationOptions": {
-                "cacheDirectory": "/tmp/cquery"
-            }
+                "cacheDirectory": "/tmp/ccls",
+                // "client": {
+                //     "snippetSupport": true
+                // }
+            },
+            "trace.server": "verbose"
         }
     }
 }
