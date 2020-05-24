@@ -85,3 +85,6 @@ export BAT_THEME="TwoDark"
 
 # enable downgrading packages in Manjaro
 export DOWNGRADE_FROM_ALA=1
+
+# fzf
+export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
