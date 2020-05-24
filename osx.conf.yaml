@@ -25,6 +25,7 @@
 - brew:
       - bat
       - broot
+      - ccls
       - cf-tool
       - coreutils
       - duti

@@ -28,6 +28,7 @@
       - broot
       - code
       - calibre
+      - ccls
       - coreutils
       - docker
       - downgrade
