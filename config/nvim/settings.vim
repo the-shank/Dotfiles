@@ -35,7 +35,7 @@ set timeoutlen=100                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set autochdir                           " Your working directory will always be the same as your working directory
-
+set colorcolumn=80,100                  " a ruler at 80th & 100th char column
 
 " set colorscheme
 if has('mac')
