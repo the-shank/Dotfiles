@@ -13,7 +13,6 @@
         "cpp"
     ],
     "diagnostic.virtualText": true,
-
     // explorer
     "explorer.width": 30,
     "explorer.icon.enableNerdfont": true,
@@ -26,33 +25,4 @@
         ],
         "v": "open:vsplit"
     },
-
-    // language servers
-    "languageserver": {
-        "ccls": {
-            "command": "ccls",
-            "args": [
-                "--log-file=/tmp/ccls.log"
-            ],
-            "filetypes": [
-                "c",
-                "cpp",
-                "cuda",
-                "objc",
-                "objcpp"
-            ],
-            "rootPatterns": [
-                ".ccls",
-                "compile_commands.json",
-                ".git/"
-            ],
-            "initializationOptions": {
-                "cacheDirectory": "/tmp/ccls",
-                // "client": {
-                //     "snippetSupport": true
-                // }
-            },
-            "trace.server": "verbose"
-        }
-    }
 }
