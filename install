@@ -38,7 +38,19 @@ debian)
     echo "PROCESSING linux${SUFFIX}"
     echo "=============================="
     "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "linux${SUFFIX}" "${@}"
-    echo "PROCESSING ${OS}${SUFFIX}"#FFFFFF
+    echo "PROCESSING ${OS}${SUFFIX}"
+    echo "=============================="
+    sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${OS}${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-apt" "${@}"
+    echo "PROCESSING vscode${SUFFIX}"
+    echo "=============================="
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "vscode${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-vscode" "${@}"
+    ;;
+ubuntu)
+    echo "OS - Ubuntu"
+    echo "PROCESSING linux${SUFFIX}"
+    echo "=============================="
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "linux${SUFFIX}" "${@}"
+    echo "PROCESSING ${OS}${SUFFIX}"
     echo "=============================="
     sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${OS}${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-apt" "${@}"
     echo "PROCESSING vscode${SUFFIX}"
