@@ -33,6 +33,7 @@
       - docker
       - downgrade
       - fd
+      - filezilla
       - flameshot
       - gnome-sound-recorder
       - htop
@@ -58,6 +59,7 @@
       - ripgrep
       - shfmt
       - simplescreenrecorder
+      - sshfs
       - syncthing-gtk
       - task
       - tlp
