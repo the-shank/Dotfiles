@@ -91,3 +91,7 @@ export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 
 # map caps lock to escape
 setxkbmap -option caps:escape
+
+# llvm
+[ -d  /usr/local/opt/llvm/lib ] && export LDFLAGS="-L/usr/local/opt/llvm/lib"
+[ -d /usr/local/opt/llvm/include ] && export CPPFLAGS="-I/usr/local/opt/llvm/include"
