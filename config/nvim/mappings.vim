@@ -53,3 +53,7 @@ nnoremap <leader><leader> <c-^>
 " Ctrl-P for quick searching files
 map <C-p> :Files<CR>
 nmap <leader>; :Buffers<CR>
+
+" Ctrl+h to stop searching
+vnoremap <leader>h :nohlsearch<cr>
+nnoremap <leader>h :nohlsearch<cr>

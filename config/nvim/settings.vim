@@ -37,6 +37,12 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set autochdir                           " Your working directory will always be the same as your working directory
 set colorcolumn=80,100                  " a ruler at 80th & 100th char column
 
+" Proper search
+set incsearch
+set ignorecase
+set smartcase
+set gdefault
+
 " set colorscheme
 if has('mac')
   " colorscheme jellybeans
