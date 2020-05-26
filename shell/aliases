@@ -1,3 +1,6 @@
+# vim -> nvim
+alias vim='nvim'
+
 # mv
 alias mv="mv -i"
 
