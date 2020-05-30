@@ -96,3 +96,6 @@ setxkbmap -option caps:escape
 [ -d /usr/local/opt/llvm/bin ] && export PATH="/usr/local/opt/llvm/bin:$PATH"
 [ -d /usr/local/opt/llvm/lib ] && export LDFLAGS="-L/usr/local/opt/llvm/lib"
 [ -d /usr/local/opt/llvm/include ] && export CPPFLAGS="-I/usr/local/opt/llvm/include"
+
+# ssh-agent
+[ -d $XDG_RUNTIME_DIR ] && export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
