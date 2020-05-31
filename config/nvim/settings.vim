@@ -44,6 +44,7 @@ set smartcase
 set gdefault
 
 " set colorscheme
+let g:onedark_termcolors=16
 if has('mac')
   " colorscheme jellybeans
   colorscheme onedark
