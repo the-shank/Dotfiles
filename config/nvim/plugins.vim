@@ -5,7 +5,6 @@ Plug 'airblade/vim-rooter'
 
 " Theme
 Plug 'joshdick/onedark.vim'
-Plug 'nanotech/jellybeans.vim'
 
 " commenting
 Plug 'tpope/vim-commentary'
@@ -24,8 +23,11 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Vim-Surround
+Plug 'tpope/vim-surround'
+
 " Ranger
-Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+" Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 
 " Git Gutter
 Plug 'mhinz/vim-signify'
