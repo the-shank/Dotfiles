@@ -42,17 +42,20 @@
       ~/.config/mpv/mpv.conf: config/mpv/mpv.conf
 
       # Neovim
-      ~/.config/nvim/init.vim: config/nvim/init.vim
-      ~/.config/nvim/plugins.vim: config/nvim/plugins.vim
-      ~/.config/nvim/settings.vim: config/nvim/settings.vim
-      ~/.config/nvim/mappings.vim: config/nvim/mappings.vim
-      ~/.config/nvim/plug-config/airline.vim: config/nvim/plug-config/airline.vim
-      ~/.config/nvim/plug-config/coc.vim: config/nvim/plug-config/coc.vim
-      ~/.config/nvim/plug-config/onedark.vim: config/nvim/plug-config/onedark.vim
-      ~/.config/nvim/plug-config/rnvimr.vim: config/nvim/plug-config/rnvimr.vim
-      ~/.config/nvim/plug-config/rooter.vim: config/nvim/plug-config/rooter.vim
-      ~/.config/nvim/plug-config/signify.vim: config/nvim/plug-config/signify.vim
-      ~/.config/nvim/coc-settings.json: config/nvim/coc-settings.json
+      # ~/.config/nvim/init.vim: config/nvim/init.vim
+      # ~/.config/nvim/plugins.vim: config/nvim/plugins.vim
+      # ~/.config/nvim/settings.vim: config/nvim/settings.vim
+      # ~/.config/nvim/mappings.vim: config/nvim/mappings.vim
+      # ~/.config/nvim/plug-config/airline.vim: config/nvim/plug-config/airline.vim
+      # ~/.config/nvim/plug-config/coc.vim: config/nvim/plug-config/coc.vim
+      # ~/.config/nvim/plug-config/onedark.vim: config/nvim/plug-config/onedark.vim
+      # ~/.config/nvim/plug-config/rnvimr.vim: config/nvim/plug-config/rnvimr.vim
+      # ~/.config/nvim/plug-config/rooter.vim: config/nvim/plug-config/rooter.vim
+      # ~/.config/nvim/plug-config/signify.vim: config/nvim/plug-config/signify.vim
+      # ~/.config/nvim/coc-settings.json: config/nvim/coc-settings.json
+
+      # SpaceVim
+      ~/.SpaceVim.d/init.toml: config/SpaceVim/SpaceVim.d/init.toml
 
       # Tmux
       ~/.tmux.conf: config/tmux.conf
