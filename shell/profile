@@ -99,3 +99,6 @@ setxkbmap -option caps:escape
 
 # ssh-agent
 [ -d $XDG_RUNTIME_DIR ] && export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+# in case there is a .private file, source it
+[ -f $HOME/.private ] && source $HOME/.private
