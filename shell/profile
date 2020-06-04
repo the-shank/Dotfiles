@@ -26,7 +26,7 @@ fi
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 
 # add gobin to PATH if it exists
-[ -d "$HOME/.local/gobin" ] && export GOBIN="$HOME/.local/gobin" && PATH="$GOBIN:$PATH"
+# [ -d "$HOME/.local/gobin" ] && export GOBIN="$HOME/.local/gobin" && PATH="$GOBIN:$PATH"
 
 # set PATH to include ~/.mix and ~/.mix/escripts
 [ -d "$HOME/.mix" ] && PATH="$HOME/.mix:$PATH"
