@@ -52,6 +52,7 @@
       ~/.config/nvim/plug-config/rnvimr.vim: config/nvim/plug-config/rnvimr.vim
       ~/.config/nvim/plug-config/rooter.vim: config/nvim/plug-config/rooter.vim
       ~/.config/nvim/plug-config/signify.vim: config/nvim/plug-config/signify.vim
+      ~/.config/nvim/plug-config/vim-go.vim: config/nvim/plug-config/vim-go.vim
       ~/.config/nvim/coc-settings.json: config/nvim/coc-settings.json
 
       # Tmux

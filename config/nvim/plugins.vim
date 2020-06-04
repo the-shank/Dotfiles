@@ -26,11 +26,11 @@ Plug 'vim-airline/vim-airline-themes'
 " Vim-Surround
 Plug 'tpope/vim-surround'
 
-" Ranger
-" Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
-
 " Git Gutter
 Plug 'mhinz/vim-signify'
+
+" Programming Languages
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Coc Extensions
 Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
@@ -38,5 +38,6 @@ Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
 Plug 'weirongxu/coc-explorer', {'do': 'yarn install --frozen-lockfile'}
 Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
 Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
+Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
 
 call plug#end()
