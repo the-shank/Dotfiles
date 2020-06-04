@@ -25,8 +25,9 @@ fi
 # set PATH so it includes user's private bin if it exists
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 
-# add gobin to PATH if it exists
+# add gobin & gopath to PATH if it exists
 [ -d "$HOME/.local/gobin" ] && export GOBIN="$HOME/.local/gobin" && PATH="$PATH:$GOBIN"
+[ -d "$HOME/Code/go" ] && export GOPATH="$HOME/Code/go"
 
 # set PATH to include ~/.mix and ~/.mix/escripts
 [ -d "$HOME/.mix" ] && PATH="$HOME/.mix:$PATH"

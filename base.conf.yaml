@@ -18,6 +18,9 @@
       - ~/Code/REFERENCE
       - ~/Code/TMP
       - ~/Code/UTILS
+      - ~/Code/go
+      - ~/Code/go/src
+      - ~/Code/go/pkg
       - ~/.local/bin
 
 - shell:
