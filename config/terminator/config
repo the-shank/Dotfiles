@@ -1,0 +1,40 @@
+[global_config]
+  title_transmit_bg_color = "#000000"
+  title_inactive_fg_color = "#babdb6"
+  title_inactive_bg_color = "#333333"
+  inactive_color_offset = 0.7000000000000001
+[keybindings]
+  next_tab = <Shift><Alt>Right
+  prev_tab = <Shift><Alt>Left
+[profiles]
+  [[default]]
+    background_color = "#282828"
+    cursor_blink = False
+    cursor_color = "#aaaaaa"
+    font = JetBrains Mono 11
+    foreground_color = "#ebdbb2"
+    show_titlebar = False
+    scroll_on_output = True
+    scrollback_infinite = True
+    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 0:0
+      maximised = True
+      fullscreen = False
+      size = 1920, 1019
+      title = ~
+      last_active_term = 6f2ea171-609b-4a42-807f-daf6ff32e8e2
+      last_active_window = True
+    [[[terminal1]]]
+      type = Terminal
+      parent = child0
+      order = 0
+      profile = default
+      uuid = 6f2ea171-609b-4a42-807f-daf6ff32e8e2
+[plugins]
