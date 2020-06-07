@@ -44,12 +44,10 @@ set smartcase
 set gdefault
 
 " set colorscheme
-let g:onedark_termcolors=16
+" let g:onedark_termcolors=16
 if has('mac')
-  " colorscheme jellybeans
-  colorscheme onedark
+  colorscheme gruvbox8
 elseif has('unix')
-  " colorscheme jellybeans
-  colorscheme onedark
+  colorscheme gruvbox8
 endif
 

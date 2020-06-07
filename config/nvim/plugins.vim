@@ -5,6 +5,7 @@ Plug 'airblade/vim-rooter'
 
 " Theme
 Plug 'joshdick/onedark.vim'
+Plug 'lifepillar/vim-gruvbox8'
 
 " commenting
 Plug 'tpope/vim-commentary'
