@@ -6,6 +6,7 @@
 [keybindings]
   next_tab = <Shift><Alt>Right
   prev_tab = <Shift><Alt>Left
+  layout_launcher = None
 [profiles]
   [[default]]
     background_color = "#282828"
