@@ -64,6 +64,7 @@ export SIMPLEDB_HOME="$HOME/Applications/SimpleDB_2.10"
 [ -d "/usr/local/sbin" ] && export PATH="/usr/local/sbin:$PATH"
 
 # autojump
+[ -f /usr/share/autojump/autojump.sh ] && . /usr/share/autojump/autojump.sh
 [ -f /etc/profile.d/autojump.sh ] && . /etc/profile.d/autojump.sh
 
 # fasd
