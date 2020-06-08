@@ -10,9 +10,6 @@ Plug 'lifepillar/vim-gruvbox8'
 " commenting
 Plug 'tpope/vim-commentary'
 
-" Language Completion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 " Fuzzy Finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -32,6 +29,9 @@ Plug 'mhinz/vim-signify'
 
 " Programming Languages
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" Language Completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Coc Extensions
 Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
