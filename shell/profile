@@ -66,6 +66,11 @@ export SIMPLEDB_HOME="$HOME/Applications/SimpleDB_2.10"
 # autojump
 [ -f /etc/profile.d/autojump.sh ] && . /etc/profile.d/autojump.sh
 
+# fasd
+if hash fasd 2>/dev/null; then
+    eval "$(fasd --init auto)"
+fi
+
 # editor
 if hash nvim 2>/dev/null; then
     export GIT_EDITOR=nvim
