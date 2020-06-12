@@ -5,8 +5,15 @@
   title_inactive_bg_color = "#333333"
   inactive_color_offset = 0.7000000000000001
 [keybindings]
-  next_tab = <Shift><Alt>Right
-  prev_tab = <Shift><Alt>Left
+  go_up = <Shift><Alt>k
+  go_down = <Shift><Alt>j
+  go_left = <Shift><Alt>h
+  go_right = <Shift><Alt>l
+  split_horiz = <Shift><Alt>s
+  split_vert = <Shift><Alt>v
+  next_tab = <Primary><Alt>l
+  prev_tab = <Primary><Alt>h
+  full_screen = F12
   layout_launcher = None
 [profiles]
   [[default]]
