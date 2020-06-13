@@ -94,7 +94,7 @@ export BAT_THEME="TwoDark"
 export DOWNGRADE_FROM_ALA=1
 
 # fzf
-export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
+export FZF_DEFAULT_COMMAND='rg --no-ignore-vcs -l ""'
 
 # map caps lock to escape
 setxkbmap -option caps:escape
