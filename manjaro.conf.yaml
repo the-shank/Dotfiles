@@ -65,6 +65,7 @@
       - tlp
       - tldr
       - udftools
+      - vnstat
       - youtube-dl
       - zsh
 
