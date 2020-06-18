@@ -60,3 +60,6 @@
 
       # Tmux
       ~/.tmux.conf: config/tmux.conf
+
+      # Alacritty
+      ~/.config/alacritty/alacritty.yml: config/alacritty/alacritty.yml
