@@ -20,6 +20,7 @@
 
 - pacman:
       - albert
+      - alacritty
       - audacity
       - anki
       - arc-gtk-theme
@@ -34,12 +35,15 @@
       - downgrade
       - fd
       - filezilla
+      - fish
       - flameshot
       - gnome-sound-recorder
+      - soundconverter
       - htop
       - hdparm
       - hyperfine
       - handbrake
+      - jpegoptim
       - kdenlive
       - libreoffice
       - lsd
@@ -48,6 +52,7 @@
       - nnn
       - ncdu
       - neovim
+      - neofetch
       - okular
       - nerd-fonts-noto-sans-mono
       - powerline-fonts
@@ -65,6 +70,7 @@
       - tlp
       - tldr
       - udftools
+      - valdgrind
       - vnstat
       - youtube-dl
       - zsh
