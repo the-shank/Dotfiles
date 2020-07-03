@@ -25,6 +25,8 @@
       # - code
       # - calibre
       # - docker
+      - dictd
+      - dict-wn
       # - downgrade
       # - fd
       # - flameshot
@@ -58,6 +60,7 @@
       # - tlp
       # - tldr
       - unzip
+      - xfce4-dict
       # - youtube-dl
       - yarnpkg
       - zsh
