@@ -37,6 +37,9 @@
       # Terminator
       ~/.config/terminator/config: config/terminator/config
 
+      # Qpdfview
+      ~/.config/qpdfview/shortcuts.conf: config/qpdfview/shortcuts.conf
+
       # Fonts
       ~/.fonts: fonts
 
