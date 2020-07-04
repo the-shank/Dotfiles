@@ -38,11 +38,11 @@
       - fish
       - flameshot
       - gnome-sound-recorder
-      - soundconverter
       - htop
       - hdparm
       - hyperfine
       - handbrake
+      - img2pdf
       - jpegoptim
       - kdenlive
       - libreoffice
@@ -53,6 +53,7 @@
       - ncdu
       - neovim
       - neofetch
+      - ocrmypdf
       - okular
       - nerd-fonts-noto-sans-mono
       - powerline-fonts
@@ -64,9 +65,11 @@
       - ripgrep
       - shfmt
       - simplescreenrecorder
+      - soundconverter
       - sshfs
       - syncthing-gtk
       - task
+      - tesseract-data-eng
       - tlp
       - tldr
       - udftools
