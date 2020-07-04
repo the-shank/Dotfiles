@@ -23,7 +23,9 @@ nnoremap <C-l>    :vertical resize +2<CR>
 
 " X clipboard integration
 " <Space>c will copy entire buffer into clipboard
+" <Space>p will paste clipboard into buffer
 noremap <leader>c :w !xsel -ib<cr><cr>
+noremap <leader>p :read !xsel --clipboard --output<cr>
 
 " No arrow keys --- force yourself to use the home row
 nnoremap <up> <nop>
@@ -57,3 +59,16 @@ nmap <leader>; :Buffers<CR>
 " Ctrl+h to stop searching
 vnoremap <leader>h :nohlsearch<cr>
 nnoremap <leader>h :nohlsearch<cr>
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
