@@ -39,8 +39,8 @@ inoremap <right> <nop>
 nnoremap <left> :bp<CR>
 nnoremap <right> :bn<CR>
 
-" Leader + tab can switch buffers
-nnoremap <leader><tab> :bn<CR>
+" Leader + tab to toggle between buffers
+nnoremap <leader><tab> <c-^><CR>
 
 " Use :Rg as a global search
 noremap <leader>g :Rg<CR>
@@ -50,7 +50,7 @@ nnoremap <space>/ :Commentary<CR>
 vnoremap <space>/ :Commentary<CR>
 
 " <leader><leader> toggles between buffers
-nnoremap <leader><leader> <c-^>
+" nnoremap <leader><leader> <c-^>
 
 " Ctrl-P for quick searching files
 map <C-p> :Files<CR>
@@ -59,6 +59,3 @@ nmap <leader>; :Buffers<CR>
 " Ctrl+h to stop searching
 vnoremap <leader>h :nohlsearch<cr>
 nnoremap <leader>h :nohlsearch<cr>
-
-" <leader><leader> toggles between buffers
-nnoremap <leader><leader> <c-^>
