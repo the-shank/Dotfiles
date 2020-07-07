@@ -43,6 +43,7 @@
       - hyperfine
       - handbrake
       - img2pdf
+      - inkscape
       - jpegoptim
       - kdenlive
       - libreoffice
@@ -73,6 +74,7 @@
       - tesseract-data-eng
       - tlp
       - tldr
+      - tokei
       - udftools
       - valdgrind
       - vnstat
