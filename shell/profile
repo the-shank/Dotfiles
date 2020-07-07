@@ -88,7 +88,7 @@ fi
 export RADV_PERFTEST=aco
 
 # bat (replacement for cat)
-export BAT_THEME="TwoDark"
+export BAT_THEME="gruvbox"
 
 # enable downgrading packages in Manjaro
 export DOWNGRADE_FROM_ALA=1
