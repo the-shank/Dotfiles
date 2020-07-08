@@ -37,6 +37,7 @@
 
       # Git
       ~/.gitconfig: others/gitconfig
+      ~/.local/bin/git-open: bin/git-open
 
       # youtube-dl
       ~/.config/youtube-dl/config: config/youtube-dl/config
