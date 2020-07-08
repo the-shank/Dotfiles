@@ -13,3 +13,5 @@ tool = vscode
 cmd = code --wait $MERGED
 [include]
 path = ~/.gitconfig_private
+[fetch]
+	prune = true
