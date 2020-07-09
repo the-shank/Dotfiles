@@ -20,7 +20,7 @@
     background_color = "#282828"
     cursor_blink = False
     cursor_color = "#aaaaaa"
-    font = JetBrains Mono 11
+    font = Noto Sans Mono 10
     foreground_color = "#ebdbb2"
     show_titlebar = False
     scroll_on_output = True
