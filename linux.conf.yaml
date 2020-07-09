@@ -56,4 +56,4 @@
       ~/.xsession: config/xsession
 
 - shell:
-      - [scripts/ranger.sh, installing ranger devicons]
+      - ["bash scripts/ranger.sh", installing ranger devicons]

@@ -44,10 +44,5 @@ set smartcase
 set gdefault
 
 " set colorscheme
-" let g:onedark_termcolors=16
-if has('mac')
-  colorscheme gruvbox
-elseif has('unix')
-  colorscheme gruvbox
-endif
-
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox

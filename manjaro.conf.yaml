@@ -37,6 +37,7 @@
       - filezilla
       - fish
       - flameshot
+      - fzf
       - gnome-sound-recorder
       - htop
       - hdparm
@@ -86,7 +87,6 @@
 #       - google-chrome
 #       - libpdfium-nojs
 #       - megasync
-#       - peco
 #       - sublime-text-3-imfix
 #       - vivaldi
 #       - vivaldi-ffmpeg-codecs

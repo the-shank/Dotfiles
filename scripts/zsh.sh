@@ -40,14 +40,6 @@ else
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 fi
 
-# ZSH: peco history
-if [ -e $HOME/.zsh/zsh-peco-history ]; then
-    echo "zsh-peco-history directory already exists"
-else
-    echo "downloading zsh-peco-history"
-    git clone https://github.com/jimeh/zsh-peco-history.git ~/.zsh/zsh-peco-history
-fi
-
 # ZSH: pure prompt
 if [ -e $HOME/.zsh/pure ]; then
     echo "pure prompt directory already exists"

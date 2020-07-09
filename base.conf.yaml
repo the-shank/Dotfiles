@@ -25,15 +25,28 @@
       - ~/.local/gobin
 
 - shell:
-      - [scripts/zsh.sh, Setup ZSH]
-      - [scripts/tmux.sh, Install Tmux Plugin Manager] 
-
+      - ["bash scripts/tmux.sh", Install Tmux Plugin Manager] 
+        
 - link:
-      # Shell
+      # Shell (bash & zsh)
       ~/.profile: shell/profile
       ~/.bashrc: shell/bashrc
       ~/.zshrc: shell/zshrc
       ~/.aliases: shell/aliases
+
+      # Shell (fish)
+      ~/.config/fish/config.fish: shell/fish/config.fish
+      ~/.config/fish/fishfile: shell/fish/fishfile
+      ~/.config/fish/profile.fish: shell/fish/profile.fish
+      # ~/.config/fish/conf.d:
+      #   path: shell/fish/conf.d/*.fish
+      #   glob: true
+      ~/.config/fish/functions:
+        path: shell/fish/functions/*.fish
+        glob: true
+      # ~/.config/fish/completions:
+      #   path: shell/fish/completions/*.fish
+      #   glob: true
 
       # Git
       ~/.gitconfig: others/gitconfig

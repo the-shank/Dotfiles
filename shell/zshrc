@@ -129,9 +129,6 @@ SAVEHIST=10000000
 setopt HIST_IGNORE_ALL_DUPS # ignore duplicated commands history list
 setopt SHARE_HISTORY # share command history data
 
-# use peco for searching history
-source ~/.zsh/zsh-peco-history/zsh-peco-history.zsh
-
 # miniconda3
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
