@@ -39,9 +39,9 @@ inoremap <right> <nop>
 nnoremap <left> :bp<CR>
 nnoremap <right> :bn<CR>
 
-" <tab> and <shift><tab> can switch buffers
-nnoremap <tab> :bn<CR>
-nnoremap <S-tab> :bp<CR>
+" <ctrl><tab> and <ctrl><shift><tab> can switch buffers
+nnoremap <C><tab> :bn<CR>
+nnoremap <C><S-tab> :bp<CR>
 
 " Leader + tab to toggle between buffers
 nnoremap <leader><tab> <C-^><CR>
