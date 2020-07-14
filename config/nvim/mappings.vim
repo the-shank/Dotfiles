@@ -60,3 +60,6 @@ nmap <leader>; :Buffers<CR>
 " Ctrl+h to stop searching
 vnoremap <leader>h :nohlsearch<cr>
 nnoremap <leader>h :nohlsearch<cr>
+
+" Leader + g + o to git-open the current repository page
+nnoremap <leader>go :!git-open<cr>
