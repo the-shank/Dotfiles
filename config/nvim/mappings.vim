@@ -53,9 +53,6 @@ noremap <leader>g :Rg<CR>
 nnoremap <space>/ :Commentary<CR>
 vnoremap <space>/ :Commentary<CR>
 
-" <leader><leader> toggles between buffers
-" nnoremap <leader><leader> <c-^>
-
 " Ctrl-P for quick searching files
 map <C-p> :Files<CR>
 nmap <leader>; :Buffers<CR>
