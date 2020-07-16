@@ -1,1 +1,1 @@
-let g:rooter_patterns = ['.git/', '.rooter']
+let g:rooter_patterns = ['.rooter', '.git/']
