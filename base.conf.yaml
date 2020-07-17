@@ -52,6 +52,9 @@
       ~/.gitconfig: others/gitconfig
       ~/.local/bin/git-open: bin/git-open
 
+      # Clang
+      ~/.clang-format: others/clang-format
+
       # youtube-dl
       ~/.config/youtube-dl/config: config/youtube-dl/config
       
