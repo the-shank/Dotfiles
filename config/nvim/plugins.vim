@@ -28,7 +28,7 @@ Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-signify'
 
 " Vim-Fugitive
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 
 " Programming Languages
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
