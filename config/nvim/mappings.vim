@@ -63,3 +63,6 @@ nnoremap <leader>h :nohlsearch<cr>
 
 " Leader + g + o to git-open the current repository page
 nnoremap <leader>go :!git-open<cr>
+
+" Select block including {}. Can help in selecting functions, objects etc.
+nnoremap <leader>sb Hf{V%<CR>
