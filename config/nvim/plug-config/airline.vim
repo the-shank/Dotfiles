@@ -16,8 +16,8 @@ let g:airline_right_sep = ''
 " Switch to your current theme
 let g:airline_theme = 'base16_gruvbox_dark_hard'
 
-" Always show tabs 
+" Always show tabs
 set showtabline=2
 
-" We don't need to see things like -- INSERT -- anymore
-set noshowmode
+" enable highlighing cache for performance
+let g:airline_highlighting_cache = 1
