@@ -84,3 +84,6 @@ test -d $XDG_RUNTIME_DIR; and _export SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.
 
 # in case there is a .private file, source it
 test -e "$HOME/.private"; and source $HOME/.private
+
+# asdf
+test -e "$HOME/.asdf/asdf.fish"; and source "$HOME/.asdf/asdf.fish"
