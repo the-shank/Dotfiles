@@ -50,4 +50,4 @@ let g:gruvbox_contrast_dark = 'medium'
 colorscheme gruvbox
 
 " trim trailing whitespace on save
-autocmd FileType c,cpp,java,go,php,vim autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType c,cpp,java,go,php,vim,yaml autocmd BufWritePre <buffer> %s/\s\+$//e
