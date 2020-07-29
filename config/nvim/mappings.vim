@@ -1,5 +1,5 @@
 " ; as :
-nnoremap ; :
+" nnoremap ; :
 
 " Jump to start and end of line using the home row keys
 map H ^
@@ -44,7 +44,7 @@ nnoremap <C><tab> :bn<CR>
 nnoremap <C><S-tab> :bp<CR>
 
 " Leader + tab to toggle between buffers
-nnoremap <leader><tab> <C-^><CR>
+noremap <leader><tab> <C-^><CR>
 
 " Use :Rg as a global search
 noremap <leader>g :Rg<CR>
@@ -52,6 +52,9 @@ noremap <leader>g :Rg<CR>
 " vim-commentary
 nnoremap <space>/ :Commentary<CR>
 vnoremap <space>/ :Commentary<CR>
+
+" vim-which-key
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 " Ctrl-P for quick searching files
 map <C-p> :Files<CR>
@@ -66,3 +69,9 @@ nnoremap <leader>go :!git-open<cr>
 
 " Select block including {}. Can help in selecting functions, objects etc.
 nnoremap <leader>sb Hf{V%<CR>
+
+" Save and quit mapped to <leader>w and <leader>q
+nnoremap <leader>w :w<CR>
+vnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+vnoremap <leader>q :q<CR>

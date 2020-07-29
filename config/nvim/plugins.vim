@@ -14,8 +14,8 @@ Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" Auto pairs for '(' '[' '{' 
-Plug 'jiangmiao/auto-pairs' 		
+" Auto pairs for '(' '[' '{'
+Plug 'jiangmiao/auto-pairs'
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -29,6 +29,9 @@ Plug 'mhinz/vim-signify'
 
 " Vim-Fugitive
 " Plug 'tpope/vim-fugitive'
+
+" Vim-Which-Key
+Plug 'liuchengxu/vim-which-key'
 
 " Programming Languages
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }

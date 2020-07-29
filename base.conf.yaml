@@ -25,8 +25,8 @@
       - ~/.local/gobin
 
 - shell:
-      - ["bash scripts/tmux.sh", Install Tmux Plugin Manager] 
-        
+      - ["bash scripts/tmux.sh", Install Tmux Plugin Manager]
+
 - link:
       # Shell (bash & zsh)
       ~/.profile: shell/profile
@@ -57,7 +57,7 @@
 
       # youtube-dl
       ~/.config/youtube-dl/config: config/youtube-dl/config
-      
+
       # MPV Media Player
       ~/.config/mpv/input.conf: config/mpv/input.conf
       ~/.config/mpv/mpv.conf: config/mpv/mpv.conf
