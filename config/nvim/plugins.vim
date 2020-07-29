@@ -14,8 +14,8 @@ Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" Auto pairs for '(' '[' '{' 
-Plug 'jiangmiao/auto-pairs' 		
+" Auto pairs for '(' '[' '{'
+Plug 'jiangmiao/auto-pairs'
 
 " Airline
 Plug 'vim-airline/vim-airline'
