@@ -11,7 +11,7 @@ nnoremap <M-j> <C-w>j
 nnoremap <M-k> <C-w>k
 nnoremap <M-l> <C-w>l
 
-" indent / outdent 
+" indent / outdent
 vnoremap < <gv
 vnoremap > >gv
 
@@ -60,7 +60,7 @@ nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 map <C-p> :Files<CR>
 nmap <leader>; :Buffers<CR>
 
-" Ctrl+h to stop searching
+" remove highlights
 vnoremap <leader>h :nohlsearch<cr>
 nnoremap <leader>h :nohlsearch<cr>
 
@@ -68,7 +68,7 @@ nnoremap <leader>h :nohlsearch<cr>
 nnoremap <leader>go :!git-open<cr>
 
 " Select block including {}. Can help in selecting functions, objects etc.
-nnoremap <leader>sb Hf{V%<CR>
+nnoremap <leader>sb ^f{V%
 
 " Save and quit mapped to <leader>w and <leader>q
 nnoremap <leader>w :w<CR>
