@@ -75,3 +75,6 @@ nnoremap <leader>w :w<CR>
 vnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 vnoremap <leader>q :q<CR>
+
+" vsplit
+noremap <leader>v :vsplit<cr>
