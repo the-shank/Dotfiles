@@ -68,13 +68,20 @@ nnoremap <leader>h :nohlsearch<cr>
 nnoremap <leader>go :!git-open<cr>
 
 " Select block including {}. Can help in selecting functions, objects etc.
-nnoremap <leader>sb ^f{V%
+nnoremap <leader>sb va{V
+nnoremap <leader>yb va{Vy
 
 " Save and quit mapped to <leader>w and <leader>q
-nnoremap <leader>w :w<CR>
-vnoremap <leader>w :w<CR>
-nnoremap <leader>q :q<CR>
-vnoremap <leader>q :q<CR>
+" nnoremap <leader>w :w<CR>
+" vnoremap <leader>w :w<CR>
+" nnoremap <leader>q :q<CR>
+" vnoremap <leader>q :q<CR>
+
+" Save and quit mapped to ;w and ;q
+nnoremap ;q :q<CR>
+vnoremap ;q :q<CR>
+nnoremap ;w :w<CR>
+vnoremap ;w :w<CR>
 
 " vsplit
 noremap <leader>v :vsplit<cr>
