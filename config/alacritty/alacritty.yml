@@ -98,9 +98,9 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     # family: NotoSansMono Nerd Font
-    # family: Iosevka Term
-    # family: Iosevka Term Medium
-    family: Iosevka
+    # family: Iosevka
+    # family: Inconsolata
+    family: Inconsolata Semi Condensed Medium
 
     # The `style` can be specified to pick a specific face.
     # style: Regular
@@ -139,13 +139,13 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 12
+  size: 13.5
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
   #  x: 0
-     y: 1
+     y: 2
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
