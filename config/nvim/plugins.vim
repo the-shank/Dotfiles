@@ -18,8 +18,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 
 " Airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+
+" Lightline
+Plug 'itchyny/lightline.vim'
 
 " Vim-Surround
 Plug 'tpope/vim-surround'
@@ -28,7 +31,7 @@ Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-signify'
 
 " Vim-Fugitive
-" Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " Vim-Which-Key
 Plug 'liuchengxu/vim-which-key'
