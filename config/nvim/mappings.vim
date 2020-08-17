@@ -67,13 +67,14 @@ nnoremap <leader>h :nohlsearch<cr>
 " Leader + g + o to git-open the current repository page
 nnoremap <leader>go :!git-open<cr>
 
-" Select block including {}. Can help in selecting functions, objects etc.
-nnoremap <leader>sb va{V
-nnoremap <leader>yb va{Vy<esc>
+" Select/Copy/Duplicate block including {}. Can help in selecting functions, objects etc.
+nnoremap <leader>bs va{V
+nnoremap <leader>by va{Vy<esc>
+nnoremap <leader>bd va{VyO<esc>P<esc>
 
 " Save and quit mapped to <leader>w and <leader>q
-" nnoremap <leader>w :w<CR>
-" vnoremap <leader>w :w<CR>
+nnoremap <leader>w :w<CR>
+vnoremap <leader>w :w<CR>
 " nnoremap <leader>q :q<CR>
 " vnoremap <leader>q :q<CR>
 
