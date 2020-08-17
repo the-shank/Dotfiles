@@ -6,6 +6,7 @@ Plug 'airblade/vim-rooter'
 " Theme
 Plug 'joshdick/onedark.vim'
 Plug 'gruvbox-community/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
 
 " commenting
 Plug 'tpope/vim-commentary'
@@ -23,6 +24,7 @@ Plug 'jiangmiao/auto-pairs'
 
 " Lightline
 Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
 
 " Vim-Surround
 Plug 'tpope/vim-surround'

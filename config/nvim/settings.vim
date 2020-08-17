@@ -48,6 +48,7 @@ set gdefault
 " set colorscheme
 let g:gruvbox_contrast_dark = 'medium'
 colorscheme gruvbox
+" colorscheme PaperColor
 
 " trim trailing whitespace on save
 autocmd FileType c,cpp,java,go,php,vim,yaml autocmd BufWritePre <buffer> %s/\s\+$//e
