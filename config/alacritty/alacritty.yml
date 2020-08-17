@@ -35,7 +35,7 @@ window:
   # by DPI and the specified value is always added at both opposing sides.
   padding:
     x: 5
-    y: 5
+    # y: 5
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -98,9 +98,9 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     # family: NotoSansMono Nerd Font
-    # family: Iosevka
-    # family: Inconsolata
-    family: Inconsolata Semi Condensed Medium
+    # family: Noto Sans Mono Medium
+    family: Inconsolata Medium
+    # family: Inconsolata Nerd Font
 
     # The `style` can be specified to pick a specific face.
     # style: Regular
@@ -139,13 +139,14 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 13.5
+  # size: 13.5 # inconsolata sem-consendsed medium
+  size: 12 # Noto Sans Mono
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
   #  x: 0
-     y: 2
+     y: 2 # inconsolata semi-condensed medium
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
