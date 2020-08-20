@@ -46,7 +46,7 @@ set smartcase
 set gdefault
 
 " set colorscheme
-let g:gruvbox_contrast_dark = 'medium'
+let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 " colorscheme PaperColor
 
