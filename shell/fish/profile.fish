@@ -62,7 +62,7 @@ end
 _export RADV_PERFTEST "aco"
 
 # bat (replacement for cat)
-_export BAT_THEME "gruvbox"
+_export BAT_THEME "base16"
 
 # enable downgrading packages in Manjaro
 _export DOWNGRADE_FROM_ALA 1
