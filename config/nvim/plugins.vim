@@ -39,7 +39,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'liuchengxu/vim-which-key'
 
 " Programming Languages
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }  " Go
+Plug 'jez/vim-better-sml'                           " SML
 
 " Language Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -49,7 +50,10 @@ Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
 Plug 'weirongxu/coc-explorer', {'do': 'yarn install --frozen-lockfile'}
 Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
-Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
 Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
+
+" TOML
+Plug 'cespare/vim-toml'
 
 call plug#end()
