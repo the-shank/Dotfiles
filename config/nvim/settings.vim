@@ -3,7 +3,6 @@ let g:mapleader = "\<Space>"
 
 filetype plugin indent on
 
-syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
@@ -38,6 +37,7 @@ set formatoptions-=c formatoptions-=r formatoptions-=o                  " Stop n
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set autochdir                           " Your working directory will always be the same as your working directory
 set colorcolumn=80,100                  " a ruler at 80th & 100th char column
+syntax enable                           " Enables syntax highlighing
 
 " Proper search
 set incsearch
@@ -51,4 +51,4 @@ colorscheme gruvbox
 " colorscheme PaperColor
 
 " trim trailing whitespace on save
-autocmd FileType c,cpp,java,go,php,vim,yaml autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType c,cpp,java,go,php,vim,yaml,rust autocmd BufWritePre <buffer> %s/\s\+$//e
