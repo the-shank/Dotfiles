@@ -86,3 +86,9 @@ vnoremap ;w :w<CR>
 
 " vsplit
 noremap <leader>v :vsplit<cr>
+
+" exit the terminal mode
+tnoremap <Esc> <C-\><C-n>
+
+" send <Esc> in temrinal mode
+tnoremap <A-[> <Esc>
