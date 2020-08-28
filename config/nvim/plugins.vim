@@ -18,10 +18,6 @@ Plug 'junegunn/fzf.vim'
 " Auto pairs for '(' '[' '{'
 Plug 'jiangmiao/auto-pairs'
 
-" Airline
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
-
 " Lightline
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
