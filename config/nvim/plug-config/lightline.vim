@@ -28,7 +28,7 @@ let g:lightline#bufferline#clickable = 1
 let g:lightline#bufferline#show_number = 2
 
 " number separator for bufferline
-let g:lightline#bufferline#number_separator = ') '
+let g:lightline#bufferline#number_separator = '> '
 
 function! LightlineFilename()
   return expand('%:t') !=# '' ? @% : '[No Name]'
