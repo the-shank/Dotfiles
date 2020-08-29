@@ -39,7 +39,5 @@
                 "go"
             ]
         }
-    },
-    // proxy
-    "http.proxy": "http://shashank:shank_21061985@10.4.1.99:8080"
+    }
 }
