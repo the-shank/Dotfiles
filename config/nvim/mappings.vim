@@ -92,3 +92,6 @@ tnoremap <Esc> <C-\><C-n>
 
 " send <Esc> in temrinal mode
 tnoremap <A-[> <Esc>
+
+" command for enable/disable line-wrapping
+command! -nargs=* Wrap set wrap! linebreak!
