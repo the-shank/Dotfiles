@@ -12,15 +12,15 @@
       - [git submodule update --init --recursive, Installing submodules]
 
 - create:
-      - ~/Applications
-      - ~/Code
-      - ~/Code/ALGO
-      - ~/Code/REFERENCE
-      - ~/Code/TMP
-      - ~/Code/UTILS
-      - ~/Code/go
-      - ~/Code/go/src
-      - ~/Code/go/pkg
+      - ~/applications
+      - ~/code
+      - ~/code/algo
+      - ~/code/reference
+      - ~/code/tmp
+      - ~/code/utils
+      - ~/code/go
+      - ~/code/go/src
+      - ~/code/go/pkg
       - ~/.local/bin
       - ~/.local/gobin
 
