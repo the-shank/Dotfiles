@@ -36,7 +36,8 @@ ColorPalette=#282C34;#E06C75;#98C379;#E5C07B;#61AFEF;#C678DD;#56B6C2;#ABB2BF;#3E
 ColorSelection=#2e2e34343636
 ColorBold=#B9C0CB
 ColorBoldUseDefault=FALSE
-FontName=Inconsolata Medium 12
+FontName=NotoSansMono Nerd Font 10.5
 ColorSelectionUseDefault=FALSE
 ColorSelectionBackground=#c1c17d7d1111
+FontUseSystem=TRUE
 
