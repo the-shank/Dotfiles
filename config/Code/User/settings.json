@@ -18,11 +18,7 @@
 	"editor.cursorSurroundingLines": 5,
 	"editor.renderWhitespace": "none",
 	"editor.lineNumbers": "relative",
-	"editor.rulers": [
-		80,
-		100,
-		120
-	],
+	"editor.rulers": [80, 100, 120],
 	// workbench
 	"workbench.activityBar.visible": false,
 	"workbench.editor.enablePreview": false,
@@ -30,16 +26,14 @@
 	"workbench.statusBar.visible": true,
 	"workbench.sideBar.location": "right",
 	"workbench.panel.defaultLocation": "right",
-	"workbench.colorTheme": "Gruvbox Dark (Hard)",
+	"workbench.colorTheme": "Community Material Theme Palenight High Contrast",
 	// explorer
 	"explorer.confirmDragAndDrop": false,
 	"explorer.confirmDelete": false,
 	// extensions
 	"extensions.autoUpdate": false,
 	// git project manager
-	"gitProjectManager.baseProjectsFolders": [
-		"~/Code"
-	],
+	"gitProjectManager.baseProjectsFolders": ["~/Code"],
 	// terminal
 	"terminal.integrated.fontFamily": "JetBrains Mono, NotoSansMono Nerd Font, Noto Sans Mono, Fira Code, Ubuntu Mono, Consolas, Source Code Pro",
 	"terminal.integrated.scrollback": 10000,
@@ -79,4 +73,7 @@
 	"leetcode.hint.commandShortcut": false,
 	"leetcode.hint.commentDescription": false,
 	"leetcode.hint.configWebviewMarkdown": false,
+	"editor.lineHeight": 18,
+	// honor global caps lock to escape
+	"keyboard.dispatch": "keyCode"
 }
