@@ -55,5 +55,10 @@
       # Xsession
       ~/.xsession: config/xsession
 
+      # Themes
+      ~/.themes:
+        path: themes/*
+        glob: true
+
 - shell:
       - ["bash scripts/ranger.sh", installing ranger devicons]
