@@ -29,7 +29,7 @@
       - broot
       - code
       - calibre
-      - ccls
+      - clang
       - coreutils
       - docker
       - downgrade
