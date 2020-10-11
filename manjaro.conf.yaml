@@ -80,7 +80,7 @@
       - tldr
       - tokei
       - udftools
-      - valdgrind
+      - valgrind
       - vnstat
       - youtube-dl
       - zsh
