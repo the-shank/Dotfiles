@@ -34,6 +34,11 @@
       # XFCE Keyboard Shortcuts
       ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml: config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
 
+      # XFCE Panel
+      ~/.config/xfce4/panel:
+        path: config/xfce4/panel/*
+        glob: true
+
       # Terminator
       ~/.config/terminator/config: config/terminator/config
 

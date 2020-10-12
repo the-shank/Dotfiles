@@ -1,4 +1,4 @@
-timeout=1
+timeout=2
 show_cpu=9
 show_icon=false
 show_label_freq=true
@@ -6,4 +6,5 @@ show_label_governor=false
 show_warning=true
 keep_compact=true
 one_line=false
+fontcolor=rgb(255,224,0)
 
