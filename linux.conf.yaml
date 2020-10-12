@@ -27,14 +27,16 @@
         path: config/Thunar/uca.xml
         force: true
 
+      # XFCE xfconf
+      ~/.config/xfce4/xfconf:
+        path: config/xfce4/xfconf/**/*
+        glob: true
+
       # XFCE Terminal
       ~/.config/xfce4/terminal/accels.scm: config/xfce4/terminal/accels.scm
       ~/.config/xfce4/terminal/terminalrc: config/xfce4/terminal/terminalrc
 
-      # XFCE Keyboard Shortcuts
-      ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml: config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
-
-      # XFCE Panel
+     # XFCE Panel
       ~/.config/xfce4/panel:
         path: config/xfce4/panel/*
         glob: true
