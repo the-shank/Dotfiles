@@ -9,9 +9,7 @@
         "json",
         "python",
         "rust",
-        "go",
-        "c",
-        "cpp"
+        "go"
     ],
     "diagnostic.virtualText": true,
     // coc-explorer
@@ -39,5 +37,6 @@
                 "go"
             ]
         }
-    }
+    },
+    "python.formatting.provider": "black"
 }
