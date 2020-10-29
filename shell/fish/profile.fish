@@ -87,3 +87,9 @@ test -e "$HOME/.private"; and source $HOME/.private
 
 # asdf
 test -e "$HOME/.asdf/asdf.fish"; and source "$HOME/.asdf/asdf.fish"
+
+# load conda
+# eval /home/shank/Applications/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+function conda_enable --description "load conda"
+    eval /home/shank/Applications/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+end
