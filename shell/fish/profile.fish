@@ -93,3 +93,11 @@ test -e "$HOME/.asdf/asdf.fish"; and source "$HOME/.asdf/asdf.fish"
 function conda_enable --description "load conda"
     eval /home/shank/Applications/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 end
+
+# mount shared folders in VM guest
+function mount_sf --description "mount shared folders in VM guest"
+    mount -t code test /home/shank/sf_code
+    mount -t MEGA test /home/shank/sf_MEGA
+    mount -t Downloads test /home/shank/sf_Downloads
+    mount -t MyBrain test /home/shank/sf_MyBrain
+end
