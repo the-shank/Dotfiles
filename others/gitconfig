@@ -15,3 +15,5 @@ cmd = code --wait $MERGED
 path = ~/.gitconfig_private
 [fetch]
 	prune = true
+[core]
+	autocrlf = input
