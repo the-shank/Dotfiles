@@ -38,5 +38,6 @@
             ]
         }
     },
-    "python.formatting.provider": "black"
+    "python.formatting.provider": "black",
+    "python.jediEnabled": false
 }
