@@ -4,9 +4,9 @@ call plug#begin()
 Plug 'airblade/vim-rooter'
 
 " Theme
-Plug 'joshdick/onedark.vim'
+" Plug 'joshdick/onedark.vim'
 Plug 'gruvbox-community/gruvbox'
-Plug 'NLKNguyen/papercolor-theme'
+" Plug 'NLKNguyen/papercolor-theme'
 
 " commenting
 Plug 'tpope/vim-commentary'
@@ -51,5 +51,8 @@ Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
 
 " TOML
 Plug 'cespare/vim-toml'
+
+" Startup time
+Plug 'dstein64/vim-startuptime'
 
 call plug#end()
