@@ -69,6 +69,7 @@ _export DOWNGRADE_FROM_ALA 1
 
 # fzf
 _export FZF_DEFAULT_COMMAND 'rg -l ""'
+_export FZF_DEFAULT_OPTS '--layout=reverse'
 
 # map caps lock to escape
 setxkbmap -option caps:escape
@@ -99,5 +100,5 @@ function mount_sf --description "mount shared folders in VM guest"
     mount -t code test /home/shank/sf_code
     mount -t MEGA test /home/shank/sf_MEGA
     mount -t Downloads test /home/shank/sf_Downloads
-    mount -t MyBrain test /home/shank/sf_MyBrain
+    mount -t !MyBrain test /home/shank/sf_MyBrain
 end
