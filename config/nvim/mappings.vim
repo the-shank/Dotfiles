@@ -58,6 +58,8 @@ nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 " Ctrl-P for quick searching files
 map <C-p> :Files<CR>
+
+" <space>; for quick search buffers
 nmap <leader>; :Buffers<CR>
 
 " remove highlights
@@ -95,3 +97,6 @@ tnoremap <A-[> <Esc>
 
 " command for enable/disable line-wrapping
 command! -nargs=* Wrap set wrap! linebreak!
+
+" quick switch to terminal buffer
+nnoremap <leader>t :b<Space>term:<cr>
