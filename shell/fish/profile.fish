@@ -22,7 +22,7 @@ and _add_to_path "$HOME/.local/gobin";
 and _export GOBIN "$HOME/.local/gobin"
 
 # go: gopath
-test -d "$HOME/Code/go"; and _export GOPATH "$HOME/Code/go"
+test -d "$HOME/code/go"; and _export GOPATH "$HOME/code/go"
 
 # mix (elixir)
 test -d "$HOME/.mix"; and _add_to_path "$HOME/.mix"
