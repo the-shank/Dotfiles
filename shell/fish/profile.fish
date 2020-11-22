@@ -38,7 +38,7 @@ _export RUST_BACKTRACE full
 test -d "$HOME/Applications/android-studio/bin"; and _add_to_path "$HOME/Applications/android-studio/bin"
 
 # ansible-galaxy
-test -d "$HOME/Code/UTILS/ANSIBLE-ROLES"; and _add_to_path "$HOME/Code/UTILS/ANSIBLE-ROLES"
+test -d "$HOME/code/utils/ansible-roles"; and _add_to_path "$HOME/code/utils/ansible-roles"
 
 # Java
 test -d "/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home" ; and _add_to_path "/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home"

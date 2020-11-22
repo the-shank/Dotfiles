@@ -27,7 +27,7 @@ fi
 
 # add gobin & gopath to PATH if it exists
 [ -d "$HOME/.local/gobin" ] && export GOBIN="$HOME/.local/gobin" && PATH="$PATH:$GOBIN"
-[ -d "$HOME/Code/go" ] && export GOPATH="$HOME/Code/go"
+[ -d "$HOME/code/go" ] && export GOPATH="$HOME/code/go"
 
 # set PATH to include ~/.mix and ~/.mix/escripts
 [ -d "$HOME/.mix" ] && PATH="$HOME/.mix:$PATH"
@@ -46,7 +46,7 @@ export RUST_BACKTRACE=full
 [ -f "/usr/share/undistract-me/long-running.bash" ] && source /usr/share/undistract-me/long-running.bash
 
 # ansible-galaxy
-[ -d "$HOME/Code/UTILS/ANSIBLE-ROLES" ] && export ANSIBLE_ROLES_PATH="$HOME/Code/UTILS/ANSIBLE-ROLES"
+[ -d "$HOME/code/utils/ansible-roles" ] && export ansible_roles_path="$HOME/code/utils/ansible-roles"
 
 # Java
 [ -d "/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home" ] && export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home
