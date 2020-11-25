@@ -97,6 +97,3 @@ tnoremap <A-[> <Esc>
 
 " command for enable/disable line-wrapping
 command! -nargs=* Wrap set wrap! linebreak!
-
-" quick switch to terminal buffer
-nnoremap <leader>t :b<Space>term:<cr>

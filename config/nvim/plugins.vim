@@ -21,6 +21,9 @@ Plug 'jiangmiao/auto-pairs'
 " Quickscope
 Plug 'unblevable/quick-scope'
 
+" Floaterm
+Plug 'voldikss/vim-floaterm'
+
 " Lightline
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
