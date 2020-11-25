@@ -18,6 +18,9 @@ Plug 'junegunn/fzf.vim'
 " Auto pairs for '(' '[' '{'
 Plug 'jiangmiao/auto-pairs'
 
+" Quickscope
+Plug 'unblevable/quick-scope'
+
 " Lightline
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
