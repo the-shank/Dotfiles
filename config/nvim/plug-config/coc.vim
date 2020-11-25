@@ -153,3 +153,6 @@ let g:coc_explorer_global_presets = {
 " nmap <space>d :CocCommand explorer<CR>
 nmap <space>e :CocCommand explorer --preset floating<CR>
 " autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
+" Python
+nnoremap <F5> :CocCommand python.execInTerminal<CR>
