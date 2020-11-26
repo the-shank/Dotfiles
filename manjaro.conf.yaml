@@ -49,6 +49,7 @@
       - jpegoptim
       - kdenlive
       - languagetool
+      - lf-bin # AUR
       - libreoffice
       - lsd
       - muparser
