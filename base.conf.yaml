@@ -77,3 +77,8 @@
 
       # Alacritty
       ~/.config/alacritty/alacritty.yml: config/alacritty/alacritty.yml
+
+      # Matplotlib
+      ~/.config/matplotlib:
+          path: config/matplotlib/*
+          glob: true
