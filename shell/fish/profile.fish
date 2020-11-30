@@ -5,7 +5,7 @@ function _export --description "sets a variable"
 end
 
 function _add_to_path --description "add folder to path"
-    _export fish_user_paths $fish_user_paths $argv
+    contains $argv $fish_user_paths; or set -Ua fish_user_paths $argv
 end
 
 # Helper functions end ========================================================
@@ -45,6 +45,9 @@ test -d "/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home" ; and _
 
 # Homebrew
 test -d "/usr/local/sbin"; and _add_to_path "/usr/local/sbin"
+
+# ruby gems
+test -d "$HOME/.gem/ruby/2.7.0/bin"; and _add_to_path "$HOME/.gem/ruby/2.7.0/bin"
 
 # autojump
 test -e "/usr/share/autojump/autojump.fish"; and source "/usr/share/autojump/autojump.fish"
@@ -90,7 +93,6 @@ test -e "$HOME/.private"; and source $HOME/.private
 test -e "$HOME/.asdf/asdf.fish"; and source "$HOME/.asdf/asdf.fish"
 
 # load conda
-# eval /home/shank/Applications/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 function conda_enable --description "load conda"
     eval /home/shank/Applications/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 end
