@@ -1,3 +1,14 @@
+" coc extensions
+let g:coc_global_extensions = [
+    \ 'coc-solargraph',
+    \ 'coc-python',
+    \ 'coc-rust-analyzer',
+    \ 'coc-json',
+    \ 'coc-explorer',
+    \ 'coc-clangd',
+    \ 'coc-go'
+    \ ]
+
 " TextEdit might fail if hidden is not set.
 set hidden
 
