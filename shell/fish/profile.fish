@@ -5,7 +5,8 @@ function _export --description "sets a variable"
 end
 
 function _add_to_path --description "add folder to path"
-    contains $argv $fish_user_paths; or set -Ua fish_user_paths $argv
+    # contains $argv $fish_user_paths; or set -Ua fish_user_paths $argv
+    contains $argv $PATH; or set PATH $argv $PATH
 end
 
 # Helper functions end ========================================================
