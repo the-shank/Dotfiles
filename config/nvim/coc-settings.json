@@ -9,6 +9,7 @@
         "json",
         "python",
         "rust",
+        "ruby",
         "go"
     ],
     "diagnostic.virtualText": true,
