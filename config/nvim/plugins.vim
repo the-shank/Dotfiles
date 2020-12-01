@@ -24,6 +24,9 @@ Plug 'unblevable/quick-scope'
 " Floaterm
 Plug 'voldikss/vim-floaterm'
 
+" Matching brackets
+Plug 'andymass/vim-matchup'
+
 " Lightline
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
