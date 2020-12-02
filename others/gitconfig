@@ -19,3 +19,5 @@ path = ~/.gitconfig_private
 	autocrlf = input
 [credential]
 	helper = /usr/lib/git-core/git-credential-libsecret
+[pull]
+	rebase = false
