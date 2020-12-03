@@ -68,6 +68,7 @@
       - pdfarranger
       - qbittorrent
       - qemu
+      - qt5ct
       - ranger
       - redshift
       - rename
