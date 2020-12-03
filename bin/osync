@@ -5,7 +5,7 @@
 # should work just fine on most systems and instances of shells
 # (bash, zsh, sh, etc.)
 
-ZK_PATH="/home/shank/sf_MyBrain"
+ZK_PATH="/home/shank/MyBrain"
 # ^^^^^^^^^^^^^^^^^^^^^^^^^^ We are assigning the variable `ZK_PATH`
 # with the (maybe) long string to our vault's location (mine is super
 # long so this makes the final command look cleaner,
