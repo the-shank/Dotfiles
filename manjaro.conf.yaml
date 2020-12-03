@@ -79,8 +79,6 @@
       - soundconverter
       - sshfs
       - sshpass
-      - syncthing-gtk
-      - task
       - tesseract-data-eng
       - tlp
       - tldr
