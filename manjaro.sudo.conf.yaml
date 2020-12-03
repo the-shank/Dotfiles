@@ -8,3 +8,4 @@
 
 - link:
       /etc/pacman.conf: others/pacman.conf
+      /etc/environment: others/etc/environment
