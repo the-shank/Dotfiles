@@ -83,8 +83,8 @@ vnoremap <leader>w :w<CR>
 " Save and quit mapped to ;w and ;q
 nnoremap ;q :q<CR>
 vnoremap ;q :q<CR>
-nnoremap ;w :w<CR>
-vnoremap ;w :w<CR>
+" nnoremap ;w :w<CR>
+" vnoremap ;w :w<CR>
 
 " vsplit
 noremap <leader>v :vsplit<cr>
@@ -92,7 +92,7 @@ noremap <leader>v :vsplit<cr>
 " exit the terminal mode
 tnoremap <Esc> <C-\><C-n>
 
-" send <Esc> in temrinal mode
+" send <Esc> in terminal mode
 tnoremap <A-[> <Esc>
 
 " command for enable/disable line-wrapping

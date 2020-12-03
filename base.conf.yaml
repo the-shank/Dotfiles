@@ -82,3 +82,8 @@
       ~/.config/matplotlib:
           path: config/matplotlib/*
           glob: true
+
+      # Obsidian Sync
+      # setup a crontab (using crontab -e) with the following line
+      # */30 * * * * /home/shank/.local/bin/osync >>/home/shank/.osync_log 2>&1
+      ~/.local/bin/osync: bin/osync
