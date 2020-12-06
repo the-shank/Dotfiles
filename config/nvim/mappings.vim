@@ -2,8 +2,8 @@
 " nnoremap ; :
 
 " Jump to start and end of line using the home row keys
-map H ^
-map L $
+" map H ^
+" map L $
 
 " use alt+hjkl to move between split/vsplit panels
 nnoremap <M-h> <C-w>h
