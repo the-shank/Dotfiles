@@ -1,12 +1,8 @@
 let g:lightline = {
-      \ 'colorscheme': 'Tomorrow_Night',
+      \ 'colorscheme': 'jellybeans',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'filename': 'LightlineFilename',
-      \   'cocstatus': 'coc#status'
       \ },
       \ 'tabline': {
       \   'left': [ ['buffers'] ],
