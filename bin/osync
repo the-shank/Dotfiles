@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 # ^^^^^^^^^^^^^^^ This says find the first instance of a sh (shell)
 # binary and use that shell to execute these commands.
 # There is little to no complexity here and no bashisms so it
