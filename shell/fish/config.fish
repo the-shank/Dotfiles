@@ -22,3 +22,23 @@ setenv LESS_TERMCAP_so \e'[38;5;246m'    # begin standout-mode - info box
 setenv LESS_TERMCAP_ue \e'[0m'           # end underline
 setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 
+# abbreviations
+abbr -a vim nvim
+abbr -a cat bat
+abbr -a lla 'll -a'
+abbr -a lsa 'ls -a'
+abbr -a r0 'redshift -P -O 6500'
+abbr -a r1 'redshift -P -O 6000'
+abbr -a r2 'redshift -P -O 5500'
+abbr -a r3 'redshift -P -O 5000'
+abbr -a r4 'redshift -P -O 4500'
+abbr -a r5 'redshift -P -O 4000'
+abbr -a rgi 'rg -i'
+abbr -a conda_enable 'eval /home/shank/Applications/miniconda3/bin/conda "shell.fish" "hook" | source'
+abbr -a y480 'youtube-dl -f "bestvideo[ext=webm][height<=480]+bestaudio[ext=webm]"'
+abbr -a y480pl 'youtube-dl -f "bestvideo[ext=webm][height<=481]+bestaudio[ext=webm]" -o "~/Downloads/%(playlist)s/%(playlist_index)02d - %(title)s.%(ext)s"'
+abbr -a y720 'youtube-dl -f "bestvideo[ext=webm][height<=720]+bestaudio[ext=webm]"'
+abbr -a y720pl 'youtube-dl -f "bestvideo[ext=webm][height<=720]+bestaudio[ext=webm]" -o "~/Downloads/%(playlist)s/%(playlist_index)02d - %(title)s.%(ext)s"'
+abbr -a y1080 'youtube-dl -f "bestvideo[ext=webm][height<=1080]+bestaudio[ext=webm]"'
+abbr -a y1080pl 'youtube-dl -f "bestvideo[ext=webm][height<=1080]+bestaudio[ext=webm]" -o "~/Downloads/%(playlist)s/%(playlist_index)02d - %(title)s.%(ext)s"'
+abbr -a obs 'obsidian > /dev/null 2&>1 & && disown (jobs -p)'
