@@ -5,7 +5,6 @@ function _export --description "sets a variable"
 end
 
 function _add_to_path --description "add folder to path"
-    # contains $argv $fish_user_paths; or set -Ua fish_user_paths $argv
     contains $argv $PATH; or set PATH $argv $PATH
 end
 
@@ -20,10 +19,13 @@ test -d "$HOME/.local/bin"; and _add_to_path "$HOME/.local/bin"
 # go: gobin
 test -d "$HOME/.local/gobin"; 
 and _add_to_path "$HOME/.local/gobin";
-and _export GOBIN "$HOME/.local/gobin"
+# and _export GOBIN "$HOME/.local/gobin"
+and setenv GOBIN "$HOME/.local/gobin"
 
 # go: gopath
-test -d "$HOME/code/go"; and _export GOPATH "$HOME/code/go"
+test -d "$HOME/code/go";
+# and _export GOPATH "$HOME/code/go"
+and setenv GOPATH "$HOME/code/go"
 
 # mix (elixir)
 test -d "$HOME/.mix"; and _add_to_path "$HOME/.mix"
@@ -33,7 +35,7 @@ test -d "$HOME/.mix/escripts"; and _add_to_path "$HOME/.mix/escripts"
 test -d "$HOME/.cargo/bin"; and _add_to_path "$HOME/.cargo/bin"
 
 # rust: enable backtrace
-_export RUST_BACKTRACE full
+setenv RUST_BACKTRACE 1
 
 # set PATH so it includes user's Android Studio bin if it exists
 test -d "$HOME/Applications/android-studio/bin"; and _add_to_path "$HOME/Applications/android-studio/bin"
@@ -43,6 +45,7 @@ test -d "$HOME/code/utils/ansible-roles"; and _add_to_path "$HOME/code/utils/ans
 
 # Java
 test -d "/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home" ; and _add_to_path "/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home"
+test -d "/usr/lib/jvm/default" ; and _export JDK_HOME "/usr/lib/jvm/default"
 
 # Homebrew
 test -d "/usr/local/sbin"; and _add_to_path "/usr/local/sbin"
@@ -55,25 +58,26 @@ test -e "/usr/share/autojump/autojump.fish"; and source "/usr/share/autojump/aut
 
 # editor
 if type --quiet nvim
-    _export GIT_EDITOR nvim
-    _export EDITOR nvim
+    setenv GIT_EDITOR nvim
+    setenv EDITOR nvim
 else if type --quiet subl
-    _export GIT_EDITOR subl
-    _export EDITOR subl
+    setenv GIT_EDITOR subl
+    setenv EDITOR subl
 end
 
 # fix shader stuttering on AMD GPU
-_export RADV_PERFTEST "aco"
+setenv RADV_PERFTEST "aco"
 
 # bat (replacement for cat)
-_export BAT_THEME "base16"
+setenv BAT_THEME "base16"
 
 # enable downgrading packages in Manjaro
-_export DOWNGRADE_FROM_ALA 1
+setenv DOWNGRADE_FROM_ALA 1
 
 # fzf
-_export FZF_DEFAULT_COMMAND 'rg -l ""'
-_export FZF_DEFAULT_OPTS '--layout=reverse'
+setenv FZF_DEFAULT_COMMAND 'rg -l ""'
+setenv FZF_DEFAULT_OPTS '--layout=reverse'
+setenv FZF_LEGACY_KEYBINDINGS 0
 
 # map caps lock to escape
 setxkbmap -option caps:escape
@@ -81,27 +85,14 @@ setxkbmap -option caps:escape
 # llvm
 test -d "/usr/local/opt/llvm/bin";
 and _add_to_path "/usr/local/opt/llvm/bin";
-and _export LDFLAGS "/usr/local/opt/llvm/bin"
-test -d "/usr/local/opt/llvm/include"; and _export CPPFLAGS "/usr/local/opt/llvm/include"
+and setenv LDFLAGS "/usr/local/opt/llvm/bin"
+test -d "/usr/local/opt/llvm/include"; and setenv CPPFLAGS "/usr/local/opt/llvm/include"
 
 # ssh-agent
-test -d $XDG_RUNTIME_DIR; and _export SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"  
+test -d $XDG_RUNTIME_DIR; and setenv SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"  
 
 # in case there is a .private file, source it
 test -e "$HOME/.private"; and source $HOME/.private
 
 # asdf
 test -e "$HOME/.asdf/asdf.fish"; and source "$HOME/.asdf/asdf.fish"
-
-# load conda
-function conda_enable --description "load conda"
-    eval /home/shank/Applications/miniconda3/bin/conda "shell.fish" "hook" $argv | source
-end
-
-# mount shared folders in VM guest
-function mount_sf --description "mount shared folders in VM guest"
-    mount -t code test /home/shank/sf_code
-    mount -t MEGA test /home/shank/sf_MEGA
-    mount -t Downloads test /home/shank/sf_Downloads
-    mount -t !MyBrain test /home/shank/sf_MyBrain
-end
