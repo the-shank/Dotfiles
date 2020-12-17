@@ -1,3 +1,6 @@
+" ref.jonhoo: fish doesn't play all that well with others
+set shell=/bin/bash
+
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/settings.vim
 source $HOME/.config/nvim/mappings.vim
