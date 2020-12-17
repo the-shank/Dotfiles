@@ -62,7 +62,7 @@ Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
 Plug 'cespare/vim-toml'
 
 " Fish
-Plug 'dag/vim-fish'
+" Plug 'dag/vim-fish'
 
 " Startup time
 Plug 'dstein64/vim-startuptime'
