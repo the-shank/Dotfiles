@@ -8,7 +8,7 @@ abbr -a ...... 'cd ../../..' # up three (that's enough)
 abbr -a cdd 'cd -' # back
 
 # quick edits to dotfiles
-abbr -a aliases 'vim ~/.config/fish/sourced/abbreviations.fish'
+abbr -a aliases 'nvim ~/.config/fish/sourced/abbreviations.fish'
 
 # general
 abbr -a mkdirp 'mkdir -p' # auto nesting
@@ -47,4 +47,4 @@ abbr -a y1080 'youtube-dl -f "bestvideo[ext=webm][height<=1080]+bestaudio[ext=we
 abbr -a y1080pl 'youtube-dl -f "bestvideo[ext=webm][height<=1080]+bestaudio[ext=webm]" -o "~/Downloads/%(playlist)s/%(playlist_index)02d - %(title)s.%(ext)s"'
 
 # obsidian
-abbr -a obs 'obsidian > /dev/null 2&>1 & && sleep 1s && disown (jobs -p)'
+abbr -a obs 'obsidian > /dev/null 2&>1 & && sleep 2s && disown (jobs -p)'
