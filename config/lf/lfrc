@@ -1,5 +1,5 @@
 # interpreter for shell commands (needs to be POSIX compatible)
-set shell sh
+set shell bash
 
 # set '-eu' options for shell commands
 # These options are used to have safer shell commands. Option '-e' is used to
@@ -98,23 +98,4 @@ cmd zip ${{
     rm -rf $1
 }}
 
-# append before ext
-cmd rename-before-ext &{{
-	if [ "$(echo "$fx" | wc -l)" -gt 1 ]; then
-		lf -remote "send $id echo You can't change more than one file name"
-		lf -remote "send $id unselect"
-	else
-		if [ -d "$f" ]; then
-			lf -remote "send $id rename"
-		else
-			ext_len="$(echo ${f##*.} | wc -m)" # extention length
-			for i in $(seq "$ext_len"); do
-				pos="${pos}<left>"
-			done
-			lf -remote "send $id rename"
-			lf -remote "send $id push "$pos""
-		fi
-	fi
-}}
-
-map R rename-before-ext # right before the extention
+map R :rename; cmd-word-back; cmd-left
