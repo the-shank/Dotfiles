@@ -47,4 +47,4 @@ abbr -a y1080 'youtube-dl -f "bestvideo[ext=webm][height<=1080]+bestaudio[ext=we
 abbr -a y1080pl 'youtube-dl -f "bestvideo[ext=webm][height<=1080]+bestaudio[ext=webm]" -o "~/Downloads/%(playlist)s/%(playlist_index)02d - %(title)s.%(ext)s"'
 
 # obsidian
-abbr -a obs 'obsidian > /dev/null 2&>1 & && sleep 2s && disown (jobs -p)'
+abbr -a obs 'obsidian > /dev/null 2>&1 & && sleep 2s && disown (jobs -p)'
