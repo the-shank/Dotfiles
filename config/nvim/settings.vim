@@ -38,6 +38,8 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set autochdir                           " Your working directory will always be the same as your working directory
 set colorcolumn=80,100                  " a ruler at 80th & 100th char column
 syntax enable                           " Enables syntax highlighing
+set printfont=Monospace:h9              " Set the printfont (used with :hardcopy)
+set printoptions=left:15pt,right:15pt,top:15pt,bottom:15pt      " printoptions
 
 " Proper search
 set incsearch
