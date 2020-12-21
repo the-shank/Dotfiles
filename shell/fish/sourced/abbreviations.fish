@@ -3,8 +3,8 @@
 # quick switch dirs
 abbr -a dots 'cd ~/dotfiles/'
 abbr -a .. 'cd ..' # up one
-abbr -a .... 'cd ../..' # up two
-abbr -a ...... 'cd ../../..' # up three (that's enough)
+abbr -a ... 'cd ../..' # up two
+abbr -a .... 'cd ../../..' # up three (that's enough)
 abbr -a cdd 'cd -' # back
 
 # quick edits to dotfiles
