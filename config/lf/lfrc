@@ -12,4 +12,8 @@ cmd extract ${{
     esac
 }}
 
+# rename file
 map R :rename; cmd-word-back; cmd-left
+
+# delete
+map <a-d> :delete
