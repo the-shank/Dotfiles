@@ -22,7 +22,7 @@ abbr -a cat bat
 abbr -a lla 'll -a'
 abbr -a lsa 'ls -a'
 abbr -a less "less -MNi" # file info/position, line #'s, smart case
-abbr -a conda_enable 'eval /home/shank/Applications/miniconda3/bin/conda "shell.fish" "hook" | source'
+abbr -a conda-enable 'eval /home/shank/Applications/miniconda3/bin/conda "shell.fish" "hook" | source'
 
 # redshift
 abbr -a r0 'redshift -P -O 6500'
