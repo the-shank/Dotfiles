@@ -19,6 +19,7 @@
       - sudo ./install-sudo
 
 - pacman:
+      - acpilight
       - albert
       - alacritty
       - audacity
