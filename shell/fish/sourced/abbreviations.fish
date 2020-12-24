@@ -34,6 +34,8 @@ abbr -a r5 'redshift -P -O 4000'
 
 # backlight
 abbr -a bl 'sudo xbacklight -set'
+abbr -a blinc 'sudo xbacklight -inc 5'
+abbr -a bldec 'sudo xbacklight -dec 5'
 
 # ripgrep
 abbr -a rgi 'rg -i'
