@@ -9,6 +9,7 @@ abbr -a cdd 'cd -'          # back
 
 # quick edits to dotfiles
 abbr -a aliases 'nvim ~/.config/fish/sourced/abbreviations.fish'
+abbr -a nvinit 'nvim ~/dotfiles/config/nvim/init.vim'
 
 # general
 abbr -a mkdirp 'mkdir -p'   # auto nesting
