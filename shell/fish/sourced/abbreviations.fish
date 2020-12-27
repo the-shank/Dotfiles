@@ -57,3 +57,6 @@ abbr -a y1080pl 'youtube-dl -f "bestvideo[ext=webm][height<=1080]+bestaudio[ext=
 
 # obsidian
 abbr -a obs 'obsidian > /dev/null 2>&1 & && sleep 2s && disown (jobs -p)'
+
+# delete nvim swp files
+abbr -a rmswp "rm -f $HOME/.local/share/nvim/swap/*"
