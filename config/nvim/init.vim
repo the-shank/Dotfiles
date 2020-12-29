@@ -12,6 +12,6 @@ source $HOME/.config/nvim/plug-config/which-key.vim
 " source $HOME/.config/nvim/plug-config/vim-go.vim
 " source $HOME/.config/nvim/plug-config/vim-better-sml.vim
 source $HOME/.config/nvim/plug-config/fugitive.vim
-source $HOME/.config/nvim/plug-config/quickscope.vim
 source $HOME/.config/nvim/plug-config/startify.vim
 " source $HOME/.config/nvim/plug-config/floaterm.vim
+source $HOME/.config/nvim/plug-config/sneak.vim
