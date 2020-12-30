@@ -39,9 +39,9 @@ inoremap <right> <nop>
 nnoremap <left> :bp<CR>
 nnoremap <right> :bn<CR>
 
-" <ctrl><tab> and <ctrl><shift><tab> can switch buffers
-nnoremap <C><tab> :bn<CR>
-nnoremap <C><S-tab> :bp<CR>
+" <leader>bp and <leader>bn can switch buffers
+nnoremap <leader>bn :bn<CR>
+nnoremap <leader>bp :bp<CR>
 
 " Leader + tab to toggle between buffers
 noremap <leader><tab> <C-^><CR>
@@ -70,9 +70,9 @@ nnoremap <leader>h :nohlsearch<cr>
 nnoremap <leader>go :!git-open<cr>
 
 " Select/Copy/Duplicate block including {}. Can help in selecting functions, objects etc.
-nnoremap <leader>bs va{V
-nnoremap <leader>by va{Vy<esc>
-nnoremap <leader>bd va{VyO<esc>P<esc>
+" nnoremap <leader>bs va{V
+" nnoremap <leader>by va{Vy<esc>
+" nnoremap <leader>bd va{VyO<esc>P<esc>
 
 " Save and quit mapped to <leader>w and <leader>q
 nnoremap <leader>w :w<CR>
