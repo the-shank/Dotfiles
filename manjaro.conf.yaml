@@ -40,6 +40,7 @@
       - fish
       - flameshot
       - fzf
+      - git-extras
       - gnome-sound-recorder
       - glances
       - htop
