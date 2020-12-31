@@ -40,6 +40,7 @@ set colorcolumn=80,100                  " a ruler at 80th & 100th char column
 syntax enable                           " Enables syntax highlighing
 set printfont=Monospace:h9              " Set the printfont (used with :hardcopy)
 set printoptions=left:15pt,right:15pt,top:15pt,bottom:15pt      " printoptions
+set scrollback=100000                   " integrated terminal scrollback
 
 " Proper search
 set incsearch
