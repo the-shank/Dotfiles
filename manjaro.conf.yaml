@@ -82,9 +82,9 @@
       - soundconverter
       - sshfs
       - sshpass
+      - tealdeer
       - tesseract-data-eng
       - tlp
-      - tldr
       - tokei
       - udftools
       - valgrind
