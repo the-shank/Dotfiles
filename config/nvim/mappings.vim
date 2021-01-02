@@ -40,8 +40,8 @@ nnoremap <left> :bp<CR>
 nnoremap <right> :bn<CR>
 
 " [b and ]b can switch buffers
-nnoremap [b :bn<CR>
-nnoremap ]b :bp<CR>
+nnoremap [b :bp<CR>
+nnoremap ]b :bn<CR>
 
 " Leader + tab to toggle between buffers
 noremap <leader><tab> <C-^><CR>
