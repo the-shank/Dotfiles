@@ -42,7 +42,7 @@ abbr -a blinc 'sudo xbacklight -inc 5'
 abbr -a bldec 'sudo xbacklight -dec 5'
 
 # ripgrep
-abbr -a rgi 'rg -i'
+abbr -a rgi 'rg --ignore-case'
 
 # fd
 abbr -a fdh 'fd --hidden'
