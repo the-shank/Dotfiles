@@ -77,8 +77,13 @@
       # Tmux
       ~/.tmux.conf: config/tmux.conf
 
-      # Alacritty
+      # Alacritty (terminal)
       ~/.config/alacritty/alacritty.yml: config/alacritty/alacritty.yml
+
+      # Kitty (terminal)
+      ~/.config/kitty:
+          path: config/kitty/*
+          glob: true
 
       # Matplotlib
       ~/.config/matplotlib:
