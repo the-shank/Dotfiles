@@ -1,11 +1,11 @@
 # abbreviations
 
 # quick switch dirs
-abbr -a dots 'cd ~/dotfiles/'
+abbr -a dots 'cd ~/dotfiles/ && nvim'
 abbr -a .. 'cd ..'          # up one
 abbr -a ... 'cd ../..'      # up two
 abbr -a .... 'cd ../../..'  # up three (that's enough)
-abbr -a cdd 'cd -'          # back
+abbr -a cdd 'cd -'          # back to previous directory
 
 # quick edits to dotfiles
 abbr -a aliases 'nvim ~/.config/fish/sourced/abbreviations.fish'
@@ -54,9 +54,6 @@ abbr -a y720 'youtube-dl -f "bestvideo[ext=webm][height<=720]+bestaudio[ext=webm
 abbr -a y720pl 'youtube-dl -f "bestvideo[ext=webm][height<=720]+bestaudio[ext=webm]" -o "~/Downloads/%(playlist)s/%(playlist_index)02d - %(title)s.%(ext)s"'
 abbr -a y1080 'youtube-dl -f "bestvideo[ext=webm][height<=1080]+bestaudio[ext=webm]"'
 abbr -a y1080pl 'youtube-dl -f "bestvideo[ext=webm][height<=1080]+bestaudio[ext=webm]" -o "~/Downloads/%(playlist)s/%(playlist_index)02d - %(title)s.%(ext)s"'
-
-# obsidian
-abbr -a obs 'obsidian > /dev/null 2>&1 & && sleep 2s && disown (jobs -p)'
 
 # delete nvim swp files
 abbr -a rmswp "rm -f $HOME/.local/share/nvim/swap/*"
