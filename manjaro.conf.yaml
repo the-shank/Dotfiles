@@ -45,7 +45,6 @@
       - glances
       - htop
       - hdparm
-      - hyperfine
       - handbrake
       - img2pdf
       - inkscape
@@ -53,12 +52,10 @@
       - kdenlive
       - kitty
       - languagetool
-      - lf-bin # AUR
+      - lf-bin          # AUR
       - libreoffice
-      - lsd
       - muparser
       - mpv
-      - nnn
       - ncdu
       - neovim
       - neofetch
