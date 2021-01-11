@@ -15,5 +15,5 @@ source ~/.config/fish/sourced/abbreviations.fish
 
 # start tmux if running interactively
 if status --is-interactive
-    tmux ^ /dev/null; and exec true
+    tmux 2> /dev/null; and exec true
 end
