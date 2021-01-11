@@ -21,3 +21,5 @@ path = ~/.gitconfig_private
 	helper = store
 [pull]
 	rebase = false
+[diff]
+	mnemonicPrefix = true
