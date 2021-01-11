@@ -12,3 +12,8 @@ source ~/.config/fish/sourced/colored_manpages.fish
 
 # abbreviations
 source ~/.config/fish/sourced/abbreviations.fish
+
+# start tmux if running interactively
+if status --is-interactive
+    tmux ^ /dev/null; and exec true
+end
