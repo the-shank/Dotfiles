@@ -18,10 +18,13 @@ abbr -a duh 'du -h'         # list disk usage for all files in ./
 abbr -a dush 'du -sh'       # list total disk usage of ./
 abbr -a chx 'chmod +x'      # make it executable
 abbr -a chR 'chmod -R'      # recursive
+abbr -a e nvim
+abbr -a o open
 abbr -a vim nvim
 abbr -a cat bat
-abbr -a lla 'll -a'
-abbr -a lsa 'ls -a'
+abbr -a l 'ls'
+abbr -a ll 'ls -l'
+abbr -a lll 'ls -la'
 abbr -a less "less -MNi"    # file info/position, line #'s, smart case
 abbr -a conda-enable 'eval /home/shank/Applications/miniconda3/bin/conda "shell.fish" "hook" | source'
 
@@ -58,3 +61,7 @@ abbr -a y1080pl 'youtube-dl -f "bestvideo[ext=webm][height<=1080]+bestaudio[ext=
 
 # delete nvim swp files
 abbr -a rmswp "rm -f $HOME/.local/share/nvim/swap/*"
+
+# rust
+abbr -a c cargo
+abbr -a ct 'cargo t'
