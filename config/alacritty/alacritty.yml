@@ -138,7 +138,7 @@ font:
 
   # Point size
   # size: 10.5 # Noto Sans Mono
-  size: 12 # Comic Mono
+  size: 11 # Comic Mono
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
