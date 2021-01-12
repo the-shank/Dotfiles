@@ -28,9 +28,9 @@ video/webm=mpv.desktop
 image/jp2=viewnior.desktop
 
 [Added Associations]
-video/x-matroska=vlc.desktop;mpv.desktop;
+video/x-matroska=mpv.desktop;vlc.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
-video/mp4=mpv.desktop;
+video/mp4=mpv.desktop;vlc.desktop;
 application/pdf=com.github.jeromerobert.pdfarranger.desktop;google-chrome.desktop;qpdfview.desktop;okularApplication_pdf.desktop;
 application/epub+zip=calibre-ebook-viewer.desktop;
 audio/x-vorbis+ogg=audacious.desktop;
