@@ -3,5 +3,5 @@ function obs -d "start obsidian"
     while not ps -C obsidian > /dev/null
         sleep 0.1
     end
-    disown (jobs -p)
+    disown (jobs | rg obsidian | awk '{print $2}')
 end
