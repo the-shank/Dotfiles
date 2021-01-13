@@ -19,7 +19,7 @@
       - sudo ./install-sudo
 
 - pacman:
-      - acpilight
+      - acpilight       # backlight control on asus fx505dt laptop
       - albert
       - alacritty
       - audacity
@@ -57,7 +57,7 @@
       - muparser
       - mpv
       - ncdu
-      - neovim
+      # - neovim        # install neovim using nvim-update function
       - neofetch
       - nodejs
       - npm
@@ -70,7 +70,7 @@
       - qbittorrent
       - qemu
       - qt5ct
-      - ranger
+      # - ranger        # use lf-bin
       - redshift
       - rename
       - ripgrep
@@ -88,7 +88,6 @@
       - valgrind
       - vnstat
       - youtube-dl
-      - zsh
 
 #       - enpass-bin
 #       - exercism
