@@ -34,6 +34,7 @@
       - coreutils
       - ctags
       - docker
+      - docker-compose
       - downgrade
       - fd
       - filezilla
