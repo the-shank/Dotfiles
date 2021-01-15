@@ -78,6 +78,7 @@ setenv DOWNGRADE_FROM_ALA 1
 setenv FZF_DEFAULT_COMMAND 'rg --files-with-matches --hidden --follow --glob !.git/ ""'
 setenv FZF_DEFAULT_OPTS '--layout=reverse'
 setenv FZF_CTRL_T_COMMAND 'fd --hidden --ignore-case --follow --exclude .git/ ""'
+setenv FZF_ALT_C_COMMAND 'fd --type d --hidden --ignore-case --follow --exclude .git/ ""'
 setenv FZF_LEGACY_KEYBINDINGS 0
 
 # map caps lock to escape
