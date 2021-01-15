@@ -50,6 +50,7 @@ abbr -a rgil 'rg --ignore-case --files-with-matches'
 abbr -a rgih 'rg --ignore-case --hidden'
 
 # fd
+abbr -a fdi 'fd --ignore-case'
 abbr -a fdh 'fd --hidden'
 
 # youtube-dl
