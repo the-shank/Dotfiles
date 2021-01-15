@@ -10,6 +10,9 @@ end
 
 # Helper functions end ========================================================
 
+# vi keybindings for fish
+fish_vi_key_bindings
+
 # $HOME/bin
 test -d "$HOME/bin"; and _add_to_path "$HOME/bin"
 
