@@ -47,6 +47,7 @@ abbr -a bldec 'sudo xbacklight -dec 5'
 # ripgrep
 abbr -a rgi 'rg --ignore-case'
 abbr -a rgil 'rg --ignore-case --files-with-matches'
+abbr -a rgih 'rg --ignore-case --hidden'
 
 # fd
 abbr -a fdh 'fd --hidden'
