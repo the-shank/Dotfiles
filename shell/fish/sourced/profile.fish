@@ -75,7 +75,7 @@ setenv BAT_THEME "base16"
 setenv DOWNGRADE_FROM_ALA 1
 
 # fzf
-setenv FZF_DEFAULT_COMMAND 'rg -l ""'
+setenv FZF_DEFAULT_COMMAND 'rg --files-with-matches --hidden --glob !.git/ ""'
 setenv FZF_DEFAULT_OPTS '--layout=reverse'
 setenv FZF_LEGACY_KEYBINDINGS 0
 
