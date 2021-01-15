@@ -16,15 +16,15 @@ test -d "$HOME/bin"; and _add_to_path "$HOME/bin"
 # $HOME/.local/bin
 test -d "$HOME/.local/bin"; and _add_to_path "$HOME/.local/bin"
 
+# go
+test -d "/usr/local/go/bin"; and _add_to_path "/usr/local/go/bin"
 # go: gobin
 test -d "$HOME/.local/gobin"; 
 and _add_to_path "$HOME/.local/gobin";
-# and _export GOBIN "$HOME/.local/gobin"
 and setenv GOBIN "$HOME/.local/gobin"
 
 # go: gopath
 test -d "$HOME/code/go";
-# and _export GOPATH "$HOME/code/go"
 and setenv GOPATH "$HOME/code/go"
 
 # mix (elixir)
