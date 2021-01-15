@@ -50,6 +50,11 @@ abbr -a rgil 'rg --ignore-case --files-with-matches'
 abbr -a rgih 'rg --ignore-case --hidden'
 
 # fd
+if type -q fdfind
+    if ! type -q fd
+        alias fd=fdfind
+    end
+end
 abbr -a fdi 'fd --ignore-case'
 abbr -a fdh 'fd --hidden'
 
