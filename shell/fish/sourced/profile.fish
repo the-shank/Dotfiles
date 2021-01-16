@@ -30,7 +30,7 @@ and setenv GOBIN "$HOME/.local/gobin"
 test -d "$HOME/code/go";
 and setenv GOPATH "$HOME/code/go"
 
-# mix (elixir)
+# elixir: mix
 test -d "$HOME/.mix"; and _add_to_path "$HOME/.mix"
 test -d "$HOME/.mix/escripts"; and _add_to_path "$HOME/.mix/escripts"
 
@@ -40,17 +40,17 @@ test -d "$HOME/.cargo/bin"; and _add_to_path "$HOME/.cargo/bin"
 # rust: enable backtrace
 setenv RUST_BACKTRACE 1
 
-# set PATH so it includes user's Android Studio bin if it exists
+# Android Studio
 test -d "$HOME/Applications/android-studio/bin"; and _add_to_path "$HOME/Applications/android-studio/bin"
 
 # ansible-galaxy
 test -d "$HOME/code/utils/ansible-roles"; and _add_to_path "$HOME/code/utils/ansible-roles"
 
-# Java
+# java
 test -d "/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home" ; and _add_to_path "/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home"
 test -d "/usr/lib/jvm/default" ; and _export JDK_HOME "/usr/lib/jvm/default"
 
-# Homebrew
+# homebrew fix
 test -d "/usr/local/sbin"; and _add_to_path "/usr/local/sbin"
 
 # ruby gems

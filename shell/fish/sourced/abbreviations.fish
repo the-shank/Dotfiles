@@ -1,13 +1,13 @@
 # abbreviations
 
 # quick switch dirs
-abbr -a dots 'cd ~/dotfiles/ && nvim'
 abbr -a .. 'cd ..'          # up one
 abbr -a ... 'cd ../..'      # up two
 abbr -a .... 'cd ../../..'  # up three (that's enough)
 abbr -a cdd 'cd -'          # back to previous directory
 
 # quick edits to dotfiles
+abbr -a dots 'cd ~/dotfiles/ && nvim'
 abbr -a aliases 'nvim ~/.config/fish/sourced/abbreviations.fish'
 abbr -a nvinit 'nvim ~/dotfiles/config/nvim/init.vim'
 
