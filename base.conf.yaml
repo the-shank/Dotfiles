@@ -97,3 +97,11 @@
 
       # Lf (file manager)
       ~/.config/lf/lfrc: config/lf/lfrc
+
+      # Tridactly (Firefox)
+      # ensure that `native` messenger is installed and working
+      # install it via `:installnative`
+      # check it via `:native`
+      ~/.config/tridactyl:
+          path: config/tridactyl/*
+          glob: true
