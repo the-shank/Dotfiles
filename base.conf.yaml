@@ -46,9 +46,9 @@
       ~/.config/fish/sourced:
         path: shell/fish/sourced/*.fish
         glob: true
-      # ~/.config/fish/completions:
-      #   path: shell/fish/completions/*.fish
-      #   glob: true
+      ~/.config/fish/completions:
+        path: shell/fish/completions/*.fish
+        glob: true
 
       # Git
       ~/.gitconfig: others/gitconfig
