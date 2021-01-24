@@ -76,3 +76,5 @@ abbr -a ct 'cargo t'
 
 # vagrant
 abbr -a v vagrant
+abbr -a vup 'vagrant up'
+abbr -a vst 'vagrant status'
