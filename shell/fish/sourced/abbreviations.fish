@@ -13,6 +13,7 @@ abbr -a nvinit 'nvim ~/dotfiles/config/nvim/init.vim'
 
 # general
 abbr -a mkdirp 'mkdir -p'   # auto nesting
+abbr -a mkp 'mkdir -p'      # auto nesting
 abbr -a cpr 'cp -R'         # recursive
 abbr -a duh 'du -h'         # list disk usage for all files in ./
 abbr -a dush 'du -sh'       # list total disk usage of ./
