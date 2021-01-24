@@ -73,3 +73,6 @@ abbr -a rmswp "rm -f $HOME/.local/share/nvim/swap/*"
 # rust
 abbr -a c cargo
 abbr -a ct 'cargo t'
+
+# vagrant
+abbr -a v vagrant
