@@ -78,3 +78,4 @@ abbr -a ct 'cargo t'
 abbr -a v vagrant
 abbr -a vup 'vagrant up'
 abbr -a vst 'vagrant status'
+abbr -a vssh 'vagrant ssh'
