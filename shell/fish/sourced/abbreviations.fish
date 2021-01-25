@@ -56,8 +56,9 @@ if type -q fdfind
         alias fd=fdfind
     end
 end
-abbr -a fdi 'fd --ignore-case'
 abbr -a fdh 'fd --hidden'
+abbr -a fdi 'fd --ignore-case'
+abbr -a fdih 'fd --ignore-case --hidden'
 
 # youtube-dl
 abbr -a y480 'youtube-dl -f "bestvideo[ext=webm][height<=480]+bestaudio[ext=webm]"'
