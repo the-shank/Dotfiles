@@ -19,6 +19,7 @@ abbr -a duh 'du -h'         # list disk usage for all files in ./
 abbr -a dush 'du -sh'       # list total disk usage of ./
 abbr -a chx 'chmod +x'      # make it executable
 abbr -a chR 'chmod -R'      # recursive
+abbr -a mvv 'mv --verbose'  # mv verbose
 abbr -a e nvim
 abbr -a o open
 abbr -a vim nvim
