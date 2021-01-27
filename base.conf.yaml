@@ -32,7 +32,7 @@
       ~/.profile: shell/profile
       ~/.bashrc: shell/bashrc
       ~/.zshrc: shell/zshrc
-      ~/.aliases: shell/aliases
+      ~/.bash_aliases: shell/bash_aliases
 
       # Shell (fish)
       ~/.config/fish/config.fish: shell/fish/config.fish
@@ -105,3 +105,8 @@
       ~/.config/tridactyl:
           path: config/tridactyl/*
           glob: true
+
+      # SSH config for working behind PROXY
+      # Needs to have corkscrew installed
+      # myauth file contains username:password for the proxy
+      ~/.ssh/config: others/ssh/config
