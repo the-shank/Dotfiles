@@ -41,8 +41,8 @@ abbr -a bl 'sudo xbacklight -set'
 abbr -a bl0 'sudo xbacklight -set 0'    # backlight = 0% (minimum)
 abbr -a bl5 'sudo xbacklight -set 5'    # backlight = 5%
 abbr -a bl10 'sudo xbacklight -set 10'  # backlight = 10%
-abbr -a blinc 'sudo xbacklight -inc 5'
-abbr -a bldec 'sudo xbacklight -dec 5'
+abbr -a blinc 'sudo xbacklight -inc 2'
+abbr -a bldec 'sudo xbacklight -dec 2'
 
 # ripgrep
 abbr -a rgi 'rg --ignore-case'
