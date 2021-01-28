@@ -27,3 +27,7 @@ bind gD composite tabduplicate; tabdetach
 
 " I like wikiwand but I don't like the way it changes URLs
 bindurl wikiwand.com yy composite js document.location.href.replace("wikiwand.com/en","wikipedia.org/wiki") | clipboard yank
+
+" disable on urls
+blacklistadd https://rhyme.com/
+blacklistadd https://workflowy.com/
