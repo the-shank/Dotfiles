@@ -13,11 +13,13 @@ abbr -a nvinit 'nvim ~/dotfiles/config/nvim/init.vim'
 
 # general
 abbr -a mkdirp 'mkdir -p'   # auto nesting
+abbr -a mkp 'mkdir -p'      # auto nesting
 abbr -a cpr 'cp -R'         # recursive
 abbr -a duh 'du -h'         # list disk usage for all files in ./
 abbr -a dush 'du -sh'       # list total disk usage of ./
 abbr -a chx 'chmod +x'      # make it executable
 abbr -a chR 'chmod -R'      # recursive
+abbr -a mvv 'mv --verbose'  # mv verbose
 abbr -a e nvim
 abbr -a o open
 abbr -a vim nvim
@@ -41,8 +43,8 @@ abbr -a bl 'sudo xbacklight -set'
 abbr -a bl0 'sudo xbacklight -set 0'    # backlight = 0% (minimum)
 abbr -a bl5 'sudo xbacklight -set 5'    # backlight = 5%
 abbr -a bl10 'sudo xbacklight -set 10'  # backlight = 10%
-abbr -a blinc 'sudo xbacklight -inc 5'
-abbr -a bldec 'sudo xbacklight -dec 5'
+abbr -a blinc 'sudo xbacklight -inc 2'
+abbr -a bldec 'sudo xbacklight -dec 2'
 
 # ripgrep
 abbr -a rgi 'rg --ignore-case'
@@ -55,8 +57,9 @@ if type -q fdfind
         alias fd=fdfind
     end
 end
-abbr -a fdi 'fd --ignore-case'
 abbr -a fdh 'fd --hidden'
+abbr -a fdi 'fd --ignore-case'
+abbr -a fdih 'fd --ignore-case --hidden'
 
 # youtube-dl
 abbr -a y480 'youtube-dl -f "bestvideo[ext=webm][height<=480]+bestaudio[ext=webm]"'
@@ -72,3 +75,9 @@ abbr -a rmswp "rm -f $HOME/.local/share/nvim/swap/*"
 # rust
 abbr -a c cargo
 abbr -a ct 'cargo t'
+
+# vagrant
+abbr -a v vagrant
+abbr -a vup 'vagrant up'
+abbr -a vst 'vagrant status'
+abbr -a vssh 'vagrant ssh'

@@ -32,6 +32,7 @@
       - calibre
       - clang
       - coreutils
+      - corkscrew
       - ctags
       - docker
       - docker-compose
