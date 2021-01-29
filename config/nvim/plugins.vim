@@ -25,6 +25,7 @@ Plug 'tpope/vim-fugitive'   " Vim-Fugitive
 
 " Language Completion (LSP)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}     " coc
+Plug 'preservim/tagbar'                             " tagbar
 
 " Programming Languages
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }  " Go

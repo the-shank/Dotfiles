@@ -42,7 +42,7 @@
     // coc-rust-analyzer
     "rust-analyzer.terminal.startinsert": true,
     "python.formatting.provider": "black",
-    "python.jediEnabled": false,
+    // "python.jediEnabled": false,
     // codelens
     "codeLens.enable": true,
     "java.referencesCodeLens.enabled": true,

@@ -1,11 +1,11 @@
 " coc extensions
 let g:coc_global_extensions = [
-    \ 'coc-pyright',
     \ 'coc-rust-analyzer',
     \ 'coc-json',
     \ 'coc-explorer',
     \ 'coc-go',
-    \ 'coc-clangd'
+    \ 'coc-clangd',
+    \ 'coc-pyright'
     \ ]
 
 " TextEdit might fail if hidden is not set.
