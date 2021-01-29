@@ -1,6 +1,6 @@
 " coc extensions
 let g:coc_global_extensions = [
-    \ 'coc-python',
+    \ 'coc-pyright',
     \ 'coc-rust-analyzer',
     \ 'coc-json',
     \ 'coc-explorer',
@@ -193,3 +193,6 @@ autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | end
 
 " Python
 nnoremap <F5> :CocCommand python.execInTerminal<CR>
+
+" Rust: Implement methods for trait
+nnoremap <silent> <space>i  :call CocActionAsync('codeAction', '', 'Implement missing members')<cr>
