@@ -55,6 +55,7 @@ if command -v fdfind > /dev/null; then
     fi
 fi
 alias fdi='fd --ignore-case'
+alias fdih='fd --ignore-case --hidden'
 alias fdh='fd --hidden'
 
 # youtube-dl
