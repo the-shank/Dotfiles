@@ -15,4 +15,5 @@ Host gitlab.com
     PreferredAuthentications publickey
 
 Host *
+    AddKeysToAgent yes
     ProxyCommand corkscrew 10.4.1.99 8080 %h %p ~/.ssh/myauth
