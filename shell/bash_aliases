@@ -49,12 +49,11 @@ alias rgil='rg --ignore-case --files-with-matches'
 alias rgih='rg --ignore-case --hidden'
 
 # fd
-# TODO
 if command -v fdfind > /dev/null; then
-    if ! command -v fd > /dev/null
+    if ! command -v fd > /dev/null; then
         alias fd=fdfind
-    end
-end
+    fi
+fi
 alias fdi='fd --ignore-case'
 alias fdh='fd --hidden'
 
