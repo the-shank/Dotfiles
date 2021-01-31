@@ -109,3 +109,6 @@ setxkbmap -option caps:escape
 
 # in case there is a .private file, source it
 [ -f $HOME/.private ] && source $HOME/.private
+
+# enable vi mode
+set -o vi
