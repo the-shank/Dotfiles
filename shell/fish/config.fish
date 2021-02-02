@@ -17,3 +17,7 @@ source ~/.config/fish/sourced/abbreviations.fish
 # if status --is-interactive
 #     tmux 2> /dev/null; and exec true
 # end
+
+# dev: dct
+source ~/.config/fish/sourced/dct.fish
+
