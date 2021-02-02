@@ -75,5 +75,7 @@
 	"leetcode.hint.configWebviewMarkdown": false,
 	"editor.lineHeight": 18,
 	// honor global caps lock to escape
-	"keyboard.dispatch": "keyCode"
+    "keyboard.dispatch": "keyCode",
+	"python.languageServer": "Microsoft",
+	"editor.fontSize": 12
 }

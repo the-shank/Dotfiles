@@ -110,3 +110,6 @@
       # Needs to have corkscrew installed
       # myauth file contains username:password for the proxy
       ~/.ssh/config: others/ssh/config
+
+      # IPython
+      ~/.ipython/profile_default/ipython_config.py: others/ipython/profile_default/ipython_config.py
