@@ -52,6 +52,7 @@
 
       # Git
       ~/.gitconfig: others/gitconfig
+      ~/.gitignore_global: others/gitignore_global
       ~/.local/bin/git-open: bin/git-open
 
       # Clang
