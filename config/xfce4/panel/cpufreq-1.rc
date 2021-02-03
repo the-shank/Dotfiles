@@ -1,5 +1,5 @@
 timeout=2
-show_cpu=9
+show_cpu=-3
 show_icon=false
 show_label_freq=true
 show_label_governor=false
