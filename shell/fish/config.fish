@@ -14,6 +14,10 @@ source ~/.config/fish/sourced/colored_manpages.fish
 source ~/.config/fish/sourced/abbreviations.fish
 
 # start tmux if running interactively
-if status --is-interactive
-    tmux 2> /dev/null; and exec true
-end
+# if status --is-interactive
+#     tmux 2> /dev/null; and exec true
+# end
+
+# dev: dct
+source ~/.config/fish/sourced/dct.fish
+

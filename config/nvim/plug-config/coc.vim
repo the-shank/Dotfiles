@@ -5,7 +5,7 @@ let g:coc_global_extensions = [
     \ 'coc-explorer',
     \ 'coc-go',
     \ 'coc-clangd',
-    \ 'coc-pyright'
+    \ 'coc-python'
     \ ]
 
 " TextEdit might fail if hidden is not set.
@@ -61,9 +61,13 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gD <leader>v<Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" https://github.com/neoclide/coc.nvim/issues/2253
+nnoremap <silent><nowait> <space>d :call CocAction('jumpDefinition', v:false)<CR>
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>

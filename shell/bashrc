@@ -152,3 +152,6 @@ fi
 
 # virtualenvwrapper
 [ -f ~/.local/bin/virtualenvwrapper.sh ] && source ~/.local/bin/virtualenvwrapper.sh
+
+# in case there is a .private file, source it
+test -e "$HOME/.private" && source $HOME/.private

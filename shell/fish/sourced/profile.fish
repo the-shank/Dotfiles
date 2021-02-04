@@ -94,7 +94,13 @@ and setenv LDFLAGS "/usr/local/opt/llvm/bin"
 test -d "/usr/local/opt/llvm/include"; and setenv CPPFLAGS "/usr/local/opt/llvm/include"
 
 # ssh-agent
+# source: https://unix.stackexchange.com/a/132117
 test -d $XDG_RUNTIME_DIR; and setenv SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"  
+ssh-add -l >/dev/null 2>&1
+if test $status -ge 2
+    echo "starting ssh-agent"
+    ssh-agent -a $SSH_AUTH_SOCK >/dev/null
+end
 
 # in case there is a .private file, source it
 test -e "$HOME/.private"; and source $HOME/.private

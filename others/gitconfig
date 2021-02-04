@@ -17,6 +17,7 @@ path = ~/.gitconfig_private
 	prune = true
 [core]
 	autocrlf = input
+	excludesfile = /home/shank/.gitignore_global
 [credential]
 	helper = store
 [pull]

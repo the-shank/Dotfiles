@@ -41,10 +41,6 @@
     },
     // coc-rust-analyzer
     "rust-analyzer.terminal.startinsert": true,
-    "python.formatting.provider": "black",
-    // "python.jediEnabled": false,
     // codelens
-    "codeLens.enable": true,
-    "java.referencesCodeLens.enabled": true,
-    "java.jdt.ls.vmargs": "-javaagent:/usr/local/share/lombok.jar"
+    "codeLens.enable": true
 }

@@ -1,0 +1,8 @@
+# nvim
+.nvimlog
+
+# pyright
+pyrightconfig.json
+
+# virtualfish
+.venv

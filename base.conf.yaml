@@ -52,6 +52,7 @@
 
       # Git
       ~/.gitconfig: others/gitconfig
+      ~/.gitignore_global: others/gitignore_global
       ~/.local/bin/git-open: bin/git-open
 
       # Clang
@@ -110,3 +111,6 @@
       # Needs to have corkscrew installed
       # myauth file contains username:password for the proxy
       ~/.ssh/config: others/ssh/config
+
+      # IPython
+      ~/.ipython/profile_default/ipython_config.py: others/ipython/profile_default/ipython_config.py
