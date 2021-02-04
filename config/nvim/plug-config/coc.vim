@@ -66,6 +66,9 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" https://github.com/neoclide/coc.nvim/issues/2253
+nnoremap <silent><nowait> <space>d :call CocAction('jumpDefinition', v:false)<CR>
+
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
