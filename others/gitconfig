@@ -2,6 +2,8 @@
 lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 tree = lg --all
 mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+	assume-unchanged = update-index --assume-unchanged
+	assume-changed = update-index --no-assume-unchanged
 [user]
 email = shashanksharma21@gmail.com
 name = Shank
