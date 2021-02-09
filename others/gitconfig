@@ -20,6 +20,7 @@ path = ~/.gitconfig_private
 [core]
 	autocrlf = input
 	excludesfile = /home/shank/.gitignore_global
+	filemode = false
 [credential]
 	helper = store
 [pull]
