@@ -81,3 +81,6 @@ abbr -a v vagrant
 abbr -a vup 'vagrant up'
 abbr -a vst 'vagrant status'
 abbr -a vssh 'vagrant ssh'
+
+# git
+abbr -a gopn 'git open'
