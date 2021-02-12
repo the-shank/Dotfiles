@@ -7,4 +7,5 @@ show_warning=true
 keep_compact=true
 one_line=false
 fontcolor=rgb(255,224,0)
+freq_unit=1
 
