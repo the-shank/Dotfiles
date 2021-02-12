@@ -27,3 +27,5 @@ path = ~/.gitconfig_private
 	rebase = false
 [diff]
 	mnemonicPrefix = true
+[init]
+	defaultBranch = master
