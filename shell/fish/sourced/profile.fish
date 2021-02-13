@@ -110,3 +110,10 @@ test -e "$HOME/.asdf/asdf.fish"; and source "$HOME/.asdf/asdf.fish"
 
 # pycharm
 test -e "$HOME/Applications/pycharm-community"; and _add_to_path "$HOME/Applications/pycharm-community"
+
+# gcloud
+test -e "$HOME/Applications/google-cloud-sdk";
+and _add_to_path "$HOME/Applications/google-cloud-sdk/bin"
+
+# done (notification for long running terminal tasks)
+_export __done_notify_sound 1
