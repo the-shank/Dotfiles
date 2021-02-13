@@ -42,5 +42,6 @@
     // coc-rust-analyzer
     "rust-analyzer.terminal.startinsert": true,
     // codelens
-    "codeLens.enable": true
+    "codeLens.enable": true,
+    "python.jediEnabled": false
 }
