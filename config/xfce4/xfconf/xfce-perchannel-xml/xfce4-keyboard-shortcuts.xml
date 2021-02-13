@@ -40,9 +40,10 @@
       <property name="&lt;Primary&gt;&lt;Alt&gt;m" type="string" value="xfce4-taskmanager"/>
       <property name="XF86Calculator" type="string" value="galculator"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="xfce4-terminal --drop-down"/>
-      <property name="Print" type="string" value="xfce4-screenshooter -fd 1"/>
-      <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -wd 1"/>
-      <property name="&lt;Primary&gt;&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r"/>
+      <property name="Print" type="string" value="xfce4-screenshooter -f"/>
+      <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -w"/>
+      <property name="&lt;Alt&gt;Print" type="string" value="flameshot gui"/>
+      <property name="&lt;Primary&gt;&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter"/>
       <property name="&lt;Alt&gt;F1" type="string" value="xfce4-popup-whiskermenu"/>
       <property name="&lt;Super&gt;d" type="string" value="xfce4-dict -c"/>
       <property name="&lt;Alt&gt;F7" type="string" value="xbright -10"/>
