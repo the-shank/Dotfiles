@@ -19,5 +19,6 @@ source ~/.config/fish/sourced/abbreviations.fish
 # end
 
 # dev: dct
-source ~/.config/fish/sourced/dct.fish
+test -e ~/.config/fish/sourced/dct.fish;
+and source ~/.config/fish/sourced/dct.fish
 
