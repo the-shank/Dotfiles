@@ -43,5 +43,6 @@
     "rust-analyzer.terminal.startinsert": true,
     // codelens
     "codeLens.enable": true,
+    // python
     "python.jediEnabled": false
 }
