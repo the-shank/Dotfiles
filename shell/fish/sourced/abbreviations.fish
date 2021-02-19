@@ -84,3 +84,8 @@ abbr -a vssh 'vagrant ssh'
 
 # git
 abbr -a gopn 'git open'
+
+# docker
+abbr -a d docker
+abbr -a dc 'docker container'
+abbr -a di 'docker image'

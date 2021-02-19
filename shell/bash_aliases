@@ -75,3 +75,8 @@ alias ct='cargo t'
 
 # TODO - port fish functions to bash
 # is it possible to call fish functions from bash?
+
+# docker
+alias d=docker
+alias dc='docker container'
+alias di='docker image'
