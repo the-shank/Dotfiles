@@ -31,6 +31,8 @@ Plug 'preservim/tagbar'                             " tagbar
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }  " Go
 Plug 'jez/vim-better-sml'                           " SML
 Plug 'cespare/vim-toml'                             " TOML
+Plug 'pangloss/vim-javascript'                      " JavaScript support
+Plug 'leafgarland/typescript-vim'                   " TypeScript syntax
 " Plug 'dag/vim-fish'                               " Fish
 " (more) => see coc.vim                             " Coc Extensions
 
