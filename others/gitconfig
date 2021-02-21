@@ -29,3 +29,5 @@ path = ~/.gitconfig_private
 	mnemonicPrefix = true
 [init]
 	defaultBranch = master
+[pager]
+	branch = false
