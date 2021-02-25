@@ -114,3 +114,6 @@
 
       # IPython
       ~/.ipython/profile_default/ipython_config.py: others/ipython/profile_default/ipython_config.py
+
+      # MyCli
+      ~/.myclirc: config/mycli/myclirc
