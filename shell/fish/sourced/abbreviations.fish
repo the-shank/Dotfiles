@@ -1,5 +1,8 @@
 # abbreviations
 
+# load private abbreviations
+test -e ~/.abbr_private; and source ~/.abbr_private
+
 # quick switch dirs
 abbr -a .. 'cd ..'          # up one
 abbr -a ... 'cd ../..'      # up two
@@ -89,3 +92,4 @@ abbr -a gopn 'git open'
 abbr -a d docker
 abbr -a dc 'docker container'
 abbr -a di 'docker image'
+abbr -a d-c 'docker-compose'
