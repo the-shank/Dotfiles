@@ -109,7 +109,7 @@ test -e "$HOME/.private"; and source $HOME/.private
 test -e "$HOME/.asdf/asdf.fish"; and source "$HOME/.asdf/asdf.fish"
 
 # pycharm
-test -e "$HOME/Applications/pycharm-community"; and _add_to_path "$HOME/Applications/pycharm-community"
+test -e "$HOME/Applications/pycharm-community"; and _add_to_path "$HOME/Applications/pycharm-community/bin"
 
 # gcloud
 test -e "$HOME/Applications/google-cloud-sdk";
