@@ -30,10 +30,17 @@ noremap <leader>p :read !xsel --clipboard --output<cr>
 " No arrow keys --- force yourself to use the home row
 nnoremap <up> <nop>
 nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+
+" No backspace in insert mode --- force yourself to use normal mode for
+" deletion
+inoremap <BS> <nop>
+inoremap <Del> <nop>
 
 " Left and right can switch buffers
 nnoremap <left> :bp<CR>
