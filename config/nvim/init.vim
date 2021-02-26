@@ -15,3 +15,4 @@ source $HOME/.config/nvim/plug-config/fugitive.vim
 source $HOME/.config/nvim/plug-config/startify.vim
 " source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/sneak.vim
+source $HOME/.config/nvim/plug-config/auto-pairs.vim

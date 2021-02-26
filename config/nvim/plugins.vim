@@ -25,7 +25,6 @@ Plug 'tpope/vim-fugitive'   " Vim-Fugitive
 
 " Language Completion (LSP)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}     " coc
-Plug 'preservim/tagbar'                             " tagbar
 
 " Programming Languages
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }  " Go
@@ -33,6 +32,7 @@ Plug 'jez/vim-better-sml'                           " SML
 Plug 'cespare/vim-toml'                             " TOML
 Plug 'pangloss/vim-javascript'                      " JavaScript support
 Plug 'leafgarland/typescript-vim'                   " TypeScript syntax
+Plug 'preservim/tagbar'                             " tagbar
 " Plug 'dag/vim-fish'                               " Fish
 " (more) => see coc.vim                             " Coc Extensions
 
