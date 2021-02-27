@@ -32,7 +32,7 @@ set noshowmode                          " We don't need to see things like -- IN
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
-set timeoutlen=400                      " By default timeoutlen is 1000 ms
+set timeoutlen=250                      " By default timeoutlen is 1000 ms
 set formatoptions-=c formatoptions-=r formatoptions-=o                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set autochdir                           " Your working directory will always be the same as your working directory
@@ -41,6 +41,7 @@ syntax enable                           " Enables syntax highlighing
 set printfont=Monospace:h9              " Set the printfont (used with :hardcopy)
 set printoptions=left:15pt,right:15pt,top:15pt,bottom:15pt      " printoptions
 set scrollback=100000                   " integrated terminal scrollback
+set scrolloff=3                         " start scrolling 3 lines before edge of the viewport (@ greg hurrell)
 
 " Proper search
 set incsearch
