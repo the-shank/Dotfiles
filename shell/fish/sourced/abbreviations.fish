@@ -30,6 +30,7 @@ abbr -a cat bat
 abbr -a l 'ls'
 abbr -a ll 'ls -l'
 abbr -a lll 'ls -la'
+abbr -a lr 'ls -R'
 abbr -a less "less -MNi"    # file info/position, line #'s, smart case
 abbr -a conda-enable 'eval /home/shank/Applications/miniconda3/bin/conda "shell.fish" "hook" | source'
 
