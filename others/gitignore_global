@@ -6,3 +6,8 @@ pyrightconfig.json
 
 # virtualfish
 .venv
+
+# private files
+**/*.private
+**/*_private
+**/*-private
