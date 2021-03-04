@@ -1,6 +1,9 @@
 # nvim
 .nvimlog
 
+# nvim - coc 
+.vim/
+
 # pyright
 pyrightconfig.json
 
