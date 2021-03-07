@@ -1,8 +1,16 @@
 # nvim
 .nvimlog
 
+# nvim - coc 
+.vim/
+
 # pyright
 pyrightconfig.json
 
 # virtualfish
 .venv
+
+# private files
+**/*.private
+**/*_private
+**/*-private
