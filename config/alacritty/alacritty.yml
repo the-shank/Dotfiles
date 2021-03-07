@@ -98,8 +98,14 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     # family: NotoSansMono Nerd Font
-    family: Noto Sans Mono
-    # family: Comic Mono
+    # family: Noto Sans Mono
+    family: Comic Mono
+
+  # for comic mono
+  size: 11 # Comic Mono
+  offset:
+  #  x: 0
+      y: 3 # comic mono
 
     # The `style` can be specified to pick a specific face.
     # style: Regular
@@ -138,14 +144,14 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 10.5 # Noto Sans Mono
-  # size: 11.5 # Comic Mono
+  # size: 10.5 # Noto Sans Mono
+  # size: 11 # Comic Mono
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   # offset:
   #  x: 0
-      # y: 2 # comic mono
+      # y: 3 # comic mono
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
@@ -350,6 +356,34 @@ colors:
   #   `- { index: 16, color: '#ff00ff' }`
   #
   #indexed_colors: []
+
+# Colors (Pencil Light)
+# source: https://gist.github.com/tonylambiris/2f8f9dc31059ac24ee67662cd51f2c5b
+# colors:
+#  # Default Colors
+#  primary:
+#    background: '0xf1f1f1'
+#    foreground: '0x424242'
+#  # Normal colors
+#  normal:
+#    black:   '0x212121'
+#    red:     '0xc30771'
+#    green:   '0x10a778'
+#    yellow:  '0xa89c14'
+#    blue:    '0x008ec4'
+#    magenta: '0x523c79'
+#    cyan:    '0x20a5ba'
+#    white:   '0xe0e0e0'
+#  # Bright colors
+#  bright:
+#    black:   '0x212121'
+#    red:     '0xfb007a'
+#    green:   '0x5fd7af'
+#    yellow:  '0xf3e430'
+#    blue:    '0x20bbfc'
+#    magenta: '0x6855de'
+#    cyan:    '0x4fb8cc'
+#    white:   '0xf1f1f1'
 
 # Visual Bell
 #
