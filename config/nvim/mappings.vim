@@ -91,6 +91,9 @@ vnoremap ;q :q<CR>
 " nnoremap ;w :w<CR>
 " vnoremap ;w :w<CR>
 
+" tagbar (miguel grinberg: https://gist.github.com/miguelgrinberg/527bb5a400791f89b3c4da4bd61222e4)
+map <leader>t :TagbarToggle<CR>
+
 " vsplit
 noremap <leader>v :vsplit<cr>
 
