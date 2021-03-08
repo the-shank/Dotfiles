@@ -50,6 +50,9 @@ nnoremap <right> :bn<CR>
 nnoremap [b :bp<CR>
 nnoremap ]b :bn<CR>
 
+" close buffer (miguel grinberg: https://gist.github.com/miguelgrinberg/527bb5a400791f89b3c4da4bd61222e4)
+nnoremap <leader>x :bd<CR>
+
 " Leader + tab to toggle between buffers
 noremap <leader><tab> <C-^><CR>
 
