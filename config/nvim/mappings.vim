@@ -24,8 +24,8 @@ nnoremap <C-l>    :vertical resize +2<CR>
 " X clipboard integration
 " <Space>c will copy entire buffer into clipboard
 " <Space>p will paste clipboard into buffer
-noremap <leader>c :w !xsel -ib<cr><cr>
-noremap <leader>p :read !xsel --clipboard --output<cr>
+noremap <leader>c :w !xsel -ib<CR><CR>
+noremap <leader>p :read !xsel --clipboard --output<CR>
 
 " No arrow keys --- force yourself to use the home row
 nnoremap <up> <nop>
@@ -73,11 +73,11 @@ map <C-p> :Files<CR>
 nmap <leader>; :Buffers<CR>
 
 " remove highlights
-vnoremap <leader>h :nohlsearch<cr>
-nnoremap <leader>h :nohlsearch<cr>
+vnoremap <leader>h :nohlsearch<CR>
+nnoremap <leader>h :nohlsearch<CR>
 
 " Leader + g + o to git-open the current repository page
-nnoremap <leader>go :!git-open<cr>
+nnoremap <leader>go :!git-open<CR>
 
 " Save and quit mapped to <leader>w and <leader>q
 nnoremap <leader>w :w<CR>
@@ -95,7 +95,7 @@ vnoremap ;q :q<CR>
 map <leader>t :TagbarToggle<CR>
 
 " vsplit
-noremap <leader>v :vsplit<cr>
+noremap <leader>v :vsplit<CR>
 
 " exit the terminal mode
 tnoremap <Esc> <C-\><C-n>
