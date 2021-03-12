@@ -31,9 +31,13 @@ bindurl wikiwand.com yy composite js document.location.href.replace("wikiwand.co
 " Defaults to 300ms but I'm a 'move fast and close the wrong tabs' kinda chap
 set hintdelay 100
 
+" Fix for codeforces
+:seturl https://codeforces.com noiframe true
+
 " disable on urls
 blacklistadd https://rhyme.com/
 blacklistadd https://workflowy.com/
 blacklistadd https://youtube.com
 blacklistadd https://www.youtube.com
 blacklistadd https://mail.google.com
+blacklistadd https://codeforces.com
