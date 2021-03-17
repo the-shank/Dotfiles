@@ -97,5 +97,5 @@ abbr -a d-c 'docker-compose'
 
 # python : flask-migrate - show current migration version info
 abbr -a db-curr-mig "python manage.py db show (python manage.py db current 2>/dev/null | tail -n1 | awk '{print \$1}')"
-abbr -a db-upgrade "python manage.py db upgrade"
-abbr -a db-downgade "python manage.py db downgrade"
+abbr -a dbu "python manage.py db upgrade"
+abbr -a dbd "python manage.py db downgrade"
