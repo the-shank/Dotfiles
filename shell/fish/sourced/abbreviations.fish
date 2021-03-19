@@ -99,3 +99,8 @@ abbr -a d-c 'docker-compose'
 abbr -a db-curr-mig "python manage.py db show (python manage.py db current 2>/dev/null | tail -n1 | awk '{print \$1}')"
 abbr -a dbu "python manage.py db upgrade"
 abbr -a dbd "python manage.py db downgrade"
+
+# tree
+abbr -a t1 "tree -L 1"
+abbr -a t2 "tree -L 2"
+abbr -a t3 "tree -L 3"
