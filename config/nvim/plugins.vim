@@ -22,6 +22,8 @@ Plug 'justinmk/vim-sneak'           " Vim-Sneak
 " Git
 Plug 'mhinz/vim-signify'    " Git Gutter
 Plug 'tpope/vim-fugitive'   " Vim-Fugitive
+Plug 'tpope/vim-rhubarb'    " Vim-Rhubarb
+Plug 'shumphrey/fugitive-gitlab.vim'    " Vim-Rhubarb for Gitlab
 
 " Language Completion (LSP)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}     " coc
