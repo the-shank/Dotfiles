@@ -42,6 +42,8 @@ set printfont=Monospace:h9              " Set the printfont (used with :hardcopy
 set printoptions=left:15pt,right:15pt,top:15pt,bottom:15pt      " printoptions
 set scrollback=100000                   " integrated terminal scrollback
 set scrolloff=3                         " start scrolling 3 lines before edge of the viewport (@ greg hurrell)
+set noswapfile                          " disable swap files
+set lazyredraw                          " disable redrawing when changing text
 
 " Proper search
 set incsearch
