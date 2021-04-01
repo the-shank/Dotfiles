@@ -11,3 +11,8 @@ function venv-activated--tp_dl --on-event virtualenv_did_activate:tp_dl
     cp $HOME/code/dct/tp-data-layer/deploy_data/configs/tp.config.json \
        $HOME/code/dct/tp-data-layer/config.json
 end
+
+# virtualfish: event (goods-in)
+function venv-activated--goods-in --on-event virtualenv_did_activate:goods-in
+    nvm use
+end
