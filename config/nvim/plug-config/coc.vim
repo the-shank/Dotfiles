@@ -190,9 +190,12 @@ let g:coc_explorer_global_presets = {
 \   },
 \   'simplify': {
 \     'file-child-template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
+\   },
+\   'pwd': {
+\     'root-uri': getcwd(),
 \   }
 \ }
-nmap <space>e :CocCommand explorer<CR>
+nmap <space>e :CocCommand explorer --preset pwd<CR>
 nmap <space>f :CocCommand explorer --preset floating<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 

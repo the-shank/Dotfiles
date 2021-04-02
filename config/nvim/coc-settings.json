@@ -5,12 +5,15 @@
         "markdown",
         "html",
         "javascript",
+        "typescript",
         "yaml",
         "json",
         "python",
         "rust",
         "ruby",
-        "go"
+        "go",
+        "cpp",
+        "c"
     ],
     "diagnostic.virtualText": true,
     // coc-explorer
