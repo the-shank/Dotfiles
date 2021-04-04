@@ -95,7 +95,8 @@ abbr -a di 'docker image'
 abbr -a d-c 'docker-compose'
 
 # python : flask-migrate - show current migration version info
-abbr -a curr-mig "python manage.py db show (python manage.py db current 2>/dev/null | tail -n1 | awk '{print \$1}')"
+abbr -a db-curr "python manage.py db show (python manage.py db current 2>/dev/null | tail -n1 | awk '{print \$1}')"
+abbr -a db-hist "python manage.py db history"
 abbr -a dbu "python manage.py db upgrade"
 abbr -a dbd "python manage.py db downgrade"
 
@@ -103,3 +104,7 @@ abbr -a dbd "python manage.py db downgrade"
 abbr -a t1 "tree -L 1"
 abbr -a t2 "tree -L 2"
 abbr -a t3 "tree -L 3"
+
+# dct
+abbr -a db-bss-up "cd ~/code/dct/dct-dev-helpers; and docker-compose up --detach bss-db; and cd -"
+abbr -a db-bss-down "cd ~/code/dct/dct-dev-helpers; and docker-compose down; and cd -"
