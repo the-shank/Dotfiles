@@ -17,12 +17,12 @@ Plug 'mengelbrecht/lightline-bufferline'
 " Movement
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }   " Fuzzy Finder
 Plug 'junegunn/fzf.vim'
-Plug 'justinmk/vim-sneak'           " Vim-Sneak
+Plug 'justinmk/vim-sneak'               " Vim-Sneak
 
 " Git
-Plug 'mhinz/vim-signify'    " Git Gutter
-Plug 'tpope/vim-fugitive'   " Vim-Fugitive
-Plug 'tpope/vim-rhubarb'    " Vim-Rhubarb
+Plug 'mhinz/vim-signify'                " Git Gutter
+Plug 'tpope/vim-fugitive'               " Vim-Fugitive
+Plug 'tpope/vim-rhubarb'                " Vim-Rhubarb
 Plug 'shumphrey/fugitive-gitlab.vim'    " Vim-Rhubarb for Gitlab
 
 " Language Completion (LSP)
@@ -42,8 +42,7 @@ Plug 'preservim/tagbar'                             " tagbar
 Plug 'mhinz/vim-startify'
 
 " Utils
-Plug 'airblade/vim-rooter'          " stop vim from changing directory
-" Plug 'voldikss/vim-floaterm'      " floating terminal
+" Plug 'airblade/vim-rooter'        " stop vim from changing directory
 " Plug 'dstein64/vim-startuptime'   " see whats slowing down the startup
 Plug 'tpope/vim-commentary'         " commenting
 Plug 'tpope/vim-surround'           " surround with brackets (like VSCode)
