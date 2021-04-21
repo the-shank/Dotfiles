@@ -42,7 +42,7 @@ Plug 'preservim/tagbar'                             " tagbar
 Plug 'mhinz/vim-startify'
 
 " Utils
-Plug 'airblade/vim-rooter'          " stop vim from changing directory
+" Plug 'airblade/vim-rooter'          " stop vim from changing directory
 " Plug 'voldikss/vim-floaterm'      " floating terminal
 " Plug 'dstein64/vim-startuptime'   " see whats slowing down the startup
 Plug 'tpope/vim-commentary'         " commenting
