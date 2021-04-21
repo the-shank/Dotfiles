@@ -16,3 +16,8 @@ end
 function venv-activated--goods-in --on-event virtualenv_did_activate:goods-in
     nvm use
 end
+
+# virtualfish: event (my-bss)
+function venv-activated--my-bss --on-event virtualenv_did_activate:my-bss
+    nvm use
+end
