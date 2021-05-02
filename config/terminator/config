@@ -1,9 +1,14 @@
 [global_config]
-  borderless = True
+  handle_size = 0
+  tab_position = bottom
   title_transmit_bg_color = "#000000"
   title_inactive_fg_color = "#babdb6"
   title_inactive_bg_color = "#333333"
-  inactive_color_offset = 0.7000000000000001
+  inactive_color_offset = 0.8081081081081081
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminalShot, TerminatorThemes
+  always_split_with_profile = True
+  title_use_system_font = False
+  title_font = JetBrainsMono Nerd Font 10.5
 [keybindings]
   go_up = <Shift><Alt>k
   go_down = <Shift><Alt>j
@@ -11,39 +16,37 @@
   go_right = <Shift><Alt>l
   split_horiz = <Shift><Alt>s
   split_vert = <Shift><Alt>v
-  next_tab = <Primary><Alt>l
-  prev_tab = <Primary><Alt>h
-  full_screen = F12
+  next_tab = <Shift><Alt>n
+  prev_tab = <Shift><Alt>p
   layout_launcher = None
 [profiles]
   [[default]]
     background_color = "#282828"
-    cursor_blink = False
     cursor_color = "#aaaaaa"
-    font = Noto Sans Mono 10
+    font = JetBrainsMono Nerd Font 10.5
     foreground_color = "#ebdbb2"
     show_titlebar = False
     scroll_on_output = True
     scrollback_infinite = True
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+  [[Gruvbox Dark]]
+    background_color = "#1e1e1e"
+    cursor_color = "#bbbbbb"
+    font = JetBrainsMono Nerd Font 10.5
+    foreground_color = "#e6d4a3"
+    show_titlebar = False
+    scroll_on_output = True
+    scrollback_infinite = True
+    palette = "#161819:#f73028:#aab01e:#f7b125:#719586:#c77089:#7db669:#faefbb:#7f7061:#be0f17:#868715:#cc881a:#377375:#a04b73:#578e57:#e6d4a3"
     use_system_font = False
 [layouts]
   [[default]]
-    [[[child0]]]
+    [[[window0]]]
       type = Window
       parent = ""
-      order = 0
-      position = 0:0
-      maximised = True
-      fullscreen = False
-      size = 1920, 1019
-      title = ~
-      last_active_term = 6f2ea171-609b-4a42-807f-daf6ff32e8e2
-      last_active_window = True
-    [[[terminal1]]]
+    [[[child1]]]
       type = Terminal
-      parent = child0
-      order = 0
-      profile = default
-      uuid = 6f2ea171-609b-4a42-807f-daf6ff32e8e2
+      parent = window0
+      profile = Gruvbox Dark
 [plugins]
