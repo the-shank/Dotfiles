@@ -35,6 +35,7 @@
         # XFCE Terminal
         ~/.config/xfce4/terminal/accels.scm: config/xfce4/terminal/accels.scm
         ~/.config/xfce4/terminal/terminalrc: config/xfce4/terminal/terminalrc
+        ~/.config/gtk-3.0/gtk.css: config/gtk-3.0/gtk.css
 
         # XFCE Panel
         ~/.config/xfce4/panel:
