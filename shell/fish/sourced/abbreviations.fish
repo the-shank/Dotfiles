@@ -87,7 +87,7 @@ abbr -a vssh 'vagrant ssh'
 
 # git
 abbr -a gopn 'git open'
-abbr -a ggone 'git branch -a -v | rg --ignore-case "\[gone\]" | awk '{print $1}' | xargs -t git branch -D'
+abbr -a ggone 'git branch -a -v | rg --ignore-case "\[gone\]" | awk \'{print $1}\' | xargs -t git branch -D'
 
 # docker
 abbr -a d docker
