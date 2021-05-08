@@ -1,6 +1,6 @@
 [Default Applications]
 application/octet-stream=mousepad.desktop
-application/pdf=evince.desktop
+application/pdf=org.gnome.Evince.desktop
 application/x-gettext-translation=mousepad.desktop
 application/xml=mousepad.desktop
 application/x-wine-extension-ini=mousepad.desktop
@@ -31,7 +31,7 @@ image/jp2=viewnior.desktop
 video/x-matroska=mpv.desktop;vlc.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
 video/mp4=mpv.desktop;vlc.desktop;
-application/pdf=evince.desktop;qpdfview.desktop;okularApplication_pdf.desktop;com.github.jeromerobert.pdfarranger.desktop;google-chrome.desktop;
+application/pdf=org.gnome.Evince.desktop;qpdfview.desktop;okularApplication_pdf.desktop;com.github.jeromerobert.pdfarranger.desktop;google-chrome.desktop;
 application/epub+zip=calibre-ebook-viewer.desktop;
 audio/x-vorbis+ogg=audacious.desktop;
 image/png=flameshot.desktop;
