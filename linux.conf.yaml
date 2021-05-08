@@ -71,5 +71,8 @@
         # zentile
         ~/.config/zentile/config.toml: config/zentile/config.toml
 
+        # Base16 Shell
+        ~/.config/base16-shell: config/base16-shell
+
 - shell:
       - ["bash scripts/ranger.sh", installing ranger devicons]

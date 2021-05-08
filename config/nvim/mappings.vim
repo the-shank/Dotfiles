@@ -56,6 +56,13 @@ nnoremap <leader>x :bd<CR>
 " Leader + tab to toggle between buffers
 noremap <leader><tab> <C-^><CR>
 
+" Search results centered please
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+nnoremap <silent> * *zz
+nnoremap <silent> # #zz
+nnoremap <silent> g* g*zz
+
 " Use :Rg as a global search
 noremap <leader>g :Rg<CR>
 

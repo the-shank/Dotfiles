@@ -13,10 +13,13 @@ source ~/.config/fish/sourced/colored_manpages.fish
 # abbreviations
 source ~/.config/fish/sourced/abbreviations.fish
 
-# start tmux if running interactively
-# if status --is-interactive
-#     tmux 2> /dev/null; and exec true
-# end
+if status --is-interactive
+    set BASE16_SHELL "$HOME/.config/base16-shell/"
+    source "$BASE16_SHELL/profile_helper.fish" 
+
+    # start tmux if running interactively
+    # tmux 2> /dev/null; and exec true
+end
 
 # dev: dct
 test -e ~/.config/fish/sourced/dct.fish;
