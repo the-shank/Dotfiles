@@ -9,6 +9,7 @@ call plug#begin()
 
 " Theme
 Plug 'gruvbox-community/gruvbox'
+Plug 'chriskempson/base16-vim'
 
 " Lightline
 Plug 'itchyny/lightline.vim'

@@ -52,9 +52,12 @@ set smartcase
 set gdefault
 
 " set colorscheme
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
-" colorscheme PaperColor
+" let g:gruvbox_contrast_dark = 'hard'
+" colorscheme gruvbox
+let base16colorspace=256
+colorscheme base16-gruvbox-dark-hard
+" Brighter comments
+call Base16hi("Comment", g:base16_gui09, "", g:base16_cterm09, "", "", "")
 
 " trim trailing whitespace on save
 autocmd FileType c,cpp,java,go,php,vim,yaml,rust autocmd BufWritePre <buffer> %s/\s\+$//e
