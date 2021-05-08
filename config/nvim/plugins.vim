@@ -51,5 +51,6 @@ Plug 'tpope/vim-surround'           " surround with brackets (like VSCode)
 Plug 'andymass/vim-matchup'         " Matching brackets
 Plug 'jiangmiao/auto-pairs'         " Auto pairs for '(' '[' '{'
 Plug 'liuchengxu/vim-which-key'     " Vim-Which-Key
+Plug 'michaeljsmith/vim-indent-object'  " additional indent objects
 
 call plug#end()
