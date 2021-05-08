@@ -60,4 +60,4 @@ colorscheme base16-gruvbox-dark-hard
 call Base16hi("Comment", g:base16_gui09, "", g:base16_cterm09, "", "", "")
 
 " trim trailing whitespace on save
-autocmd FileType c,cpp,java,go,php,vim,yaml,rust autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType c,cpp,java,go,php,python,vim,yaml,rust autocmd BufWritePre <buffer> %s/\s\+$//e
