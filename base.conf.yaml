@@ -117,3 +117,6 @@
 
       # MyCli
       ~/.myclirc: config/mycli/myclirc
+
+      # PgCli
+      ~/.config/pgcli/config: config/pgcli/config
