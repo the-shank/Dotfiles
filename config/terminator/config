@@ -1,10 +1,10 @@
 [global_config]
   handle_size = 0
   tab_position = bottom
+  scroll_tabbar = True
   title_transmit_bg_color = "#000000"
   title_inactive_fg_color = "#babdb6"
   title_inactive_bg_color = "#333333"
-  inactive_color_offset = 0.8081081081081081
   enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminalShot, TerminatorThemes
   always_split_with_profile = True
   title_use_system_font = False
