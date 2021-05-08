@@ -40,6 +40,26 @@
     scrollback_infinite = True
     palette = "#161819:#f73028:#aab01e:#f7b125:#719586:#c77089:#7db669:#faefbb:#7f7061:#be0f17:#868715:#cc881a:#377375:#a04b73:#578e57:#e6d4a3"
     use_system_font = False
+  [[SpaceGray]]
+    background_color = "#20242d"
+    cursor_color = "#b3b8c3"
+    font = JetBrainsMono Nerd Font 10.5
+    foreground_color = "#b3b8c3"
+    show_titlebar = False
+    scroll_on_output = True
+    scrollback_infinite = True
+    palette = "#000000:#b04b57:#87b379:#e5c179:#7d8fa4:#a47996:#85a7a5:#b3b8c3:#000000:#b04b57:#87b379:#e5c179:#7d8fa4:#a47996:#85a7a5:#ffffff"
+    use_system_font = False
+  [[SpaceGray Eighties]]
+    background_color = "#222222"
+    cursor_color = "#bbbbbb"
+    font = JetBrainsMono Nerd Font 10.5
+    foreground_color = "#bdbaae"
+    show_titlebar = False
+    scroll_on_output = True
+    scrollback_infinite = True
+    palette = "#15171c:#ec5f67:#81a764:#fec254:#5486c0:#bf83c1:#57c2c1:#efece7:#555555:#ff6973:#93d493:#ffd256:#4d84d1:#ff55ff:#83e9e4:#ffffff"
+    use_system_font = False
 [layouts]
   [[default]]
     [[[window0]]]
