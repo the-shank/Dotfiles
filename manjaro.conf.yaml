@@ -37,6 +37,7 @@
       - docker
       - docker-compose
       - downgrade
+      - espeak
       - evince      # my preferred pdf reader
       - fd
       - filezilla
