@@ -19,6 +19,11 @@ alias chR='chmod -R'      # recursive
 alias e=nvim
 alias o=open
 alias vim=nvim
+if command -v batcat > /dev/null; then
+    if ! command -v bat > /dev/null; then
+        alias bat=batcat
+    fi
+fi
 alias cat=bat
 alias l='ls'
 alias ll='ls -l'
