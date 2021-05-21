@@ -109,8 +109,8 @@ setxkbmap -option caps:escape
 test -d $XDG_RUNTIME_DIR && export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 ssh-add -l >/dev/null 2>&1
 [ $? -ge 2 ] && \
-echo "starting ssh-agent" && \
-ssh-agent -a $SSH_AUTH_SOCK >/dev/null
+    echo "starting ssh-agent" && \
+    ssh-agent -a $SSH_AUTH_SOCK >/dev/null
 # if test $? -ge 2; then
 #     # echo "starting ssh-agent"
 #     # ssh-agent -a $SSH_AUTH_SOCK >/dev/null
