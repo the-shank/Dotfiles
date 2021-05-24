@@ -55,11 +55,21 @@
     use_system_font = False
 [layouts]
   [[default]]
-    [[[window0]]]
+    [[[child0]]]
       type = Window
       parent = ""
-    [[[child1]]]
+      order = 0
+      position = 16:16
+      maximised = False
+      fullscreen = False
+      size = 931, 1044
+      title = shank@shank-fx505dt:~/dotfiles
+      last_active_term = 8c3e79a1-802c-48ba-8fee-a61c1fdd44d8
+      last_active_window = True
+    [[[terminal1]]]
       type = Terminal
-      parent = window0
-      profile = SpaceGray Eighties
+      parent = child0
+      order = 0
+      profile = default
+      uuid = 8c3e79a1-802c-48ba-8fee-a61c1fdd44d8
 [plugins]

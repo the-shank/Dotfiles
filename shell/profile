@@ -111,13 +111,15 @@ ssh-add -l >/dev/null 2>&1
 [ $? -ge 2 ] && \
     echo "starting ssh-agent" && \
     ssh-agent -a $SSH_AUTH_SOCK >/dev/null
-# if test $? -ge 2; then
-#     # echo "starting ssh-agent"
-#     # ssh-agent -a $SSH_AUTH_SOCK >/dev/null
-# end
 
 # in case there is a .private file, source it
 [ -f $HOME/.private ] && source "$HOME/.private"
 
 # enable vi mode
 set -o vi
+
+# default web browser
+export BROWSER=/usr/bin/firefox
+
+# from manjaro-i3's .profile
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
