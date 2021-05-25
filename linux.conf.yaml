@@ -21,6 +21,11 @@
         # Sublime Text
         ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings: config/sublime-text-3/Packages/User/Preferences.sublime-settings
 
+        # i3
+        ~/.config/i3:
+          path: config/i3/**
+          glob: true
+
         # XFCE Thunar
         ~/.config/Thunar/accels.scm: config/Thunar/accels.scm
         ~/.config/Thunar/uca.xml:
@@ -35,7 +40,6 @@
         # XFCE Terminal
         ~/.config/xfce4/terminal/accels.scm: config/xfce4/terminal/accels.scm
         ~/.config/xfce4/terminal/terminalrc: config/xfce4/terminal/terminalrc
-        ~/.config/gtk-3.0/gtk.css: config/gtk-3.0/gtk.css
 
         # XFCE Panel
         ~/.config/xfce4/panel:
