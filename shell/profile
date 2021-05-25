@@ -123,3 +123,8 @@ export BROWSER=/usr/bin/firefox
 
 # from manjaro-i3's .profile
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
