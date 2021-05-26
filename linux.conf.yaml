@@ -26,6 +26,14 @@
           path: config/i3/**
           glob: true
 
+        # i3: screenlayout
+        ~/.screenlayout/:
+          path: scripts/display_*
+          glob: true
+        ~/.local/bin:
+          path: scripts/display_*
+          glob: true
+
         # XFCE Thunar
         ~/.config/Thunar/accels.scm: config/Thunar/accels.scm
         ~/.config/Thunar/uca.xml:
