@@ -25,14 +25,14 @@
         ~/.config/i3:
           path: config/i3/**
           glob: true
+        ~/.local/bin/i3_auto_layout.py: scripts/i3_auto_layout.py
+        ~/.local/bin/i3_alternating_layouts.py: scripts/i3_alternating_layouts.py
 
-        # i3: screenlayout
-        ~/.screenlayout/:
-          path: scripts/display_*
-          glob: true
-        ~/.local/bin:
-          path: scripts/display_*
-          glob: true
+        # i3: screenlayout (for multi/single monitor setup)
+        ~/.screenlayout/gg/display_single.sh: scripts/display_single.sh
+        ~/.screenlayout/gg/display_multiple.sh: scripts/display_multiple.sh
+        ~/.local/bin/display_single.sh: scripts/display_single.sh
+        ~/.local/bin/display_multiple.sh: scripts/display_multiple.sh
 
         # XFCE Thunar
         ~/.config/Thunar/accels.scm: config/Thunar/accels.scm
