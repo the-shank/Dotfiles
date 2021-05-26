@@ -2,6 +2,10 @@
 xrandr --output HDMI-0 --off \
         --output eDP-1-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
 
+# restart conky
+pkill conky
+start_conky_maia
+
 # move all (except 7th and 8th) workspaces to the main display 
 i3-msg '[workspace="1"] move workspace to output eDP-1-1'
 i3-msg '[workspace="2"] move workspace to output eDP-1-1'
