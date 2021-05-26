@@ -151,7 +151,7 @@ set $ws5 5
 set $ws6 6
 set $ws7 7
 set $ws8 8:
-set $ws9 9
+set $ws9 9:wfy
 set $ws10 10:obs
 
 # switch to workspace (Mod1 = Alt)
@@ -197,10 +197,8 @@ bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 # assign [class="Skype"] $ws5
 #
 # ---- mine ----
-assign [class="firefox"] $ws2
-assign [class="Pcmanfm"] $ws3
-assign [class="Thunar"] $ws3
 assign [class="discord"] $ws8
+assign [class="WorkFlowy"] $ws9
 assign [class="obsidian"] $ws10
 
 # Open specific applications in floating mode
@@ -307,8 +305,12 @@ exec_always --no-startup-id fix_xcursor
 # Custom autostart applications (#shank)
 exec --no-startup-id i3-msg 'workspace "1:"; exec terminator'
 exec --no-startup-id i3-msg 'workspace "2:"; exec firefox'
-exec --no-startup-id i3-msg 'workspace "8:"; exec discord'
-exec --no-startup-id i3-msg 'workspace "10:obs"; exec obsidian > /dev/null 2>&1'
+exec --no-startup-id discord
+exec --no-startup-id workflowy
+exec --no-startup-id obsidian
+# exec --no-startup-id i3-msg 'workspace "8:"; exec discord'
+# exec --no-startup-id i3-msg 'workspace "9:wfy"; exec workflowy > /dev/null 2>&1'
+# exec --no-startup-id i3-msg 'workspace "10:obs"; exec obsidian > /dev/null 2>&1'
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -448,6 +450,3 @@ bindsym $mod+Shift+Tab move workspace to output left
 
 # multi-monitor mode as default
 exec xrandr --output HDMI-0 --primary --mode 2560x1440 --pos 1920x0 --rotate normal --output eDP-1-1 --mode 1920x1080 --pos 0x180 --rotate normal
-
-# AT LAST : switch to first workspace
-exec --no-startup-id i3-msg 'workspace "1:"'
