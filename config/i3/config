@@ -437,3 +437,6 @@ mode "$mode_gaps_outer" {
 
 # Configure keyboard repeat speed
 exec --no-startup-id xset r rate 300 45
+
+# Move workspace to the next display
+bindsym $mod+Shift+Tab move workspace to output left
