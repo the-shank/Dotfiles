@@ -2,7 +2,7 @@
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBordersDefault=TRUE
-MiscCursorBlinks=FALSE
+MiscCursorBlinks=TRUE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
 MiscDefaultGeometry=120x36
 MiscInheritGeometry=FALSE
@@ -16,7 +16,7 @@ MiscTabCloseMiddleClick=TRUE
 MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
 ScrollingLines=999999
-BackgroundDarkness=1.0
+BackgroundDarkness=1.000000
 ScrollingOnOutput=FALSE
 MiscBellUrgent=TRUE
 MiscMouseWheelZoom=TRUE
