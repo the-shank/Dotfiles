@@ -21,7 +21,7 @@ bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font xft:URWGothic-Book 11
+font xft:URWGothic-Book 10
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -446,7 +446,7 @@ exec --no-startup-id xset r rate 300 45
 bindsym $mod+Shift+Tab move workspace to output left
 
 # start autolayout
-exec --no-startup-id /home/shank/.local/bin/i3_auto_layout.py
+exec_always --no-startup-id /home/shank/.local/bin/i3_auto_layout.py
 
 # LAST: multi-monitor mode as default
 exec --no-startup-id xrandr --output HDMI-0 --primary --mode 2560x1440 --pos 1920x0 --rotate normal --output eDP-1-1 --mode 1920x1080 --pos 0x180 --rotate normal
