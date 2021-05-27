@@ -29,9 +29,6 @@ manjaro)
     echo "PROCESSING ${OS}${SUFFIX}"
     echo "=============================="
     "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${OS}${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-yay" "${@}"
-    echo "PROCESSING vscode${SUFFIX}"
-    echo "=============================="
-    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "vscode${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-vscode" "${@}"
     ;;
 debian)
     echo "OS - Debian"
@@ -41,9 +38,6 @@ debian)
     echo "PROCESSING ${OS}${SUFFIX}"
     echo "=============================="
     sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${OS}${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-apt" "${@}"
-    echo "PROCESSING vscode${SUFFIX}"
-    echo "=============================="
-    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "vscode${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-vscode" "${@}"
     ;;
 ubuntu)
     echo "OS - Ubuntu"
@@ -53,18 +47,12 @@ ubuntu)
     echo "PROCESSING ${OS}${SUFFIX}"
     echo "=============================="
     sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${OS}${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-apt" "${@}"
-    echo "PROCESSING vscode${SUFFIX}"
-    echo "=============================="
-    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "vscode${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-vscode" "${@}"
     ;;
 darwin)
     echo "OS - OSX"
     echo "PROCESSING osx${SUFFIX}"
     echo "=============================="
     "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "osx${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-brew" "${@}"
-    echo "PROCESSING vscode${SUFFIX}"
-    echo "=============================="
-    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "vscode${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-vscode" "${@}"
     ;;
 *)
     echo "unknown distro ID: $ID, not doing anything special"
