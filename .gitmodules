@@ -4,12 +4,6 @@
 [submodule "dotbot-brew"]
 	path = dotbot-brew
 	url = https://github.com/d12frosted/dotbot-brew.git
-[submodule "dotbot-vscode"]
-	path = dotbot-vscode
-	url = https://github.com/hujianxin/dotbot-vscode
-[submodule "zsh/themes/spaceship-prompt"]
-	path = zsh/themes/spaceship-prompt
-	url = https://github.com/denysdovhan/spaceship-prompt.git
 [submodule "dotbot-yay"]
 	path = dotbot-yay
 	url = https://github.com/alexwh/dotbot-yay
