@@ -27,8 +27,7 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-# bindsym $mod+Return exec terminal
-bindsym $mod+Return exec /usr/bin/terminator
+bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -197,6 +196,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 # assign [class="Skype"] $ws5
 #
 # ---- mine ----
+assign [class="firefox"] $ws2
 assign [class="discord"] $ws8
 assign [class="WorkFlowy"] $ws9
 assign [class="obsidian"] $ws10
@@ -303,14 +303,11 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
 # Custom autostart applications (#shank)
-exec --no-startup-id i3-msg 'workspace "1:"; exec terminator'
-exec --no-startup-id i3-msg 'workspace "2:"; exec firefox'
+exec --no-startup-id firefox
 exec --no-startup-id discord
 exec --no-startup-id workflowy
 exec --no-startup-id obsidian
-# exec --no-startup-id i3-msg 'workspace "8:"; exec discord'
-# exec --no-startup-id i3-msg 'workspace "9:wfy"; exec workflowy > /dev/null 2>&1'
-# exec --no-startup-id i3-msg 'workspace "10:obs"; exec obsidian > /dev/null 2>&1'
+exec --no-startup-id i3-msg 'workspace "1:"; exec xfce4-terminal'
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -390,8 +387,8 @@ bindsym $mod+m bar mode toggle
 #############################
 
 # Set inner/outer gaps
-gaps inner 5
-gaps outer -2
+gaps inner 1
+gaps outer 1
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -399,11 +396,11 @@ gaps outer -2
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
+# smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
+# smart_borders on
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
@@ -450,7 +447,6 @@ bindsym $mod+Shift+Tab move workspace to output left
 
 # start autolayout
 exec --no-startup-id /home/shank/.local/bin/i3_auto_layout.py
-# exec --no-startup-id /home/shank/.local/bin/i3_alternating_layouts.py
 
-# multi-monitor mode as default
-exec xrandr --output HDMI-0 --primary --mode 2560x1440 --pos 1920x0 --rotate normal --output eDP-1-1 --mode 1920x1080 --pos 0x180 --rotate normal
+# LAST: multi-monitor mode as default
+exec --no-startup-id xrandr --output HDMI-0 --primary --mode 2560x1440 --pos 1920x0 --rotate normal --output eDP-1-1 --mode 1920x1080 --pos 0x180 --rotate normal
