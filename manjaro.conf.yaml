@@ -7,9 +7,6 @@
           stderr: true
 
 - link:
-      # Okular
-      ~/.config/okularpartrc: okular/okularpartrc
-
       # VSCode
       ~/.config/Code - OSS/User/snippets: config/Code/User/snippets
       ~/.config/Code - OSS/User/keybindings.json: config/Code/User/keybindings.json

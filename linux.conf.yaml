@@ -74,13 +74,16 @@
         ~/.config/ranger/rc.conf: config/ranger/rc.conf
 
         # Xsession
-        ~/.xsession: config/xsession
+        ~/.xsession: config/x11/xsession
 
         # Themes
         ~/.themes/border-only: themes/border-only
 
         # Base16 Shell
         ~/.config/base16-shell: config/base16-shell
+
+        # Okular
+        ~/.config/okularpartrc: config/okular/okularpartrc
 
 - shell:
       - ["bash scripts/ranger.sh", installing ranger devicons]

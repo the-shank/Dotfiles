@@ -163,3 +163,5 @@ unset __conda_setup
 
 # zsh-autosuggestions
 bindkey '^\' autosuggest-accept
+
+source /home/shank/.config/broot/launcher/bash/br

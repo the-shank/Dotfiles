@@ -6,13 +6,6 @@
           stdout: true
           stderr: true
 
-- link:
-      # Okular
-      ~/.config/okularpartrc: okular/okularpartrc
-
-      # xinitrc
-      ~/.xinitrc: config/xinitrc
-
 - apt:
       - albert
       # - audacity

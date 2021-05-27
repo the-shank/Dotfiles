@@ -29,25 +29,25 @@
 
 - link:
       # Shell (bash & zsh)
-      ~/.profile: shell/profile
-      ~/.bashrc: shell/bashrc
-      ~/.zshrc: shell/zshrc
-      ~/.bash_aliases: shell/bash_aliases
+      ~/.profile: config/bash/profile
+      ~/.bashrc: config/bash/bashrc
+      ~/.zshrc: config/zsh/zshrc
+      ~/.bash_aliases: config/bash/bash_aliases
 
       # Shell (fish)
-      ~/.config/fish/config.fish: shell/fish/config.fish
-      ~/.config/fish/fishfile: shell/fish/fishfile
+      ~/.config/fish/config.fish: config/fish/config.fish
+      ~/.config/fish/fishfile: config/fish/fishfile
       ~/.config/fish:
-          path: shell/fish/**/*
+          path: config/fish/**/*
           glob: true
 
       # Git
-      ~/.gitconfig: others/gitconfig
-      ~/.gitignore_global: others/gitignore_global
+      ~/.gitconfig: config/git/gitconfig
+      ~/.gitignore_global: config/git/gitignore_global
       ~/.local/bin/git-open: bin/git-open
 
       # Clang
-      ~/.clang-format: others/clang-format
+      ~/.clang-format: config/clang-format
 
       # youtube-dl
       ~/.config/youtube-dl/config: config/youtube-dl/config
@@ -67,7 +67,7 @@
         glob: true
 
       # Tmux
-      ~/.tmux.conf: config/tmux.conf
+      ~/.tmux.conf: config/tmux/tmux.conf
 
       # Alacritty (terminal)
       ~/.config/alacritty/alacritty.yml: config/alacritty/alacritty.yml
@@ -97,10 +97,10 @@
       # SSH config for working behind PROXY
       # Needs to have corkscrew installed
       # myauth file contains username:password for the proxy
-      ~/.ssh/config: others/ssh/config
+      ~/.ssh/config: config/ssh/config
 
       # IPython
-      ~/.ipython/profile_default/ipython_config.py: others/ipython/profile_default/ipython_config.py
+      ~/.ipython/profile_default/ipython_config.py: config/ipython/profile_default/ipython_config.py
 
       # MyCli
       ~/.myclirc: config/mycli/myclirc

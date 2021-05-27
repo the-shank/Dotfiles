@@ -5,8 +5,8 @@ if not functions -q fisher
 end
 
 # pyenv
-status is-login; and pyenv init --path | source
-pyenv init - | source
+# status is-login; and pyenv init --path | source
+# pyenv init - | source
 
 # profile
 source ~/.config/fish/sourced/profile.fish
