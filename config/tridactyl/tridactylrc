@@ -32,7 +32,7 @@ bindurl wikiwand.com yy composite js document.location.href.replace("wikiwand.co
 set hintdelay 100
 
 " Fix for codeforces
-:seturl https://codeforces.com noiframe true
+seturl https://codeforces.com noiframe true
 
 " disable on urls
 blacklistadd https://rhyme.com/

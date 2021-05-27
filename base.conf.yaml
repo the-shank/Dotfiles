@@ -37,18 +37,9 @@
       # Shell (fish)
       ~/.config/fish/config.fish: shell/fish/config.fish
       ~/.config/fish/fishfile: shell/fish/fishfile
-      # ~/.config/fish/conf.d:
-      #   path: shell/fish/conf.d/*.fish
-      #   glob: true
-      ~/.config/fish/functions:
-        path: shell/fish/functions/*.fish
-        glob: true
-      ~/.config/fish/sourced:
-        path: shell/fish/sourced/*.fish
-        glob: true
-      ~/.config/fish/completions:
-        path: shell/fish/completions/*.fish
-        glob: true
+      ~/.config/fish:
+          path: shell/fish/**/*
+          glob: true
 
       # Git
       ~/.gitconfig: others/gitconfig
@@ -87,9 +78,7 @@
           glob: true
 
       # Matplotlib
-      ~/.config/matplotlib:
-          path: config/matplotlib/*
-          glob: true
+      ~/.config/matplotlib/matplotlibrc: config/matplotlib/matplotlibrc
 
       # Obsidian Sync
       # setup a crontab (using crontab -e) with the following line
@@ -103,9 +92,7 @@
       # ensure that `native` messenger is installed and working
       # install it via `:installnative`
       # check it via `:native`
-      ~/.config/tridactyl:
-          path: config/tridactyl/*
-          glob: true
+      ~/.config/tridactyl/tridactylrc: config/tridactyl/tridactylrc
 
       # SSH config for working behind PROXY
       # Needs to have corkscrew installed
