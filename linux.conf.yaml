@@ -22,17 +22,18 @@
         ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings: config/sublime-text-3/Packages/User/Preferences.sublime-settings
 
         # i3
-        ~/.config/i3:
-          path: config/i3/**
-          glob: true
-        ~/.local/bin/i3_auto_layout.py: scripts/i3_auto_layout.py
-        ~/.local/bin/i3_alternating_layouts.py: scripts/i3_alternating_layouts.py
+        ~/.config/i3/config: config/i3/config
+        ~/.local/bin:
+            path: scripts/i3_*
+            glob: true
 
         # i3: screenlayout (for multi/single monitor setup)
-        ~/.screenlayout/gg/display_single.sh: scripts/display_single.sh
-        ~/.screenlayout/gg/display_multiple.sh: scripts/display_multiple.sh
-        ~/.local/bin/display_single.sh: scripts/display_single.sh
-        ~/.local/bin/display_multiple.sh: scripts/display_multiple.sh
+        ~/.screenlayout:
+            path: scripts/display_*
+            glob: true
+        ~/.local/bin:
+            path: scripts/display_*
+            glob: true
 
         # XFCE Thunar
         ~/.config/Thunar/accels.scm: config/Thunar/accels.scm
@@ -76,12 +77,7 @@
         ~/.xsession: config/xsession
 
         # Themes
-        ~/.themes:
-            path: themes/*
-            glob: true
-
-        # zentile
-        ~/.config/zentile/config.toml: config/zentile/config.toml
+        ~/.themes/border-only: themes/border-only
 
         # Base16 Shell
         ~/.config/base16-shell: config/base16-shell
