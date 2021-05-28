@@ -67,19 +67,16 @@ run_watch VPN {
 }
 
 tztime local {
-    # format = " %A %e/%B   %H:%M:%S "
-    format = "IN  %H:%M  %e/%B"
+    format = "IN  %H:%M  %e %B "
 }
 
 tztime uk {
-    # format = " %A %e/%B   %H:%M:%S "
     format = "UK  %H:%M"
     timezone = "Europe/London"
 }
 
 tztime usa {
-    # format = " %A %e/%B   %H:%M:%S "
-    format = "&lt;b&gt;USA&lt;/b&gt;  %time"
+    format = "USA  %time"
     format_time = "%H:%M"
     timezone = "America/Indianapolis"
 }
