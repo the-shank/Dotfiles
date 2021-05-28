@@ -91,9 +91,10 @@ bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+# bindsym Print exec --no-startup-id i3-scrot
+bindsym Print exec --no-startup-id flameshot gui
+bindsym $mod+Print --release exec --no-startup-id i3-scrot --window-to-clipboard
+bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot --window-to-clipboard 3
 # bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
@@ -267,6 +268,17 @@ bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# A keyboard friendly exit
+# https://samsaffron.com/archive/2019/04/09/my-i3-window-manager-setup
+mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
+  bindsym l exec --no-startup-id i3exit logout
+  bindsym r exec --no-startup-id i3exit reboot
+  bindsym s exec --no-startup-id i3exit shutdown
+  bindsym Escape mode "default"
+  bindsym Return mode "default"
+}
+bindsym $mod+x mode "exit: [l]ogout, [r]eboot, [s]hutdown"
 
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
