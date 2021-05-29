@@ -17,19 +17,19 @@ general {
     color_bad       = '#ba5e57'
 }
 
-order += "volume master"
 order += "disk /"
 # order += "disk /home"
 # order += "run_watch DHCP"
 # order += "ipv6"
 # order += "run_watch VPN"
 order += "wireless wlp4s0"
-order += "ethernet enp2s0"
+# order += "ethernet enp2s0"
 order += "battery 0"
 order += "cpu_temperature 0"
 order += "cpu_usage"
 order += "memory"
 # order += "load"
+order += "volume master"
 order += "tztime usa"
 order += "tztime uk"
 order += "tztime local"
