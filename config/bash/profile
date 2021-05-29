@@ -128,3 +128,6 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
+
+# default terminal
+export TERMINAL=/usr/bin/xfce4-terminal

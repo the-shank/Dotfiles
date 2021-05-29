@@ -55,7 +55,7 @@ floating_modifier $mod
 bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+# bindsym $mod+Shift+q kill
 bindsym $mod+q kill
 
 # start program launcher
@@ -385,7 +385,7 @@ bar {
 	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-	tray_output primary
+#	tray_output primary
 #	tray_output eDP1
 
 	bindsym button4 nop
