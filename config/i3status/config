@@ -9,7 +9,7 @@
 ###############################################################################
 
 general {
-    interval 		= 2
+    interval 		= 5
     colors 			= true
     markup          = pango
     color_good      = '#2f343f'
