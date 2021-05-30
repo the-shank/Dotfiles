@@ -64,7 +64,7 @@ bindsym $mod+q kill
 # start program launcher
 bindsym $mod+d exec --no-startup-id dmenu_recency
 # bindsym Mod1+space exec rofi -show run
-bindsym Mod1+space exec rofi -lines 12 -padding 18 -width 30 -location 0 -show drun -sidebar-mode -font 'Noto Sans 14'
+bindsym Mod1+space exec rofi -lines 12 -padding 18 -width 30 -location 0 -show combi -sidebar-mode -font 'Noto Sans 14'
 bindsym $alt+w exec rofi -lines 12 -padding 18 -width 30 -location 0 -show window -sidebar-mode -font 'Noto Sans 14'
 
 # launch categorized menu
@@ -348,7 +348,7 @@ exec_always --no-startup-id fix_xcursor
 
 # Custom autostart applications (#shank)
 exec --no-startup-id firefox
-exec --no-startup-id discord
+# exec --no-startup-id discord
 exec --no-startup-id workflowy
 exec --no-startup-id obsidian
 exec --no-startup-id i3-msg 'workspace "1:"; exec xfce4-terminal'
