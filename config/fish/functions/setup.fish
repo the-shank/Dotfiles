@@ -2,6 +2,7 @@ function setup --description "sets up the environment variables and all"
     # Helper functions ============================================================
 
     function _export --description "sets a variable"
+        set --erase $argv[1]
         set --universal --export $argv[1] $argv[2]
     end
 
@@ -24,12 +25,12 @@ function setup --description "sets up the environment variables and all"
     test -d "/usr/local/go/bin"; and _add_to_path "/usr/local/go/bin"
     # go: gobin
     test -d "$HOME/.local/gobin"; 
-    and _add_to_path "$HOME/.local/gobin";
-    and setenv GOBIN "$HOME/.local/gobin"
+        and _add_to_path "$HOME/.local/gobin";
+        and _export GOBIN "$HOME/.local/gobin"
 
     # go: gopath
     test -d "$HOME/code/go";
-    and setenv GOPATH "$HOME/code/go"
+        and _export GOPATH "$HOME/code/go"
 
     # elixir: mix
     test -d "$HOME/.mix"; and _add_to_path "$HOME/.mix"
@@ -39,7 +40,7 @@ function setup --description "sets up the environment variables and all"
     test -d "$HOME/.cargo/bin"; and _add_to_path "$HOME/.cargo/bin"
 
     # rust: enable backtrace
-    setenv RUST_BACKTRACE 1
+    _export RUST_BACKTRACE 1
 
     # Android Studio
     test -d "$HOME/Applications/android-studio/bin"; and _add_to_path "$HOME/Applications/android-studio/bin"
@@ -59,28 +60,28 @@ function setup --description "sets up the environment variables and all"
 
     # editor
     if type --quiet nvim
-        setenv GIT_EDITOR nvim
-        setenv EDITOR nvim
+        _export GIT_EDITOR nvim
+        _export EDITOR nvim
     else if type --quiet subl
-        setenv GIT_EDITOR subl
-        setenv EDITOR subl
+        _export GIT_EDITOR subl
+        _export EDITOR subl
     end
 
     # fix shader stuttering on AMD GPU
-    setenv RADV_PERFTEST "aco"
+    _export RADV_PERFTEST "aco"
 
     # bat (replacement for cat)
-    setenv BAT_THEME "base16"
+    _export BAT_THEME "base16"
 
     # enable downgrading packages in Manjaro
-    setenv DOWNGRADE_FROM_ALA 1
+    _export DOWNGRADE_FROM_ALA 1
 
     # fzf
-    setenv FZF_DEFAULT_COMMAND 'rg --files-with-matches --hidden --follow --glob !.git/ ""'
-    setenv FZF_DEFAULT_OPTS '--layout=reverse'
-    setenv FZF_CTRL_T_COMMAND 'fd --hidden --ignore-case --follow --exclude .git/ ""'
-    setenv FZF_ALT_C_COMMAND 'fd --type d --hidden --ignore-case --follow --exclude .git/ ""'
-    setenv FZF_LEGACY_KEYBINDINGS 0
+    _export FZF_DEFAULT_COMMAND 'rg --files-with-matches --hidden --follow --glob !.git/ ""'
+    _export FZF_DEFAULT_OPTS '--layout=reverse'
+    _export FZF_CTRL_T_COMMAND 'fd --hidden --ignore-case --follow --exclude .git/ ""'
+    _export FZF_ALT_C_COMMAND 'fd --type d --hidden --ignore-case --follow --exclude .git/ ""'
+    _export FZF_LEGACY_KEYBINDINGS 0
 
     # map caps lock to escape
     setxkbmap -option caps:escape
@@ -88,8 +89,8 @@ function setup --description "sets up the environment variables and all"
     # llvm
     test -d "/usr/local/opt/llvm/bin";
         and _add_to_path "/usr/local/opt/llvm/bin";
-        and setenv LDFLAGS "/usr/local/opt/llvm/bin"
-    test -d "/usr/local/opt/llvm/include"; and setenv CPPFLAGS "/usr/local/opt/llvm/include"
+        and _export LDFLAGS "/usr/local/opt/llvm/bin"
+    test -d "/usr/local/opt/llvm/include"; and _export CPPFLAGS "/usr/local/opt/llvm/include"
 
     # pycharm
     test -e "$HOME/Applications/pycharm-community"; and _add_to_path "$HOME/Applications/pycharm-community/bin"
