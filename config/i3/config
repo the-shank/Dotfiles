@@ -529,7 +529,10 @@ exec --no-startup-id xset r rate 300 45
 bindsym $mod+Shift+Tab move workspace to output left
 
 # start autolayout
-exec_always --no-startup-id /home/shank/.local/bin/i3_auto_layout.py
+exec_always --no-startup-id ~/.local/bin/i3_auto_layout.py
+
+# Keybinding for "promoting" the focussed window
+bindsym $mod+p exec --no-startup-id ~/.local/bin/i3_promote_window.py
 
 # battery notifications
 exec --no-startup-id i3-battery-popup -n -t 10m -m "battery low!" -L 25 -l 15 &
