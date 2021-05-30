@@ -124,6 +124,6 @@ volume master {
 }
 
 memory {
-    # format = " %used"
-    format = "<span background='#bd93f9'>  </span><span background='#e5e9f0'> %used </span>"
+    # format = " %used"
+    format = "<span background='#bd93f9'>  </span><span background='#e5e9f0'> %used </span>"
 } 
