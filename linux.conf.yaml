@@ -86,5 +86,10 @@
         # Okular
         ~/.config/okularpartrc: config/okular/okularpartrc
 
+        # Redshift
+        ~/.local/bin:
+          path: scripts/redshift_*.sh
+          glob: true
+
 - shell:
       - ["bash scripts/ranger.sh", installing ranger devicons]
