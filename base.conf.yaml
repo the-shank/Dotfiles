@@ -41,10 +41,14 @@
           path: config/fish/**/*
           glob: true
 
+      # binaries
+      ~/.local/bin:
+        path: bin/*
+        glob: true
+
       # Git
       ~/.gitconfig: config/git/gitconfig
       ~/.gitignore_global: config/git/gitignore_global
-      ~/.local/bin/git-open: bin/git-open
 
       # Clang
       ~/.clang-format: config/clang-format
@@ -83,7 +87,7 @@
       # Obsidian Sync
       # setup a crontab (using crontab -e) with the following line
       # */30 * * * * /home/shank/.local/bin/osync >>/home/shank/.osync_log 2>&1
-      ~/.local/bin/osync: bin/osync
+      # ~/.local/bin/osync: bin/osync
 
       # Lf (file manager)
       ~/.config/lf/lfrc: config/lf/lfrc

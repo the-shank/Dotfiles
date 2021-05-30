@@ -352,6 +352,7 @@ exec --no-startup-id firefox
 exec --no-startup-id workflowy
 exec --no-startup-id obsidian
 exec --no-startup-id i3-msg 'workspace "1:"; exec xfce4-terminal'
+exec --no-startup-id i3-msg 'workspace 3; exec thunar'
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -529,6 +530,9 @@ bindsym $mod+Shift+Tab move workspace to output left
 
 # start autolayout
 exec_always --no-startup-id /home/shank/.local/bin/i3_auto_layout.py
+
+# battery notifications
+exec --no-startup-id i3-battery-popup -n -t 10m -m "battery low!" -L 25 -l 15 &
 
 # LAST: multi-monitor mode as default
 exec --no-startup-id xrandr --output HDMI1 --primary --mode 2560x1440 --pos 1920x0 --rotate normal --output eDP-1-1 --mode 1920x1080 --pos 0x180 --rotate normal
