@@ -92,12 +92,6 @@
       # Lf (file manager)
       ~/.config/lf/lfrc: config/lf/lfrc
 
-      # Tridactly (Firefox)
-      # ensure that `native` messenger is installed and working
-      # install it via `:installnative`
-      # check it via `:native`
-      ~/.config/tridactyl/tridactylrc: config/tridactyl/tridactylrc
-
       # SSH config for working behind PROXY
       # Needs to have corkscrew installed
       # myauth file contains username:password for the proxy
@@ -111,3 +105,12 @@
 
       # PgCli
       ~/.config/pgcli/config: config/pgcli/config
+
+      # Firefox (tabs at bottom)
+      ~/.mozilla/firefox/profiles.ini: config/firefox/profiles.ini
+      ~/.mozilla/firefox/36kzq6u2.default-release/chrome: config/firefox/chrome
+      # Firefox : Tridactly
+      # ensure that `native` messenger is installed and working
+      # install it via `:installnative`
+      # check it via `:native`
+      ~/.config/tridactyl/tridactylrc: config/tridactyl/tridactylrc
