@@ -1,97 +1,8 @@
-# Helper functions ============================================================
-
-function _export --description "sets a variable"
-    set --universal --export $argv[1] $argv[2]
-end
-
-function _add_to_path --description "add folder to path"
-    contains $argv $PATH; or set PATH $argv $PATH
-end
-
-# Helper functions end ========================================================
-
-# vi keybindings for fish
-fish_vi_key_bindings
-
-# $HOME/bin
-test -d "$HOME/bin"; and _add_to_path "$HOME/bin"
-
-# $HOME/.local/bin
-test -d "$HOME/.local/bin"; and _add_to_path "$HOME/.local/bin"
-
-# go
-test -d "/usr/local/go/bin"; and _add_to_path "/usr/local/go/bin"
-# go: gobin
-test -d "$HOME/.local/gobin"; 
-and _add_to_path "$HOME/.local/gobin";
-and setenv GOBIN "$HOME/.local/gobin"
-
-# go: gopath
-test -d "$HOME/code/go";
-and setenv GOPATH "$HOME/code/go"
-
-# elixir: mix
-test -d "$HOME/.mix"; and _add_to_path "$HOME/.mix"
-test -d "$HOME/.mix/escripts"; and _add_to_path "$HOME/.mix/escripts"
-
-# rust: cargo
-test -d "$HOME/.cargo/bin"; and _add_to_path "$HOME/.cargo/bin"
-
-# rust: enable backtrace
-setenv RUST_BACKTRACE 1
-
-# Android Studio
-test -d "$HOME/Applications/android-studio/bin"; and _add_to_path "$HOME/Applications/android-studio/bin"
-
-# ansible-galaxy
-test -d "$HOME/code/utils/ansible-roles"; and _add_to_path "$HOME/code/utils/ansible-roles"
-
-# java
-test -d "/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home" ; and _add_to_path "/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home"
-test -d "/usr/lib/jvm/default" ; and _export JDK_HOME "/usr/lib/jvm/default"
-
-# homebrew fix
-test -d "/usr/local/sbin"; and _add_to_path "/usr/local/sbin"
-
-# ruby gems
-test -d "$HOME/.gem/ruby/2.7.0/bin"; and _add_to_path "$HOME/.gem/ruby/2.7.0/bin"
+# NOTE: for any environment variable related stuff see setup.fish
 
 # autojump
-test -e "/usr/share/autojump/autojump.fish"; and source "/usr/share/autojump/autojump.fish"
-
-# editor
-if type --quiet nvim
-    setenv GIT_EDITOR nvim
-    setenv EDITOR nvim
-else if type --quiet subl
-    setenv GIT_EDITOR subl
-    setenv EDITOR subl
-end
-
-# fix shader stuttering on AMD GPU
-setenv RADV_PERFTEST "aco"
-
-# bat (replacement for cat)
-setenv BAT_THEME "base16"
-
-# enable downgrading packages in Manjaro
-setenv DOWNGRADE_FROM_ALA 1
-
-# fzf
-setenv FZF_DEFAULT_COMMAND 'rg --files-with-matches --hidden --follow --glob !.git/ ""'
-setenv FZF_DEFAULT_OPTS '--layout=reverse'
-setenv FZF_CTRL_T_COMMAND 'fd --hidden --ignore-case --follow --exclude .git/ ""'
-setenv FZF_ALT_C_COMMAND 'fd --type d --hidden --ignore-case --follow --exclude .git/ ""'
-setenv FZF_LEGACY_KEYBINDINGS 0
-
-# map caps lock to escape
-setxkbmap -option caps:escape
-
-# llvm
-test -d "/usr/local/opt/llvm/bin";
-and _add_to_path "/usr/local/opt/llvm/bin";
-and setenv LDFLAGS "/usr/local/opt/llvm/bin"
-test -d "/usr/local/opt/llvm/include"; and setenv CPPFLAGS "/usr/local/opt/llvm/include"
+test -e "/usr/share/autojump/autojump.fish"; 
+    and source "/usr/share/autojump/autojump.fish"
 
 # ssh-agent
 # source: https://unix.stackexchange.com/a/132117
@@ -108,12 +19,12 @@ test -e "$HOME/.private"; and source $HOME/.private
 # asdf
 test -e "$HOME/.asdf/asdf.fish"; and source "$HOME/.asdf/asdf.fish"
 
-# pycharm
-test -e "$HOME/Applications/pycharm-community"; and _add_to_path "$HOME/Applications/pycharm-community/bin"
-
-# gcloud
-test -e "$HOME/Applications/google-cloud-sdk";
-and _add_to_path "$HOME/Applications/google-cloud-sdk/bin"
-
-# done (notification for long running terminal tasks)
-_export __done_notify_sound 1
+# colored man output
+# from http://linuxtidbits.wordpress.com/2009/03/23/less-colors-for-man-pages/
+setenv LESS_TERMCAP_mb \e'[01;31m'       # begin blinking
+setenv LESS_TERMCAP_md \e'[01;38;5;74m'  # begin bold
+setenv LESS_TERMCAP_me \e'[0m'           # end mode
+setenv LESS_TERMCAP_se \e'[0m'           # end standout-mode
+setenv LESS_TERMCAP_so \e'[38;5;9m'      # begin standout-mode - info box
+setenv LESS_TERMCAP_ue \e'[0m'           # end underline
+setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
