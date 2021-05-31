@@ -1,4 +1,1 @@
-- `git clone https://gitlab.com/shank/dotfiles.git`
-- `cd dotfiles`
-- `./install` (for linux)
-- `./install osx` (for OSX)
+Use GNU Stow to use these dotfiles 
