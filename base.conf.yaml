@@ -34,7 +34,7 @@
       # ~/.zshrc: config/zsh/zshrc
       # ~/.bash_aliases: config/bash/bash_aliases
 
-      # Shell (fish)
+      # Shell (fish) (stowed)
       # ~/.config/fish/config.fish: config/fish/config.fish
       # ~/.config/fish/fishfile: config/fish/fishfile
       # ~/.config/fish:
@@ -46,9 +46,9 @@
       #   path: bin/*
       #   glob: true
 
-      # Git
-      ~/.gitconfig: config/git/gitconfig
-      ~/.gitignore_global: config/git/gitignore_global
+      # Git (stowed)
+      # ~/.gitconfig: config/git/gitconfig
+      # ~/.gitignore_global: config/git/gitignore_global
 
       # Clang
       ~/.clang-format: config/clang-format
