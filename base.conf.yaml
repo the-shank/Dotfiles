@@ -107,8 +107,8 @@
       ~/.config/pgcli/config: config/pgcli/config
 
       # Firefox (tabs at bottom)
-      ~/.mozilla/firefox/profiles.ini: config/firefox/profiles.ini
-      ~/.mozilla/firefox/36kzq6u2.default-release/chrome: config/firefox/chrome
+      # ~/.mozilla/firefox/profiles.ini: config/firefox/profiles.ini
+      # ~/.mozilla/firefox/36kzq6u2.default-release/chrome: config/firefox/chrome
       # Firefox : Tridactly
       # ensure that `native` messenger is installed and working
       # install it via `:installnative`
