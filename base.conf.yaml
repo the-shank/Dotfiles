@@ -53,8 +53,8 @@
       # Clang (stowed)
       # ~/.clang-format: config/clang-format
 
-      # youtube-dl
-      ~/.config/youtube-dl/config: config/youtube-dl/config
+      # youtube-dl (stowed)
+      # ~/.config/youtube-dl/config: config/youtube-dl/config
 
       # MPV Media Player
       ~/.config/mpv/input.conf: config/mpv/input.conf
