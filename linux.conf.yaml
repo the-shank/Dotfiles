@@ -6,84 +6,73 @@
           stdout: true
           stderr: true
 
-- link:
-        # Albert
-        ~/.config/albert/albert.conf: config/albert/albert.conf
+# - link:
+        # Albert (stowed)
+        # ~/.config/albert/albert.conf: config/albert/albert.conf
 
-        # VSCode
-        ~/.config/Code/User/snippets: config/Code/User/snippets
-        ~/.config/Code/User/keybindings.json: config/Code/User/keybindings.json
-        ~/.config/Code/User/settings.json: config/Code/User/settings.json
+        # VSCode (stowed)
+        # ~/.config/Code/User/snippets: config/Code/User/snippets
+        # ~/.config/Code/User/keybindings.json: config/Code/User/keybindings.json
+        # ~/.config/Code/User/settings.json: config/Code/User/settings.json
 
-        # Sublime Text
-        ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings: config/sublime-text-3/Packages/User/Preferences.sublime-settings
-
-        # i3
-        ~/.config/i3/config: config/i3/config
-        ~/.config/i3status/config: config/i3status/config
+        # i3 (stowed)
+        # ~/.config/i3/config: config/i3/config
+        # ~/.config/i3status/config: config/i3status/config
         # (stowed)
         # ~/.local/bin:
         #     path: scripts/i3_*
         #     glob: true
 
-        # i3: screenlayout (for multi/single monitor setup)
-        ~/.screenlayout:
-            path: scripts/display_*
-            glob: true
         # (stowed)
         # ~/.local/bin:
         #     path: scripts/display_*
         #     glob: true
 
-        # XFCE Thunar
-        ~/.config/Thunar/accels.scm: config/Thunar/accels.scm
-        ~/.config/Thunar/uca.xml:
-            path: config/Thunar/uca.xml
-            force: true
+        # XFCE Thunar (stowed)
+        # ~/.config/Thunar/accels.scm: config/Thunar/accels.scm
+        # ~/.config/Thunar/uca.xml:
+        #     path: config/Thunar/uca.xml
+        #     force: true
 
-        # XFCE xfconf
-        ~/.config/xfce4/xfconf:
-            path: config/xfce4/xfconf/**/*
-            glob: true
+        # XFCE xfconf (stowed)
+        # ~/.config/xfce4/xfconf:
+        #     path: config/xfce4/xfconf/**/*
+        #     glob: true
 
-        # XFCE Terminal
-        ~/.config/xfce4/terminal/accels.scm: config/xfce4/terminal/accels.scm
-        ~/.config/xfce4/terminal/terminalrc: config/xfce4/terminal/terminalrc
+        # XFCE Terminal (stowed)
+        # ~/.config/xfce4/terminal/accels.scm: config/xfce4/terminal/accels.scm
+        # ~/.config/xfce4/terminal/terminalrc: config/xfce4/terminal/terminalrc
 
-        # XFCE Panel
-        ~/.config/xfce4/panel:
-            path: config/xfce4/panel/*
-            glob: true
+        # XFCE Panel (stowed)
+        # ~/.config/xfce4/panel:
+        #     path: config/xfce4/panel/*
+        #     glob: true
 
-        # Terminator
-        ~/.config/terminator/config: config/terminator/config
+        # Terminator (stowed)
+        # ~/.config/terminator/config: config/terminator/config
 
-        # Qpdfview
-        ~/.config/qpdfview/shortcuts.conf: config/qpdfview/shortcuts.conf
+        # Qpdfview (stowed)
+        # ~/.config/qpdfview/shortcuts.conf: config/qpdfview/shortcuts.conf
 
-        # Fonts
-        ~/.fonts: fonts
+        # Fonts (stowed)
+        # ~/.fonts: fonts
 
-        # MIME type associations
-        ~/.config/mimeapps.list:
-            path: config/mimeapps.list
-            force: true
+        # MIME type associations (stowed)
+        # ~/.config/mimeapps.list:
+        #     path: config/mimeapps.list
+        #     force: true
 
-        # Ranger
-        ~/.config/ranger/rifle.conf: config/ranger/rifle.conf
-        ~/.config/ranger/rc.conf: config/ranger/rc.conf
+        # Xsession (stowed)
+        # ~/.xsession: config/x11/xsession
 
-        # Xsession
-        ~/.xsession: config/x11/xsession
+        # Themes (stowed)
+        # ~/.themes/border-only: themes/border-only
 
-        # Themes
-        ~/.themes/border-only: themes/border-only
+        # Base16 Shell (stowed)
+        # ~/.config/base16-shell: config/base16-shell
 
-        # Base16 Shell
-        ~/.config/base16-shell: config/base16-shell
-
-        # Okular
-        ~/.config/okularpartrc: config/okular/okularpartrc
+        # Okular (stowed)
+        # ~/.config/okularpartrc: config/okular/okularpartrc
 
         # Redshift (stowed)
         # ~/.local/bin:
