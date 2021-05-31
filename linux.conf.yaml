@@ -7,9 +7,6 @@
           stderr: true
 
 - link:
-        # CPU, Mem Usage script
-        ~/.local/bin/stats.pl: bin/stats.pl
-
         # Albert
         ~/.config/albert/albert.conf: config/albert/albert.conf
 
@@ -24,17 +21,19 @@
         # i3
         ~/.config/i3/config: config/i3/config
         ~/.config/i3status/config: config/i3status/config
-        ~/.local/bin:
-            path: scripts/i3_*
-            glob: true
+        # (stowed)
+        # ~/.local/bin:
+        #     path: scripts/i3_*
+        #     glob: true
 
         # i3: screenlayout (for multi/single monitor setup)
         ~/.screenlayout:
             path: scripts/display_*
             glob: true
-        ~/.local/bin:
-            path: scripts/display_*
-            glob: true
+        # (stowed)
+        # ~/.local/bin:
+        #     path: scripts/display_*
+        #     glob: true
 
         # XFCE Thunar
         ~/.config/Thunar/accels.scm: config/Thunar/accels.scm
@@ -86,10 +85,10 @@
         # Okular
         ~/.config/okularpartrc: config/okular/okularpartrc
 
-        # Redshift
-        ~/.local/bin:
-          path: scripts/redshift_*.sh
-          glob: true
+        # Redshift (stowed)
+        # ~/.local/bin:
+        #   path: scripts/redshift_*.sh
+        #   glob: true
 
 - shell:
       - ["bash scripts/ranger.sh", installing ranger devicons]

@@ -41,10 +41,10 @@
           path: config/fish/**/*
           glob: true
 
-      # binaries
-      ~/.local/bin:
-        path: bin/*
-        glob: true
+      # binaries (stowed)
+      # ~/.local/bin:
+      #   path: bin/*
+      #   glob: true
 
       # Git
       ~/.gitconfig: config/git/gitconfig
@@ -106,7 +106,7 @@
       # PgCli
       ~/.config/pgcli/config: config/pgcli/config
 
-      # Firefox (tabs at bottom)
+      # Firefox (tabs at bottom) (stowed)
       # ~/.mozilla/firefox/profiles.ini: config/firefox/profiles.ini
       # ~/.mozilla/firefox/36kzq6u2.default-release/chrome: config/firefox/chrome
       # Firefox : Tridactly
