@@ -27,7 +27,7 @@
 - shell:
       - ["bash scripts/tmux.sh", Install Tmux Plugin Manager]
 
-- link:
+# - link:
       # Shell (bash & zsh) (stowed)
       # ~/.profile: config/bash/profile
       # ~/.bashrc: config/bash/bashrc
@@ -60,51 +60,42 @@
       # ~/.config/mpv/input.conf: config/mpv/input.conf
       # ~/.config/mpv/mpv.conf: config/mpv/mpv.conf
 
-      # Neovim
-      ~/.config/nvim/init.vim: config/nvim/init.vim
-      ~/.config/nvim/plugins.vim: config/nvim/plugins.vim
-      ~/.config/nvim/settings.vim: config/nvim/settings.vim
-      ~/.config/nvim/mappings.vim: config/nvim/mappings.vim
-      ~/.config/nvim/coc-settings.json: config/nvim/coc-settings.json
-      ~/.config/nvim/plug-config:
-        path: config/nvim/plug-config/*.vim
-        glob: true
+      # Neovim (stowed)
+      # ~/.config/nvim/init.vim: config/nvim/init.vim
+      # ~/.config/nvim/plugins.vim: config/nvim/plugins.vim
+      # ~/.config/nvim/settings.vim: config/nvim/settings.vim
+      # ~/.config/nvim/mappings.vim: config/nvim/mappings.vim
+      # ~/.config/nvim/coc-settings.json: config/nvim/coc-settings.json
+      # ~/.config/nvim/plug-config:
+      #   path: config/nvim/plug-config/*.vim
+      #   glob: true
 
-      # Tmux
-      ~/.tmux.conf: config/tmux/tmux.conf
+      # Tmux (stowed)
+      # ~/.tmux.conf: config/tmux/tmux.conf
 
-      # Alacritty (terminal)
-      ~/.config/alacritty/alacritty.yml: config/alacritty/alacritty.yml
+      # Matplotlib (stowed)
+      # ~/.config/matplotlib/matplotlibrc: config/matplotlib/matplotlibrc
 
-      # Kitty (terminal)
-      ~/.config/kitty:
-          path: config/kitty/*
-          glob: true
-
-      # Matplotlib
-      ~/.config/matplotlib/matplotlibrc: config/matplotlib/matplotlibrc
-
-      # Obsidian Sync
-      # setup a crontab (using crontab -e) with the following line
-      # */30 * * * * /home/shank/.local/bin/osync >>/home/shank/.osync_log 2>&1
+      # Obsidian Sync (stowed)
+      # setup a cronthome/shank/.local/bin/osync >>/home/shank/.osync_log 2>&1
       # ~/.local/bin/osync: bin/osync
 
-      # Lf (file manager)
-      ~/.config/lf/lfrc: config/lf/lfrc
+      # Lf (file manager) (stowed)
+      # ~/.config/lf/lfrc: config/lf/lfrc
 
-      # SSH config for working behind PROXY
+      # SSH config for working behind PROXY (stowed)
       # Needs to have corkscrew installed
       # myauth file contains username:password for the proxy
-      ~/.ssh/config: config/ssh/config
+      # ~/.ssh/config: config/ssh/config
 
-      # IPython
-      ~/.ipython/profile_default/ipython_config.py: config/ipython/profile_default/ipython_config.py
+      # IPython (stowed)
+      # ~/.ipython/profile_default/ipython_config.py: config/ipython/profile_default/ipython_config.py
 
-      # MyCli
-      ~/.myclirc: config/mycli/myclirc
+      # MyCli (stowed)
+      # ~/.myclirc: config/mycli/myclirc
 
-      # PgCli
-      ~/.config/pgcli/config: config/pgcli/config
+      # PgCli (stowed)
+      # ~/.config/pgcli/config: config/pgcli/config
 
       # Firefox (tabs at bottom) (stowed)
       # ~/.mozilla/firefox/profiles.ini: config/firefox/profiles.ini
@@ -113,4 +104,4 @@
       # ensure that `native` messenger is installed and working
       # install it via `:installnative`
       # check it via `:native`
-      ~/.config/tridactyl/tridactylrc: config/tridactyl/tridactylrc
+      # ~/.config/tridactyl/tridactylrc: config/tridactyl/tridactylrc

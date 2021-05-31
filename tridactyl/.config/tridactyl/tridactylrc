@@ -1,0 +1,43 @@
+" Theme
+colorscheme dark
+
+" Search URLs
+set searchurls.yt https://www.youtube.com/results?search_query=%s
+set searchurls.g https://www.google.com/search?hl=en&q=%s
+set searchurls.ddg https://duckduckgo.com/?q=%s&t=ffab&atb=v147-1&ia=web
+set searchurls.lbb http://libgen.io/search.php?req=%s&lg_topic=libgen&open=0&view=simple&res=25&phrase=1&column=def
+set searchurls.aw https://wiki.archlinux.org/index.php?search=%s&title=Special%3ASearch&go=Go
+set searchurls.aur https://aur.archlinux.org/packages/?K=%s
+set searchurls.crate https://crates.io/search?q=%s
+set searchurls.py https://docs.python.org/3/search.html?q=%s&check_keywords=yes&area=default
+set searchurls.rs https://doc.rust-lang.org/std/?search=%s
+set searchurls.w http://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=%s
+
+" Keybindings
+bind j scrollline 4
+bind k scrollline -4
+
+" Sane hinting mode
+set hintfiltermode vimperator-reflow
+set hintnames numeric
+
+" Handy multiwindow/multitasking binds
+bind gd tabdetach
+bind gD composite tabduplicate; tabdetach
+
+" I like wikiwand but I don't like the way it changes URLs
+bindurl wikiwand.com yy composite js document.location.href.replace("wikiwand.com/en","wikipedia.org/wiki") | clipboard yank
+
+" Defaults to 300ms but I'm a 'move fast and close the wrong tabs' kinda chap
+set hintdelay 100
+
+" Fix for codeforces
+seturl https://codeforces.com noiframe true
+
+" disable on urls
+blacklistadd https://rhyme.com/
+blacklistadd https://workflowy.com/
+blacklistadd https://youtube.com
+blacklistadd https://www.youtube.com
+blacklistadd https://mail.google.com
+blacklistadd https://codeforces.com
