@@ -28,18 +28,18 @@
       - ["bash scripts/tmux.sh", Install Tmux Plugin Manager]
 
 - link:
-      # Shell (bash & zsh)
+      # Shell (bash & zsh) (stowed)
       # ~/.profile: config/bash/profile
       # ~/.bashrc: config/bash/bashrc
       # ~/.zshrc: config/zsh/zshrc
       # ~/.bash_aliases: config/bash/bash_aliases
 
       # Shell (fish)
-      ~/.config/fish/config.fish: config/fish/config.fish
-      ~/.config/fish/fishfile: config/fish/fishfile
-      ~/.config/fish:
-          path: config/fish/**/*
-          glob: true
+      # ~/.config/fish/config.fish: config/fish/config.fish
+      # ~/.config/fish/fishfile: config/fish/fishfile
+      # ~/.config/fish:
+      #     path: config/fish/**/*
+      #     glob: true
 
       # binaries (stowed)
       # ~/.local/bin:
