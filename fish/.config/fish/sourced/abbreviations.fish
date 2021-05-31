@@ -102,6 +102,7 @@ abbr -a dbu "python manage.py db upgrade"
 abbr -a dbd "python manage.py db downgrade"
 
 # tree
+abbr -a ta "tree -a"
 abbr -a t1 "tree -L 1"
 abbr -a t2 "tree -L 2"
 abbr -a t3 "tree -L 3"
