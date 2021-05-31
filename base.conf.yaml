@@ -29,10 +29,10 @@
 
 - link:
       # Shell (bash & zsh)
-      ~/.profile: config/bash/profile
-      ~/.bashrc: config/bash/bashrc
-      ~/.zshrc: config/zsh/zshrc
-      ~/.bash_aliases: config/bash/bash_aliases
+      # ~/.profile: config/bash/profile
+      # ~/.bashrc: config/bash/bashrc
+      # ~/.zshrc: config/zsh/zshrc
+      # ~/.bash_aliases: config/bash/bash_aliases
 
       # Shell (fish)
       ~/.config/fish/config.fish: config/fish/config.fish
