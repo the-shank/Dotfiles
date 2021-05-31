@@ -50,8 +50,8 @@
       # ~/.gitconfig: config/git/gitconfig
       # ~/.gitignore_global: config/git/gitignore_global
 
-      # Clang
-      ~/.clang-format: config/clang-format
+      # Clang (stowed)
+      # ~/.clang-format: config/clang-format
 
       # youtube-dl
       ~/.config/youtube-dl/config: config/youtube-dl/config
