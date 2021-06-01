@@ -1,7 +1,9 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-# KEY DEFINITIONS TO REMEMBER
+###############################################################################
+################          KEY DEFINITIONS TO REMEMBER          ################
+###############################################################################
 
 # $Mod = WINDOWS key or Super key or Mod4
 # Mod1 = ALT key
@@ -14,9 +16,9 @@
 # Print = PRINT key
 # Tab = TAB key
 
-################################################################################
-#######                 Define the movements keys - variables            #######
-################################################################################
+###############################################################################
+############          Define the movements keys variables          ############
+###############################################################################
 
 #This is setup for qwerty
 set $up k
