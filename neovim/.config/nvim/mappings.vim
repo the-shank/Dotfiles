@@ -65,6 +65,7 @@ nnoremap <silent> g* g*zz
 
 " Use :Rg as a global search
 noremap <leader>g :Rg<CR>
+noremap <leader>G :Rgh<CR>
 
 " vim-commentary
 nnoremap <space>/ :Commentary<CR>
