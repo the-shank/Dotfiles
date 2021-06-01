@@ -94,7 +94,7 @@ export BAT_THEME="base16"
 export DOWNGRADE_FROM_ALA=1
 
 # fzf
-export FZF_DEFAULT_COMMAND='rg -l ""'
+export FZF_DEFAULT_COMMAND='fd --hidden --ignore-case --follow --exclude .git/ ""'
 
 # map caps lock to escape
 setxkbmap -option caps:escape
