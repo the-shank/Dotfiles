@@ -6,23 +6,18 @@
           stdout: true
           stderr: true
 
-- clean: ['~', '~/.config']
-
-- shell:
-      - [git submodule update --init --recursive, Installing submodules]
-
-- create:
-      - ~/Applications
-      - ~/code
-      - ~/code/algo
-      - ~/code/reference
-      - ~/code/tmp
-      - ~/code/utils
-      - ~/code/go
-      - ~/code/go/src
-      - ~/code/go/pkg
-      - ~/.local/bin
-      - ~/.local/gobin
+# - create: (setup.sh)
+#       - ~/Applications
+#       - ~/code
+#       - ~/code/algo
+#       - ~/code/reference
+#       - ~/code/tmp
+#       - ~/code/utils
+#       - ~/code/go
+#       - ~/code/go/src
+#       - ~/code/go/pkg
+#       - ~/.local/bin
+#       - ~/.local/gobin
 
 - shell:
       - ["bash scripts/tmux.sh", Install Tmux Plugin Manager]
