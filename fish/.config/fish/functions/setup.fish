@@ -7,7 +7,8 @@ function setup --description "sets up the environment variables and all"
     end
 
     function _add_to_path --description "add folder to path"
-        contains $argv $PATH; or set PATH $argv $PATH
+        # contains $argv $PATH; or set PATH $argv $PATH
+        contains $argv $fish_user_paths; or set -Ua fish_user_paths $argv
     end
 
     # Helper functions end ========================================================
