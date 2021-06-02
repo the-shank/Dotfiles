@@ -101,6 +101,9 @@ abbr -a db-hist "python manage.py db history"
 abbr -a dbu "python manage.py db upgrade"
 abbr -a dbd "python manage.py db downgrade"
 
+# python : flake8 checks for the files modified in the current PR
+abbr -a chk-flake8 "git diff --name-only master... | xargs -t flake8"
+
 # tree
 abbr -a ta "tree -a"
 abbr -a t1 "tree -L 1"
