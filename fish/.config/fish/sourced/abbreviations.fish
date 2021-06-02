@@ -111,7 +111,7 @@ abbr -a t2 "tree -L 2"
 abbr -a t3 "tree -L 3"
 
 # dct
-abbr -a db-bss-start "cd ~/code/dct/dct-dev-helpers; and docker-compose up --detach bss-db; and cd -"
-abbr -a db-bss-stop "cd ~/code/dct/dct-dev-helpers; and docker-compose stop bss-db; and cd -"
-abbr -a db-tp-start "cd ~/code/dct/dct-dev-helpers; and docker-compose up --detach tp-db; and cd -"
-abbr -a db-tp-stop "cd ~/code/dct/dct-dev-helpers; and docker-compose stop tp-db; and cd -"
+abbr -a db-bss-start "cd ~/code/dct/bss-data-layer; and docker-compose up --detach bss-db; and cd -"
+abbr -a db-bss-stop "cd ~/code/dct/bss-data-layer; and docker-compose stop bss-db; and cd -"
+abbr -a db-tp-start "cd ~/code/dct/tp-data-layer; and docker-compose up --detach tp-db; and cd -"
+abbr -a db-tp-stop "cd ~/code/dct/tp-data-layer; and docker-compose stop tp-db; and cd -"
