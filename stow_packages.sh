@@ -2,6 +2,6 @@
 
 while IFS="" read -r line
 do
-    echo "$line"
+    echo ">>> stowing $line"
     stow --verbose --no-folding $line
 done < stow_packages.txt
