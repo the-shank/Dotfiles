@@ -73,21 +73,21 @@ battery 0 {
 
 tztime local {
     # format = "IN  %H:%M  %e %B "
-    format = "<span background='#8be9fd'>  IN </span><span background='#e5e9f0'> %time </span>"
+    format = "<span foreground='#8be9fd'> <b>IN</b>  %time </span>"
     format_time = "%a %-d %b %H:%M"
 }
 
 tztime uk {
     # format = "UK  %H:%M"
-    format = "<span background='#8be9fd'>  UK </span><span background='#e5e9f0'> %time </span>"
+    format = "<span foreground='#8be9fd'> <b>UK</b>  %time </span>"
     format_time = "%H:%M"
     timezone = "Europe/London"
 }
 
 tztime usa {
     # format = "USA  %time"
-    format = "<span background='#8be9fd'>  USA </span><span background='#e5e9f0'> %time </span>"
-    format_time = "%a %-d %b %H:%M"
+    format = "<span foreground='#8be9fd'>  <b>USA</b>  %time </span>"
+    format_time = "%-d %b %H:%M"
     timezone = "America/Indianapolis"
 }
 
@@ -97,12 +97,12 @@ tztime usa {
 
 cpu_usage {
     # format = " %usage"
-    format = "<span background='#ff5555'>  </span><span background='#e5e9f0'> %usage </span>"
+    format = "<span foreground='#bd93f9'>%usage </span>"
 }
 
 cpu_temperature 0 {
 	# format = " %degrees°C"
-    format = "<span background='#ff5555'>  </span><span background='#e5e9f0'> %degrees °C </span>"
+    format = "<span foreground='#ff5555'>%degrees °C </span>"
 }
 
 disk "/" {
@@ -116,8 +116,8 @@ disk "/" {
 volume master {
     # format = " %volume"
     # format_muted = " "
-    format = "<span background='#ff79c6'>  </span><span background='#e5e9f0'> %volume </span>"
-    format_muted = "<span background='#ff79c6'>  </span><span background='#e5e9f0'> Muted </span>"
+    format = "<span foreground='#ff79c6'>%volume </span>"
+    format_muted = "<span foreground='#ff79c6'>Muted </span>"
     device = "default"
     mixer = "Master"
     mixer_idx = 0
@@ -125,5 +125,5 @@ volume master {
 
 memory {
     # format = " %used"
-    format = "<span background='#bd93f9'>  </span><span background='#e5e9f0'> %used </span>"
+    format = "<span foreground='#bd93f9'>%used </span>"
 } 
