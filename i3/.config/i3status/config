@@ -74,13 +74,13 @@ battery 0 {
 
 tztime local {
     # format = "IN  %H:%M  %e %B "
-    format = "<span foreground='#8be9fd'> <b>IN</b>  %time </span>"
+    format = "<span foreground='#8be9fd'>  <b>IN</b>  %time </span>"
     format_time = "%a %-d %b %H:%M"
 }
 
 tztime uk {
     # format = "UK  %H:%M"
-    format = "<span foreground='#8be9fd'> <b>UK</b>  %time </span>"
+    format = "<span foreground='#8be9fd'>  <b>UK</b>  %time </span>"
     format_time = "%H:%M"
     timezone = "Europe/London"
 }
