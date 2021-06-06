@@ -64,7 +64,7 @@ base=(
     htop
     lf-bin
     ranger
-    )
+)
 
 dev=(
     ctags
@@ -74,26 +74,29 @@ dev=(
     clang
     docker
     docker-compose
-    )
+)
 
 desktop_base=(
     acpilight
     arc-gtk-theme
     kvantummanager
     languagetool
-    )
+)
 
 desktop_full=(
-    flameshot
     anki
     calibre
     chromium
+    dict-wn
+    dictd
     enpass-bin
     evince
+    flameshot
     gnome-sound-recorder
     handbrake
     jpegoptim
-    )
+    xfce4-dict
+)
 
 base_packages=(
     # libreoffice
