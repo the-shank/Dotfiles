@@ -540,5 +540,8 @@ bindsym $mod+p exec --no-startup-id ~/.local/bin/i3_promote_window.py
 # battery notifications
 exec --no-startup-id i3-battery-popup -n -t 10m -m "battery low!" -L 25 -l 15 &
 
+# map caps to escape
+exec --no-startup-id /bin/bash -c "setxkbmap -option caps:escape"
+
 # LAST: multi-monitor mode as default
-exec --no-startup-id xrandr --output HDMI1 --primary --mode 2560x1440 --pos 1920x0 --rotate normal --output eDP-1-1 --mode 1920x1080 --pos 0x180 --rotate normal
+exec --no-startup-id ~/.local/bin/display_multiple.sh
