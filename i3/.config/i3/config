@@ -68,7 +68,7 @@ bindsym $mod+q kill
 bindsym $mod+d exec --no-startup-id xfce4-dict -c
 # bindsym Mod1+space exec rofi -show run
 bindsym Mod1+space exec rofi -lines 12 -padding 18 -width 30 -location 0 -show combi -sidebar-mode -font 'Noto Sans 14'
-bindsym $alt+w exec rofi -lines 12 -padding 18 -width 30 -location 0 -show window -sidebar-mode -font 'Noto Sans 14'
+bindsym $alt+Tab exec rofi -lines 12 -padding 18 -width 30 -location 0 -show window -sidebar-mode -font 'Noto Sans 14'
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -173,6 +173,8 @@ bindsym $mod+minus scratchpad show
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+Ctrl+$right workspace next
+bindsym $mod+Ctrl+$left workspace prev
 
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
@@ -330,6 +332,11 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
+# Resize predefined sizes
+bindsym $mod+$alt+u resize set width 35 ppt
+bindsym $mod+$alt+i resize set width 50 ppt
+bindsym $mod+$alt+o resize set width 65 ppt
+
 # Lock screen
 bindsym $mod+9 exec --no-startup-id blurlock
 
@@ -338,7 +345,6 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 #exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
-exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
@@ -348,6 +354,7 @@ exec --no-startup-id start_conky_maia
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
+exec_always --no-startup-id xfce4-power-manager
 
 # Custom autostart applications (#shank)
 # exec --no-startup-id discord
@@ -528,6 +535,9 @@ mode "$mode_gaps_outer" {
 # Configure keyboard repeat speed
 exec --no-startup-id xset r rate 300 45
 
+# map caps to escape
+exec --no-startup-id /bin/bash -c "setxkbmap -option caps:escape"
+
 # Move workspace to the next display
 bindsym $mod+Shift+Tab move workspace to output left
 
@@ -539,9 +549,6 @@ bindsym $mod+p exec --no-startup-id ~/.local/bin/i3_promote_window.py
 
 # battery notifications
 exec --no-startup-id i3-battery-popup -n -t 10m -m "battery low!" -L 25 -l 15 &
-
-# map caps to escape
-exec --no-startup-id /bin/bash -c "setxkbmap -option caps:escape"
 
 # LAST: multi-monitor mode as default
 exec --no-startup-id ~/.local/bin/display_multiple.sh
