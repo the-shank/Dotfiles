@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+/usr/bin/firefox -P shank.dct --no-remote --class firefox-dct
