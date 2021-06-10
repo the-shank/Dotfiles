@@ -50,9 +50,5 @@
     // typescript
     "tsserver.formatOnType": true,
     // python
-    "python.jediEnabled": false,
-    // proxy (DO NOT ADD TO GIT)
-    "http.proxy": "http://shashank:shank_21061985@10.4.1.99:8080",
-    "http.proxyStrictSSL": false,
-    "http.proxyAuthorization": null
+    "python.jediEnabled": false
 }
