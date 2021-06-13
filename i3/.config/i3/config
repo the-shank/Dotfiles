@@ -264,6 +264,7 @@ for_window [class="firefox-dct"] move container to workspace $ws3
 assign [class="discord"] $ws8
 assign [class="WorkFlowy"] $ws9
 assign [class="obsidian"] $ws10
+assign [class="Gnome-boxes"] $ws6
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
