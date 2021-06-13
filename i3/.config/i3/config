@@ -555,10 +555,10 @@ bindsym $alt+Tab exec ~/.cargo/bin/i3-focus-last
 # battery notifications
 exec --no-startup-id i3-battery-popup -n -t 10m -m "battery low!" -L 25 -l 15 &
 
-# LAST: multi-monitor mode as default
+# multi-monitor mode as default
 exec --no-startup-id ~/.local/bin/display_multiple.sh
 
-# tmp
+# assign outputs to displays
 set $laptop eDP-1-1
 set $monitor HDMI-0
 workspace $ws1 output $monitor $laptop
