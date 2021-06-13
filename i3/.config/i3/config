@@ -546,10 +546,28 @@ exec_always --no-startup-id ~/.local/bin/i3_auto_layout.py
 bindsym $mod+p exec --no-startup-id ~/.local/bin/i3_promote_window.py
 
 # keybinding: alt+tab to focus last window
-bindsym $alt+Tab exec --no-startup-id ~/.local/bin/i3_focus_last.py --switch
+# bindsym $alt+Tab exec --no-startup-id ~/.local/bin/i3_focus_last.py --switch
+
+# quickly switch to the last window (regardless of the workspace)
+exec_always ~/.cargo/bin/i3-focus-last server
+bindsym $alt+Tab exec ~/.cargo/bin/i3-focus-last
 
 # battery notifications
 exec --no-startup-id i3-battery-popup -n -t 10m -m "battery low!" -L 25 -l 15 &
 
 # LAST: multi-monitor mode as default
 exec --no-startup-id ~/.local/bin/display_multiple.sh
+
+# tmp
+set $laptop eDP-1-1
+set $monitor HDMI-0
+workspace $ws1 output $monitor $laptop
+workspace $ws2 output $monitor $laptop
+workspace $ws3 output $monitor $laptop
+workspace $ws4 output $monitor $laptop
+workspace $ws5 output $monitor $laptop
+workspace $ws6 output $monitor $laptop
+workspace $ws7 output $monitor $laptop
+workspace $ws8 output $laptop $monitor
+workspace $ws9 output $monitor $laptop
+workspace $ws10 output $monitor $laptop
