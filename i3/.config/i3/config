@@ -67,8 +67,8 @@ bindsym $mod+q kill
 # bindsym $mod+d exec --no-startup-id dmenu_recencyxfce4-dict -c
 bindsym $mod+d exec --no-startup-id xfce4-dict -c
 # bindsym Mod1+space exec rofi -show run
-bindsym Mod1+space exec rofi -lines 12 -padding 18 -width 30 -location 0 -show combi -sidebar-mode -font 'Noto Sans 14'
-bindsym $alt+Tab exec rofi -lines 12 -padding 18 -width 30 -location 0 -show window -sidebar-mode -font 'Noto Sans 14'
+bindsym $alt+space exec rofi -lines 12 -padding 18 -width 30 -location 0 -show combi -sidebar-mode -font 'Noto Sans 14'
+bindsym $mod+Tab exec rofi -lines 12 -padding 18 -width 30 -location 0 -show window -sidebar-mode -font 'Noto Sans 14'
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -191,17 +191,17 @@ set $ws8 8:VIII
 set $ws9 9:IX
 set $ws10 10:X
 
-# switch to workspace (Mod1 = Alt)
-bindsym Mod1+1 workspace $ws1
-bindsym Mod1+2 workspace $ws2
-bindsym Mod1+3 workspace $ws3
-bindsym Mod1+4 workspace $ws4
-bindsym Mod1+5 workspace $ws5
-bindsym Mod1+6 workspace $ws6
-bindsym Mod1+7 workspace $ws7
-bindsym Mod1+8 workspace $ws8
-bindsym Mod1+9 workspace $ws9
-bindsym Mod1+0 workspace $ws10
+# switch to workspace ($alt = Mod1 = Alt)
+bindsym $alt+1 workspace $ws1
+bindsym $alt+2 workspace $ws2
+bindsym $alt+3 workspace $ws3
+bindsym $alt+4 workspace $ws4
+bindsym $alt+5 workspace $ws5
+bindsym $alt+6 workspace $ws6
+bindsym $alt+7 workspace $ws7
+bindsym $alt+8 workspace $ws8
+bindsym $alt+9 workspace $ws9
+bindsym $alt+0 workspace $ws10
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -226,17 +226,6 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
-
-# Open applications on specific workspaces
-# assign [class="Thunderbird"] $ws1
-# assign [class="Pale moon"] $ws2
-# assign [class="Pcmanfm"] $ws3
-# assign [class="Skype"] $ws5
-#
-# ---- mine ----
-assign [class="discord"] $ws8
-assign [class="WorkFlowy"] $ws9
-assign [class="obsidian"] $ws10
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -268,8 +257,13 @@ for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 
 # open on specific workspace
-for_window [class="firefox-dct"] move to workspace $ws3
-for_window [class="firefox"] move to workspace $ws2
+for_window [class="firefox"] move container to workspace $ws2
+for_window [class="firefox-dct"] move container to workspace $ws3
+
+# Open applications on specific workspaces
+assign [class="discord"] $ws8
+assign [class="WorkFlowy"] $ws9
+assign [class="obsidian"] $ws10
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -362,9 +356,10 @@ exec_always --no-startup-id xfce4-power-manager
 # Custom autostart applications (#shank)
 # exec --no-startup-id discord
 exec --no-startup-id workflowy
-exec --no-startup-id obsidian
-exec --no-startup-id i3-msg 'workspace 1:I; exec xfce4-terminal'
-exec --no-startup-id i3-msg 'workspace 2:II; exec firefox -P shank.default'
+exec --no-startup-id obsidian &
+exec --no-startup-id megasync &
+# exec --no-startup-id i3-msg 'workspace 1:I; exec xfce4-terminal'
+# exec --no-startup-id i3-msg 'workspace 2:II; exec firefox -P shank.default'
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -539,16 +534,19 @@ mode "$mode_gaps_outer" {
 exec --no-startup-id xset r rate 300 45
 
 # map caps to escape
-exec --no-startup-id /bin/bash -c "setxkbmap -option caps:escape"
+exec_always --no-startup-id /bin/bash -c "setxkbmap -option caps:escape"
 
-# Move workspace to the next display
+# keybinding: Move workspace to the next display
 bindsym $mod+Shift+Tab move workspace to output left
 
 # start autolayout
 exec_always --no-startup-id ~/.local/bin/i3_auto_layout.py
 
-# Keybinding for "promoting" the focussed window
+# keybinding: "promoting" the focussed window
 bindsym $mod+p exec --no-startup-id ~/.local/bin/i3_promote_window.py
+
+# keybinding: alt+tab to focus last window
+bindsym $alt+Tab exec --no-startup-id ~/.local/bin/i3_focus_last.py --switch
 
 # battery notifications
 exec --no-startup-id i3-battery-popup -n -t 10m -m "battery low!" -L 25 -l 15 &
