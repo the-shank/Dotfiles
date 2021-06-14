@@ -261,6 +261,8 @@ for_window [class="firefox"] move container to workspace $ws2
 for_window [class="firefox-dct"] move container to workspace $ws3
 
 # Open applications on specific workspaces
+# assign [class="firefox"] $ws2 => does not work
+# assign [class="firefox-dct"] $ws3 => does not work
 assign [class="discord"] $ws8
 assign [class="WorkFlowy"] $ws9
 assign [class="obsidian"] $ws10
