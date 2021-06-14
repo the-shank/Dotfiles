@@ -361,8 +361,8 @@ exec_always --no-startup-id xfce4-power-manager
 exec --no-startup-id workflowy
 exec --no-startup-id obsidian &
 exec --no-startup-id megasync &
-# exec --no-startup-id i3-msg 'workspace 1:I; exec xfce4-terminal'
-# exec --no-startup-id i3-msg 'workspace 2:II; exec firefox -P shank.default'
+# exec --no-startup-id i3-msg 'workspace 1:I; exec xfce4-terminal' #=> not working 
+exec --no-startup-id i3-msg 'exec firefox -P shank.default'
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -401,6 +401,7 @@ bar {
     font pango:Noto Sans 10
 	i3bar_command i3bar
 	status_command i3status 
+	# status_command ~/.config/i3/scripts/i3_status_wrapper.sh 
 	position bottom
 
     ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
