@@ -26,6 +26,7 @@ application/xhtml+xml=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 video/webm=mpv.desktop
 image/jp2=viewnior.desktop
+inode/directory=thunar.desktop
 
 [Added Associations]
 video/x-matroska=mpv.desktop;vlc.desktop;
@@ -41,3 +42,4 @@ video/webm=vlc.desktop;mpv.desktop;
 x-scheme-handler/http=exo-web-browser.desktop;firefox.desktop;
 x-scheme-handler/https=exo-web-browser.desktop;firefox.desktop;
 application/xhtml+xml=firefox.desktop;
+inode/directory=thunar.desktop;
