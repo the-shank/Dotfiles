@@ -6,6 +6,7 @@ firefox
 fish
 fonts
 git
+gtk
 i3
 ipython
 lf
