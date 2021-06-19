@@ -17,6 +17,7 @@ abbr -a nvinit 'nvim ~/dotfiles/config/nvim/init.vim'
 # general
 abbr -a mkp 'mkdir -p'      # auto nesting
 abbr -a cpr 'cp -R'         # recursive
+abbr -a mv 'mv --interactive'   # warn before overwriting files 
 abbr -a duh 'du -h'         # list disk usage for all files in ./
 abbr -a dush 'du -sh'       # list total disk usage of ./
 abbr -a chx 'chmod +x'      # make it executable
