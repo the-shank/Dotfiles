@@ -1,12 +1,3 @@
-/* 
-   dark background in new tabs without a white flash (with tridactyl newtab)
-   @see: https://github.com/tridactyl/tridactyl/issues/2510
-*/
-:root {
-  --tridactyl-bg: #38383D !important;
-  --tridactyl-fg: #B1B1B3 !important;
-}
-
 /*
     set the background color of the new tab page 
     (without tridactyl or with tridactyl without newtab)
