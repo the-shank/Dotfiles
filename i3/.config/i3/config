@@ -555,7 +555,7 @@ bindsym $mod+p exec --no-startup-id ~/.local/bin/i3_promote_window.py
 # bindsym $alt+Tab exec --no-startup-id ~/.local/bin/i3_focus_last.py --switch
 
 # quickly switch to the last window (regardless of the workspace)
-exec_always ~/.cargo/bin/i3-focus-last server
+exec_always --no-startup-id ~/.cargo/bin/i3-focus-last server
 bindsym $alt+Tab exec ~/.cargo/bin/i3-focus-last
 
 # battery notifications
