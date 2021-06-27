@@ -7,6 +7,9 @@ xrandr --output $display --primary
 pkill conky
 start_conky_maia
 
+# restore wallpaper
+nitrogen --restore
+
 # move all workspaces to the main display 
 i3-msg "[workspace=\"1\"] move workspace to output $display"
 i3-msg "[workspace=\"2\"] move workspace to output $display"

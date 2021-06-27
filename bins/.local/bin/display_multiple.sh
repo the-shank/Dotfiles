@@ -10,6 +10,9 @@ xrandr --output $monitor --primary --mode 2560x1440 --pos 1920x0 --rotate normal
 pkill conky
 start_conky_maia
 
+# restore wallpaper
+nitrogen --restore
+
 # move 8th workspace to the laptop display
 i3-msg "[workspace=\"8\"] move workspace to output $laptop"
 
