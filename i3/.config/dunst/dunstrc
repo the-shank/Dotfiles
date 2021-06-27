@@ -145,7 +145,7 @@
     dmenu = /usr/bin/dmenu -p dunst:
     
     # Browser for opening urls in context menu.
-    browser = palemoon
+    browser = firefox
 
     # Align icons left/right/off
     icon_position = left
@@ -164,7 +164,7 @@
     # Xev might be helpful to find names for keys.
     
     # Close notification.
-    close = mod4+space
+    close = ctrl+mod4+space
     
     # Close all notifications.
     # close_all = ctrl+shift+space
