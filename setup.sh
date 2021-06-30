@@ -79,6 +79,7 @@ dev=(
 desktop_base=(
     acpilight
     arc-gtk-theme
+    espanso
     kvantummanager
     languagetool
 )
