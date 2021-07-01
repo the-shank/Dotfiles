@@ -26,7 +26,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"yesterday\" \"+[[%y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"yesterday\" \"+[[%Y-%m-%d___%a]]\"`"
 
   # Next Week, Next Monday
   - triggers: [":>w", ":>mon"]
@@ -35,7 +35,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"next monday\" \"+[[%y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"next monday\" \"+[[%Y-%m-%d___%a]]\"`"
 
   # Next Month
   - triggers: [":>mth"]
@@ -44,13 +44,13 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"next month\" \"+[[%y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"next month\" \"+[[%Y-%m-%d___%a]]\"`"
 
   # meta
   - triggers: [ ":meta" ]
     replace: |
               ---
-              refs:
+              refs: $|$
               aliases:
               ---
 
