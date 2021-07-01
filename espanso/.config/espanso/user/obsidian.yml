@@ -46,3 +46,16 @@ matches:
         params:
           cmd: "echo `date --date=\"next month\" \"+[[%y-%m-%d___%a]]\"`"
 
+  # meta
+  - triggers: [ ":meta" ]
+    replace: |
+              ---
+              refs:
+              aliases:
+              ---
+
+  # source
+  - triggers: [ ":src" ]
+    replace: |
+              authors:
+              source:
