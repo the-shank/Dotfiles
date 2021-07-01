@@ -2,6 +2,7 @@ albert
 bash
 bins
 clang-format
+espanso
 firefox
 fish
 fonts
