@@ -1,0 +1,63 @@
+# espanso configuration file
+
+# This is the default configuration file, change it as you like it
+# You can refer to the official documentation:
+# https://espanso.org/docs/
+
+# Matches are the substitution rules, when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  # MISC ------------------------
+
+  # public ip
+  - trigger: ":ip"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "curl 'https://api.ipify.org'"
+
+  # DATE & TIME ----------------
+
+  # date today
+  - triggers: [ ":date", ":today" ]
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d"
+
+  # time now
+  - triggers: [ ":time", ":now" ]
+    replace: "{{mytime}}"
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%H:%M"
+
+  # timestamps
+  - triggers: [ ":ts" ]
+    replace: "{{date}} {{time}}"
+    vars:
+      - name: date
+        type: match
+        params:
+          trigger: ":today"
+      - name: time
+        type: match
+        params:
+          trigger: ":now"
+  - triggers: [ ":[ts" ]
+    replace: "[{{timestamp}}]"
+    vars:
+      - name: timestamp
+        type: match
+        params:
+          trigger: ":ts"

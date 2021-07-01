@@ -1,0 +1,48 @@
+filter_title: "Obsidian"
+
+matches:
+  # Breadcrumb
+  - trigger: ":bc"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"yesterday\" \"+[[%Y-%m-%d___%a|<< Yesterday]]\"`' | '`date --date=\"tomorrow\" \"+[[%Y-%m-%d___%a|Tommorrow >>]]\"`"
+
+  # yesterday
+  - triggers: [":<yes", ":<1d"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"tomorrow\" \"+[[%Y-%m-%d___%a]]\"`"
+
+  # tomorrow
+  - triggers: [":>tom", ":>1d"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"yesterday\" \"+[[%y-%m-%d___%a]]\"`"
+
+  # Next Week, Next Monday
+  - triggers: [":>w", ":>mon"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"next monday\" \"+[[%y-%m-%d___%a]]\"`"
+
+  # Next Month
+  - triggers: [":>mth"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"next month\" \"+[[%y-%m-%d___%a]]\"`"
+
