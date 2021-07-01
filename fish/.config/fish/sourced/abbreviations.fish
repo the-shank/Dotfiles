@@ -17,12 +17,12 @@ abbr -a nvinit 'nvim ~/dotfiles/config/nvim/init.vim'
 # general
 abbr -a mkp 'mkdir -p'      # auto nesting
 abbr -a cpr 'cp -R'         # recursive
-abbr -a mv 'mv --interactive'   # warn before overwriting files 
 abbr -a duh 'du -h'         # list disk usage for all files in ./
 abbr -a dush 'du -sh'       # list total disk usage of ./
 abbr -a chx 'chmod +x'      # make it executable
 abbr -a chR 'chmod -R'      # recursive
-abbr -a mvv 'mv --verbose'  # mv verbose
+abbr -a mv 'mv --interactive'               # warn before overwriting files 
+abbr -a mvv 'mv --interactive --verbose'    # mv verbose
 abbr -a e nvim
 abbr -a o open
 abbr -a vim nvim
@@ -31,7 +31,7 @@ abbr -a l 'ls'
 abbr -a ll 'ls -l'
 abbr -a lll 'ls -la'
 abbr -a lr 'ls -R'
-abbr -a less "less -MNi"    # file info/position, line #'s, smart case
+abbr -a less "less -MNi"
 abbr -a conda-enable 'eval /home/shank/Applications/miniconda3/bin/conda "shell.fish" "hook" | source'
 
 # redshift
