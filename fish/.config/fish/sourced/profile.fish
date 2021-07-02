@@ -17,7 +17,7 @@ end
 test -e "$HOME/.private"; and source $HOME/.private
 
 # asdf
-test -e "$HOME/.asdf/asdf.fish"; and source "$HOME/.asdf/asdf.fish"
+# test -e "$HOME/.asdf/asdf.fish"; and source "$HOME/.asdf/asdf.fish"
 
 # colored man output
 # from http://linuxtidbits.wordpress.com/2009/03/23/less-colors-for-man-pages/

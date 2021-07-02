@@ -20,3 +20,5 @@ end
 test -e ~/.config/fish/sourced/dct.fish;
   and source ~/.config/fish/sourced/dct.fish
 
+# prompt
+starship init fish | source
