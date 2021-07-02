@@ -1,6 +1,7 @@
 albert
 bash
 bins
+choose
 clang-format
 espanso
 firefox
@@ -21,6 +22,7 @@ pgcli
 qpdfview
 shell
 ssh
+starship
 terminator
 thunar
 tmux

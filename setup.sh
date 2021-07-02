@@ -58,6 +58,7 @@ create_base_dirs
 # TODO
 
 base=(
+    choose
     fd
     fish
     fzf
@@ -82,6 +83,7 @@ desktop_base=(
     espanso
     kvantummanager
     languagetool
+    starship
 )
 
 desktop_full=(
