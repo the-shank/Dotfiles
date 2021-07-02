@@ -75,6 +75,7 @@ dev=(
     ctags
     docker
     docker-compose
+    mycli
     rm-improved
 )
 

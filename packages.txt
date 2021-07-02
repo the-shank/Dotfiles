@@ -49,6 +49,7 @@ linux512-virtualbox-host-modules
 megasync-bin
 megasync-nopdfium
 mpv
+mycli
 mysql-workbench
 mysqlclient
 ncdu
