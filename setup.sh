@@ -68,13 +68,14 @@ base=(
 )
 
 dev=(
-    ctags
-    coreutils
-    bat
     base-devel
+    bat
     clang
+    coreutils
+    ctags
     docker
     docker-compose
+    rm-improved
 )
 
 desktop_base=(

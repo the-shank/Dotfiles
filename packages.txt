@@ -70,6 +70,7 @@ qt-virt-manager
 qt5ct
 redshift
 ripgrep
+rm-improved
 rofi
 rustup
 screenkey

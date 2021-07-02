@@ -102,4 +102,7 @@ function setup --description "sets up the environment variables and all"
 
     # done (notification for long running terminal tasks)
     _export __done_notify_sound 1
+
+    # rim (rm-improved)
+    _export GRAVEYARD $HOME/.local/share/Trash/files
 end
