@@ -50,12 +50,12 @@ matches:
   - triggers: [ ":meta" ]
     replace: |
               ---
-              refs: $|$
               aliases:
               ---
 
-  # source
-  - triggers: [ ":src" ]
+  # refs
+  - triggers: [ ":refs" ]
     replace: |
-              authors:
+              refs: $|$
               source:
+              authors:
