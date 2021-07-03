@@ -30,11 +30,11 @@ Plug 'shumphrey/fugitive-gitlab.vim'    " Vim-Rhubarb for Gitlab
 Plug 'neoclide/coc.nvim', {'branch': 'release'}     " coc
 
 " Programming Languages
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }  " Go
-Plug 'jez/vim-better-sml'                           " SML
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }  " Go
+" Plug 'jez/vim-better-sml'                           " SML
 Plug 'cespare/vim-toml'                             " TOML
 Plug 'pangloss/vim-javascript'                      " JavaScript support
-Plug 'leafgarland/typescript-vim'                   " TypeScript syntax
+" Plug 'leafgarland/typescript-vim'                   " TypeScript syntax
 Plug 'preservim/tagbar'                             " tagbar
 " Plug 'dag/vim-fish'                               " Fish
 " (more) => see coc.vim                             " Coc Extensions
@@ -44,7 +44,6 @@ Plug 'mhinz/vim-startify'
 
 " Utils
 Plug 'airblade/vim-rooter'        " stop vim from changing directory
-" Plug 'voldikss/vim-floaterm'      " floating terminal
 " Plug 'dstein64/vim-startuptime'   " see whats slowing down the startup
 Plug 'tpope/vim-commentary'         " commenting
 Plug 'tpope/vim-surround'           " surround with brackets (like VSCode)
