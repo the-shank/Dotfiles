@@ -16,7 +16,6 @@ $nodejs\
 $python\
 $rust\
 $conda\
-$memory_usage\
 $env_var\
 $custom\
 $cmd_duration\
@@ -27,3 +26,13 @@ $time\
 $status\
 $shell\
 $character"""
+
+[battery]
+
+[[battery.display]]
+threshold = 20
+style = "red"
+
+[[battery.display]]
+threshold = 30
+style = "yellow"
