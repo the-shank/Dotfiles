@@ -26,3 +26,7 @@ i3-msg "[workspace=\"6\"] move workspace to output $monitor"
 i3-msg "[workspace=\"7\"] move workspace to output $monitor"
 i3-msg "[workspace=\"9\"] move workspace to output $monitor"
 i3-msg "[workspace=\"10\"] move workspace to output $monitor"
+
+# keyboard config
+xset r rate 300 45
+setxkbmap -option caps:escape
