@@ -50,7 +50,7 @@ matches:
   - triggers: [ ":meta" ]
     replace: |
               ---
-              aliases:
+              aliases: $|$
               ---
 
   # refs
