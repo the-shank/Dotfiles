@@ -1,0 +1,4 @@
+#! /usr/bin/env sh
+xfce4-terminal \
+    --title "scratchpad" \
+    -e 'bash -i -c "fish -c \"source $HOME/.config/base16-shell/profile_helper.fish; nvim $HOME/scratch.md\""'

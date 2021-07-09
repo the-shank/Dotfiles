@@ -257,6 +257,7 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="Enpass"] floating enable
+for_window [title="scratchpad"] floating enable
 
 # open on specific workspace
 for_window [class="firefox"] move container to workspace $ws2
