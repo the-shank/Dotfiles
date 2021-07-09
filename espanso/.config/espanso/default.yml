@@ -36,6 +36,18 @@ matches:
 
   # DATE & TIME ----------------
 
+  # date header
+  - triggers: [ ":dth" ]
+    replace: |
+              ----------
+              {{date}}
+              ----------
+    vars:
+      - name: date
+        type: match
+        params:
+          trigger: ":date"
+
   # date today
   - triggers: [ ":date", ":today" ]
     replace: "{{mydate}}"
