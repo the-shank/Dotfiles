@@ -57,6 +57,7 @@ ncurses5-compat-libs
 neofetch
 nodejs
 nyxt
+obsidian
 openbsd-netcat
 openssl
 optimus-manager-qt

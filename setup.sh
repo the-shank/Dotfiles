@@ -64,7 +64,9 @@ base=(
     fzf
     htop
     lf-bin
+    ncdu
     ranger
+    ripgrep
 )
 
 dev=(
@@ -76,7 +78,13 @@ dev=(
     docker
     docker-compose
     mycli
+    neofetch
     rm-improved
+    rustup
+    sshpass
+    tealdeer
+    tmux
+    tokei
 )
 
 desktop_base=(
@@ -85,6 +93,9 @@ desktop_base=(
     espanso
     kvantummanager
     languagetool
+    nerd-fonts-noto-sans-mono
+    qbittorrent
+    qt5ct
     starship
 )
 
@@ -100,28 +111,15 @@ desktop_full=(
     gnome-sound-recorder
     handbrake
     jpegoptim
-    xfce4-dict
-)
-
-base_packages=(
-    # libreoffice
-    # megasync ??
+    libreoffice
+    megasync-bin
     mpv
-    ncdu
-    neofetch
-    nerd-fonts-noto-sans-mono
+    obsidian
     pdfarranger
     powerline-fonts
-    qbittorrent
-    qt5ct
-    # redshift
-    ripgrep
-    rustup
-    # simplescreenrecorder
-    # sshpass
-    tealdeer
-    tmux
-    # tokei
-    # udftools
-    # youtube-dl
+    redshift
+    simplescreenrecorder
+    udftools
+    xfce4-dict
+    youtube-dl
 )
