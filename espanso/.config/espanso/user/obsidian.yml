@@ -28,7 +28,25 @@ matches:
         params:
           cmd: "echo `date --date=\"yesterday\" \"+[[%Y-%m-%d___%a]]\"`"
 
-  # Next Week, Next Monday
+  # day after tomorrow
+  - triggers: [":>2d"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"2 days\" \"+[[%Y-%m-%d___%a]]\"`"
+
+  # three days from now
+  - triggers: [":>3d"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"3 days\" \"+[[%Y-%m-%d___%a]]\"`"
+
+  # Next Week, Next Mon/Tue/Wed/Thu/Fri/Sat/Sun
   - triggers: [":>w", ":>mon"]
     replace: "{{output}}"
     vars:
@@ -36,6 +54,54 @@ matches:
         type: shell
         params:
           cmd: "echo `date --date=\"next monday\" \"+[[%Y-%m-%d___%a]]\"`"
+
+  - triggers: [":>tue"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"next tuesday\" \"+[[%Y-%m-%d___%a]]\"`"
+
+  - triggers: [":>wed"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"next wednesday\" \"+[[%Y-%m-%d___%a]]\"`"
+
+  - triggers: [":>thu"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"next thursday\" \"+[[%Y-%m-%d___%a]]\"`"
+
+  - triggers: [":>fri"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"next friday\" \"+[[%Y-%m-%d___%a]]\"`"
+
+  - triggers: [":>sat"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"next saturday\" \"+[[%Y-%m-%d___%a]]\"`"
+
+  - triggers: [":>sun"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"next sunday\" \"+[[%Y-%m-%d___%a]]\"`"
 
   # Next Month
   - triggers: [":>mth"]
