@@ -1,32 +1,58 @@
 filter_title: "Obsidian"
 
 matches:
-  # Breadcrumb
-  - trigger: ":bc"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: shell
-        params:
-          cmd: "echo `date --date=\"yesterday\" \"+[[%Y-%m-%d___%a|<< Yesterday]]\"`' | '`date --date=\"tomorrow\" \"+[[%Y-%m-%d___%a|Tommorrow >>]]\"`"
-
   # yesterday
   - triggers: [":<yes", ":<1d"]
-    replace: "{{output}}"
+    replace: "[[{{output}}]]"
     vars:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"tomorrow\" \"+[[%Y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"yesterday\" \"+%Y-%m-%d___%a\"`"
+
+  # today
+  - triggers: [":today"]
+    replace: "[[{{output}}]]"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date \"+%Y-%m-%d___%a\"`"
 
   # tomorrow
   - triggers: [":>tom", ":>1d"]
-    replace: "{{output}}"
+    replace: "[[{{output}}]]"
     vars:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"yesterday\" \"+[[%Y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"tomorrow\" \"+%Y-%m-%d___%a\"`"
+
+  # Breadcrumb
+  - trigger: ":bc"
+    replace: "<- {{yesterday}} | {{tomorrow}} ->"
+    vars:
+      - name: yesterday
+        type: match
+        params:
+          trigger: ":<1d"
+      - name: tomorrow
+        type: match
+        params:
+          trigger: ":>1d"
+
+  # Breadcrumb: tomorrow
+  - trigger: ":>bc"
+    replace: "<- {{today}} | {{day_after_tomorrow}} ->"
+    vars:
+      - name: today
+        type: match
+        params:
+          trigger: ":today"
+      - name: day_after_tomorrow
+        type: match
+        params:
+          trigger: ":>2d"
 
   # day after tomorrow
   - triggers: [":>2d"]
@@ -125,3 +151,16 @@ matches:
               refs: $|$
               source:
               authors:
+
+  # daily note
+  - triggers: [":daily"]
+    replace: |
+              < insert breadcrumb >$|$
+
+              ## Tasks
+
+
+              ## Communication Log
+
+
+              ## Work Log
