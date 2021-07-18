@@ -120,6 +120,7 @@ desktop_full=(
     redshift
     simplescreenrecorder
     udftools
+    variety
     xfce4-dict
     youtube-dl
 )

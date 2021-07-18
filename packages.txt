@@ -91,6 +91,7 @@ ttf-font-awesome
 ttf-nerd-fonts-symbols
 udftools
 unigine-heaven
+variety
 vde2
 virtualbox
 virtualbox-guest-utils
