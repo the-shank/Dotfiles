@@ -30,7 +30,7 @@ matches:
 
   # Breadcrumb
   - trigger: ":bc"
-    replace: "<- {{yesterday}} | {{tomorrow}} ->"
+    replace: "<- {{yesterday}} || {{tomorrow}} ->"
     vars:
       - name: yesterday
         type: match
@@ -43,7 +43,7 @@ matches:
 
   # Breadcrumb: tomorrow
   - trigger: ":>bc"
-    replace: "<- {{today}} | {{day_after_tomorrow}} ->"
+    replace: "<- {{today}} || {{day_after_tomorrow}} ->"
     vars:
       - name: today
         type: match
@@ -164,3 +164,6 @@ matches:
 
 
               ## Work Log
+
+
+              ## Notes
