@@ -78,10 +78,10 @@ function setup --description "sets up the environment variables and all"
     _export DOWNGRADE_FROM_ALA 1
 
     # fzf
-    _export FZF_DEFAULT_COMMAND "rg --files --hidden --follow --glob '!.git'"
+    _export FZF_DEFAULT_COMMAND "rg --files --hidden --follow --glob '!.git' --exclude .local/share/Steam/ --exclude .cache/"
     _export FZF_DEFAULT_OPTS '--layout=reverse'
-    _export FZF_CTRL_T_COMMAND 'fd --hidden --ignore-case --follow --exclude .git/ ""'
-    _export FZF_ALT_C_COMMAND 'fd --type d --hidden --ignore-case --follow --exclude .git/ ""'
+    _export FZF_CTRL_T_COMMAND 'fd --hidden --ignore-case --follow --exclude .git/ --exclude .local/share/Steam/ --exclude .cache/ ""'
+    _export FZF_ALT_C_COMMAND 'fd --type d --hidden --ignore-case --follow --exclude .git/ --exclude .local/share/Steam/ --exclude .cache/ ""'
     _export FZF_LEGACY_KEYBINDINGS 0
 
     # map caps lock to escape

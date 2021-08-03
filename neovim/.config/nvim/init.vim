@@ -18,3 +18,4 @@ source $HOME/.config/nvim/plug-config/startify.vim
 source $HOME/.config/nvim/plug-config/sneak.vim
 " source $HOME/.config/nvim/plug-config/auto-pairs.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
+source $HOME/.config/nvim/plug-config/todotxt.vim
