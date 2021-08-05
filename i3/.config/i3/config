@@ -59,7 +59,7 @@ floating_modifier $mod
 bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start program launcher
 bindsym $alt+space exec rofi -lines 12 -padding 18 -width 30 -location 0 -show combi -sidebar-mode -font 'Noto Sans 14' -icon-theme "Arc-ICONS" -show-icons
@@ -272,6 +272,19 @@ for_window [class="^Steam$" title="^Steam - Self Updater$"] floating enable
 for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
 for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
 for_window [title="^Steam Keyboard$"] floating enable
+
+# open on specific workspace
+# for_window [class="firefox"] move container to workspace $ws2
+# for_window [class="firefox-dct"] move container to workspace $ws3
+
+# Open applications on specific workspaces
+# assign [class="firefox"] $ws2 => does not work
+# assign [class="firefox-dct"] $ws3 => does not work
+assign [class="calibre"] $ws5
+assign [class="Gnome-boxes|VirtualBox Manager"] $ws6
+assign [class="discord"] $ws8
+assign [class="WorkFlowy"] $ws9
+assign [class="obsidian"] $ws10
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
