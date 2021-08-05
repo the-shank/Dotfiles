@@ -366,7 +366,7 @@ exec_always --no-startup-id setcursor
 exec --no-startup-id obsidian &
 exec --no-startup-id megasync &
 # exec --no-startup-id i3-msg 'workspace 1:I; exec xfce4-terminal' #=> not working 
-# exec --no-startup-id i3-msg 'exec firefox -P shank.default'
+exec --no-startup-id i3-msg 'exec firefox -P shank.default'
 exec --no-startup-id xautolock -time 20 -locker blurlock
 
 # Color palette used for the terminal ( ~/.extend.Xresources file )
