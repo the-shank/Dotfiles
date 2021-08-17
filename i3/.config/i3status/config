@@ -30,9 +30,9 @@ order += "cpu_usage"
 order += "memory"
 # order += "load"
 order += "volume master"
-order += "tztime usa"
 order += "tztime uk"
-order += "tztime local"
+order += "tztime india"
+order += "tztime usa"
 
 wireless wlp4s0 {
     # format_up = "%quality  %essid"
@@ -72,7 +72,7 @@ battery 0 {
 #     pidfile = "/var/run/vpnc/pid"
 # }
 
-tztime local {
+tztime india {
     # format = "IN  %H:%M  %e %B "
     format = "<span foreground='#8be9fd'>  <b>IN</b>  %time </span>"
     format_time = "%a %-d %b %H:%M"
@@ -88,7 +88,7 @@ tztime uk {
 tztime usa {
     # format = "USA  %time"
     format = "<span foreground='#8be9fd'>  <b>USA</b>  %time </span>"
-    format_time = "%-d %b %H:%M"
+    format_time = "%a %-d %b %H:%M"
     timezone = "America/Indianapolis"
 }
 
