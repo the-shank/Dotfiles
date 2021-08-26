@@ -3,8 +3,8 @@
 monitor=HDMI-0
 laptop=eDP-1-1
 
-xrandr --output $monitor --primary --mode 2560x1440 --pos 1920x0 --rotate normal \
-        --output $laptop --mode 1920x1080 --pos 0x180 --rotate normal
+xrandr --output $monitor --primary --mode 2560x1440 --pos 0x0 --rotate normal \
+        --output $laptop --mode 2560x92 --pos 2560x92 --rotate normal
 
 # restart conky
 pkill conky
