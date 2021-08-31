@@ -76,6 +76,7 @@ tztime india {
     # format = "IN  %H:%M  %e %B "
     format = "<span foreground='#8be9fd'>  <b>IN</b>  %time </span>"
     format_time = "%a %-d %b %H:%M"
+    timezone = "Asia/Kolkata"
 }
 
 tztime uk {
