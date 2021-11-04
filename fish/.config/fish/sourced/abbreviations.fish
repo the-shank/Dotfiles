@@ -120,3 +120,6 @@ abbr -a db-tp-stop "cd ~/code/dct/tp-data-layer; and docker-compose stop tp-db; 
 
 # stow
 abbr -a restow "stow --no-folding --verbose -R"
+
+# purdue
+abbr -a ssh-purdue-cs "sshpass -f ~/.pca.private ssh sharm611@data.cs.purdue.edu"
