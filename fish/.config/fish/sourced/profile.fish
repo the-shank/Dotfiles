@@ -1,8 +1,6 @@
 # NOTE: for any environment variable related stuff see setup.fish
 
-# autojump
-test -e "/usr/share/autojump/autojump.fish"; 
-    and source "/usr/share/autojump/autojump.fish"
+# autojump -> use z
 
 # ssh-agent
 # source: https://unix.stackexchange.com/a/132117

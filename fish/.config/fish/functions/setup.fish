@@ -105,4 +105,8 @@ function setup --description "sets up the environment variables and all"
 
     # rim (rm-improved)
     _export GRAVEYARD $HOME/.local/share/Trash/files
+
+    # C and C++ compilers (clang/clang++)
+    _export CC /usr/bin/clang
+    _export CXX /usr/bin/clang++
 end
