@@ -48,3 +48,4 @@ blacklistadd https://leetcode.com/
 blacklistadd https://todoist.com/
 blacklistadd https://www.hackerrank.com/
 blacklistadd https://colab.research.google.com/
+blacklistadd localhost:8888/
