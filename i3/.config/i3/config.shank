@@ -250,7 +250,7 @@ for_window [class="Pamac-updater"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Qtconfig-qt4"] floating enable border normal
 for_window [class="qt5ct"] floating enable sticky enable border normal
-for_window [title="sudo"] floating enable border normal
+# for_window [title="sudo"] floating enable border normal
 for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal
@@ -554,4 +554,4 @@ workspace $ws6 output $monitor $laptop
 workspace $ws7 output $monitor $laptop
 workspace $ws8 output $laptop $monitor
 workspace $ws9 output $monitor $laptop
-workspace $ws10 output $monitor $laptop
+workspace $ws10 output $laptop $monitor
