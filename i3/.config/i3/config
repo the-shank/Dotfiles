@@ -515,7 +515,7 @@ bindsym $mod+Shift+Tab move workspace to output left
 
 # start autolayout
 # exec_always --no-startup-id ~/.local/bin/i3_auto_layout.py
-exec_always --no-startup-id i3-auto-layout
+exec_always --no-startup-id ~/.cargo/bin/i3-auto-layout &
 
 # keybinding: "promoting" the focussed window
 bindsym $mod+p exec --no-startup-id ~/.local/bin/i3_promote_window.py
