@@ -13,7 +13,8 @@
         "ruby",
         "go",
         "cpp",
-        "c"
+        "c",
+        "cmake"
     ],
     "diagnostic.virtualText": true,
     // coc-explorer
@@ -50,5 +51,9 @@
     // typescript
     "tsserver.formatOnType": true,
     // python
-    "python.jediEnabled": false
+    "python.jediEnabled": false,
+    // c++
+    "clangd.arguments": [
+        "--std=c++17"
+    ]
 }
