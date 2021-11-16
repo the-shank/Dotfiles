@@ -27,7 +27,7 @@ $status\
 $shell\
 $character"""
 
-scan_timeout = 2000
+scan_timeout = 500
 
 [battery]
 
