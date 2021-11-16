@@ -13,10 +13,11 @@ start_conky_maia
 # restore wallpaper
 nitrogen --restore
 
-# move 8th workspace to the laptop display
+# workspaces on laptop display
 i3-msg "[workspace=\"8\"] move workspace to output $laptop"
+i3-msg "[workspace=\"10\"] move workspace to output $monitor"
 
-# move all (except 7th and 8th) workspaces to the main display 
+# workspaces on main monitor display
 i3-msg "[workspace=\"1\"] move workspace to output $monitor"
 i3-msg "[workspace=\"2\"] move workspace to output $monitor"
 i3-msg "[workspace=\"3\"] move workspace to output $monitor"
@@ -25,7 +26,6 @@ i3-msg "[workspace=\"5\"] move workspace to output $monitor"
 i3-msg "[workspace=\"6\"] move workspace to output $monitor"
 i3-msg "[workspace=\"7\"] move workspace to output $monitor"
 i3-msg "[workspace=\"9\"] move workspace to output $monitor"
-i3-msg "[workspace=\"10\"] move workspace to output $monitor"
 
 # keyboard config
 xset r rate 300 45

@@ -1,6 +1,6 @@
 # NOTE: for any environment variable related stuff see setup.fish
 
-# autojump -> use z
+# autojump -> use z (install via fisher as a fish plugin)
 
 # ssh-agent
 # source: https://unix.stackexchange.com/a/132117
