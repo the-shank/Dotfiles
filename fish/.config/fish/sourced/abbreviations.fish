@@ -90,6 +90,20 @@ abbr -a vssh 'vagrant ssh'
 # git
 abbr -a gopn 'git open'
 abbr -a ggone 'git branch -a -v | rg --ignore-case "\[gone\]" | awk \'{print $1}\' | xargs -t git branch -D'
+abbr -a gst 'git status'
+abbr -a gd 'git diff'
+abbr -a gl 'git pull'
+abbr -a gp 'git push'
+abbr -a gc 'git commit'
+abbr -a gcm 'git commit -m'
+abbr -a gco 'git checkout'
+abbr -a gr 'git remote'
+abbr -a grv 'git remote --verbose'
+abbr -a gb 'git branch'
+abbr -a gba 'git branch -a'
+abbr -a ga 'git add'
+abbr -a grh 'git reset HEAD'
+abbr -a grhh 'git reset HEAD --hard'
 
 # docker
 abbr -a d docker
