@@ -54,7 +54,7 @@
     "python.jediEnabled": false,
     // c++
     "clangd.fallbackFlags": [
-        "-std=c++17",
-        "-xc++-header"
+        // "-std=c++17",
+        // "-xc++-header"
     ]
 }
