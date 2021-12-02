@@ -105,6 +105,7 @@ abbr -a gba 'git branch -a'
 abbr -a ga 'git add'
 abbr -a grh 'git reset HEAD'
 abbr -a grhh 'git reset HEAD --hard'
+abbr -a lg 'lazygit'
 
 # docker
 abbr -a d docker
