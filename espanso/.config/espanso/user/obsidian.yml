@@ -1,6 +1,15 @@
 filter_title: "Obsidian"
 
 matches:
+  # day before yesterday
+  - triggers: [":<2d"]
+    replace: "[[{{output}}]]"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"-2 days\" \"+%Y-%m-%d___%a\"`"
+
   # yesterday
   - triggers: [":<yes", ":<1d"]
     replace: "[[{{output}}]]"
@@ -71,6 +80,19 @@ matches:
         type: shell
         params:
           cmd: "echo `date --date=\"3 days\" \"+[[%Y-%m-%d___%a]]\"`"
+
+  # Breadcrumb: yesterday
+  - trigger: ":<bc"
+    replace: "<- {{day_before_yesterday}} || {{today}} ->"
+    vars:
+      - name: today
+        type: match
+        params:
+          trigger: ":today"
+      - name: day_before_yesterday
+        type: match
+        params:
+          trigger: ":<2d"
 
   # Next Week, Next Mon/Tue/Wed/Thu/Fri/Sat/Sun
   - triggers: [":>w", ":>mon"]
