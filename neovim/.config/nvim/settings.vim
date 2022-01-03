@@ -54,14 +54,14 @@ set gdefault
 " gruvbox theme >>
 " let g:gruvbox_contrast_dark = 'hard'
 " colorscheme gruvbox
-let base16colorspace=256
-colorscheme base16-gruvbox-dark-hard
+" let base16colorspace=256
+" colorscheme base16-gruvbox-dark-hard
 " Brighter comments
-call Base16hi("Comment", g:base16_gui09, "", g:base16_cterm09, "", "", "")
+" call Base16hi("Comment", g:base16_gui09, "", g:base16_cterm09, "", "", "")
 
 " everforest theme >>
-" let g:everforest_background = 'hard'
-" colorscheme everforest
+let g:everforest_background = 'hard'
+colorscheme everforest
 
 " trim trailing whitespace on save
 autocmd FileType c,cpp,java,go,php,python,vim,yaml,rust autocmd BufWritePre <buffer> %s/\s\+$//e
