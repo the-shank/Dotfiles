@@ -66,5 +66,6 @@ colorscheme everforest
 " trim trailing whitespace on save
 autocmd FileType c,cpp,java,go,php,python,vim,yaml,rust autocmd BufWritePre <buffer> %s/\s\+$//e
 
-" commentstring for c,cpp,java files
-autocmd FileType c,cpp,cs,java          setlocal commentstring=//\ %s
+" commentstrings
+autocmd FileType c,cpp,cs,java  setlocal commentstring=//\ %s
+autocmd FileType fish           setlocal commentstring=#\ %s
