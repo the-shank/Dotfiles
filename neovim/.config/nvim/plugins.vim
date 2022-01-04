@@ -54,5 +54,6 @@ Plug 'liuchengxu/vim-which-key'     " Vim-Which-Key
 Plug 'michaeljsmith/vim-indent-object'  " additional indent objects
 Plug 'tpope/vim-obsession'          " Saving and restoring sessions
 Plug 'dbeniamine/todo.txt-vim'      " todo.txt
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}     " treesitter
 
 call plug#end()
