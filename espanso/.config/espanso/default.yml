@@ -46,7 +46,7 @@ matches:
       - name: date
         type: match
         params:
-          trigger: ":date"
+          trigger: ":today"
 
   # date today
   - triggers: [ ":date", ":today" ]
