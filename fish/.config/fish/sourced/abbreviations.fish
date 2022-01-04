@@ -27,9 +27,10 @@ abbr -a e nvim
 abbr -a o open
 abbr -a vim nvim
 abbr -a cat bat
-abbr -a l 'ls'
-abbr -a ll 'ls -l'
-abbr -a lll 'ls -la'
+abbr -a l 'exa'
+abbr -a ll 'exa -l'
+abbr -a lll 'exa -la'
+abbr -a la 'exa -lah'
 abbr -a lr 'ls -R'
 abbr -a less "less -MNi"
 abbr -a yr 'cal -y'
