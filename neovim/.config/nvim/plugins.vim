@@ -8,8 +8,8 @@ endif
 call plug#begin()
 
 " Theme
-Plug 'gruvbox-community/gruvbox'
-Plug 'chriskempson/base16-vim'
+" Plug 'gruvbox-community/gruvbox'
+" Plug 'chriskempson/base16-vim'
 Plug 'sainnhe/everforest'
 
 " Lightline

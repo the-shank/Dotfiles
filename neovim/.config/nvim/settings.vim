@@ -51,6 +51,11 @@ set ignorecase
 set smartcase
 set gdefault
 
+" termguicolors
+if has('termguicolors')
+    set termguicolors
+endif
+
 " gruvbox theme >>
 " let g:gruvbox_contrast_dark = 'hard'
 " colorscheme gruvbox
