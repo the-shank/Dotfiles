@@ -9,8 +9,8 @@ source ~/.config/fish/sourced/profile.fish
 source ~/.config/fish/sourced/abbreviations.fish
 
 if status --is-interactive
-    set BASE16_SHELL "$HOME/.config/base16-shell/"
-    source "$BASE16_SHELL/profile_helper.fish" 
+    # set BASE16_SHELL "$HOME/.config/base16-shell/"
+    # source "$BASE16_SHELL/profile_helper.fish" 
 
     # start tmux if running interactively
     # tmux 2> /dev/null; and exec true
