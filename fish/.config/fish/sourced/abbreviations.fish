@@ -12,7 +12,7 @@ abbr -a cdd 'cd -'          # back to previous directory
 # quick edits to dotfiles
 abbr -a dots 'cd ~/dotfiles/ && nvim'
 abbr -a aliases 'nvim ~/.config/fish/sourced/abbreviations.fish'
-abbr -a nvinit 'nvim ~/dotfiles/config/nvim/init.vim'
+abbr -a nvinit 'nvim ~/.config/nvim/init.vim'
 
 # general
 abbr -a mkp 'mkdir -p'      # auto nesting
