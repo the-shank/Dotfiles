@@ -65,8 +65,8 @@ bindsym $mod+Shift+Return exec thunar
 bindsym $mod+q kill
 
 # start program launcher
-bindsym $alt+space exec rofi -lines 12 -padding 18 -width 30 -location 0 -show combi -sidebar-mode -font 'Noto Sans 14' -icon-theme "Arc-ICONS" -show-icons
-bindsym $mod+Tab exec rofi -lines 12 -padding 18 -width 30 -location 0 -show window -sidebar-mode -font 'Noto Sans 14' -icon-theme "Arc-ICONS" -show-icons
+bindsym $alt+space exec rofi -lines 12 -padding 18 -width 30 -location 0 -show combi -sidebar-mode -font 'Noto Sans 14' -show-icons -matching fuzzy
+bindsym $mod+Tab exec rofi -lines 12 -padding 18 -width 30 -location 0 -show window -sidebar-mode -font 'Noto Sans 14' -show-icons -matching fuzzy
 
 # dictionary
 bindsym $mod+d exec --no-startup-id xfce4-dict -c
