@@ -526,6 +526,9 @@ bindsym $alt+Tab workspace back_and_forth
 # battery notifications
 exec --no-startup-id i3-battery-popup -n -t 10m -m "battery low!" -L 25 -l 15 &
 
+# variety - wallpaper switcher
+exec --no-startup-id variety
+
 # multi-monitor mode as default
 exec --no-startup-id ~/.local/bin/display_multiple.sh
 
