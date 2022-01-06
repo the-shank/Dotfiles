@@ -1,0 +1,9 @@
+/*
+    set the background color of the new tab page 
+    (without tridactyl or with tridactyl without newtab)
+*/
+@-moz-document url-prefix(about:home), url-prefix(about:newtab) {
+  body {
+    background: #38383D;
+  }
+}
