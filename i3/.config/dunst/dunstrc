@@ -2,7 +2,7 @@
     frame_width = 3
     frame_color = "#000000"
     
-    font = Noto Sans 12
+    font = Noto Sans 11
     
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -155,7 +155,7 @@
     icon_path = /usr/share/icons/Arc-X-D/status/32:/usr/share/icons/Arc-X-D/devices/32
 
     # Limit icons size.
-    max_icon_size=128
+    max_icon_size=64
 
 [shortcuts]
 
