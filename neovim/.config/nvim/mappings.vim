@@ -119,3 +119,6 @@ nnoremap <leader># :center 80<CR>11h<C-V>0r#yiwA<Space><Esc>pbh<C-V>y9pyy2P<C-V>
 
 " goto file but in a vertical split
 nnoremap gv :vertical wincmd f<CR>
+
+" reload config
+nnoremap <F4> :source ~/.config/nvim/init.vim<CR>
