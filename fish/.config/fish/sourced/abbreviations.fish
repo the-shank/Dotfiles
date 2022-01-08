@@ -34,6 +34,7 @@ abbr -a la 'exa -lah'
 abbr -a lr 'ls -R'
 abbr -a less "less -MNi"
 abbr -a yr 'cal -y'
+abbr -a rmr 'rm -r'
 # abbr -a conda-enable 'eval /home/shank/Applications/miniconda3/bin/conda "shell.fish" "hook" | source'
 abbr -a conda-enable 'eval /opt/miniconda3/bin/conda "shell.fish" "hook" | source'
 
