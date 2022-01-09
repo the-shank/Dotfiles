@@ -3,68 +3,26 @@
 <channel name="pointers" version="1.0">
   <property name="SynPS2_Synaptics_TouchPad" type="empty">
     <property name="RightHanded" type="bool" value="true"/>
-    <property name="Threshold" type="int" value="1"/>
-    <property name="Acceleration" type="double" value="8.000000"/>
-    <property name="Properties" type="empty">
-      <property name="libinput_Tapping_Enabled" type="int" value="1"/>
-    </property>
-  </property>
-  <property name="SYNA360200_09115288_Touchpad" type="empty">
-    <property name="RightHanded" type="bool" value="true"/>
-    <property name="Threshold" type="int" value="1"/>
-    <property name="Acceleration" type="double" value="8.000000"/>
-    <property name="Properties" type="empty">
-      <property name="libinput_Tapping_Enabled" type="int" value="1"/>
-    </property>
-  </property>
-  <property name="ETPS2_Elantech_Touchpad" type="empty">
-    <property name="Properties" type="empty">
-      <property name="libinput_Tapping_Enabled" type="int" value="1"/>
-    </property>
-  </property>
-  <property name="ELAN120000_04F330BA_Mouse" type="empty">
-    <property name="RightHanded" type="bool" value="true"/>
     <property name="ReverseScrolling" type="bool" value="true"/>
     <property name="Threshold" type="int" value="1"/>
-    <property name="Acceleration" type="double" value="3.500000"/>
+    <property name="Acceleration" type="double" value="5.000000"/>
+    <property name="Properties" type="empty">
+      <property name="libinput_Tapping_Enabled" type="int" value="1"/>
+    </property>
   </property>
-  <property name="E-Signal_USB_Gaming_Mouse" type="empty">
+  <property name="ASUE140A00_04F33134_Mouse" type="empty">
     <property name="RightHanded" type="bool" value="true"/>
     <property name="ReverseScrolling" type="bool" value="true"/>
     <property name="Threshold" type="int" value="1"/>
     <property name="Acceleration" type="double" value="5.000000"/>
   </property>
-  <property name="ELAN120000_04F330BA_Touchpad" type="empty">
-    <property name="RightHanded" type="bool" value="true"/>
-    <property name="ReverseScrolling" type="bool" value="true"/>
-    <property name="Threshold" type="int" value="1"/>
-    <property name="Acceleration" type="double" value="5.500000"/>
+  <property name="ASUE140A00_04F33134_Touchpad" type="empty">
     <property name="Properties" type="empty">
       <property name="libinput_Tapping_Enabled" type="int" value="1"/>
     </property>
-  </property>
-  <property name="E-Signal_USB_Gaming_Mouse_Consumer_Control" type="empty">
-    <property name="RightHanded" type="bool" value="true"/>
-    <property name="ReverseScrolling" type="bool" value="true"/>
-    <property name="Threshold" type="int" value="4"/>
-    <property name="Acceleration" type="double" value="1.200000"/>
-  </property>
-  <property name="PixArt_Gaming_Mouse" type="empty">
     <property name="RightHanded" type="bool" value="true"/>
     <property name="ReverseScrolling" type="bool" value="true"/>
     <property name="Threshold" type="int" value="1"/>
     <property name="Acceleration" type="double" value="5.000000"/>
-  </property>
-  <property name="PixArt_Gaming_Mouse_Consumer_Control" type="empty">
-    <property name="RightHanded" type="bool" value="true"/>
-    <property name="ReverseScrolling" type="bool" value="true"/>
-    <property name="Threshold" type="int" value="4"/>
-    <property name="Acceleration" type="double" value="2.000000"/>
-  </property>
-  <property name="MOSART_Semi_24G_Wireless_Mouse" type="empty">
-    <property name="RightHanded" type="bool" value="true"/>
-    <property name="Threshold" type="int" value="1"/>
-    <property name="Acceleration" type="double" value="5.000000"/>
-    <property name="ReverseScrolling" type="bool" value="true"/>
   </property>
 </channel>
