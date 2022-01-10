@@ -1,137 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<channel name="xfce4-panel" version="1.0">
-  <property name="panels" type="uint" value="1">
-    <property name="panel-0" type="empty">
-      <property name="position" type="string" value="p=8;x=720;y=884"/>
-      <property name="length" type="uint" value="100"/>
-      <property name="position-locked" type="bool" value="true"/>
-      <property name="plugin-ids" type="array">
-        <value type="int" value="4"/>
-        <value type="int" value="3"/>
-        <value type="int" value="7"/>
-        <value type="int" value="11"/>
-        <value type="int" value="10"/>
-        <value type="int" value="12"/>
-        <value type="int" value="6"/>
-        <value type="int" value="9"/>
-        <value type="int" value="14"/>
-        <value type="int" value="5"/>
-        <value type="int" value="2"/>
-      </property>
-      <property name="role" type="string" value="xfce4-panel-12965750720"/>
-      <property name="length-adjust" type="bool" value="true"/>
-      <property name="background-style" type="uint" value="0"/>
-      <property name="size" type="uint" value="28"/>
-      <property name="mode" type="uint" value="0"/>
-      <property name="autohide-behavior" type="uint" value="0"/>
-      <property name="disable-struts" type="bool" value="false"/>
-      <property name="icon-size" type="uint" value="0"/>
-      <property name="enter-opacity" type="uint" value="100"/>
-      <property name="leave-opacity" type="uint" value="100"/>
+<channel name="xfwm4" version="1.0">
+  <property name="general" type="empty">
+    <property name="workspace_names" type="array">
+      <value type="string" value=" I "/>
+      <value type="string" value=" II "/>
+      <value type="string" value=" III "/>
+      <value type="string" value=" IV "/>
     </property>
+    <property name="workspace_count" type="int" value="4"/>
+    <property name="activate_action" type="string" value="bring"/>
+    <property name="borderless_maximize" type="bool" value="true"/>
+    <property name="box_move" type="bool" value="false"/>
+    <property name="box_resize" type="bool" value="false"/>
+    <property name="button_layout" type="string" value="|HMC"/>
+    <property name="button_offset" type="int" value="0"/>
+    <property name="button_spacing" type="int" value="0"/>
+    <property name="click_to_focus" type="bool" value="true"/>
+    <property name="cycle_apps_only" type="bool" value="false"/>
+    <property name="cycle_draw_frame" type="bool" value="true"/>
+    <property name="cycle_hidden" type="bool" value="true"/>
+    <property name="cycle_minimum" type="bool" value="true"/>
+    <property name="cycle_preview" type="bool" value="false"/>
+    <property name="cycle_tabwin_mode" type="int" value="0"/>
+    <property name="cycle_workspaces" type="bool" value="false"/>
+    <property name="double_click_action" type="string" value="maximize"/>
+    <property name="double_click_distance" type="int" value="5"/>
+    <property name="double_click_time" type="int" value="250"/>
+    <property name="easy_click" type="string" value="Alt"/>
+    <property name="focus_delay" type="int" value="250"/>
+    <property name="focus_hint" type="bool" value="true"/>
+    <property name="focus_new" type="bool" value="true"/>
+    <property name="frame_opacity" type="int" value="100"/>
+    <property name="full_width_title" type="bool" value="true"/>
+    <property name="horiz_scroll_opacity" type="bool" value="false"/>
+    <property name="inactive_opacity" type="int" value="100"/>
+    <property name="maximized_offset" type="int" value="0"/>
+    <property name="mousewheel_rollup" type="bool" value="true"/>
+    <property name="move_opacity" type="int" value="88"/>
+    <property name="placement_mode" type="string" value="center"/>
+    <property name="placement_ratio" type="int" value="100"/>
+    <property name="popup_opacity" type="int" value="100"/>
+    <property name="prevent_focus_stealing" type="bool" value="false"/>
+    <property name="raise_delay" type="int" value="250"/>
+    <property name="raise_on_click" type="bool" value="true"/>
+    <property name="raise_on_focus" type="bool" value="false"/>
+    <property name="raise_with_any_button" type="bool" value="true"/>
+    <property name="repeat_urgent_blink" type="bool" value="false"/>
+    <property name="resize_opacity" type="int" value="88"/>
+    <property name="scroll_workspaces" type="bool" value="true"/>
+    <property name="shadow_delta_height" type="int" value="0"/>
+    <property name="shadow_delta_width" type="int" value="0"/>
+    <property name="shadow_delta_x" type="int" value="0"/>
+    <property name="shadow_delta_y" type="int" value="-3"/>
+    <property name="shadow_opacity" type="int" value="50"/>
+    <property name="show_app_icon" type="bool" value="false"/>
+    <property name="show_dock_shadow" type="bool" value="false"/>
+    <property name="show_frame_shadow" type="bool" value="true"/>
+    <property name="show_popup_shadow" type="bool" value="false"/>
+    <property name="snap_resist" type="bool" value="false"/>
+    <property name="snap_to_border" type="bool" value="true"/>
+    <property name="snap_to_windows" type="bool" value="false"/>
+    <property name="snap_width" type="int" value="10"/>
+    <property name="sync_to_vblank" type="bool" value="false"/>
+    <property name="theme" type="string" value="border-only"/>
+    <property name="tile_on_move" type="bool" value="true"/>
+    <property name="title_alignment" type="string" value="center"/>
+    <property name="title_font" type="string" value="Noto Sans 11"/>
+    <property name="title_horizontal_offset" type="int" value="0"/>
+    <property name="titleless_maximize" type="bool" value="true"/>
+    <property name="title_shadow_active" type="string" value="false"/>
+    <property name="title_shadow_inactive" type="string" value="false"/>
+    <property name="title_vertical_offset_active" type="int" value="0"/>
+    <property name="title_vertical_offset_inactive" type="int" value="0"/>
+    <property name="toggle_workspaces" type="bool" value="false"/>
+    <property name="unredirect_overlays" type="bool" value="true"/>
+    <property name="urgent_blink" type="bool" value="true"/>
+    <property name="use_compositing" type="bool" value="true"/>
+    <property name="wrap_cycle" type="bool" value="true"/>
+    <property name="wrap_layout" type="bool" value="true"/>
+    <property name="wrap_resistance" type="int" value="10"/>
+    <property name="wrap_windows" type="bool" value="true"/>
+    <property name="wrap_workspaces" type="bool" value="false"/>
+    <property name="zoom_desktop" type="bool" value="true"/>
+    <property name="cycle_raise" type="bool" value="false"/>
+    <property name="frame_border_top" type="int" value="0"/>
+    <property name="vblank_mode" type="string" value="auto"/>
+    <property name="cycle_minimized" type="bool" value="false"/>
+    <property name="zoom_pointer" type="bool" value="true"/>
   </property>
-  <property name="plugins" type="empty">
-    <property name="plugin-2" type="string" value="actions">
-      <property name="appearance" type="uint" value="0"/>
-      <property name="invert-orientation" type="bool" value="false"/>
-      <property name="items" type="array">
-        <value type="string" value="-logout-dialog"/>
-        <value type="string" value="-switch-user"/>
-        <value type="string" value="-separator"/>
-        <value type="string" value="+logout"/>
-        <value type="string" value="-lock-screen"/>
-        <value type="string" value="-hibernate"/>
-        <value type="string" value="-suspend"/>
-        <value type="string" value="-restart"/>
-        <value type="string" value="-shutdown"/>
-      </property>
-    </property>
-    <property name="plugin-4" type="string" value="pager">
-      <property name="rows" type="uint" value="1"/>
-      <property name="miniature-view" type="bool" value="false"/>
-      <property name="workspace-scrolling" type="bool" value="false"/>
-    </property>
-    <property name="plugin-6" type="string" value="systray">
-      <property name="names-visible" type="array">
-        <value type="string" value="pnmixer"/>
-        <value type="string" value="manjaro-settings-manager-daemon"/>
-        <value type="string" value="networkmanager applet"/>
-        <value type="string" value="orage"/>
-        <value type="string" value="pamac-tray"/>
-        <value type="string" value="blueman-applet"/>
-        <value type="string" value="clipman"/>
-        <value type="string" value="xfce4-power-manager"/>
-        <value type="string" value="xnoise"/>
-      </property>
-      <property name="show-frame" type="bool" value="false"/>
-      <property name="names-ordered" type="array">
-        <value type="string" value="pcloud"/>
-        <value type="string" value="notes"/>
-        <value type="string" value="psensor"/>
-        <value type="string" value="bluetooth enabled"/>
-        <value type="string" value="blueman"/>
-        <value type="string" value="zoom"/>
-        <value type="string" value="syncthing-gtk"/>
-        <value type="string" value="flameshot"/>
-        <value type="string" value="task manager"/>
-        <value type="string" value="megasync"/>
-        <value type="string" value="qbittorrent"/>
-        <value type="string" value="simplescreenrecorder"/>
-        <value type="string" value="xfce terminal"/>
-        <value type="string" value="orage"/>
-        <value type="string" value="steam"/>
-        <value type="string" value="redshift-gtk"/>
-        <value type="string" value="enpass"/>
-        <value type="string" value="albert"/>
-        <value type="string" value="pidgin"/>
-        <value type="string" value="vlc"/>
-        <value type="string" value="thunar"/>
-        <value type="string" value="msm notifier"/>
-        <value type="string" value="blueman-tray"/>
-        <value type="string" value="xfce4-power-manager"/>
-        <value type="string" value="networkmanager applet"/>
-        <value type="string" value="pamac-tray"/>
-        <value type="string" value="clipman"/>
-      </property>
-    </property>
-    <property name="plugin-3" type="string" value="tasklist">
-      <property name="grouping" type="uint" value="1"/>
-      <property name="flat-buttons" type="bool" value="false"/>
-      <property name="show-handle" type="bool" value="true"/>
-      <property name="show-labels" type="bool" value="true"/>
-      <property name="middle-click" type="uint" value="1"/>
-      <property name="window-scrolling" type="bool" value="false"/>
-      <property name="show-wireframes" type="bool" value="false"/>
-    </property>
-    <property name="plugin-7" type="string" value="separator">
-      <property name="expand" type="bool" value="true"/>
-      <property name="style" type="uint" value="0"/>
-    </property>
-    <property name="plugin-9" type="string" value="pulseaudio">
-      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="audacious;chrome.instance112597;chrome.instance114628;chrome.instance317821;chrome.instance7937;chromium.instance11066;chromium.instance116406;chromium.instance138266;chromium.instance1554;chromium.instance168143;chromium.instance1695;chromium.instance1726;chromium.instance1729;chromium.instance1734;chromium.instance1735;chromium.instance1745;chromium.instance1758;chromium.instance1821;chromium.instance1856;chromium.instance1874;chromium.instance1879;chromium.instance1908;chromium.instance1913;chromium.instance1936;chromium.instance1962;chromium.instance1963;chromium.instance19802;chromium.instance1999;chromium.instance2005;chromium.instance2014;chromium.instance2175;chromium.instance22563;chromium.instance2290;chromium.instance2304;chromium.instance24554;chromium.instance2481;chromium.instance2611;chromium.instance28648;chromium.instance3070;chromium.instance3665;chromium.instance3689;chromium.instance3784;chromium.instance3923;chromium.instance4180;chromium.instance54754;chromium.instance63650;chromium.instance64255;chromium.instance64684;chromium.instance6696;chromium.instance7747;cmus;com.github.needleandthread.vocal;firefox.instance1349;firefox.instance1778;firefox.instance1902;firefox.instance3757;firefox.instance4839;qutebrowser.instance67103;vlc"/>
-    </property>
-    <property name="plugin-5" type="string" value="clock">
-      <property name="timezone" type="string" value=""/>
-      <property name="digital-format" type="string" value="&lt;b&gt;IST&lt;/b&gt; %a %d %b, %R"/>
-    </property>
-    <property name="plugin-10" type="string" value="netload"/>
-    <property name="plugin-11" type="string" value="separator"/>
-    <property name="plugin-12" type="string" value="battery"/>
-    <property name="clipman" type="empty">
-      <property name="tweaks" type="empty">
-        <property name="inhibit" type="bool" value="true"/>
-      </property>
-    </property>
-    <property name="plugin-14" type="string" value="separator"/>
-    <property name="notes" type="empty">
-      <property name="global" type="empty">
-        <property name="font-description" type="string" value="Inconsolata Medium Semi-Condensed 13"/>
-        <property name="skip-taskbar-hint" type="bool" value="false"/>
-        <property name="background-color" type="string" value="#F7EB96"/>
-      </property>
-    </property>
-  </property>
-  <property name="configver" type="int" value="2"/>
 </channel>
