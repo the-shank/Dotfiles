@@ -45,7 +45,7 @@ hide_edge_borders none
 # change borders
 bindsym $mod+u border none
 bindsym $mod+y border pixel 1
-bindsym $mod+n border normal
+# bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -522,6 +522,10 @@ bindsym $mod+p exec --no-startup-id ~/.local/bin/i3_promote_window.py
 
 # keybinding: alt+tab to focus last window
 bindsym $alt+Tab workspace back_and_forth
+
+# keybinding: variety - next and previous wallpapers
+bindsym $mod+Shift+n exec --no-startup-id variety --next
+bindsym $mod+Shift+p exec --no-startup-id variety --previous
 
 # battery notifications
 exec --no-startup-id i3-battery-popup -n -t 10m -m "battery low!" -L 25 -l 15 &
