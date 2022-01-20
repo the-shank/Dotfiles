@@ -109,4 +109,8 @@ function setup --description "sets up the environment variables and all"
     # C and C++ compilers (clang/clang++)
     _export CC /usr/bin/clang
     _export CXX /usr/bin/clang++
+
+    # bear
+    test -d "$HOME/Applications/bear/bin";
+        and _add_to_path "$HOME/Applications/bear/bin"
 end
