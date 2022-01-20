@@ -160,6 +160,52 @@ matches:
         params:
           cmd: "echo `date --date=\"next month\" \"+[[%Y-%m-%d___%a]]\"`"
 
+  # add entries for 7 days from now
+  - triggers: [":7d"]
+    replace: |
+              {{today}}
+
+              {{1d}}
+
+              {{2d}}
+
+              {{3d}}
+
+              {{4d}}
+
+              {{5d}}
+
+              {{6d}}
+    vars:
+      - name: today
+        type: match
+        params:
+          trigger: ":today"
+      - name: 1d
+        type: match
+        params:
+          trigger: ":>1d"
+      - name: 2d
+        type: match
+        params:
+          trigger: ":>2d"
+      - name: 3d
+        type: match
+        params:
+          trigger: ":>3d"
+      - name: 4d
+        type: shell
+        params:
+          cmd: "echo `date --date=\"4 day\" \"+[[%Y-%m-%d___%a]]\"`"
+      - name: 5d
+        type: shell
+        params:
+          cmd: "echo `date --date=\"5 day\" \"+[[%Y-%m-%d___%a]]\"`"
+      - name: 6d
+        type: shell
+        params:
+          cmd: "echo `date --date=\"6 day\" \"+[[%Y-%m-%d___%a]]\"`"
+
   # meta
   - triggers: [ ":meta" ]
     replace: |
