@@ -13,5 +13,7 @@ set multiple-cursors
 " leader
 let mapleader="\<Space>"
 
-nnoremap <leader>o :action GotoSymbol<cr>
-nnoremap <c-p> :action GotoFile<cr>
+nnoremap <leader>o :action GotoSymbol<CR>
+nnoremap <c-p> :action GotoFile<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>x :q<CR>
