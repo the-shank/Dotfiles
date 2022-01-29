@@ -15,5 +15,6 @@ let mapleader="\<Space>"
 
 nnoremap <leader>o :action GotoSymbol<CR>
 nnoremap <c-p> :action GotoFile<CR>
+nnoremap <leader>rn :action RenameElement<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>x :q<CR>
