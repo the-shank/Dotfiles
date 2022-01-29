@@ -109,4 +109,12 @@ function setup --description "sets up the environment variables and all"
     # C and C++ compilers (clang/clang++)
     _export CC /usr/bin/clang
     _export CXX /usr/bin/clang++
+
+    # purs3mango specific - neovim
+    test -e "$HOME/applications/neovim";
+    _add_to_path "$HOME/applications/neovim/bin"
+
+    # purs3mango specific - nodejs
+    test -e "$HOME/applications/node";
+    _add_to_path "$HOME/applications/node/bin"
 end
