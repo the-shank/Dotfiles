@@ -112,9 +112,13 @@ function setup --description "sets up the environment variables and all"
 
     # purs3mango specific - neovim
     test -e "$HOME/applications/neovim";
-    _add_to_path "$HOME/applications/neovim/bin"
+        and _add_to_path "$HOME/applications/neovim/bin"
 
     # purs3mango specific - nodejs
     test -e "$HOME/applications/node";
-    _add_to_path "$HOME/applications/node/bin"
+        and _add_to_path "$HOME/applications/node/bin"
+
+    # purs3lab: bear
+    test -d "$HOME/Applications/bear/bin";
+        and _add_to_path "$HOME/Applications/bear/bin"
 end

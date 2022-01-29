@@ -1,0 +1,17 @@
+" Emulated Plugins
+set surround
+
+" Use Idea to join lines smartly
+set ideajoin
+
+" Copy to system clipboard as well
+set clipboard+=unnamed
+
+" Multiple cursors support
+set multiple-cursors
+
+" leader
+let mapleader="\<Space>"
+
+nnoremap <leader>o :action GotoSymbol<cr>
+nnoremap <c-p> :action GotoFile<cr>
