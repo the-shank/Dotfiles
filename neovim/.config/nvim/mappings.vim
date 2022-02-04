@@ -122,3 +122,12 @@ nnoremap gv :vertical wincmd f<CR>
 
 " reload config
 nnoremap <F4> :source ~/.config/nvim/init.vim<CR>
+
+" relative path (src/foo.txt)
+nnoremap <leader>cf :let @+=expand("%")<CR>
+
+" absolute path (/something/src/foo.txt)
+nnoremap <leader>cF :let @+=expand("%:p")<CR>
+
+" filename (foo.txt)
+nnoremap <leader>ct :let @+=expand("%:t")<CR>
