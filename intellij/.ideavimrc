@@ -18,6 +18,6 @@ nnoremap <c-p> :action GotoFile<CR>
 nnoremap <leader>rn :action RenameElement<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>x :q<CR>
-nmap <C-o> :action Back<CR>
-nmap <C-i> :action Forward<CR>
+nmap <c-o> :action Back<CR>
+nmap <c-i> :action Forward<CR>
 nmap <leader>/ :action CommentByLineComment<CR>
