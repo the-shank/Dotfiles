@@ -2,6 +2,9 @@
 # status is-interactive; and pyenv init --path | source
 # pyenv init - | source
 
+# remove the greeting
+set fish_greeting
+
 # profile
 source ~/.config/fish/sourced/profile.fish
 
