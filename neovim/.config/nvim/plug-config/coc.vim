@@ -5,7 +5,7 @@ let g:coc_global_extensions = [
     \ 'coc-explorer',
     \ 'coc-go',
     \ 'coc-clangd',
-    \ 'coc-python',
+    \ 'coc-pyright',
     \ 'coc-tsserver',
     \ 'coc-cmake'
     \ ]
