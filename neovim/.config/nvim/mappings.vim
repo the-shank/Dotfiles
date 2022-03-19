@@ -124,10 +124,10 @@ nnoremap gv :vertical wincmd f<CR>
 nnoremap <F4> :source ~/.config/nvim/init.vim<CR>
 
 " relative path (src/foo.txt)
-nnoremap <leader>cf :let @+=expand("%")<CR>
+nnoremap <leader>yf :let @+=expand("%")<CR>
 
 " absolute path (/something/src/foo.txt) (mnemonic -> <y>ank <p>ath)
-nnoremap <leader>yp :let @+=expand("%:p")<CR>
+nnoremap <leader>yp :let @+=expand("%:p").':'.line(".")<CR>
 
 " filename (foo.txt)
-nnoremap <leader>ct :let @+=expand("%:t")<CR>
+nnoremap <leader>yt :let @+=expand("%:t")<CR>
