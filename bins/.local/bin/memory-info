@@ -6,4 +6,5 @@ used=`echo $meminfo | awk '{print $3}'`
 total=`echo $meminfo | awk '{print $2}'`
 swap=`echo $swapinfo | awk '{print $3}'`
 
-echo "[$used / $total (Swap: $swap)]"
+# echo " $used / $total // $swap "
+echo " $used / $swap "
