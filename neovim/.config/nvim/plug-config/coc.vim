@@ -200,11 +200,11 @@ nmap <space>e :CocCommand explorer --preset pwd<CR>
 nmap <space>f :CocCommand explorer --preset floating<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
-" Python:
+" Python: execute in terminal
 nnoremap <F5> :CocCommand python.execInTerminal<CR>
 
 " Rust: Implement methods for trait
 nnoremap <silent> <space>i  :call CocActionAsync('codeAction', '', 'Implement missing members')<cr>
 
-" Clangd:
-nnoremap <space>ct :CocCommand clangd.switchSourceHeader<CR>
+" Clangd: toggle to header/implementation
+nnoremap <space>sh :CocCommand clangd.switchSourceHeader<CR>
