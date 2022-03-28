@@ -131,3 +131,6 @@ nnoremap <leader>yp :let @+=expand("%:p").':'.line(".")<CR>
 
 " filename (foo.txt)
 nnoremap <leader>yt :let @+=expand("%:t")<CR>
+
+" close the split
+nnoremap <leader>sc :close<CR>
