@@ -94,6 +94,15 @@ matches:
         params:
           trigger: ":<2d"
 
+  # Prev Week, Prev Mon
+  - triggers: [":<w", ":<mon"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"last monday\" \"+[[%Y-%m-%d___%a]]\"`"
+
   # Next Week, Next Mon/Tue/Wed/Thu/Fri/Sat/Sun
   - triggers: [":>w", ":>mon"]
     replace: "{{output}}"
