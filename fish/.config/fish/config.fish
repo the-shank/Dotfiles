@@ -25,3 +25,6 @@ test -e ~/.config/fish/sourced/dct.fish;
 
 # prompt
 starship init fish | source
+
+# direnv (for automatically setting environment variables)
+direnv hook fish | source
