@@ -126,8 +126,4 @@ function setup --description "sets up the environment variables and all"
     # purs3lab: bear
     test -d "$HOME/Applications/bear/bin";
         and _append_to_path "$HOME/Applications/bear/bin"
-
-    # llvm-12
-    test -d "$HOME/Applications/llvm-12/bin";
-        and _prepend_to_path "$HOME/Applications/llvm-12/bin"
 end
