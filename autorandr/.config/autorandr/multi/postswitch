@@ -1,0 +1,10 @@
+#! /bin/bash
+
+# change dpi
+xfconf-query --channel xsettings --property /Xft/DPI --set 126
+
+# keyboard repeat rate
+setxkbmap -option caps:escape
+
+# reshift
+redshift -P -O 6000
