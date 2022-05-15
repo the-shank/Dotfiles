@@ -126,4 +126,11 @@ function setup --description "sets up the environment variables and all"
     # purs3lab: bear
     test -d "$HOME/Applications/bear/bin";
         and _append_to_path "$HOME/Applications/bear/bin"
+
+    # AFL++ - dont complain about cpu frequency scaling
+    _export AFL_SKIP_CPUFREQ 1
+
+    # AFL++ - our own debug build
+    test -e "$HOME/Applications/aflplusplus/usr/local/bin";
+        and _prepend_to_path "$HOME/Applications/aflplusplus/usr/local/bin"
 end
