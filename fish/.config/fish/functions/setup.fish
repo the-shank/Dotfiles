@@ -126,4 +126,7 @@ function setup --description "sets up the environment variables and all"
     # purs3lab: bear
     test -d "$HOME/Applications/bear/bin";
         and _append_to_path "$HOME/Applications/bear/bin"
+
+    # afl: skip cpu governor check
+    _export AFL_SKIP_CPUFREQ 1
 end
