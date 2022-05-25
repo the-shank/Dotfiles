@@ -13,7 +13,6 @@
         "ruby",
         "go",
         "cpp",
-        "c",
         "cmake"
     ],
     "diagnostic.virtualText": true,
@@ -40,6 +39,19 @@
             ],
             "filetypes": [
                 "go"
+            ]
+        },
+        "bash": {
+            "command": "bash-language-server",
+            "args": [
+                "start"
+            ],
+            "filetypes": [
+                "sh",
+                "bash"
+            ],
+            "ignoredRootPaths": [
+                "~"
             ]
         }
     },

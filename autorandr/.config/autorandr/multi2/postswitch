@@ -6,5 +6,5 @@ xfconf-query --channel xsettings --property /Xft/DPI --set 126
 # keyboard repeat rate
 setxkbmap -option caps:escape
 
-# reshift
+# redshift
 redshift -P -O 6000

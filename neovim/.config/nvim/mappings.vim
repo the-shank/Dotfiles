@@ -134,3 +134,7 @@ nnoremap <leader>yt :let @+=expand("%:t")<CR>
 
 " close the split
 nnoremap <leader>sc :close<CR>
+
+" close all buffers except the current one
+" https://salferrarello.com/vim-close-all-buffers-except-the-current-one/
+command! BufOnly execute '%bdelete|edit #|normal `"'
