@@ -524,10 +524,10 @@ bindsym $mod+p exec --no-startup-id ~/.local/bin/i3_promote_window.py
 bindsym $alt+Tab workspace back_and_forth
 
 # keybinding: variety - next and previous wallpapers
-bindsym $mod+Shift+n exec --no-startup-id variety --next
-bindsym $mod+Shift+p exec --no-startup-id variety --previous
-bindsym $mod+Shift+t exec --no-startup-id variety --trash
-bindsym $mod+Shift+f exec --no-startup-id variety --favorite
+bindsym $mod+Alt+n exec --no-startup-id variety --next
+bindsym $mod+Alt+p exec --no-startup-id variety --previous
+bindsym $mod+Alt+t exec --no-startup-id variety --trash
+bindsym $mod+Alt+f exec --no-startup-id variety --favorite
 
 # battery notifications
 exec --no-startup-id i3-battery-popup -n -t 10m -m "battery low!" -L 25 -l 15 &
@@ -535,8 +535,11 @@ exec --no-startup-id i3-battery-popup -n -t 10m -m "battery low!" -L 25 -l 15 &
 # variety - wallpaper switcher
 exec --no-startup-id variety
 
-# multi-monitor mode as default
-exec --no-startup-id ~/.local/bin/display_multiple.sh
+# single mode as default
+exec --no-startup-id ~/.local/bin/display_single.sh
+
+# # multi-monitor mode as default
+# exec --no-startup-id ~/.local/bin/display_multiple.sh
 
 # assign outputs to displays
 set $laptop eDP-1-1
