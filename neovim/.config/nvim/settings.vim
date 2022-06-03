@@ -78,3 +78,4 @@ autocmd FileType fish           setlocal commentstring=#\ %s
 " folding based on treesitter
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
+set nofoldenable
