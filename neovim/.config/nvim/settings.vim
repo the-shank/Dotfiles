@@ -74,3 +74,7 @@ autocmd FileType c,cpp,java,go,php,python,vim,yaml,rust autocmd BufWritePre <buf
 " commentstrings
 autocmd FileType c,cpp,cs,java  setlocal commentstring=//\ %s
 autocmd FileType fish           setlocal commentstring=#\ %s
+
+" folding based on treesitter
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
