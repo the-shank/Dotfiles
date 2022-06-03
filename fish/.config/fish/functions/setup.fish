@@ -92,11 +92,11 @@ function setup --description "sets up the environment variables and all"
     # map caps lock to escape
     setxkbmap -option caps:escape
 
-    # llvm
-    test -d "/usr/local/opt/llvm/bin";
-        and _append_to_path "/usr/local/opt/llvm/bin";
-        and _export LDFLAGS "/usr/local/opt/llvm/bin"
-    test -d "/usr/local/opt/llvm/include"; and _export CPPFLAGS "/usr/local/opt/llvm/include"
+    # # llvm
+    # test -d "/usr/local/opt/llvm/bin";
+    #     and _append_to_path "/usr/local/opt/llvm/bin";
+    #     and _export LDFLAGS "/usr/local/opt/llvm/bin"
+    # test -d "/usr/local/opt/llvm/include"; and _export CPPFLAGS "/usr/local/opt/llvm/include"
 
     # pycharm
     test -e "$HOME/Applications/pycharm-community"; and _append_to_path "$HOME/Applications/pycharm-community/bin"
@@ -107,9 +107,6 @@ function setup --description "sets up the environment variables and all"
 
     # done (notification for long running terminal tasks)
     _export __done_notify_sound 1
-
-    # rim (rm-improved)
-    _export GRAVEYARD $HOME/.local/share/Trash/files
 
     # C and C++ compilers (clang/clang++)
     _export CC /usr/bin/clang
