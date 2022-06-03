@@ -50,7 +50,6 @@
       <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="arcolinux-logout"/>
       <property name="&lt;Super&gt;p" type="string" value="xfce4-display-settings --minimal"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;Escape" type="string" value="xfce4-taskmanager"/>
-      <property name="&lt;Super&gt;e" type="string" value="geany"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Escape" type="string" value="xkill"/>
       <property name="XF86Display" type="string" value="xfce4-display-settings --minimal"/>
       <property name="override" type="bool" value="true"/>
@@ -83,7 +82,7 @@
       <property name="&lt;Primary&gt;&lt;Alt&gt;s" type="string" value="spotify"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;c" type="string" value="catfish"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;g" type="string" value="chromium"/>
-      <property name="&lt;Super&gt;x" type="string" value="arcolinux-logout"/>
+      <property name="&lt;Super&gt;x" type="string" value="archlinux-logout"/>
       <property name="XF86AudioPlay" type="string" value="playerctl play-pause"/>
       <property name="XF86AudioStop" type="string" value="playerctl pause"/>
       <property name="XF86AudioPrev" type="string" value="playerctl previous"/>
@@ -95,20 +94,16 @@
       <property name="&lt;Primary&gt;&lt;Alt&gt;Page_Up" type="string" value="conky-rotate -n"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Page_Down" type="string" value="conky-rotate -p"/>
       <property name="F12" type="string" value="xfce4-terminal --drop-down"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;k" type="string" value="arcolinux-logout"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;e" type="string" value="arcolinux-tweak-tool"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;k" type="string" value="archlinux-logout"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;e" type="string" value="archlinux-tweak-tool"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;n" type="string" value="xfce4-settings-manager"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;comma" type="string" value="xfce4-settings-manager"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;z" type="string" value="arcolinux-welcome-app"/>
-      <property name="&lt;Alt&gt;n" type="string" value="variety -n"/>
-      <property name="&lt;Alt&gt;p" type="string" value="variety -p"/>
-      <property name="&lt;Alt&gt;t" type="string" value="variety -t"/>
-      <property name="&lt;Alt&gt;f" type="string" value="variety -f"/>
       <property name="&lt;Alt&gt;Right" type="string" value="variety -n"/>
       <property name="&lt;Alt&gt;Left" type="string" value="variety -p"/>
       <property name="&lt;Alt&gt;Up" type="string" value="variety --toggle-pause"/>
       <property name="&lt;Alt&gt;Down" type="string" value="variety --resume"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="urxvt"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="alacritty"/>
       <property name="&lt;Super&gt;space" type="string" value="dmenu_run -i -nb &apos;#191919&apos; -nf &apos;#fea63c&apos; -sb &apos;#fea63c&apos; -sf &apos;#191919&apos; -fn &apos;NotoMonoRegular:bold:pixelsize=14&apos;"/>
       <property name="&lt;Super&gt;F12" type="string" value="rofi -show drun"/>
       <property name="&lt;Super&gt;F11" type="string" value="rofi -show drun -theme-str &apos;window {width: 100%;height: 100%;}&apos;"/>
@@ -120,6 +115,11 @@
       <property name="&lt;Alt&gt;2" type="string" value="xdo raise -N firefox"/>
       <property name="&lt;Alt&gt;4" type="string" value="xdo raise -N Thunderbird"/>
       <property name="&lt;Alt&gt;8" type="string" value="xdo raise -N discord"/>
+      <property name="&lt;Alt&gt;&lt;Super&gt;n" type="string" value="variety -n"/>
+      <property name="&lt;Alt&gt;&lt;Super&gt;p" type="string" value="variety -p"/>
+      <property name="&lt;Alt&gt;&lt;Super&gt;t" type="string" value="variety -t"/>
+      <property name="&lt;Alt&gt;&lt;Super&gt;f" type="string" value="variety -f"/>
+      <property name="&lt;Super&gt;d" type="string" value="xfce4-dict --clipboard"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
@@ -197,6 +197,7 @@
       <property name="&lt;Primary&gt;&lt;Alt&gt;KP_7" type="string" value="move_window_workspace_7_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Right" type="string" value="right_workspace_key"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Right" type="string" value="move_window_right_key"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;d" type="string" value="show_desktop_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Up" type="string" value="up_workspace_key"/>
       <property name="&lt;Primary&gt;F7" type="string" value="workspace_7_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Home" type="string" value="move_window_prev_workspace_key"/>
@@ -240,7 +241,6 @@
       <property name="&lt;Super&gt;Down" type="string" value="hide_window_key"/>
       <property name="&lt;Super&gt;Left" type="string" value="tile_left_key"/>
       <property name="&lt;Super&gt;Right" type="string" value="tile_right_key"/>
-      <property name="&lt;Super&gt;d" type="string" value="show_desktop_key"/>
     </property>
   </property>
   <property name="providers" type="array">
