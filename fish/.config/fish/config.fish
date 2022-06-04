@@ -475,7 +475,7 @@ end
 alias undopush "git push -f origin HEAD^:master"
 
 # reporting tools - install when not installed
-neofetch
+# neofetch
 #screenfetch
 #alsi
 #paleofetch
@@ -525,3 +525,13 @@ set fish_color_search_match --background="#60AEFF"
 
 # MY ABBREVIATIONS ---------------------------------
 source ~/.config/fish/sourced/abbreviations.fish
+
+
+# ssh-agent
+# source: https://unix.stackexchange.com/a/132117
+test -d $XDG_RUNTIME_DIR; and setenv SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"  
+ssh-add -l >/dev/null 2>&1
+if test $status -ge 2
+    echo "starting ssh-agent"
+    ssh-agent -a $SSH_AUTH_SOCK >/dev/null
+end
