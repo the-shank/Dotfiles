@@ -30,7 +30,7 @@ order += "cpu_usage"
 order += "memory"
 # order += "load"
 order += "volume master"
-order += "tztime uk"
+# order += "tztime uk"
 order += "tztime india"
 order += "tztime usa"
 
@@ -73,23 +73,17 @@ battery 0 {
 # }
 
 tztime india {
-    # format = "IN  %H:%M  %e %B "
-    format = "<span foreground='#8be9fd'>  <b>IN</b>  %time </span>"
-    format_time = "%a %-d %b %H:%M"
+    format = "<span foreground='#8be9fd'><b>IN</b> %a %-d %b %H:%M</span>"
     timezone = "Asia/Kolkata"
 }
 
 tztime uk {
-    # format = "UK  %H:%M"
-    format = "<span foreground='#8be9fd'>  <b>UK</b>  %time </span>"
-    format_time = "%H:%M"
+    format = "<span foreground='#8be9fd'><b>UK</b> %a %-d %b %H:%M</span>"
     timezone = "Europe/London"
 }
 
 tztime usa {
-    # format = "USA  %time"
-    format = "<span foreground='#8be9fd'>  <b>USA</b>  %time </span>"
-    format_time = "%a %-d %b %H:%M"
+    format = "<span foreground='#8be9fd'><b>USA</b> %a %-d %b %H:%M</span>"
     timezone = "America/Indianapolis"
 }
 
