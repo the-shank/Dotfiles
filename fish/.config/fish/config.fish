@@ -46,9 +46,11 @@ function reload
     echo "reloading: $config"
 end
 
+# see my custom section below: it appears better to just use fish_add_path
+# https://fishshell.com/docs/current/cmds/fish_add_path.html
 # User paths
-set -e fish_user_paths
-set -U fish_user_paths $HOME/.bin $HOME/.local/bin $HOME/Applications $fish_user_paths
+# set -e fish_user_paths
+# set -U fish_user_paths $HOME/.bin $HOME/.local/bin $fish_user_paths
 
 # Starship prompt
 #if command -sq starship
@@ -526,6 +528,11 @@ set fish_color_search_match --background="#60AEFF"
 # MY ABBREVIATIONS ---------------------------------
 source ~/.config/fish/sourced/abbreviations.fish
 
+# map caps to escape
+setxkbmap -option caps:escape
+
+# set keyboard repeat rate
+xset r rate 300 45 
 
 # ssh-agent
 # source: https://unix.stackexchange.com/a/132117
@@ -535,3 +542,12 @@ if test $status -ge 2
     echo "starting ssh-agent"
     ssh-agent -a $SSH_AUTH_SOCK >/dev/null
 end
+
+# user paths
+fish_add_path $HOME/.bin
+fish_add_path $HOME/.local/bin
+fish_add_path /usr/local/go/bin
+fish_add_path $HOME/.local/gobin
+fish_add_path $HOME/.cargo/bin
+fish_add_path $HOME/Applications/bear/bin
+fish_add_path $HOME/Applications/aflplusplus/usr/local/bin
