@@ -1,0 +1,95 @@
+#! /bin/bash
+
+sudo update-alternatives \
+--install /usr/lib/llvm llvm /usr/lib/llvm-13 20 \
+--slave /usr/bin/llvm-PerfectShuffle llvm-PerfectShuffle /usr/bin/llvm-PerfectShuffle-13 \
+--slave /usr/bin/llvm-addr2line llvm-addr2line /usr/bin/llvm-addr2line-13 \
+--slave /usr/bin/llvm-ar llvm-ar /usr/bin/llvm-ar-13 \
+--slave /usr/bin/llvm-as llvm-as /usr/bin/llvm-as-13 \
+--slave /usr/bin/llvm-bcanalyzer llvm-bcanalyzer /usr/bin/llvm-bcanalyzer-13 \
+--slave /usr/bin/llvm-bitcode-strip llvm-bitcode-strip /usr/bin/llvm-bitcode-strip-13 \
+--slave /usr/bin/llvm-c-test llvm-c-test /usr/bin/llvm-c-test-13 \
+--slave /usr/bin/llvm-cat llvm-cat /usr/bin/llvm-cat-13 \
+--slave /usr/bin/llvm-cfi-verify llvm-cfi-verify /usr/bin/llvm-cfi-verify-13 \
+--slave /usr/bin/llvm-config llvm-config /usr/bin/llvm-config-13 \
+--slave /usr/bin/llvm-cov llvm-cov /usr/bin/llvm-cov-13 \
+--slave /usr/bin/llvm-cvtres llvm-cvtres /usr/bin/llvm-cvtres-13 \
+--slave /usr/bin/llvm-cxxdump llvm-cxxdump /usr/bin/llvm-cxxdump-13 \
+--slave /usr/bin/llvm-cxxfilt llvm-cxxfilt /usr/bin/llvm-cxxfilt-13 \
+--slave /usr/bin/llvm-cxxmap llvm-cxxmap /usr/bin/llvm-cxxmap-13 \
+--slave /usr/bin/llvm-diff llvm-diff /usr/bin/llvm-diff-13 \
+--slave /usr/bin/llvm-dis llvm-dis /usr/bin/llvm-dis-13 \
+--slave /usr/bin/llvm-dlltool llvm-dlltool /usr/bin/llvm-dlltool-13 \
+--slave /usr/bin/llvm-dwarfdump llvm-dwarfdump /usr/bin/llvm-dwarfdump-13 \
+--slave /usr/bin/llvm-dwp llvm-dwp /usr/bin/llvm-dwp-13 \
+--slave /usr/bin/llvm-exegesis llvm-exegesis /usr/bin/llvm-exegesis-13 \
+--slave /usr/bin/llvm-extract llvm-extract /usr/bin/llvm-extract-13 \
+--slave /usr/bin/llvm-gsymutil llvm-gsymutil /usr/bin/llvm-gsymutil-13 \
+--slave /usr/bin/llvm-ifs llvm-ifs /usr/bin/llvm-ifs-13 \
+--slave /usr/bin/llvm-install-name-tool llvm-install-name-tool /usr/bin/llvm-install-name-tool-13 \
+--slave /usr/bin/llvm-jitlink llvm-jitlink /usr/bin/llvm-jitlink-13 \
+--slave /usr/bin/llvm-jitlink-executor llvm-jitlink-executor /usr/bin/llvm-jitlink-executor-13 \
+--slave /usr/bin/llvm-lib llvm-lib /usr/bin/llvm-lib-13 \
+--slave /usr/bin/llvm-libtool-darwin llvm-libtool-darwin /usr/bin/llvm-libtool-darwin-13 \
+--slave /usr/bin/llvm-link llvm-link /usr/bin/llvm-link-13 \
+--slave /usr/bin/llvm-lipo llvm-lipo /usr/bin/llvm-lipo-13 \
+--slave /usr/bin/llvm-lto llvm-lto /usr/bin/llvm-lto-13 \
+--slave /usr/bin/llvm-lto2 llvm-lto2 /usr/bin/llvm-lto2-13 \
+--slave /usr/bin/llvm-mc llvm-mc /usr/bin/llvm-mc-13 \
+--slave /usr/bin/llvm-mca llvm-mca /usr/bin/llvm-mca-13 \
+--slave /usr/bin/llvm-ml llvm-ml /usr/bin/llvm-ml-13 \
+--slave /usr/bin/llvm-modextract llvm-modextract /usr/bin/llvm-modextract-13 \
+--slave /usr/bin/llvm-mt llvm-mt /usr/bin/llvm-mt-13 \
+--slave /usr/bin/llvm-nm llvm-nm /usr/bin/llvm-nm-13 \
+--slave /usr/bin/llvm-objcopy llvm-objcopy /usr/bin/llvm-objcopy-13 \
+--slave /usr/bin/llvm-objdump llvm-objdump /usr/bin/llvm-objdump-13 \
+--slave /usr/bin/llvm-opt-report llvm-opt-report /usr/bin/llvm-opt-report-13 \
+--slave /usr/bin/llvm-otool llvm-otool /usr/bin/llvm-otool-13 \
+--slave /usr/bin/llvm-pdbutil llvm-pdbutil /usr/bin/llvm-pdbutil-13 \
+--slave /usr/bin/llvm-profdata llvm-profdata /usr/bin/llvm-profdata-13 \
+--slave /usr/bin/llvm-profgen llvm-profgen /usr/bin/llvm-profgen-13 \
+--slave /usr/bin/llvm-ranlib llvm-ranlib /usr/bin/llvm-ranlib-13 \
+--slave /usr/bin/llvm-rc llvm-rc /usr/bin/llvm-rc-13 \
+--slave /usr/bin/llvm-readelf llvm-readelf /usr/bin/llvm-readelf-13 \
+--slave /usr/bin/llvm-readobj llvm-readobj /usr/bin/llvm-readobj-13 \
+--slave /usr/bin/llvm-reduce llvm-reduce /usr/bin/llvm-reduce-13 \
+--slave /usr/bin/llvm-rtdyld llvm-rtdyld /usr/bin/llvm-rtdyld-13 \
+--slave /usr/bin/llvm-sim llvm-sim /usr/bin/llvm-sim-13 \
+--slave /usr/bin/llvm-size llvm-size /usr/bin/llvm-size-13 \
+--slave /usr/bin/llvm-split llvm-split /usr/bin/llvm-split-13 \
+--slave /usr/bin/llvm-stress llvm-stress /usr/bin/llvm-stress-13 \
+--slave /usr/bin/llvm-strings llvm-strings /usr/bin/llvm-strings-13 \
+--slave /usr/bin/llvm-strip llvm-strip /usr/bin/llvm-strip-13 \
+--slave /usr/bin/llvm-symbolizer llvm-symbolizer /usr/bin/llvm-symbolizer-13 \
+--slave /usr/bin/llvm-tapi-diff llvm-tapi-diff /usr/bin/llvm-tapi-diff-13 \
+--slave /usr/bin/llvm-tblgen llvm-tblgen /usr/bin/llvm-tblgen-13 \
+--slave /usr/bin/llvm-undname llvm-undname /usr/bin/llvm-undname-13 \
+--slave /usr/bin/llvm-windres llvm-windres /usr/bin/llvm-windres-13 \
+--slave /usr/bin/llvm-xray llvm-xray /usr/bin/llvm-xray-13
+
+sudo update-alternatives \
+--install /usr/bin/clang clang /usr/bin/clang-13 20 \
+--slave /usr/bin/FileCheck FileCheck /usr/bin/FileCheck-13 \
+--slave /usr/bin/bugpoint bugpoint /usr/bin/bugpoint-13 \
+--slave /usr/bin/clang++ clang++ /usr/bin/clang++-13 \
+--slave /usr/bin/clang-cl clang-cl /usr/bin/clang-cl-13 \
+--slave /usr/bin/clang-cpp clang-cpp /usr/bin/clang-cpp-13 \
+--slave /usr/bin/clangd clangd /usr/bin/clangd-13 \
+--slave /usr/bin/count count /usr/bin/count-13 \
+--slave /usr/bin/dsymutil dsymutil /usr/bin/dsymutil-13 \
+--slave /usr/bin/llc llc /usr/bin/llc-13 \
+--slave /usr/bin/lldb lldb /usr/bin/lldb-13 \
+--slave /usr/bin/lldb-argdumper lldb-argdumper /usr/bin/lldb-argdumper-13 \
+--slave /usr/bin/lldb-instr lldb-instr /usr/bin/lldb-instr-13 \
+--slave /usr/bin/lldb-server lldb-server /usr/bin/lldb-server-13 \
+--slave /usr/bin/lldb-vscode lldb-vscode /usr/bin/lldb-vscode-13 \
+--slave /usr/bin/lli lli /usr/bin/lli-13 \
+--slave /usr/bin/lli-child-target lli-child-target /usr/bin/lli-child-target-13 \
+--slave /usr/bin/not not /usr/bin/not-13 \
+--slave /usr/bin/obj2yaml obj2yaml /usr/bin/obj2yaml-13 \
+--slave /usr/bin/opt opt /usr/bin/opt-13 \
+--slave /usr/bin/sanstats sanstats /usr/bin/sanstats-13 \
+--slave /usr/bin/split-file split-file /usr/bin/split-file-13 \
+--slave /usr/bin/verify-uselistorder verify-uselistorder /usr/bin/verify-uselistorder-13 \
+--slave /usr/bin/yaml-bench yaml-bench /usr/bin/yaml-bench-13 \
+--slave /usr/bin/yaml2obj yaml2obj /usr/bin/yaml2obj-13
