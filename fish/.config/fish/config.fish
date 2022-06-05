@@ -72,11 +72,13 @@ set fish_greeting
 
 # Prevent directories names from being shortened
 set fish_prompt_pwd_dir_length 0
-set -x FZF_DEFAULT_OPTS "--color=16,header:13,info:5,pointer:3,marker:9,spinner:1,prompt:5,fg:7,hl:14,fg+:3,hl+:9 --inline-info --tiebreak=end,length --bind=shift-tab:toggle-down,tab:toggle-up"
+
+# fzf
+# set -x FZF_DEFAULT_OPTS "--color=16,header:13,info:5,pointer:3,marker:9,spinner:1,prompt:5,fg:7,hl:14,fg+:3,hl+:9 --inline-info --tiebreak=end,length --bind=shift-tab:toggle-down,tab:toggle-up"
+
 # "bat" as manpager
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set -g theme_nerd_fonts yes
-
 
 if status --is-login
     set -gx PATH $PATH ~/.bin
@@ -91,6 +93,7 @@ if type -q bat
 end
 
 if command -sq fzf && type -q fzf_configure_bindings
+  set -gx fzf_fd_opts --hidden --exclude=.git --exclude=.cache
   fzf_configure_bindings --directory=\ct
 end
 
@@ -551,3 +554,4 @@ fish_add_path $HOME/.local/gobin
 fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/Applications/bear/bin
 fish_add_path $HOME/Applications/aflplusplus/usr/local/bin
+fish_add_path $HOME/.npm-global

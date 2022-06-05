@@ -5,4 +5,4 @@ function fish_user_key_bindings -d "use Ctrl-f to accept suggestions in vi mode"
 end
 
 # somehow removing this makes fzf keybindings not being available ¯\_(ツ)_/¯
-fzf_key_bindings
+# fzf_key_bindings
