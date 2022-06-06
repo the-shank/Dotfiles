@@ -1,5 +1,6 @@
 #! /bin/bash
 
+# workspaces setup
 # reference:
 # https://github.com/pop-os/shell/issues/142
 
@@ -41,3 +42,13 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7  "['<Super><S
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8  "['<Super><Shift>8']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-9  "['<Super><Shift>9']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Super><Shift>0']"
+
+# keyboard repeat rate
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 45
+gsettings set org.gnome.desktop.peripherals.keyboard delay 300
+
+# show weekday along with date
+gsettings set org.gnome.desktop.interface clock-show-weekday true
+
+# scaling factor
+gsettings set org.gnome.desktop.interface text-scaling-factor 1.1
