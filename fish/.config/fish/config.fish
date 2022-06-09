@@ -60,9 +60,8 @@ end
 # sets tools
 set -x EDITOR nvim
 set -x VISUAL nvim
-#set -x TERM alacritty
 # Sets the terminal type for proper colors
-set TERM "xterm-256color"
+# set TERM "xterm-256color"
 
 # Suppresses fish's intro message
 set fish_greeting
