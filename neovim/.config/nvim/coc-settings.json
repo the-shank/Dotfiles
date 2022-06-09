@@ -57,7 +57,6 @@
     },
     // coc-rust-analyzer
     "rust-analyzer.terminal.startinsert": true,
-    "rust-analyzer.server.path": "/usr/bin/rust-analyzer",
     // codelens
     "codeLens.enable": true,
     // typescript
