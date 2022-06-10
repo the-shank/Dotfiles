@@ -142,3 +142,6 @@ abbr -a restow "stow --no-folding --verbose -R"
 
 # purdue
 abbr -a ssh-purdue-cs "sshpass -f ~/.pca.private ssh sharm611@data.cs.purdue.edu"
+
+# nnn - file manager
+abbr -a n nnn
