@@ -138,7 +138,3 @@ nnoremap <leader>sc :close<CR>
 " close all buffers except the current one
 " https://salferrarello.com/vim-close-all-buffers-except-the-current-one/
 command! BufOnly execute '%bdelete|edit #|normal `"'
-
-" close fzf windows on <esc>
-" https://github.com/junegunn/fzf/issues/1393#issuecomment-426576577
-autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
