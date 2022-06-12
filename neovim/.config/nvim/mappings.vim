@@ -47,11 +47,11 @@ inoremap <Del> <nop>
 " nnoremap <right> :bn<CR>
 
 " [b and ]b can switch buffers
-nnoremap [b :bp<CR>
-nnoremap ]b :bn<CR>
+nnoremap [b :bp!<CR>
+nnoremap ]b :bn!<CR>
 
 " close buffer (miguel grinberg: https://gist.github.com/miguelgrinberg/527bb5a400791f89b3c4da4bd61222e4)
-nnoremap <leader>x :bd<CR>
+nnoremap <leader>x :bp<bar>bd#<CR>
 
 " Leader + tab to toggle between buffers
 noremap <leader><tab> <C-^><CR>
@@ -138,3 +138,7 @@ nnoremap <leader>sc :close<CR>
 " close all buffers except the current one
 " https://salferrarello.com/vim-close-all-buffers-except-the-current-one/
 command! BufOnly execute '%bdelete|edit #|normal `"'
+
+" close fzf windows on <esc>
+" https://github.com/junegunn/fzf/issues/1393#issuecomment-426576577
+autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>

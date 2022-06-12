@@ -60,9 +60,8 @@ end
 # sets tools
 set -x EDITOR nvim
 set -x VISUAL nvim
-#set -x TERM alacritty
 # Sets the terminal type for proper colors
-set TERM "xterm-256color"
+# set TERM "xterm-256color"
 
 # Suppresses fish's intro message
 set fish_greeting
@@ -555,3 +554,4 @@ fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/Applications/bear/bin
 fish_add_path $HOME/Applications/aflplusplus/usr/local/bin
 fish_add_path $HOME/.npm-global
+fish_add_path $HOME/Applications/aflplusplus/bin

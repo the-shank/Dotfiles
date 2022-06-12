@@ -59,4 +59,7 @@ function setup --description "sets up the environment variables and all"
 
     # AFL++ - dont complain about cpu frequency scaling
     _export AFL_SKIP_CPUFREQ 1
+
+    # dark theme for qt applications
+    _export QT_QPA_PLATFORMTHEME qt5ct
 end
