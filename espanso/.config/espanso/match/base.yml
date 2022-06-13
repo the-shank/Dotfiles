@@ -29,16 +29,6 @@ matches:
           trigger: ":today"
 
   - triggers:
-      - ":date"
-      - ":today"
-    replace: "{{mydate}}"
-    vars:
-      - name: mydate
-        type: date
-        params:
-          format: "%Y-%m-%d"
-
-  - triggers:
       - ":time"
       - ":now"
     replace: "{{mytime}}"
@@ -69,3 +59,143 @@ matches:
         type: match
         params:
           trigger: ":ts"
+
+  - triggers:
+      - ":<2d"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"-2 days\" \"+%Y-%m-%d\"`"
+
+  - triggers:
+      - ":<yes"
+      - ":<1d"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"yesterday\" \"+%Y-%m-%d\"`"
+
+  - triggers:
+      - ":date"
+      - ":today"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d"
+
+  - triggers:
+      - ":>tom"
+      - ":>1d"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"tomorrow\" \"+%Y-%m-%d\"`"
+
+  - triggers:
+      - ":>2d"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"2 days\" \"+%Y-%m-%d\"`"
+
+  - triggers:
+      - ":>3d"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"3 days\" \"+%Y-%m-%d\"`"
+
+  - triggers:
+      - ":<w"
+      - ":<mon"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"last monday\" \"+%Y-%m-%d\"`"
+
+  - triggers:
+      - ":>w"
+      - ":>mon"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"next monday\" \"+%Y-%m-%d\"`"
+
+  - triggers:
+      - ":>tue"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"next tuesday\" \"+%Y-%m-%d\"`"
+
+  - triggers:
+      - ":>wed"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"next wednesday\" \"+%Y-%m-%d\"`"
+
+  - triggers:
+      - ":>thu"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"next thursday\" \"+%Y-%m-%d\"`"
+
+  - triggers:
+      - ":>fri"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"next friday\" \"+%Y-%m-%d\"`"
+
+  - triggers:
+      - ":>sat"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"next saturday\" \"+%Y-%m-%d\"`"
+
+  - triggers:
+      - ":>sun"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"next sunday\" \"+%Y-%m-%d\"`"
+
+  - triggers:
+      - ":>mth"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date --date=\"next month\" \"+%Y-%m-%d\"`"

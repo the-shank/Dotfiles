@@ -79,3 +79,11 @@ autocmd FileType fish           setlocal commentstring=#\ %s
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 set nofoldenable
+
+" close fzf windows on <esc>
+" https://github.com/junegunn/fzf/issues/1393#issuecomment-426576577
+autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
+
+" always enter terminal in insert mode
+" https://vi.stackexchange.com/a/3765/35373
+autocmd BufWinEnter,WinEnter term://* startinsert
