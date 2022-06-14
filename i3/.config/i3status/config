@@ -24,7 +24,7 @@ general {
 # order += "run_watch VPN"
 # order += "wireless wlp4s0"
 # order += "ethernet enp2s0"
-order += "battery 0"
+order += "battery all"
 order += "cpu_temperature 0"
 order += "cpu_usage"
 order += "memory"
@@ -49,7 +49,7 @@ ethernet enp2s0 {
     format_down = ""
 }
 
-battery 0 {
+battery all {
     # format = "<span background='#50fa7b'> %status </span><span background='#e5e9f0'> %percentage %remaining </span>"
     format = "<span foreground='#50fa7b'> %status %percentage %remaining </span>"
     format_down = ""
