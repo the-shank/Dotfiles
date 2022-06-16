@@ -40,3 +40,11 @@ include dark-green-256.theme
 #include no-color.theme
 
 news.version=2.6.0
+
+# inthe.am sync configuration
+taskd.certificate=$HOME/.task.private/private.certificate.pem
+taskd.key=$HOME/.task.private/private.key.pem
+taskd.ca=$HOME/.task.private/ca.cert.pem
+taskd.server=inthe.am:53589
+taskd.credentials=inthe_am/shashanksharma21/f8ba29c5-44b8-468b-8ae2-869d235589d4
+taskd.trust=strict
