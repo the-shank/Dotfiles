@@ -87,3 +87,7 @@ autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
 " always enter terminal in insert mode
 " https://vi.stackexchange.com/a/3765/35373
 autocmd BufWinEnter,WinEnter term://* startinsert
+
+" jump to topic under cursor (when inside help)
+" https://vim.fandom.com/wiki/Learn_to_use_help#Simplify_help_navigation
+autocmd FileType help nnoremap <buffer> <CR> <C-]>
