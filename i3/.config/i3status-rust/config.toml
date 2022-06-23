@@ -2,7 +2,11 @@ theme = "modern"
 icons = "awesome"
 
 [[block]]
-block = "focused_window"
+block = "pomodoro"
+notifier = "notifysend"
+
+# [[block]]
+# block = "focused_window"
 
 [[block]]
 block = "net"
