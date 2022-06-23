@@ -1,33 +1,52 @@
-theme = "solarized-dark"
+theme = "modern"
 icons = "awesome"
+
+[[block]]
+block = "focused_window"
+
+[[block]]
+block = "net"
+interval = 3
 
 [[block]]
 block = "disk_space"
 path = "/"
 info_type = "available"
 unit = "GB"
-interval = 20
-warning = 20.0
-alert = 10.0
-# format = "root: $available.eng(2)"
+warning = 15.0
+alert = 5.0
+interval = 30
+
+[[block]]
+block = "cpu"
+format = "{utilization} ({frequency})"
+interval = 3
 
 [[block]]
 block = "memory"
 display_type = "memory"
-format_mem = "{mem_used}"
+clickable = false
+format_mem = "{mem_used} / {swap_used}"
 format_swap = "{swap_used}"
+warning_mem = 80.0
+warning_swap = 50.0
+critical_swap = 75.0
 
-[[block]]
-block = "cpu"
-
-[[block]]
-block = "load"
-interval = 5
+# [[block]]
+# block = "load"
+# interval = 5
 
 [[block]]
 block = "sound"
 
 [[block]]
 block = "time"
-interval = 5
 format = "%a %d/%m %R"
+interval = 10
+
+[[block]]
+block = "battery"
+hide_missing = true
+warning = 20
+format = "{percentage} ({time})"
+interval = 20
