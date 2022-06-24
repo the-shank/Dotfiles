@@ -22,7 +22,7 @@ set smarttab                            " Makes tabbing smarter will realize you
 set expandtab                           " Converts tabs to spaces
 set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
-set laststatus=2                        " Always display the status line
+set laststatus=3                        " global statusline (https://www.youtube.com/watch?v=jH5PNvJIa6o)
 set number                              " Line numbers
 set relativenumber			            " Relative Line numbers
 set cursorline                          " Enable highlighting of the current line
