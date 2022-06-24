@@ -23,11 +23,12 @@ set expandtab                           " Converts tabs to spaces
 set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
 set laststatus=3                        " global statusline (https://www.youtube.com/watch?v=jH5PNvJIa6o)
+set winbar=>>\ %f\ %m                   " winbar (for each pane)
 set number                              " Line numbers
 set relativenumber			            " Relative Line numbers
 set cursorline                          " Enable highlighting of the current line
 set background=dark                     " tell vim what the background color looks like
-set showtabline=2                       " Always show tabs
+set showtabline=0                       " dont show tabs
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
