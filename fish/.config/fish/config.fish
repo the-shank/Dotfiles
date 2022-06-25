@@ -76,7 +76,19 @@ set fish_prompt_pwd_dir_length 0
 # set -x FZF_DEFAULT_OPTS "--color=16,header:13,info:5,pointer:3,marker:9,spinner:1,prompt:5,fg:7,hl:14,fg+:3,hl+:9 --inline-info --tiebreak=end,length --bind=shift-tab:toggle-down,tab:toggle-up"
 
 # "bat" as manpager
-set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+# set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+
+# colored manpages
+# https://blog.yossarian.net/2018/01/22/Reading-Manpages-Like-a-Pro
+# https://github.com/jonhoo/configs/blob/master/shell/.config/fish/config.fish
+setenv LESS_TERMCAP_mb \e'[1;31m'
+setenv LESS_TERMCAP_md \e'[1;31m'
+setenv LESS_TERMCAP_me \e'[0m'
+setenv LESS_TERMCAP_se \e'[0m'
+setenv LESS_TERMCAP_so \e'[1;44;33m'
+setenv LESS_TERMCAP_ue \e'[0m'
+setenv LESS_TERMCAP_us \e'[1;32m'
+
 set -g theme_nerd_fonts yes
 
 if status --is-login
