@@ -23,7 +23,7 @@ set expandtab                           " Converts tabs to spaces
 set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
 set laststatus=3                        " global statusline (https://www.youtube.com/watch?v=jH5PNvJIa6o)
-set winbar=>>\ %f\ %m                   " winbar (for each pane)
+set winbar=[\ %t\ ]\ %m\ %=\ %<>>\ %f\  " winbar (for each pane)
 set number                              " Line numbers
 set relativenumber			            " Relative Line numbers
 set cursorline                          " Enable highlighting of the current line
