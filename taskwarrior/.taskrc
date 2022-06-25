@@ -48,4 +48,4 @@ taskd.ca=$HOME/.task.private/ca.cert.pem
 taskd.server=inthe.am:53589
 taskd.credentials=inthe_am/shashanksharma21/f8ba29c5-44b8-468b-8ae2-869d235589d4
 taskd.trust=strict
-context.work.read=+research or +cs511
+context.work.read=(+research or +cs511 or +purdue)
