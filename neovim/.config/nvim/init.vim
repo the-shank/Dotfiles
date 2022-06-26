@@ -20,3 +20,6 @@ source $HOME/.config/nvim/plug-config/sneak.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/todotxt.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
+source $HOME/.config/nvim/plug-config/telescope.vim
+source $HOME/.config/nvim/plug-config/telescope-fzf-native.vim
+source $HOME/.config/nvim/plug-config/telescope-coc.vim

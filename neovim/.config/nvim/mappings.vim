@@ -16,8 +16,8 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Use ctrl + hjkl to resize windows
-nnoremap <C-k>    :resize -2<CR>
-nnoremap <C-j>    :resize +2<CR>
+" nnoremap <C-k>    :resize -2<CR>
+" nnoremap <C-j>    :resize +2<CR>
 nnoremap <C-h>    :vertical resize -2<CR>
 nnoremap <C-l>    :vertical resize +2<CR>
 
@@ -70,10 +70,6 @@ noremap <leader>G :Rgh<CR>
 " vim-commentary
 nnoremap <leader>/ :Commentary<CR>
 vnoremap <leader>/ :Commentary<CR>
-
-
-" search buffers
-nmap <leader>; :Buffers<CR>
 
 " remove highlights
 vnoremap <leader>h :nohlsearch<CR>

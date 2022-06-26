@@ -17,8 +17,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 
 " Movement
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }   " Fuzzy Finder
-Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'               " Vim-Sneak
 
 " Git
@@ -55,5 +53,14 @@ Plug 'michaeljsmith/vim-indent-object'  " additional indent objects
 Plug 'tpope/vim-obsession'          " Saving and restoring sessions
 Plug 'dbeniamine/todo.txt-vim'      " todo.txt
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}     " treesitter
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }   " Fuzzy Finder
+" Plug 'junegunn/fzf.vim'
+
+" telescope
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+Plug 'fannheyward/telescope-coc.nvim'
 
 call plug#end()
