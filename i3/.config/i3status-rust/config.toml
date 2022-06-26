@@ -1,9 +1,9 @@
 theme = "modern"
 icons = "awesome"
 
-[[block]]
-block = "pomodoro"
-notifier = "notifysend"
+# [[block]]
+# block = "pomodoro"
+# notifier = "notifysend"
 
 # [[block]]
 # block = "focused_window"
