@@ -105,9 +105,6 @@ tnoremap <A-[> <Esc>
 " command for enable/disable line-wrapping
 command! -nargs=* Wrap set wrap! linebreak!
 
-" generate header block
-nnoremap <leader># :center 80<CR>11h<C-V>0r#yiwA<Space><Esc>pbh<C-V>y9pyy2P<C-V>$r#2j.
-
 " goto file but in a vertical split
 nnoremap gv :vertical wincmd f<CR>
 
