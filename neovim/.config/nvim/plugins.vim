@@ -50,7 +50,7 @@ Plug 'tpope/vim-commentary'         " commenting
 Plug 'tpope/vim-surround'           " surround with brackets (like VSCode)
 Plug 'andymass/vim-matchup'         " Matching brackets
 Plug 'jiangmiao/auto-pairs'         " Auto pairs for '(' '[' '{'
-Plug 'liuchengxu/vim-which-key'     " Vim-Which-Key
+" Plug 'liuchengxu/vim-which-key'     " Vim-Which-Key
 Plug 'michaeljsmith/vim-indent-object'  " additional indent objects
 Plug 'tpope/vim-obsession'          " Saving and restoring sessions
 Plug 'dbeniamine/todo.txt-vim'      " todo.txt
