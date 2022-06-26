@@ -71,7 +71,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " https://github.com/neoclide/coc.nvim/issues/2253
-nnoremap <silent><nowait> <space>d :call CocAction('jumpDefinition', v:false)<CR>
+nnoremap <silent><nowait> <leader>d :call CocAction('jumpDefinition', v:false)<CR>
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -144,21 +144,21 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings using CoCList:
 " Show all diagnostics.
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <leader>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+nnoremap <silent> <leader>e  :<C-u>CocList extensions<cr>
 " Show commands.
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent> <leader>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
-nnoremap <silent> <space>y  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <leader>y  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+nnoremap <silent> <leader>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+nnoremap <silent> <leader>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+nnoremap <silent> <leader>p  :<C-u>CocListResume<CR>
 
 
 " Explorer
@@ -198,15 +198,15 @@ let g:coc_explorer_global_presets = {
 \     'root-uri': getcwd(),
 \   }
 \ }
-nmap <space>e :CocCommand explorer --preset pwd<CR>
-" nmap <space>f :CocCommand explorer --preset floating<CR>
+nmap <leader>e :CocCommand explorer --preset pwd<CR>
+" nmap <leader>f :CocCommand explorer --preset floating<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 " Python: execute in terminal
 nnoremap <F5> :CocCommand python.execInTerminal<CR>
 
 " Rust: Implement methods for trait
-nnoremap <silent> <space>i  :call CocActionAsync('codeAction', '', 'Implement missing members')<cr>
+nnoremap <silent> <leader>i  :call CocActionAsync('codeAction', '', 'Implement missing members')<cr>
 
 " Clangd: toggle to header/implementation
-nnoremap <space>sh :CocCommand clangd.switchSourceHeader<CR>
+nnoremap <leader>sh :CocCommand clangd.switchSourceHeader<CR>

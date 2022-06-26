@@ -22,8 +22,8 @@ nnoremap <C-h>    :vertical resize -2<CR>
 nnoremap <C-l>    :vertical resize +2<CR>
 
 " X clipboard integration
-" <Space>c will copy entire buffer into clipboard
-" <Space>p will paste clipboard into buffer
+" <leader>c will copy entire buffer into clipboard
+" <leader>p will paste clipboard into buffer
 noremap <leader>c :w !xsel -ib<CR><CR>
 noremap <leader>p :read !xsel --clipboard --output<CR>
 
@@ -68,16 +68,11 @@ noremap <leader>g :Rg<CR>
 noremap <leader>G :Rgh<CR>
 
 " vim-commentary
-nnoremap <space>/ :Commentary<CR>
-vnoremap <space>/ :Commentary<CR>
+nnoremap <leader>/ :Commentary<CR>
+vnoremap <leader>/ :Commentary<CR>
 
-" vim-which-key
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
-" Ctrl-P for quick searching files
-map <C-p> :Files<CR>
-
-" <space>; for quick search buffers
+" search buffers
 nmap <leader>; :Buffers<CR>
 
 " remove highlights
