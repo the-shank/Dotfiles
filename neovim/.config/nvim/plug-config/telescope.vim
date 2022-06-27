@@ -27,7 +27,8 @@ require('telescope').setup{
     sorting_strategy = "ascending",
     layout_config = {
       prompt_position = "top",
-      width = 0.9
+      width = 0.9,
+      preview_width=0.55,
     },
   },
   pickers = {
