@@ -61,7 +61,7 @@ nnoremap <C-_> :Telescope current_buffer_fuzzy_find<CR>
 nnoremap <leader>; :Telescope buffers<CR>
 
 " searching files
-nnoremap <leader>ff :Telescope find_files hidden=true<CR>
+nnoremap <leader>ff :Telescope find_files find_command=fd,--type,d,--hidden,--ignore-case,--follow,--exclude,.git/,--exclude,.cache/<CR>
 
 " live grep
 nnoremap <leader>fg :Telescope live_grep<CR>
