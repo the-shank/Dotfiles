@@ -339,9 +339,11 @@ mode "resize" {
 }
 
 # Resize predefined sizes
-bindsym $mod+$alt+u resize set width 40 ppt
+bindsym $mod+$alt+7 resize set width 30 ppt
+bindsym $mod+$alt+8 resize set width 40 ppt
 bindsym $mod+$alt+i resize set width 50 ppt
-bindsym $mod+$alt+o resize set width 60 ppt
+bindsym $mod+$alt+9 resize set width 60 ppt
+bindsym $mod+$alt+0 resize set width 70 ppt
 
 # Lock screen
 bindsym $mod+9 exec --no-startup-id blurlock
