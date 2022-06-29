@@ -62,4 +62,6 @@ function setup --description "sets up the environment variables and all"
 
     # dark theme for qt applications
     _export QT_QPA_PLATFORMTHEME qt5ct
+    _export QT_STYLE_OVERRIDE kvantum
+    _export QT_SCALE_FACTOR 1.2
 end
