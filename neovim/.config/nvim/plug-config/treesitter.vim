@@ -15,7 +15,7 @@ require'nvim-treesitter.configs'.setup {
     "python",
     "rust",
     "toml",
-    "vim"
+    "vim",
     "yaml",
   },
 
