@@ -564,7 +564,8 @@ fish_add_path /usr/local/go/bin
 fish_add_path $HOME/.local/gobin
 fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/Applications/bear/bin
+fish_add_path $HOME/Applications/aflplusplus/bin
 fish_add_path $HOME/Applications/aflplusplus/usr/local/bin
 fish_add_path $HOME/.npm-global/bin
-fish_add_path $HOME/Applications/aflplusplus/bin
 fish_add_path $HOME/Applications/ghidra
+fish_add_path $HOME/Applications/llvm-13-release/bin
