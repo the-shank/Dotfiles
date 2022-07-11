@@ -45,7 +45,13 @@ block = "sound"
 
 [[block]]
 block = "time"
-format = "%a %d/%m %R"
+format = "IN: %a %d/%m %R"
+interval = 10
+timezone = "Asia/Kolkata"
+
+[[block]]
+block = "time"
+format = "USA: %a %d/%m %R"
 interval = 10
 
 [[block]]
