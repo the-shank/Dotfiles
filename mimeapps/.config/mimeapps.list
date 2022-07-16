@@ -83,3 +83,5 @@ x-scheme-handler/unknown=firefox.desktop;
 
 [Default Applications]
 application/pdf=org.gnome.Evince.desktop;
+inode/directory=thunar.desktop;
+text/plain=sublime_text.desktop;
