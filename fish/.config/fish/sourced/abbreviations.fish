@@ -23,6 +23,7 @@ abbr -a chx 'chmod +x'      # make it executable
 abbr -a chR 'chmod -R'      # recursive
 abbr -a mv 'mv --interactive'               # warn before overwriting files 
 abbr -a mvv 'mv --interactive --verbose'    # mv verbose
+abbr -a cpwd 'echo (pwd) | xsel --input --clipboard'    # copy current directory path
 abbr -a e nvim
 abbr -a o open
 abbr -a vim nvim
