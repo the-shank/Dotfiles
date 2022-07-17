@@ -126,3 +126,10 @@ nnoremap <leader>sc :close<CR>
 " close all buffers except the current one
 " https://salferrarello.com/vim-close-all-buffers-except-the-current-one/
 command! BufOnly execute '%bdelete|edit #|normal `"'
+
+" move text up and down (chris@machine and vim.fandom.com)
+" https://vim.fandom.com/wiki/Moving_lines_up_or_down#Mappings_to_move_lines
+nnoremap <C-A-j> :m .+1<CR>==
+nnoremap <C-A-k> :m .-2<CR>==
+vnoremap <C-A-j> :m '>+1<CR>gv=gv
+vnoremap <C-A-k> :m '<-2<CR>gv=gv
