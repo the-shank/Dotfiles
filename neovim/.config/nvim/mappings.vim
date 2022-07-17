@@ -133,3 +133,6 @@ nnoremap <C-A-j> :m .+1<CR>==
 nnoremap <C-A-k> :m .-2<CR>==
 vnoremap <C-A-j> :m '>+1<CR>gv=gv
 vnoremap <C-A-k> :m '<-2<CR>gv=gv
+
+" dont overwrite clipboard when pasting (chris@machine)
+vnoremap p "_dP
