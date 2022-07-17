@@ -16,10 +16,10 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Use ctrl + hjkl to resize windows
-" nnoremap <C-k>    :resize -2<CR>
-" nnoremap <C-j>    :resize +2<CR>
-nnoremap <C-h>    :vertical resize -2<CR>
-nnoremap <C-l>    :vertical resize +2<CR>
+nnoremap <C-Up>    :resize +2<CR>
+nnoremap <C-Down>    :resize -2<CR>
+nnoremap <C-Left>    :vertical resize -2<CR>
+nnoremap <C-Right>    :vertical resize +2<CR>
 
 " X clipboard integration
 " <leader>c will copy entire buffer into clipboard
