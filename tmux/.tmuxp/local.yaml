@@ -1,0 +1,8 @@
+session_name: local
+windows:
+  - window_name: taskwarrior
+    panes:
+    - shell_command:
+        - task sync
+  - window_name: ''
+    focus: True
