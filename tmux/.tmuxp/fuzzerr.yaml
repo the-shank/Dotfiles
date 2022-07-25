@@ -18,3 +18,9 @@ windows:
     - shell_command:
       - echo hello
       - clear
+  - window_name: ''
+    start_directory: $HOME
+    panes:
+    - shell_command:
+      - echo hello
+      - clear
