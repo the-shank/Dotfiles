@@ -1,0 +1,20 @@
+session_name: fuzzerr
+windows:
+  - window_name: htop
+    panes:
+    - shell_command: htop
+  - window_name: fuzzerr
+    start_directory: $HOME/code/research/FuzzERR
+    focus: True
+    panes:
+    - shell_command: nvim
+  - window_name: handlerr
+    start_directory: $HOME/code/research/HandlERR
+    panes:
+    - shell_command: nvim
+  - window_name: ''
+    start_directory: $HOME
+    panes:
+    - shell_command:
+      - echo hello
+      - clear
