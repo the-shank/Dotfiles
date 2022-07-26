@@ -49,6 +49,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}     " treesitter
 " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }   " Fuzzy Finder
 " Plug 'junegunn/fzf.vim'
 
+" Copilot
+Plug 'github/copilot.vim'           " copilot plugin
+
 " telescope
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-lua/plenary.nvim'
