@@ -4,5 +4,6 @@ windows:
     panes:
     - shell_command:
         - task sync
+        - task
   - window_name: ''
     focus: True
