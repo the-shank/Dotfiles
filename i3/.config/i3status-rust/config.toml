@@ -59,4 +59,4 @@ block = "battery"
 hide_missing = true
 warning = 20
 format = "{percentage} ({time})"
-interval = 20
+interval = 15
