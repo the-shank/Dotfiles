@@ -58,19 +58,19 @@ end
 #end
 
 # sets tools
-set -x EDITOR nvim
-set -x VISUAL nvim
+set --export EDITOR nvim
+set --export VISUAL nvim
 # Sets the terminal type for proper colors
 # set TERM "xterm-256color"
 
 # Suppresses fish's intro message
-set fish_greeting
+# set fish_greeting
 #function fish_greeting
 #    fish_logo
 #end
 
 # Prevent directories names from being shortened
-set fish_prompt_pwd_dir_length 0
+# set fish_prompt_pwd_dir_length 0
 
 # fzf
 # set -x FZF_DEFAULT_OPTS "--color=16,header:13,info:5,pointer:3,marker:9,spinner:1,prompt:5,fg:7,hl:14,fg+:3,hl+:9 --inline-info --tiebreak=end,length --bind=shift-tab:toggle-down,tab:toggle-up"
@@ -92,11 +92,10 @@ setenv LESS_TERMCAP_us \e'[1;32m'
 set -g theme_nerd_fonts yes
 
 if status --is-login
-    set -gx PATH $PATH ~/.bin
-end
-
-if status --is-login
-    set -gx PATH $PATH ~/.local/bin
+    # set -gx PATH $PATH ~/.bin
+    # set -gx PATH $PATH ~/.local/bin
+    fish_add_path --global $HOME/.bin
+    fish_add_path --global $HOME/.local/bin
 end
 
 if type -q bat

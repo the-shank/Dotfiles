@@ -64,4 +64,7 @@ function setup --description "sets up the environment variables and all"
     _export QT_QPA_PLATFORMTHEME qt5ct
     _export QT_STYLE_OVERRIDE kvantum
     _export QT_SCALE_FACTOR 1.1
+
+    # remove fish_greeting
+    set --export --universal fish_greeting
 end
