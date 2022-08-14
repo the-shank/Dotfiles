@@ -16,7 +16,9 @@ abbr -a nvinit 'nvim ~/.config/nvim/init.vim'
 
 # general
 abbr -a mkp 'mkdir -p'      # auto nesting
-abbr -a cpr 'cp -R'         # recursive
+abbr -a cp 'cp -av'         # cp verbose mode by default
+abbr -a cpr 'cp -Rav'       # recursive
+abbr -a rm 'rm -Irf'        # recursive and force
 abbr -a duh 'du -h'         # list disk usage for all files in ./
 abbr -a dush 'du -sh'       # list total disk usage of ./
 abbr -a chx 'chmod +x'      # make it executable
@@ -35,7 +37,6 @@ abbr -a la 'exa -lah'
 abbr -a lr 'ls -R'
 abbr -a less "less -MNi"
 abbr -a yr 'cal -y'
-abbr -a rmr 'rm -r'
 # abbr -a conda-enable 'eval /home/shank/Applications/miniconda3/bin/conda "shell.fish" "hook" | source'
 abbr -a conda-enable 'eval /opt/miniconda3/bin/conda "shell.fish" "hook" | source'
 
