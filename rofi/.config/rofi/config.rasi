@@ -152,3 +152,4 @@ modi: "window,drun,ssh,run";
 }
 //@theme "/usr/share/rofi/themes/android_notification.rasi"
 /*  window { fullscreen: true; } */@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
+@theme "/usr/share/rofi/themes/android_notification.rasi"
