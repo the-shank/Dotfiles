@@ -66,6 +66,7 @@ bindsym $mod+Shift+Return exec thunar
 bindsym $mod+q kill
 
 # start program launcher
+bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
 bindsym $alt+space exec rofi -lines 12 -padding 18 -width 30 -location 0 -show combi -sidebar-mode -font 'Rubik 16' -show-icons -matching fuzzy
 bindsym $mod+Tab exec rofi -lines 12 -padding 18 -width 30 -location 0 -show window -sidebar-mode -font 'Rubik 16' -show-icons -matching fuzzy
 
@@ -158,7 +159,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # toggle sticky
 bindsym $mod+Shift+s sticky toggle
