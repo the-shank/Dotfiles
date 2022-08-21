@@ -74,3 +74,5 @@ nnoremap <leader>fg :Telescope live_grep<CR>
 " help tags
 nnoremap <leader>fh :Telescope help_tags<CR>
 
+" workspace symbols
+nnoremap <leader><S-o> :Telescope coc workspace_symbols<CR>
