@@ -59,4 +59,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 Plug 'fannheyward/telescope-coc.nvim'
 
+" Coq
+Plug 'whonore/Coqtail'
+
 call plug#end()
