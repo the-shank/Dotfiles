@@ -521,8 +521,8 @@ exec_always --no-startup-id xset r rate 300 45
 exec_always --no-startup-id /bin/bash -c "setxkbmap -option caps:escape"
 
 # keybinding: Move workspace to the next display
-bindsym $mod+Shift+Tab move workspace to output left
-# bindsym $mod+Shift+Tab move workspace to output up
+# bindsym $mod+Shift+Tab move workspace to output left
+bindsym $mod+Shift+Tab move workspace to output up
 
 # start autolayout
 exec_always --no-startup-id autotiling
