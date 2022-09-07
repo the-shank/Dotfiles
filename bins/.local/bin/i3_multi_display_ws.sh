@@ -8,6 +8,9 @@ monitor=
 laptop=
 
 monitor=$(xrandr --listmonitors | rg --ignore-case hdmi | awk '{print $NF}')
+if [[ -z "$monitor" ]]; then
+    monitor=$(xrandr --listmonitors | rg --ignore-case displayport | awk '{print $NF}')
+fi
 echo "identified monitor: $monitor"
 
 laptop=$(xrandr --listmonitors | rg --ignore-case eDP | awk '{print $NF}')
