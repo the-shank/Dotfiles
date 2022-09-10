@@ -23,8 +23,8 @@ then
 fi
 
 # workspaces on laptop display
-i3-msg "[workspace=\"8:VIII\"] move workspace to output $laptop"
-i3-msg "[workspace=\"10:X\"] move workspace to output $laptop"
+# i3-msg "[workspace=\"8:VIII\"] move workspace to output $laptop"
+# i3-msg "[workspace=\"10:X\"] move workspace to output $laptop"
 
 # workspaces on main monitor display
 i3-msg "[workspace=\"1:I\"] move workspace to output $monitor"
@@ -34,7 +34,9 @@ i3-msg "[workspace=\"4:IV\"] move workspace to output $monitor"
 i3-msg "[workspace=\"5:V\"] move workspace to output $monitor"
 i3-msg "[workspace=\"6:VI\"] move workspace to output $monitor"
 i3-msg "[workspace=\"7:VII\"] move workspace to output $monitor"
+i3-msg "[workspace=\"8:VIII\"] move workspace to output $monitor"
 i3-msg "[workspace=\"9:IX\"] move workspace to output $monitor"
+i3-msg "[workspace=\"10:X\"] move workspace to output $monitor"
 
 # keyboard config
 xset r rate 300 45
