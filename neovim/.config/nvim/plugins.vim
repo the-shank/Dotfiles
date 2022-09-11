@@ -46,6 +46,7 @@ Plug 'michaeljsmith/vim-indent-object'  " additional indent objects
 Plug 'tpope/vim-obsession'          " Saving and restoring sessions
 Plug 'dbeniamine/todo.txt-vim'      " todo.txt
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}     " treesitter
+Plug 'nvim-treesitter/nvim-treesitter-context'
 " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }   " Fuzzy Finder
 " Plug 'junegunn/fzf.vim'
 
