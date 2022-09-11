@@ -21,12 +21,6 @@ nnoremap <C-Down>    :resize -2<CR>
 nnoremap <C-Left>    :vertical resize -2<CR>
 nnoremap <C-Right>    :vertical resize +2<CR>
 
-" X clipboard integration
-" <leader>c will copy entire buffer into clipboard
-" <leader>p will paste clipboard into buffer
-noremap <leader>c :w !xsel -ib<CR><CR>
-noremap <leader>p :read !xsel --clipboard --output<CR>
-
 " No arrow keys --- force yourself to use the home row
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -62,10 +56,6 @@ nnoremap <silent> N Nzz
 nnoremap <silent> * *zz
 nnoremap <silent> # #zz
 nnoremap <silent> g* g*zz
-
-" Use :Rg as a global search
-noremap <leader>g :Rg<CR>
-noremap <leader>G :Rgh<CR>
 
 " vim-commentary
 nnoremap <leader>/ :Commentary<CR>
