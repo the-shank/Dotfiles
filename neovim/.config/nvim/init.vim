@@ -24,3 +24,4 @@ source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/telescope-fzf-native.vim
 source $HOME/.config/nvim/plug-config/telescope-coc.vim
 source $HOME/.config/nvim/plug-config/coqtail.vim
+source $HOME/.config/nvim/plug-config/obsession.vim
