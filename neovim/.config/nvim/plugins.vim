@@ -25,9 +25,10 @@ Plug 'tpope/vim-rhubarb'                " Vim-Rhubarb
 Plug 'shumphrey/fugitive-gitlab.vim'    " Vim-Rhubarb for Gitlab
 
 " Language Completion (LSP)
+" switch to native LSP someday...
 Plug 'neoclide/coc.nvim', {'branch': 'release'}     " coc
 
-" Programming Languages
+" Languages specific
 " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }  " Go
 " Plug 'jez/vim-better-sml'                           " SML
 Plug 'cespare/vim-toml'                             " TOML
@@ -41,19 +42,18 @@ Plug 'preservim/tagbar'                             " tagbar
 Plug 'mhinz/vim-startify'
 
 " Utils
-Plug 'airblade/vim-rooter'        " stop vim from changing directory
-" Plug 'dstein64/vim-startuptime'   " see whats slowing down the startup
-Plug 'tpope/vim-commentary'         " commenting
-Plug 'tpope/vim-surround'           " surround with brackets (like VSCode)
-Plug 'andymass/vim-matchup'         " Matching brackets
-Plug 'jiangmiao/auto-pairs'         " Auto pairs for '(' '[' '{'
-" Plug 'liuchengxu/vim-which-key'     " Vim-Which-Key
+Plug 'airblade/vim-rooter'              " stop vim from changing directory
+" Plug 'dstein64/vim-startuptime'       " see whats slowing down the startup
+Plug 'tpope/vim-commentary'             " commenting
+Plug 'tpope/vim-surround'               " surround with brackets (like VSCode)
+Plug 'andymass/vim-matchup'             " Matching brackets
+Plug 'jiangmiao/auto-pairs'             " Auto pairs for '(' '[' '{'
 Plug 'michaeljsmith/vim-indent-object'  " additional indent objects
-Plug 'tpope/vim-obsession'          " Saving and restoring sessions
-Plug 'dbeniamine/todo.txt-vim'      " todo.txt
+Plug 'tpope/vim-obsession'              " Saving and restoring sessions
+" Plug 'dbeniamine/todo.txt-vim'        " todo.txt => not using todo.txt for now
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}     " treesitter
 Plug 'nvim-treesitter/nvim-treesitter-context'
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }   " Fuzzy Finder
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }   " Fuzzy Finder => switched to Telescope
 " Plug 'junegunn/fzf.vim'
 
 " Copilot
