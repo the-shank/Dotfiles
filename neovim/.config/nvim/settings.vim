@@ -92,3 +92,7 @@ autocmd BufWinEnter,WinEnter term://* startinsert
 " jump to topic under cursor (when inside help)
 " https://vim.fandom.com/wiki/Learn_to_use_help#Simplify_help_navigation
 autocmd FileType help nnoremap <buffer> <CR> <C-]>
+
+" hightlight yanked text
+" https://neovim.io/doc/user/lua.html#lua-highlight
+au TextYankPost * silent! lua vim.highlight.on_yank()
