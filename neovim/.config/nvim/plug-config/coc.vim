@@ -148,7 +148,7 @@ nnoremap <silent> <leader>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
 nnoremap <silent> <leader>e  :<C-u>CocList extensions<cr>
 " Show commands.
-nnoremap <silent> <leader>c  :<C-u>CocList commands<cr>
+nnoremap <silent> <leader>C  :<C-u>CocList commands<cr>
 " Find symbol of current document.
 nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
