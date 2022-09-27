@@ -33,7 +33,7 @@ require('telescope').setup{
     layout_config = {
       prompt_position = "top",
       width = 0.9,
-      preview_width=0.55,
+      preview_width=0.40,
     },
   },
   pickers = {
@@ -57,7 +57,7 @@ EOF
 
 " ------- mappings
 
-" fuzzey find in current buffer
+" fuzzy find in current buffer
 " use <ctrl+v> and then press '/'. This gives '_'. So the we put '_' here
 " the actual mapping is <C-/>
 nnoremap <C-_> :Telescope current_buffer_fuzzy_find<CR>
@@ -76,3 +76,6 @@ nnoremap <leader>fh :Telescope help_tags<CR>
 
 " workspace symbols
 nnoremap <leader><S-o> :Telescope coc workspace_symbols<CR>
+
+" telescope builtins
+nnoremap <leader>b :Telescope builtin<CR>

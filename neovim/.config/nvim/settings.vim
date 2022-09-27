@@ -72,7 +72,7 @@ colorscheme everforest
 " trim trailing whitespace on save
 autocmd FileType c,cpp,java,go,php,python,vim,yaml,rust autocmd BufWritePre <buffer> %s/\s\+$//e
 
-" commentstrings
+" comment strings
 autocmd FileType c,cpp,cs,java  setlocal commentstring=//\ %s
 autocmd FileType fish           setlocal commentstring=#\ %s
 
@@ -92,3 +92,7 @@ autocmd BufWinEnter,WinEnter term://* startinsert
 " jump to topic under cursor (when inside help)
 " https://vim.fandom.com/wiki/Learn_to_use_help#Simplify_help_navigation
 autocmd FileType help nnoremap <buffer> <CR> <C-]>
+
+" hightlight yanked text
+" https://neovim.io/doc/user/lua.html#lua-highlight
+au TextYankPost * silent! lua vim.highlight.on_yank()
