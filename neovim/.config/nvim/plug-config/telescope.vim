@@ -27,7 +27,8 @@ require('telescope').setup{
       "--line-number",
       "--column",
       "--smart-case",
-      "--hidden"
+      "--hidden",
+      "--trim"  --remove indentation
     },
     sorting_strategy = "ascending",
     layout_config = {
@@ -53,6 +54,12 @@ require('telescope').setup{
     -- please take a look at the readme of the extension you want to configure
   }
 }
+
+require("telescope").setup {
+  defaults = {
+    buffer_previewer_maker = new_maker,
+  }
+}
 EOF
 
 " ------- mappings
@@ -66,7 +73,7 @@ nnoremap <C-_> :Telescope current_buffer_fuzzy_find<CR>
 nnoremap <leader>; :Telescope buffers<CR>
 
 " searching files
-nnoremap <leader>ff :Telescope find_files find_command=fd,--hidden,--ignore-case,--follow,--exclude,.git/,--exclude,.cache/<CR>
+nnoremap <leader>ff :Telescope find_files find_command=fd,--hidden,--ignore-case,--follow,--strip-cwd-prefix,--exclude,.git/,--exclude,.cache/<CR>
 
 " live grep
 nnoremap <leader>fg :Telescope live_grep<CR>
