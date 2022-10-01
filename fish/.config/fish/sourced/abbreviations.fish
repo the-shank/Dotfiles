@@ -19,7 +19,12 @@ abbr -a mkp 'mkdir -p'      # auto nesting
 abbr -a cp 'cp -av'         # cp verbose mode by default
 abbr -a cpr 'cp -Rav'       # recursive
 # abbr -a rm 'rm -Irf'        # recursive and force
-abbr -a rm trash-cli        # recursive and force
+if type -q trash
+    abbr -a rm trash
+end
+if type -q trach-cli
+    abbr -a rm trash-cli
+end
 abbr -a duh 'du -h'         # list disk usage for all files in ./
 abbr -a dush 'du -sh'       # list total disk usage of ./
 abbr -a chx 'chmod +x'      # make it executable
