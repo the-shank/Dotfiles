@@ -126,6 +126,3 @@ vnoremap <C-A-k> :m '<-2<CR>gv=gv
 
 " dont overwrite clipboard when pasting (chris@machine)
 vnoremap p "_dP
-
-" Ctrl-a to select whole buffer
-nnoremap <C-a> ggVG
