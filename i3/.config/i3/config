@@ -126,10 +126,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+$left move left
-bindsym $mod+Shift+$down move down
-bindsym $mod+Shift+$up move up
-bindsym $mod+Shift+$right move right
+bindsym $mod+Shift+$left exec i3l move left
+bindsym $mod+Shift+$down exec i3l move down
+bindsym $mod+Shift+$up exec i3l move up
+bindsym $mod+Shift+$right exec i3l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -528,8 +528,23 @@ bindsym $mod+Shift+Tab move workspace to output left
 # bindsym $mod+Shift+Tab move workspace to output up
 
 # start autolayout
-exec_always --no-startup-id autotiling
+# exec_always --no-startup-id autotiling
 # exec_always --no-startup-id ~/.cargo/bin/i3-auto-layout
+exec_always --no-startup-id i3-layouts
+
+# i3-layouts settings
+set $i3l vstack to workspace $ws1
+set $i3l vstack to workspace $ws2
+set $i3l vstack to workspace $ws3
+set $i3l vstack to workspace $ws4
+set $i3l vstack to workspace $ws5
+set $i3l vstack to workspace $ws6
+set $i3l vstack to workspace $ws7
+set $i3l vstack to workspace $ws8
+set $i3l vstack to workspace $ws9
+set $i3l vstack to workspace $ws10
+bindsym $mod+Shift+t exec i3l tabbed
+bindsym $mod+Shift+v exec i3l vstack
 
 # keybinding: "promoting" the focussed window
 bindsym $mod+p exec --no-startup-id ~/.local/bin/i3_promote_window.py
