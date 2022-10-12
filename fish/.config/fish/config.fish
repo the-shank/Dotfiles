@@ -580,3 +580,6 @@ set --export CXX clang++
 
 # asdf-vm
 test -e ~/.asdf/asdf.fish; and source ~/.asdf/asdf.fish
+
+# set colorterm to get helix to work
+set --export COLORTERM truecolor
