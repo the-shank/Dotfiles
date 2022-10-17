@@ -8,7 +8,8 @@ let g:coc_global_extensions = [
     \ 'coc-pyright',
     \ 'coc-tsserver',
     \ 'coc-cmake',
-    \ 'coc-sh'
+    \ 'coc-sh',
+    \ 'coc-solidity'
     \ ]
 
 " TextEdit might fail if hidden is not set.

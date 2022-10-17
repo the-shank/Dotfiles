@@ -11,6 +11,7 @@
         "python",
         "rust",
         "ruby",
+        "solidity",
         "go",
         "cpp",
         "cmake"
