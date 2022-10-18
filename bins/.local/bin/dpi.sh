@@ -11,3 +11,6 @@ sed -i -e "s/dpi=[0-9]*/dpi=$1/" ~/.xsession
 
 # execute ~/.xsession
 sh ~/.xsession
+
+# restart i3
+i3-msg restart
