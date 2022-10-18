@@ -6,13 +6,8 @@ if [[ $# -ne 1 ]]; then
     exit 1
 fi
 
-# update dpi
-sed -i -e "s/^Xft\.dpi:.*/Xft\.dpi: \t$1/" ~/.Xresources
+# update dpi in ~/.xsession
+sed -i -e "s/dpi=[0-9]*/dpi=$1/" ~/.xsession
 
-# merge the updated value
-xrdb -merge ~/.Xresources
-
-# restart i3 for the changes to come in effect
-# note that some applications may need to be restarted for them to
-# adapt to the new dpi value
-i3-msg restart
+# execute ~/.xsession
+sh ~/.xsession
