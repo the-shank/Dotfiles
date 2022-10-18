@@ -100,7 +100,7 @@ bindsym $mod+F3 exec thunar
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom
-bindsym $mod+Ctrl+t exec --no-startup-id picom -CGb --no-fading-openclose --no-fading-destroyed-argb -D 1
+bindsym $mod+Ctrl+t exec --no-startup-id picom -CGb --no-fading-openclose --no-fading-destroyed-argb -D 0.05
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 # bindsym Print exec --no-startup-id i3-scrot
 bindsym Print exec --no-startup-id flameshot gui
@@ -566,7 +566,7 @@ exec --no-startup-id i3-battery-popup -n -t 10m -m "battery low!" -L 25 -l 15 &
 exec --no-startup-id variety
 
 # start picom
-exec --no-startup-id picom -CGb --no-fading-openclose --no-fading-destroyed-argb -D 1
+exec --no-startup-id picom -CGb --no-fading-openclose --no-fading-destroyed-argb -D 0.05
 
 # assign outputs to displays
 set $laptop eDP
