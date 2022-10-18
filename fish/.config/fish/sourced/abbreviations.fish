@@ -164,3 +164,6 @@ abbr -a n nnn
 
 # cmake build type?
 abbr -a build_type "rg --ignore-case cmake_build_type CMakeCache.txt"
+
+# pgrep should always be case insensitive
+abbr -a pgrep "pgrep -i"
