@@ -96,3 +96,6 @@ autocmd FileType help nnoremap <buffer> <CR> <C-]>
 " hightlight yanked text
 " https://neovim.io/doc/user/lua.html#lua-highlight
 au TextYankPost * silent! lua vim.highlight.on_yank()
+
+" transparent background
+hi Normal guibg=NONE ctermbg=NONE
