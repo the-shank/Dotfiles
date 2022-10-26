@@ -167,3 +167,11 @@ abbr -a build_type "rg --ignore-case cmake_build_type CMakeCache.txt"
 
 # pgrep should always be case insensitive
 abbr -a pgrep "pgrep -i"
+
+# https://github.com/joshmedeski/dotfiles/blob/main/mackup/.config/fish/config.fish
+# abbr hd "history delete --exact --case-sensitive \'(history | fzf-tmux -p -m --reverse | cut -d \" \" -f 3-)\'"
+
+# tmux
+abbr -a tml "tmux ls"
+abbr -a tmn "tmux new -s"
+abbr -a tms "tmux switch -t"
