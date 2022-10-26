@@ -174,6 +174,8 @@ abbr -a pgrep "pgrep -i"
 # tmux
 abbr -a tml "tmux ls"
 abbr -a tmn "tmux new -s"
+abbr -a tmnd "tmux new -d -s"
 abbr -a tms "tmux switch -t"
+abbr -a tmsd "tmux switch -d -t"
 abbr -a tma "tmux attach -d -t"
 abbr -a tmd "tmux detach"
