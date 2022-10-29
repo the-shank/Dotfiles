@@ -335,8 +335,8 @@ alias clean="clear; seq 1 (tput cols) | sort -R | sparklines | lolcat"
 abbr -a -g jctl "journalctl -p 3 -xb"
 
 # nvime for important configuration files
-abbr -a -g nf "$EDITOR ~/.config/fish/config.fish"
-abbr -a -g nt "$EDITOR ~/.tmux.conf"
+abbr -a -g nvf "$EDITOR ~/.config/fish/config.fish"
+abbr -a -g nvt "$EDITOR ~/.tmux.conf"
 
 ##reading logs with bat
 #alias lcalamares="bat /var/log/Calamares.log"
