@@ -12,7 +12,7 @@ def uses_so(full_path, so_filename) -> bool:
     # get the ldd output
     try:
         output = subprocess.check_output(
-            ["ldd", full_path], stderr=subprocess.DEVNULL)
+            ["llvm-readelf", "--needed-libs", full_path], stderr=subprocess.DEVNULL)
     except subprocess.CalledProcessError:
         return False
 
