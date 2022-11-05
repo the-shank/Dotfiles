@@ -201,9 +201,9 @@ function less
     command less -R $argv
 end
 
-function cd
-    builtin cd $argv; and ls
-end
+# function cd
+#     builtin cd $argv; and ls
+# end
 
 ### ALIASES ###
 
