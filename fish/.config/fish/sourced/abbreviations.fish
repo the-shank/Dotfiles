@@ -188,3 +188,7 @@ abbr -a -g dsyms "llvm-readelf --dyn-syms --demangle"
 # package managers: commonly used invocations
 abbr -a -g ali "apt list --installed"
 abbr -a -g pli "pamac list --installed"
+
+# keyboard
+abbr -a -g capsesc "setxkbmap -options caps:escape"
+abbr -a -g krr "xset r rate 300 45"
