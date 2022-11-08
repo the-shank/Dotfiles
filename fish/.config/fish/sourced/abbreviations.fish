@@ -188,3 +188,6 @@ abbr -a -g dsyms "llvm-readelf --dyn-syms --demangle"
 # package managers: commonly used invocations
 abbr -a -g ali "apt list --installed"
 abbr -a -g pli "pamac list --installed"
+
+# misc
+abbr -a -g asanopts "ASAN_OPTIONS=\"detect_leaks=0:abort_on_error=1:symbolize=1:handle_abort=1\""
