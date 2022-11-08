@@ -191,3 +191,7 @@ abbr -a -g pli "pamac list --installed"
 
 # misc
 abbr -a -g asanopts "ASAN_OPTIONS=\"detect_leaks=0:abort_on_error=1:symbolize=1:handle_abort=1\""
+
+# keyboard
+abbr -a -g c2e "setxkbmap -options caps:escape"
+abbr -a -g krr "xset r rate 300 45"
