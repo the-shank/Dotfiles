@@ -23,6 +23,6 @@ fi
 undefined_symbols_fst=$(llvm-readelf --dyn-syms --demangle $1 | rg --ignore-case " und " | awk 'BEGIN {FS=" UND "};{print $2}' | sed -e 's/@.*//g' | sort)
 
 # get he list of symbols defined in the second argument
-defined_symbols_snd=$(nm -D --demangle $2 | rg --ignore-case " T " | awk 'BEGIN {FS=" T "};{print $2}' | sort)
+defined_symbols_snd=$(nm -D --defined-only --demangle $2 | rg --ignore-case " T " | awk 'BEGIN {FS=" T "};{print $2}' | sed -e 's/@.*//g' | sort)
 
 comm -12 <(echo "$undefined_symbols_fst") <(echo "$defined_symbols_snd")
