@@ -2,3 +2,8 @@ theme = "everforest_dark"
 
 [editor]
 line-number = "relative"
+rulers = [100, 120]
+color-modes = true
+
+[editor.indent-guides]
+render = true
