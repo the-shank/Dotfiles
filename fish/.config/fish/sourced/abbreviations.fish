@@ -182,6 +182,7 @@ abbr -a -g tms "tmux switch -t"
 abbr -a -g tmsd "tmux switch -d -t"
 abbr -a -g tma "tmux attach -d -t"
 abbr -a -g tmd "tmux detach"
+abbr -a -g tmud "~/.tmux/scripts/update_display.sh"
 
 # common object utitilies
 abbr -a -g dsyms "llvm-readelf --dyn-syms --demangle"
