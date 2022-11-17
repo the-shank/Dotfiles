@@ -34,7 +34,7 @@ require('telescope').setup{
     layout_config = {
       prompt_position = "top",
       width = 0.9,
-      preview_width=0.40,
+      preview_width=0.50,
     },
   },
   pickers = {
