@@ -34,7 +34,8 @@ abbr -a -g mvv 'mv --interactive --verbose'    # mv verbose
 abbr -a -g cpwd 'echo (pwd) | xsel --input --clipboard'    # copy current directory path
 abbr -a -g e nvim
 abbr -a -g o open
-abbr -a -g vim nvim
+# abbr -a -g vim nvim
+abbr -a -g vim hx
 abbr -a -g cat bat
 abbr -a -g l 'exa'
 abbr -a -g ll 'exa -l'
@@ -46,7 +47,7 @@ abbr -a -g yr 'cal -y'
 # abbr -a -g conda-enable 'eval /home/shank/Applications/miniconda3/bin/conda "shell.fish" "hook" | source'
 abbr -a -g conda-enable 'eval /opt/miniconda3/bin/conda "shell.fish" "hook" | source'
 abbr -a -g mo 'cal -m'
-abbr -a -g diff 'diff --side-by-side'
+# abbr -a -g diff 'diff --side-by-side'
 
 # redshift
 abbr -a -g r0 'redshift -P -O 6500'
@@ -181,6 +182,7 @@ abbr -a -g tms "tmux switch -t"
 abbr -a -g tmsd "tmux switch -d -t"
 abbr -a -g tma "tmux attach -d -t"
 abbr -a -g tmd "tmux detach"
+abbr -a -g tmud "~/.tmux/scripts/update_display.sh"
 
 # common object utitilies
 abbr -a -g dsyms "llvm-readelf --dyn-syms --demangle"
