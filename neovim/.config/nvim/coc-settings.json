@@ -63,7 +63,7 @@
     // typescript
     "tsserver.formatOnType": true,
     // python
-    "python.jediEnabled": false,
+    "python.formatting.provider": "black",
     // c++
     "clangd.fallbackFlags": [
         // "-std=c++17",
