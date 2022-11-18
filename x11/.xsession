@@ -1,5 +1,11 @@
 #!/bin/sh
 
+set -e
+set -u
+set -x
+set -o pipefail
+export PS4='[ $LINENO ]: '
+
 #
 # ~/.xsession
 #
@@ -28,6 +34,9 @@ pkill -HUP xsettingsd || xsettingsd &
 # For Qt applications.
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_SCALE_FACTOR_ROUNDING_POLICY=PassThrough
+
+# Rofi
+sed -i -e "s/dpi:.*;/dpi: $dpi;/g" ~/.config/rofi/config.rasi
 
 # For miscellaneous applications.
 echo Xft.dpi: $dpi | xrdb -merge
