@@ -84,5 +84,8 @@ nnoremap <leader>fh :Telescope help_tags<CR>
 " workspace symbols
 nnoremap <leader><S-o> :Telescope coc workspace_symbols<CR>
 
+" document symbols (like outline)
+nnoremap <leader>o :Telescope coc document_symbols<CR>
+
 " telescope builtins
 nnoremap <leader>b :Telescope builtin<CR>
