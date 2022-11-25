@@ -53,6 +53,7 @@ Plug 'tpope/vim-obsession'              " Saving and restoring sessions
 " Plug 'dbeniamine/todo.txt-vim'        " todo.txt => not using todo.txt for now
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}     " treesitter
 Plug 'nvim-treesitter/nvim-treesitter-context'
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }   " Fuzzy Finder => switched to Telescope
 " Plug 'junegunn/fzf.vim'
 
