@@ -175,13 +175,14 @@ abbr -a -g pgrep "pgrep -i"
 # abbr hd "history delete --exact --case-sensitive \'(history | fzf-tmux -p -m --reverse | cut -d \" \" -f 3-)\'"
 
 # tmux
-abbr -a -g tml "tmux ls"
-abbr -a -g tmn "tmux new -s"
-abbr -a -g tmnd "tmux new -d -s"
-abbr -a -g tms "tmux switch -t"
-abbr -a -g tmsd "tmux switch -d -t"
-abbr -a -g tma "tmux attach -d -t"
-abbr -a -g tmd "tmux detach"
+abbr -a -g tmux "TERM=xterm-256color tmux"
+abbr -a -g tml "TERM=xterm-256color tmux ls"
+abbr -a -g tmn "TERM=xterm-256color tmux new -s"
+abbr -a -g tmnd "TERM=xterm-256color tmux new -d -s"
+abbr -a -g tms "TERM=xterm-256color tmux switch -t"
+abbr -a -g tmsd "TERM=xterm-256color tmux switch -d -t"
+abbr -a -g tma "TERM=xterm-256color tmux attach -d -t"
+abbr -a -g tmd "TERM=xterm-256color tmux detach"
 abbr -a -g tmud "~/.tmux/scripts/update_display.sh"
 
 # common object utitilies
@@ -198,3 +199,6 @@ abbr -a -g cdpi "cat $HOME/.xsession | rg --ignore-case dpi="
 # keyboard
 abbr -a -g c2e "setxkbmap -option caps:escape"
 abbr -a -g krr "xset r rate 300 45"
+
+# Applications
+abbr -a -g zj zellij
