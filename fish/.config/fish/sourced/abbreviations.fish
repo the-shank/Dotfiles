@@ -202,3 +202,7 @@ abbr -a -g krr "xset r rate 300 45"
 
 # Applications
 abbr -a -g zj zellij
+
+# dev_containers
+abbr -a -g dcla "docker container ls -a | rg --ignore-case dc_ | awk '{print \$NF}'"
+abbr -a -g dcl "docker container ls | rg --ignore-case dc_ | awk '{print \$NF}'"
