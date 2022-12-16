@@ -118,6 +118,9 @@ return packer.startup(function(use)
     -- Getting better at vim
     use "ThePrimeagen/vim-be-good"
 
+    -- Tagbar
+    use "preservim/tagbar"
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
