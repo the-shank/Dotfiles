@@ -23,7 +23,7 @@ vim.cmd([[
   augroup end
 ]])
 
--- Use a protected call so we don't error out on first use
+-- Use a protected call so we don"t error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
 	return
@@ -90,7 +90,7 @@ return packer.startup(function(use)
 
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-    use 'nvim-treesitter/nvim-treesitter-context'
+    use "nvim-treesitter/nvim-treesitter-context"
 	-- use {
 	--   "nvim-treesitter/nvim-treesitter",
 	--   commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
@@ -114,6 +114,9 @@ return packer.startup(function(use)
 			end)
 		end,
 	})
+
+    -- Getting better at vim
+    use "ThePrimeagen/vim-be-good"
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
