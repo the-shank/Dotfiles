@@ -16,6 +16,13 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 	end,
 })
 
+vim.api.nvim_create_autocmd({ "FileType" }, {
+    pattern = { "help" },
+    callback = function()
+        vim.cmd([[ nnoremap <buffer> <CR> <C-]> ]])
+    end,
+})
+
 vim.cmd("autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif")
 
 vim.api.nvim_create_autocmd({ "VimResized" }, {
