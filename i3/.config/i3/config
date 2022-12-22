@@ -278,7 +278,7 @@ for_window [window_role="pop-up"] floating enable
 assign [class="Gnome-boxes|VirtualBox Manager"] $ws4
 assign [class="Zotero"] $ws7
 assign [class="discord"] $ws8
-# assign [class="WorkFlowy"] $ws9
+assign [class="WorkFlowy"] $ws9
 assign [class="obsidian"] $ws10
 
 # switch to workspace with urgent window automatically
