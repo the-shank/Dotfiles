@@ -1,6 +1,7 @@
 local servers = {
 	"bashls",
 	"cssls",
+    "hls",
 	"html",
 	"jsonls",
 	"pyright",
