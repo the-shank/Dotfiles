@@ -25,7 +25,7 @@ copilot.setup({
 			accept_line = false,
 			next = "<M-]>",
 			prev = "<M-[>",
-			dismiss = "<C-]>",
+			dismiss = "<esc>",
 		},
 	},
 	filetypes = {
