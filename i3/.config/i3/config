@@ -68,6 +68,7 @@ bindsym $mod+q kill
 # start program launcher
 bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
 bindsym $alt+space exec rofi -lines 12 -padding 18 -width 30 -location 0 -show combi -sidebar-mode -font 'Rubik 14' -show-icons -matching fuzzy
+bindsym $alt+period exec rofi -lines 12 -padding 18 -width 30 -location 0 -show emoji -modi emoji
 bindsym $mod+Tab exec rofi -lines 12 -padding 18 -width 30 -location 0 -show window -sidebar-mode -font 'Rubik 14' -show-icons -matching fuzzy
 
 # dictionary
