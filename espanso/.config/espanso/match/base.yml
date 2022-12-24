@@ -29,8 +29,8 @@ matches:
           trigger: ":today"
 
   - triggers:
-      - ":time"
-      - ":now"
+      - ":tm"
+      - ":nw"
     replace: "{{mytime}}"
     vars:
       - name: mytime
