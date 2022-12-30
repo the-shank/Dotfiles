@@ -206,3 +206,8 @@ abbr -a -g zj zellij
 # dev_containers
 abbr -a -g dcla "docker container ls -a | rg --ignore-case dc_ | awk '{print \$NF}'"
 abbr -a -g dcl "docker container ls | rg --ignore-case dc_ | awk '{print \$NF}'"
+
+# colorschemes for the terminal
+# mnemonic - colorscheme dark / light
+abbr -a -g csd "base16-tomorrow-night-eighties"
+abbr -a -g csl "base16-gruvbox-light-medium"
