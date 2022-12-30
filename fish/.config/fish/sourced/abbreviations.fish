@@ -209,5 +209,5 @@ abbr -a -g dcl "docker container ls | rg --ignore-case dc_ | awk '{print \$NF}'"
 
 # colorschemes for the terminal
 # mnemonic - colorscheme dark / light
-abbr -a -g csd "base16-tomorrow-night-eighties"
-abbr -a -g csl "base16-gruvbox-light-medium"
+abbr -a -g csd 'base16-tomorrow-night-eighties && sd -s "vim.opt.background = \"light\"" "vim.opt.background = \"dark\"" ~/.config/nvim/lua/user/colorscheme.lua'
+abbr -a -g csl 'base16-gruvbox-light-medium && sd -s "vim.opt.background = \"dark\"" "vim.opt.background = \"light\"" ~/.config/nvim/lua/user/colorscheme.lua'
