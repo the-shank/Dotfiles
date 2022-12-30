@@ -14,6 +14,7 @@ matches:
   - triggers:
       - ":<yes"
       - ":<1d"
+      - ":obs<1d"
     replace: "[[{{output}}]]"
     vars:
       - name: output
@@ -33,6 +34,7 @@ matches:
   - triggers:
       - ":>tom"
       - ":>1d"
+      - ":obs>1d"
     replace: "[[{{output}}]]"
     vars:
       - name: output
@@ -46,11 +48,11 @@ matches:
       - name: yesterday
         type: match
         params:
-          trigger: ":<1d"
+          trigger: ":obs<1d"
       - name: tomorrow
         type: match
         params:
-          trigger: ":>1d"
+          trigger: ":obs>1d"
 
   - trigger: ":>bc"
     replace: "<- {{today}} || {{day_after_tomorrow}} ->"
