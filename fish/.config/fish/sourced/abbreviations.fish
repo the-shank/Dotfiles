@@ -120,6 +120,7 @@ abbr -a -g ga 'git add'
 abbr -a -g grh 'git reset HEAD'
 abbr -a -g grhh 'git reset HEAD --hard'
 abbr -a -g lg 'lazygit'
+abbr -a -g gcb 'git checkout -b'
 
 # docker
 abbr -a -g d docker
