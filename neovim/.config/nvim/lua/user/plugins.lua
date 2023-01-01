@@ -61,9 +61,9 @@ return packer.startup(function(use)
 	use({ "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" })
 
 	-- Colorschemes
-	use({ "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" })
-	use({ "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" })
-	use({ "sainnhe/everforest" })
+	use "folke/tokyonight.nvim"
+	use "lunarvim/darkplus.nvim"
+	use "sainnhe/everforest"
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" }) -- The completion plugin
@@ -74,15 +74,17 @@ return packer.startup(function(use)
 	use({ "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" })
 
 	-- snippets
-	use({ "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" }) --snippet engine
-	use({ "rafamadriz/friendly-snippets", commit = "2be79d8a9b03d4175ba6b3d14b082680de1b31b1" }) -- a bunch of snippets to use
+	-- use({ "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" }) --snippet engine
+	use "L3MON4D3/LuaSnip" --snippet engine
+	-- use({ "rafamadriz/friendly-snippets", commit = "2be79d8a9b03d4175ba6b3d14b082680de1b31b1" }) -- a bunch of snippets to use
+	use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
 	-- LSP
-	use({ "neovim/nvim-lspconfig" }) -- enable LSP
-	use({ "williamboman/mason.nvim" })
-	use({ "williamboman/mason-lspconfig.nvim" })
-	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
-	use({ "RRethy/vim-illuminate" })
+	use "neovim/nvim-lspconfig"  -- enable LSP
+	use "williamboman/mason.nvim"
+	use "williamboman/mason-lspconfig.nvim"
+	use "jose-elias-alvarez/null-ls.nvim"  -- for formatters and linters
+	use "RRethy/vim-illuminate"
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" })

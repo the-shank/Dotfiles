@@ -3,7 +3,6 @@ if not status_ok then
 	return
 end
 project.setup({
-
 	-- detection_methods = { "lsp", "pattern" }, -- NOTE: lsp detection will get annoying with multiple langs in one project
 	detection_methods = { "pattern" },
 
