@@ -10,6 +10,7 @@ local servers = {
 	"yamlls",
     "clangd",
     "rust_analyzer",
+    "solidity",
 }
 
 local settings = {
