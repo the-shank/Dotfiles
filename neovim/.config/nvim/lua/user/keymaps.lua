@@ -99,3 +99,16 @@ keymap("n", "<leader>4", "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", opts)
 
 -- reload colorscheme
 keymap("n", "<leader>cs", ":source ~/.config/nvim/lua/user/colorscheme.lua<cr>", opts)
+
+-- toggle quickfix list
+-- ref: https://github.com/ChristianChiarulli/lvim/blob/master/lua/user/keymaps.lua
+vim.cmd [[
+  function! QuickFixToggle()
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+      copen
+    else
+      cclose
+    endif
+  endfunction
+]]
+keymap("n", "<M-q>", ":call QuickFixToggle()<cr>", opts)
