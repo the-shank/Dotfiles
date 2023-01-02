@@ -50,8 +50,8 @@ bindsym $mod+y border pixel 4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font xft:Noto Sans Bold 11
-font xft:Rubik Bold 11, FontAwesome 11
-font pango:Rubik 11, FontAwesome 11
+font xft:Rubik, FontAwesome Medium 11
+font pango:Rubik, FontAwesome Bold 12
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -68,6 +68,7 @@ bindsym $mod+q kill
 # start program launcher
 bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
 bindsym $alt+space exec rofi -lines 12 -padding 18 -width 30 -location 0 -show combi -sidebar-mode -font 'Rubik 14' -show-icons -matching fuzzy
+bindsym $alt+period exec rofi -lines 12 -padding 18 -width 30 -location 0 -show emoji -modi emoji
 bindsym $mod+Tab exec rofi -lines 12 -padding 18 -width 30 -location 0 -show window -sidebar-mode -font 'Rubik 14' -show-icons -matching fuzzy
 
 # dictionary
@@ -84,7 +85,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 #bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id pa-applet
-bindsym $mod+Ctrl+m exec pavucontrol
+bindsym $mod+Ctrl+p exec pavucontrol
 
 ################################################################################################
 
@@ -278,7 +279,7 @@ for_window [window_role="pop-up"] floating enable
 assign [class="Gnome-boxes|VirtualBox Manager"] $ws4
 assign [class="Zotero"] $ws7
 assign [class="discord"] $ws8
-# assign [class="WorkFlowy"] $ws9
+assign [class="WorkFlowy"] $ws9
 assign [class="obsidian"] $ws10
 
 # switch to workspace with urgent window automatically
@@ -415,6 +416,7 @@ exec --no-startup-id i3-msg 'exec firefox -P shank.default'
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
+    font pango: Iosevka, FontAwesome Medium 12
 	i3bar_command i3bar
 	# status_command i3status
 	status_command /usr/bin/i3status-rs
@@ -524,7 +526,7 @@ exec_always --no-startup-id xset r rate 300 45
 # map caps to escape
 exec_always --no-startup-id /bin/bash -c "setxkbmap -option caps:escape"
 
-# keybinding: Move workspace to the next display
+# move workspace to the next display
 bindsym $mod+Shift+Tab move workspace to output left
 # bindsym $mod+Shift+Tab move workspace to output up
 
@@ -547,13 +549,18 @@ set $i3l vstack to workspace $ws10
 bindsym $mod+Shift+t exec i3l tabbed
 bindsym $mod+Shift+v exec i3l vstack
 
-# keybinding: "promoting" the focussed window
+# "promoting" the focussed window
 bindsym $mod+p exec --no-startup-id ~/.local/bin/i3_promote_window.py
 
-# keybinding: alt+tab to focus last window
+# focus last window
 bindsym $alt+Tab workspace back_and_forth
 
-# keybinding: variety - next and previous wallpapers
+# choose monitor
+# ref: https://thomasdegraaff.eu/notes/2022/05/06/i3-choose-monitors/
+bindsym $mod+Ctrl+m exec xrandr --auto && arandr
+
+# variety
+exec --no-startup-id variety
 bindsym $mod+$alt+n exec --no-startup-id variety --next
 bindsym $mod+$alt+p exec --no-startup-id variety --previous
 bindsym $mod+$alt+t exec --no-startup-id variety --trash
@@ -562,11 +569,8 @@ bindsym $mod+$alt+f exec --no-startup-id variety --favorite
 # battery notifications
 exec --no-startup-id i3-battery-popup -n -t 10m -m "battery low!" -L 25 -l 15 &
 
-# variety - wallpaper switcher
-exec --no-startup-id variety
-
 # start picom
-exec_always --no-startup-id picom -CGb --no-fading-openclose --no-fading-destroyed-argb -D 1
+# exec_always --no-startup-id picom -CGb --no-fading-openclose --no-fading-destroyed-argb -D 1
 
 # assign outputs to displays
 set $laptop eDP

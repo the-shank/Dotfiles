@@ -1,6 +1,7 @@
 local servers = {
 	"bashls",
 	"cssls",
+    "hls",
 	"html",
 	"jsonls",
 	"pyright",
@@ -9,6 +10,7 @@ local servers = {
 	"yamlls",
     "clangd",
     "rust_analyzer",
+    "solidity",
 }
 
 local settings = {
@@ -42,12 +44,6 @@ for _, server in pairs(servers) do
 		on_attach = require("user.lsp.handlers").on_attach,
 		capabilities = require("user.lsp.handlers").capabilities,
 	}
-
-    -- encoding related error with clangd and null-ls
-    -- refer: https://www.reddit.com/r/neovim/comments/wmj8kb/comment/ik3xvqa/?utm_source=share&utm_medium=web2x&context=3
-    if server == "clangd" then
-        opts.capabilities.offsetEncoding = "utf-8"
-    end
 
 	server = vim.split(server, "@")[1]
 

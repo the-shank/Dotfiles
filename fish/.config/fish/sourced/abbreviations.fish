@@ -19,12 +19,12 @@ abbr -a -g mkp 'mkdir -p'      # auto nesting
 abbr -a -g cp 'cp -av'         # cp verbose mode by default
 abbr -a -g cpr 'cp -Rav'       # recursive
 # abbr -a -g rm 'rm -Irf'        # recursive and force
-if type -q trash
-    abbr -a -g rm trash
-end
-if type -q trach-cli
-    abbr -a -g rm trash-cli
-end
+# if type -q trash
+#     abbr -a -g rm trash
+# end
+# if type -q trach-cli
+#     abbr -a -g rm trash-cli
+# end
 abbr -a -g duh 'du -h'         # list disk usage for all files in ./
 abbr -a -g dush 'du -sh'       # list total disk usage of ./
 abbr -a -g chx 'chmod +x'      # make it executable
@@ -120,6 +120,7 @@ abbr -a -g ga 'git add'
 abbr -a -g grh 'git reset HEAD'
 abbr -a -g grhh 'git reset HEAD --hard'
 abbr -a -g lg 'lazygit'
+abbr -a -g gcb 'git checkout -b'
 
 # docker
 abbr -a -g d docker
@@ -206,3 +207,8 @@ abbr -a -g zj zellij
 # dev_containers
 abbr -a -g dcla "docker container ls -a | rg --ignore-case dc_ | awk '{print \$NF}'"
 abbr -a -g dcl "docker container ls | rg --ignore-case dc_ | awk '{print \$NF}'"
+
+# colorschemes for the terminal
+# mnemonic - colorscheme dark / light
+abbr -a -g csd 'base16-tomorrow-night-eighties && sd -s "vim.opt.background = \"light\"" "vim.opt.background = \"dark\"" ~/.config/nvim/lua/user/colorscheme.lua'
+abbr -a -g csl 'base16-gruvbox-light-medium && sd -s "vim.opt.background = \"dark\"" "vim.opt.background = \"light\"" ~/.config/nvim/lua/user/colorscheme.lua'
