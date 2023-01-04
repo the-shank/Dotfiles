@@ -199,7 +199,7 @@ abbr -a -g cdpi "cat $HOME/.xsession | rg --ignore-case dpi="
 
 # keyboard
 abbr -a -g c2e "setxkbmap -option caps:escape"
-abbr -a -g krr "xset r rate 300 45"
+abbr -a -g krr "xset r rate 250 50"
 
 # Applications
 abbr -a -g zj zellij

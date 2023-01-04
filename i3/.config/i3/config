@@ -521,7 +521,7 @@ mode "$mode_gaps_outer" {
 # popup_during_fullscreen smart
 
 # Configure keyboard repeat speed
-exec_always --no-startup-id xset r rate 300 45
+exec_always --no-startup-id xset r rate 250 50
 
 # map caps to escape
 exec_always --no-startup-id /bin/bash -c "setxkbmap -option caps:escape"
