@@ -47,6 +47,7 @@ abbr -a -g yr 'cal -y'
 # abbr -a -g conda-enable 'eval /home/shank/Applications/miniconda3/bin/conda "shell.fish" "hook" | source'
 abbr -a -g conda-enable 'eval /opt/miniconda3/bin/conda "shell.fish" "hook" | source'
 abbr -a -g mo 'cal -m'
+abbr -a -g mo3 'cal -3'
 # abbr -a -g diff 'diff --side-by-side'
 
 # redshift
