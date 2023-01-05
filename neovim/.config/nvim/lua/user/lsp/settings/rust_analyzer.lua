@@ -7,6 +7,9 @@ return {
                     enable = true,
                 },
             },
+            cargo = {
+                allFeatures = true,
+            }
         },
     },
 }
