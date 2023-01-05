@@ -112,3 +112,6 @@ vim.cmd [[
   endfunction
 ]]
 keymap("n", "<M-q>", ":call QuickFixToggle()<cr>", opts)
+
+-- quick save
+keymap("n", "<leader>w", ":w<cr>", opts)
