@@ -115,3 +115,6 @@ keymap("n", "<M-q>", ":call QuickFixToggle()<cr>", opts)
 
 -- quick save
 keymap("n", "<leader>w", ":w<cr>", opts)
+
+-- vsplit
+keymap("n", "<leader>v", ":vsplit<cr>", opts)
