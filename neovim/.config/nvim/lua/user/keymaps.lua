@@ -62,6 +62,7 @@ keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>fo", ":Telescope lsp_document_symbols<CR>", opts)
 keymap("n", "<leader>fO", ":Telescope lsp_workspace_symbols<CR>", opts)
+keymap("n", "<leader>c", ":Telescope commands<CR>", opts)
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
@@ -98,7 +99,7 @@ keymap("n", "<leader>3", "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", opts)
 keymap("n", "<leader>4", "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", opts)
 
 -- reload colorscheme
-keymap("n", "<leader>cs", ":source ~/.config/nvim/lua/user/colorscheme.lua<cr>", opts)
+keymap("n", "<leader>C", ":source ~/.config/nvim/lua/user/colorscheme.lua<cr>", opts)
 
 -- toggle quickfix list
 -- ref: https://github.com/ChristianChiarulli/lvim/blob/master/lua/user/keymaps.lua
