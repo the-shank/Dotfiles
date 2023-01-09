@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# NOTE:
+# this script is used to fix mimetype associations, which somehow keep getting
+# messed up and set to chromium.desktop for my arch linux install ¯\_(ツ)_/¯
+
+# usage: set_default(mimetype, app)
+function set_default() {
+    # if 2 args are not provided, display error message and exit
+    if [ $# -ne 2 ]; then
+        echo "Error: incorrect number of arguments provided"
+        echo "Usage: set_default(mimetype, app)"
+        exit 1
+    fi
+
+    mimetype=$1
+    app=$2
+    xdg-mime default "$app" "$mimetype"
+}
+
+# web stuff
+set_default "x-scheme-handler/http" "firefox.desktop"
+set_default "x-scheme-handler/https" "firefox.desktop"
+set_default "text/html" "firefox.desktop"
+
+# images
+set_default "image/jpeg" "org.xfce.ristretto.desktop"
+set_default "image/png" "org.xfce.ristretto.desktop"
