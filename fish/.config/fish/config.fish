@@ -133,8 +133,6 @@ if type -q direnv
     eval (direnv hook fish)
 end
 
-
-
 ### FUNCTIONS ###
 # Fish command history
 function history
@@ -508,5 +506,3 @@ test -e ~/.asdf/asdf.fish; and source ~/.asdf/asdf.fish
 
 # set colorterm to get helix to work
 set --export COLORTERM truecolor
-
-set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/shank/.ghcup/bin # ghcup-env
