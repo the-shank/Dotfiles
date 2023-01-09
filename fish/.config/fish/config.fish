@@ -60,6 +60,7 @@ end
 # sets tools
 set --export EDITOR nvim
 set --export VISUAL nvim
+set --export BROWSER firefox
 # Sets the terminal type for proper colors
 # set TERM "xterm-256color"
 
