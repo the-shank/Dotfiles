@@ -117,7 +117,16 @@ return packer.startup(function(use)
 	use("ThePrimeagen/vim-be-good")
 
 	-- Tagbar
-	use("preservim/tagbar")
+	-- use("preservim/tagbar")
+	use({
+        "simrat39/symbols-outline.nvim",
+        event = "VimEnter",
+		config = function()
+			vim.defer_fn(function()
+				require("symbols-outline").setup()
+			end, 100)
+		end,
+    })
 
 	-- Harpoon (primarily for marks)
 	use("ThePrimeagen/harpoon")

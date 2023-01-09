@@ -87,8 +87,11 @@ keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opt
 keymap("v", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
 
 -- Tagbar
-keymap("n", "<leader>to", "<cmd>TagbarOpen fj<cr>", opts)
-keymap("n", "<leader>tq", "<cmd>TagbarClose<cr>", opts)
+-- keymap("n", "<leader>to", "<cmd>TagbarOpen fj<cr>", opts)
+-- keymap("n", "<leader>tq", "<cmd>TagbarClose<cr>", opts)
+
+-- Symbols Outline (replacing tagbar for me)
+keymap("n", "<leader>o", "<cmd>SymbolsOutline<cr>", opts)
 
 -- Harpoon
 keymap("n", "<leader>ma", "<cmd>lua require('harpoon.mark').add_file()<cr>", opts)
@@ -114,8 +117,9 @@ vim.cmd [[
 ]]
 keymap("n", "<M-q>", ":call QuickFixToggle()<cr>", opts)
 
--- quick save
+-- quick save, quick quit
 keymap("n", "<leader>w", ":w<cr>", opts)
+keymap("n", ";q", ":q<cr>", opts)
 
 -- vsplit
 keymap("n", "<leader>v", ":vsplit<cr>", opts)
