@@ -41,3 +41,6 @@ vim.opt.whichwrap:append("<,>,[,],h,l")         -- keys allowed to move to the p
 vim.opt.iskeyword:append("-")                   -- treats words with `-` as single words
 vim.opt.formatoptions:remove({ "c", "r", "o" }) -- This is a sequence of letters which describes how automatic formatting is to be done
 vim.opt.linebreak = true
+vim.opt.foldenable = false                      -- dont fold complete files by default
+vim.opt.foldmethod = "expr"                     -- use treesitter expressions as foldmethod
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- use treesitter expressions as foldmethod

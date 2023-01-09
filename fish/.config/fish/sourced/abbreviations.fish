@@ -47,6 +47,7 @@ abbr -a -g yr 'cal -y'
 # abbr -a -g conda-enable 'eval /home/shank/Applications/miniconda3/bin/conda "shell.fish" "hook" | source'
 abbr -a -g conda-enable 'eval /opt/miniconda3/bin/conda "shell.fish" "hook" | source'
 abbr -a -g mo 'cal -m'
+abbr -a -g mo3 'cal -3'
 # abbr -a -g diff 'diff --side-by-side'
 
 # redshift
@@ -120,6 +121,7 @@ abbr -a -g ga 'git add'
 abbr -a -g grh 'git reset HEAD'
 abbr -a -g grhh 'git reset HEAD --hard'
 abbr -a -g lg 'lazygit'
+abbr -a -g gcb 'git checkout -b'
 
 # docker
 abbr -a -g d docker
@@ -198,7 +200,7 @@ abbr -a -g cdpi "cat $HOME/.xsession | rg --ignore-case dpi="
 
 # keyboard
 abbr -a -g c2e "setxkbmap -option caps:escape"
-abbr -a -g krr "xset r rate 300 45"
+abbr -a -g krr "xset r rate 250 50"
 
 # Applications
 abbr -a -g zj zellij
@@ -206,3 +208,8 @@ abbr -a -g zj zellij
 # dev_containers
 abbr -a -g dcla "docker container ls -a | rg --ignore-case dc_ | awk '{print \$NF}'"
 abbr -a -g dcl "docker container ls | rg --ignore-case dc_ | awk '{print \$NF}'"
+
+# colorschemes for the terminal
+# mnemonic - colorscheme dark / light
+abbr -a -g csd 'base16-tomorrow-night-eighties && sd -s "vim.opt.background = \"light\"" "vim.opt.background = \"dark\"" ~/.config/nvim/lua/user/colorscheme.lua'
+abbr -a -g csl 'base16-gruvbox-light-medium && sd -s "vim.opt.background = \"dark\"" "vim.opt.background = \"light\"" ~/.config/nvim/lua/user/colorscheme.lua'

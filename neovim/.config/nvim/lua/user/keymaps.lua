@@ -62,6 +62,7 @@ keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>fo", ":Telescope lsp_document_symbols<CR>", opts)
 keymap("n", "<leader>fO", ":Telescope lsp_workspace_symbols<CR>", opts)
+keymap("n", "<leader>c", ":Telescope commands<CR>", opts)
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
@@ -83,6 +84,7 @@ keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 -- Lsp
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+keymap("v", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
 
 -- Tagbar
 keymap("n", "<leader>to", "<cmd>TagbarOpen fj<cr>", opts)
@@ -95,3 +97,25 @@ keymap("n", "<leader>1", "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", opts)
 keymap("n", "<leader>2", "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", opts)
 keymap("n", "<leader>3", "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", opts)
 keymap("n", "<leader>4", "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", opts)
+
+-- reload colorscheme
+keymap("n", "<leader>C", ":source ~/.config/nvim/lua/user/colorscheme.lua<cr>", opts)
+
+-- toggle quickfix list
+-- ref: https://github.com/ChristianChiarulli/lvim/blob/master/lua/user/keymaps.lua
+vim.cmd [[
+  function! QuickFixToggle()
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+      copen
+    else
+      cclose
+    endif
+  endfunction
+]]
+keymap("n", "<M-q>", ":call QuickFixToggle()<cr>", opts)
+
+-- quick save
+keymap("n", "<leader>w", ":w<cr>", opts)
+
+-- vsplit
+keymap("n", "<leader>v", ":vsplit<cr>", opts)

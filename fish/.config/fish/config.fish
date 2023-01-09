@@ -492,7 +492,7 @@ fish_add_path $HOME/Applications/aflplusplus/bin
 fish_add_path $HOME/Applications/aflplusplus/usr/local/bin
 fish_add_path $HOME/.npm-global/bin
 fish_add_path $HOME/Applications/ghidra
-fish_add_path $HOME/Applications/llvm-13-release/bin
+# fish_add_path $HOME/Applications/llvm-13-release/bin
 fish_add_path $HOME/Applications/udocker
 
 # custom env vars
@@ -508,3 +508,5 @@ test -e ~/.asdf/asdf.fish; and source ~/.asdf/asdf.fish
 
 # set colorterm to get helix to work
 set --export COLORTERM truecolor
+
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/shank/.ghcup/bin # ghcup-env

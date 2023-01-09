@@ -1,7 +1,6 @@
 local servers = {
 	"bashls",
 	"cssls",
-    "hls",
 	"html",
 	"jsonls",
 	"pyright",
@@ -10,6 +9,7 @@ local servers = {
 	"yamlls",
     "clangd",
     "rust_analyzer",
+    "solidity",
 }
 
 local settings = {
