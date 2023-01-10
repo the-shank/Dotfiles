@@ -18,6 +18,61 @@ dap_install.setup({})
 dap_install.config("python", {})
 -- add other configs here
 
+-- rust (start)
+dap.adapters.codelldb = {
+	type = "server",
+	port = "${port}",
+	executable = {
+		command = "/usr/bin/codelldb",
+		args = { "--port", "${port}" },
+	},
+}
+
+dap.adapters.lldb = {
+	type = "executable",
+	command = "/usr/bin/lldb-vscode",
+	name = "lldb",
+}
+
+local codelldb = {
+	name = "Rust debug (codelldb)",
+	type = "codelldb",
+	request = "launch",
+	program = function()
+		return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/target/debug/", "file")
+	end,
+	-- program = function()
+	-- 	vim.fn.jobstart({ "cargo", "build" }, {
+	-- 		on_exit = function(_, code)
+	-- 			if code == 0 then
+	-- 				return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/target/debug/", "file")
+	-- 			end
+	-- 		end,
+	-- 	})
+	-- end,
+	cwd = "${workspaceFolder}",
+	stopOnEntry = true,
+	showDisassembly = "never",
+}
+
+local lldb = {
+	name = "Rust debug (lldb)",
+	type = "lldb",
+	request = "launch",
+	program = function()
+		return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/target/debug", "file")
+	end,
+	cwd = "${workspaceFolder}",
+	stopOnEntry = true,
+	showdisassembly = "never",
+}
+
+dap.configurations.rust = {
+	codelldb,
+    lldb,
+}
+-- rust (end)
+
 dapui.setup({
 	expand_lines = true,
 	icons = { expanded = "", collapsed = "", circular = "" },
