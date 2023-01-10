@@ -119,14 +119,14 @@ return packer.startup(function(use)
 	-- Tagbar
 	-- use("preservim/tagbar")
 	use({
-        "simrat39/symbols-outline.nvim",
-        event = "VimEnter",
+		"simrat39/symbols-outline.nvim",
+		event = "VimEnter",
 		config = function()
 			vim.defer_fn(function()
 				require("symbols-outline").setup()
 			end, 100)
 		end,
-    })
+	})
 
 	-- Harpoon (primarily for marks)
 	use("ThePrimeagen/harpoon")
@@ -138,6 +138,14 @@ return packer.startup(function(use)
 		config = function()
 			require("nvim-surround").setup({
 				-- Configuration here, or leave empty to use defaults
+			})
+		end,
+	})
+	use({
+		"notjedi/nvim-rooter.lua",
+		config = function()
+			require("nvim-rooter").setup({
+				rooter_patterns = { ".git", ".rooter", "Cargo.toml" },
 			})
 		end,
 	})
