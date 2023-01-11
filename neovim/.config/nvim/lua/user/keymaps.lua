@@ -56,7 +56,12 @@ keymap("v", ">", ">gv", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
-keymap("n", "<leader>ff", ":Telescope find_files find_command=fd,--hidden,--ignore-case,--follow,--strip-cwd-prefix,--exclude,.git/,--exclude,.cache/<CR>", opts)
+keymap(
+	"n",
+	"<leader>ff",
+	":Telescope find_files find_command=fd,--hidden,--ignore-case,--follow,--strip-cwd-prefix,--exclude,.git/,--exclude,.cache/<CR>",
+	opts
+)
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
@@ -106,7 +111,7 @@ keymap("n", "<leader>C", ":source ~/.config/nvim/lua/user/colorscheme.lua<cr>", 
 
 -- toggle quickfix list
 -- ref: https://github.com/ChristianChiarulli/lvim/blob/master/lua/user/keymaps.lua
-vim.cmd [[
+vim.cmd([[
   function! QuickFixToggle()
     if empty(filter(getwininfo(), 'v:val.quickfix'))
       copen
@@ -114,12 +119,12 @@ vim.cmd [[
       cclose
     endif
   endfunction
-]]
+]])
 keymap("n", "<M-q>", ":call QuickFixToggle()<cr>", opts)
 
 -- quick save, quick quit
 keymap("n", "<leader>w", ":w<cr>", opts)
-keymap("n", ";q", ":q<cr>", opts)
+-- keymap("n", ";q", ":q<cr>", opts) -- disabled since it introduces delay in repeat action (;)
 
 -- vsplit
 keymap("n", "<leader>v", ":vsplit<cr>", opts)
