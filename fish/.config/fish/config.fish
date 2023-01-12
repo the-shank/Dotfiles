@@ -61,8 +61,9 @@ end
 set --export EDITOR nvim
 set --export VISUAL nvim
 set --export BROWSER firefox
+
 # Sets the terminal type for proper colors
-# set TERM "xterm-256color"
+set --export TERM "xterm-256color"
 
 # Suppresses fish's intro message
 # set fish_greeting
