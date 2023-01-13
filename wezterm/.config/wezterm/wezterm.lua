@@ -6,7 +6,7 @@ return {
 		-- weight = "Medium"
 	}),
 	font_size = 12,
-	color_scheme = "nordfox",
+	color_scheme = "Decaf (base16)",
 	window_frame = {
 		font_size = 11,
 	},
