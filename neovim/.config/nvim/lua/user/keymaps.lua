@@ -128,3 +128,9 @@ keymap("n", "<leader>w", ":w<cr>", opts)
 
 -- vsplit
 keymap("n", "<leader>v", ":vsplit<cr>", opts)
+
+-- center search results
+keymap("n", "n", "nzz", opts)
+keymap("n", "N", "Nzz", opts)
+keymap("n", "*", "*zz", opts)
+keymap("n", "#", "#zz", opts)
