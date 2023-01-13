@@ -57,7 +57,8 @@ font pango:Rubik, FontAwesome Bold 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+# bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec wezterm
 
 # start a file explorer
 bindsym $mod+Shift+Return exec thunar
