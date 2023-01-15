@@ -25,6 +25,7 @@ interval = 30
 block = "cpu"
 format = "{utilization} ({frequency})"
 interval = 3
+on_click = "wezterm start htop"
 
 [[block]]
 block = "memory"
@@ -42,6 +43,7 @@ critical_swap = 75.0
 
 [[block]]
 block = "sound"
+on_click = "pavucontrol"
 
 [[block]]
 block = "time"
