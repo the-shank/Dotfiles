@@ -18,8 +18,8 @@ end, { silent = true })
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup({
-    sync_root_with_cwd = true,
-    update_cwd = true,
+	sync_root_with_cwd = true,
+	update_cwd = true,
 	update_focused_file = {
 		enable = true,
 		update_cwd = false,
@@ -72,5 +72,12 @@ nvim_tree.setup({
 				{ key = "v", cb = tree_cb("vsplit") },
 			},
 		},
+	},
+	git = {
+		enable = true,
+		ignore = false,
+		show_on_dirs = true,
+		show_on_open_dirs = true,
+		timeout = 400,
 	},
 })
