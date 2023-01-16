@@ -5,8 +5,10 @@ icons = "awesome"
 # block = "pomodoro"
 # notifier = "notifysend"
 
-# [[block]]
-# block = "focused_window"
+[[block]]
+block = "focused_window"
+max_width = 50
+format = "{title}"
 
 [[block]]
 block = "net"
