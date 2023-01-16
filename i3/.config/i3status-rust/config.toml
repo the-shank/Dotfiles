@@ -38,6 +38,7 @@ format_swap = "{swap_used}"
 warning_mem = 80.0
 warning_swap = 50.0
 critical_swap = 75.0
+on_click = "wezterm start htop"
 
 # [[block]]
 # block = "load"
