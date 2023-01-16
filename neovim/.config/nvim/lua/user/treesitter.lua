@@ -79,4 +79,9 @@ configs.setup({
 			},
 		},
 	},
+
+	-- vim-matchup
+	matchup = {
+		enable = true,
+	},
 })
