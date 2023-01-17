@@ -64,9 +64,9 @@ keymap(
 )
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
-keymap("n", "<leader>fb", ":Telescope buffers sort_lastused=true<CR>", opts)
+keymap("n", "<leader>fb", ":Telescope buffers sort_mru=true<CR>", opts)
 keymap("n", "<leader>fo", ":Telescope lsp_document_symbols<CR>", opts)
-keymap("n", "<leader>fO", ":Telescope lsp_dynamic_workspace_symbols ignore_filename=true<CR>", opts)
+keymap("n", "<leader>fO", ":Telescope lsp_dynamic_workspace_symbols<CR>", opts)
 keymap("n", "<leader>c", ":Telescope commands<CR>", opts)
 
 -- Git
