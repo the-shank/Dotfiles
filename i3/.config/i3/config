@@ -419,7 +419,8 @@ exec --no-startup-id i3-msg 'exec firefox -P shank.default'
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-    font pango: Iosevka Nerd Font, FontAwesome Medium 11
+    # font pango: Iosevka Nerd Font, FontAwesome Medium 12
+    font pango: Noto Sans, FontAwesome Medium 12
 	i3bar_command i3bar
 	# status_command i3status
 	status_command /usr/bin/i3status-rs
