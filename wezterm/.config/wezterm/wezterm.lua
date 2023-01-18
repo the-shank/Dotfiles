@@ -1,12 +1,16 @@
 local wezterm = require("wezterm")
 
 return {
+	-- font
 	font = wezterm.font("Iosevka Nerd Font", {
 		weight = "Regular",
 		-- weight = "Medium"
 	}),
 	font_size = 12,
+	line_height = 1.05,
+	-- color
 	color_scheme = "Decaf (base16)",
+	-- window
 	window_frame = {
 		font_size = 11,
 	},
