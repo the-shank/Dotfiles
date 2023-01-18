@@ -207,7 +207,7 @@ abbr -a -g pli "pamac list --installed"
 
 # misc
 abbr -a -g asanopts "ASAN_OPTIONS=\"detect_leaks=0:abort_on_error=1:symbolize=1:handle_abort=1\""
-abbr -a -g cdpi "cat $HOME/.xsession | rg --ignore-case dpi="
+abbr -a -g dpi\? "cat $HOME/.xsession | rg --ignore-case dpi="
 
 # keyboard
 abbr -a -g c2e "setxkbmap -option caps:escape"
@@ -225,3 +225,6 @@ abbr -a -g dcl "docker container ls | rg --ignore-case dc_ | awk '{print \$NF}'"
 # mnemonic - colorscheme dark / light
 abbr -a -g csd 'base16-tomorrow-night-eighties && sd -s "vim.opt.background = \"light\"" "vim.opt.background = \"dark\"" ~/.config/nvim/lua/user/colorscheme.lua'
 abbr -a -g csl 'base16-gruvbox-light-medium && sd -s "vim.opt.background = \"dark\"" "vim.opt.background = \"light\"" ~/.config/nvim/lua/user/colorscheme.lua'
+
+# pacman/paru aliases
+abbr -a -g owns\? "paru --query --owns"    # <path/to/file>
