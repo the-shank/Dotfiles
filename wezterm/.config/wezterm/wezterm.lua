@@ -17,8 +17,8 @@ return {
 	hide_tab_bar_if_only_one_tab = true,
 	-- tab_bar_at_bottom = true,
 	window_padding = {
-		left = 2,
-		right = 2,
+		left = 5,
+		right = 5,
 		top = 2,
 		bottom = 2,
 	},
