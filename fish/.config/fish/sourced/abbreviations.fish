@@ -216,6 +216,7 @@ abbr -a -g fk "xset r rate 250 50; setxkbmap -option caps:escape"  # fix keyboar
 
 # Applications
 abbr -a -g zj zellij
+abbr -a -g j just
 
 # dev_containers
 abbr -a -g dcla "docker container ls -a | rg --ignore-case dc_ | awk '{print \$NF}'"
