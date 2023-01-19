@@ -93,6 +93,7 @@ return packer.startup(function(use)
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use("nvim-treesitter/nvim-treesitter-context")
 	use("nvim-treesitter/nvim-treesitter-textobjects")
+	use("IndianBoy42/tree-sitter-just")
 
 	-- matching paris (brackets, function start/end etc.)
 	use("andymass/vim-matchup")
