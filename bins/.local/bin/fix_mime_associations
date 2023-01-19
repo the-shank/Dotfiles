@@ -26,3 +26,6 @@ set_default "text/html" "firefox.desktop"
 # images
 set_default "image/jpeg" "org.xfce.ristretto.desktop"
 set_default "image/png" "org.xfce.ristretto.desktop"
+
+# pdf
+set_default "application/pdf" "org.gnome.Evince.desktop"
