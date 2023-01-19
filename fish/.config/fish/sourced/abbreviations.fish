@@ -208,6 +208,7 @@ abbr -a -g pli "pamac list --installed"
 # misc
 abbr -a -g asanopts "ASAN_OPTIONS=\"detect_leaks=0:abort_on_error=1:symbolize=1:handle_abort=1\""
 abbr -a -g dpi\? "cat $HOME/.xsession | rg --ignore-case dpi="
+abbr -a -g jb "just build"
 
 # keyboard
 abbr -a -g c2e "setxkbmap -option caps:escape"
