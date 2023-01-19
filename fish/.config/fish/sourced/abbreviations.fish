@@ -209,6 +209,7 @@ abbr -a -g pli "pamac list --installed"
 abbr -a -g asanopts "ASAN_OPTIONS=\"detect_leaks=0:abort_on_error=1:symbolize=1:handle_abort=1\""
 abbr -a -g dpi\? "cat $HOME/.xsession | rg --ignore-case dpi="
 abbr -a -g nf "neofetch"
+abbr -a -g jb "just build"
 
 # keyboard
 abbr -a -g c2e "setxkbmap -option caps:escape"
@@ -217,6 +218,7 @@ abbr -a -g fk "xset r rate 250 50; setxkbmap -option caps:escape"  # fix keyboar
 
 # Applications
 abbr -a -g zj zellij
+abbr -a -g j just
 
 # dev_containers
 abbr -a -g dcla "docker container ls -a | rg --ignore-case dc_ | awk '{print \$NF}'"
