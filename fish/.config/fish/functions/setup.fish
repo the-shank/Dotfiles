@@ -23,7 +23,7 @@ function setup --description "sets up the environment variables and all"
         and _export GOPATH "$HOME/code/go"
 
     # rust: enable backtrace
-    _export RUST_BACKTRACE 1
+    _export RUST_BACKTRACE full
 
     # editor
     if type --quiet nvim
