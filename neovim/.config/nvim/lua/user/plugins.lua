@@ -113,7 +113,7 @@ return packer.startup(function(use)
 		config = function()
 			vim.defer_fn(function()
 				require("copilot").setup({
-					suggestion = { auto_trigger = true },
+					suggestion = { auto_trigger = false },
 				})
 			end, 100)
 		end,
@@ -160,6 +160,15 @@ return packer.startup(function(use)
 	use({
 		"folke/trouble.nvim",
 		requires = "kyazdani42/nvim-web-devicons",
+	})
+
+	-- todo items
+	use({
+		"folke/todo-comments.nvim",
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("todo-comments").setup({})
+		end,
 	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
