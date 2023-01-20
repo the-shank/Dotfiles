@@ -9,7 +9,8 @@ return {
 	font_size = 12,
 	line_height = 1.05,
 	-- color
-	color_scheme = "Decaf (base16)",
+	-- color_scheme = "Decaf (base16)",
+	color_scheme = "tokyonight-storm",
 	-- window
 	window_frame = {
 		font_size = 11,
