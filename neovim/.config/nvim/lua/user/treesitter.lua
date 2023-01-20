@@ -66,7 +66,7 @@ configs.setup({
 			-- * query_string: eg '@function.inner'
 			-- * selection_mode: eg 'v'
 			-- and should return true of false
-			include_surrounding_whitespace = true,
+			include_surrounding_whitespace = false,
 		},
 
 		lsp_interop = {
