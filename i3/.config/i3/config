@@ -92,8 +92,10 @@ bindsym $mod+Ctrl+p exec pavucontrol
 ################################################################################################
 
 # Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+# bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; notify-send 'brightness up'"
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 5"
+# bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send 'brightness down'"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 5"
 
 # Kyebindings to launch Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
@@ -362,7 +364,7 @@ bindsym $mod+9 exec --no-startup-id blurlock
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 exec --no-startup-id pamac-tray
-exec --no-startup-id xfce4-power-manager &
+# exec --no-startup-id xfce4-power-manager &
 exec --no-startup-id xfce4-clipman &
 exec_always --no-startup-id greenclip daemon &
 # exec --no-startup-id blueman-applet
