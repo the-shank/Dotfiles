@@ -5,3 +5,4 @@ if not status_ok then
 end
 
 vim.g.matchup_matchparen_offscreen = { method = "popup" }
+vim.g.matchup_matchparen_deferred = 1

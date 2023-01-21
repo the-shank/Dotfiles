@@ -96,7 +96,7 @@ return packer.startup(function(use)
 	use("IndianBoy42/tree-sitter-just")
 
 	-- matching paris (brackets, function start/end etc.)
-	use("andymass/vim-matchup")
+	-- use("andymass/vim-matchup")
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
