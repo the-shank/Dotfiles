@@ -3,13 +3,17 @@ local wezterm = require("wezterm")
 return {
 	-- font
 	-- font = wezterm.font("Iosevka Nerd Font", {
-	font = wezterm.font("NotoSansMono Nerd Font", {
-		weight = "Regular",
+	-- font = wezterm.font("NotoSansMono Nerd Font", {
+	font = wezterm.font("FiraCode Nerd Font", {
+		-- weight = "Regular",
+        weight = 450,
+        -- weight = 475,
 		-- weight = "Medium"
 	}),
-	font_size = 12,
-	-- line_height = 1.1,
+	font_size = 11,
+	line_height = 1.1,
 	-- color
+    -- color_scheme = "Atelier Dune (base16)",
 	color_scheme = "Decaf (base16)",
 	-- color_scheme = "tokyonight-storm",
 	-- window
