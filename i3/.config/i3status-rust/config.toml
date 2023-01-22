@@ -1,67 +1,70 @@
+icons_format = "{icon}"
+
+[theme]
 theme = "modern"
+
+[icons]
 icons = "awesome"
 
 [[block]]
 block = "focused_window"
-max_width = 80
-format = "{title}"
+[block.format]
+full = " $title.str(0,80)  |"
+short = " $title.str(0,40)  |"
 
 [[block]]
 block = "pomodoro"
-notifier = "notifysend"
+notify_cmd = "notifysend '{msg}'"
+blocking_cmd = false
 
-# [[block]]
-# block = "net"
-# interval = 3
+[[block]]
+block = "cpu"
+format = " $icon $utilization ($frequency) "
+interval = 3
+[[block.click]]
+button = "left"
+cmd = "wezterm start htop"
 
 [[block]]
 block = "disk_space"
 path = "/"
 info_type = "available"
-unit = "GB"
+alert_unit = "GB"
 warning = 15.0
-alert = 5.0
+alert = 10.0
 interval = 30
 
 [[block]]
-block = "cpu"
-format = "{utilization} ({frequency})"
-interval = 3
-on_click = "wezterm start htop"
-
-[[block]]
 block = "memory"
-display_type = "memory"
-clickable = false
-format_mem = "{mem_used} / {swap_used}"
-format_swap = "{swap_used}"
+format = " $icon $mem_avail / $mem_total ($icon_swap $swap_used) "
 warning_mem = 80.0
 warning_swap = 50.0
 critical_swap = 75.0
-on_click = "wezterm start htop"
-
-# [[block]]
-# block = "load"
-# interval = 5
+[[button.click]]
+button = "left"
+cmd = "wezterm start htop"
 
 [[block]]
 block = "sound"
-on_click = "pavucontrol"
+driver = "pulseaudio"
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
 
 [[block]]
 block = "time"
-format = "IN: %a %d/%m %R"
-interval = 10
+format = " $icon IND %a %d/%m %R "
+interval = 20
 timezone = "Asia/Kolkata"
 
 [[block]]
 block = "time"
-format = "USA: %a %d/%m %R"
+format = " $icon USA %a %d/%m %R "
 interval = 10
 
 [[block]]
 block = "battery"
-hide_missing = true
+missing_format = ""
 warning = 20
 format = "{percentage} ({time})"
 interval = 15
