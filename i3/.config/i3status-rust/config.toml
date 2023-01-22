@@ -64,7 +64,8 @@ interval = 10
 
 [[block]]
 block = "battery"
+format = " $icon $percentage ($time) "
 missing_format = ""
 warning = 20
-format = "{percentage} ({time})"
+critical = 10
 interval = 15

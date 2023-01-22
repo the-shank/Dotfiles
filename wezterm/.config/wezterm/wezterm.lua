@@ -7,7 +7,6 @@ return {
 	font = wezterm.font("FiraCode Nerd Font", {
 		-- weight = "Regular",
         weight = 450,
-        -- weight = 475,
 		-- weight = "Medium"
 	}),
 	font_size = 11,
