@@ -37,7 +37,7 @@ dap.configurations.rust = {
 		stopOnEntry = false,
 		program = function()
 			-- want it in cmdline, without callback. so fn.input better than ui.input
-			return vim.fn.input("executable: ", vim.fn.getcwd() .. "/target/debug/", "file")
+			return vim.fn.input("executable: ", vim.fn.getcwd() .. "/target/", "file")
 		end,
 	},
 }
