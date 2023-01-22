@@ -7,9 +7,9 @@ local servers = {
 	"sumneko_lua",
 	"tsserver",
 	"yamlls",
-    "clangd",
-    "rust_analyzer",
-    "solidity",
+	"clangd",
+	"rust_analyzer",
+	"solidity",
 }
 
 local settings = {
