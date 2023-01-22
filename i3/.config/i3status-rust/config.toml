@@ -14,16 +14,9 @@ short = " $title.str(0,40)  |"
 
 [[block]]
 block = "pomodoro"
+format = " $icon {$message|} "
 notify_cmd = "notifysend '{msg}'"
 blocking_cmd = false
-
-[[block]]
-block = "cpu"
-format = " $icon $utilization ($frequency) "
-interval = 3
-[[block.click]]
-button = "left"
-cmd = "wezterm start htop"
 
 [[block]]
 block = "disk_space"
@@ -33,6 +26,14 @@ alert_unit = "GB"
 warning = 15.0
 alert = 10.0
 interval = 30
+
+[[block]]
+block = "cpu"
+format = " $icon $utilization ($frequency) "
+interval = 3
+[[block.click]]
+button = "left"
+cmd = "wezterm start htop"
 
 [[block]]
 block = "memory"
