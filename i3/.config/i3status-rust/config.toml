@@ -1,18 +1,18 @@
 theme = "modern"
 icons = "awesome"
 
-# [[block]]
-# block = "pomodoro"
-# notifier = "notifysend"
-
 [[block]]
 block = "focused_window"
 max_width = 80
 format = "{title}"
 
 [[block]]
-block = "net"
-interval = 3
+block = "pomodoro"
+notifier = "notifysend"
+
+# [[block]]
+# block = "net"
+# interval = 3
 
 [[block]]
 block = "disk_space"
