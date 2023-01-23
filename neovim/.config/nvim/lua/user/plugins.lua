@@ -87,7 +87,7 @@ return packer.startup(function(use)
 	use("RRethy/vim-illuminate")
 
 	-- Rust
-	use("simrat39/rust-tools.nvim")
+	-- use("simrat39/rust-tools.nvim")
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
