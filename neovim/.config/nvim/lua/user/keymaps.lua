@@ -59,7 +59,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 keymap(
 	"n",
 	"<leader>ff",
-	":Telescope find_files find_command=fd,--hidden,--ignore-case,--follow,--strip-cwd-prefix,--exclude,.git/,--exclude,.cache/<CR>",
+	":Telescope find_files find_command=fd,--hidden,--ignore-case,--follow,--strip-cwd-prefix,--no-ignore-vcs,--exclude,target/,--exclude,.git/,--exclude,.cache/<CR>",
 	opts
 )
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
