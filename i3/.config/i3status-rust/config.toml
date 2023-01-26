@@ -37,7 +37,7 @@ cmd = "wezterm start htop"
 
 [[block]]
 block = "memory"
-format = " $icon $mem_used  ( $icon_swap $swap_used ) "
+format = " $icon $mem_used  ($icon_swap $swap_used) "
 warning_mem = 80.0
 warning_swap = 50.0
 critical_swap = 75.0
