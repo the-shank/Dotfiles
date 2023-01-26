@@ -13,12 +13,6 @@ full = " $title.str(0,80)  |"
 short = " $title.str(0,40)  |"
 
 [[block]]
-block = "pomodoro"
-format = " $icon {$message|} "
-notify_cmd = "notifysend '{msg}'"
-blocking_cmd = false
-
-[[block]]
 block = "disk_space"
 path = "/"
 info_type = "available"
@@ -37,7 +31,7 @@ cmd = "wezterm start htop"
 
 [[block]]
 block = "memory"
-format = " $icon $mem_used  ( $icon_swap $swap_used ) "
+format = " $icon $mem_used  ($icon_swap $swap_used) "
 warning_mem = 80.0
 warning_swap = 50.0
 critical_swap = 75.0
