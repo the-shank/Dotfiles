@@ -100,12 +100,12 @@ keymap("v", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opt
 keymap("n", "<leader>o", "<cmd>SymbolsOutline<cr>", opts)
 
 -- Harpoon
-keymap("n", "<leader>ma", "<cmd>lua require('harpoon.mark').add_file()<cr>", opts)
-keymap("n", "<leader>ml", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
-keymap("n", "<leader>1", "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", opts)
-keymap("n", "<leader>2", "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", opts)
-keymap("n", "<leader>3", "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", opts)
-keymap("n", "<leader>4", "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", opts)
+-- keymap("n", "<leader>ma", "<cmd>lua require('harpoon.mark').add_file()<cr>", opts)
+-- keymap("n", "<leader>ml", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
+-- keymap("n", "<leader>1", "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", opts)
+-- keymap("n", "<leader>2", "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", opts)
+-- keymap("n", "<leader>3", "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", opts)
+-- keymap("n", "<leader>4", "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", opts)
 
 -- reload colorscheme
 keymap("n", "<leader>C", ":source ~/.config/nvim/lua/user/colorscheme.lua<cr>", opts)
