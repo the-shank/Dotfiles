@@ -69,6 +69,7 @@ keymap("n", "<leader>fo", ":Telescope lsp_document_symbols<CR>", opts)
 keymap("n", "<leader>fO", ":Telescope lsp_dynamic_workspace_symbols<CR>", opts)
 keymap("n", "<leader>fO", ":Telescope lsp_dynamic_workspace_symbols<CR>", opts)
 keymap("n", "<leader>c", ":Telescope commands<CR>", opts)
+keymap("n", "<leader>ml", ":Telescope marks<CR>", opts)
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
