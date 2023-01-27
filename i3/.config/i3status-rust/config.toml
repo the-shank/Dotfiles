@@ -9,8 +9,8 @@ icons = "awesome"
 [[block]]
 block = "focused_window"
 [block.format]
-full = " $title.str(0,80)  |"
-short = " $title.str(0,40)  |"
+full = " $title.str(0,40)  |"
+short = " $title.str(0,20)  |"
 
 [[block]]
 block = "pomodoro"
