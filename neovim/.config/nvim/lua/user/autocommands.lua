@@ -67,9 +67,9 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 
 -- format on save
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-    -- NOTE: dont enable for c++ and c files by default
+	-- NOTE: dont enable for c++ and c files by default
 	pattern = { "*.rs", "*.py", "*.lua", "*.cpp", "*.c" },
 	callback = function()
-		vim.lsp.buf.format({ async = true })
+		vim.lsp.buf.format()
 	end,
 })
