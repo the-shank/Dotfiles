@@ -13,12 +13,6 @@ full = " $title.str(0,40)  |"
 short = " $title.str(0,20)  |"
 
 [[block]]
-block = "pomodoro"
-format = " $icon {$message|} "
-notify_cmd = "notifysend '{msg}'"
-blocking_cmd = false
-
-[[block]]
 block = "disk_space"
 path = "/"
 info_type = "available"
