@@ -138,7 +138,9 @@ return packer.startup(function(use)
 	})
 
 	-- Harpoon (primarily for marks)
-	use("ThePrimeagen/harpoon")
+	-- use("ThePrimeagen/harpoon")
+
+	use("chentoast/marks.nvim")
 
 	-- improvements
 	use({
