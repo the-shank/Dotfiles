@@ -8,7 +8,7 @@ marks.setup({
 	-- whether to map keybinds or not. default true
 	default_mappings = true,
 	-- which builtin marks to show. default {}
-	builtin_marks = { ".", "<", ">", "^" },
+	-- builtin_marks = { ".", "<", ">", "^" }, -- enabling this causes issues in floating windows (eg. hover)
 	-- whether movements cycle back to the beginning/end of buffer. default true
 	cyclic = true,
 	-- whether the shada file is updated after modifying uppercase marks. default false
