@@ -146,3 +146,6 @@ keymap("n", "<leader>tt", "<cmd>TodoTrouble<cr>", opts)
 
 -- Bufferline
 keymap("n", "<leader>bp", "<cmd>BufferLineTogglePin<cr>", opts)
+
+-- jump to marks
+keymap("n", "M", "`")
