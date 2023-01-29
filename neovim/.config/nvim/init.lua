@@ -25,3 +25,4 @@ require("user.trouble")
 -- require "user.vim-matchup"
 -- require "user.rust-tools"
 require("user.marks")
+require("user.fidget")
