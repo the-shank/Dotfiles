@@ -9,7 +9,6 @@ local servers = {
 	"yamlls",
 	"clangd",
 	"rust_analyzer",
-	"solidity",
 }
 
 local settings = {
@@ -53,3 +52,18 @@ for _, server in pairs(servers) do
 
 	lspconfig[server].setup(opts)
 end
+
+-- solidity (start)
+local configs = require("lspconfig.configs")
+
+configs.solidity = {
+	default_config = {
+		cmd = { "nomicfoundation-solidity-language-server", "--stdio" },
+		filetypes = { "solidity" },
+		root_dir = lspconfig.util.find_git_ancestor,
+		single_file_support = true,
+	},
+}
+
+lspconfig.solidity.setup({})
+-- solidity (end)
