@@ -54,7 +54,6 @@ return packer.startup(function(use)
 	use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
 	use("nvim-lualine/lualine.nvim")
-	use("WhoIsSethDaniel/lualine-lsp-progress.nvim")
 	use("akinsho/toggleterm.nvim")
 	use("ahmedkhalf/project.nvim")
 	use("lewis6991/impatient.nvim")
@@ -85,6 +84,7 @@ return packer.startup(function(use)
 	use("williamboman/mason-lspconfig.nvim")
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 	use("RRethy/vim-illuminate")
+	use("j-hui/fidget.nvim") -- lsp status
 
 	-- Rust
 	-- use("simrat39/rust-tools.nvim")
