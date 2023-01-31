@@ -141,7 +141,7 @@ keymap("n", "#", "#zz", opts)
 keymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>", opts)
 -- keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
 keymap("n", "<leader>ld", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
-keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
+-- keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts) --> use `m` to switch diagnostics mode (workspace/document)
 keymap("n", "gr", "<cmd>Trouble lsp_references<cr>", opts)
 keymap("n", "<leader>tt", "<cmd>TodoTrouble<cr>", opts)
 
