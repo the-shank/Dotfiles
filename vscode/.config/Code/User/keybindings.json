@@ -11,12 +11,17 @@
         "when": "editorTextFocus && vim.active && !inDebugRepl"
     },
     {
-        "key": "ctrl+`",
+        "key": "shift+alt+i",
         "command": "workbench.action.terminal.focus"
     },
     {
-        "key": "ctrl+`",
+        "key": "shift+alt+i",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "terminalFocus"
+    },
+    {
+        "key": "shift+alt+i",
+        "command": "-editor.action.insertCursorAtEndOfEachLineSelected",
+        "when": "editorTextFocus"
     },
 ]
