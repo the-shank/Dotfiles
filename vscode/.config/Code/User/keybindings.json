@@ -24,4 +24,14 @@
         "command": "-editor.action.insertCursorAtEndOfEachLineSelected",
         "when": "editorTextFocus"
     },
+    {
+        "key": "space e",
+        "command": "workbench.action.closeSidebar",
+        "when": "explorerViewletVisible"
+    },
+    {
+        "key": "space e",
+        "command": "workbench.view.explorer",
+        "when": "!explorerViewletVisible"
+    },
 ]
