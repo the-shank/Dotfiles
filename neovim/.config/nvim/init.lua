@@ -26,3 +26,4 @@ require("user.trouble")
 -- require "user.rust-tools"
 require("user.marks")
 require("user.fidget")
+require("user.nvim-ufo")
