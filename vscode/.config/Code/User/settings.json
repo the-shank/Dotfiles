@@ -14,6 +14,7 @@
     // font
     "editor.fontFamily": "FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
     "editor.fontSize": 13,
+    "editor.fontWeight": "450",
     // integrated terminal
     "terminal.integrated.scrollback": 500000,
     "terminal.integrated.fontSize": 13,
@@ -49,5 +50,6 @@
                 "editor.action.commentLine"
             ]
         },
-    ]
+    ],
+    "editor.minimap.enabled": false,
 }
