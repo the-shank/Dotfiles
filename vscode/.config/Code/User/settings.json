@@ -49,5 +49,6 @@
                 "editor.action.commentLine"
             ]
         },
-    ]
+    ],
+    "editor.minimap.enabled": false
 }
