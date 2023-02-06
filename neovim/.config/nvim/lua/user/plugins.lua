@@ -176,6 +176,9 @@ return packer.startup(function(use)
 		end,
 	})
 
+	-- beter folding experience (like vscode)
+	use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
