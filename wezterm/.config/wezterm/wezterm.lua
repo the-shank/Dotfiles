@@ -6,15 +6,15 @@ return {
 	-- font = wezterm.font("NotoSansMono Nerd Font", {
 	font = wezterm.font("FiraCode Nerd Font", {
 		-- weight = "Regular",
-        weight = 450,
+		weight = 450,
 		-- weight = "Medium"
 	}),
 	font_size = 11,
 	line_height = 1.1,
 	-- color
-    -- color_scheme = "Atelier Dune (base16)",
-	color_scheme = "Decaf (base16)",
-	-- color_scheme = "tokyonight-storm",
+	-- color_scheme = "Atelier Dune (base16)",
+	-- color_scheme = "Decaf (base16)",
+	color_scheme = "tokyonight-storm",
 	-- window
 	window_frame = {
 		font_size = 11,
