@@ -4,17 +4,21 @@ return {
 	-- font
 	-- font = wezterm.font("Iosevka Nerd Font", {
 	-- font = wezterm.font("NotoSansMono Nerd Font", {
+	-- font = wezterm.font("Ubuntu Mono", {
+	-- font = wezterm.font("JetBrains Mono", {
 	font = wezterm.font("FiraCode Nerd Font", {
 		-- weight = "Regular",
 		weight = 450,
-		-- weight = "Medium"
+		-- weight = "Medium",
+		dpi = 144,
 	}),
-	font_size = 11,
+	font_size = 10,
 	line_height = 1.1,
 	-- color
 	-- color_scheme = "Atelier Dune (base16)",
 	-- color_scheme = "Decaf (base16)",
-	color_scheme = "tokyonight-storm",
+	-- color_scheme = "tokyonight-storm",
+	color_scheme = "Oceanic-Next",
 	-- window
 	window_frame = {
 		font_size = 11,
