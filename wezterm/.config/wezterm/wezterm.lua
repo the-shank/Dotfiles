@@ -18,7 +18,8 @@ return {
 	-- color_scheme = "Atelier Dune (base16)",
 	-- color_scheme = "Decaf (base16)",
 	-- color_scheme = "tokyonight-storm",
-	color_scheme = "Oceanic-Next",
+	color_scheme = "OceanicNext (base16)",
+	-- color_scheme = "tokyonight-day",
 	-- window
 	window_frame = {
 		font_size = 11,
