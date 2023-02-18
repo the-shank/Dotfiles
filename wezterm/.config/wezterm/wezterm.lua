@@ -10,9 +10,9 @@ return {
 		-- weight = "Regular",
 		weight = 450,
 		-- weight = "Medium",
-		dpi = 144,
+		dpi = 120,
 	}),
-	font_size = 10,
+	font_size = 11,
 	line_height = 1.1,
 	-- color
 	-- color_scheme = "Atelier Dune (base16)",

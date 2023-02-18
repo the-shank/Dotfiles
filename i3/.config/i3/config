@@ -57,8 +57,8 @@ font pango:Rubik, FontAwesome Bold 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
-# bindsym $mod+Return exec wezterm
+# bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec wezterm
 
 # start a file explorer
 bindsym $mod+Shift+Return exec thunar
@@ -422,7 +422,7 @@ exec --no-startup-id i3-msg 'exec firefox -P shank.default'
 bar {
     # font pango: Iosevka Nerd Font, FontAwesome Medium 12
     # font pango: FiraCode Nerd Font, FontAwesome Medium 10
-    font pango: FiraSans, FontAwesome 12
+    font pango: FiraSans, FontAwesome 11
 	i3bar_command i3bar
 	# status_command i3status
 	status_command /usr/bin/i3status-rs
