@@ -150,3 +150,6 @@ keymap("n", "<leader>bp", "<cmd>BufferLineTogglePin<cr>", opts)
 
 -- jump to marks
 keymap("n", "M", "`")
+
+-- switch to last buffer
+keymap("n", "<leader><tab>", "<C-^><cr>", opts)
