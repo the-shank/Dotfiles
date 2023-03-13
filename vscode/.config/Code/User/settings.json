@@ -9,14 +9,15 @@
     "remote.SSH.remotePlatform": {
         "purs3apple.ecn.purdue.edu": "linux",
         "optiplex": "linux",
-        "mc18.cs.purdue.edu": "linux"
+        "mc18.cs.purdue.edu": "linux",
+        "mc21.cs.purdue.edu": "linux"
     },
     // font
     "editor.fontFamily": "FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
     "editor.fontSize": 13,
     "editor.fontWeight": "450",
     // integrated terminal
-    "terminal.integrated.scrollback": 500000,
+    "terminal.integrated.scrollback": 5000,
     "terminal.integrated.fontSize": 13,
     // vim keybindings
     "vim.leader": "<space>",
@@ -51,5 +52,6 @@
             ]
         },
     ],
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "terminal.integrated.persistentSessionScrollback": 100000
 }
