@@ -116,9 +116,9 @@ return packer.startup(function(use)
 		config = function()
 			vim.defer_fn(function()
 				require("copilot").setup({
-					suggestion = { auto_trigger = false },
+					suggestion = { auto_trigger = true },
 				})
-			end, 100)
+			end, 200)
 		end,
 	})
 
