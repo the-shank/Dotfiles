@@ -53,5 +53,6 @@
             ]
         },
     ],
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "terminal.integrated.persistentSessionScrollback": 100000
 }
