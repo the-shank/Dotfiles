@@ -4,13 +4,13 @@ icons_format = "{icon}"
 theme = "modern"
 
 [icons]
-icons = "awesome"
+icons = "awesome6"
 
 [[block]]
 block = "focused_window"
 [block.format]
-full = " $title.str(0,40)  |"
-short = " $title.str(0,20)  |"
+full = " $title.str(max_w:40)  |"
+short = " $title.str(max_w:20)  |"
 
 [[block]]
 block = "disk_space"
@@ -48,14 +48,14 @@ cmd = "pavucontrol"
 
 [[block]]
 block = "time"
-format = " $icon IND %a %d/%m %R "
 interval = 20
 timezone = "Asia/Kolkata"
+format = " $icon IND $timestamp.datetime(f:'%a %d/%m %R') "
 
 [[block]]
 block = "time"
-format = " $icon USA %a %d/%m %R "
-interval = 10
+interval = 20
+format = " $icon USA $timestamp.datetime(f:'%a %d/%m %R') "
 
 [[block]]
 block = "battery"
