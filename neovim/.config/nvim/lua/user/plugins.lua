@@ -118,7 +118,7 @@ return packer.startup(function(use)
 				require("copilot").setup({
 					suggestion = { auto_trigger = true },
 				})
-			end, 100)
+			end, 200)
 		end,
 	})
 

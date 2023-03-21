@@ -1,7 +1,7 @@
 {
     "codeQL.telemetry.enableTelemetry": false,
     "codeQL.cli.executablePath": "/home/shank/code/applications/codeql/codeql",
-    "workbench.colorTheme": "GitHub Dark",
+    "workbench.colorTheme": "Tokyo Night Storm",
     "window.menuBarVisibility": "toggle",
     "editor.lineNumbers": "relative",
     "security.workspace.trust.untrustedFiles": "open",
@@ -9,7 +9,9 @@
     "remote.SSH.remotePlatform": {
         "purs3apple.ecn.purdue.edu": "linux",
         "optiplex": "linux",
-        "mc18.cs.purdue.edu": "linux"
+        "mc18.cs.purdue.edu": "linux",
+        "mc20.cs.purdue.edu": "linux",
+        "mc21.cs.purdue.edu": "linux"
     },
     // font
     "editor.fontFamily": "FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
@@ -51,5 +53,6 @@
             ]
         },
     ],
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "terminal.integrated.persistentSessionScrollback": 100000
 }
