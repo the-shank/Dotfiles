@@ -57,7 +57,7 @@ return packer.startup(function(use)
 	use("akinsho/toggleterm.nvim")
 	use("ahmedkhalf/project.nvim")
 	use("lewis6991/impatient.nvim")
-	use("lukas-reineke/indent-blankline.nvim")
+	-- use("lukas-reineke/indent-blankline.nvim")
 	use("goolord/alpha-nvim")
 
 	-- Colorschemes
@@ -116,7 +116,7 @@ return packer.startup(function(use)
 		config = function()
 			vim.defer_fn(function()
 				require("copilot").setup({
-					suggestion = { auto_trigger = false },
+					suggestion = { auto_trigger = true },
 				})
 			end, 100)
 		end,
