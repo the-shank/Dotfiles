@@ -10,7 +10,7 @@ return {
 		-- weight = "Regular",
 		weight = 450,
 		-- weight = "Medium",
-		dpi = 120,
+		dpi = 132,
 	}),
 	font_size = 11,
 	line_height = 1.1,
