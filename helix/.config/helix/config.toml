@@ -15,5 +15,6 @@ render = true
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
 
-[keys.normal.space]
-w = ":write"
+# dont use this as it overwrite the window keybindings
+# [keys.normal.space]
+# w = ":write"
