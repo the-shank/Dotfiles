@@ -6,6 +6,9 @@ rulers = [100, 120]
 color-modes = true
 bufferline = "multiple"
 
+[editor.file-picker]
+git-ignore = false
+
 [editor.cursor-shape]
 insert = "bar"
 
