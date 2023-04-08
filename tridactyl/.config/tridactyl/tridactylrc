@@ -38,6 +38,7 @@ seturl https://codeforces.com noiframe true
 blacklistadd https://rhyme.com/
 blacklistadd https://workflowy.com/
 blacklistadd https://youtube.com
+blacklistadd https://www.overleaf.com/
 blacklistadd https://www.youtube.com
 blacklistadd https://mail.google.com
 blacklistadd https://codeforces.com

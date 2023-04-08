@@ -35,7 +35,7 @@ abbr -a -g cpwd 'echo (pwd) | xsel --input --clipboard'    # copy current direct
 abbr -a -g e nvim
 abbr -a -g o open
 # abbr -a -g vim nvim
-abbr -a -g vim hx
+# abbr -a -g vim hx
 abbr -a -g cat bat
 abbr -a -g l 'exa'
 abbr -a -g ll 'exa -l'
