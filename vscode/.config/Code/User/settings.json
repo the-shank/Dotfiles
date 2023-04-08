@@ -53,5 +53,7 @@
         },
     ],
     "editor.minimap.enabled": false,
-    "terminal.integrated.persistentSessionScrollback": 100000
+    "terminal.integrated.persistentSessionScrollback": 100000,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "solidity.telemetry": false
 }
