@@ -58,5 +58,7 @@
     "terminal.integrated.persistentSessionScrollback": 100000,
     "editor.inlineSuggest.enabled": true,
     "everforest.italicComments": false,
-    "workbench.editor.enablePreview": false
+    "workbench.editor.enablePreview": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "solidity.telemetry": false,
 }
