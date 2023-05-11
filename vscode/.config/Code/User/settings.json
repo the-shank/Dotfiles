@@ -11,7 +11,8 @@
         "optiplex": "linux",
         "mc18.cs.purdue.edu": "linux",
         "mc21.cs.purdue.edu": "linux",
-        "mc19.cs.purdue.edu": "linux"
+        "mc19.cs.purdue.edu": "linux",
+        "mc20.cs.purdue.edu": "linux"
     },
     // font
     "editor.fontFamily": "FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
@@ -55,5 +56,7 @@
     ],
     "editor.minimap.enabled": false,
     "terminal.integrated.persistentSessionScrollback": 100000,
-    "editor.inlineSuggest.enabled": true
+    "editor.inlineSuggest.enabled": true,
+    "everforest.italicComments": false,
+    "workbench.editor.enablePreview": false
 }
