@@ -29,3 +29,6 @@ set_default "image/png" "org.xfce.ristretto.desktop"
 
 # pdf
 set_default "application/pdf" "org.gnome.Evince.desktop"
+
+# folders
+set_default "inode/directory" "thunar.desktop"
