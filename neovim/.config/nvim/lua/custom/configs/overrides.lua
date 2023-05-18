@@ -51,6 +51,9 @@ M.mason = {
 
     -- rust
     "rust-analyzer",
+
+    -- python
+    "pyright",
   },
 }
 
