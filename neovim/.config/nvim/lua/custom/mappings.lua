@@ -24,4 +24,15 @@ M.symbols_outline = {
   },
 }
 
+M.lspconfig = {
+  n = {
+    ["gD"] = {
+      function()
+        vim.lsp.buf.type_definition()
+      end,
+      "LSP type definition",
+    },
+  }
+}
+
 return M
