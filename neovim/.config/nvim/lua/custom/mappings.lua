@@ -4,6 +4,10 @@ local M = {}
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    ["<C-Up>"] = { "<cmd> resize -1 <CR>", "increase size up", opts = { nowait = true } },
+    ["<C-Down>"] = { "<cmd> resize +1 <CR>", "increase size down", opts = { nowait = true } },
+    ["<C-Left>"] = { "<cmd> vertical resize -1 <CR>", "increase size left", opts = { nowait = true } },
+    ["<C-Right>"] = { "<cmd> vertical resize +1 <CR>", "increase size right", opts = { nowait = true } },
   },
 }
 
