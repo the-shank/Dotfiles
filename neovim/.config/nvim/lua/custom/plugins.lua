@@ -83,6 +83,12 @@ local plugins = {
     config = true,
   },
 
+  -- context
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    event = "BufEnter"
+  }
+
   -- -- DAP
   -- {
   --   "mfussengger/nvim-dap",
