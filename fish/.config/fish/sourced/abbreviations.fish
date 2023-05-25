@@ -165,7 +165,8 @@ abbr -a -g unmount-purs3-workdisk "fusermount -uz /home/shank/sshfs/purdue/purs3
 
 # file managers
 abbr -a -g n nnn
-abbr -a -g r ranger
+abbr -a -g r joshuto
+abbr -a -g j joshuto
 
 # cmake build type?
 abbr -a -g build_type "rg --ignore-case cmake_build_type CMakeCache.txt"
