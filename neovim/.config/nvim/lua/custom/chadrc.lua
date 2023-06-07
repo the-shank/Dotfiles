@@ -29,6 +29,19 @@ M.ui = {
   telescope = {
     style = "bordered",
   },
+
+  statusline = {
+    overriden_modules = function()
+      local st_modules = require "nvchad_ui.statusline.default"
+      local abspath = vim.fn.expand("%p")
+
+      return {
+        fileInfo = function()
+          return st_modules.fileInfo() .. "%#St_file_txt#" .. abspath .. " "
+        end,
+      }
+    end,
+  },
 }
 
 M.plugins = "custom.plugins"
