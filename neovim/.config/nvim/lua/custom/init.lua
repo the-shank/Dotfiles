@@ -5,3 +5,6 @@
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
+
+local opt = vim.opt
+opt.colorcolumn = { 100, 120 }
