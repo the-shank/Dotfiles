@@ -14,4 +14,6 @@ ensure_cmp 1 "ge" 1 "Failed: ensure_cmp 1 \"ge\" 1"
 
 ensure_equal 1 1 "Failed: enqure_equal 1 1"
 
+ensure_one_arg_exact $# "Failed: ensure_one_arg_exact $#"
+
 echo "[*] All tests passed"

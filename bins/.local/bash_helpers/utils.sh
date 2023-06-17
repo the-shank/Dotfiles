@@ -1,13 +1,8 @@
 #!/bin/bash
 
-# =======================================================================================
-# Intended usage of this script is to include it in other bash scripts.
-#
-# Current list of util functions:
-# 01. ensure_equal <arg1> <arg2>
-# 02. ensure_one_arg <num>
-# 03. ensure_one_arg_exact <num>
-# =======================================================================================
+
+set -eu
+set -o pipefail
 
 
 # Args:
@@ -17,8 +12,8 @@
 #   - [<error_msg>]
 ensure_cmp(){
   if [[ $# < 3 ]]; then
-    echo "[!] ensure_cmp expects atleast 3 args"
-    echo "[!] Usage: enquare_cmp <num1> \"lt\" <num2> [<error_msg>]"
+    echo "[!] ensure_cmp expects atleast 3 args (provided $#)"
+    echo "[!] Usage: ensure_cmp <num1> \"lt\" <num2> [<error_msg>]"
     exit 1
   fi
 
@@ -81,6 +76,7 @@ ensure_cmp(){
 #   - <error_msg>
 # Returns: None
 ensure_equal() {
+  # echo ">> 4"
   # atleast 2 args required
   ensure_cmp $# "ge" 2 "ensure_equal expects 2 args (nums to be compared), and optionally an error msg"
 
@@ -90,7 +86,8 @@ ensure_equal() {
   if [[ $# == 3 ]]; then
     error_msg="[!] $3"
   fi
-  ensure_cmp $fst "eq" $snd $error_msg
+  # echo ">> 5"
+  ensure_cmp $fst "eq" $snd "$error_msg"
 }
 
 # 02. ensure_one_arg
@@ -110,8 +107,10 @@ ensure_one_arg(){
 #   - <num_args>
 # Returns: None
 ensure_one_arg_exact(){
+  # echo ">> 2"
   ensure_equal $# 1 "ensure_one_arg_exact expects one arg, which is a number"
 
+  # echo ">> 3"
   local num_args=$1
   ensure_equal $num_args 1 "expected exactly 1 arg"
 }
