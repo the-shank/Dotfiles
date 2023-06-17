@@ -25,7 +25,7 @@ ensure_one_arg(){
 # Returns: None
 ensure_one_arg_exact(){
   if [[ $# != 1 ]]; then
-    echo "[!] exactly 1 arg should be provided"
+    echo "[!] exactly 1 arg should be provided however $# args were provided"
     exit 1
   fi
 }
