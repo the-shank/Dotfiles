@@ -15,7 +15,7 @@ icons = "awesome6"
 [[block]]
 block = "tea_timer"
 format = " $icon {$minutes:$seconds |}"
-increment = 120
+increment = 60
 done_cmd = "notify-send 'Timer Finished'"
 
 [[block]]
