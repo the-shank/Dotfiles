@@ -6,11 +6,17 @@ theme = "modern"
 [icons]
 icons = "awesome6"
 
+# [[block]]
+# block = "focused_window"
+# [block.format]
+# full = " $title.str(max_w:40)  |"
+# short = " $title.str(max_w:20)  |"
+
 [[block]]
-block = "focused_window"
-[block.format]
-full = " $title.str(max_w:40)  |"
-short = " $title.str(max_w:20)  |"
+block = "tea_timer"
+format = " $icon {$minutes:$seconds |}"
+increment = 120
+done_cmd = "notify-send 'Timer Finished'"
 
 [[block]]
 block = "disk_space"
@@ -64,3 +70,4 @@ missing_format = ""
 warning = 20
 critical = 10
 interval = 15
+
