@@ -39,6 +39,10 @@ M.ui = {
         fileInfo = function()
           return st_modules.fileInfo() .. "%#St_file_txt#" .. abspath .. " "
         end,
+
+        cursor_position = function()
+          return "%#StText# %l:%c "
+        end,
       }
     end,
   },
