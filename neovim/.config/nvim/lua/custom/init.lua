@@ -32,3 +32,11 @@ autocmd({ "FileType" }, {
     vim.cmd [[ nnoremap <buffer> <CR> <C-]> ]]
   end,
 })
+
+-- highlight on yank
+autocmd ({"TextYankPost"}, {
+  pattern = { "*" },
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
