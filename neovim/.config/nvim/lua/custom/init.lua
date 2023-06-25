@@ -27,16 +27,18 @@ opt.sidescrolloff = 8
 
 -- navigate help text using <CR> to go to item under cursor
 autocmd({ "FileType" }, {
-  pattern = { "help" },
-  callback = function()
-    vim.cmd [[ nnoremap <buffer> <CR> <C-]> ]]
-  end,
+	group = vim.api.nvim_create_augroup("ShankNavigateHelp", { clear = true }),
+	pattern = { "help" },
+	callback = function()
+		vim.cmd([[ nnoremap <buffer> <CR> <C-]> ]])
+	end,
 })
 
 -- highlight on yank
-autocmd ({"TextYankPost"}, {
-  pattern = { "*" },
-  callback = function()
-    vim.highlight.on_yank()
-  end,
+autocmd({ "TextYankPost" }, {
+	group = vim.api.nvim_create_augroup("ShankHighlightYank", { clear = true }),
+	pattern = { "*" },
+	callback = function()
+		vim.highlight.on_yank()
+	end,
 })
