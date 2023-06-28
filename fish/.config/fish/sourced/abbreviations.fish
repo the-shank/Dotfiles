@@ -15,9 +15,10 @@ abbr -a -g aliases 'nvim ~/.config/fish/sourced/abbreviations.fish'
 abbr -a -g nvinit 'nvim ~/.config/nvim/init.vim'
 
 # general
-abbr -a -g mkp 'mkdir -p'      # auto nesting
-abbr -a -g cp 'cp -av'         # cp verbose mode by default
-abbr -a -g cpr 'cp -Rav'       # recursive
+abbr -a -g mkp 'mkdir -p'     # auto nesting
+abbr -a -g cp 'cp -av'        # cp verbose mode by default
+abbr -a -g cpr 'cp -Rav'      # recursive
+abbr -a -g rm 'rm -r'         # recursive
 # abbr -a -g rm 'rm -Irf'        # recursive and force
 # if type -q trash
 #     abbr -a -g rm trash
