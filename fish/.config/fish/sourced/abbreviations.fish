@@ -33,6 +33,7 @@ abbr -a -g chR 'chmod -R'      # recursive
 abbr -a -g mv 'mv --interactive'               # warn before overwriting files 
 abbr -a -g mvv 'mv --interactive --verbose'    # mv verbose
 abbr -a -g cpwd 'echo (pwd) | xsel --input --clipboard'    # copy current directory path
+abbr -a -g vim nvim
 abbr -a -g e nvim
 abbr -a -g o open
 # abbr -a -g vim nvim
