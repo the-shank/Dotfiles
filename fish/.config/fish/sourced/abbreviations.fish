@@ -40,6 +40,7 @@ abbr -a -g o open
 # abbr -a -g vim hx
 abbr -a -g cat bat
 abbr -a -g l 'exa'
+abbr -a -g ls 'exa'
 abbr -a -g ll 'exa -l'
 abbr -a -g lll 'exa -la'
 abbr -a -g la 'exa -lah'
