@@ -80,6 +80,7 @@ if type -q fdfind
         alias fd=fdfind
     end
 end
+abbr -a -g fd 'fd --no-ignore'
 abbr -a -g fdh 'fd --hidden --no-ignore'
 abbr -a -g fdi 'fd --ignore-case --no-ignore'
 abbr -a -g fdih 'fd --ignore-case --hidden --no-ignore'
