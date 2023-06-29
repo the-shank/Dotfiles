@@ -15,6 +15,7 @@ function set_default() {
 
     mimetype=$1
     app=$2
+    echo "$mimetype -> $app"
     xdg-mime default "$app" "$mimetype"
 }
 
