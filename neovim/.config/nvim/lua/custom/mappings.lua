@@ -50,6 +50,13 @@ M.lspconfig = {
 			end,
 			"LSP type definition",
 		},
+
+		["<leader>d"] = {
+			function()
+				vim.diagnostic.open_float({ border = "rounded" })
+			end,
+			"Floating diagnostic",
+		},
 	},
 }
 
