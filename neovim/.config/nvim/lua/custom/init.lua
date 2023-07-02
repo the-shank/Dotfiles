@@ -7,6 +7,9 @@ local autocmd = vim.api.nvim_create_autocmd
 --   command = "tabdo wincmd =",
 -- })
 
+-- relative numbering
+opt.relativenumber = true
+
 -- set rulers
 opt.colorcolumn = { 100, 120 }
 
