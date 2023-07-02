@@ -14,6 +14,9 @@ M.general = {
 		["N"] = { "Nzz", "previous", opts = { nowait = true } },
 		["*"] = { "*zz", "next", opts = { nowait = true } },
 		["#"] = { "#zz", "next", opts = { nowait = true } },
+
+		-- previous buffer
+		["<leader><tab>"] = { "<C-^><CR>", "switch to previous buffer", opts = { nowait = true } },
 	},
 
 	v = {
