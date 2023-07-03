@@ -34,7 +34,7 @@ null_ls.setup({
 	debug = true,
 	sources = sources,
 	on_attach = function()
-		vim.api.nvim_create_autocmd("BufWritePost", {
+		vim.api.nvim_create_autocmd("BufWritePre", {
       group = vim.api.nvim_create_augroup("LspFormat", { clear = true }),
 			callback = function()
 				vim.lsp.buf.format()
