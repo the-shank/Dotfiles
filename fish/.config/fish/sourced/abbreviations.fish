@@ -12,20 +12,12 @@ abbr -a -g cdd 'cd -'          # back to previous directory
 # quick edits to dotfiles
 abbr -a -g dots 'cd ~/dotfiles/ && nvim'
 abbr -a -g aliases 'nvim ~/.config/fish/sourced/abbreviations.fish'
-abbr -a -g nvinit 'nvim ~/.config/nvim/init.vim'
 
 # general
 abbr -a -g mkp 'mkdir -p'     # auto nesting
 abbr -a -g cp 'cp -av'        # cp verbose mode by default
 abbr -a -g cpr 'cp -Rav'      # recursive
 abbr -a -g rm 'rm -r'         # recursive
-# abbr -a -g rm 'rm -Irf'        # recursive and force
-# if type -q trash
-#     abbr -a -g rm trash
-# end
-# if type -q trach-cli
-#     abbr -a -g rm trash-cli
-# end
 abbr -a -g duh 'du -h'         # list disk usage for all files in ./
 abbr -a -g dush 'du -sh'       # list total disk usage of ./
 abbr -a -g chx 'chmod +x'      # make it executable
@@ -36,8 +28,6 @@ abbr -a -g cpwd 'echo (pwd) | xsel --input --clipboard'    # copy current direct
 abbr -a -g vim nvim
 abbr -a -g e nvim
 abbr -a -g o open
-# abbr -a -g vim nvim
-# abbr -a -g vim hx
 abbr -a -g cat bat
 abbr -a -g l 'exa'
 abbr -a -g ls 'exa'
@@ -128,8 +118,13 @@ abbr -a -g lg 'lazygit'
 abbr -a -g gcb 'git checkout -b'
 
 # docker
-abbr -a -g d docker
 abbr -a -g dc 'docker container'
+abbr -a -g dcl 'docker container ls'
+abbr -a -g dcla 'docker container ls -a'
+abbr -a -g dcr 'docker container rm'
+abbr -a -g dcs 'docker container start'
+abbr -a -g dsp 'docker system prune'
+abbr -a -g dspy 'docker system prune --force'
 abbr -a -g di 'docker image'
 abbr -a -g d-c 'docker-compose'
 
@@ -148,7 +143,7 @@ abbr -a -g t1 "tree -L 1"
 abbr -a -g t2 "tree -L 2"
 abbr -a -g t3 "tree -L 3"
 
-# dct
+# DCT
 abbr -a -g db-bss-start "cd ~/code/dct/bss-data-layer; and docker-compose up --detach bss-db; and cd -"
 abbr -a -g db-bss-stop "cd ~/code/dct/bss-data-layer; and docker-compose stop bss-db; and cd -"
 abbr -a -g db-tp-start "cd ~/code/dct/tp-data-layer; and docker-compose up --detach tp-db; and cd -"
@@ -168,8 +163,7 @@ abbr -a -g mnt-purs3-workdisk "sshfs shank@purs3mango.ecn.purdue.edu:/workdisk \
 abbr -a -g unmount-purs3-workdisk "fusermount -uz /home/shank/sshfs/purdue/purs3_workdisk"
 
 # file managers
-# abbr -a -g n nnn
-abbr -a -g r joshuto
+abbr -a -g r ranger
 abbr -a -g j joshuto
 
 # cmake build type?
@@ -183,16 +177,6 @@ abbr -a -g pgrep "pgrep -i"
 
 # tmux
 abbr -a -g tmud "~/.tmux/scripts/update_display.sh"
-
-# tmux: with TERM env var explicitly set
-# abbr -a -g tmux "TERM=xterm-256color tmux"
-# abbr -a -g tml "TERM=xterm-256color tmux ls"
-# abbr -a -g tmn "TERM=xterm-256color tmux new -s"
-# abbr -a -g tmnd "TERM=xterm-256color tmux new -d -s"
-# abbr -a -g tms "TERM=xterm-256color tmux switch -t"
-# abbr -a -g tmsd "TERM=xterm-256color tmux switch -d -t"
-# abbr -a -g tma "TERM=xterm-256color tmux attach -d -t"
-# abbr -a -g tmd "TERM=xterm-256color tmux detach"
 
 # tmux: without TERM env var explicitly set
 abbr -a -g tml "tmux ls"
@@ -209,6 +193,7 @@ abbr -a -g dsyms "llvm-readelf --dyn-syms --demangle"
 # package managers: commonly used invocations
 abbr -a -g ali "apt list --installed"
 abbr -a -g pli "pamac list --installed"
+abbr -a -g xli "xbps-query --list-pkgs"
 
 # misc
 abbr -a -g asanopts "ASAN_OPTIONS=\"detect_leaks=0:abort_on_error=1:symbolize=1:handle_abort=1\""
@@ -219,22 +204,13 @@ abbr -a -g nf "neofetch"
 abbr -a -g jb "just build"
 
 # keyboard
-abbr -a -g c2e "setxkbmap -option caps:escape"
-abbr -a -g krr "xset r rate 250 50"
-abbr -a -g fk "xset r rate 250 50; setxkbmap -option caps:escape"  # fix keyboard stuff
+# - increase repeat rate
+# - map caps to escape
+abbr -a -g fk "xset r rate 250 50; setxkbmap -option caps:escape"
 
 # Applications
 abbr -a -g zj zellij
 # abbr -a -g j just
-
-# dev_containers
-abbr -a -g dcla "docker container ls -a | rg --ignore-case dc_ | awk '{print \$NF}'"
-abbr -a -g dcl "docker container ls | rg --ignore-case dc_ | awk '{print \$NF}'"
-
-# colorschemes for the terminal
-# mnemonic - colorscheme dark / light
-abbr -a -g csd 'base16-tomorrow-night-eighties && sd -s "vim.opt.background = \"light\"" "vim.opt.background = \"dark\"" ~/.config/nvim/lua/user/colorscheme.lua'
-abbr -a -g csl 'base16-gruvbox-light-medium && sd -s "vim.opt.background = \"dark\"" "vim.opt.background = \"light\"" ~/.config/nvim/lua/user/colorscheme.lua'
 
 # pacman/paru aliases
 abbr -a -g owns\? "paru --query --owns"    # <path/to/file>
