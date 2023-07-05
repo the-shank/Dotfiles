@@ -168,7 +168,7 @@ abbr -a -g mnt-purs3-workdisk "sshfs shank@purs3mango.ecn.purdue.edu:/workdisk \
 abbr -a -g unmount-purs3-workdisk "fusermount -uz /home/shank/sshfs/purdue/purs3_workdisk"
 
 # file managers
-abbr -a -g n nnn
+# abbr -a -g n nnn
 abbr -a -g r joshuto
 abbr -a -g j joshuto
 
