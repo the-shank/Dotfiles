@@ -474,8 +474,15 @@ source ~/.config/fish/sourced/abbreviations.fish
 
 # ssh-agent
 # source: https://unix.stackexchange.com/a/132117
-if set -q XDG_RUNTIME_DIR
-  setenv SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"  
+# check that we have openssh installed
+if type -q ssh-agent
+  # set the auth_sock dir based on whether we are running in a desktop or in a docker container
+  if set -q XDG_RUNTIME_DIR
+    setenv SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
+  else
+    setenv SSH_AUTH_SOCK "/tmp/ssh-agent.socket"
+  end
+
   ssh-add -l >/dev/null 2>&1
   if test $status -ge 2
       echo "starting ssh-agent"
