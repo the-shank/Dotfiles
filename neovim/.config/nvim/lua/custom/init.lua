@@ -11,7 +11,7 @@ local autocmd = vim.api.nvim_create_autocmd
 opt.relativenumber = true
 
 -- set rulers
-opt.colorcolumn = { 100, 120 }
+opt.colorcolumn = { 100 }
 
 -- dont create backup files or swapfiles
 opt.backup = false
