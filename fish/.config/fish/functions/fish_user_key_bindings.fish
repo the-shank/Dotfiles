@@ -1,4 +1,5 @@
 function fish_user_key_bindings -d "use Ctrl-f to accept suggestions in vi mode"
+    fish_vi_key_bindings
     for mode in insert default visual
         bind -M $mode \cf forward-char
     end
