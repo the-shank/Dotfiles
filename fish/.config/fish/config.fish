@@ -66,7 +66,7 @@ set --export BROWSER firefox
 set --export TERM "xterm-256color"
 
 # Suppresses fish's intro message
-# set fish_greeting
+set fish_greeting
 #function fish_greeting
 #    fish_logo
 #end
