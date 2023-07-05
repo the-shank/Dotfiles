@@ -1,9 +1,0 @@
-[[language]]
-name = "c"
-scope = "source.c"
-auto-format = false
-
-[[language]]
-name = "c++"
-scope = "source.cpp"
-auto-format = false
