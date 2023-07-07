@@ -154,7 +154,7 @@ abbr -a -g restow "stow --no-folding --verbose -R"
 
 # purdue
 abbr -a -g ssh-purdue-cs "sshpass -f ~/.pca.private ssh sharm611@data.cs.purdue.edu"
-abbr -a -g mnt-purs3-workdisk "sshfs shank@purs3mango.ecn.purdue.edu:/workdisk/shank \
+abbr -a -g mount-purs3-workdisk "sshfs shank@purs3mango.ecn.purdue.edu:/workdisk/shank \
     /home/shank/sshfs/purdue/purs3_workdisk/shank \
     -o compression=yes \
     -o idmap=user \
