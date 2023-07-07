@@ -154,13 +154,13 @@ abbr -a -g restow "stow --no-folding --verbose -R"
 
 # purdue
 abbr -a -g ssh-purdue-cs "sshpass -f ~/.pca.private ssh sharm611@data.cs.purdue.edu"
-abbr -a -g mnt-purs3-workdisk "sshfs shank@purs3mango.ecn.purdue.edu:/workdisk \
-    /home/shank/sshfs/purdue/purs3_workdisk \
+abbr -a -g mount-purs3-workdisk "sshfs shank@purs3mango.ecn.purdue.edu:/workdisk/shank \
+    /home/shank/sshfs/purdue/purs3_workdisk/shank \
     -o compression=yes \
     -o idmap=user \
     -o follow_symlinks \
     -o IdentityFile=/home/shank/.ssh/id_ed25519_arco"
-abbr -a -g unmount-purs3-workdisk "fusermount -uz /home/shank/sshfs/purdue/purs3_workdisk"
+abbr -a -g unmount-purs3-workdisk "fusermount -uz /home/shank/sshfs/purdue/purs3_workdisk/shank"
 
 # file managers
 abbr -a -g r ranger
