@@ -123,9 +123,10 @@ abbr -a -g dcl 'docker container ls'
 abbr -a -g dcla 'docker container ls -a'
 abbr -a -g dcr 'docker container rm'
 abbr -a -g dcs 'docker container start'
+abbr -a -g di 'docker image'
+abbr -a -g dil 'docker image ls'
 abbr -a -g dsp 'docker system prune'
 abbr -a -g dspy 'docker system prune --force'
-abbr -a -g di 'docker image'
 abbr -a -g d-c 'docker-compose'
 
 # python : flask-migrate - show current migration version info
