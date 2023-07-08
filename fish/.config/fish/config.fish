@@ -517,3 +517,9 @@ test -e ~/.asdf/asdf.fish; and source ~/.asdf/asdf.fish
 
 # set colorterm to get helix to work
 set --export COLORTERM truecolor
+
+# rust
+# source: @jonhoo config
+if test -e ~/.cargo-target
+  setenv CARGO_TARGET_DIR ~/.cargo-target
+end
