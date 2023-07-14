@@ -282,7 +282,7 @@ for_window [window_role="pop-up"] floating enable
 # assign [class="firefox"] $ws2 => does not work
 # assign [class="firefox-dct"] $ws3 => does not work
 # assign [class="calibre"] $ws5
-assign [class="Gnome-boxes|VirtualBox Manager"] $ws4
+assign [class="Gnome-boxes|VirtualBox Manager|Spicy"] $ws4
 assign [class="Zotero"] $ws7
 assign [class="discord"] $ws8
 assign [class="WorkFlowy"] $ws10
