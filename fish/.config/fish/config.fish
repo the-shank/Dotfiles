@@ -523,3 +523,16 @@ set --export COLORTERM truecolor
 if test -e ~/.cargo-target
   setenv CARGO_TARGET_DIR ~/.cargo-target
 end
+
+# purs3lab stuff (start) >>>>>
+
+# rust: use different RUSTUP_HOME and CARGO_HOME (to save root disk space ¯\_(ツ)_/¯)
+if test -e /workdisk/shank/.rustup
+  setenv RUSTUP_HOME /workdisk/shank/.rustup
+end
+if test -e /workdisk/shank/.cargo
+  setenv CARGO_HOME /workdisk/shank/.cargo
+  fish_add_path $CARGO_HOME/bin
+end
+
+# purs3lab stuff (end) <<<<<

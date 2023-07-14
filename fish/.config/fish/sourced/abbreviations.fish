@@ -52,12 +52,13 @@ abbr -a -g r4 'redshift -P -O 4500'
 abbr -a -g r5 'redshift -P -O 4000'
 
 # backlight
-abbr -a -g bl 'sudo xbacklight -set'
-abbr -a -g bl0 'sudo xbacklight -set 0'    # backlight = 0% (minimum)
-abbr -a -g bl5 'sudo xbacklight -set 5'    # backlight = 5%
-abbr -a -g bl10 'sudo xbacklight -set 10'  # backlight = 10%
-abbr -a -g blinc 'sudo xbacklight -inc 2'
-abbr -a -g bldec 'sudo xbacklight -dec 2'
+abbr -a -g bl 'sudo -E xbacklight -set'
+abbr -a -g bl0 'sudo -E xbacklight -set 0'    # backlight = 0% (minimum)
+abbr -a -g bl2 'sudo -E xbacklight -set 2'    # backlight = 2%
+abbr -a -g bl5 'sudo -E xbacklight -set 5'    # backlight = 5%
+abbr -a -g bl10 'sudo -E xbacklight -set 10'  # backlight = 10%
+abbr -a -g blinc 'sudo -E xbacklight -inc 2'
+abbr -a -g bldec 'sudo -E xbacklight -dec 2'
 
 # ripgrep
 abbr -a -g rgi 'rg --ignore-case'
