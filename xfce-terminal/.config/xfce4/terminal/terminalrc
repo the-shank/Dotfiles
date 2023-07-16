@@ -40,8 +40,8 @@ DropdownAlwaysShowTabs=FALSE
 MiscRightClickAction=TERMINAL_RIGHT_CLICK_ACTION_CONTEXT_MENU
 BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
 ColorForeground=#D3C6AA
-ColorBackground=#272e33
-ColorSelectionBackground=#4c3743
+ColorBackground=#2D353B
+ColorSelectionBackground=#4C3743
 ColorSelectionUseDefault=FALSE
 TabActivityColor=#E69875
 
