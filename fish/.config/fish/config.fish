@@ -519,6 +519,7 @@ test -e ~/.asdf/asdf.fish; and source ~/.asdf/asdf.fish
 set --export COLORTERM truecolor
 
 # rust
+setenv RUST_BACKTRACE 1
 # source: @jonhoo config
 if test -e ~/.cargo-target
   setenv CARGO_TARGET_DIR ~/.cargo-target
