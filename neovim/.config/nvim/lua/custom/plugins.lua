@@ -94,7 +94,7 @@ local plugins = {
 	{
 		"nvim-telescope/telescope.nvim",
 		opts = {
-      -- add fzf extention to the list of default extensions
+			-- add fzf extention to the list of default extensions
 			extensions_list = { "themes", "terms", "fzf" },
 		},
 	},
@@ -104,6 +104,12 @@ local plugins = {
 		config = function()
 			require("telescope").load_extension("fzf")
 		end,
+	},
+
+	-- just
+	{
+		"NoahTheDuke/vim-just",
+		ft = "just",
 	},
 
 	-- -- DAP
