@@ -69,9 +69,10 @@ bindsym $mod+q kill
 # start program launcher
 bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
 bindsym $alt+space exec rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -show combi -sidebar-mode -show-icons -matching fuzzy
-bindsym $alt+period exec rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -show emoji -modi emoji 
+bindsym $alt+period exec rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -show emoji -modi emoji -matching fuzzy
 bindsym $mod+Tab exec rofi -lines 12 -padding 18 -width 30 -location 0 -show window -sidebar-mode -font 'Rubik 14' -show-icons -matching fuzzy
 bindsym $alt+comma exec rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+bindsym $alt+s exec --no-startup-id rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -show drun -run-shell-command '{terminal} -e fish -ic "{cmd} && read"'
 
 # dictionary
 bindsym $mod+d exec --no-startup-id xfce4-dict -c
@@ -177,7 +178,7 @@ bindsym $mod+a focus parent
 bindsym $mod+c focus child
 
 # move the currently focused window to the scratchpad
-# bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
@@ -275,6 +276,7 @@ for_window [title="MuseScore: Play Panel"] floating enable
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Quickgui"] floating enable
+for_window [class="mpv"] floating enable
 
 for_window [window_role="pop-up"] floating enable
 
