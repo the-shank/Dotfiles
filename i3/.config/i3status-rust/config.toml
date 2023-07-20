@@ -1,4 +1,5 @@
-icons_format = "{icon}"
+icons_format = "{icon}" 
+# icons_format = "<span font='12'>{icon}</span>" 
 
 [theme]
 theme = "modern"
@@ -33,7 +34,7 @@ format = " $icon $utilization ($frequency) "
 interval = 5
 [[block.click]]
 button = "left"
-cmd = "wezterm start htop"
+cmd = "xfce4-terminal --command htop"
 
 [[block]]
 block = "memory"
@@ -43,7 +44,7 @@ warning_swap = 50.0
 critical_swap = 75.0
 [[button.click]]
 button = "left"
-cmd = "wezterm start htop"
+cmd = "xfce4-terminal --command htop"
 
 [[block]]
 block = "sound"

@@ -90,6 +90,7 @@ setenv LESS_TERMCAP_se \e'[0m'
 setenv LESS_TERMCAP_so \e'[1;44;33m'
 setenv LESS_TERMCAP_ue \e'[0m'
 setenv LESS_TERMCAP_us \e'[1;32m'
+setenv GROFF_NO_SGR 1
 
 set -g theme_nerd_fonts yes
 
@@ -516,7 +517,7 @@ set --export CXX clang++
 test -e ~/.asdf/asdf.fish; and source ~/.asdf/asdf.fish
 
 # set colorterm to get helix to work
-set --export COLORTERM truecolor
+setenv COLORTERM truecolor
 
 # rust
 setenv RUST_BACKTRACE 1
