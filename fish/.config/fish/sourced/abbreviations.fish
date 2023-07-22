@@ -132,7 +132,9 @@ abbr -a -g dspy 'docker system prune --force'
 abbr -a -g d-c 'docker-compose'
 
 # distrobox
-abbr -a -g dbl 'distrobox ls'
+abbr -a -g dbl 'distrobox ls --no-stats'
+abbr -a -g dbls 'distrobox ls --no-stats'
+abbr -a -g dbll 'distrobox ls'
 abbr -a -g dbc 'distrobox-create'
 abbr -a -g dbrm 'distrobox rm'
 abbr -a -g dbstop 'distrobox stop'
