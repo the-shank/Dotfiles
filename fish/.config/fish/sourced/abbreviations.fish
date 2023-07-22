@@ -132,7 +132,7 @@ abbr -a -g dspy 'docker system prune --force'
 abbr -a -g d-c 'docker-compose'
 
 # distrobox
-abbr -a -g dboxstopall "distrobox ls | rg --ignore-case "Up " | awk '{print $3}' | xargs -I{} distrobox stop -Y {}"
+abbr -a -g dboxstopall "distrobox ls | rg --ignore-case 'Up ' | awk '{print \$3}' | xargs -I{} distrobox stop -Y {}"
 
 # python : flask-migrate - show current migration version info
 abbr -a -g db-curr "python manage.py db show (python manage.py db current 2>/dev/null | tail -n1 | awk '{print \$1}')"
