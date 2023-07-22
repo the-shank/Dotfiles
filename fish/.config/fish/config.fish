@@ -503,7 +503,6 @@ fish_add_path $HOME/Applications/aflplusplus/usr/local/bin
 fish_add_path $HOME/.npm-global/bin
 fish_add_path $HOME/Applications/ghidra
 # fish_add_path $HOME/Applications/llvm-13-release/bin
-fish_add_path $HOME/Applications/udocker
 
 # custom env vars
 set --export FUZZERR_PROJ_DIR $HOME/code/research/FuzzERR
@@ -538,3 +537,6 @@ if test -e /workdisk/shank/.cargo
 end
 
 # purs3lab stuff (end) <<<<<
+
+# xbps
+fish_add_path $HOME/code/misc/xbps/usr/bin
