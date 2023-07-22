@@ -122,8 +122,8 @@ abbr -a -g gcb 'git checkout -b'
 abbr -a -g dc 'docker container'
 abbr -a -g dcl 'docker container ls'
 abbr -a -g dcla 'docker container ls -a'
-abbr -a -g dcr 'docker container rm'
-abbr -a -g dcs 'docker container start'
+abbr -a -g dcrm 'docker container rm'
+abbr -a -g dcst 'docker container start'
 abbr -a -g dca 'docker container attach'
 abbr -a -g di 'docker image'
 abbr -a -g dil 'docker image ls'
@@ -132,7 +132,13 @@ abbr -a -g dspy 'docker system prune --force'
 abbr -a -g d-c 'docker-compose'
 
 # distrobox
-abbr -a -g dboxstopall "distrobox ls | rg --ignore-case 'Up ' | awk '{print \$3}' | xargs -I{} distrobox stop -Y {}"
+abbr -a -g dbl 'distrobox ls'
+abbr -a -g dbc 'distrobox-create'
+abbr -a -g dbrm 'distrobox rm'
+abbr -a -g dbstop 'distrobox stop'
+abbr -a -g dbe 'distrobox enter'
+abbr -a -g dbcl 'distrobox-create --clone'
+abbr -a -g dbstopall "distrobox ls | rg --ignore-case 'Up ' | awk '{print \$3}' | xargs -I{} distrobox stop -Y {}"
 
 # python : flask-migrate - show current migration version info
 abbr -a -g db-curr "python manage.py db show (python manage.py db current 2>/dev/null | tail -n1 | awk '{print \$1}')"
