@@ -17,6 +17,9 @@
 
 #set VIRTUAL_ENV_DISABLE_PROMPT "1"
 
+# set LANG
+set --export LANG "en_US.UTF-8"
+
 if not status --is-interactive
   exit
 end
