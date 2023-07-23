@@ -135,14 +135,14 @@ abbr -a -g d-c 'docker-compose'
 
 # distrobox
 abbr -a -g dbe 'distrobox enter'
-abbr -a -g dbl 'distrobox ls --no-stats --root'
-abbr -a -g dbls 'distrobox ls --no-stats --root'
-abbr -a -g dbll 'distrobox ls --root'
-abbr -a -g dbrm 'distrobox rm --root'
-abbr -a -g dbstop 'distrobox stop --root'
+abbr -a -g dbl 'distrobox ls --no-stats'
+abbr -a -g dbls 'distrobox ls --no-stats'
+abbr -a -g dbll 'distrobox ls'
+abbr -a -g dbrm 'distrobox rm'
+abbr -a -g dbstop 'distrobox stop'
 abbr -a -g dbc 'distrobox-create'
 abbr -a -g dbcl 'distrobox-create --clone'
-abbr -a -g dbstopall "distrobox ls --root --no-stats | rg --ignore-case 'Up ' | awk '{print \$3}' | xargs -I{} distrobox stop --root -Y {}"
+abbr -a -g dbstopall "distrobox ls --no-stats | rg --ignore-case 'Up ' | awk '{print \$3}' | xargs -I{} distrobox stop -Y {}"
 
 # python : flask-migrate - show current migration version info
 abbr -a -g db-curr "python manage.py db show (python manage.py db current 2>/dev/null | tail -n1 | awk '{print \$1}')"
