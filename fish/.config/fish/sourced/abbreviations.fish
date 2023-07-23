@@ -127,6 +127,8 @@ abbr -a -g dcst 'docker container start'
 abbr -a -g dca 'docker container attach'
 abbr -a -g di 'docker image'
 abbr -a -g dil 'docker image ls'
+abbr -a -g diu 'docker image pull'
+abbr -a -g diua "docker image ls | tail --lines +2 | awk '{printf \"%s:%s\n\", \$1, \$2}' | xargs -I{} bash -c 'echo \">> {} ==========\"; docker image pull {}'"
 abbr -a -g dsp 'docker system prune'
 abbr -a -g dspy 'docker system prune --force'
 abbr -a -g d-c 'docker-compose'
