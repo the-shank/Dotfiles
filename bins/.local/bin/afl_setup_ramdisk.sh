@@ -5,8 +5,8 @@
 mkdir -p /tmp/afl-ramdisk
 echo "created directory: /tmp/afl-ramdisk"
 
-sudo mount -t tmpfs -o size=512M tmpfs /tmp/afl-ramdisk
-echo "mounted a 512MB tmpfs at /tmp/afl-ramdisk"
+sudo mount -t tmpfs -o size=10G tmpfs /tmp/afl-ramdisk
+echo "mounted a 10GB tmpfs at /tmp/afl-ramdisk"
 
 mkdir -p /tmp/afl-ramdisk/tmpdir
 echo "created directory: /tmp/afl-ramdisk/tmpdir"
