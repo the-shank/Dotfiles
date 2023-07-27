@@ -43,12 +43,12 @@ function setup --description "sets up the environment variables and all"
     # enable downgrading packages in Manjaro
     _export DOWNGRADE_FROM_ALA 1
 
-    # fzf
-    _export FZF_DEFAULT_COMMAND "rg --files --hidden --follow --glob '!.git'"
-    _export FZF_DEFAULT_OPTS '--layout=reverse'
-    _export FZF_CTRL_T_COMMAND 'fd --hidden --ignore-case --follow --exclude .git/ --exclude .local/share/Steam/ --exclude .cache/ ""'
-    _export FZF_ALT_C_COMMAND 'fd --type d --hidden --ignore-case --follow --exclude .git/ --exclude .local/share/Steam/ --exclude .cache/ ""'
-    _export FZF_LEGACY_KEYBINDINGS 0
+    # fzf (not applicable to patrickf1/fzf.fish)
+    # _export FZF_DEFAULT_COMMAND "rg --files --hidden --follow --glob '!.git'"
+    # _export FZF_DEFAULT_OPTS '--layout=reverse'
+    # _export FZF_CTRL_T_COMMAND 'fd --hidden --ignore-case --follow --exclude .git/ --exclude .local/share/Steam/ --exclude .cache/ ""'
+    # _export FZF_ALT_C_COMMAND 'fd --type d --hidden --ignore-case --follow --exclude .git/ --exclude .local/share/Steam/ --exclude .cache/ ""'
+    # _export FZF_LEGACY_KEYBINDINGS 0
 
     # done (notification for long running terminal tasks)
     _export __done_notify_sound 1
