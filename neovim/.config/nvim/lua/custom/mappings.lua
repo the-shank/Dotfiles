@@ -30,10 +30,10 @@ M.general = {
 M.telescope = {
 	n = {
 		["<leader>ff"] = {
-			"<cmd> Telescope find_files find_command=bfs,-type,f,-follow,-not,-path,target/,-not,-path,.git/,-not,-path,.cache/ <CR>",
+			"<cmd> Telescope find_files theme=get_dropdown previewer=false find_command=bfs,-type,f,-follow,-not,-path,target/,-not,-path,.git/,-not,-path,.cache/ <CR>",
 		},
 		["<leader>fF"] = {
-			"<cmd> Telescope find_files find_command=bfs,-type,f,-follow,-maxdepth,3,-not,-path,target/,-not,-path,.git/,-not,-path,.cache/ <CR>",
+			"<cmd> Telescope find_files theme=get_dropdown previewer=false find_command=bfs,-type,f,-follow,-maxdepth,4,-not,-path,target/,-not,-path,.git/,-not,-path,.cache/ <CR>",
 		},
 		["<leader>fa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "Find all" },
 		-- ["<leader>fa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true ignore-case exclude=target/ exclude=.git/ exclude=.cache/ <CR>", "Find all" },
