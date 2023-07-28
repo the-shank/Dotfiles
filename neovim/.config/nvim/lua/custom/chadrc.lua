@@ -5,8 +5,8 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "everforest",
-  theme_toggle = { "everforest", "everforest_light" },
+  theme = "everforest_light",
+  theme_toggle = { "everforest_light", "everforest_light_light" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
@@ -19,7 +19,7 @@ M.ui = {
       "███████ ███████ ███████ ██ ██  ██ █████  ",
       "     ██ ██   ██ ██   ██ ██  ██ ██ ██  ██ ",
       "███████ ██   ██ ██   ██ ██   ████ ██   ██",
-    }
+    },
   },
 
   cheatsheet = {
@@ -33,7 +33,7 @@ M.ui = {
   statusline = {
     overriden_modules = function()
       local st_modules = require "nvchad_ui.statusline.default"
-      local abspath = vim.fn.expand("%p")
+      local abspath = vim.fn.expand "%p"
 
       return {
         fileInfo = function()
