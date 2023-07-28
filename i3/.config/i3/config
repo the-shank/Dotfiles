@@ -278,6 +278,7 @@ for_window [title="alsamixer"] floating enable border pixel 1
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Quickgui"] floating enable
 for_window [class="mpv"] floating enable
+for_window [title="ZotFile Preferences"] floating enable
 
 for_window [window_role="pop-up"] floating enable
 
