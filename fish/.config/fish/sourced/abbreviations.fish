@@ -143,6 +143,7 @@ abbr -a -g dbstop 'distrobox stop'
 abbr -a -g dbc 'distrobox-create'
 abbr -a -g dbcl 'distrobox-create --clone'
 abbr -a -g dbstopall "distrobox ls --no-stats | rg --ignore-case 'Up ' | awk '{print \$3}' | xargs -I{} distrobox stop -Y {}"
+abbr -a -g xhostfix 'xhost +si:localuser:$USER'
 
 # python : flask-migrate - show current migration version info
 abbr -a -g db-curr "python manage.py db show (python manage.py db current 2>/dev/null | tail -n1 | awk '{print \$1}')"
