@@ -110,6 +110,7 @@ bindsym $mod+Ctrl+t exec --no-startup-id picom -CGb --no-fading-openclose --no-f
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 # bindsym Print exec --no-startup-id i3-scrot
 bindsym Print exec --no-startup-id flameshot gui
+bindsym Shift+Print exec --no-startup-id xfce4-screenshooter --window --mouse
 bindsym $mod+Print --release exec --no-startup-id i3-scrot --window-to-clipboard
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot --window-to-clipboard 3
 # bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
