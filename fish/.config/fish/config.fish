@@ -548,3 +548,6 @@ end
 
 # xbps
 fish_add_path $HOME/code/misc/xbps/usr/bin
+
+# bat light theme
+setenv BAT_THEME "Solarized (light)"
