@@ -593,7 +593,7 @@ bindsym $mod+semicolon exec --no-startup-id dunstctl close
 bindsym $mod+Shift+semicolon exec --no-startup-id dunstctl history-pop
 
 # battery notifications
-exec --no-startup-id i3-battery-popup -n -t 10m -m "battery low!" -L 15 -l 10 &
+exec --no-startup-id i3-battery-popup -n -t 10m -m "battery low!" -L 20 -l 10 &
 
 # start picom
 # exec_always --no-startup-id picom -CGb --no-fading-openclose --no-fading-destroyed-argb -D 1
