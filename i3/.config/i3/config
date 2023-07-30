@@ -455,12 +455,13 @@ bar {
         separator #4b5262
 
         # colour of             border, background, text
+        focused_workspace       #2f343f #6790EB #d8dee8
         # focused_workspace       #2f343f #bf616a #d8dee8
-        focused_workspace       #2f343f #ffad00 #2f343f
+        # focused_workspace       #2f343f #ffad00 #2f343f
         active_workspace        #2f343f #2f343f #d8dee8
         inactive_workspace      #2f343f #2f343f #d8dee8
-        # urgent_workspace        #2f343f #ebcb8b #2f343f
-        urgent_workspace        #2f343f #bf616a #2f343f
+        urgent_workspace        #2f343f #ebcb8b #2f343f
+        # urgent_workspace        #2f343f #bf616a #2f343f
         binding_mode            #16a085 #2C2C2C #F9FAF9
     }
 }
@@ -470,8 +471,8 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors from arcolinux
 # class                 border  backgr. text    indicator
-# client.focused          #6790EB #6790EB #e5e5e5 #6790EB
-client.focused          #ffad00 #ffad00 #e5e5e5 #ffad00
+client.focused          #6790EB #6790EB #e5e5e5 #6790EB
+# client.focused          #ffad00 #ffad00 #e5e5e5 #ffad00
 client.focused_inactive #222222 #222222 #a9a9a9 #222222
 client.unfocused        #222222 #222222 #aaaaaa #222222
 client.urgent           #d42121 #d42121 #f7f7f7 #d42121
