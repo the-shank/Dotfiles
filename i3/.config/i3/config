@@ -454,11 +454,13 @@ bar {
         statusline #2f343f
         separator #4b5262
 
-        # colour of border, background, and text
-        focused_workspace       #2f343f #bf616a #d8dee8
+        # colour of             border, background, text
+        # focused_workspace       #2f343f #bf616a #d8dee8
+        focused_workspace       #2f343f #ffad00 #2f343f
         active_workspace        #2f343f #2f343f #d8dee8
         inactive_workspace      #2f343f #2f343f #d8dee8
-        urgent_workspace        #2f343f #ebcb8b #2f343f
+        # urgent_workspace        #2f343f #ebcb8b #2f343f
+        urgent_workspace        #2f343f #bf616a #2f343f
         binding_mode            #16a085 #2C2C2C #F9FAF9
     }
 }
@@ -468,7 +470,8 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors from arcolinux
 # class                 border  backgr. text    indicator
-client.focused          #6790EB #6790EB #e5e5e5 #6790EB
+# client.focused          #6790EB #6790EB #e5e5e5 #6790EB
+client.focused          #ffad00 #ffad00 #e5e5e5 #ffad00
 client.focused_inactive #222222 #222222 #a9a9a9 #222222
 client.unfocused        #222222 #222222 #aaaaaa #222222
 client.urgent           #d42121 #d42121 #f7f7f7 #d42121
@@ -481,8 +484,8 @@ client.background       #242424
 #############################
 
 # Set inner/outer gaps
-gaps inner 2
-gaps outer -2
+# gaps inner 2
+# gaps outer -2
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -490,11 +493,11 @@ gaps outer -2
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
+# smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
+# smart_borders on
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
