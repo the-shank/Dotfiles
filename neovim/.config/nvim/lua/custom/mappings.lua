@@ -31,11 +31,16 @@ M.telescope = {
 	n = {
 		["<leader>ff"] = {
 			"<cmd> Telescope find_files theme=get_dropdown previewer=false find_command=bfs,-type,f,-follow,-not,-path,target/,-not,-path,.git/,-not,-path,.cache/ <CR>",
+			"Find files",
 		},
 		["<leader>fF"] = {
 			"<cmd> Telescope find_files theme=get_dropdown previewer=false find_command=bfs,-type,f,-follow,-maxdepth,3,-not,-path,target/,-not,-path,.git/,-not,-path,.cache/ <CR>",
+			"Find shallow",
 		},
-		["<leader>fa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "Find all" },
+		["<leader>fa"] = {
+			"<cmd> Telescope find_files theme=get_dropdown previewer=false follow=true no_ignore=true hidden=true <CR>",
+			"Find all",
+		},
 		-- ["<leader>fa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true ignore-case exclude=target/ exclude=.git/ exclude=.cache/ <CR>", "Find all" },
 		["<leader>fs"] = { "<cmd> Telescope lsp_document_symbols <CR>", "Document Symbols" },
 		["<leader>fS"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "Workspace Symbols" },
