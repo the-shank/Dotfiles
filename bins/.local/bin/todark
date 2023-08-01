@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# NOTE: THIS IS NOT COMPLETE YET
+
+# Update themes for:
+# [x] xfce-terminal
+# [ ] nvim
+# [ ] firefox
+# [ ] lxappearance
+
+set -eu
+set -o pipefail
+
+# xfce-terminal
+FILE=$HOME/.config/xfce4/terminal/terminalrc
+sd "^// ColorPalette=#232A2E" "ColorPalette=#232A2E" $FILE
+sd "^ColorPalette=#EFEBD4" "// ColorPalette=#EFEBD4" $FILE
+sd "^// ColorForeground=#D3C6AA" "ColorForeground=#D3C6AA" $FILE
+sd "^ColorForeground=#5C6A72" "// ColorForeground=#5C6A72" $FILE
+sd "^// ColorBackground=#2D353B" "ColorBackground=#2D353B" $FILE
+sd "^ColorBackground=#FDF6E3" "// ColorBackground=#FDF6E3" $FILE
+sd "^// ColorSelectionBackground=#543A48" "ColorSelectionBackground=#543A48" $FILE
+sd "^ColorSelectionBackground=#8FF0A4" "// ColorSelectionBackground=#8FF0A4" $FILE
+sd "^// TabActivityColor=#E69875" "TabActivityColor=#E69875" $FILE
+sd "^TabActivityColor=#F57D26" "// TabActivityColor=#F57D26" $FILE
