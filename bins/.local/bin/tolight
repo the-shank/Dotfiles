@@ -4,9 +4,9 @@
 
 # Update themes for:
 # [x] xfce-terminal
-# [ ] nvim
-# [ ] firefox
+# [X] nvim
 # [ ] lxappearance
+# [ ] firefox
 
 set -eu
 set -o pipefail
@@ -23,3 +23,8 @@ sd "^ColorSelectionBackground=#543A48" "// ColorSelectionBackground=#543A48" $FI
 sd "^// ColorSelectionBackground=#8FF0A4" "ColorSelectionBackground=#8FF0A4" $FILE
 sd "^TabActivityColor=#E69875" "// TabActivityColor=#E69875" $FILE
 sd "^// TabActivityColor=#F57D26" "TabActivityColor=#F57D26" $FILE
+
+# nvim
+FILE=$HOME/.config/nvim/lua/custom/chadrc.lua
+sd -s "theme = \"everforest\"" "theme = \"everforest_light\"" $FILE
+sd -s "theme_toggle = { \"everforest\", \"everforest_light\" }" "theme_toggle = { \"everforest_light\", \"everforest\" }" $FILE
