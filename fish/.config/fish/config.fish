@@ -551,3 +551,6 @@ fish_add_path $HOME/code/misc/xbps/usr/bin
 
 # bat light theme
 setenv BAT_THEME "Solarized (light)"
+
+# nix
+set --export XDG_DATA_DIRS $HOME/.nix-profile/share:$XDG_DATA_DIRS
