@@ -4,7 +4,7 @@
 
 # check that the script is run with sudo/root permissions
 if [[ $EUID -ne 0 ]]; then
-	sudo zswap-stats
+	sudo $HOME/.local/bin/zswap-stats
 	exit 1
 fi
 
