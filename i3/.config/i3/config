@@ -58,7 +58,8 @@ floating_modifier $mod
 
 # start a terminal
 bindsym Ctrl+$mod+Return exec xfce4-terminal
-bindsym $mod+Return exec xfce4-terminal -e "distrobox-enter -n dbox-archshank-wip"
+bindsym $mod+Return exec xfce4-terminal
+# bindsym $mod+Return exec xfce4-terminal -e "distrobox-enter -n dbox-archshank-wip"
 
 # start a file explorer
 bindsym $mod+Shift+Return exec thunar
@@ -72,7 +73,10 @@ bindsym $alt+space exec rofi -lines 12 -padding 18 -width 30 -location 0 -font '
 bindsym $alt+period exec rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -show emoji -modi emoji -matching fuzzy
 bindsym $mod+Tab exec rofi -lines 12 -padding 18 -width 30 -location 0 -show window -sidebar-mode -font 'Rubik 14' -show-icons -matching fuzzy
 bindsym $alt+comma exec rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
-bindsym $alt+s exec --no-startup-id rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -show drun -run-shell-command '{terminal} -e fish -ic "{cmd} && read"'
+# bindsym $alt+s exec --no-startup-id rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -show drun -run-shell-command '{terminal} -e fish -ic "{cmd} && read"'
+
+# scratch document
+bindsym $alt+s exec --no-startup-id mousepad ~/Sync/scratchpad.txt
 
 # dictionary
 bindsym $mod+d exec --no-startup-id xfce4-dict -c
@@ -178,7 +182,7 @@ bindsym $mod+a focus parent
 # focus the child container
 bindsym $mod+c focus child
 
-# move the currently focused window to the scratchpad
+# move the currently focused window to the cratchpad
 bindsym $mod+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
@@ -279,6 +283,7 @@ for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Quickgui"] floating enable
 for_window [class="mpv"] floating enable
 for_window [title="ZotFile Preferences"] floating enable
+for_window [title="~/Sync/scratchpad.txt - Mousepad"] floating enable, move scratchpad
 
 for_window [window_role="pop-up"] floating enable
 
@@ -614,3 +619,6 @@ workspace $ws10 output $laptop $monitor
 
 # autorandr (load first detected configuration)
 exec --no-startup-id autorandr --change
+
+# start scratch doc
+exec --no-startup-id mousepad ~/Sync/scratchpad.txt
