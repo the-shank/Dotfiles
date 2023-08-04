@@ -76,7 +76,9 @@ bindsym $alt+comma exec rofi -lines 12 -padding 18 -width 30 -location 0 -font '
 # bindsym $alt+s exec --no-startup-id rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -show drun -run-shell-command '{terminal} -e fish -ic "{cmd} && read"'
 
 # scratch document
-bindsym $alt+s exec --no-startup-id mousepad ~/Sync/scratchpad.txt
+# bindsym $alt+s exec --no-startup-id mousepad ~/Sync/scratchpad.md
+# bindsym $alt+s exec --no-startup-id xfce4-terminal --title scratchpad --command "nvim /home/shank/Sync/scratchpad.md"
+bindsym $alt+s exec --no-startup-id xfce4-terminal --title scratchpad --command "hx /home/shank/Sync/scratchpad.md"
 
 # dictionary
 bindsym $mod+d exec --no-startup-id xfce4-dict -c
@@ -283,7 +285,8 @@ for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Quickgui"] floating enable
 for_window [class="mpv"] floating enable
 for_window [title="ZotFile Preferences"] floating enable
-for_window [title="~/Sync/scratchpad.txt - Mousepad"] floating enable, move scratchpad
+for_window [title="~/Sync/scratchpad.md - Mousepad"] floating enable, move scratchpad
+for_window [class="Xfce4-terminal" title="scratchpad"] floating enable, move scratchpad
 
 for_window [window_role="pop-up"] floating enable
 
@@ -621,4 +624,4 @@ workspace $ws10 output $laptop $monitor
 exec --no-startup-id autorandr --change
 
 # start scratch doc
-exec --no-startup-id mousepad ~/Sync/scratchpad.txt
+exec --no-startup-id xfce4-terminal --title scratchpad -e "hx ~/Sync/scratchpad.md"
