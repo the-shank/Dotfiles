@@ -5,7 +5,7 @@
 # Update themes for:
 # [x] xfce-terminal
 # [x] nvim
-# [ ] lxappearance
+# [x] lxappearance (gtk theme)
 # [ ] firefox
 
 set -eu
@@ -28,3 +28,7 @@ sd "^TabActivityColor=#F57D26" "// TabActivityColor=#F57D26" $FILE
 FILE=$HOME/.config/nvim/lua/custom/chadrc.lua
 sd -s "theme = \"everforest_light\"" "theme = \"everforest\"" $FILE
 sd -s "theme_toggle = { \"everforest_light\", \"everforest\" }" "theme_toggle = { \"everforest\", \"everforest_light\" }" $FILE
+
+# lxappearance (gtk theme)
+FILE=$HOME/.config/gtk-3.0/settings.ini
+sd "gtk-theme-name=.*" "gtk-theme-name=Arc-Dark" $FILE
