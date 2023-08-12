@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# NOTE: THIS IS NOT COMPLETE YET
-
 # Update themes for:
 # [x] xfce-terminal
 # [x] nvim
-# [x] lxappearance (gtk theme)
-# [ ] firefox
+# [x] gtk theme
+
+# refs:
+# - https://felix-kling.de/blog/2021/linux-toggle-dark-mode.html
 
 set -eu
 set -o pipefail
@@ -26,9 +26,16 @@ sd "^TabActivityColor=#F57D26" "// TabActivityColor=#F57D26" $FILE
 
 # nvim
 FILE=$HOME/.config/nvim/lua/custom/chadrc.lua
-sd -s "theme = \"everforest_light\"" "theme = \"everforest\"" $FILE
-sd -s "theme_toggle = { \"everforest_light\", \"everforest\" }" "theme_toggle = { \"everforest\", \"everforest_light\" }" $FILE
+sed -i -e 's/theme = "everforest_light"/theme = "everforest"/' $FILE
+sed -i -e 's/theme_toggle = { "everforest_light", "everforest" }/theme_toggle = { "everforest", "everforest_light" }/' $FILE
 
-# lxappearance (gtk theme)
-FILE=$HOME/.config/gtk-3.0/settings.ini
-sd "gtk-theme-name=.*" "gtk-theme-name=Arc-Dark" $FILE
+# gtk theme
+# FILE=$HOME/.config/gtk-3.0/settings.ini
+# sd "gtk-theme-name=.*" "gtk-theme-name=Arc-Dark" $FILE
+FILE=$HOME/.xsettingsd
+sed -i -e 's#Net/ApplicationPreferDarkTheme 0#Net/ApplicationPreferDarkTheme 1#' $FILE
+sed -i -e 's#Gtk/ApplicationPreferDarkTheme 0#Gtk/ApplicationPreferDarkTheme 1#' $FILE
+sed -i -e 's#Net/ThemeName "Arc"#Net/ThemeName "Arc-Dark"#' $FILE
+sed -i -e 's#Gtk/ThemeName "Arc"#Gtk/ThemeName "Arc-Dark"#' $FILE
+killall -HUP xsettingsd
+i3-msg reload
