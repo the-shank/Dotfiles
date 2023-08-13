@@ -19,6 +19,9 @@ function set_default() {
     xdg-mime default "$app" "$mimetype"
 }
 
+# docs
+set_default "application/json" "org.xfce.mousepad.desktop"
+
 # web stuff
 set_default "x-scheme-handler/http" "firefox.desktop"
 set_default "x-scheme-handler/https" "firefox.desktop"
