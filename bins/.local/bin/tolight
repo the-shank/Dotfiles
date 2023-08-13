@@ -4,9 +4,7 @@
 # [x] xfce-terminal
 # [x] nvim
 # [x] gtk theme
-
-# refs:
-# - https://felix-kling.de/blog/2021/linux-toggle-dark-mode.html
+# [x] mousepad
 
 set -eu
 set -o pipefail
@@ -29,9 +27,8 @@ FILE=$HOME/.config/nvim/lua/custom/chadrc.lua
 sed -i -e 's/theme = "everforest"/theme = "everforest_light"/' $FILE
 sed -i -e 's/theme_toggle = { "everforest", "everforest_light" }/theme_toggle = { "everforest_light", "everforest" }/' $FILE
 
-# lxappearance (gtk theme)
-# FILE=$HOME/.config/gtk-3.0/settings.ini
-# sd "gtk-theme-name=.*" "gtk-theme-name=Arc" $FILE
+# gtk theme
+# ref: https://felix-kling.de/blog/2021/linux-toggle-dark-mode.html
 FILE=$HOME/.xsettingsd
 if ! grep -q "Net/ApplicationPreferDarkTheme" ${FILE}; then
   echo "Net/ApplicationPreferDarkTheme 0" >> $FILE
@@ -55,3 +52,7 @@ else
 fi
 killall -HUP xsettingsd
 i3-msg reload
+
+# mousepad
+# ref: https://docs.xfce.org/apps/mousepad/start
+gsettings set org.xfce.mousepad.preferences.view color-scheme solarized-light
