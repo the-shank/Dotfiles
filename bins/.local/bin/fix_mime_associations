@@ -23,6 +23,7 @@ function set_default() {
 set_default "x-scheme-handler/http" "firefox.desktop"
 set_default "x-scheme-handler/https" "firefox.desktop"
 set_default "text/html" "firefox.desktop"
+set_default "application/xhtml+xml" "firefox.desktop"
 
 # images
 set_default "image/jpeg" "org.xfce.ristretto.desktop"
