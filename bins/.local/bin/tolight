@@ -34,24 +34,24 @@ sed -i -e 's/theme_toggle = { "everforest", "everforest_light" }/theme_toggle = 
 # sd "gtk-theme-name=.*" "gtk-theme-name=Arc" $FILE
 FILE=$HOME/.xsettingsd
 if ! grep -q "Net/ApplicationPreferDarkTheme" ${FILE}; then
-  echo "Net/ApplicationPreferDarkTheme 0" >> $FILE
+	echo "Net/ApplicationPreferDarkTheme 0" >>$FILE
 else
-  sed -i -e 's#Net/ApplicationPreferDarkTheme 1#Net/ApplicationPreferDarkTheme 0#' $FILE
+	sed -i -e 's#Net/ApplicationPreferDarkTheme 1#Net/ApplicationPreferDarkTheme 0#' $FILE
 fi
 if ! grep -q "Gtk/ApplicationPreferDarkTheme" ${FILE}; then
-  echo "Gtk/ApplicationPreferDarkTheme 0" >> $FILE
+	echo "Gtk/ApplicationPreferDarkTheme 0" >>$FILE
 else
-  sed -i -e 's#Gtk/ApplicationPreferDarkTheme 1#Gtk/ApplicationPreferDarkTheme 0#' $FILE
+	sed -i -e 's#Gtk/ApplicationPreferDarkTheme 1#Gtk/ApplicationPreferDarkTheme 0#' $FILE
 fi
 if ! grep -q "Net/ThemeName" $FILE; then
-  echo "Net/ThemeName \"Arc\"" >> $FILE
+	echo "Net/ThemeName \"Arc\"" >>$FILE
 else
-  sed -i -e 's#Net/ThemeName "Arc-Dark"#Net/ThemeName "Arc"#' $FILE
+	sed -i -e 's#Net/ThemeName "Arc-Dark"#Net/ThemeName "Arc"#' $FILE
 fi
 if ! grep -q "Gtk/ThemeName" $FILE; then
-  echo "Gtk/ThemeName \"Arc\"" >> $FILE
+	echo "Gtk/ThemeName \"Arc\"" >>$FILE
 else
-  sed -i -e 's#Gtk/ThemeName "Arc-Dark"#Gtk/ThemeName "Arc"#' $FILE
+	sed -i -e 's#Gtk/ThemeName "Arc-Dark"#Gtk/ThemeName "Arc"#' $FILE
 fi
 killall -HUP xsettingsd
 i3-msg reload
