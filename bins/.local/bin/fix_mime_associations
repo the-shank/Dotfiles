@@ -6,17 +6,17 @@
 
 # usage: set_default(mimetype, app)
 function set_default() {
-    # if 2 args are not provided, display error message and exit
-    if [ $# -ne 2 ]; then
-        echo "Error: incorrect number of arguments provided"
-        echo "Usage: set_default(mimetype, app)"
-        exit 1
-    fi
+	# if 2 args are not provided, display error message and exit
+	if [ $# -ne 2 ]; then
+		echo "Error: incorrect number of arguments provided"
+		echo "Usage: set_default(mimetype, app)"
+		exit 1
+	fi
 
-    mimetype=$1
-    app=$2
-    echo "$mimetype -> $app"
-    xdg-mime default "$app" "$mimetype"
+	mimetype=$1
+	app=$2
+	echo "$mimetype -> $app"
+	xdg-mime default "$app" "$mimetype"
 }
 
 # docs
@@ -37,3 +37,6 @@ set_default "application/pdf" "org.gnome.Evince.desktop"
 
 # folders
 set_default "inode/directory" "thunar.desktop"
+
+# video
+set_default "video/mp4" "mpv.desktop"
