@@ -287,6 +287,7 @@ for_window [class="mpv"] floating enable
 for_window [title="ZotFile Preferences"] floating enable
 for_window [title="~/Sync/scratchpad.md - Mousepad"] floating enable, move scratchpad
 for_window [title="scratchpad"] floating enable, move scratchpad
+for_window [class="Xfce4-dict"] floating enable
 
 for_window [window_role="pop-up"] floating enable
 
