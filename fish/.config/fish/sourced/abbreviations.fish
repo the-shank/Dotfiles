@@ -45,7 +45,7 @@ abbr -a -g mo3 'cal -3'
 
 # redshift
 abbr -a -g r0 'redshift -P -O 6500'
-abbr -a -g rr 'redshift -P -O 6250'
+abbr -a -g rr 'redshift -P -O 6200'
 abbr -a -g r1 'redshift -P -O 6000'
 abbr -a -g r2 'redshift -P -O 5500'
 abbr -a -g r3 'redshift -P -O 5000'
@@ -129,7 +129,7 @@ abbr -a -g dca 'docker container attach'
 abbr -a -g di 'docker image'
 abbr -a -g dil 'docker image ls'
 abbr -a -g diu 'docker image pull'
-abbr -a -g diua "docker image ls | tail --lines +2 | awk '{printf \"%s:%s\n\", \$1, \$2}' | xargs -I{} bash -c 'echo \">> {} ==========\"; docker image pull {}'"
+abbr -a -g diua "docker image ls | tail --lines +2 | rg --ignore-case --invert-match \"(dbox|devc)\" | awk '{printf \"%s:%s\n\",\$1,\$2}' | xargs -I{} bash -c 'echo \">> {} =============\"; docker image pull {}'"
 abbr -a -g dsp 'docker system prune'
 abbr -a -g dspy 'docker system prune --force'
 abbr -a -g d-c 'docker-compose'
