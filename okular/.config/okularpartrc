@@ -1,6 +1,7 @@
 [Core General]
 ExternalEditor=Custom
 ExternalEditorCommand=mousepad --line %l --column %c
+ObeyDRM=false
 
 [Core Performance]
 TextHinting=Enabled
@@ -21,6 +22,9 @@ SplitterSizes=431,1379
 
 [Nav Panel]
 SidebarIconSize=22
+
+[PageView]
+SmoothScrolling=false
 
 [Reviews]
 QuickAnnotationTools=<tool type="highlight" name="Yellow Highlighter" id="1"><engine type="TextSelector" color="#ffffff99"><annotation type="Highlight" color="#ffffff99"/></engine><shortcut>1</shortcut></tool>,<tool type="highlight" name="Green Highlighter" id="2"><engine type="TextSelector" color="#ff99ff99"><annotation type="Highlight" color="#ff99ff99"/></engine><shortcut>2</shortcut></tool>,<tool type="highlight" id="3"><engine type="TextSelector" color="#ffffcb99"><annotation type="Highlight" color="#ffffcb99"/></engine><shortcut>3</shortcut></tool>,<tool type="typewriter" name="Insert Text" id="4"><engine type="PickPoint" block="true"><annotation type="Typewriter" font="Iosevka NF SemiBold\\,9\\,-1\\,5\\,63\\,0\\,0\\,0\\,0\\,0\\,Regular" textColor="#ff5500" color="#00ffffff" width="0"/></engine><shortcut>4</shortcut></tool>,<tool type="typewriter" id="5"><engine type="PickPoint" block="true"><annotation type="Typewriter" font="Iosevka NF SemiBold\\,9\\,-1\\,5\\,63\\,0\\,0\\,0\\,0\\,0\\,Regular" textColor="#0055ff" color="#00ffffff" width="0"/></engine><shortcut>5</shortcut></tool>,<tool type="note-inline" id="6"><engine type="PickPoint" block="true" hoverIcon="tool-note-inline" color="#ffff00"><annotation type="FreeText" textColor="#ff000000" color="#ffffff00"/></engine><shortcut>6</shortcut></tool>,<tool type="note-linked" id="7"><engine type="PickPoint" hoverIcon="tool-note" color="#ffff00"><annotation type="Text" icon="Note" color="#ffffff00"/></engine><shortcut>7</shortcut></tool>,<tool type="underline" id="8"><engine type="TextSelector" color="#ff0000"><annotation type="Underline" color="#ffff0000"/></engine><shortcut>8</shortcut></tool>
