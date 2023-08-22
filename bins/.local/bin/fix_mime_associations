@@ -23,10 +23,12 @@ function set_default() {
 set_default "application/json" "org.xfce.mousepad.desktop"
 
 # web stuff
-set_default "x-scheme-handler/http" "firefox.desktop"
-set_default "x-scheme-handler/https" "firefox.desktop"
-set_default "text/html" "firefox.desktop"
-set_default "application/xhtml+xml" "firefox.desktop"
+# BROWSER=firefox
+BROWSER=vivaldi-stable
+set_default "x-scheme-handler/http" "$BROWSER.desktop"
+set_default "x-scheme-handler/https" "$BROWSER.desktop"
+set_default "text/html" "$BROWSER.desktop"
+set_default "application/xhtml+xml" "$BROWSER.desktop"
 
 # images
 set_default "image/jpeg" "org.xfce.ristretto.desktop"
