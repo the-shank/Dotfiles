@@ -10,7 +10,7 @@ set -eu
 set -o pipefail
 
 # xfce-terminal
-FILE=$HOME/.config/xfce4/terminal/terminalrc
+FILE=$HOME/dotfiles/xfce-terminal/.config/xfce4/terminal/terminalrc
 sd "^ColorPalette=#232A2E" "// ColorPalette=#232A2E" $FILE
 sd "^// ColorPalette=#EFEBD4" "ColorPalette=#EFEBD4" $FILE
 sd "^ColorForeground=#D3C6AA" "// ColorForeground=#D3C6AA" $FILE
