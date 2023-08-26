@@ -185,7 +185,7 @@ abbr -a -g r ranger
 abbr -a -g j joshuto
 
 # cmake build type?
-abbr -a -g build_type "rg --ignore-case cmake_build_type CMakeCache.txt"
+abbr -a -g build_type\? "bfs . -type f -name CMakeCache.txt | head -n1 | xargs -I{} rg --ignore-case cmake_build_type {}"
 
 # pgrep should always be case insensitive
 abbr -a -g pgrep "pgrep -i"
