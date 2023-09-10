@@ -53,6 +53,11 @@ driver = "pulseaudio"
 button = "left"
 cmd = "pavucontrol"
 
+# [[block]]
+# block = "keyboard_layout"
+# driver = "setxkbmap"
+# interval = 20
+
 [[block]]
 block = "time"
 interval = 20
