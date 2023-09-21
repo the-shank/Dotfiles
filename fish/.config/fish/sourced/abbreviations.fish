@@ -242,4 +242,4 @@ abbr -a -g fixssh "rm -r /tmp/ssh-agent.socket; ssh-agent -a /tmp/ssh-agent.sock
 abbr -a -g memst 'zswap-stats; printf "\n"; free -mt'
 
 # nix
-abbr -a -g renix 'ls $HOME/.nix-profile/share/applications/ | xargs -I{} unlink $HOME/.local/share/applications/{} && ln -s $HOME/.nix-profile/share/applications/* $HOME/.local/share/applications'
+abbr -a -g renix 'ls $HOME/.nix-profile/share/applications/ | xargs -I{} unlink $HOME/.local/share/applications/{}; ln -s $HOME/.nix-profile/share/applications/* $HOME/.local/share/applications'
