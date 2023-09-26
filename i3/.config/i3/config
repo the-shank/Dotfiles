@@ -626,4 +626,4 @@ workspace $ws10 output $laptop $monitor
 exec --no-startup-id autorandr --change
 
 # start scratch doc
-exec --no-startup-id xfce4-terminal --title scratchpad -e "hx ~/Sync/scratchpad.md"
+exec --no-startup-id xfce4-terminal --title scratchpad -e "hx ~/Sync/MyBrain/scratchpad.md"
