@@ -5,6 +5,7 @@ local plugins = {
 
 	-- Override plugin definition options
 
+	--[[
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
@@ -21,6 +22,7 @@ local plugins = {
 			require("custom.configs.lspconfig")
 		end, -- Override to setup mason-lspconfig
 	},
+	--]]
 
 	-- override plugin configs
 	{
@@ -38,6 +40,7 @@ local plugins = {
 		opts = overrides.nvimtree,
 	},
 
+	--[[
 	-- Install a plugin
 	{
 		"max397574/better-escape.nvim",
@@ -46,6 +49,7 @@ local plugins = {
 			require("better_escape").setup()
 		end,
 	},
+	--]]
 
 	-- Rust
 	{
@@ -66,6 +70,8 @@ local plugins = {
 			require("rust-tools").setup(opts)
 		end,
 	},
+	
+	--[[
 	{
 		"saecki/crates.nvim",
 		ft = { "rust", "toml" },
@@ -75,6 +81,7 @@ local plugins = {
 			crates.show()
 		end,
 	},
+	--]]
 
 	-- sybmols outline
 	{
@@ -90,6 +97,7 @@ local plugins = {
 		event = "BufEnter",
 	},
 
+	--[[
 	-- telescope plugins
 	{
 		"nvim-telescope/telescope.nvim",
@@ -105,6 +113,7 @@ local plugins = {
 			require("telescope").load_extension("fzf")
 		end,
 	},
+	--]]
 
 	-- just
 	{
