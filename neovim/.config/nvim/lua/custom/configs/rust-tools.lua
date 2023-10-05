@@ -5,6 +5,18 @@ local options = {
   server = {
     on_attach = on_attach,
     capabilities = capabilities,
+    settings = {
+      ["rust-analyzer"] = {
+        -- for use in rustc_private projects
+        rustc = {
+          source = "discover"
+        },
+        -- enable clippy on save
+        checkOnSave = {
+          command = "clippy"
+        }
+      }
+    },
   },
 }
 
