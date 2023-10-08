@@ -133,6 +133,10 @@ abbr -a -g diua "docker image ls | tail --lines +2 | rg --ignore-case --invert-m
 abbr -a -g dsp 'docker system prune'
 abbr -a -g dspy 'docker system prune --force'
 abbr -a -g d-c 'docker-compose'
+# dev-container related
+abbr -a -g dcs "docker container start -i (docker container ls -a | awk '{print \$NF}' | tail --lines +2 | fzf --prompt 'container> ')"
+abbr -a -g dcnew '/home/shank/code/misc/dev-container/new_devc.sh'
+abbr -a -g dcupd 'bash -c "$(find /home/shank/code/misc/dev-container -type f -name "update*.sh" | fzf)"'
 
 # distrobox
 abbr -a -g dbe 'distrobox enter'
