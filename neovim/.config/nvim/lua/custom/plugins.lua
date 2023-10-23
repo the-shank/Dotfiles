@@ -5,7 +5,6 @@ local plugins = {
 
 	-- Override plugin definition options
 
-	--[[
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
@@ -22,7 +21,6 @@ local plugins = {
 			require("custom.configs.lspconfig")
 		end, -- Override to setup mason-lspconfig
 	},
-	--]]
 
 	-- override plugin configs
 	{

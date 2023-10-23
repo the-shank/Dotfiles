@@ -82,6 +82,14 @@ x-scheme-handler/https=firefox.desktop;
 x-scheme-handler/unknown=firefox.desktop;
 
 [Default Applications]
-application/pdf=org.gnome.Evince.desktop;
-inode/directory=thunar.desktop;
+application/pdf=org.gnome.Evince.desktop
+inode/directory=thunar.desktop
 text/plain=sublime_text.desktop;
+application/json=org.xfce.mousepad.desktop
+x-scheme-handler/http=vivaldi-stable.desktop
+x-scheme-handler/https=vivaldi-stable.desktop
+text/html=vivaldi-stable.desktop
+application/xhtml+xml=vivaldi-stable.desktop
+image/jpeg=org.xfce.ristretto.desktop
+image/png=org.xfce.ristretto.desktop
+video/mp4=mpv.desktop
