@@ -71,6 +71,12 @@ M.nvimtree = {
 			},
 		},
 	},
+
+	actions = {
+		open_file = {
+			resize_window = false,
+		},
+	},
 }
 
 return M
