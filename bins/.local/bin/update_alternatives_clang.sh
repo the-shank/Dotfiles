@@ -6,7 +6,7 @@ function register_clang_version {
     local version=$1
     local priority=$2
 
-    update-alternatives \
+    sudo update-alternatives \
         --install /usr/bin/llvm-config       llvm-config      /usr/bin/llvm-config-${version} ${priority} \
         --slave   /usr/bin/llvm-ar           llvm-ar          /usr/bin/llvm-ar-${version} \
         --slave   /usr/bin/llvm-as           llvm-as          /usr/bin/llvm-as-${version} \
@@ -31,7 +31,7 @@ function register_clang_version {
         --slave   /usr/bin/llvm-addr2line    llvm-addr2line   /usr/bin/llvm-addr2line-${version} \
         --slave   /usr/bin/opt               opt              /usr/bin/opt-${version}
 
-    update-alternatives \
+    sudo update-alternatives \
         --install /usr/bin/clang                 clang                 /usr/bin/clang-${version} ${priority} \
         --slave   /usr/bin/clang++               clang++               /usr/bin/clang++-${version}  \
         --slave   /usr/bin/asan_symbolize        asan_symbolize        /usr/bin/asan_symbolize-${version} \
