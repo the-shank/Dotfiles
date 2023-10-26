@@ -10,17 +10,18 @@ set -eu
 set -o pipefail
 
 # xfce-terminal
-FILE=$HOME/dotfiles/xfce-terminal/.config/xfce4/terminal/terminalrc
-sd "^ColorPalette=#232A2E" "// ColorPalette=#232A2E" $FILE
-sd "^// ColorPalette=#EFEBD4" "ColorPalette=#EFEBD4" $FILE
-sd "^ColorForeground=#D3C6AA" "// ColorForeground=#D3C6AA" $FILE
-sd "^// ColorForeground=#5C6A72" "ColorForeground=#5C6A72" $FILE
-sd "^ColorBackground=#2D353B" "// ColorBackground=#2D353B" $FILE
-sd "^// ColorBackground=#FDF6E3" "ColorBackground=#FDF6E3" $FILE
-sd "^ColorSelectionBackground=#543A48" "// ColorSelectionBackground=#543A48" $FILE
-sd "^// ColorSelectionBackground=#8FF0A4" "ColorSelectionBackground=#8FF0A4" $FILE
-sd "^TabActivityColor=#E69875" "// TabActivityColor=#E69875" $FILE
-sd "^// TabActivityColor=#F57D26" "TabActivityColor=#F57D26" $FILE
+xfconf-query --channel xfce4-terminal --property /color-background --set "#fdf6e3"
+xfconf-query --channel xfce4-terminal --property /color-background-vary --set false
+xfconf-query --channel xfce4-terminal --property /color-bold --set "#073642"
+xfconf-query --channel xfce4-terminal --property /color-bold-is-bright --set true
+xfconf-query --channel xfce4-terminal --property /color-bold-use-default --set false
+xfconf-query --channel xfce4-terminal --property /color-cursor --set "#073642"
+xfconf-query --channel xfce4-terminal --property /color-cursor-use-default --set true
+xfconf-query --channel xfce4-terminal --property /color-foreground --set "#073642"
+xfconf-query --channel xfce4-terminal --property /color-palette --set "#073642;#dc322f;#859900;#b58900;#268bd2;#d33682;#2aa198;#eee8d5;#002b36;#cb4b16;#586e75;#657b83;#839496;#6c71c4;#93a1a1;#fdf6e3"
+xfconf-query --channel xfce4-terminal --property /color-selection-use-default --set true
+xfconf-query --channel xfce4-terminal --property /color-use-theme --set false
+xfconf-query --channel xfce4-terminal --property /tab-activity-color --set "#dc322f"
 
 # nvim
 FILE=$HOME/.config/nvim/lua/custom/chadrc.lua
