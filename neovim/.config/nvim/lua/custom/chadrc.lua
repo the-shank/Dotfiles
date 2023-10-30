@@ -44,7 +44,7 @@ M.ui = {
 
 			-- [10] : cursor_position
 			modules[10] = (function()
-				return st_modules.cursor_position() .. " %#StText# %l:%c "
+				return st_modules.cursor_position() .. " %#StText# %l:%02c "
 			end)()
 		end,
 	},
