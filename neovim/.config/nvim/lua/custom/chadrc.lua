@@ -5,8 +5,8 @@ local M = {}
 local highlights = require("custom.highlights")
 
 M.ui = {
-	theme = "penumbra_light",
-	theme_toggle = { "penumbra_light", "everforest" },
+	theme = "everforest_light",
+	theme_toggle = { "everforest_light", "everforest_light" },
 
 	hl_override = highlights.override,
 	hl_add = highlights.add,
@@ -30,25 +30,24 @@ M.ui = {
 		style = "bordered",
 	},
 
-
 	statusline = {
 		overriden_modules = function(modules)
 			-- for module indexes, see
-			-- https://github.com/NvChad/ui/blob/4c00182f728ad565b1140ca95b802bd24860965f/lua/nvchad/statusline/default.lua#L185
-			-- [2] : fileinfo
+			-- https://github.com/NvChad/ui/blob/v2.0/lua/nvchad/statusline/default.lua#L200
 			local st_modules = require("nvchad.statusline.default")
+
+			-- [5] : file abspath + lsp progress
 			local abspath = vim.fn.expand("%p")
-			modules[2] = (function()
-				return st_modules.fileInfo() .. "%#St_file_txt#" .. abspath .. " "
+			modules[5] = (function()
+				return st_modules.LSP_progress() .. "%#St_file_txt#" .. abspath .. " "
 			end)()
 
-			-- [8] : cursor_position
-			modules[8] = (function()
-				return "%#StText# %l:%c "
+			-- [10] : cursor_position
+			modules[10] = (function()
+				return st_modules.cursor_position() .. " %#StText# %l:%c "
 			end)()
 		end,
 	},
-
 }
 
 M.plugins = "custom.plugins"
