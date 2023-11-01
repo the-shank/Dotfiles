@@ -66,6 +66,9 @@ set --export VISUAL nvim
 # set --export BROWSER firefox
 set --export BROWSER vivaldi-stable
 
+# nvim default config to use
+set --export NVIM_APPNAME nvim-nvchad
+
 # Sets the terminal type for proper colors
 set --export TERM "xterm-256color"
 
