@@ -24,10 +24,14 @@ xfconf-query --channel xfce4-terminal --property /color-selection-use-default --
 xfconf-query --channel xfce4-terminal --property /color-use-theme --set false
 xfconf-query --channel xfce4-terminal --property /tab-activity-color --set "#E69875"
 
-# # nvim
-# FILE=$HOME/.config/nvim/lua/custom/chadrc.lua
-# sed -i -e 's/theme = "everforest_light"/theme = "everforest"/' $FILE
-# sed -i -e 's/theme_toggle = { "everforest_light", "everforest" }/theme_toggle = { "everforest", "everforest_light" }/' $FILE
+# nvim
+# nvim-lazyvim
+FILE=$HOME/.config/nvim-lazyvim/lua/config/options.lua
+sed -i -e 's/vim.opt.background = ".*"/vim.opt.background = "dark"/' $FILE
+# nvim-nvchad
+FILE=$HOME/.config/nvim-nvchad/lua/custom/chadrc.lua
+sed -i -e 's/theme = "everforest_light"/theme = "everforest"/' $FILE
+sed -i -e 's/theme_toggle = { "everforest_light", "everforest" }/theme_toggle = { "everforest", "everforest_light" }/' $FILE
 
 # gtk theme
 # ref: https://felix-kling.de/blog/2021/linux-toggle-dark-mode.html
