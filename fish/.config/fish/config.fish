@@ -21,7 +21,7 @@
 set --export LANG "en_US.UTF-8"
 
 if not status --is-interactive
-  exit
+    exit
 end
 
 # Load private config
@@ -71,7 +71,7 @@ set --export BROWSER vivaldi-stable
 set --export NVIM_APPNAME nvim-lazyvim
 
 # Sets the terminal type for proper colors
-set --export TERM "xterm-256color"
+set --export TERM xterm-256color
 
 # Suppresses fish's intro message
 set fish_greeting
@@ -119,12 +119,12 @@ end
 # set -gx FZF_CTRL_T_COMMAND 'bfs -follow \$dir -iname "*" -not -path .git/ -not -path .local/share/Steam/ -not -path .cache/'
 
 if command -sq fzf && type -q fzf_configure_bindings
-  set -gx fzf_fd_opts --hidden --no-ignore --exclude=.git --exclude=.cache
-  fzf_configure_bindings --directory=\ct
+    set -gx fzf_fd_opts --hidden --no-ignore --exclude=.git --exclude=.cache
+    fzf_configure_bindings --directory=\ct
 end
 
 if not set -q -g fish_user_abbreviations
-  set -gx fish_user_abbreviations
+    set -gx fish_user_abbreviations
 end
 
 #if type -f fortune >/dev/null
@@ -137,12 +137,24 @@ end
 #end
 
 if which tree >/dev/null
-    function l1;  tree --dirsfirst -ChFL 1 $argv; end
-    function l2;  tree --dirsfirst -ChFL 2 $argv; end
-    function l3;  tree --dirsfirst -ChFL 3 $argv; end
-    function ll1; tree --dirsfirst -ChFupDaL 1 $argv; end
-    function ll2; tree --dirsfirst -ChFupDaL 2 $argv; end
-    function ll3; tree --dirsfirst -ChFupDaL 3 $argv; end
+    function l1
+        tree --dirsfirst -ChFL 1 $argv
+    end
+    function l2
+        tree --dirsfirst -ChFL 2 $argv
+    end
+    function l3
+        tree --dirsfirst -ChFL 3 $argv
+    end
+    function ll1
+        tree --dirsfirst -ChFupDaL 1 $argv
+    end
+    function ll2
+        tree --dirsfirst -ChFupDaL 2 $argv
+    end
+    function ll3
+        tree --dirsfirst -ChFupDaL 3 $argv
+    end
 end
 
 if type -q direnv
@@ -206,9 +218,9 @@ function ex --description "Extract bundled & compressed files"
             case '*'
                 echo "'$argv[1]' cannot be extracted via ex"
         end
-   else
-       echo "'$argv[1]' is not a valid file"
-   end
+    else
+        echo "'$argv[1]' is not a valid file"
+    end
 end
 
 function less
@@ -244,7 +256,7 @@ abbr -a -g rmpacmanlock "sudo rm /var/lib/pacman/db.lck"
 abbr -a -g rmlogoutlock "sudo rm /tmp/arcologout.lock"
 
 #which graphical card is working
-abbr -a -g whichvga "/usr/local/bin/arcolinux-which-vga"
+abbr -a -g whichvga /usr/local/bin/arcolinux-which-vga
 
 #free
 abbr -a -g free "free -mt"
@@ -369,16 +381,16 @@ abbr -a -g fix-keyserver "[ -d ~/.gnupg ] || mkdir ~/.gnupg ; cp /etc/pacman.d/g
 
 #fixes
 abbr -a -g fix-permissions "sudo chown -R $USER:$USER ~/.config ~/.local"
-abbr -a -g keyfix "/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
-abbr -a -g key-fix "/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
-abbr -a -g keys-fix "/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
-abbr -a -g fixkey "/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
-abbr -a -g fixkeys "/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
-abbr -a -g fix-key "/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
-abbr -a -g fix-keys "/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
-abbr -a -g fix-sddm-config "/usr/local/bin/arcolinux-fix-sddm-config"
-abbr -a -g fix-pacman-conf "/usr/local/bin/arcolinux-fix-pacman-conf"
-abbr -a -g fix-pacman-keyserver "/usr/local/bin/arcolinux-fix-pacman-gpg-conf"
+abbr -a -g keyfix /usr/local/bin/arcolinux-fix-pacman-databases-and-keys
+abbr -a -g key-fix /usr/local/bin/arcolinux-fix-pacman-databases-and-keys
+abbr -a -g keys-fix /usr/local/bin/arcolinux-fix-pacman-databases-and-keys
+abbr -a -g fixkey /usr/local/bin/arcolinux-fix-pacman-databases-and-keys
+abbr -a -g fixkeys /usr/local/bin/arcolinux-fix-pacman-databases-and-keys
+abbr -a -g fix-key /usr/local/bin/arcolinux-fix-pacman-databases-and-keys
+abbr -a -g fix-keys /usr/local/bin/arcolinux-fix-pacman-databases-and-keys
+abbr -a -g fix-sddm-config /usr/local/bin/arcolinux-fix-sddm-config
+abbr -a -g fix-pacman-conf /usr/local/bin/arcolinux-fix-pacman-conf
+abbr -a -g fix-pacman-keyserver /usr/local/bin/arcolinux-fix-pacman-gpg-conf
 
 #maintenance
 abbr -a -g big "expac -H M "%m\t%n" | sort -h | nl"
@@ -403,16 +415,16 @@ abbr -a -g bls "betterlockscreen -u /usr/share/backgrounds/arcolinux/"
 abbr -a -g xd "ls /usr/share/xsessions"
 
 #arcolinux applications
-abbr -a -g att "archlinux-tweak-tool"
-abbr -a -g adt "arcolinux-desktop-trasher"
-abbr -a -g abl "arcolinux-betterlockscreen"
-abbr -a -g agm "arcolinux-get-mirrors"
-abbr -a -g amr "arcolinux-mirrorlist-rank-info"
-abbr -a -g aom "arcolinux-osbeck-as-mirror"
-abbr -a -g ars "arcolinux-reflector-simple"
-abbr -a -g atm "arcolinux-tellme"
-abbr -a -g avs "arcolinux-vbox-share"
-abbr -a -g awa "arcolinux-welcome-app"
+abbr -a -g att archlinux-tweak-tool
+abbr -a -g adt arcolinux-desktop-trasher
+abbr -a -g abl arcolinux-betterlockscreen
+abbr -a -g agm arcolinux-get-mirrors
+abbr -a -g amr arcolinux-mirrorlist-rank-info
+abbr -a -g aom arcolinux-osbeck-as-mirror
+abbr -a -g ars arcolinux-reflector-simple
+abbr -a -g atm arcolinux-tellme
+abbr -a -g avs arcolinux-vbox-share
+abbr -a -g awa arcolinux-welcome-app
 
 #remove
 abbr -a -g rmgitcache "rm -r ~/.cache/git"
@@ -490,18 +502,18 @@ source ~/.config/fish/sourced/abbreviations.fish
 # source: https://unix.stackexchange.com/a/132117
 # check that we have openssh installed
 if type -q ssh-agent
-  # set the auth_sock dir based on whether we are running in a desktop or in a docker container
-  if set -q XDG_RUNTIME_DIR
-    setenv SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
-  else
-    setenv SSH_AUTH_SOCK "/tmp/ssh-agent.socket"
-  end
+    # set the auth_sock dir based on whether we are running in a desktop or in a docker container
+    if set -q XDG_RUNTIME_DIR
+        setenv SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
+    else
+        setenv SSH_AUTH_SOCK "/tmp/ssh-agent.socket"
+    end
 
-  ssh-add -l >/dev/null 2>&1
-  if test $status -ge 2
-      echo "starting ssh-agent"
-      ssh-agent -a $SSH_AUTH_SOCK >/dev/null
-  end
+    ssh-add -l >/dev/null 2>&1
+    if test $status -ge 2
+        echo "starting ssh-agent"
+        ssh-agent -a $SSH_AUTH_SOCK >/dev/null
+    end
 end
 
 # user paths
@@ -517,6 +529,7 @@ fish_add_path $HOME/.npm-global/bin
 fish_add_path $HOME/Applications/ghidra
 # fish_add_path $HOME/Applications/llvm-13-release/bin
 # fish_add_path /usr/lib/llvm-13/bin
+fish_add_path $HOME/code/applications/codeql
 
 # custom env vars
 set --export FUZZERR_PROJ_DIR $HOME/code/research/FuzzERR
@@ -536,18 +549,18 @@ setenv COLORTERM truecolor
 setenv RUST_BACKTRACE 1
 # source: @jonhoo config
 if test -e ~/.cargo-target
-  setenv CARGO_TARGET_DIR ~/.cargo-target
+    setenv CARGO_TARGET_DIR ~/.cargo-target
 end
 
 # purs3lab stuff (start) >>>>>
 
 # rust: use different RUSTUP_HOME and CARGO_HOME (to save root disk space ¯\_(ツ)_/¯)
 if test -e /workdisk/shank/.rustup
-  setenv RUSTUP_HOME /workdisk/shank/.rustup
+    setenv RUSTUP_HOME /workdisk/shank/.rustup
 end
 if test -e /workdisk/shank/.cargo
-  setenv CARGO_HOME /workdisk/shank/.cargo
-  fish_add_path $CARGO_HOME/bin
+    setenv CARGO_HOME /workdisk/shank/.cargo
+    fish_add_path $CARGO_HOME/bin
 end
 
 # purs3lab stuff (end) <<<<<

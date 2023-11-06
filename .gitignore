@@ -1,3 +1,4 @@
 fonts/.uuid
 .nvimlog
 netload-10.rc
+neovim/.config/nvim-lazyvim/lazy-lock.json
