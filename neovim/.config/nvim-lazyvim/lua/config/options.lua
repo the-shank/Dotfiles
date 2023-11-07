@@ -5,5 +5,5 @@
 -- background
 vim.opt.background = "light"
 
--- everforest theme
+-- everforest theme : disable italic comment
 vim.g.everforest_disable_italic_comment = 1
