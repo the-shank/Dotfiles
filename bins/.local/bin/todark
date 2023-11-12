@@ -12,17 +12,17 @@ set -o pipefail
 # xfce-terminal
 xfconf-query --channel xfce4-terminal --property /color-background --set "#2D353B"
 xfconf-query --channel xfce4-terminal --property /color-background-vary --set false
-xfconf-query --channel xfce4-terminal --property /color-bold --set "#073642"
+# xfconf-query --channel xfce4-terminal --property /color-bold --set "#073642"
 xfconf-query --channel xfce4-terminal --property /color-bold-is-bright --set true
-xfconf-query --channel xfce4-terminal --property /color-bold-use-default --set false
-xfconf-query --channel xfce4-terminal --property /color-cursor --set "#073642"
-xfconf-query --channel xfce4-terminal --property /color-cursor-use-default --set true
+xfconf-query --channel xfce4-terminal --property /color-bold-use-default --set true
+xfconf-query --channel xfce4-terminal --property /color-cursor --set "#D3C6AA"
+xfconf-query --channel xfce4-terminal --property /color-cursor-use-default --set false
 xfconf-query --channel xfce4-terminal --property /color-foreground --set "#D3C6AA"
-xfconf-query --channel xfce4-terminal --property /color-palette --set "#232A2E;#E67E80;#A7C080;#DBBC7F;#7FBBB3;#D699B6;#83C092;#9DA9A0;#7A8478;#E67E80;#A7C080;#DBBC7F;#7FBBB3;#D699B6;#83C092;#D3C6AA"
-xfconf-query --channel xfce4-terminal --property /color-selection-background --set "#543A48"
-xfconf-query --channel xfce4-terminal --property /color-selection-use-default --set false
+xfconf-query --channel xfce4-terminal --property /color-palette --set "#4B565C;#E67E80;#A7C080;#DBBC7F;#7FBBB3;#D699B6;#83C092;#D3C6AA;#5C6A72;#F85552;#8DA101;#DFA000;#3A94C5;#DF69BA;#35A77C;#DFDDC8"
+# xfconf-query --channel xfce4-terminal --property /color-selection-background --set "#543A48"
+xfconf-query --channel xfce4-terminal --property /color-selection-use-default --set true
 xfconf-query --channel xfce4-terminal --property /color-use-theme --set false
-xfconf-query --channel xfce4-terminal --property /tab-activity-color --set "#E69875"
+xfconf-query --channel xfce4-terminal --property /tab-activity-color --set "#AA0000"
 
 # nvim
 # nvim-lazyvim
