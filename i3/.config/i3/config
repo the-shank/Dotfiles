@@ -632,3 +632,6 @@ exec --no-startup-id autorandr --change
 
 # start scratch doc
 # exec --no-startup-id xfce4-terminal --title scratchpad -e "hx ~/Sync/MyBrain/scratchpad.md"
+
+# drop-down terminal
+bindsym $alt+m exec --no-startup-id xfce4-terminal --drop-down
