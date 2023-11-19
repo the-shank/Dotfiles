@@ -10,50 +10,60 @@ set -eu
 set -o pipefail
 
 # xfce-terminal
-xfconf-query --channel xfce4-terminal --property /color-background --set "#fdf6e3"
-xfconf-query --channel xfce4-terminal --property /color-background-vary --set false
-xfconf-query --channel xfce4-terminal --property /color-bold --set "#073642"
-xfconf-query --channel xfce4-terminal --property /color-bold-is-bright --set true
-xfconf-query --channel xfce4-terminal --property /color-bold-use-default --set false
-xfconf-query --channel xfce4-terminal --property /color-cursor --set "#073642"
-xfconf-query --channel xfce4-terminal --property /color-cursor-use-default --set true
-xfconf-query --channel xfce4-terminal --property /color-foreground --set "#073642"
-xfconf-query --channel xfce4-terminal --property /color-palette --set "#073642;#dc322f;#859900;#b58900;#268bd2;#d33682;#2aa198;#eee8d5;#002b36;#cb4b16;#586e75;#657b83;#839496;#6c71c4;#93a1a1;#fdf6e3"
-xfconf-query --channel xfce4-terminal --property /color-selection-use-default --set true
-xfconf-query --channel xfce4-terminal --property /color-use-theme --set false
-xfconf-query --channel xfce4-terminal --property /tab-activity-color --set "#dc322f"
+if command -v xfconf-query >/dev/null; then
+	xfconf-query --channel xfce4-terminal --property /color-background --set "#FDF6E3"
+	xfconf-query --channel xfce4-terminal --property /color-background-vary --set false
+	# xfconf-query --channel xfce4-terminal --property /color-bold --set "#073642"
+	xfconf-query --channel xfce4-terminal --property /color-bold-is-bright --set true
+	xfconf-query --channel xfce4-terminal --property /color-bold-use-default --set true
+	xfconf-query --channel xfce4-terminal --property /color-cursor --set "#5C6A72"
+	xfconf-query --channel xfce4-terminal --property /color-cursor-use-default --set false
+	xfconf-query --channel xfce4-terminal --property /color-foreground --set "#5C6A72"
+	xfconf-query --channel xfce4-terminal --property /color-palette --set "#5C6A72;#F85552;#8DA101;#DFA000;#3A94C5;#DF69BA;#35A77C;#DFDDC8;#4B565C;#E67E80;#A7C080;#DBBC7F;#7FBBB3;#D699B6;#83C092;#D3C6AA"
+	xfconf-query --channel xfce4-terminal --property /color-selection-use-default --set true
+	xfconf-query --channel xfce4-terminal --property /color-use-theme --set false
+	xfconf-query --channel xfce4-terminal --property /tab-activity-color --set "#AA0000"
+fi
 
 # nvim
-FILE=$HOME/.config/nvim/lua/custom/chadrc.lua
+# nvim-lazyvim
+FILE=$HOME/.config/nvim-lazyvim/lua/config/options.lua
+sed -i -e 's/vim.opt.background = ".*"/vim.opt.background = "light"/' $FILE
+# nvim-nvchad
+FILE=$HOME/.config/nvim-nvchad/lua/custom/chadrc.lua
 sed -i -e 's/theme = "everforest"/theme = "everforest_light"/' $FILE
 sed -i -e 's/theme_toggle = { "everforest", "everforest_light" }/theme_toggle = { "everforest_light", "everforest" }/' $FILE
 
 # gtk theme
 # ref: https://felix-kling.de/blog/2021/linux-toggle-dark-mode.html
 FILE=$HOME/.xsettingsd
-if ! grep -q "Net/ApplicationPreferDarkTheme" ${FILE}; then
-	echo "Net/ApplicationPreferDarkTheme 0" >>$FILE
-else
-	sed -i -e 's#Net/ApplicationPreferDarkTheme 1#Net/ApplicationPreferDarkTheme 0#' $FILE
+if [ -f $FILE ]; then
+	if ! grep -q "Net/ApplicationPreferDarkTheme" ${FILE}; then
+		echo "Net/ApplicationPreferDarkTheme 0" >>$FILE
+	else
+		sed -i -e 's#Net/ApplicationPreferDarkTheme 1#Net/ApplicationPreferDarkTheme 0#' $FILE
+	fi
+	if ! grep -q "Gtk/ApplicationPreferDarkTheme" ${FILE}; then
+		echo "Gtk/ApplicationPreferDarkTheme 0" >>$FILE
+	else
+		sed -i -e 's#Gtk/ApplicationPreferDarkTheme 1#Gtk/ApplicationPreferDarkTheme 0#' $FILE
+	fi
+	if ! grep -q "Net/ThemeName" $FILE; then
+		echo "Net/ThemeName \"Arc\"" >>$FILE
+	else
+		sed -i -e 's#Net/ThemeName "Arc-Dark"#Net/ThemeName "Arc"#' $FILE
+	fi
+	if ! grep -q "Gtk/ThemeName" $FILE; then
+		echo "Gtk/ThemeName \"Arc\"" >>$FILE
+	else
+		sed -i -e 's#Gtk/ThemeName "Arc-Dark"#Gtk/ThemeName "Arc"#' $FILE
+	fi
+	killall -HUP xsettingsd
+	i3-msg reload
 fi
-if ! grep -q "Gtk/ApplicationPreferDarkTheme" ${FILE}; then
-	echo "Gtk/ApplicationPreferDarkTheme 0" >>$FILE
-else
-	sed -i -e 's#Gtk/ApplicationPreferDarkTheme 1#Gtk/ApplicationPreferDarkTheme 0#' $FILE
-fi
-if ! grep -q "Net/ThemeName" $FILE; then
-	echo "Net/ThemeName \"Arc\"" >>$FILE
-else
-	sed -i -e 's#Net/ThemeName "Arc-Dark"#Net/ThemeName "Arc"#' $FILE
-fi
-if ! grep -q "Gtk/ThemeName" $FILE; then
-	echo "Gtk/ThemeName \"Arc\"" >>$FILE
-else
-	sed -i -e 's#Gtk/ThemeName "Arc-Dark"#Gtk/ThemeName "Arc"#' $FILE
-fi
-killall -HUP xsettingsd
-i3-msg reload
 
 # mousepad
 # ref: https://docs.xfce.org/apps/mousepad/start
-gsettings set org.xfce.mousepad.preferences.view color-scheme solarized-light
+if command -v gsettings >/dev/null; then
+	! gsettings set org.xfce.mousepad.preferences.view color-scheme solarized-light
+fi

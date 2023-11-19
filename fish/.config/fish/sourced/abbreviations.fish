@@ -4,33 +4,33 @@
 test -e ~/.abbr_private; and source ~/.abbr_private
 
 # quick switch dirs
-abbr -a -g .. 'cd ..'          # up one
-abbr -a -g ... 'cd ../..'      # up two
-abbr -a -g .... 'cd ../../..'  # up three (that's enough)
-abbr -a -g cdd 'cd -'          # back to previous directory
+abbr -a -g .. 'cd ..' # up one
+abbr -a -g ... 'cd ../..' # up two
+abbr -a -g .... 'cd ../../..' # up three (that's enough)
+abbr -a -g cdd 'cd -' # back to previous directory
 
 # quick edits to dotfiles
 abbr -a -g dots 'cd ~/dotfiles/ && nvim'
 abbr -a -g aliases 'nvim ~/.config/fish/sourced/abbreviations.fish'
 
 # general
-abbr -a -g mkp 'mkdir -p'     # auto nesting
-abbr -a -g cp 'cp -av'        # cp verbose mode by default
-abbr -a -g cpr 'cp -Rav'      # recursive
-abbr -a -g rm 'rm -r'         # recursive
-abbr -a -g duh 'du -h'         # list disk usage for all files in ./
-abbr -a -g dush 'du -sh'       # list total disk usage of ./
-abbr -a -g chx 'chmod +x'      # make it executable
-abbr -a -g chR 'chmod -R'      # recursive
-abbr -a -g mv 'mv --interactive'               # warn before overwriting files 
-abbr -a -g mvv 'mv --interactive --verbose'    # mv verbose
-abbr -a -g cpwd 'echo (pwd) | xsel --input --clipboard'    # copy current directory path
+abbr -a -g mkp 'mkdir -p' # auto nesting
+abbr -a -g cp 'cp -av' # cp verbose mode by default
+abbr -a -g cpr 'cp -Rav' # recursive
+abbr -a -g rm 'rm -r' # recursive
+abbr -a -g duh 'du -h' # list disk usage for all files in ./
+abbr -a -g dush 'du -sh' # list total disk usage of ./
+abbr -a -g chx 'chmod +x' # make it executable
+abbr -a -g chR 'chmod -R' # recursive
+abbr -a -g mv 'mv --interactive' # warn before overwriting files 
+abbr -a -g mvv 'mv --interactive --verbose' # mv verbose
+abbr -a -g cpwd 'echo (pwd) | xsel --input --clipboard' # copy current directory path
 abbr -a -g vim nvim
 abbr -a -g e nvim
 abbr -a -g o open
 abbr -a -g cat bat
-abbr -a -g l 'exa'
-abbr -a -g ls 'exa'
+abbr -a -g l exa
+abbr -a -g ls exa
 abbr -a -g ll 'exa -l'
 abbr -a -g lll 'exa -la'
 abbr -a -g la 'exa -lah'
@@ -45,7 +45,7 @@ abbr -a -g mo3 'cal -3'
 
 # redshift
 abbr -a -g r0 'redshift -P -O 6500'
-abbr -a -g rr 'redshift -P -O 6200'
+abbr -a -g rs 'redshift -P -O 6200'
 abbr -a -g r1 'redshift -P -O 6000'
 abbr -a -g r2 'redshift -P -O 5500'
 abbr -a -g r3 'redshift -P -O 5000'
@@ -54,10 +54,10 @@ abbr -a -g r5 'redshift -P -O 4000'
 
 # backlight
 abbr -a -g bl 'sudo -E xbacklight -set'
-abbr -a -g bl0 'sudo -E xbacklight -set 0'    # backlight = 0% (minimum)
-abbr -a -g bl2 'sudo -E xbacklight -set 2'    # backlight = 2%
-abbr -a -g bl5 'sudo -E xbacklight -set 5'    # backlight = 5%
-abbr -a -g bl10 'sudo -E xbacklight -set 10'  # backlight = 10%
+abbr -a -g bl0 'sudo -E xbacklight -set 0' # backlight = 0% (minimum)
+abbr -a -g bl2 'sudo -E xbacklight -set 2' # backlight = 2%
+abbr -a -g bl5 'sudo -E xbacklight -set 5' # backlight = 5%
+abbr -a -g bl10 'sudo -E xbacklight -set 10' # backlight = 10%
 abbr -a -g blinc 'sudo -E xbacklight -inc 2'
 abbr -a -g bldec 'sudo -E xbacklight -dec 2'
 
@@ -116,7 +116,7 @@ abbr -a -g gba 'git branch -a'
 abbr -a -g ga 'git add'
 abbr -a -g grh 'git reset HEAD'
 abbr -a -g grhh 'git reset HEAD --hard'
-abbr -a -g lg 'lazygit'
+abbr -a -g lg lazygit
 abbr -a -g gcb 'git checkout -b'
 
 # docker
@@ -132,7 +132,7 @@ abbr -a -g diu 'docker image pull'
 abbr -a -g diua "docker image ls | tail --lines +2 | rg --ignore-case --invert-match \"(dbox|devc)\" | awk '{printf \"%s:%s\n\",\$1,\$2}' | xargs -I{} bash -c 'echo \">> {} =============\"; docker image pull {}'"
 abbr -a -g dsp 'docker system prune'
 abbr -a -g dspy 'docker system prune --force'
-abbr -a -g d-c 'docker-compose'
+abbr -a -g d-c docker-compose
 # dev-container related
 abbr -a -g dcs "docker container start -i (docker container ls -a | awk '{print \$NF}' | tail --lines +2 | fzf --prompt 'container> ')"
 abbr -a -g dcnew '/home/shank/code/misc/dev-container/devc_new.sh'
@@ -145,7 +145,7 @@ abbr -a -g dbls 'distrobox ls --no-stats'
 abbr -a -g dbll 'distrobox ls'
 abbr -a -g dbrm 'distrobox rm'
 abbr -a -g dbstop 'distrobox stop'
-abbr -a -g dbc 'distrobox-create'
+abbr -a -g dbc distrobox-create
 abbr -a -g dbcl 'distrobox-create --clone'
 abbr -a -g dbstopall "distrobox ls --no-stats | rg --ignore-case 'Up ' | awk '{print \$3}' | xargs -I{} distrobox stop -Y {}"
 abbr -a -g xhostfix 'xhost +si:localuser:$USER'
@@ -223,7 +223,7 @@ abbr -a -g asanopts "ASAN_OPTIONS=\"detect_leaks=0:abort_on_error=1:symbolize=1:
 abbr -a -g dpi\? "cat $HOME/.xsession | rg --ignore-case dpi="
 abbr -a -g d120 "dpi.sh 120"
 abbr -a -g d114 "dpi.sh 114"
-abbr -a -g nf "neofetch"
+abbr -a -g nf neofetch
 abbr -a -g jb "just build"
 abbr -a -g procs "procs --theme dark"
 
@@ -238,7 +238,7 @@ abbr -a -g zj zellij
 
 # pacman/paru aliases
 abbr -a -g owns\? "paru --query --owns" # <path/to/file>
-abbr -a -g provides\? "paru --files"    # <path/to/file>
+abbr -a -g provides\? "paru --files" # <path/to/file>
 
 # ssh -> useful in docker containers
 abbr -a -g fixssh "rm -r /tmp/ssh-agent.socket; ssh-agent -a /tmp/ssh-agent.socket >/dev/null; ssh-add"
