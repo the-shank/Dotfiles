@@ -20,7 +20,8 @@ render = true
 character = "┊"
 
 [editor.statusline]
-left = ["mode", "spinner", "version-control", "file-name"]
+left = ["mode", "spinner", "version-control"]
+center = ["file-name"]
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
