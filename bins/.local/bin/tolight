@@ -2,6 +2,7 @@
 
 # Update themes for:
 # [x] xfce-terminal
+# [x] alacritty
 # [x] nvim
 # [x] gtk theme
 # [x] mousepad
@@ -25,12 +26,16 @@ if command -v xfconf-query >/dev/null; then
 	xfconf-query --channel xfce4-terminal --property /tab-activity-color --set "#AA0000"
 fi
 
+# alacritty
+FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.yml
+sed -i -e 's/everforest_dark/everforest_light/' $FILE
+
 # nvim
 # nvim-lazyvim
-FILE=$HOME/.config/nvim-lazyvim/lua/config/options.lua
+FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/config/options.lua
 sed -i -e 's/vim.opt.background = ".*"/vim.opt.background = "light"/' $FILE
 # nvim-nvchad
-FILE=$HOME/.config/nvim-nvchad/lua/custom/chadrc.lua
+FILE=$HOME/dotfiles/neovim/.config/nvim-nvchad/lua/custom/chadrc.lua
 sed -i -e 's/theme = "everforest"/theme = "everforest_light"/' $FILE
 sed -i -e 's/theme_toggle = { "everforest", "everforest_light" }/theme_toggle = { "everforest_light", "everforest" }/' $FILE
 
