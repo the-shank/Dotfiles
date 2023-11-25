@@ -1,7 +1,7 @@
 {
     "codeQL.telemetry.enableTelemetry": false,
     "codeQL.cli.executablePath": "/home/shank/code/applications/codeql/codeql",
-    "workbench.colorTheme": "Tokyo Night Storm",
+    "workbench.colorTheme": "Everforest Light",
     "window.menuBarVisibility": "toggle",
     "editor.lineNumbers": "relative",
     "security.workspace.trust.untrustedFiles": "open",
@@ -15,7 +15,7 @@
         "mc20.cs.purdue.edu": "linux"
     },
     // font
-    "editor.fontFamily": "FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
+    "editor.fontFamily": "JetBrainsMono NF, FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
     "editor.fontSize": 14,
     "editor.fontWeight": "450",
     // integrated terminal
