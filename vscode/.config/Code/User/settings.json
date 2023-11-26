@@ -2,6 +2,7 @@
   "codeQL.telemetry.enableTelemetry": false,
   "codeQL.cli.executablePath": "/home/shank/code/applications/codeql/codeql",
   "workbench.colorTheme": "Everforest Light",
+  "workbench.tree.indent": 16,
   "window.menuBarVisibility": "toggle",
   "editor.lineNumbers": "relative",
   "security.workspace.trust.untrustedFiles": "open",
@@ -12,7 +13,8 @@
     "mc18.cs.purdue.edu": "linux",
     "mc21.cs.purdue.edu": "linux",
     "mc19.cs.purdue.edu": "linux",
-    "mc20.cs.purdue.edu": "linux"
+    "mc20.cs.purdue.edu": "linux",
+    "optiplex7010": "linux"
   },
   // font
   "editor.fontFamily": "JetBrainsMono NF, FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
