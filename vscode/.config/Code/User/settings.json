@@ -1,7 +1,7 @@
 {
     "codeQL.telemetry.enableTelemetry": false,
     "codeQL.cli.executablePath": "/home/shank/code/applications/codeql/codeql",
-    "workbench.colorTheme": "Tokyo Night Storm",
+    "workbench.colorTheme": "Everforest Dark",
     "window.menuBarVisibility": "toggle",
     "editor.lineNumbers": "relative",
     "security.workspace.trust.untrustedFiles": "open",
@@ -61,4 +61,5 @@
     "workbench.editor.enablePreview": false,
     "editor.unicodeHighlight.nonBasicASCII": false,
     "solidity.telemetry": false,
+    "C_Cpp.default.compilerPath": "/usr/bin/clang",
 }
