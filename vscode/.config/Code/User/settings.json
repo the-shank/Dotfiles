@@ -76,4 +76,10 @@
   "editor.unicodeHighlight.nonBasicASCII": false,
   "solidity.telemetry": false,
   "C_Cpp.default.compilerPath": "/usr/bin/clang",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  }
 }
