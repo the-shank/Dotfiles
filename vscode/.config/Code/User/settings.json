@@ -82,4 +82,5 @@
     "markdown": false,
     "scminput": false
   }
+  "cmake.showOptionsMovedNotification": false,
 }
