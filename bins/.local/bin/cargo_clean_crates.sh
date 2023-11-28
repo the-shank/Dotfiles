@@ -9,6 +9,15 @@ set -o pipefail
 # USAGE:
 # cargo_clean_crates.sh <CRATES_DIR>
 
+usage() {
+	echo "Usage: cargo_clean_crates.sh <CRATES_DIR>"
+}
+
+if [ $# -lt 1 ]; then
+	usage
+	exit 1
+fi
+
 # INPUT:
 CRATES_DIR=$1
 CRATES_DIR=$(realpath $CRATES_DIR)
