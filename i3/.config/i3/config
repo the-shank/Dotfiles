@@ -228,6 +228,7 @@ bindsym $alt+7 workspace $ws7
 bindsym $alt+8 workspace $ws8
 bindsym $alt+9 workspace $ws9
 bindsym $alt+0 workspace $ws10
+bindsym $mod+o workspace $ws5
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -252,6 +253,7 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
+bindsym $mod+Shift+o move container to workspace $ws5
 
 # Open applications on specific workspaces
 assign [class="Thunderbird"] $ws4
