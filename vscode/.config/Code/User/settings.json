@@ -1,64 +1,86 @@
 {
-    "codeQL.telemetry.enableTelemetry": false,
-    "codeQL.cli.executablePath": "/home/shank/code/applications/codeql/codeql",
-    "workbench.colorTheme": "Tokyo Night Storm",
-    "window.menuBarVisibility": "toggle",
-    "editor.lineNumbers": "relative",
-    "security.workspace.trust.untrustedFiles": "open",
-    "remote.SSH.useLocalServer": false,
-    "remote.SSH.remotePlatform": {
-        "purs3apple.ecn.purdue.edu": "linux",
-        "optiplex": "linux",
-        "mc18.cs.purdue.edu": "linux",
-        "mc21.cs.purdue.edu": "linux",
-        "mc19.cs.purdue.edu": "linux",
-        "mc20.cs.purdue.edu": "linux"
+  "codeQL.telemetry.enableTelemetry": false,
+  "codeQL.cli.executablePath": "/home/shank/code/applications/codeql/codeql",
+  "workbench.colorTheme": "Everforest Light",
+  "workbench.tree.indent": 16,
+  "window.menuBarVisibility": "toggle",
+  "editor.lineNumbers": "relative",
+  "security.workspace.trust.untrustedFiles": "open",
+  "remote.SSH.useLocalServer": false,
+  "remote.SSH.remotePlatform": {
+    "purs3apple.ecn.purdue.edu": "linux",
+    "optiplex": "linux",
+    "mc18.cs.purdue.edu": "linux",
+    "mc21.cs.purdue.edu": "linux",
+    "mc19.cs.purdue.edu": "linux",
+    "mc20.cs.purdue.edu": "linux",
+    "optiplex7010": "linux"
+  },
+  // font
+  "editor.fontFamily": "JetBrainsMono NF, FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
+  "editor.fontSize": 14,
+  "editor.fontWeight": "450",
+  // integrated terminal
+  "terminal.integrated.scrollback": 500000,
+  "terminal.integrated.fontSize": 14,
+  // vim keybindings
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.highlightedyank.enable": true,
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "leader",
+        "/"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
     },
-    // font
-    "editor.fontFamily": "FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
-    "editor.fontSize": 14,
-    "editor.fontWeight": "450",
-    // integrated terminal
-    "terminal.integrated.scrollback": 500000,
-    "terminal.integrated.fontSize": 14,
-    // vim keybindings
-    "vim.leader": "<space>",
-    "vim.useSystemClipboard": true,
-    "vim.highlightedyank.enable": true,
-    "vim.hlsearch": true,
-    "vim.normalModeKeyBindings": [
-        {
-            "before": ["leader", "/"],
-            "commands": [
-                "editor.action.commentLine"
-            ]
-        },
-        {
-            "before": ["leader", "w"],
-            "commands": [
-                "workbench.action.files.save",
-            ]
-        },
-        {
-            "before":["leader", "h"],
-            "commands": [
-                ":nohl",
-            ]
-        },
-    ],
-    "vim.visualModeKeyBindings": [
-        {
-            "before": ["leader", "/"],
-            "commands": [
-                "editor.action.commentLine"
-            ]
-        },
-    ],
-    "editor.minimap.enabled": false,
-    "terminal.integrated.persistentSessionScrollback": 100000,
-    "editor.inlineSuggest.enabled": true,
-    "everforest.italicComments": false,
-    "workbench.editor.enablePreview": false,
-    "editor.unicodeHighlight.nonBasicASCII": false,
-    "solidity.telemetry": false,
+    {
+      "before": [
+        "leader",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.files.save",
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "h"
+      ],
+      "commands": [
+        ":nohl",
+      ]
+    },
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        "leader",
+        "/"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
+    },
+  ],
+  "editor.minimap.enabled": false,
+  "terminal.integrated.persistentSessionScrollback": 100000,
+  "editor.inlineSuggest.enabled": true,
+  "everforest.italicComments": false,
+  "workbench.editor.enablePreview": false,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "solidity.telemetry": false,
+  "C_Cpp.default.compilerPath": "/usr/bin/clang",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  }
+  "cmake.showOptionsMovedNotification": false,
 }

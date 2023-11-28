@@ -1,5 +1,6 @@
 return {
   "nvim-telescope/telescope.nvim",
+  -- "telescope.nvim",
   dependencies = {
     {
       "nvim-telescope/telescope-live-grep-args.nvim",
@@ -24,7 +25,20 @@ return {
   end,
   opts = function()
     local lga_actions = require("telescope-live-grep-args.actions")
+    local picker_fraction = 0.95
     return {
+      -- hack: the layout config should be in a separate file but I am
+      -- unable to figure out how to do it :(
+      defaults = {
+        layout_config = {
+          width = function(_, max_columns, _)
+            return math.floor(picker_fraction * max_columns)
+          end,
+          height = function(_, _, max_lines)
+            return math.floor(picker_fraction * max_lines)
+          end,
+        },
+      },
       extensions = {
         live_grep_args = {
           auto_quoting = true,

@@ -3,7 +3,7 @@
 -- Add any additional options here
 
 -- background
-vim.opt.background = "light"
+vim.opt.background = "dark"
 
 -- everforest theme : disable italic comment
 vim.g.everforest_disable_italic_comment = 1
