@@ -132,7 +132,8 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     # family: NotoSansM Nerd Font Mono
-    family: JetBrainsMono NF
+    family: JetBrainsMono Nerd Font
+    # family: JetBrainsMono NF
 
     # The `style` can be specified to pick a specific face.
     # style: Regular
@@ -145,7 +146,8 @@ font:
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
     # family: NotoSansM Nerd Font Mono
-    family: JetBrainsMono NF
+    family: JetBrainsMono Nerd Font
+    # family: JetBrainsMono NF
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -157,7 +159,8 @@ font:
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
     # family: NotoSansM Nerd Font Mono
-    family: JetBrainsMono NF
+    family: JetBrainsMono Nerd Font
+    # family: JetBrainsMono NF
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -919,4 +922,4 @@ key_bindings:
   -  { key: F11, action: ToggleFullscreen }
 
 import:
-  - ~/.config/alacritty/themes/everforest_dark.yaml
+  - ~/.config/alacritty/themes/everforest_light.yaml
