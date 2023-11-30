@@ -11,3 +11,7 @@ vim.keymap.set("n", "<leader>tt", function()
     vim.o.background = "light"
   end
 end)
+
+-- copilot (enable/disable)
+vim.keymap.set("n", "<leader>pe", "<cmd> Copilot enable<CR>", { desc = "Copilot enable" })
+vim.keymap.set("n", "<leader>pd", "<cmd> Copilot disable<CR>", { desc = "Copilot enable" })
