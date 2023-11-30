@@ -15,3 +15,6 @@ end)
 -- copilot (enable/disable)
 vim.keymap.set("n", "<leader>pe", "<cmd> Copilot enable<CR>", { desc = "Copilot enable" })
 vim.keymap.set("n", "<leader>pd", "<cmd> Copilot disable<CR>", { desc = "Copilot enable" })
+
+-- Better paste
+vim.keymap.set("v", "p", '"_dP')
