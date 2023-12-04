@@ -11,3 +11,21 @@ vim.keymap.set("n", "<leader>tt", function()
     vim.o.background = "light"
   end
 end)
+
+-- copilot
+vim.keymap.set("n", "<leader>pe", function()
+  vim.cmd("Copilot enable")
+  print("Copilot enabled")
+end, { desc = "Copilot enable" })
+
+vim.keymap.set("n", "<leader>pd", function()
+  vim.cmd("Copilot disable")
+  print("Copilot disabled")
+end, { desc = "Copilot enable" })
+
+vim.keymap.set("n", "<leader>ps", function()
+  vim.cmd("Copilot status")
+end, { desc = "Copilot status" })
+
+-- Better paste
+vim.keymap.set("v", "p", '"_dP')
