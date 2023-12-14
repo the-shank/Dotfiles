@@ -1,1 +1,5 @@
+# enable clipboard
 set selection-clipboard clipboard
+
+# increase scroll lines
+set scroll-step 120
