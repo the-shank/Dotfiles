@@ -579,7 +579,7 @@ set $i3l vstack to workspace $ws1
 set $i3l vstack to workspace $ws2
 set $i3l vstack to workspace $ws3
 set $i3l vstack to workspace $ws4
-set $i3l vstack to workspace $ws5
+set $i3l 2columns to workspace $ws5
 set $i3l vstack to workspace $ws6
 set $i3l vstack to workspace $ws7
 set $i3l vstack to workspace $ws8
