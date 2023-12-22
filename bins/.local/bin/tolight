@@ -6,6 +6,7 @@
 # [x] nvim
 # [x] gtk theme
 # [x] mousepad
+# [x] kvantummanager (qt applications)
 
 set -eu
 set -o pipefail
@@ -71,4 +72,9 @@ fi
 # ref: https://docs.xfce.org/apps/mousepad/start
 if command -v gsettings >/dev/null; then
 	! gsettings set org.xfce.mousepad.preferences.view color-scheme solarized-light
+fi
+
+# kvantummanager (qt applications)
+if command -v kvantummanager >/dev/null; then
+	kvantummanager --set Arc
 fi
