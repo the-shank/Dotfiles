@@ -28,7 +28,7 @@ if command -v xfconf-query >/dev/null; then
 fi
 
 # alacritty
-FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.yml
+FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml
 sed -i -e 's/everforest_dark/everforest_light/' $FILE
 
 # nvim
