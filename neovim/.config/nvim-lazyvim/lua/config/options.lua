@@ -10,3 +10,7 @@ vim.g.everforest_disable_italic_comment = 1
 
 -- disable swap
 vim.opt.swapfile = false
+
+-- conceal for obsidian links
+-- source: https://github.com/epwalsh/obsidian.nvim?tab=readme-ov-file#concealing-characters
+vim.opt.conceallevel = 1

@@ -12,17 +12,19 @@ vim.keymap.set("n", "<leader>tt", function()
   end
 end)
 
--- copilot
+-- copilot enable
 vim.keymap.set("n", "<leader>pe", function()
   vim.cmd("Copilot enable")
   print("Copilot enabled")
 end, { desc = "Copilot enable" })
 
+-- copilot disable
 vim.keymap.set("n", "<leader>pd", function()
   vim.cmd("Copilot disable")
   print("Copilot disabled")
 end, { desc = "Copilot enable" })
 
+-- copilot status
 vim.keymap.set("n", "<leader>ps", function()
   vim.cmd("Copilot status")
 end, { desc = "Copilot status" })
