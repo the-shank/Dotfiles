@@ -66,7 +66,7 @@ return {
       -- Optional, customize the backlinks interface.
       backlinks = {
         -- The default height of the backlinks pane.
-        height = 10,
+        height = 20,
         -- Whether or not to wrap lines.
         wrap = true,
       },
