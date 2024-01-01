@@ -17,5 +17,6 @@ vim.api.nvim_create_autocmd("BufReadPost", {
     vim.keymap.set("n", "<leader>oo", "<cmd>ObsidianOpen<cr>")
     vim.keymap.set("n", "<leader>on", ":ObsidianNew ")
     vim.keymap.set("n", "<leader>os", "<cmd>ObsidianSearch<cr>")
+    vim.keymap.set("n", "<leader>ob", "<cmd>ObsidianBacklinks<cr>")
   end,
 })
