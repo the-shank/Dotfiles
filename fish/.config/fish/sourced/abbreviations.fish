@@ -185,8 +185,8 @@ abbr -a -g mount-purs3-workdisk "sshfs shank@purs3mango.ecn.purdue.edu:/workdisk
 abbr -a -g unmount-purs3-workdisk "fusermount -uz /home/shank/sshfs/purdue/purs3_workdisk/shank"
 
 # file managers
-abbr -a -g r ranger
-abbr -a -g j joshuto
+# abbr -a -g r ranger
+# abbr -a -g j joshuto
 
 # cmake build type?
 abbr -a -g build_type\? "bfs . -type f -name CMakeCache.txt | head -n1 | xargs -I{} rg --ignore-case cmake_build_type {}"
