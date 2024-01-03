@@ -35,7 +35,7 @@ return {
   end,
   opts = function()
     local lga_actions = require("telescope-live-grep-args.actions")
-    local picker_fraction = 0.95
+    local picker_fraction = 1.0
     return {
       -- hack: the layout config should be in a separate file but I am
       -- unable to figure out how to do it :(
