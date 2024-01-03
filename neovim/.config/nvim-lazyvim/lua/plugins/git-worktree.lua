@@ -9,11 +9,18 @@ return {
   },
   keys = {
     {
-      "<leader>se",
+      "<leader>gws",
       function()
         require("telescope").extensions.git_worktree.git_worktrees()
       end,
-      desc = "git worktrees",
+      desc = "git worktree search",
+    },
+    {
+      "<leader>gwc",
+      function()
+        require("telescope").extensions.git_worktree.create_git_worktree()
+      end,
+      desc = "git worktree create",
     },
   },
 }
