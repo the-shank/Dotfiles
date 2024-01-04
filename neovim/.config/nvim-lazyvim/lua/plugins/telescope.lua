@@ -72,7 +72,7 @@ return {
     return {
       -- hack: the layout config should be in a separate file but I am
       -- unable to figure out how to do it :(
-      defaults = vim.o.lines < 50 and vertical_config or horizontal_config,
+      defaults = vim.o.lines < 55 and vertical_config or horizontal_config,
       extensions = {
         live_grep_args = {
           auto_quoting = true,
