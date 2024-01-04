@@ -1,4 +1,4 @@
-icons_format = "{icon}" 
+icons_format = "{icon}"
 # icons_format = "<span font='12'>{icon}</span>" 
 
 [theme]
@@ -62,12 +62,12 @@ cmd = "pavucontrol"
 block = "time"
 interval = 20
 timezone = "Asia/Kolkata"
-format = " $icon IND $timestamp.datetime(f:'%a %d/%m %R') "
+format = " $icon <b>IND</b> $timestamp.datetime(f:'%a %d/%m %R') "
 
 [[block]]
 block = "time"
 interval = 20
-format = " $icon USA $timestamp.datetime(f:'%a %d/%m %R') "
+format = " $icon <b>USA</b> $timestamp.datetime(f:'%a %d/%m %R') "
 
 [[block]]
 block = "battery"
@@ -76,4 +76,3 @@ missing_format = ""
 warning = 20
 critical = 10
 interval = 15
-
