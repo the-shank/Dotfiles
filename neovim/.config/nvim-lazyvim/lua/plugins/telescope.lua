@@ -1,3 +1,15 @@
+-- source: https://stackoverflow.com/a/7470789/947472
+function Merge(t1, t2)
+  for k, v in pairs(t2) do
+    if (type(v) == "table") and (type(t1[k] or false) == "table") then
+      Merge(t1[k], t2[k])
+    else
+      t1[k] = v
+    end
+  end
+  return t1
+end
+
 return {
   "nvim-telescope/telescope.nvim",
   -- "telescope.nvim",
@@ -36,19 +48,31 @@ return {
   opts = function()
     local lga_actions = require("telescope-live-grep-args.actions")
     local picker_fraction = 1.0
+    local common_config = {
+      layout_config = {
+        width = function(_, max_columns, _)
+          return math.floor(picker_fraction * max_columns)
+        end,
+        height = function(_, _, max_lines)
+          return math.floor(picker_fraction * max_lines)
+        end,
+      },
+    }
+    local vertical_config = {
+      layout_strategy = "vertical",
+      layout_config = {
+        preview_height = 0.65,
+      },
+    }
+    local horizontal_config = {
+      layout_strategy = "horizontal",
+    }
+    Merge(vertical_config, common_config)
+    Merge(horizontal_config, common_config)
     return {
       -- hack: the layout config should be in a separate file but I am
       -- unable to figure out how to do it :(
-      defaults = {
-        layout_config = {
-          width = function(_, max_columns, _)
-            return math.floor(picker_fraction * max_columns)
-          end,
-          height = function(_, _, max_lines)
-            return math.floor(picker_fraction * max_lines)
-          end,
-        },
-      },
+      defaults = vim.o.lines < 50 and vertical_config or horizontal_config,
       extensions = {
         live_grep_args = {
           auto_quoting = true,
