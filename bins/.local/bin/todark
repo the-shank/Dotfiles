@@ -26,11 +26,13 @@ if command -v xfconf-query >/dev/null; then
 	xfconf-query --channel xfce4-terminal --property /color-selection-use-default --set true
 	xfconf-query --channel xfce4-terminal --property /color-use-theme --set false
 	xfconf-query --channel xfce4-terminal --property /tab-activity-color --set "#AA0000"
+	xfconf-query --channel xfce4-terminal --property /font-name --set "CommitMonoRetinaDark weight=450 10"
 fi
 
 # alacritty
 FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml
 sed -i -e 's/everforest_light/everforest_dark/' $FILE
+sed -i -e 's/CommitMonoRetinaLight/CommitMonoRetinaDark/' $FILE
 
 # nvim
 # nvim-lazyvim
