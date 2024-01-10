@@ -8,4 +8,5 @@ This is taken from section 08 Install from https://commitmono.com/
     * CommitMono-Bold: A bold version, weight 700.
     * CommitMono-BoldItalic: A bold version, weight 700, that is also italic.
 #3 Install all 4 fonts on your system:
-    * Windows: Right click the font in the folder and click "Instal
+    * Windows: Right click the font in the folder and click "Install".
+    * Mac: Open fonts with Fo

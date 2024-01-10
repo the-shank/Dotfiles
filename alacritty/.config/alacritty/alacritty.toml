@@ -9,7 +9,7 @@ x = 0
 y = 2
 
 [font.bold]
-family = "CommitMonoRetinaDark"
+family = "CommitMonoThicker"
 style = "Bold"
 # family = "JetBrainsMono Nerd Font"
 
@@ -18,12 +18,12 @@ family = "monospace"
 style = "Bold Italic"
 
 [font.italic]
-family = "CommitMonoRetinaDark"
+family = "CommitMonoThicker"
 style = "Italic"
 # family = "JetBrainsMono Nerd Font"
 
 [font.normal]
-family = "CommitMonoRetinaDark"
+family = "CommitMonoThicker"
 style = "Normal"
 # family = "JetBrainsMono Nerd Font"
 # style = "Medium"
