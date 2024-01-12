@@ -31,3 +31,5 @@ end, { desc = "Copilot status" })
 
 -- Better paste
 vim.keymap.set("v", "p", '"_dP')
+-- copy path+line_num (for using in gdb)
+vim.keymap.set("n", "<leader>yl", [[<cmd>let @+=expand("%:p").":".line(".")<cr>]], { desc = "yank <path>:<line_num>" })
