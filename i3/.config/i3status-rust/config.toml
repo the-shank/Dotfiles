@@ -14,6 +14,12 @@ icons = "awesome6"
 # short = " $title.str(max_w:20)  |"
 
 [[block]]
+block = "custom"
+command = ''' cat ~/.the-one-thing | tr "[:lower:]" "[:upper:]" | xargs -I{} echo " [ {} ] " '''
+watch_files = ["~/.the-one-thing"]
+interval = "once"
+
+[[block]]
 block = "tea_timer"
 format = " $icon {$minutes:$seconds |}"
 increment = 60
@@ -76,3 +82,6 @@ missing_format = ""
 warning = 20
 critical = 10
 interval = 15
+
+[[block]]
+block = "notify"
