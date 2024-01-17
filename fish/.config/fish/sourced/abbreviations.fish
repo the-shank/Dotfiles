@@ -228,7 +228,9 @@ abbr -a -g d120 "dpi.sh 120"
 abbr -a -g d114 "dpi.sh 114"
 abbr -a -g nf neofetch
 abbr -a -g jb "just build"
-abbr -a -g procs "procs --theme dark"
+abbr -a -g procs "procs --theme light"
+abbr -a -g procsl "procs --theme light"
+abbr -a -g procsd "procs --theme dark"
 
 # keyboard
 # - increase repeat rate
