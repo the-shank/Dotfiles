@@ -59,6 +59,9 @@ driver = "pulseaudio"
 button = "left"
 cmd = "pavucontrol"
 
+[[block]]
+block = "notify"
+
 # [[block]]
 # block = "keyboard_layout"
 # driver = "setxkbmap"
@@ -82,6 +85,3 @@ missing_format = ""
 warning = 20
 critical = 10
 interval = 15
-
-[[block]]
-block = "notify"
