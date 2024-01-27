@@ -6,12 +6,13 @@ size = 10.0
 
 [font.offset]
 x = 0
-y = 0
+y = 1
 
 [font.bold]
 # family = "CommitMonoThicker"
 style = "Bold"
-family = "JetBrainsMono Nerd Font"
+# family = "JetBrainsMono Nerd Font"
+family = "SF Mono"
 
 [font.bold_italic]
 family = "monospace"
@@ -20,12 +21,14 @@ style = "Bold Italic"
 [font.italic]
 # family = "CommitMonoThicker"
 style = "Italic"
-family = "JetBrainsMono Nerd Font"
+# family = "JetBrainsMono Nerd Font"
+family = "SF Mono"
 
 [font.normal]
 # family = "CommitMonoThicker"
 # style = "Normal"
-family = "JetBrainsMono Nerd Font"
+# family = "JetBrainsMono Nerd Font"
+family = "SF Mono"
 style = "Medium"
 
 [[keyboard.bindings]]
