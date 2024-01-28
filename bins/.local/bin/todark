@@ -26,11 +26,13 @@ if command -v xfconf-query >/dev/null; then
 	xfconf-query --channel xfce4-terminal --property /color-selection-use-default --set true
 	xfconf-query --channel xfce4-terminal --property /color-use-theme --set false
 	xfconf-query --channel xfce4-terminal --property /tab-activity-color --set "#AA0000"
+	xfconf-query --channel xfce4-terminal --property /font-name --set "CommitMonoThick weight=500 10"
 fi
 
 # alacritty
 FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml
 sed -i -e 's/everforest_light/everforest_dark/' $FILE
+sed -i -e 's/CommitMonoThicker/CommitMonoThick/' $FILE
 
 # nvim
 # nvim-lazyvim
@@ -69,6 +71,7 @@ fi
 # ref: https://docs.xfce.org/apps/mousepad/start
 if command -v gsettings >/dev/null; then
 	! gsettings set org.xfce.mousepad.preferences.view color-scheme solarized-dark
+	! gsettings set org.xfce.mousepad.preferences.view font-name "CommitMonoThick Medium 10"
 fi
 
 # kvantummanager (qt applications)

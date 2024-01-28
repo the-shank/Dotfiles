@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+set -ex
+set -o pipefail
+
+echo "$@" > ~/.the-one-thing

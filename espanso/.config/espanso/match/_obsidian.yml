@@ -9,7 +9,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"-2 days\" \"+%Y-%m-%d___%a\"`"
+          cmd: "echo `date --date=\"-2 days\" \"+%Y-%m-%d\"`"
 
   - triggers:
       - ":<yes"
@@ -20,7 +20,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"yesterday\" \"+%Y-%m-%d___%a\"`"
+          cmd: "echo `date --date=\"yesterday\" \"+%Y-%m-%d\"`"
 
   - triggers:
       - ":today"
@@ -29,7 +29,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo `date \"+%Y-%m-%d___%a\"`"
+          cmd: "echo `date \"+%Y-%m-%d\"`"
 
   - triggers:
       - ":>tom"
@@ -40,7 +40,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"tomorrow\" \"+%Y-%m-%d___%a\"`"
+          cmd: "echo `date --date=\"tomorrow\" \"+%Y-%m-%d\"`"
 
   - trigger: ":bc"
     replace: "<- {{yesterday}} || {{tomorrow}} ->"
@@ -73,7 +73,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"2 days\" \"+[[%Y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"2 days\" \"+[[%Y-%m-%d]]\"`"
 
   - triggers:
       - ":>3d"
@@ -82,7 +82,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"3 days\" \"+[[%Y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"3 days\" \"+[[%Y-%m-%d]]\"`"
 
   - trigger: ":<bc"
     replace: "<- {{day_before_yesterday}} || {{today}} ->"
@@ -104,7 +104,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"last monday\" \"+[[%Y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"last monday\" \"+[[%Y-%m-%d]]\"`"
 
   - triggers:
       - ":>w"
@@ -114,7 +114,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"next monday\" \"+[[%Y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"next monday\" \"+[[%Y-%m-%d]]\"`"
 
   - triggers:
       - ":>tue"
@@ -123,7 +123,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"next tuesday\" \"+[[%Y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"next tuesday\" \"+[[%Y-%m-%d]]\"`"
 
   - triggers:
       - ":>wed"
@@ -132,7 +132,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"next wednesday\" \"+[[%Y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"next wednesday\" \"+[[%Y-%m-%d]]\"`"
 
   - triggers:
       - ":>thu"
@@ -141,7 +141,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"next thursday\" \"+[[%Y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"next thursday\" \"+[[%Y-%m-%d]]\"`"
 
   - triggers:
       - ":>fri"
@@ -150,7 +150,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"next friday\" \"+[[%Y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"next friday\" \"+[[%Y-%m-%d]]\"`"
 
   - triggers:
       - ":>sat"
@@ -159,7 +159,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"next saturday\" \"+[[%Y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"next saturday\" \"+[[%Y-%m-%d]]\"`"
 
   - triggers:
       - ":>sun"
@@ -168,7 +168,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"next sunday\" \"+[[%Y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"next sunday\" \"+[[%Y-%m-%d]]\"`"
 
   - triggers:
       - ":>mth"
@@ -177,7 +177,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo `date --date=\"next month\" \"+[[%Y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"next month\" \"+[[%Y-%m-%d]]\"`"
 
   - triggers:
       - ":7d"
@@ -215,15 +215,15 @@ matches:
       - name: 4d
         type: shell
         params:
-          cmd: "echo `date --date=\"4 day\" \"+[[%Y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"4 day\" \"+[[%Y-%m-%d]]\"`"
       - name: 5d
         type: shell
         params:
-          cmd: "echo `date --date=\"5 day\" \"+[[%Y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"5 day\" \"+[[%Y-%m-%d]]\"`"
       - name: 6d
         type: shell
         params:
-          cmd: "echo `date --date=\"6 day\" \"+[[%Y-%m-%d___%a]]\"`"
+          cmd: "echo `date --date=\"6 day\" \"+[[%Y-%m-%d]]\"`"
 
   - triggers:
       - ":meta"

@@ -2,22 +2,33 @@ import = ["/home/shank/.config/alacritty/themes/everforest_light.toml"]
 live_config_reload = true
 
 [font]
-size = 11.0
+size = 10.0
+
+[font.offset]
+x = 0
+y = 1
 
 [font.bold]
-family = "JetBrainsMono Nerd Font"
+# family = "CommitMonoThicker"
 style = "Bold"
+# family = "JetBrainsMono Nerd Font"
+family = "SF Mono"
 
 [font.bold_italic]
 family = "monospace"
 style = "Bold Italic"
 
 [font.italic]
-family = "JetBrainsMono Nerd Font"
+# family = "CommitMonoThicker"
 style = "Italic"
+# family = "JetBrainsMono Nerd Font"
+family = "SF Mono"
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+# family = "CommitMonoThicker"
+# style = "Normal"
+# family = "JetBrainsMono Nerd Font"
+family = "SF Mono"
 style = "Medium"
 
 [[keyboard.bindings]]
@@ -31,5 +42,5 @@ history = 50000
 opacity = 1
 
 [window.padding]
-x = 0
+x = 2
 y = 0

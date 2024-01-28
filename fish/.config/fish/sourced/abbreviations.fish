@@ -55,8 +55,11 @@ abbr -a -g r5 'redshift -P -O 4000'
 # backlight
 abbr -a -g bl 'sudo -E xbacklight -set'
 abbr -a -g bl0 'sudo -E xbacklight -set 0' # backlight = 0% (minimum)
+abbr -a -g bl1 'sudo -E xbacklight -set 2' # backlight = 1%
 abbr -a -g bl2 'sudo -E xbacklight -set 2' # backlight = 2%
+abbr -a -g bl3 'sudo -E xbacklight -set 2' # backlight = 3%
 abbr -a -g bl5 'sudo -E xbacklight -set 5' # backlight = 5%
+abbr -a -g bl7 'sudo -E xbacklight -set 2' # backlight = 7%
 abbr -a -g bl10 'sudo -E xbacklight -set 10' # backlight = 10%
 abbr -a -g blinc 'sudo -E xbacklight -inc 2'
 abbr -a -g bldec 'sudo -E xbacklight -dec 2'
@@ -225,7 +228,9 @@ abbr -a -g d120 "dpi.sh 120"
 abbr -a -g d114 "dpi.sh 114"
 abbr -a -g nf neofetch
 abbr -a -g jb "just build"
-abbr -a -g procs "procs --theme dark"
+abbr -a -g procs "procs --theme light"
+abbr -a -g procsl "procs --theme light"
+abbr -a -g procsd "procs --theme dark"
 
 # keyboard
 # - increase repeat rate

@@ -610,6 +610,7 @@ bindsym $mod+$alt+f exec --no-startup-id variety --favorite
 # dunst notification (close) 
 bindsym $mod+semicolon exec --no-startup-id dunstctl close
 bindsym $mod+Shift+semicolon exec --no-startup-id dunstctl history-pop
+bindsym $mod+Ctrl+semicolon exec --no-startup-id dunstctl set-paused toggle
 
 # battery notifications
 exec --no-startup-id i3-battery-popup -n -t 10m -m "battery low!" -L 20 -l 10 &
@@ -639,3 +640,4 @@ exec --no-startup-id autorandr --change
 
 # drop-down terminal
 bindsym $alt+o exec --no-startup-id xfce4-terminal --drop-down
+bindsym $alt+i exec --no-startup-id tilix --quake
