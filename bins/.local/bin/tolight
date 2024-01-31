@@ -7,6 +7,7 @@
 # [x] gtk theme
 # [x] mousepad
 # [x] kvantummanager (qt applications)
+# [ ] discord (restart it)
 
 set -eu
 set -o pipefail
@@ -25,13 +26,13 @@ if command -v xfconf-query >/dev/null; then
 	xfconf-query --channel xfce4-terminal --property /color-selection-use-default --set true
 	xfconf-query --channel xfce4-terminal --property /color-use-theme --set false
 	xfconf-query --channel xfce4-terminal --property /tab-activity-color --set "#AA0000"
-	xfconf-query --channel xfce4-terminal --property /font-name --set "CommitMonoThicker weight=550 10"
+	# xfconf-query --channel xfce4-terminal --property /font-name --set "CommitMonoThicker weight=550 10"
 fi
 
 # alacritty
 FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml
 sed -i -e 's/everforest_dark/everforest_light/' $FILE
-sed -i -e 's/CommitMonoThick"/CommitMonoThicker"/' $FILE
+# sed -i -e 's/CommitMonoThick"/CommitMonoThicker"/' $FILE
 
 # nvim
 # nvim-lazyvim
@@ -70,10 +71,13 @@ fi
 # ref: https://docs.xfce.org/apps/mousepad/start
 if command -v gsettings >/dev/null; then
 	! gsettings set org.xfce.mousepad.preferences.view color-scheme solarized-light
-	! gsettings set org.xfce.mousepad.preferences.view font-name "CommitMonoThicker Medium 10"
+	# ! gsettings set org.xfce.mousepad.preferences.view font-name "CommitMonoThicker Medium 10"
 fi
 
 # kvantummanager (qt applications)
 if command -v kvantummanager >/dev/null; then
 	kvantummanager --set Arc
 fi
+
+# discord (restart it)
+# ! pkill -KILL Discord && sleep 0.1 && (discord &>/dev/null &) && sleep 0.1 && disown
