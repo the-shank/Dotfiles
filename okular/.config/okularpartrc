@@ -28,7 +28,6 @@ MouseMode=TextSelect
 SmoothScrolling=false
 
 [Reviews]
-QuickAnnotationDefaultAction=2
 QuickAnnotationTools=<tool name="Yellow Highlighter" type="highlight" id="1"><engine color="#ffffff99" type="TextSelector"><annotation color="#ffffff99" type="Highlight"/></engine><shortcut>1</shortcut></tool>,<tool name="Green Highlighter" type="highlight" id="2"><engine color="#ff99ff99" type="TextSelector"><annotation color="#ff99ff99" type="Highlight"/></engine><shortcut>2</shortcut></tool>,<tool type="highlight" id="3"><engine color="#ffffcb99" type="TextSelector"><annotation color="#ffffcb99" type="Highlight"/></engine><shortcut>3</shortcut></tool>,<tool name="Insert Text" type="typewriter" id="4"><engine block="true" type="PickPoint"><annotation color="#00ffffff" type="Typewriter" font="Serif\\,8\\,-1\\,5\\,50\\,0\\,0\\,0\\,0\\,0" textColor="#ff5500" width="0"/></engine><shortcut>4</shortcut></tool>,<tool type="typewriter" id="5"><engine block="true" type="PickPoint"><annotation color="#00ffffff" type="Typewriter" font="Serif\\,8\\,-1\\,5\\,50\\,0\\,0\\,0\\,0\\,0" textColor="#0055ff" width="0"/></engine><shortcut>5</shortcut></tool>,<tool type="underline" id="6"><engine color="#ffff5500" type="TextSelector"><annotation color="#ffff5500" type="Underline"/></engine><shortcut>6</shortcut></tool>,<tool type="note-linked" id="7"><engine hoverIcon="tool-note" color="#ffff5500" type="PickPoint"><annotation color="#ffff5500" type="Text" icon="Help"/></engine><shortcut>7</shortcut></tool>
 ReviewsSearchRegularExpression=true
 
