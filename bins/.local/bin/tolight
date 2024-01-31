@@ -75,5 +75,5 @@ fi
 
 # kvantummanager (qt applications)
 if command -v kvantummanager >/dev/null; then
-	kvantummanager --set Arc
+	kvantummanager --set KvArc
 fi

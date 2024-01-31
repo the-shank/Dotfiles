@@ -76,5 +76,5 @@ fi
 
 # kvantummanager (qt applications)
 if command -v kvantummanager >/dev/null; then
-	kvantummanager --set ArcDark
+	kvantummanager --set KvArcDark
 fi
