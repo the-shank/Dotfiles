@@ -50,8 +50,8 @@ bindsym $mod+y border pixel 4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font xft:Noto Sans Bold 11
-font xft:Rubik, FontAwesome Medium 11
-font pango:Rubik, FontAwesome Bold 11
+font xft:Rubik, FontAwesome Medium 10
+font pango:Rubik, FontAwesome Bold 10
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -71,10 +71,10 @@ bindsym $mod+q kill
 
 # start program launcher
 bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
-bindsym $alt+space exec rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 18' -show combi -sidebar-mode -show-icons -matching fuzzy
-bindsym $alt+period exec rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 18' -show emoji -modi emoji
-bindsym $mod+Tab exec rofi -lines 12 -padding 18 -width 30 -location 0 -show window -sidebar-mode -font 'Rubik 18' -show-icons -matching fuzzy
-bindsym $alt+comma exec rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 18' -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+bindsym $alt+space exec rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -show combi -sidebar-mode -show-icons -matching fuzzy
+bindsym $alt+period exec rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -show emoji -modi emoji
+bindsym $mod+Tab exec rofi -lines 12 -padding 18 -width 30 -location 0 -show window -sidebar-mode -font 'Rubik 14' -show-icons -matching fuzzy
+bindsym $alt+comma exec rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 # bindsym $alt+s exec --no-startup-id rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -show drun -run-shell-command '{terminal} -e fish -ic "{cmd} && read"'
 
 # scratch document
@@ -297,6 +297,7 @@ for_window [title="ZotFile Preferences"] floating enable
 for_window [title="~/Sync/scratchpad.md - Mousepad"] floating enable, move scratchpad
 # for_window [title="scratchpad"] floating enable, move scratchpad
 for_window [class="Xfce4-dict"] floating enable
+for_window [title="Quick Format Citation"] floating enable
 
 for_window [window_role="pop-up"] floating enable
 
@@ -309,7 +310,13 @@ assign [class="Zotero"] $ws7
 assign [class="discord"] $ws8
 assign [class="WorkFlowy"] $ws10
 assign [class="obsidian"] $ws10
+assign [class="Logseq"] $ws10
 assign [class="Slack"] $ws9
+
+# force border around obsidian and logseq
+# source: https://forum.obsidian.md/t/add-option-to-enable-disable-frameless-mode/6991/21
+for_window [class="obsidian"] border pixel 4
+for_window [class="Logseq"] border pixel 4
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -449,7 +456,7 @@ bar {
     # font pango: Iosevka Nerd Font, FontAwesome Medium 12
     # font pango: FiraCode Nerd Font, FontAwesome Medium 10
     # font pango: FiraSans, FontAwesome Medium 11
-    font pango: Rubik, FontAwesome 11
+    font pango: Rubik, FontAwesome 10
     # font pango: NotoSansM Nerd Font Mono, FontAwesome SemiCondensed Medium 11
 	i3bar_command i3bar
 	# status_command i3status
@@ -576,7 +583,7 @@ exec_always --no-startup-id i3-layouts
 
 # i3-layouts settings
 set $i3l vstack to workspace $ws1
-set $i3l vstack to workspace $ws2
+set $i3l tabbed to workspace $ws2
 set $i3l vstack to workspace $ws3
 set $i3l vstack to workspace $ws4
 set $i3l 2columns to workspace $ws5

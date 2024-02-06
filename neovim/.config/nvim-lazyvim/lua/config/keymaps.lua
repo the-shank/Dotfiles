@@ -22,7 +22,7 @@ end, { desc = "Copilot enable" })
 vim.keymap.set("n", "<leader>pd", function()
   vim.cmd("Copilot disable")
   print("Copilot disabled")
-end, { desc = "Copilot enable" })
+end, { desc = "Copilot disable" })
 
 -- copilot status
 vim.keymap.set("n", "<leader>ps", function()
