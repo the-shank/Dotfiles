@@ -583,7 +583,7 @@ exec_always --no-startup-id i3-layouts
 
 # i3-layouts settings
 set $i3l vstack to workspace $ws1
-set $i3l hstack to workspace $ws2
+set $i3l tabbed to workspace $ws2
 set $i3l vstack to workspace $ws3
 set $i3l vstack to workspace $ws4
 set $i3l 2columns to workspace $ws5
