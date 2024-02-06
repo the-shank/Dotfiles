@@ -313,6 +313,11 @@ assign [class="obsidian"] $ws10
 assign [class="Logseq"] $ws10
 assign [class="Slack"] $ws9
 
+# force border around obsidian and logseq
+# source: https://forum.obsidian.md/t/add-option-to-enable-disable-frameless-mode/6991/21
+for_window [class="obsidian"] border pixel 4
+for_window [class="Logseq"] border pixel 4
+
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
