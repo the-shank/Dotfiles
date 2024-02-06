@@ -310,6 +310,7 @@ assign [class="Zotero"] $ws7
 assign [class="discord"] $ws8
 assign [class="WorkFlowy"] $ws10
 assign [class="obsidian"] $ws10
+assign [class="Logseq"] $ws10
 assign [class="Slack"] $ws9
 
 # switch to workspace with urgent window automatically
