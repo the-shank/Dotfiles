@@ -169,7 +169,9 @@ end
 
 # Make a backup file
 function backup --argument filename
-    cp $filename $filename.bak
+    # replace the trailing slash (if any) in the $filename
+    set filename (string replace -r '/$' '' $filename)
+    cp -r $filename $filename.bak
 end
 
 # recently installed packages
