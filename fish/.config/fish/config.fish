@@ -119,7 +119,7 @@ end
 # set -gx FZF_CTRL_T_COMMAND 'bfs -follow \$dir -iname "*" -not -path .git/ -not -path .local/share/Steam/ -not -path .cache/'
 
 if command -sq fzf && type -q fzf_configure_bindings
-    set -gx fzf_fd_opts --hidden --no-ignore --exclude=.git --exclude=.cache
+    set -gx fzf_fd_opts --hidden --no-ignore --exclude=.git --exclude=.cache --exclude target
     fzf_configure_bindings --directory=\ct
 end
 
