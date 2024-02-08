@@ -6,27 +6,30 @@ size = 10.0
 
 [font.offset]
 x = 0
-y = 3
+y = 1
 
 [font.bold]
-family = "CommitMonoThicker"
+# family = "CommitMonoThicker"
 style = "Bold"
 # family = "JetBrainsMono Nerd Font"
+family = "SF Mono"
 
 [font.bold_italic]
 family = "monospace"
 style = "Bold Italic"
 
 [font.italic]
-family = "CommitMonoThicker"
+# family = "CommitMonoThicker"
 style = "Italic"
 # family = "JetBrainsMono Nerd Font"
+family = "SF Mono"
 
 [font.normal]
-family = "CommitMonoThicker"
-style = "Normal"
+# family = "CommitMonoThicker"
+# style = "Normal"
 # family = "JetBrainsMono Nerd Font"
-# style = "Medium"
+family = "SF Mono"
+style = "Medium"
 
 [[keyboard.bindings]]
 action = "ToggleFullscreen"

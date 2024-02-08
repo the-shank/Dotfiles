@@ -42,6 +42,7 @@ abbr -a -g conda-enable 'eval /opt/miniconda3/bin/conda "shell.fish" "hook" | so
 abbr -a -g mo 'cal -m'
 abbr -a -g mo3 'cal -3'
 # abbr -a -g diff 'diff --side-by-side'
+abbr -a -g locate 'locate -i'
 
 # redshift
 abbr -a -g r0 'redshift -P -O 6500'
