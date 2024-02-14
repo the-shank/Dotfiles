@@ -30,12 +30,12 @@ vim.api.nvim_create_autocmd("BufEnter", {
   pattern = "*.rs",
   callback = function()
     local bufnr = vim.api.nvim_get_current_buf()
-    local opts = { prefix = "<leader>", buffer = bufnr }
-    wk.register({
-      r = {
-        name = "+rust",
-        K = { "<cmd>RustOpenExternalDocs<cr>", "Rust - Open External Docs" },
-      },
-    }, opts)
+    vim.api.nvim_buf_set_keymap(
+      bufnr,
+      "n",
+      "<leader>K",
+      "<cmd>RustOpenExternalDocs<cr>",
+      { desc = "Rust - Open External Docs" }
+    )
   end,
 })
