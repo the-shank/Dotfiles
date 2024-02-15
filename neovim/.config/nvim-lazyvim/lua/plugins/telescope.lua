@@ -48,31 +48,41 @@ return {
   opts = function()
     local lga_actions = require("telescope-live-grep-args.actions")
     local picker_fraction = 1.0
-    local common_config = {
-      layout_config = {
-        width = function(_, max_columns, _)
-          return math.floor(picker_fraction * max_columns)
-        end,
-        height = function(_, _, max_lines)
-          return math.floor(picker_fraction * max_lines)
-        end,
-      },
-    }
-    local vertical_config = {
-      layout_strategy = "vertical",
-      layout_config = {
-        preview_height = 0.65,
-      },
-    }
-    local horizontal_config = {
-      layout_strategy = "horizontal",
-    }
-    Merge(vertical_config, common_config)
-    Merge(horizontal_config, common_config)
+    -- local common_config = {
+    --   layout_config = {
+    --     width = function(_, max_columns, _)
+    --       return math.floor(picker_fraction * max_columns)
+    --     end,
+    --     height = function(_, _, max_lines)
+    --       return math.floor(picker_fraction * max_lines)
+    --     end,
+    --   },
+    -- }
+    -- local vertical_config = {
+    --   layout_strategy = "vertical",
+    --   layout_config = {
+    --     preview_height = 0.65,
+    --   },
+    -- }
+    -- local horizontal_config = {
+    --   layout_strategy = "horizontal",
+    -- }
+    -- Merge(vertical_config, common_config)
+    -- Merge(horizontal_config, common_config)
     return {
-      -- hack: the layout config should be in a separate file but I am
+      -- FIXME: the layout config should be in a separate file but I am
       -- unable to figure out how to do it :(
-      defaults = vim.o.lines < 60 and vertical_config or horizontal_config,
+      -- defaults = vim.o.lines < 60 and vertical_config or horizontal_config,
+      defaults = {
+        layout_config = {
+          width = function(_, max_columns, _)
+            return math.floor(picker_fraction * max_columns)
+          end,
+          height = function(_, _, max_lines)
+            return math.floor(picker_fraction * max_lines)
+          end,
+        },
+      },
       extensions = {
         live_grep_args = {
           auto_quoting = true,
