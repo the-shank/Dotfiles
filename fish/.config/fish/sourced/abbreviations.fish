@@ -11,7 +11,7 @@ abbr -a -g cdd 'cd -' # back to previous directory
 
 # quick edits to dotfiles
 abbr -a -g dots 'cd ~/dotfiles/ && nvim'
-abbr -a -g aliases 'nvim ~/.config/fish/sourced/abbreviations.fish'
+abbr -a -g nva 'nvim ~/.config/fish/sourced/abbreviations.fish'
 
 # general
 abbr -a -g mkp 'mkdir -p' # auto nesting
@@ -231,7 +231,9 @@ abbr -a -g nf neofetch
 abbr -a -g jb "just build"
 abbr -a -g procs "procs --theme light"
 abbr -a -g procsl "procs --theme light"
+abbr -a -g pl "procs --theme light"
 abbr -a -g procsd "procs --theme dark"
+abbr -a -g pd "procs --theme dark"
 
 # keyboard
 # - increase repeat rate
