@@ -80,7 +80,7 @@ bindsym $alt+comma exec rofi -lines 12 -padding 18 -width 30 -location 0 -font '
 # scratch document
 # bindsym $alt+s exec --no-startup-id mousepad ~/Sync/scratchpad.md
 # bindsym $alt+s exec --no-startup-id xfce4-terminal --title scratchpad --command "hx /home/shank/Sync/MyBrain/scratchpad.md"
-bindsym $alt+s exec --no-startup-id alacritty --title scratchpad --command "hx /home/shank/Sync/MyBrain/scratchpad.md"
+# bindsym $alt+s exec --no-startup-id alacritty --title scratchpad --command "hx /home/shank/Sync/MyBrain/scratchpad.md"
 
 # dictionary
 bindsym $mod+d exec --no-startup-id xfce4-dict -c
