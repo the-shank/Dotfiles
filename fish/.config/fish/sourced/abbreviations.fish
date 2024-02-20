@@ -234,6 +234,7 @@ abbr -a -g procsl "procs --theme light"
 abbr -a -g pl "procs --theme light"
 abbr -a -g procsd "procs --theme dark"
 abbr -a -g pd "procs --theme dark"
+abbr -a -g nicer "nice -n 10"
 
 # keyboard
 # - increase repeat rate
