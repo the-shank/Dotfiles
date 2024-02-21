@@ -10,7 +10,7 @@ vim.keymap.set("n", "<leader>tt", function()
   else
     vim.o.background = "light"
   end
-end)
+end, { desc = "toggle light/dark theme" })
 
 -- copilot enable
 vim.keymap.set("n", "<leader>pe", function()

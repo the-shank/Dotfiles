@@ -1,7 +1,7 @@
 {
   "codeQL.telemetry.enableTelemetry": false,
   "codeQL.cli.executablePath": "/home/shank/code/applications/codeql/codeql",
-  "workbench.colorTheme": "Everforest Light",
+  "workbench.colorTheme": "Everforest Dark",
   "workbench.tree.indent": 16,
   "window.menuBarVisibility": "toggle",
   "editor.lineNumbers": "relative",
@@ -23,7 +23,8 @@
   // integrated terminal
   "terminal.integrated.scrollback": 500000,
   "terminal.integrated.fontSize": 13,
-  "terminal.integrated.lineHeight": 1.1,
+  "terminal.integrated.fontWeight": "450",
+  // "terminal.integrated.lineHeight": 1.0,
   // vim keybindings
   "vim.leader": "<space>",
   "vim.useSystemClipboard": true,
