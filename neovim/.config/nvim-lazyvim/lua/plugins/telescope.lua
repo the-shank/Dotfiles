@@ -11,6 +11,13 @@ return {
   },
   keys = {
     {
+      "<leader><space>",
+      function()
+        require("telescope.builtin").git_files({ hidden = true })
+      end,
+      desc = "telescope find files",
+    },
+    {
       "<leader>fg",
       function()
         require("telescope").extensions.live_grep_args.live_grep_args()
