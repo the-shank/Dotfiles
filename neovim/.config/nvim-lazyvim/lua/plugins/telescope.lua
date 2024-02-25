@@ -13,7 +13,17 @@ return {
     {
       "<leader><space>",
       function()
-        require("telescope.builtin").git_files({ hidden = true })
+        -- require("telescope.builtin").find_files({ hidden = true, no_ignore = true, no_ignore_parent = true })
+        require("telescope.builtin").find_files({
+          find_command = {
+            "fd",
+            "--ignore-case",
+            "--hidden",
+            "--no-ignore-vcs",
+            "--exclude=.git/",
+            "--exclude=target/",
+          },
+        })
       end,
       desc = "telescope find files",
     },
