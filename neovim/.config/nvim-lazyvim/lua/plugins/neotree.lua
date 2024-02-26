@@ -1,6 +1,7 @@
 local function getTelescopeOpts(state, path)
   return {
     cwd = path,
+    hidden = true,
     search_dirs = { path },
     attach_mappings = function(prompt_bufnr, map)
       local actions = require("telescope.actions")
@@ -29,8 +30,8 @@ return {
   opts = {
     window = {
       mappings = {
-        ["tf"] = "telescope_find",
-        ["tg"] = "telescope_grep",
+        ["<leader>tf"] = "telescope_find",
+        ["<leader>tg"] = "telescope_grep",
       },
     },
     commands = {
