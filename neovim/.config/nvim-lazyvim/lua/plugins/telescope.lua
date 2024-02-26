@@ -20,6 +20,7 @@ return {
             "--ignore-case",
             "--hidden",
             "--no-ignore-vcs",
+            "--type=f",
             "--exclude=.git/",
             "--exclude=target/",
           },
