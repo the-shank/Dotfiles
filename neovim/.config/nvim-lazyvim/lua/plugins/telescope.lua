@@ -29,6 +29,13 @@ return {
       desc = "telescope find files",
     },
     {
+      "<leader>/",
+      function()
+        require("telescope.builtin").live_grep()
+      end,
+      desc = "telescop grep",
+    },
+    {
       "<leader>fg",
       function()
         require("telescope").extensions.live_grep_args.live_grep_args()
