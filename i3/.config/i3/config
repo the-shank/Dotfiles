@@ -298,6 +298,7 @@ for_window [title="~/Sync/scratchpad.md - Mousepad"] floating enable, move scrat
 # for_window [title="scratchpad"] floating enable, move scratchpad
 for_window [class="Xfce4-dict"] floating enable
 for_window [title="Quick Format Citation"] floating enable
+for_window [class="Safeeyes"] floating enable
 
 for_window [window_role="pop-up"] floating enable
 
