@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# fzf-preview
+
+fzf --preview='cat {}' \
+	--preview-window=bottom,80% \
+	--bind='ctrl-u:preview-half-page-up' \
+	--bind='ctrl-d:preview-half-page-down' \
+	--bind='ctrl-t:preview-top' \
+	--bind='ctrl-b:preview-bottom' \
+	--bind='enter:execute($EDITOR {+})'
