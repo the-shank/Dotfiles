@@ -2,6 +2,9 @@
 
 # fzf-preview
 
+# USAGE:
+# ls | fzfp
+
 fzf --preview='cat {}' \
 	--preview-window=bottom,80% \
 	--bind='ctrl-u:preview-half-page-up' \
