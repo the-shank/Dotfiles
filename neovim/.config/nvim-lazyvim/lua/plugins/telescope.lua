@@ -23,6 +23,7 @@ return {
             "--type=f",
             "--exclude=.git/",
             "--exclude=target/",
+            "--exclude=.venv/",
           },
         })
       end,
