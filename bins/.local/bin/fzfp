@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# fzf-preview
+
+# USAGE:
+# ls | fzfp
+
+fzf --preview='cat {}' \
+	--multi \
+	--preview-window=bottom,80% \
+	--bind='ctrl-u:preview-half-page-up' \
+	--bind='ctrl-d:preview-half-page-down' \
+	--bind='ctrl-t:preview-top' \
+	--bind='ctrl-b:preview-bottom' \
+	--bind='ctrl-a:select-all+accept' \
+	--bind='enter:execute($EDITOR {+})'
