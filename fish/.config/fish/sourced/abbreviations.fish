@@ -233,7 +233,6 @@ abbr -a -g procs "procs --theme light"
 abbr -a -g procsl "procs --theme light"
 abbr -a -g procsd "procs --theme dark"
 abbr -a -g nicer "nice -n 10"
-abbr -a -g ssn "send_slack_notifications.sh"
 
 # keyboard
 # - increase repeat rate
