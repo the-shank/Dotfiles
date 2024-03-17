@@ -60,7 +60,9 @@ abbr -a -g bl1 'sudo -E xbacklight -set 2' # backlight = 1%
 abbr -a -g bl2 'sudo -E xbacklight -set 2' # backlight = 2%
 abbr -a -g bl3 'sudo -E xbacklight -set 2' # backlight = 3%
 abbr -a -g bl5 'sudo -E xbacklight -set 5' # backlight = 5%
-abbr -a -g bl7 'sudo -E xbacklight -set 2' # backlight = 7%
+abbr -a -g bl7 'sudo -E xbacklight -set 7' # backlight = 7%
+abbr -a -g bl8 'sudo -E xbacklight -set 8' # backlight = 8%
+abbr -a -g bl9 'sudo -E xbacklight -set 9' # backlight = 9%
 abbr -a -g bl10 'sudo -E xbacklight -set 10' # backlight = 10%
 abbr -a -g blinc 'sudo -E xbacklight -inc 2'
 abbr -a -g bldec 'sudo -E xbacklight -dec 2'
@@ -255,3 +257,6 @@ abbr -a -g memst 'zswap-stats; printf "\n"; free -mt'
 
 # nix
 abbr -a -g renix 'ls $HOME/.nix-profile/share/applications/ | xargs -I{} unlink $HOME/.local/share/applications/{}; ln -s $HOME/.nix-profile/share/applications/* $HOME/.local/share/applications'
+
+# archlinux
+abbr -a -g pkgs "pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"

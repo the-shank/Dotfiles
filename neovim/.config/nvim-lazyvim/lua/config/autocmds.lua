@@ -20,21 +20,21 @@ vim.api.nvim_create_autocmd("BufReadPost", {
   end,
 })
 
--- rust
-vim.api.nvim_create_autocmd("BufEnter", {
-  group = augroup("rust-tools"),
-  pattern = "*.rs",
-  callback = function()
-    local bufnr = vim.api.nvim_get_current_buf()
-    vim.api.nvim_buf_set_keymap(
-      bufnr,
-      "n",
-      "<leader>K",
-      "<cmd>RustOpenExternalDocs<cr>",
-      { desc = "Rust - Open External Docs" }
-    )
-  end,
-})
+-- -- rust
+-- vim.api.nvim_create_autocmd("BufEnter", {
+--   group = augroup("rust-tools"),
+--   pattern = "*.rs",
+--   callback = function()
+--     local bufnr = vim.api.nvim_get_current_buf()
+--     vim.api.nvim_buf_set_keymap(
+--       bufnr,
+--       "n",
+--       "<leader>K",
+--       "<cmd>RustOpenExternalDocs<cr>",
+--       { desc = "Rust - Open External Docs" }
+--     )
+--   end,
+-- })
 
 -- -- disable autoformat for python files
 -- vim.api.nvim_create_autocmd({ "FileType" }, {

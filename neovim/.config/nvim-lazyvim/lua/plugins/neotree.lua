@@ -1,3 +1,4 @@
+-- source: https://github.com/nvim-neo-tree/neo-tree.nvim/wiki/Recipes#find-with-telescope
 local function getTelescopeOpts(state, path)
   return {
     cwd = path,
