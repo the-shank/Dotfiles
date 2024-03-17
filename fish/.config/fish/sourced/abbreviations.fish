@@ -257,3 +257,6 @@ abbr -a -g memst 'zswap-stats; printf "\n"; free -mt'
 
 # nix
 abbr -a -g renix 'ls $HOME/.nix-profile/share/applications/ | xargs -I{} unlink $HOME/.local/share/applications/{}; ln -s $HOME/.nix-profile/share/applications/* $HOME/.local/share/applications'
+
+# archlinux
+abbr -a -g pkgs "pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
