@@ -221,7 +221,7 @@ abbr -a -g dsyms "llvm-readelf --dyn-syms --demangle"
 
 # package managers: commonly used invocations
 abbr -a -g ali "apt list --installed"
-abbr -a -g pli "pamac list --installed"
+abbr -a -g pli "pacman --query --quiet"
 abbr -a -g xli "xbps-query --list-pkgs"
 
 # misc
