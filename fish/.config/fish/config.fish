@@ -531,7 +531,7 @@ fish_add_path $HOME/.npm-global/bin
 fish_add_path $HOME/Applications/ghidra
 # fish_add_path $HOME/Applications/llvm-13-release/bin
 # fish_add_path /usr/lib/llvm-13/bin
-fish_add_path $HOME/code/applications/codeql
+fish_add_path $HOME/code/applications/codeql-home/codeql
 
 # custom env vars
 set --export FUZZERR_PROJ_DIR $HOME/code/research/FuzzERR
