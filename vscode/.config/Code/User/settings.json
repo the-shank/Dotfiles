@@ -1,6 +1,6 @@
 {
   "codeQL.telemetry.enableTelemetry": false,
-  "codeQL.cli.executablePath": "/home/shank/code/applications/codeql/codeql",
+  "codeQL.cli.executablePath": "/home/shank/code/applications/codeql-home/codeql/codeql",
   "workbench.colorTheme": "Everforest Dark",
   "workbench.tree.indent": 16,
   "window.menuBarVisibility": "toggle",
@@ -74,6 +74,7 @@
   "terminal.integrated.persistentSessionScrollback": 100000,
   "editor.inlineSuggest.enabled": true,
   "everforest.italicComments": false,
+  "everforest.highContrast": true,
   "workbench.editor.enablePreview": false,
   "editor.unicodeHighlight.nonBasicASCII": false,
   "solidity.telemetry": false,
@@ -83,6 +84,6 @@
     "plaintext": false,
     "markdown": false,
     "scminput": false
-  }
+  },
   "cmake.showOptionsMovedNotification": false,
 }
