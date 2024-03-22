@@ -5,6 +5,7 @@ tree = lg --all
 mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
 	assume-unchanged = update-index --assume-unchanged
 	assume-changed = update-index --no-assume-unchanged
+dft = difftool
 [user]
 email = shashanksharma21@gmail.com
 name = Shank
@@ -28,6 +29,13 @@ path = ~/.gitconfig_private
 	rebase = false
 [diff]
 	mnemonicPrefix = true
+  tool = difftastic
+[difftool]
+  prompt = false
+[difftool "difftastic"]
+        cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+        difftool = true
 [init]
 	defaultBranch = master
 [pager]
