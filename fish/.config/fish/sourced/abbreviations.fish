@@ -47,7 +47,7 @@ abbr -a -g locate 'locate -i'
 
 # redshift
 abbr -a -g r0 'redshift -P -O 6500'
-abbr -a -g rs 'redshift -P -O 6200'
+abbr -a -g rs 'redshift -P -O 6300'
 abbr -a -g r1 'redshift -P -O 6000'
 abbr -a -g r2 'redshift -P -O 5500'
 abbr -a -g r3 'redshift -P -O 5000'
