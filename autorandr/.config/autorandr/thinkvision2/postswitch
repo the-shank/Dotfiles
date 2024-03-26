@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
+# dpi
+! $HOME/.local/bin/dpi.sh 120
+
+# fix keyboard
+! xset r rate 250 50
+! setxkbmap -option caps:escape
+
+# single display mode
+! /home/shank/.local/bin/i3_single_display_ws.sh
