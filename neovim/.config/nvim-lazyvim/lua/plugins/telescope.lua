@@ -44,20 +44,10 @@ return {
       desc = "telescope live grep args",
     },
     {
-      "<leader>sS",
-      function()
-        -- require("telescope").lsp_workspace_symbols()
-        require("telescope.builtin").lsp_workspace_symbols({
-          symbols = require("lazyvim.config").get_kind_filter(),
-        })
-      end,
-      desc = "Goto Symbol (workspace)",
-    },
-    {
       "<leader>sB",
       function()
         -- require("telescope").lsp_workspace_symbols()
-        require("telescope.builtin").lsp_dynamic_workspace_symbols({
+        require("telescope.builtin").lsp_workspace_symbols({
           symbols = require("lazyvim.config").get_kind_filter(),
         })
       end,
