@@ -9,7 +9,7 @@
 # [x] kvantummanager (qt applications)
 # [ ] discord (restart it)
 
-set -eu
+set -u
 set -o pipefail
 
 # xfce-terminal
