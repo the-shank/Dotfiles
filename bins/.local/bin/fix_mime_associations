@@ -21,6 +21,7 @@ function set_default() {
 
 # docs
 set_default "application/json" "org.xfce.mousepad.desktop"
+set_default "text/plain" "org.xfce.mousepad.desktop"
 
 # web stuff
 # BROWSER=firefox
