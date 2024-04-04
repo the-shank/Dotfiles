@@ -12,7 +12,7 @@ SlidesTransition=Random
 
 [Document]
 PaperColor=243,243,243
-RenderMode=Paper
+RenderMode=InvertLumaSymmetric
 
 [General]
 ShellOpenFileInTabs=true
@@ -24,6 +24,7 @@ SplitterSizes=431,1379
 SidebarIconSize=22
 
 [PageView]
+MouseMode=TextSelect
 SmoothScrolling=false
 
 [Reviews]
