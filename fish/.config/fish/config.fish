@@ -572,7 +572,7 @@ end
 fish_add_path $HOME/code/misc/xbps/usr/bin
 
 # bat light theme
-setenv BAT_THEME "Solarized (light)"
+setenv BAT_THEME ansi
 
 # nix
 setenv NIXPKGS_ALLOW_UNFREE 1
