@@ -7,6 +7,7 @@
 # [x] gtk theme
 # [x] mousepad
 # [x] kvantummanager (qt applications)
+# [x] vifm
 # [ ] discord (restart it)
 
 set -u
@@ -81,3 +82,9 @@ fi
 
 # discord (restart it)
 # ! pkill -KILL Discord && sleep 0.1 && (discord &>/dev/null &) && sleep 0.1 && disown
+
+# vifm
+FILE=$HOME/dotfiles/vifm/.config/vifm/vifmrc
+if [ -f $FILE ]; then
+	sed -i -e 's/papercolor-dark/papercolor-light/' $FILE
+fi
