@@ -7,6 +7,7 @@ vim.opt.background = "light"
 
 -- everforest theme : disable italic comment
 vim.g.everforest_disable_italic_comment = 1
+vim.g.everforest_background = "hard"
 
 -- disable swap
 vim.opt.swapfile = false
