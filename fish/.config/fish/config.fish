@@ -557,22 +557,10 @@ end
 
 # purs3lab stuff (start) >>>>>
 
-# rust: use different RUSTUP_HOME and CARGO_HOME (to save root disk space ¯\_(ツ)_/¯)
-if test -e /workdisk/shank/.rustup
-    setenv RUSTUP_HOME /workdisk/shank/.rustup
-end
-if test -e /workdisk/shank/.cargo
-    setenv CARGO_HOME /workdisk/shank/.cargo
-    fish_add_path $CARGO_HOME/bin
-end
-
 # purs3lab stuff (end) <<<<<
 
-# xbps
-fish_add_path $HOME/code/misc/xbps/usr/bin
-
 # bat light theme
-setenv BAT_THEME ansi
+setenv BAT_THEME Colddark-Dark
 
 # nix
 setenv NIXPKGS_ALLOW_UNFREE 1
