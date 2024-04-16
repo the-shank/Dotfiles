@@ -560,7 +560,7 @@ end
 # purs3lab stuff (end) <<<<<
 
 # bat light theme
-setenv BAT_THEME Colddark-Dark
+setenv BAT_THEME Coldark-Dark
 
 # nix
 setenv NIXPKGS_ALLOW_UNFREE 1
