@@ -40,3 +40,6 @@ path = ~/.gitconfig_private
 	defaultBranch = master
 [pager]
 	branch = false
+[safe]
+	directory = /home/common/rustforembedded-ws/00-Results/
+	directory = /home/common/rustforembedded-ws/00-Results

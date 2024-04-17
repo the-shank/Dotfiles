@@ -567,3 +567,4 @@ nnoremap <c-u> <c-w>x
 
 " change file preview for directories"
 fileviewer */ tree -L 2 -I .git %c
+" set dirsize=nitems

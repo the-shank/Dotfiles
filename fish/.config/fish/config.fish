@@ -524,7 +524,7 @@ fish_add_path $HOME/.local/bin
 fish_add_path /usr/local/go/bin
 fish_add_path $HOME/.local/gobin
 fish_add_path $HOME/.cargo/bin
-fish_add_path $HOME/Applications/bear/bin
+# fish_add_path $HOME/Applications/bear/bin
 fish_add_path $HOME/Applications/aflplusplus/bin
 fish_add_path $HOME/Applications/aflplusplus/usr/local/bin
 fish_add_path $HOME/.npm-global/bin
@@ -556,6 +556,10 @@ if test -e ~/.cargo-target
 end
 
 # purs3lab stuff (start) >>>>>
+
+# setenv RUSTUP_HOME /home/shank/.rustup
+# setenv CARGO_HOME /home/shank/.cargo
+# fish_add_path $CARGO_HOME/bin
 
 # purs3lab stuff (end) <<<<<
 
