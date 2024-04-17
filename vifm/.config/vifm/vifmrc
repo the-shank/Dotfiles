@@ -102,7 +102,7 @@ endif
 set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 
 " List of color schemes to try (picks the first one supported by the terminal)
-colorscheme papercolor-light Default-256 Default
+colorscheme papercolor-dark Default-256 Default
 
 " ------------------------------------------------------------------------------
 " Bookmarks
@@ -564,3 +564,6 @@ nnoremap <c-u> <c-w>x
 " ------------------------------------------------------------------------------
 
 " https://github.com/cirala/vifm_devicons
+
+" change file preview for directories"
+fileviewer */ tree -L 2 -I .git %c
