@@ -40,6 +40,8 @@ path = ~/.gitconfig_private
 	defaultBranch = master
 [pager]
 	branch = false
-[safe]
-	directory = /home/common/rustforembedded-ws/00-Results/
-	directory = /home/common/rustforembedded-ws/00-Results
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
