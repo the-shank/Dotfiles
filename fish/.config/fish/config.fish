@@ -551,9 +551,9 @@ setenv COLORTERM truecolor
 setenv RUST_BACKTRACE 1
 setenv RUSTC_LOG_COLOR always
 # source: @jonhoo config
-if test -e ~/.cargo-target
-    setenv CARGO_TARGET_DIR ~/.cargo-target
-end
+# if test -e ~/.cargo-target
+#     setenv CARGO_TARGET_DIR ~/.cargo-target
+# end
 
 # purs3lab stuff (start) >>>>>
 
