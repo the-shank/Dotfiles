@@ -37,7 +37,7 @@ run_on_one() {
 	DIR=$1
 
 	cd $DIR
-	cargo clean 2>&1 &>/dev/null
+	cargo +stable clean 2>&1 &>/dev/null
 }
 export -f run_on_one
 
