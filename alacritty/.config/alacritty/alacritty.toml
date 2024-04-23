@@ -1,4 +1,10 @@
-import = ["/home/shank/.config/alacritty/themes/everforest_dark.toml"]
+import = [
+  "/home/shank/.config/alacritty/themes/everforest_dark.toml",
+  # "/home/shank/.config/alacritty/themes/catppuccin-latte.toml"
+  # "/home/shank/.config/alacritty/themes/catppuccin-frappe.toml"
+  # "/home/shank/.config/alacritty/themes/catppuccin-macchiato.toml",
+  # "/home/shank/.config/alacritty/themes/catppuccin-mocha.toml",
+]
 live_config_reload = true
 
 [font]
