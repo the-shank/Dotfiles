@@ -568,3 +568,14 @@ nnoremap <c-u> <c-w>x
 " change file preview for directories"
 fileviewer */ tree -L 2 -I .git %c
 " set dirsize=nitems
+
+" faster movement
+nnoremap J 5j
+nnoremap K 5k
+
+" resize panels
+nnoremap - <C-w>5<
+nnoremap _ <C-w>5>
+
+" view bookmarks
+nnoremap b :bmarks<cr>
