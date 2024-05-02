@@ -39,6 +39,9 @@ sed -i -e 's/everforest_dark/everforest_light/' $FILE
 # nvim-lazyvim
 FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/config/options.lua
 sed -i -e 's/vim.opt.background = ".*"/vim.opt.background = "light"/' $FILE
+FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/plugins/theme.lua
+sed -i -e 's/catppuccin-macchiato/catppuccin-latte/' $FILE
+sed -i -e 's/catppuccin-mocha/catppuccin-latte/' $FILE
 
 # gtk theme
 # ref: https://felix-kling.de/blog/2021/linux-toggle-dark-mode.html
