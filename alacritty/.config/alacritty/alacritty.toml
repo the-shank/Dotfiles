@@ -18,6 +18,7 @@ y = 1
 style = "Bold"
 # family = "JetBrainsMono Nerd Font"
 family = "SF Mono"
+# family = "Berkeley Mono"
 
 [font.bold_italic]
 family = "monospace"
@@ -28,12 +29,14 @@ style = "Bold Italic"
 style = "Italic"
 # family = "JetBrainsMono Nerd Font"
 family = "SF Mono"
+# family = "Berkeley Mono"
 
 [font.normal]
 # family = "CommitMonoThicker"
 # style = "Normal"
 # family = "JetBrainsMono Nerd Font"
 family = "SF Mono"
+# family = "Berkeley Mono"
 style = "Medium"
 
 [[keyboard.bindings]]
