@@ -570,3 +570,6 @@ setenv BAT_THEME Coldark-Dark
 setenv NIXPKGS_ALLOW_UNFREE 1
 fish_add_path $HOME/.nix-profile/bin
 set --export XDG_DATA_DIRS $HOME/.nix-profile/share:$XDG_DATA_DIRS
+
+# bookmark-cd init block
+# bookmark-cd init | source

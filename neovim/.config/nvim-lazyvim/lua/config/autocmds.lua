@@ -43,3 +43,14 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 --     vim.b.autoformat = false
 --   end,
 -- })
+
+-- vifm
+vim.api.nvim_create_autocmd({ "BufReadPost", "BufEnter" }, {
+  group = augroup("vifmrc_open"),
+  pattern = {
+    "**/vifmrc",
+  },
+  callback = function()
+    vim.api.nvim_command("set syntax=vim")
+  end,
+})

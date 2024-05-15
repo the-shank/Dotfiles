@@ -475,18 +475,18 @@ elseif $WAYLAND_DISPLAY
                     \ echo -n %c:p | wl-copy -p %i<cr>
     endif
 elseif $DISPLAY
-    if executable('xclip')
-        " Yank current directory path into the clipboard
-        nnoremap yd :!echo %d | xclip %i<cr>
-        " Yank current file path into the clipboard
-        nnoremap yf :!echo %c:p | xclip %i<cr>
-    elseif executable('xsel')
+    if executable('xsel')
         " Yank current directory path into primary and selection clipboards
         nnoremap yd :!echo -n %d | xsel --input --primary %i &&
                     \ echo -n %d | xsel --clipboard --input %i<cr>
         " Yank current file path into into primary and selection clipboards
         nnoremap yf :!echo -n %c:p | xsel --input --primary %i &&
                     \ echo -n %c:p | xsel --clipboard --input %i<cr>
+    elseif executable('xclip')
+        " Yank current directory path into the clipboard
+        nnoremap yd :!echo %d | xclip %i<cr>
+        " Yank current file path into the clipboard
+        nnoremap yf :!echo %c:p | xclip %i<cr>
     endif
 endif
 
@@ -568,3 +568,14 @@ nnoremap <c-u> <c-w>x
 " change file preview for directories"
 fileviewer */ tree -L 2 -I .git %c
 " set dirsize=nitems
+
+" faster movement
+nnoremap J 5j
+nnoremap K 5k
+
+" resize panels
+nnoremap - <C-w>5<
+nnoremap _ <C-w>5>
+
+" view bookmarks
+nnoremap b :bmarks<cr>
