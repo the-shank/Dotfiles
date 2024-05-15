@@ -40,10 +40,10 @@ path = ~/.gitconfig_private
 	defaultBranch = master
 [pager]
 	branch = false
+[submodule]
+	recurse = true
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
-[submodule]
-	recurse = true
