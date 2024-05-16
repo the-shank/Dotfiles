@@ -37,6 +37,7 @@ sed -i -e 's/everforest_light/everforest_dark/' $FILE
 sed -i -e 's/catppuccin-latte/catppuccin-macchiato/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-macchiato/' $FILE
 # sed -i -e 's/CommitMonoThicker/CommitMonoThick/' $FILE
+sed -i -e 's|^\(\s*\)style = "Medium"|\1# style = "Medium"|' $FILE
 
 # nvim
 # nvim-lazyvim
