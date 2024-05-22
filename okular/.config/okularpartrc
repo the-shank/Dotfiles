@@ -24,7 +24,6 @@ SplitterSizes=431,1379
 SidebarIconSize=22
 
 [PageView]
-MouseMode=TextSelect
 SmoothScrolling=false
 
 [Reviews]
