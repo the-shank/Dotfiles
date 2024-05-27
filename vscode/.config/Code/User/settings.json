@@ -86,4 +86,5 @@
     "scminput": false
   },
   "cmake.showOptionsMovedNotification": false,
+  "git.openRepositoryInParentFolders": "never",
 }

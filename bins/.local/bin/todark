@@ -37,6 +37,7 @@ sed -i -e 's/everforest_light/everforest_dark/' $FILE
 sed -i -e 's/catppuccin-latte/catppuccin-macchiato/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-macchiato/' $FILE
 # sed -i -e 's/CommitMonoThicker/CommitMonoThick/' $FILE
+sed -i -e 's|^\(\s*\)style = "Medium"|\1# style = "Medium"|' $FILE
 
 # nvim
 # nvim-lazyvim
@@ -77,7 +78,7 @@ fi
 # mousepad
 # ref: https://docs.xfce.org/apps/mousepad/start
 if command -v gsettings >/dev/null; then
-	! gsettings set org.xfce.mousepad.preferences.view color-scheme solarized-dark
+	! gsettings set org.xfce.mousepad.preferences.view color-scheme oblivion
 	# ! gsettings set org.xfce.mousepad.preferences.view font-name "CommitMonoThick Medium 10"
 fi
 
