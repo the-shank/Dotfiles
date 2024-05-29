@@ -573,5 +573,5 @@ if [ -f $HOME/.nix-profile/bin ]
     set --export XDG_DATA_DIRS $HOME/.nix-profile/share:$XDG_DATA_DIRS
 end
 
-# bookmark-cd init block
-# bookmark-cd init | source
+# load zoxide
+zoxide init fish | source
