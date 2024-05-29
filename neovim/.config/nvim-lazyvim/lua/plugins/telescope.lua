@@ -60,6 +60,7 @@ return {
     telescope.load_extension("live_grep_args")
   end,
   opts = function()
+    local actions = require("telescope.actions")
     local lga_actions = require("telescope-live-grep-args.actions")
     local picker_fraction = 0.95
     return {
@@ -73,6 +74,15 @@ return {
             return math.floor(picker_fraction * max_lines)
           end,
           prompt_position = "bottom",
+        },
+      },
+      pickers = {
+        buffers = {
+          mappings = {
+            i = {
+              ["<c-d>"] = actions.delete_buffer + actions.move_to_top,
+            },
+          },
         },
       },
       extensions = {
