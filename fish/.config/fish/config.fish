@@ -567,9 +567,11 @@ setenv RUSTC_LOG_COLOR always
 setenv BAT_THEME Coldark-Dark
 
 # nix
-setenv NIXPKGS_ALLOW_UNFREE 1
-fish_add_path $HOME/.nix-profile/bin
-set --export XDG_DATA_DIRS $HOME/.nix-profile/share:$XDG_DATA_DIRS
+if [ -f $HOME/.nix-profile/bin ]
+    setenv NIXPKGS_ALLOW_UNFREE 1
+    fish_add_path $HOME/.nix-profile/bin
+    set --export XDG_DATA_DIRS $HOME/.nix-profile/share:$XDG_DATA_DIRS
+end
 
-# bookmark-cd init block
-# bookmark-cd init | source
+# load zoxide
+zoxide init fish | source

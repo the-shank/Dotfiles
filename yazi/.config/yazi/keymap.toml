@@ -1,0 +1,16 @@
+[[manager.prepend_keymap]]
+on = ["<A-s>"]
+run = 'shell "$SHELL" --block --confirm'
+desc = "Open shell here"
+
+[[manager.prepend_keymap]]
+# Smart enter: enter for directory, open for file
+on = ["l"]
+run = "plugin --sync smart-enter"
+desc = "Enter the child directory, or open the file"
+
+[[manager.prepend_keymap]]
+# Smart enter: enter for directory, open for file
+on = ["<Enter>"]
+run = "plugin --sync smart-enter"
+desc = "Enter the child directory, or open the file"
