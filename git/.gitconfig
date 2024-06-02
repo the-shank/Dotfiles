@@ -1,6 +1,8 @@
 [alias]
 lg = "!f() { git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit $@; }; f"
 lgr = "!f() { git log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --reverse $@; }; f"
+lgd = "!f() { git log --color --graph --pretty=format:'%C(yellow)%h%x09%Creset%C(cyan)%C(bold)%ad%Creset %C(yellow)%cn%Creset %C(green)%Creset %s' --date=default $@; }; f"
+lgrd = "!f() { git log --color --pretty=format:'%C(yellow)%h%x09%Creset%C(cyan)%C(bold)%ad%Creset %C(yellow)%cn%Creset %C(green)%Creset %s' --date=default --reverse $@; }; f"
 tree = lg --all
 mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
 	assume-unchanged = update-index --assume-unchanged
