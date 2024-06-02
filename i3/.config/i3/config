@@ -648,7 +648,6 @@ exec --no-startup-id autorandr --change
 
 # drop-down terminal
 bindsym $alt+o exec --no-startup-id xfce4-terminal --drop-down
-bindsym $alt+i exec --no-startup-id tilix --quake
 
 # safeeyes
 exec --no-startup-id safeeyes &
