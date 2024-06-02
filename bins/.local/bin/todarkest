@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
+todark
+
+# alacritty
+FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml
+sed -i -e 's/catppuccin-latte/catppuccin-mocha/' $FILE
+sed -i -e 's/catppuccin-frappe/catppuccin-mocha/' $FILE
+sed -i -e 's/catppuccin-macchiato/catppuccin-mocha/' $FILE
+
+# darker neovim
+FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/plugins/theme.lua
+sed -i -e 's/catppuccin-latte/catppuccin-mocha/' $FILE
+sed -i -e 's/catppuccin-frappe/catppuccin-mocha/' $FILE
+sed -i -e 's/catppuccin-macchiato/catppuccin-mocha/' $FILE

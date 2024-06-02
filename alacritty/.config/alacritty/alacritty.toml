@@ -1,6 +1,6 @@
 import = [
-  "/home/shank/.config/alacritty/themes/everforest_dark.toml",
-  # "/home/shank/.config/alacritty/themes/catppuccin-macchiato.toml",
+  # "/home/shank/.config/alacritty/themes/everforest_dark.toml",
+  "/home/shank/.config/alacritty/themes/catppuccin-frappe.toml",
 ]
 live_config_reload = true
 
