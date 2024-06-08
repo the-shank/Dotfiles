@@ -7,6 +7,8 @@ todark
 
 # alacritty
 FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml
+sed -i -e 's/everforest_light/everforest_darkest/' $FILE
+sed -i -e 's/everforest_dark/everforest_darkest/' $FILE
 sed -i -e 's/catppuccin-latte/catppuccin-mocha/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-mocha/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-mocha/' $FILE
