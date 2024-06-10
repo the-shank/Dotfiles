@@ -1,5 +1,5 @@
 # theme = "everforest_light"
-theme = "everforest_dark"
+theme = "everforest_darkest"
 
 [editor]
 line-number = "relative"
