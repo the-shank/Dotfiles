@@ -32,8 +32,9 @@ fi
 
 # alacritty
 FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml
-sed -i -e 's/everforest_dark/everforest_light/' $FILE
 sed -i -e 's/everforest_darkest/everforest_light/' $FILE
+sed -i -e 's/everforest_darker/everforest_light/' $FILE
+sed -i -e 's/everforest_dark/everforest_light/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-latte/' $FILE

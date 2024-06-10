@@ -1,5 +1,5 @@
 import = [
-  "/home/shank/.config/alacritty/themes/everforest_darkest.toml",
+  "/home/shank/.config/alacritty/themes/everforest_darker.toml",
   # "/home/shank/.config/alacritty/themes/catppuccin-macchiato.toml",
 ]
 live_config_reload = true
