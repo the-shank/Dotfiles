@@ -20,4 +20,4 @@ sed -i -e 's/catppuccin-latte/catppuccin-mocha/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-mocha/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-mocha/' $FILE
 FILE=$HOME/dotfiles/neovim/.local/share/nvim-lazyvim/lazy/everforest/autoload/everforest.vim
-sed -i -e "s/'bg0':        \['#232a2e'/'bg0':        ['#1E2326'/" $FILE
+sed -i -e "s|'bg0':        \['#232a2e'|'bg0':        ['#1E2326'|" $FILE
