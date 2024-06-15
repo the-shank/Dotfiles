@@ -51,8 +51,8 @@ sed -i -e 's/catppuccin-latte/catppuccin-frappe/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-frappe/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-frappe/' $FILE
 FILE=$HOME/dotfiles/neovim/.local/share/nvim-lazyvim/lazy/everforest/autoload/everforest.vim
-sed -i -e "s|'bg0':        \['#1E2326'|'bg0':        ['#2D353B'|" $FILE
-sed -i -e "s|'bg0':        \['#232A2E'|'bg0':        ['#2D353B'|" $FILE
+sed -i -e "s|'bg0':        \['#1E2326'|'bg0':        ['#272E33'|" $FILE
+sed -i -e "s|'bg0':        \['#232a2e'|'bg0':        ['#272E33'|" $FILE
 
 # gtk theme
 # ref: https://felix-kling.de/blog/2021/linux-toggle-dark-mode.html
