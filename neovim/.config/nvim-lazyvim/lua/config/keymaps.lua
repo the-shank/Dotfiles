@@ -40,3 +40,15 @@ vim.keymap.set("n", "#", "#zz")
 
 -- copy path+line_num (for using in gdb)
 vim.keymap.set("n", "<leader>yl", [[<cmd>let @+=expand("%:p").":".line(".")<cr>]], { desc = "yank <path>:<line_num>" })
+
+-- toggle virtual_text for diagnostic
+vim.keymap.set("n", "<leader>uD", function()
+  local virtual_text_enabled = vim.diagnostic.config().virtual_text
+  virtual_text_enabled = not virtual_text_enabled
+  vim.diagnostic.config({ virtual_text = virtual_text_enabled })
+  if virtual_text_enabled then
+    print("Diagnostic virtual_text enabled")
+  else
+    print("Diagnostic virtual_text disabled")
+  end
+end, { desc = "toggle diagnostic virtual_text" })
