@@ -574,4 +574,5 @@ if [ -f $HOME/.nix-profile/bin ]
 end
 
 # load zoxide
+abbr -a -g cd z
 zoxide init fish | source
