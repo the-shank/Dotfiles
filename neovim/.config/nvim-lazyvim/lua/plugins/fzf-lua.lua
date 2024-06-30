@@ -6,4 +6,7 @@ return {
       width = 0.95,
     },
   },
+  keys = {
+    { "<leader><space>", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
+  },
 }
