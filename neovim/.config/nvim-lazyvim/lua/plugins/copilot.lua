@@ -4,7 +4,7 @@ return {
     "folke/which-key.nvim",
     opts = {
       defaults = {
-        ["<leader>p"] = { name = "+copilot" },
+        ["<leader>p"] = { group = "copilot" },
       },
     },
   },
