@@ -76,6 +76,7 @@ format = " $icon <b>IND</b> $timestamp.datetime(f:'%a %d/%m %R') "
 [[block]]
 block = "time"
 interval = 20
+timezone = "America/Indianapolis"
 format = " $icon <b>USA</b> $timestamp.datetime(f:'%a %d/%m %R') "
 
 [[block]]
