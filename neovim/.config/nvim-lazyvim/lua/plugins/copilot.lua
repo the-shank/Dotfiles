@@ -3,8 +3,8 @@ return {
   {
     "folke/which-key.nvim",
     opts = {
-      defaults = {
-        ["<leader>p"] = { group = "copilot" },
+      spec = {
+        { "<leader>p", group = "copilot" },
       },
     },
   },

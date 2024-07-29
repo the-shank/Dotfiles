@@ -1,9 +1,9 @@
 return {
   "folke/which-key.nvim",
   opts = {
-    defaults = {
+    spec = {
       -- prefix for <leader>yl -> yank <path>:<line_num>
-      ["<leader>y"] = { group = "yank" },
+      { "<leader>y", group = "yank" },
     },
   },
 }

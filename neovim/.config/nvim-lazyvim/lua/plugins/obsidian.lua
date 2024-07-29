@@ -4,8 +4,8 @@ return {
   {
     "folke/which-key.nvim",
     opts = {
-      defaults = {
-        ["<leader>o"] = { group = "obsidian" },
+      spec = {
+        { "<leader>o", group = "obsidian" },
       },
     },
   },
