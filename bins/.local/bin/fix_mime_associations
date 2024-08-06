@@ -41,6 +41,7 @@ set_default "application/pdf" "org.gnome.Evince.desktop"
 # folders
 set_default "inode/directory" "thunar.desktop"
 
-# video
+# audio/video
+set_default "audio/mpeg" "mpv.desktop"
 set_default "video/mp4" "mpv.desktop"
 set_default "video/x-matroska" "mpv.desktop"
