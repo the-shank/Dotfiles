@@ -1,6 +1,6 @@
 import = [
-  "/home/shank/.config/alacritty/themes/everforest_darker.toml",
-  # "/home/shank/.config/alacritty/themes/catppuccin-macchiato.toml",
+  "/home/shank/.config/alacritty/themes/everforest_light_medium.toml",
+  # "/home/shank/.config/alacritty/themes/catppuccin-latte.toml",
 ]
 live_config_reload = true
 
@@ -37,7 +37,7 @@ family = "SF Mono"
 # family = "JetBrainsMono Nerd Font"
 family = "SF Mono"
 # family = "Berkeley Mono"
-# style = "Medium"
+style = "Medium"
 
 [[keyboard.bindings]]
 action = "ToggleFullscreen"
