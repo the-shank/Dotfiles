@@ -44,6 +44,7 @@ abbr -a -g mo3 'cal -3'
 # abbr -a -g diff 'diff --side-by-side'
 # abbr -a -g diff difft
 abbr -a -g locate 'locate -i'
+abbr -a -g srf 'source /home/shank/.config/fish/config.fish'
 
 # redshift
 abbr -a -g r0 'redshift -P -O 6500'
