@@ -9,6 +9,9 @@ vim.opt.background = "dark"
 vim.g.everforest_disable_italic_comment = 1
 vim.g.everforest_background = "hard"
 
+-- zenbones theme
+-- vim.g.zenbones_compat = 1
+
 -- disable swap
 vim.opt.swapfile = false
 
