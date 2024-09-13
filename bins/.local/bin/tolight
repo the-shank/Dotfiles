@@ -9,6 +9,7 @@
 # [x] kvantummanager (qt applications)
 # [x] vifm
 # [ ] discord (restart it)
+# [ ] bat (need to source the config.fish file again)
 
 set -u
 set -o pipefail
@@ -98,4 +99,10 @@ fi
 FILE=$HOME/dotfiles/vifm/.config/vifm/vifmrc
 if [ -f $FILE ]; then
   sed -i -e 's/papercolor-dark/papercolor-light/' $FILE
+fi
+
+# bat
+FILE=$HOME/dotfiles/fish/.config/fish/config.fish
+if [ -f $FILE ]; then
+  sed -i -e 's/BAT_THEME .*/BAT_THEME Coldark-Cold/' $FILE
 fi
