@@ -565,7 +565,7 @@ setenv RUSTC_LOG_COLOR always
 # purs3lab stuff (end) <<<<<
 
 # bat light theme
-setenv BAT_THEME Coldark-Dark
+setenv BAT_THEME Coldark-Cold
 
 # nix
 if [ -f $HOME/.nix-profile/bin ]
