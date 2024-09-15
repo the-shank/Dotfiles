@@ -23,17 +23,17 @@ set -o pipefail
 # Check that we are in a cargo project directory.
 # We are using the existence of a Cargo.toml file as a marker for this.
 check_cargo_toml() {
-	if ! [[ -f "Cargo.toml" ]]; then
-		echo "[!] Cargo.toml not found. Are you sure you are in a cargo package diretory?"
-		exit 1
-	fi
+  if ! [[ -f "Cargo.toml" ]]; then
+    echo "[!] Cargo.toml not found. Are you sure you are in a cargo package diretory?"
+    exit 1
+  fi
 }
 
 # Run a command (printing the command first).
 run() {
-	runcmd=$1
-	echo ">> ${runcmd}"
-	bash -c "${runcmd}"
+  runcmd=$1
+  echo ">> ${runcmd}"
+  bash -c "${runcmd}"
 }
 
 check_cargo_toml
@@ -50,6 +50,7 @@ run "cargo clean && cargo +nightly rustc -- -Z unpretty=hir,typed >crate.10.hir.
 run "cargo clean && cargo +nightly rustc -- -Z unpretty=hir-tree >crate.11.hir-tree 2>/dev/null"
 run "cargo clean && cargo +nightly rustc -- -Z unpretty=thir-tree >crate.12.thir-tree 2>/dev/null"
 run "cargo clean && cargo +nightly rustc -- -Z unpretty=thir-flat >crate.13.thir-flat 2>/dev/null"
-run "cargo clean && cargo +nightly rustc -- -Z unpretty=mir >crate.14.mir 2>/dev/null"
-# run "cargo clean && cargo rustc -- -Z unpretty=stable-mir >crate.15.stable-mir 2>/dev/null"
+run "cargo clean && cargo +nightly rustc -- -Z unpretty=mir -Z mir-opt-level=0 >crate.14.mir-built 2>/dev/null"
+run "cargo clean && cargo +nightly rustc -- -Z unpretty=mir >crate.15.mir 2>/dev/null"
+# run "cargo clean && cargo rustc -- -Z unpretty=stable-mir >crate.16.stable-mir 2>/dev/null"
 run "cargo clean && cargo +nightly rustc -- -Z unpretty=mir-cfg >crate.16.mir-cfg 2>/dev/null"
