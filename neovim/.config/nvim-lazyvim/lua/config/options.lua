@@ -18,3 +18,6 @@ vim.opt.swapfile = false
 -- conceal for obsidian links
 -- source: https://github.com/epwalsh/obsidian.nvim?tab=readme-ov-file#concealing-characters
 vim.opt.conceallevel = 1
+
+-- tmp: lsp log level to debug
+-- vim.lsp.set_log_level("debug")
