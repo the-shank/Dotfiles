@@ -6,7 +6,7 @@ import = [
 live_config_reload = true
 
 [font]
-size = 10.0
+size = 11.0
 # size = 9.0
 
 [font.offset]
@@ -18,7 +18,8 @@ y = 1
 # family = "CommitMonoThicker"
 style = "Bold"
 # family = "JetBrainsMono Nerd Font"
-family = "SF Mono"
+# family = "SF Mono"
+family = "Comic Mono"
 # family = "Berkeley Mono"
 
 [font.bold_italic]
@@ -29,16 +30,18 @@ style = "Bold Italic"
 # family = "CommitMonoThicker"
 style = "Italic"
 # family = "JetBrainsMono Nerd Font"
-family = "SF Mono"
+# family = "SF Mono"
+family = "Comic Mono"
 # family = "Berkeley Mono"
 
 [font.normal]
 # family = "CommitMonoThicker"
 # style = "Normal"
 # family = "JetBrainsMono Nerd Font"
-family = "SF Mono"
+# family = "SF Mono"
+family = "Comic Mono"
 # family = "Berkeley Mono"
-style = "Medium"
+# style = "Medium"
 
 [[keyboard.bindings]]
 action = "ToggleFullscreen"
