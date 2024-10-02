@@ -11,15 +11,17 @@ size = 11.0
 
 [font.offset]
 x = 0
-y = 1
-# y = 0
+# y = 2
+# y = 1
+y = 0
 
 [font.bold]
 # family = "CommitMonoThicker"
 style = "Bold"
 # family = "JetBrainsMono Nerd Font"
 # family = "SF Mono"
-family = "Comic Mono"
+# family = "Comic Mono"
+family = "Codelia"
 # family = "Berkeley Mono"
 
 [font.bold_italic]
@@ -31,7 +33,8 @@ style = "Bold Italic"
 style = "Italic"
 # family = "JetBrainsMono Nerd Font"
 # family = "SF Mono"
-family = "Comic Mono"
+# family = "Comic Mono"
+family = "Codelia"
 # family = "Berkeley Mono"
 
 [font.normal]
@@ -39,7 +42,8 @@ family = "Comic Mono"
 # style = "Normal"
 # family = "JetBrainsMono Nerd Font"
 # family = "SF Mono"
-family = "Comic Mono"
+# family = "Comic Mono"
+family = "Codelia"
 # family = "Berkeley Mono"
 # style = "Medium"
 
