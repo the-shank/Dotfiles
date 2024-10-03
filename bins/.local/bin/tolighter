@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
+tolight
+
+# alacritty
+FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml
+sed -i -e 's/everforest_darkest/everforest_light/' $FILE
+sed -i -e 's/everforest_darker/everforest_light/' $FILE
+sed -i -e 's/everforest_dark/everforest_light/' $FILE
+sed -i -e 's/everforest_light_medium/everforest_light/' $FILE
+sed -i -e 's/catppuccin-macchiato/catppuccin-latte/' $FILE
+sed -i -e 's/catppuccin-frappe/catppuccin-latte/' $FILE
+sed -i -e 's/catppuccin-mocha/catppuccin-latte/' $FILE
+
+# lighter neovim
+FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/plugins/theme.lua
+sed -i -e 's/catppuccin-macchiato/catppuccin-latte/' $FILE
+sed -i -e 's/catppuccin-frappe/catppuccin-latte/' $FILE
+sed -i -e 's/catppuccin-mocha/catppuccin-latte/' $FILE
+FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/config/options.lua
+sed -i -e 's/vim.g.everforest_background = ".*"/vim.g.everforest_background = "hard"/' $FILE

@@ -33,9 +33,9 @@ fi
 
 # alacritty
 FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml
-sed -i -e 's/everforest_darkest/everforest_light/' $FILE
-sed -i -e 's/everforest_darker/everforest_light/' $FILE
-sed -i -e 's/everforest_dark/everforest_light/' $FILE
+sed -i -e 's/everforest_darkest/everforest_light_medium/' $FILE
+sed -i -e 's/everforest_darker/everforest_light_medium/' $FILE
+sed -i -e 's/everforest_dark/everforest_light_medium/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-latte/' $FILE
@@ -48,7 +48,7 @@ sed -i -e 's|^\(\s*\)style = "Retina"|\1# style = "Retina"|' $FILE
 # nvim-lazyvim
 FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/config/options.lua
 sed -i -e 's/vim.opt.background = ".*"/vim.opt.background = "light"/' $FILE
-sed -i -e 's/vim.g.everforest_background = ".*"/vim.g.everforest_background = "hard"/' $FILE
+sed -i -e 's/vim.g.everforest_background = ".*"/vim.g.everforest_background = "medium"/' $FILE
 FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/plugins/theme.lua
 sed -i -e 's/catppuccin-frappe/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-latte/' $FILE
