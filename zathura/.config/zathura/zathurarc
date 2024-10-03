@@ -3,3 +3,6 @@ set selection-clipboard clipboard
 
 # increase scroll lines
 set scroll-step 120
+
+# enable synctex
+set synctex true
