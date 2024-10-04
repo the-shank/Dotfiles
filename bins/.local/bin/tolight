@@ -9,42 +9,47 @@
 # [x] kvantummanager (qt applications)
 # [x] vifm
 # [ ] discord (restart it)
+# [ ] bat (need to source the config.fish file again)
 
 set -u
 set -o pipefail
 
 # xfce-terminal
 if command -v xfconf-query >/dev/null; then
-	xfconf-query --channel xfce4-terminal --property /color-background --set "#FDF6E3"
-	xfconf-query --channel xfce4-terminal --property /color-background-vary --set false
-	# xfconf-query --channel xfce4-terminal --property /color-bold --set "#073642"
-	xfconf-query --channel xfce4-terminal --property /color-bold-is-bright --set true
-	xfconf-query --channel xfce4-terminal --property /color-bold-use-default --set true
-	xfconf-query --channel xfce4-terminal --property /color-cursor --set "#5C6A72"
-	xfconf-query --channel xfce4-terminal --property /color-cursor-use-default --set false
-	xfconf-query --channel xfce4-terminal --property /color-foreground --set "#5C6A72"
-	xfconf-query --channel xfce4-terminal --property /color-palette --set "#5C6A72;#F85552;#8DA101;#DFA000;#3A94C5;#DF69BA;#35A77C;#DFDDC8;#4B565C;#E67E80;#A7C080;#DBBC7F;#7FBBB3;#D699B6;#83C092;#D3C6AA"
-	xfconf-query --channel xfce4-terminal --property /color-selection-use-default --set true
-	xfconf-query --channel xfce4-terminal --property /color-use-theme --set false
-	xfconf-query --channel xfce4-terminal --property /tab-activity-color --set "#AA0000"
-	# xfconf-query --channel xfce4-terminal --property /font-name --set "CommitMonoThicker weight=550 10"
+  xfconf-query --channel xfce4-terminal --property /color-background --set "#FDF6E3"
+  xfconf-query --channel xfce4-terminal --property /color-background-vary --set false
+  # xfconf-query --channel xfce4-terminal --property /color-bold --set "#073642"
+  xfconf-query --channel xfce4-terminal --property /color-bold-is-bright --set true
+  xfconf-query --channel xfce4-terminal --property /color-bold-use-default --set true
+  xfconf-query --channel xfce4-terminal --property /color-cursor --set "#5C6A72"
+  xfconf-query --channel xfce4-terminal --property /color-cursor-use-default --set false
+  xfconf-query --channel xfce4-terminal --property /color-foreground --set "#5C6A72"
+  xfconf-query --channel xfce4-terminal --property /color-palette --set "#5C6A72;#F85552;#8DA101;#DFA000;#3A94C5;#DF69BA;#35A77C;#DFDDC8;#4B565C;#E67E80;#A7C080;#DBBC7F;#7FBBB3;#D699B6;#83C092;#D3C6AA"
+  xfconf-query --channel xfce4-terminal --property /color-selection-use-default --set true
+  xfconf-query --channel xfce4-terminal --property /color-use-theme --set false
+  xfconf-query --channel xfce4-terminal --property /tab-activity-color --set "#AA0000"
+  # xfconf-query --channel xfce4-terminal --property /font-name --set "CommitMonoThicker weight=550 10"
 fi
 
 # alacritty
 FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml
-sed -i -e 's/everforest_darkest/everforest_light/' $FILE
-sed -i -e 's/everforest_darker/everforest_light/' $FILE
-sed -i -e 's/everforest_dark/everforest_light/' $FILE
+sed -i -e 's/everforest_darkest/everforest_light_medium/' $FILE
+sed -i -e 's/everforest_darker/everforest_light_medium/' $FILE
+sed -i -e 's/everforest_dark/everforest_light_medium/' $FILE
+sed -i -e 's/everforest_light.toml/everforest_light_medium.toml/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-latte/' $FILE
+sed -i -e 's/zenbones_dark/zenbones_light/' $FILE
 # sed -i -e 's/CommitMonoThick"/CommitMonoThicker"/' $FILE
 sed -i -e 's|^\(\s*\)#\s*style = "Medium"|\1style = "Medium"|' $FILE
+sed -i -e 's|^\(\s*\)style = "Retina"|\1# style = "Retina"|' $FILE
 
 # nvim
 # nvim-lazyvim
 FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/config/options.lua
 sed -i -e 's/vim.opt.background = ".*"/vim.opt.background = "light"/' $FILE
+sed -i -e 's/vim.g.everforest_background = ".*"/vim.g.everforest_background = "medium"/' $FILE
 FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/plugins/theme.lua
 sed -i -e 's/catppuccin-frappe/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-latte/' $FILE
@@ -54,40 +59,40 @@ sed -i -e 's/catppuccin-mocha/catppuccin-latte/' $FILE
 # ref: https://felix-kling.de/blog/2021/linux-toggle-dark-mode.html
 FILE=$HOME/.xsettingsd
 if [ -f $FILE ]; then
-	if ! grep -q "Net/ApplicationPreferDarkTheme" ${FILE}; then
-		echo "Net/ApplicationPreferDarkTheme 0" >>$FILE
-	else
-		sed -i -e 's#Net/ApplicationPreferDarkTheme 1#Net/ApplicationPreferDarkTheme 0#' $FILE
-	fi
-	if ! grep -q "Gtk/ApplicationPreferDarkTheme" ${FILE}; then
-		echo "Gtk/ApplicationPreferDarkTheme 0" >>$FILE
-	else
-		sed -i -e 's#Gtk/ApplicationPreferDarkTheme 1#Gtk/ApplicationPreferDarkTheme 0#' $FILE
-	fi
-	if ! grep -q "Net/ThemeName" $FILE; then
-		echo "Net/ThemeName \"Arc\"" >>$FILE
-	else
-		sed -i -e 's#Net/ThemeName "Arc-Dark"#Net/ThemeName "Arc"#' $FILE
-	fi
-	if ! grep -q "Gtk/ThemeName" $FILE; then
-		echo "Gtk/ThemeName \"Arc\"" >>$FILE
-	else
-		sed -i -e 's#Gtk/ThemeName "Arc-Dark"#Gtk/ThemeName "Arc"#' $FILE
-	fi
-	killall -HUP xsettingsd
-	i3-msg reload
+  if ! grep -q "Net/ApplicationPreferDarkTheme" ${FILE}; then
+    echo "Net/ApplicationPreferDarkTheme 0" >>$FILE
+  else
+    sed -i -e 's#Net/ApplicationPreferDarkTheme 1#Net/ApplicationPreferDarkTheme 0#' $FILE
+  fi
+  if ! grep -q "Gtk/ApplicationPreferDarkTheme" ${FILE}; then
+    echo "Gtk/ApplicationPreferDarkTheme 0" >>$FILE
+  else
+    sed -i -e 's#Gtk/ApplicationPreferDarkTheme 1#Gtk/ApplicationPreferDarkTheme 0#' $FILE
+  fi
+  if ! grep -q "Net/ThemeName" $FILE; then
+    echo "Net/ThemeName \"Arc\"" >>$FILE
+  else
+    sed -i -e 's#Net/ThemeName "Arc-Dark"#Net/ThemeName "Arc"#' $FILE
+  fi
+  if ! grep -q "Gtk/ThemeName" $FILE; then
+    echo "Gtk/ThemeName \"Arc\"" >>$FILE
+  else
+    sed -i -e 's#Gtk/ThemeName "Arc-Dark"#Gtk/ThemeName "Arc"#' $FILE
+  fi
+  killall -HUP xsettingsd
+  i3-msg reload
 fi
 
 # mousepad
 # ref: https://docs.xfce.org/apps/mousepad/start
 if command -v gsettings >/dev/null; then
-	! gsettings set org.xfce.mousepad.preferences.view color-scheme solarized-light
-	# ! gsettings set org.xfce.mousepad.preferences.view font-name "CommitMonoThicker Medium 10"
+  ! gsettings set org.xfce.mousepad.preferences.view color-scheme solarized-light
+  # ! gsettings set org.xfce.mousepad.preferences.view font-name "CommitMonoThicker Medium 10"
 fi
 
 # kvantummanager (qt applications)
 if command -v kvantummanager >/dev/null; then
-	! kvantummanager --set KvArc
+  ! kvantummanager --set KvArc
 fi
 
 # discord (restart it)
@@ -96,5 +101,11 @@ fi
 # vifm
 FILE=$HOME/dotfiles/vifm/.config/vifm/vifmrc
 if [ -f $FILE ]; then
-	sed -i -e 's/papercolor-dark/papercolor-light/' $FILE
+  sed -i -e 's/papercolor-dark/papercolor-light/' $FILE
+fi
+
+# bat
+FILE=$HOME/dotfiles/fish/.config/fish/config.fish
+if [ -f $FILE ]; then
+  sed -i -e 's/BAT_THEME .*/BAT_THEME Coldark-Cold/' $FILE
 fi

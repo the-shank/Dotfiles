@@ -3,11 +3,14 @@
 -- Add any additional options here
 
 -- background
-vim.opt.background = "dark"
+vim.opt.background = "light"
 
 -- everforest theme : disable italic comment
 vim.g.everforest_disable_italic_comment = 1
 vim.g.everforest_background = "hard"
+
+-- zenbones theme
+-- vim.g.zenbones_compat = 1
 
 -- disable swap
 vim.opt.swapfile = false
@@ -15,3 +18,6 @@ vim.opt.swapfile = false
 -- conceal for obsidian links
 -- source: https://github.com/epwalsh/obsidian.nvim?tab=readme-ov-file#concealing-characters
 vim.opt.conceallevel = 1
+
+-- tmp: lsp log level to debug
+-- vim.lsp.set_log_level("debug")

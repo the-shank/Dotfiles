@@ -1,23 +1,28 @@
 import = [
-  "/home/shank/.config/alacritty/themes/everforest_darker.toml",
-  # "/home/shank/.config/alacritty/themes/catppuccin-macchiato.toml",
+  "/home/shank/.config/alacritty/themes/everforest_light.toml",
+  # "/home/shank/.config/alacritty/themes/catppuccin-latte.toml",
+  # "/home/shank/.config/alacritty/themes/zenbones_light.toml",
 ]
 live_config_reload = true
 
 [font]
+# size = 11.0
 size = 10.0
 # size = 9.0
 
 [font.offset]
 x = 0
-y = 1
-# y = 0
+# y = 2
+# y = 1
+y = 0
 
 [font.bold]
 # family = "CommitMonoThicker"
 style = "Bold"
 # family = "JetBrainsMono Nerd Font"
-family = "SF Mono"
+# family = "SF Mono"
+# family = "Comic Mono"
+family = "Codelia"
 # family = "Berkeley Mono"
 
 [font.bold_italic]
@@ -28,16 +33,21 @@ style = "Bold Italic"
 # family = "CommitMonoThicker"
 style = "Italic"
 # family = "JetBrainsMono Nerd Font"
-family = "SF Mono"
+# family = "SF Mono"
+# family = "Comic Mono"
+family = "Codelia"
 # family = "Berkeley Mono"
 
 [font.normal]
 # family = "CommitMonoThicker"
 # style = "Normal"
 # family = "JetBrainsMono Nerd Font"
-family = "SF Mono"
+# family = "SF Mono"
+# family = "Comic Mono"
+family = "Codelia"
 # family = "Berkeley Mono"
 # style = "Medium"
+style = "Retina"
 
 [[keyboard.bindings]]
 action = "ToggleFullscreen"
