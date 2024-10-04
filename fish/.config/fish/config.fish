@@ -557,9 +557,15 @@ setenv RUSTC_LOG_COLOR always
 
 # purs3lab stuff (start) >>>>>
 
-# setenv RUSTUP_HOME /home/shank/.rustup
-# setenv CARGO_HOME /home/shank/.cargo
-# fish_add_path $CARGO_HOME/bin
+if [ -d /evaldisk/shank/.rustup ]
+    setenv RUSTUP_HOME /evaldisk/shank/.rustup
+end
+
+if [ -d /evaldisk/shank/.cargo ]
+    setenv CARGO_HOME /evaldisk/shank/.cargo
+end
+
+fish_add_path $CARGO_HOME/bin
 
 # purs3lab stuff (end) <<<<<
 
