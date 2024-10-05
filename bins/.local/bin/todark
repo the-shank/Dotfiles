@@ -34,6 +34,7 @@ fi
 
 # alacritty
 FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml
+sed -i -e 's/everforest_light_soft/everforest_dark/' $FILE
 sed -i -e 's/everforest_light_medium/everforest_dark/' $FILE
 sed -i -e 's/everforest_light/everforest_dark/' $FILE
 sed -i -e 's/everforest_darker/everforest_dark/' $FILE
