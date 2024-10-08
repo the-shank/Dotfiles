@@ -108,6 +108,7 @@ abbr -a -g vssh 'vagrant ssh'
 
 # git
 abbr -a -g gopn 'git open'
+abbr -a -g gopnp 'git open --print'
 abbr -a -g ggone 'git branch -a -v | rg --ignore-case "\[gone\]" | awk \'{print $1}\' | xargs -t git branch -D'
 abbr -a -g gst 'git status'
 abbr -a -g gcl 'git clone'
