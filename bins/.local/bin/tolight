@@ -38,6 +38,7 @@ sed -i -e 's/everforest_darker/everforest_light_medium/' $FILE
 sed -i -e 's/everforest_dark/everforest_light_medium/' $FILE
 sed -i -e 's/everforest_light.toml/everforest_light_medium.toml/' $FILE
 sed -i -e 's/everforest_light_soft.toml/everforest_light_medium.toml/' $FILE
+sed -i -e 's/everforest_light_hard.toml/everforest_light_medium.toml/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-latte/' $FILE
