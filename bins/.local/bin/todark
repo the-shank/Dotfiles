@@ -10,6 +10,7 @@
 # [x] vifm
 # [ ] discord (restart it)
 # [ ] bat (need to reload config.fish)
+# [x] cargo-expand
 
 set -u
 set -o pipefail
@@ -114,5 +115,11 @@ fi
 # bat
 FILE=$HOME/dotfiles/fish/.config/fish/config.fish
 if [ -f $FILE ]; then
-  sed -i -e 's/BAT_THEME .*/BAT_THEME Coldark-Dark/' $FILE
+  sed -i -e 's/BAT_THEME .*/BAT_THEME gruvbox-dark/' $FILE
+fi
+
+# cargo-expand
+FILE=$HOME/dotfiles/cargo/.cargo/config.toml
+if [ -f $FILE ]; then
+  sed -i -e 's/theme = .*/theme = \"gruvbox-dark\"'/ $FILE
 fi
