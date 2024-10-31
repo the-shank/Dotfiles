@@ -10,6 +10,7 @@
 # [x] vifm
 # [ ] discord (restart it)
 # [ ] bat (need to reload config.fish)
+# [x] cargo-expand
 
 set -u
 set -o pipefail
@@ -34,7 +35,9 @@ fi
 
 # alacritty
 FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml
+sed -i -e 's/everforest_light_soft/everforest_dark/' $FILE
 sed -i -e 's/everforest_light_medium/everforest_dark/' $FILE
+sed -i -e 's/everforest_light_hard/everforest_dark/' $FILE
 sed -i -e 's/everforest_light/everforest_dark/' $FILE
 sed -i -e 's/everforest_darker/everforest_dark/' $FILE
 sed -i -e 's/everforest_darkest/everforest_dark/' $FILE
@@ -56,6 +59,7 @@ sed -i -e 's/catppuccin-latte/catppuccin-frappe/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-frappe/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-frappe/' $FILE
 FILE=$HOME/dotfiles/neovim/.local/share/nvim-lazyvim/lazy/everforest/autoload/everforest.vim
+sed -i -e "s|'bg0':        \['#1B1F22'|'bg0':        ['#272E33'|" $FILE
 sed -i -e "s|'bg0':        \['#1E2326'|'bg0':        ['#272E33'|" $FILE
 sed -i -e "s|'bg0':        \['#232a2e'|'bg0':        ['#272E33'|" $FILE
 
@@ -111,5 +115,11 @@ fi
 # bat
 FILE=$HOME/dotfiles/fish/.config/fish/config.fish
 if [ -f $FILE ]; then
-  sed -i -e 's/BAT_THEME .*/BAT_THEME Coldark-Dark/' $FILE
+  sed -i -e 's/BAT_THEME .*/BAT_THEME gruvbox-dark/' $FILE
+fi
+
+# cargo-expand
+FILE=$HOME/dotfiles/cargo/.cargo/config.toml
+if [ -f $FILE ]; then
+  sed -i -e 's/theme = .*/theme = \"gruvbox-dark\"'/ $FILE
 fi

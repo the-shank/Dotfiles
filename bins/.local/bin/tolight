@@ -10,6 +10,7 @@
 # [x] vifm
 # [ ] discord (restart it)
 # [ ] bat (need to source the config.fish file again)
+# [x] cargo-expand
 
 set -u
 set -o pipefail
@@ -37,6 +38,8 @@ sed -i -e 's/everforest_darkest/everforest_light_medium/' $FILE
 sed -i -e 's/everforest_darker/everforest_light_medium/' $FILE
 sed -i -e 's/everforest_dark/everforest_light_medium/' $FILE
 sed -i -e 's/everforest_light.toml/everforest_light_medium.toml/' $FILE
+sed -i -e 's/everforest_light_soft.toml/everforest_light_medium.toml/' $FILE
+sed -i -e 's/everforest_light_hard.toml/everforest_light_medium.toml/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-latte/' $FILE
@@ -107,5 +110,11 @@ fi
 # bat
 FILE=$HOME/dotfiles/fish/.config/fish/config.fish
 if [ -f $FILE ]; then
-  sed -i -e 's/BAT_THEME .*/BAT_THEME Coldark-Cold/' $FILE
+  sed -i -e 's/BAT_THEME .*/BAT_THEME gruvbox-light/' $FILE
+fi
+
+# cargo-expand
+FILE=$HOME/dotfiles/cargo/.cargo/config.toml
+if [ -f $FILE ]; then
+  sed -i -e 's/theme = .*/theme = \"gruvbox-light\"'/ $FILE
 fi

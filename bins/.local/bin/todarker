@@ -7,6 +7,7 @@ todark
 
 # alacritty
 FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml
+sed -i -e 's/everforest_light_soft/everforest_darker/' $FILE
 sed -i -e 's/everforest_light_medium/everforest_darker/' $FILE
 sed -i -e 's/everforest_light/everforest_darker/' $FILE
 sed -i -e 's/everforest_darkest/everforest_darker/' $FILE
@@ -22,4 +23,5 @@ sed -i -e 's/catppuccin-frappe/catppuccin-macchiato/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-macchiato/' $FILE
 FILE=$HOME/dotfiles/neovim/.local/share/nvim-lazyvim/lazy/everforest/autoload/everforest.vim
 sed -i -e "s|'bg0':        \['#272E33'|'bg0':        ['#232a2e'|" $FILE
+sed -i -e "s|'bg0':        \['#1B1F22'|'bg0':        ['#232a2e'|" $FILE
 sed -i -e "s|'bg0':        \['#1E2326'|'bg0':        ['#232a2e'|" $FILE

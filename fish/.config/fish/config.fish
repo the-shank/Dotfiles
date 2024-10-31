@@ -79,6 +79,9 @@ set fish_greeting
 #    fish_logo
 #end
 
+# QT stuff
+set --export QT_AUTO_SCREEN_SCALE_FACTOR 1.0
+
 # Prevent directories names from being shortened
 # set fish_prompt_pwd_dir_length 0
 
@@ -571,7 +574,7 @@ fish_add_path $CARGO_HOME/bin
 # purs3lab stuff (end) <<<<<
 
 # bat light theme
-setenv BAT_THEME Coldark-Cold
+setenv BAT_THEME gruvbox-light
 
 # nix
 if [ -f $HOME/.nix-profile/bin ]

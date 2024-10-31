@@ -7,11 +7,11 @@ tolight
 
 # alacritty
 FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml
-sed -i -e 's/everforest_darkest/everforest_light/' $FILE
-sed -i -e 's/everforest_darker/everforest_light/' $FILE
-sed -i -e 's/everforest_dark/everforest_light/' $FILE
-sed -i -e 's/everforest_light_medium/everforest_light/' $FILE
-sed -i -e 's/everforest_light_soft/everforest_light/' $FILE
+sed -i -e 's/everforest_darkest.toml/everforest_light_soft.toml/' $FILE
+sed -i -e 's/everforest_darker.toml/everforest_light_soft.toml/' $FILE
+sed -i -e 's/everforest_dark.toml/everforest_light_soft.toml/' $FILE
+sed -i -e 's/everforest_light.toml/everforest_light_soft.toml/' $FILE
+sed -i -e 's/everforest_light_medium.toml/everforest_light_soft.toml/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-latte/' $FILE
@@ -22,4 +22,4 @@ sed -i -e 's/catppuccin-macchiato/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-latte/' $FILE
 FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/config/options.lua
-sed -i -e 's/vim.g.everforest_background = ".*"/vim.g.everforest_background = "hard"/' $FILE
+sed -i -e 's/vim.g.everforest_background = ".*"/vim.g.everforest_background = "soft"/' $FILE

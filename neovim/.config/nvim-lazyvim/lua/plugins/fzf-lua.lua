@@ -21,7 +21,8 @@ return {
     },
   },
   keys = {
-    { "<leader><space>", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
+    -- { "<leader><space>", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
+    { "<leader><space>", LazyVim.pick("files", { cwd = vim.fn.getcwd() }), desc = "Find Files (CWD)" },
     { "<leader>tl", toggle_preview_layout, desc = "(fzf-lua) toggle preview layout" },
   },
 }

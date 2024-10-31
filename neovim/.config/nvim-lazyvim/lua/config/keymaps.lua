@@ -29,6 +29,11 @@ vim.keymap.set("n", "<leader>ps", function()
   vim.cmd("Copilot status")
 end, { desc = "Copilot status" })
 
+-- copilot-chat
+vim.keymap.set("v", "<leader>ae", function()
+  vim.cmd("CopilotChatExplain")
+end, { desc = "CopilotChatExplain" })
+
 -- Better paste
 vim.keymap.set("v", "p", '"_dP')
 
