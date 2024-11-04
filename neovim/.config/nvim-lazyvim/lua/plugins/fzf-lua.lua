@@ -17,8 +17,10 @@ local function search_in_selected_folder()
     actions = {
       -- Override the default selection action
       ["default"] = function(selected)
+        print(vim.inspect(selected))
         local selected_dir = selected[1]
-        selected_dir = selected_dir:gsub("[^%w%/%.%-$]", "")
+        selected_dir = selected_dir:gsub("[^%w%/%.%-_$]", "")
+        print("Selected directory (cleaned): " .. selected_dir)
         if selected_dir then
           -- After directory is selected, search files in it
           require("fzf-lua").files({
