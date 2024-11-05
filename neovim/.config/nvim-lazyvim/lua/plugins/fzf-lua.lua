@@ -40,6 +40,37 @@ vim.api.nvim_create_user_command(
   { desc = "Search files in an interactively selected directory" }
 )
 
+local function grep_in_selected_folder()
+  -- First, use fzf-lua to select a directory
+  require("fzf-lua").files({
+    prompt = "Select directory> ",
+    cmd = "fd --type d --hidden --follow --exclude .git",
+    actions = {
+      -- Override the default selection action
+      ["default"] = function(selected)
+        print(vim.inspect(selected))
+        local selected_dir = selected[1]
+        selected_dir = selected_dir:gsub("[^%w%/%.%-_$]", "")
+        print("Selected directory (cleaned): " .. selected_dir)
+        if selected_dir then
+          -- After directory is selected, grep files in it
+          require("fzf-lua").live_grep({
+            prompt = "🔍 " .. selected_dir .. "> ",
+            cwd = selected_dir,
+            cmd = "rg --hidden --follow --glob '!.git' --",
+          })
+        end
+      end,
+    },
+  })
+end
+
+vim.api.nvim_create_user_command(
+  "GrepInSelected",
+  grep_in_selected_folder,
+  { desc = "Grep files in an interactively selected directory" }
+)
+
 return {
   "ibhagwan/fzf-lua",
   opts = {
@@ -56,5 +87,6 @@ return {
     { "<leader><space>", LazyVim.pick("files", { cwd = vim.fn.getcwd() }), desc = "Find Files (CWD)" },
     { "<leader>tl", toggle_preview_layout, desc = "(fzf-lua) toggle preview layout" },
     { "<leader>fid", search_in_selected_folder, desc = "(fzf-lua) search files in selected directory" },
+    { "<leader>sid", grep_in_selected_folder, desc = "(fzf-lua) grep files in selected directory" },
   },
 }
