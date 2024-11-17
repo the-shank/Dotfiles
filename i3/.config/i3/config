@@ -627,6 +627,7 @@ exec --no-startup-id i3-battery-popup -n -t 10m -m "battery low!" -L 20 -l 10 &
 
 # start picom
 # exec_always --no-startup-id picom -CGb --no-fading-openclose --no-fading-destroyed-argb -D 1
+exec_always --no-startup-id picom --config /home/shank/.config/i3/picom.conf
 
 # assign outputs to displays
 set $laptop eDP
