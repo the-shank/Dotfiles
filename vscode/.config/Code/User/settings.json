@@ -17,14 +17,14 @@
     "optiplex7010": "linux"
   },
   // font
-  "editor.fontFamily": "SF Mono, JetBrainsMono NF, FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
+  "editor.fontFamily": "Codelia, SF Mono, JetBrainsMono NF, FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
   "editor.fontSize": 13,
-  "editor.fontWeight": "450",
+  // "editor.fontWeight": "450",
   // integrated terminal
-  "terminal.integrated.scrollback": 500000,
+  "terminal.integrated.scrollback": 100000,
   "terminal.integrated.fontSize": 13,
-  "terminal.integrated.fontWeight": "450",
-  // "terminal.integrated.lineHeight": 1.0,
+  // "terminal.integrated.fontWeight": "400",
+  "terminal.integrated.lineHeight": 1.1,
   // vim keybindings
   "vim.leader": "<space>",
   "vim.useSystemClipboard": true,
@@ -87,4 +87,10 @@
   },
   "cmake.showOptionsMovedNotification": false,
   "git.openRepositoryInParentFolders": "never",
+  "workbench.colorCustomizations": {
+    "[Everforest Dark]": {
+      "editor.background": "#1E2326",
+      "sideBar.background": "#232a2e"
+    }
+  }
 }
