@@ -25,3 +25,8 @@ FILE=$HOME/dotfiles/neovim/.local/share/nvim-lazyvim/lazy/everforest/autoload/ev
 sed -i -e "s|'bg0':        \['#272E33'|'bg0':        ['#1B1F22'|" $FILE
 sed -i -e "s|'bg0':        \['#232a2e'|'bg0':        ['#1B1F22'|" $FILE
 sed -i -e "s|'bg0':        \['#1E2326'|'bg0':        ['#1B1F22'|" $FILE
+
+# xfce-terminal
+if command -v xfconf-query >/dev/null; then
+  xfconf-query --channel xfce4-terminal --property /color-background --set "#1B1F22"
+fi
