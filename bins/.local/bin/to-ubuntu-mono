@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
+# [x] xfce-terminal
+# [x] alacritty
+
+
+# xfce-terminal
+if command -v xfconf-query >/dev/null; then
+  xfconf-query --channel xfce4-terminal --property /font-name --set "Ubuntu Mono 12"
+  xfconf-query --channel xfce4-terminal --property /cell-height-scale --set 1.100000
+fi
+
+# alacritty
+FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml
+sed -i -e 's/^size =/# size =/' $FILE
+sed -i -e 's/# size = 12.0/size = 12.0/' $FILE
+sed -i -e 's/^y =/# y =/' $FILE
+sed -i -e 's/# y = 2/y = 2/' $FILE
+sed -i -e 's/^family =/# family =/' $FILE
+sed -i -e 's/# family = "monospace"/family = "monospace"/' $FILE
+sed -i -e 's/# family = "Ubuntu Mono"/family = "Ubuntu Mono"/' $FILE
