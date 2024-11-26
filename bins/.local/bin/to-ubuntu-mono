@@ -5,7 +5,7 @@ set -o pipefail
 
 # [x] xfce-terminal
 # [x] alacritty
-
+# [x] mousepad
 
 # xfce-terminal
 if command -v xfconf-query >/dev/null; then
@@ -22,3 +22,9 @@ sed -i -e 's/# y = 2/y = 2/' $FILE
 sed -i -e 's/^family =/# family =/' $FILE
 sed -i -e 's/# family = "monospace"/family = "monospace"/' $FILE
 sed -i -e 's/# family = "Ubuntu Mono"/family = "Ubuntu Mono"/' $FILE
+
+# mousepad
+# ref: https://docs.xfce.org/apps/mousepad/start
+if command -v gsettings >/dev/null; then
+  ! gsettings set org.xfce.mousepad.preferences.view font-name "UbuntuMono 12"
+fi
