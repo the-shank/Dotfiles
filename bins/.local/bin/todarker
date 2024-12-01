@@ -29,5 +29,5 @@ sed -i -e "s|'bg0':        \['#1E2326'|'bg0':        ['#21282C'|" $FILE
 
 # xfce-terminal
 if command -v xfconf-query >/dev/null; then
-  xfconf-query --channel xfce4-terminal --property /color-background --set "#232a2e"
+  xfconf-query --channel xfce4-terminal --property /color-background --set "#21282C"
 fi
