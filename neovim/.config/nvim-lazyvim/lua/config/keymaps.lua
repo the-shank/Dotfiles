@@ -57,3 +57,29 @@ vim.keymap.set("n", "<leader>uD", function()
     print("Diagnostic virtual_text disabled")
   end
 end, { desc = "toggle diagnostic virtual_text" })
+
+-- toggle warning diagnostics
+local diagnostic_below_error_disabled = false
+local backup_diagnostic_config = nil
+
+local error_only_diagnostic_config = {
+  underline = { severity = { min = vim.diagnostic.severity.ERROR } },
+  virtual_text = { severity = { min = vim.diagnostic.severity.ERROR } },
+  signs = { severity = { min = vim.diagnostic.severity.ERROR } },
+}
+
+vim.keymap.set("n", "<leader>tw", function()
+  if diagnostic_below_error_disabled then
+    if backup_diagnostic_config then
+      vim.diagnostic.config(backup_diagnostic_config)
+      backup_diagnostic_config = nil
+    end
+    diagnostic_below_error_disabled = false
+    vim.notify("Diagnostics restored to previous settings")
+  else
+    backup_diagnostic_config = vim.diagnostic.config()
+    vim.diagnostic.config(error_only_diagnostic_config)
+    diagnostic_below_error_disabled = true
+    print("Diagnostics below error disabled")
+  end
+end, { desc = "toggle diagnostic below error" })
