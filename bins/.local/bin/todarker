@@ -22,9 +22,10 @@ sed -i -e 's/catppuccin-latte/catppuccin-macchiato/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-macchiato/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-macchiato/' $FILE
 FILE=$HOME/dotfiles/neovim/.local/share/nvim-lazyvim/lazy/everforest/autoload/everforest.vim
-sed -i -e "s|'bg0':        \['#272E33'|'bg0':        ['#232a2e'|" $FILE
-sed -i -e "s|'bg0':        \['#1B1F22'|'bg0':        ['#232a2e'|" $FILE
-sed -i -e "s|'bg0':        \['#1E2326'|'bg0':        ['#232a2e'|" $FILE
+sed -i -e "s|'bg0':        \['#272E33'|'bg0':        ['#21282C'|" $FILE
+sed -i -e "s|'bg0':        \['#1B1F22'|'bg0':        ['#21282C'|" $FILE
+sed -i -e "s|'bg0':        \['#232a2e'|'bg0':        ['#21282C'|" $FILE
+sed -i -e "s|'bg0':        \['#1E2326'|'bg0':        ['#21282C'|" $FILE
 
 # xfce-terminal
 if command -v xfconf-query >/dev/null; then
