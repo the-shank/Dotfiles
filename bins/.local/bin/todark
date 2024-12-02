@@ -61,6 +61,7 @@ sed -i -e 's/catppuccin-mocha/catppuccin-frappe/' $FILE
 FILE=$HOME/dotfiles/neovim/.local/share/nvim-lazyvim/lazy/everforest/autoload/everforest.vim
 sed -i -e "s|'bg0':        \['#1B1F22'|'bg0':        ['#272E33'|" $FILE
 sed -i -e "s|'bg0':        \['#21282c'|'bg0':        ['#272E33'|" $FILE
+sed -i -e "s|'bg0':        \['#1f262a'|'bg0':        ['#272E33'|" $FILE
 sed -i -e "s|'bg0':        \['#1E2326'|'bg0':        ['#272E33'|" $FILE
 sed -i -e "s|'bg0':        \['#232a2e'|'bg0':        ['#272E33'|" $FILE
 
