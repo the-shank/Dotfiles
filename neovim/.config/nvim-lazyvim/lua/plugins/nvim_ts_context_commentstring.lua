@@ -4,6 +4,7 @@ return {
     config = {
       c = "// %s",
       cpp = "// %s",
+      cuda = "// %s",
     },
   },
 }
