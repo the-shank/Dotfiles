@@ -58,9 +58,10 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym Ctrl+$mod+Return exec xfce4-terminal
-bindsym Ctrl+$mod+Return exec alacritty
+# bindsym Ctrl+$mod+Return exec alacritty
 # bindsym $mod+Return exec xfce4-terminal
-bindsym $mod+Return exec alacritty
+# bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec konsole
 # bindsym $mod+Return exec xfce4-terminal -e "distrobox-enter -n dbox-archshank-wip"
 
 # start a file explorer
