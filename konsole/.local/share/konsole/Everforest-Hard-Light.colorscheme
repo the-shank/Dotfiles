@@ -1,11 +1,11 @@
 [Background]
-Color=253,246,227
+Color=255,251,239
 
 [BackgroundFaint]
-Color=253,246,227
+Color=255,251,239
 
 [BackgroundIntense]
-Color=253,246,227
+Color=255,251,239
 
 [Color0]
 Color=92,106,114
@@ -71,13 +71,13 @@ Color=53,167,124
 Color=53,167,124
 
 [Color7]
-Color=223,219,200
+Color=225,221,203
 
 [Color7Faint]
-Color=223,219,200
+Color=225,221,203
 
 [Color7Intense]
-Color=223,219,200
+Color=225,221,203
 
 [Foreground]
 Color=92,106,114
@@ -92,7 +92,7 @@ Color=92,106,114
 Anchor=0.5,0.5
 Blur=false
 ColorRandomization=false
-Description=Everforest Light
+Description=Everforest Lighter
 FillStyle=Tile
 Opacity=1
 Wallpaper=

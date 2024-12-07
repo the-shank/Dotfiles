@@ -1,11 +1,11 @@
 [Appearance]
 AntiAliasFonts=true
 BoldIntense=false
-ColorScheme=Everforest-Medium-Dark
+ColorScheme=Everforest-Hard-Dark
 Font=Codelia Ligatures,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 LineSpacing=1
 UseFontBrailleChararacters=true
 
 [General]
-Name=everforest-dark
+Name=everforest-darker
 Parent=FALLBACK/

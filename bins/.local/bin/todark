@@ -35,13 +35,15 @@ if command -v xfconf-query >/dev/null; then
 fi
 
 # konsole
-konsole_services=$(qdbus org.kde.konsole*)
-for service_name in $konsole_services; do
-  sessions=$(qdbus $service_name | rg "/Sessions/")
-  for session in $sessions; do
-    qdbus $service_name $session org.kde.konsole.Session.setProfile "everforest-dark"
+if command -v qdbus >/dev/null; then
+  konsole_services=$(qdbus org.kde.konsole*)
+  for service_name in $konsole_services; do
+    sessions=$(qdbus $service_name | rg "/Sessions/")
+    for session in $sessions; do
+      qdbus $service_name $session org.kde.konsole.Session.setProfile "everforest-dark"
+    done
   done
-done
+fi
 
 # alacritty
 FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml

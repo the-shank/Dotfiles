@@ -32,3 +32,14 @@ sed -i -e "s|'bg0':        \['#21282C'|'bg0':        ['#1f262a'|" $FILE
 if command -v xfconf-query >/dev/null; then
   xfconf-query --channel xfce4-terminal --property /color-background --set "#21282C"
 fi
+
+# konsole
+if command -v qdbus >/dev/null; then
+  konsole_services=$(qdbus org.kde.konsole*)
+  for service_name in $konsole_services; do
+    sessions=$(qdbus $service_name | rg "/Sessions/")
+    for session in $sessions; do
+      qdbus $service_name $session org.kde.konsole.Session.setProfile "everforest-darker"
+    done
+  done
+fi
