@@ -18,7 +18,7 @@ set -o pipefail
 
 # xfce-terminal
 if command -v xfconf-query >/dev/null; then
-  xfconf-query --channel xfce4-terminal --property /color-background --set "#2D353B"
+  xfconf-query --channel xfce4-terminal --property /color-background --set "#272E33"
   xfconf-query --channel xfce4-terminal --property /color-background-vary --set false
   # xfconf-query --channel xfce4-terminal --property /color-bold --set "#073642"
   xfconf-query --channel xfce4-terminal --property /color-bold-is-bright --set true

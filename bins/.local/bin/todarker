@@ -30,7 +30,7 @@ sed -i -e "s|'bg0':        \['#21282C'|'bg0':        ['#1f262a'|" $FILE
 
 # xfce-terminal
 if command -v xfconf-query >/dev/null; then
-  xfconf-query --channel xfce4-terminal --property /color-background --set "#21282C"
+  xfconf-query --channel xfce4-terminal --property /color-background --set "#1f262a"
 fi
 
 # konsole
