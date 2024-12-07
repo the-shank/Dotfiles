@@ -1,11 +1,17 @@
+MenuBar=Disabled
+
 [Desktop Entry]
-DefaultProfile=Profile1.profile
+DefaultProfile=everforest-dark.profile
 
 [General]
 ConfigVersion=1
 
 [MainWindow]
 ToolBarsMovable=Disabled
+
+[Shortcuts]
+mainToolBar=Alt+M
+sessionToolbar=Alt+S
 
 [UiSettings]
 ColorScheme=
