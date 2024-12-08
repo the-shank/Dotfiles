@@ -35,6 +35,7 @@ if command -v qdbus >/dev/null; then
       sed -i -e 's/DefaultProfile=everforest-dark.profile/DefaultProfile=everforest-lighter.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-darker.profile/DefaultProfile=everforest-lighter.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-light.profile/DefaultProfile=everforest-lighter.profile/' $FILE
+      konsoleprofile everforest-lighter
     done
   done
 fi

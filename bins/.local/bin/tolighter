@@ -23,3 +23,19 @@ sed -i -e 's/catppuccin-frappe/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-latte/' $FILE
 FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/config/options.lua
 sed -i -e 's/vim.g.everforest_background = ".*"/vim.g.everforest_background = "hard"/' $FILE
+
+# konsole
+if command -v qdbus >/dev/null; then
+  konsole_services=$(qdbus org.kde.konsole*)
+  for service_name in $konsole_services; do
+    sessions=$(qdbus $service_name | rg "/Sessions/")
+    for session in $sessions; do
+      qdbus $service_name $session org.kde.konsole.Session.setProfile "everforest-lighter"
+      FILE=$HOME/dotfiles/konsole/.config/konsolerc
+      sed -i -e 's/DefaultProfile=everforest-dark.profile/DefaultProfile=everforest-lighter.profile/' $FILE
+      sed -i -e 's/DefaultProfile=everforest-darker.profile/DefaultProfile=everforest-lighter.profile/' $FILE
+      sed -i -e 's/DefaultProfile=everforest-light.profile/DefaultProfile=everforest-lighter.profile/' $FILE
+      konsoleprofile everforest-lighter
+    done
+  done
+fi
