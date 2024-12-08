@@ -583,6 +583,9 @@ if [ -f $HOME/.nix-profile/bin ]
     set --export XDG_DATA_DIRS $HOME/.nix-profile/share:$XDG_DATA_DIRS
 end
 
+# disable stty
+stty -ixon
+
 # load zoxide
 # abbr -a -g cd z
 zoxide init fish | source
