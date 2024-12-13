@@ -1,7 +1,7 @@
 [Appearance]
 BoldIntense=false
 ColorScheme=Everforest-Medium-Light
-Font=Codelia Ligatures,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+Font=Codelia,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
 LineSpacing=1
 
 [General]
