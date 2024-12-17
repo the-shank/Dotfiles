@@ -86,3 +86,8 @@ missing_format = ""
 warning = 20
 critical = 10
 interval = 15
+
+[[block]]
+block = "custom"
+command = ''' upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep energy-rate | awk '{print $2 $3}' '''
+interval = 3
