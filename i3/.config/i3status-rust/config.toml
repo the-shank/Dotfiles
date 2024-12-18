@@ -90,4 +90,4 @@ interval = 15
 [[block]]
 block = "custom"
 command = ''' upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep energy-rate | awk '{print $2 $3}' '''
-interval = 3
+interval = 10
