@@ -11,8 +11,24 @@ return {
       "Underfull",
       "Overfull",
     }
+    -- source: https://github.com/abzcoding/lvim/blob/main/lua/user/tex.lua
+    vim.g.vimtex_compiler_method = "latexmk"
+    vim.g.vimtex_compiler_latexmk_engines = {
+      _ = "-xelatex",
+      pdflatex = "-pdf",
+      dvipdfex = "-pdfdvi",
+      lualatex = "-lualatex",
+      xelatex = "-xelatex",
+    }
+    vim.g.vimtex_compiler_latexrun_engines = {
+      _ = "xelatex",
+      pdflatex = "pdflatex",
+      lualatex = "lualatex",
+      xelatex = "xelatex",
+    }
     vim.g.vimtex_compiler_latexmk = {
       options = {
+        "-xelatex",
         "-shell-escape",
         "-verbose",
         "-file-line-error",
