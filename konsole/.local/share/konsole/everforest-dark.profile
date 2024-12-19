@@ -12,3 +12,7 @@ UseFontBrailleChararacters=true
 DimWhenInactive=true
 Name=everforest-dark
 Parent=FALLBACK/
+
+[Terminal Features]
+FlowControlEnabled=false
+VerticalLine=false

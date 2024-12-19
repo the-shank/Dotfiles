@@ -7,3 +7,6 @@ LineSpacing=1
 [General]
 Name=everforest-light
 Parent=FALLBACK/
+
+[Terminal Features]
+FlowControlEnabled=false

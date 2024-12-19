@@ -7,3 +7,6 @@ LineSpacing=1
 [General]
 Name=everforest-lighter
 Parent=FALLBACK/
+
+[Terminal Features]
+FlowControlEnabled=false
