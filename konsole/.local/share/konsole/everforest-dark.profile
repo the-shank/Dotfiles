@@ -1,7 +1,7 @@
 [Appearance]
 AntiAliasFonts=true
 BoldIntense=false
-BorderWhenActive=true
+BorderWhenActive=false
 ColorScheme=Everforest-Medium-Dark
 DimmValue=20
 Font=Codelia,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
@@ -12,6 +12,7 @@ UseFontBrailleChararacters=true
 DimWhenInactive=true
 Name=everforest-dark
 Parent=FALLBACK/
+TerminalMargin=1
 
 [Terminal Features]
 FlowControlEnabled=false
