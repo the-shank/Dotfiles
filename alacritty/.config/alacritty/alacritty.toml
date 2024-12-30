@@ -1,8 +1,8 @@
 [general]
 live_config_reload = true
 import = [
-  "/home/shank/.config/alacritty/themes/everforest_darker.toml",
-  # "/home/shank/.config/alacritty/themes/catppuccin-macchiato.toml",
+  "/home/shank/.config/alacritty/themes/everforest_dark.toml",
+  # "/home/shank/.config/alacritty/themes/catppuccin-frappe.toml",
   # "/home/shank/.config/alacritty/themes/zenbones_dark.toml",
 ]
 

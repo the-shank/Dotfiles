@@ -190,7 +190,7 @@ bindsym $mod+Shift+s sticky toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-bindsym $mod+c focus child
+# bindsym $mod+c focus child
 
 # move the currently focused window to the cratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -468,6 +468,7 @@ bar {
 	# status_command i3status
 	status_command /usr/bin/i3status-rs
 	position bottom
+	# position top
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
   tray_padding 3
@@ -630,7 +631,7 @@ exec --no-startup-id i3-battery-popup -n -t 10m -m "battery low!" -L 20 -l 10 &
 
 # start picom
 # exec_always --no-startup-id picom -CGb --no-fading-openclose --no-fading-destroyed-argb -D 1
-exec_always --no-startup-id picom --config /home/shank/.config/i3/picom.conf
+# exec_always --no-startup-id picom --config /home/shank/.config/i3/picom.conf
 
 # assign outputs to displays
 set $laptop eDP

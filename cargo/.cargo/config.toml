@@ -6,4 +6,4 @@ incremental = true
 rustflags = ["-C", "link-arg=-fuse-ld=lld"]
 
 [expand]
-theme = "gruvbox-light"
+theme = "gruvbox-dark"
