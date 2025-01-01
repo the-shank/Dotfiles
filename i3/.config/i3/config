@@ -665,5 +665,5 @@ for_window [class="Logseq"] floating enable, resize set width 80 ppt height 90 p
 bindsym $alt+p scratchpad show
 
 # fzf-greenclip for searching clipboard
-bindsym $alt+comma exec alacritty --class floating -e bash -c "greenclip print | fzf --layout=reverse | xsel -ib"
 for_window [class="floating"] floating enable, resize set 900 400, move position center
+bindsym $alt+comma exec alacritty --class floating -e bash -c '/home/shank/.local/bin/fzf-greenclip && sleep 0.1'

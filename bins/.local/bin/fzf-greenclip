@@ -1,0 +1,7 @@
+#!/bin/bash
+
+greenclip print |
+  grep . |
+  fzf --layout=reverse -e -i |
+  xargs -r -d'\n' -I '{}' greenclip print '{}' |
+  xsel -b
