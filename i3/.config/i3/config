@@ -75,7 +75,7 @@ bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
 bindsym $alt+space exec rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -show combi -sidebar-mode -show-icons -matching fuzzy
 bindsym $alt+period exec rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -show emoji -modi emoji
 bindsym $mod+Tab exec rofi -lines 12 -padding 18 -width 30 -location 0 -show window -sidebar-mode -font 'Rubik 14' -show-icons -matching fuzzy
-bindsym $alt+comma exec rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+# bindsym $alt+comma exec rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 # bindsym $alt+s exec --no-startup-id rofi -lines 12 -padding 18 -width 30 -location 0 -font 'Rubik 14' -show drun -run-shell-command '{terminal} -e fish -ic "{cmd} && read"'
 
 # scratch document
@@ -663,3 +663,7 @@ exec --no-startup-id safeeyes &
 exec --no-startup-id logseq &
 for_window [class="Logseq"] floating enable, resize set width 80 ppt height 90 ppt, move scratchpad
 bindsym $alt+p scratchpad show
+
+# fzf-greenclip for searching clipboard
+bindsym $alt+comma exec alacritty --class floating -e bash -c "greenclip print | fzf --layout=reverse | xsel -ib"
+for_window [class="floating"] floating enable, resize set 900 400, move position center
