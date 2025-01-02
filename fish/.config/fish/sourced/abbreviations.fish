@@ -236,7 +236,9 @@ abbr -a -g nf neofetch
 abbr -a -g jb "just build"
 abbr -a -g procs "procs --theme light"
 abbr -a -g procsl "procs --theme light"
+abbr -a -g prl "procs --theme light"
 abbr -a -g procsd "procs --theme dark"
+abbr -a -g prd "procs --theme dark"
 abbr -a -g nicer "nice -n 10"
 
 # keyboard
