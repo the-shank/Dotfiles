@@ -4,7 +4,7 @@ set -eu
 set -o pipefail
 
 # dpi
-! $HOME/.local/bin/dpi.sh 154
+! $HOME/.local/bin/dpi.sh 144
 
 # fix keyboard
 ! xset r rate 250 50
