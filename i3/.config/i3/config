@@ -302,6 +302,7 @@ for_window [title="Quick Format Citation"] floating enable
 for_window [class="Safeeyes"] floating enable
 for_window [class="Gpick"] floating enable
 for_window [class="org.gnome.FileRoller"] floating enable
+for_window [class="Qemu-system-x86_64"] floating enable
 
 for_window [window_role="pop-up"] floating enable
 
@@ -331,7 +332,7 @@ for_window [urgent=latest] focus
 bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r exec --no-startup-id ~/.local/bin/update_fzf_greenclip_size.sh; restart
+bindsym $mod+Shift+r exec --no-startup-id ~/.local/bin/update_fzf_greenclip_size.sh
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec --no-startup-id archlinux-logout
