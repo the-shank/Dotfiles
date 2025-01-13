@@ -13,7 +13,7 @@ window_height=$((height * 40 / 100))
 # echo "$windows_width $window_height"
 
 # update the i3config file
-config_file="$HOME/.config/i3/config"
+config_file="$HOME/dotfiles/i3/.config/i3/config"
 sed -i '/^for_window \[class="floating"\]/c\for_window [class="floating"] floating enable, resize set '"$window_width $window_height"', move position center' "$config_file"
 
 # realod i3 config

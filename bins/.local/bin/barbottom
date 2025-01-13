@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
+I3CONFIG=~/dotfiles/i3/.config/i3/config
+
+sed -i 's/position top/position bottom/' $I3CONFIG
+i3-msg reload && sleep 0.1
