@@ -9,9 +9,12 @@ ConfigVersion=1
 [MainWindow]
 ToolBarsMovable=Disabled
 
+[Shortcut Schemes]
+Current Scheme=Default
+
 [Shortcuts]
 mainToolBar=Alt+M
-sessionToolbar=Alt+S
+sessionToolbar=none
 
 [UiSettings]
 ColorScheme=
