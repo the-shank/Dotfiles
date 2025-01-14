@@ -469,7 +469,6 @@ bar {
 	# status_command i3status
 	status_command /usr/bin/i3status-rs
 	position bottom
-	# position top
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
   tray_padding 3
