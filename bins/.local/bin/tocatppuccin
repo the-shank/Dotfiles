@@ -14,3 +14,23 @@ FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/plugins/theme.lua
 sed -i -e 's|^\(\s*\)-- colorscheme = "catppuccin\(.*\)|\1colorscheme = "catppuccin\2|' $FILE
 sed -i -e 's|^\(\s*\)colorscheme = "everforest\(.*\)|\1-- colorscheme = "everforest\2|' $FILE
 sed -i -e 's|^\(\s*\)colorscheme = "zenbones\(.*\)|\1-- colorscheme = "zenbones\2|' $FILE
+
+# konsole
+if command -v qdbus >/dev/null; then
+  konsole_services=$(qdbus org.kde.konsole*)
+  for service_name in $konsole_services; do
+    sessions=$(qdbus $service_name | rg "/Sessions/")
+    for session in $sessions; do
+      qdbus $service_name $session org.kde.konsole.Session.setProfile "catppuccin-macchiato"
+      FILE=$HOME/dotfiles/konsole/.config/konsolerc
+      sed -i -e 's/DefaultProfile=catppuccin-lattejprofile/DefaultProfile=catppuccin-macchiato.profile/' $FILE
+      sed -i -e 's/DefaultProfile=catppuccin-frappe.profile/DefaultProfile=catppuccin-macchiato.profile/' $FILE
+      sed -i -e 's/DefaultProfile=catppuccin-macchiato.profile/DefaultProfile=catppuccin-macchiato.profile/' $FILE
+      sed -i -e 's/DefaultProfile=catppuccin-mocha.profile/DefaultProfile=catppuccin-macchiato.profile/' $FILE
+      sed -i -e 's/DefaultProfile=everforest-dark.profile/DefaultProfile=catppuccin-macchiato.profile/' $FILE
+      sed -i -e 's/DefaultProfile=everforest-darker.profile/DefaultProfile=catppuccin-macchiato.profile/' $FILE
+      sed -i -e 's/DefaultProfile=everforest-light.profile/DefaultProfile=catppuccin-macchiato.profile/' $FILE
+      sed -i -e 's/DefaultProfile=everforest-lighter.profile/DefaultProfile=catppuccin-macchiato.profile/' $FILE
+    done
+  done
+fi

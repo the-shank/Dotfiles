@@ -41,6 +41,10 @@ if command -v qdbus >/dev/null; then
     for session in $sessions; do
       qdbus $service_name $session org.kde.konsole.Session.setProfile "everforest-light"
       FILE=$HOME/dotfiles/konsole/.config/konsolerc
+      sed -i -e 's/DefaultProfile=catppuccin-latte.profile/DefaultProfile=everforest-light.profile/' $FILE
+      sed -i -e 's/DefaultProfile=catppuccin-frappe.profile/DefaultProfile=everforest-light.profile/' $FILE
+      sed -i -e 's/DefaultProfile=catppuccin-macchiato.profile/DefaultProfile=everforest-light.profile/' $FILE
+      sed -i -e 's/DefaultProfile=catppuccin-mocha.profile/DefaultProfile=everforest-light.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-dark.profile/DefaultProfile=everforest-light.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-darker.profile/DefaultProfile=everforest-light.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-lighter.profile/DefaultProfile=everforest-light.profile/' $FILE

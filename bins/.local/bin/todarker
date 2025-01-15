@@ -21,6 +21,7 @@ FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/plugins/theme.lua
 sed -i -e 's/catppuccin-latte/catppuccin-mocha/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-mocha/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-mocha/' $FILE
+sed -i -e 's/catppuccin-mocha/catppuccin-mocha/' $FILE
 FILE=$HOME/dotfiles/neovim/.local/share/nvim-lazyvim/lazy/everforest/autoload/everforest.vim
 sed -i -e "s|'bg0':        \['#272E33'|'bg0':        ['#1f262a'|" $FILE
 sed -i -e "s|'bg0':        \['#1B1F22'|'bg0':        ['#1f262a'|" $FILE
@@ -39,8 +40,20 @@ if command -v qdbus >/dev/null; then
   for service_name in $konsole_services; do
     sessions=$(qdbus $service_name | rg "/Sessions/")
     for session in $sessions; do
-      qdbus $service_name $session org.kde.konsole.Session.setProfile "everforest-darker"
+      current_profile=$(qdbus $service_name $session org.kde.konsole.Session.profile)
+      echo ">> current profile: $current_profile"
+      if [[ $current_profile == everforest* ]]; then
+        echo ">> setting profile to everforest-darker..."
+        qdbus $service_name $session org.kde.konsole.Session.setProfile "everforest-darker"
+      elif [[ $current_profile == catppuccin* ]]; then
+        echo ">> setting profile to catppuccin-mocha..."
+        qdbus $service_name $session org.kde.konsole.Session.setProfile "catppuccin-mocha"
+      fi
       FILE=$HOME/dotfiles/konsole/.config/konsolerc
+      sed -i -e 's/DefaultProfile=catppuccin-latte.profile/DefaultProfile=catppuccin-mocha.profile/' $FILE
+      sed -i -e 's/DefaultProfile=catppuccin-frappe.profile/DefaultProfile=catppuccin-mocha.profile/' $FILE
+      sed -i -e 's/DefaultProfile=catppuccin-macchiato.profile/DefaultProfile=catppuccin-mocha.profile/' $FILE
+      sed -i -e 's/DefaultProfile=catppuccin-mocha.profile/DefaultProfile=catppuccin-mocha.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-dark.profile/DefaultProfile=everforest-darker.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-light.profile/DefaultProfile=everforest-darker.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-lighter.profile/DefaultProfile=everforest-darker.profile/' $FILE
