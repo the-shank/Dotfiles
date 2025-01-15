@@ -577,6 +577,10 @@ fish_add_path $CARGO_HOME/bin
 
 # bat light theme
 setenv BAT_THEME gruvbox-dark
+# -i: case insensitive search
+# -R: escape ANSI sequences (i.e. show colored output)
+# -j.5: center the search match, rather than it being at the top
+setenv BAT_PAGER "less -i -R -j.5"
 
 # nix
 if [ -f $HOME/.nix-profile/bin ]

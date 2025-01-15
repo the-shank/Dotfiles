@@ -57,9 +57,9 @@ sed -i -e 's/everforest_light_hard/everforest_dark/' $FILE
 sed -i -e 's/everforest_light/everforest_dark/' $FILE
 sed -i -e 's/everforest_darker/everforest_dark/' $FILE
 sed -i -e 's/everforest_darkest/everforest_dark/' $FILE
-sed -i -e 's/catppuccin-latte/catppuccin-frappe/' $FILE
-sed -i -e 's/catppuccin-macchiato/catppuccin-frappe/' $FILE
-sed -i -e 's/catppuccin-mocha/catppuccin-frappe/' $FILE
+sed -i -e 's/catppuccin-latte/catppuccin-macchiato/' $FILE
+sed -i -e 's/catppuccin-mocha/catppuccin-macchiato/' $FILE
+sed -i -e 's/catppuccin-frappe/catppuccin-macchiato/' $FILE
 sed -i -e 's/zenbones_light/zenbones_dark/' $FILE
 # sed -i -e 's/CommitMonoThicker/CommitMonoThick/' $FILE
 # sed -i -e 's|^\(\s*\)style = "Medium"|\1# style = "Medium"|' $FILE
