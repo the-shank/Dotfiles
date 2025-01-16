@@ -13,6 +13,7 @@
 # [ ] bat (need to reload config.fish)
 # [x] cargo-expand
 # [x] tmux
+# [x] yazi
 
 set -u
 set -o pipefail
@@ -173,9 +174,16 @@ DIR=$HOME/dotfiles/tmux/.tmux
 if [ -d $DIR ]; then
   (
     cd $DIR
-    echo $(pwd)
-    exa -l
     ln -sf themes/tokyonight_storm.tmux theme.tmux
     tmux source-file ~/.tmux.conf
+  )
+fi
+
+# yazi
+DIR=$HOME/dotfiles/yazi/.config/yazi
+if [ -d $DIR ]; then
+  (
+    cd $DIR
+    ln -sf themes/tokyonight_storm.toml theme.toml
   )
 fi

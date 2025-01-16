@@ -13,6 +13,7 @@
 # [ ] bat (need to source the config.fish file again)
 # [x] cargo-expand
 # [x] tmux
+# [x] yazi
 
 set -u
 set -o pipefail
@@ -64,7 +65,6 @@ if command -v qdbus >/dev/null; then
       sed -i -e 's/DefaultProfile=tokyonight-storm.profile/DefaultProfile=tokyonight-day.profile/' $FILE
       sed -i -e 's/DefaultProfile=tokyonight-moon.profile/DefaultProfile=tokyonight-day.profile/' $FILE
       sed -i -e 's/DefaultProfile=tokyonight-night.profile/DefaultProfile=tokyonight-day.profile/' $FILE
-      konsoleprofile everforest-light
     done
   done
 fi
@@ -166,9 +166,16 @@ DIR=$HOME/dotfiles/tmux/.tmux
 if [ -d $DIR ]; then
   (
     cd $DIR
-    echo $(pwd)
-    exa -l
     ln -sf themes/tokyonight_day.tmux theme.tmux
     tmux source-file ~/.tmux.conf
+  )
+fi
+
+# yazi
+DIR=$HOME/dotfiles/yazi/.config/yazi
+if [ -d $DIR ]; then
+  (
+    cd $DIR
+    ln -sf themes/tokyonight_day.toml theme.toml
   )
 fi
