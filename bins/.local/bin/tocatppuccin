@@ -14,6 +14,7 @@ FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/plugins/theme.lua
 sed -i -e 's|^\(\s*\)-- colorscheme = "catppuccin\(.*\)|\1colorscheme = "catppuccin\2|' $FILE
 sed -i -e 's|^\(\s*\)colorscheme = "everforest\(.*\)|\1-- colorscheme = "everforest\2|' $FILE
 sed -i -e 's|^\(\s*\)colorscheme = "zenbones\(.*\)|\1-- colorscheme = "zenbones\2|' $FILE
+sed -i -e 's|^\(\s*\)colorscheme = "tokyonight\(.*\)|\1--colorscheme = "tokyonight\2|' $FILE
 
 # konsole
 if command -v qdbus >/dev/null; then
@@ -31,6 +32,10 @@ if command -v qdbus >/dev/null; then
       sed -i -e 's/DefaultProfile=everforest-darker.profile/DefaultProfile=catppuccin-macchiato.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-light.profile/DefaultProfile=catppuccin-macchiato.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-lighter.profile/DefaultProfile=catppuccin-macchiato.profile/' $FILE
+      sed -i -e 's/DefaultProfile=tokyonight-day.profile/DefaultProfile=catppuccin-macchiato.profile/' $FILE
+      sed -i -e 's/DefaultProfile=tokyonight-storm.profile/DefaultProfile=catppuccin-macchiato.profile/' $FILE
+      sed -i -e 's/DefaultProfile=tokyonight-moon.profile/DefaultProfile=catppuccin-macchiato.profile/' $FILE
+      sed -i -e 's/DefaultProfile=tokyonight-night.profile/DefaultProfile=catppuccin-macchiato.profile/' $FILE
     done
   done
 fi

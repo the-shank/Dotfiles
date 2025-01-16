@@ -48,6 +48,9 @@ if command -v qdbus >/dev/null; then
       elif [[ $current_profile == catppuccin* ]]; then
         echo ">> setting profile to catppuccin-macchiato..."
         qdbus $service_name $session org.kde.konsole.Session.setProfile "catppuccin-macchiato"
+      elif [[ $current_profile == tokyonight* ]]; then
+        echo ">> setting profile to tokyonight-storm..."
+        qdbus $service_name $session org.kde.konsole.Session.setProfile "tokyonight-storm"
       fi
       FILE=$HOME/dotfiles/konsole/.config/konsolerc
       sed -i -e 's/DefaultProfile=catppuccin-frappe.profile/DefaultProfile=catppuccin-macchiato.profile/' $FILE
@@ -58,6 +61,10 @@ if command -v qdbus >/dev/null; then
       sed -i -e 's/DefaultProfile=everforest-darker.profile/DefaultProfile=everforest-dark.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-light.profile/DefaultProfile=everforest-dark.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-lighter.profile/DefaultProfile=everforest-dark.profile/' $FILE
+      sed -i -e 's/DefaultProfile=tokyonight-day.profile/DefaultProfile=tokyonight-storm.profile/' $FILE
+      sed -i -e 's/DefaultProfile=tokyonight-storm.profile/DefaultProfile=tokyonight-storm.profile/' $FILE
+      sed -i -e 's/DefaultProfile=tokyonight-moon.profile/DefaultProfile=tokyonight-storm.profile/' $FILE
+      sed -i -e 's/DefaultProfile=tokyonight-night.profile/DefaultProfile=tokyonight-storm.profile/' $FILE
     done
   done
 fi
@@ -88,6 +95,10 @@ sed -i -e 's/catppuccin-latte/catppuccin-macchiato/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-macchiato/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-macchiato/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-macchiato/' $FILE
+sed -i -e 's/tokyonight-day/tokyonight-storm/' $FILE
+sed -i -e 's/tokyonight-storm/tokyonight-storm/' $FILE
+sed -i -e 's/tokyonight-moon/tokyonight-storm/' $FILE
+sed -i -e 's/tokyonight-night/tokyonight-storm/' $FILE
 FILE=$HOME/dotfiles/neovim/.local/share/nvim-lazyvim/lazy/everforest/autoload/everforest.vim
 sed -i -e "s|'bg0':        \['#1B1F22'|'bg0':        ['#272E33'|" $FILE
 sed -i -e "s|'bg0':        \['#21282c'|'bg0':        ['#272E33'|" $FILE
@@ -147,7 +158,7 @@ fi
 # bat
 FILE=$HOME/dotfiles/fish/.config/fish/config.fish
 if [ -f $FILE ]; then
-  sed -i -e 's/BAT_THEME .*/BAT_THEME gruvbox-dark/' $FILE
+  sed -i -e 's/BAT_THEME .*/BAT_THEME ansi/' $FILE
 fi
 
 # cargo-expand

@@ -22,6 +22,10 @@ sed -i -e 's/catppuccin-latte/catppuccin-mocha/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-mocha/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-mocha/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-mocha/' $FILE
+sed -i -e 's/tokyonight-day/tokyonight-moon/' $FILE
+sed -i -e 's/tokyonight-storm/tokyonight-moon/' $FILE
+sed -i -e 's/tokyonight-moon/tokyonight-moon/' $FILE
+sed -i -e 's/tokyonight-night/tokyonight-moon/' $FILE
 FILE=$HOME/dotfiles/neovim/.local/share/nvim-lazyvim/lazy/everforest/autoload/everforest.vim
 sed -i -e "s|'bg0':        \['#272E33'|'bg0':        ['#1f262a'|" $FILE
 sed -i -e "s|'bg0':        \['#1B1F22'|'bg0':        ['#1f262a'|" $FILE
@@ -48,6 +52,9 @@ if command -v qdbus >/dev/null; then
       elif [[ $current_profile == catppuccin* ]]; then
         echo ">> setting profile to catppuccin-mocha..."
         qdbus $service_name $session org.kde.konsole.Session.setProfile "catppuccin-mocha"
+      elif [[ $current_profile == tokyonight* ]]; then
+        echo ">> setting profile to tokyonight-moon..."
+        qdbus $service_name $session org.kde.konsole.Session.setProfile "tokyonight-moon"
       fi
       FILE=$HOME/dotfiles/konsole/.config/konsolerc
       sed -i -e 's/DefaultProfile=catppuccin-latte.profile/DefaultProfile=catppuccin-mocha.profile/' $FILE
@@ -57,6 +64,10 @@ if command -v qdbus >/dev/null; then
       sed -i -e 's/DefaultProfile=everforest-dark.profile/DefaultProfile=everforest-darker.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-light.profile/DefaultProfile=everforest-darker.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-lighter.profile/DefaultProfile=everforest-darker.profile/' $FILE
+      sed -i -e 's/DefaultProfile=tokyonight-day.profile/DefaultProfile=tokyonight-moon.profile/' $FILE
+      sed -i -e 's/DefaultProfile=tokyonight-storm.profile/DefaultProfile=tokyonight-moon.profile/' $FILE
+      sed -i -e 's/DefaultProfile=tokyonight-moon.profile/DefaultProfile=tokyonight-moon.profile/' $FILE
+      sed -i -e 's/DefaultProfile=tokyonight-night.profile/DefaultProfile=tokyonight-moon.profile/' $FILE
     done
   done
 fi

@@ -18,9 +18,14 @@ sed -i -e 's/catppuccin-mocha/catppuccin-latte/' $FILE
 
 # lighter neovim
 FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/plugins/theme.lua
+sed -i -e 's/catppuccin-latte/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-latte/' $FILE
+sed -i -e 's/tokyonight-day/tokyonight-day/' $FILE
+sed -i -e 's/tokyonight-storm/tokyonight-day/' $FILE
+sed -i -e 's/tokyonight-moon/tokyonight-day/' $FILE
+sed -i -e 's/tokyonight-night/tokyonight-day/' $FILE
 FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/config/options.lua
 sed -i -e 's/vim.g.everforest_background = ".*"/vim.g.everforest_background = "hard"/' $FILE
 
@@ -39,6 +44,10 @@ if command -v qdbus >/dev/null; then
       sed -i -e 's/DefaultProfile=everforest-dark.profile/DefaultProfile=everforest-lighter.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-darker.profile/DefaultProfile=everforest-lighter.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-light.profile/DefaultProfile=everforest-lighter.profile/' $FILE
+      sed -i -e 's/DefaultProfile=tokyonight-day.profile/DefaultProfile=tokyonight-day.profile/' $FILE
+      sed -i -e 's/DefaultProfile=tokyonight-storm.profile/DefaultProfile=tokyonight-day.profile/' $FILE
+      sed -i -e 's/DefaultProfile=tokyonight-moon.profile/DefaultProfile=tokyonight-day.profile/' $FILE
+      sed -i -e 's/DefaultProfile=tokyonight-night.profile/DefaultProfile=tokyonight-day.profile/' $FILE
       konsoleprofile everforest-lighter
     done
   done
