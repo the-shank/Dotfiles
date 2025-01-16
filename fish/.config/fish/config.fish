@@ -576,7 +576,7 @@ fish_add_path $CARGO_HOME/bin
 # purs3lab stuff (end) <<<<<
 
 # bat light theme
-#setenv BAT_THEME gruvbox-dark
+#setenv BAT_THEME ansi
 setenv BAT_THEME ansi
 # -i: case insensitive search
 # -R: escape ANSI sequences (i.e. show colored output)
