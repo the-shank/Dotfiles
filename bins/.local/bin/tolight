@@ -12,6 +12,7 @@
 # [ ] discord (restart it)
 # [ ] bat (need to source the config.fish file again)
 # [x] cargo-expand
+# [x] tmux
 
 set -u
 set -o pipefail
@@ -158,4 +159,16 @@ fi
 FILE=$HOME/dotfiles/cargo/.cargo/config.toml
 if [ -f $FILE ]; then
   sed -i -e 's/theme = .*/theme = \"gruvbox-light\"'/ $FILE
+fi
+
+# tmux
+DIR=$HOME/dotfiles/tmux/.tmux
+if [ -d $DIR ]; then
+  (
+    cd $DIR
+    echo $(pwd)
+    exa -l
+    ln -sf themes/tokyonight_day.tmux theme.tmux
+    tmux source-file ~/.tmux.conf
+  )
 fi
