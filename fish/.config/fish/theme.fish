@@ -1,0 +1,1 @@
+themes/tokyonight_storm.fish

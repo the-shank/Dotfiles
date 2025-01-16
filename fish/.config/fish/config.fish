@@ -576,11 +576,12 @@ fish_add_path $CARGO_HOME/bin
 # purs3lab stuff (end) <<<<<
 
 # bat light theme
-setenv BAT_THEME gruvbox-dark
+#setenv BAT_THEME gruvbox-dark
+setenv BAT_THEME ansi
 # -i: case insensitive search
 # -R: escape ANSI sequences (i.e. show colored output)
 # -j.5: center the search match, rather than it being at the top
-setenv BAT_PAGER "less -i -R -j.5"
+#setenv BAT_PAGER "less -i -R -j.5"
 
 # nix
 if [ -f $HOME/.nix-profile/bin ]
@@ -595,3 +596,8 @@ stty -ixon
 # load zoxide
 # abbr -a -g cd z
 zoxide init fish | source
+
+# theme
+if [ -f ~/.config/fish/theme.fish ]
+    source ~/.config/fish/theme.fish
+end
