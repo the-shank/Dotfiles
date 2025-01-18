@@ -5,4 +5,7 @@ LineSpacing=2
 
 [General]
 Name=tokyonight-night
-Parent=
+Parent=FALLBACK/
+
+[Terminal Features]
+FlowControlEnabled=false

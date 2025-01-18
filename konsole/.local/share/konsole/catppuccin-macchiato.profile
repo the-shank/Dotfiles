@@ -6,3 +6,6 @@ LineSpacing=2
 [General]
 Name=catppuccin-macchiato
 Parent=FALLBACK/
+
+[Terminal Features]
+FlowControlEnabled=false

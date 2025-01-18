@@ -6,3 +6,6 @@ LineSpacing=2
 [General]
 Name=tokyonight-moon
 Parent=FALLBACK/
+
+[Terminal Features]
+FlowControlEnabled=false
