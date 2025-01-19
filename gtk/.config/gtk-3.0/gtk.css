@@ -3,4 +3,5 @@
   margin: 0;
 }
 
-.thunar { font-size: 1.1em; }
+.thunar { font-size: 1.0em; }
+@import 'colors.css'
