@@ -11,7 +11,7 @@ sed -i -e 's|^\(\s*\)"/home/shank/.config/alacritty/themes/zenbones\(.*\)|\1# \"
 
 # neovim
 FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/plugins/theme.lua
-sed -i -e 's|^\(\s*\)colorscheme = "catppuccin\(.*\)|\1--colorscheme = "catppuccin\2|' $FILE
+sed -i -e 's|^\(\s*\)colorscheme = "catppuccin\(.*\)|\1-- colorscheme = "catppuccin\2|' $FILE
 sed -i -e 's|^\(\s*\)colorscheme = "everforest\(.*\)|\1-- colorscheme = "everforest\2|' $FILE
 sed -i -e 's|^\(\s*\)colorscheme = "zenbones\(.*\)|\1-- colorscheme = "zenbones\2|' $FILE
 sed -i -e 's|^\(\s*\)-- colorscheme = "tokyonight\(.*\)|\1colorscheme = "tokyonight\2|' $FILE
