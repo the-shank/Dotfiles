@@ -80,8 +80,8 @@ set fish_greeting
 #end
 
 # QT stuff
-#set --export QT_AUTO_SCREEN_SCALE_FACTOR 1.0
-set --export QT_AUTO_SCREEN_SCALE_FACTOR 0.95
+set --export QT_AUTO_SCREEN_SCALE_FACTOR 1.0
+#set --export QT_AUTO_SCREEN_SCALE_FACTOR 0.95
 set --export QT_SCALE_FACTOR_ROUNDING_POLICY PassThrough
 
 # Prevent directories names from being shortened

@@ -14,6 +14,7 @@
 # [x] cargo-expand
 # [x] tmux
 # [x] yazi
+# [ ] fish shell
 
 set -u
 set -o pipefail
@@ -185,5 +186,15 @@ if [ -d $DIR ]; then
   (
     cd $DIR
     ln -sf themes/tokyonight_storm.toml theme.toml
+  )
+fi
+
+# fish-shell
+DIR=$HOME/dotfiles/fish/.config/fish
+if [ -d $DIR ]; then
+  (
+    cd $DIR
+    ln -sf themes/tokyonight_storm.fish theme.fish
+    fish -c "source theme.fish"
   )
 fi
