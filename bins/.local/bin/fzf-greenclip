@@ -5,3 +5,5 @@ greenclip print |
   fzf --layout=reverse -e -i |
   xargs -r -d'\n' -I '{}' greenclip print '{}' |
   xsel -b
+
+wait
