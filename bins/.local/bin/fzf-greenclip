@@ -3,7 +3,9 @@
 greenclip print |
   grep . |
   fzf --layout=reverse -e -i |
-  xargs -r -d'\n' -I '{}' greenclip print '{}' |
   xsel -b
 
-wait
+# tee -a ~/selection.txt |
+# xargs -r -d'\n' -I '{}' greenclip print '{}' |
+# echo "done" >>~/selection.txt
+# xclip -selection clipboard &

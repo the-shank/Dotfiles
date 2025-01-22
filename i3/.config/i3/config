@@ -666,4 +666,4 @@ bindsym $alt+p scratchpad show
 
 # fzf-greenclip for searching clipboard
 for_window [class="floating"] floating enable, resize set 900 400, move position center
-bindsym $alt+comma exec alacritty --class floating -e bash -c '/home/shank/.local/bin/fzf-greenclip && sleep 0.1'
+bindsym $alt+comma exec alacritty --class floating -e "/home/shank/.local/bin/fzf-greenclip"
