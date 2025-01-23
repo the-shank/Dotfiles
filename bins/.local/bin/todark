@@ -54,6 +54,9 @@ if command -v qdbus >/dev/null; then
       elif [[ $current_profile == tokyonight* ]]; then
         echo ">> setting profile to tokyonight-storm..."
         qdbus $service_name $session org.kde.konsole.Session.setProfile "tokyonight-storm"
+      elif [[ $current_profile == gruvbox* ]]; then
+        echo ">> setting profile to gruvbox-dark..."
+        qdbus $service_name $session org.kde.konsole.Session.setProfile "gruvbox-dark"
       fi
       FILE=$HOME/dotfiles/konsole/.config/konsolerc
       sed -i -e 's/DefaultProfile=catppuccin-frappe.profile/DefaultProfile=catppuccin-macchiato.profile/' $FILE
@@ -68,6 +71,7 @@ if command -v qdbus >/dev/null; then
       sed -i -e 's/DefaultProfile=tokyonight-storm.profile/DefaultProfile=tokyonight-storm.profile/' $FILE
       sed -i -e 's/DefaultProfile=tokyonight-moon.profile/DefaultProfile=tokyonight-storm.profile/' $FILE
       sed -i -e 's/DefaultProfile=tokyonight-night.profile/DefaultProfile=tokyonight-storm.profile/' $FILE
+      sed -i -e 's/DefaultProfile=gruvbox-dark.profile/DefaultProfile=gruvbox-dark.profile/' $FILE
     done
   done
 fi

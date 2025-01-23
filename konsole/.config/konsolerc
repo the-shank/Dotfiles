@@ -1,7 +1,7 @@
 MenuBar=Disabled
 
 [Desktop Entry]
-DefaultProfile=everforest-dark.profile
+DefaultProfile=gruvbox-dark.profile
 
 [General]
 ConfigVersion=1
