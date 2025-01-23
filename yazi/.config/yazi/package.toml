@@ -2,4 +2,4 @@
 deps = [{ use = "yazi-rs/plugins:smart-enter", rev = "e4aaf43" }]
 
 [flavor]
-deps = []
+deps = [{ use = "bennyyip/gruvbox-dark", rev = "b4cc9f2" }]

@@ -1,2 +1,5 @@
 [manager]
 ratio = [1, 3, 3]
+
+[flavor]
+dark = "gruvbox-dark"

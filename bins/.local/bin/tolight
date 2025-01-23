@@ -172,31 +172,31 @@ if [ -f $FILE ]; then
   sed -i -e 's/theme = .*/theme = \"gruvbox-light\"'/ $FILE
 fi
 
-# tmux
-DIR=$HOME/dotfiles/tmux/.tmux
-if [ -d $DIR ]; then
-  (
-    cd $DIR
-    ln -sf themes/tokyonight_day.tmux theme.tmux
-    tmux source-file ~/.tmux.conf
-  )
-fi
+# # tmux
+# DIR=$HOME/dotfiles/tmux/.tmux
+# if [ -d $DIR ]; then
+#   (
+#     cd $DIR
+#     ln -sf themes/tokyonight_day.tmux theme.tmux
+#     tmux source-file ~/.tmux.conf
+#   )
+# fi
 
-# yazi
-DIR=$HOME/dotfiles/yazi/.config/yazi
-if [ -d $DIR ]; then
-  (
-    cd $DIR
-    ln -sf themes/tokyonight_day.toml theme.toml
-  )
-fi
+# # yazi
+# DIR=$HOME/dotfiles/yazi/.config/yazi
+# if [ -d $DIR ]; then
+#   (
+#     cd $DIR
+#     ln -sf themes/tokyonight_day.toml theme.toml
+#   )
+# fi
 
-# fish-shell
-DIR=$HOME/dotfiles/fish/.config/fish
-if [ -d $DIR ]; then
-  (
-    cd $DIR
-    ln -sf themes/tokyonight_day.fish theme.fish
-    fish -c "source theme.fish"
-  )
-fi
+# # fish-shell
+# DIR=$HOME/dotfiles/fish/.config/fish
+# if [ -d $DIR ]; then
+#   (
+#     cd $DIR
+#     ln -sf themes/tokyonight_day.fish theme.fish
+#     fish -c "source theme.fish"
+#   )
+# fi
