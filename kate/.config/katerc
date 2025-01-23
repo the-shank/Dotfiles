@@ -47,7 +47,7 @@ widgetStyle=qt6ct-style
 [KTextEditor Renderer]
 Animate Bracket Matching=false
 Auto Color Theme Selection=false
-Color Theme=Tokyo Night Storm
+Color Theme=gruvbox Dark
 Line Height Multiplier=1.125
 Show Indentation Lines=false
 Show Whole Bracket Expression=false
