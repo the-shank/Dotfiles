@@ -53,19 +53,27 @@ if command -v qdbus >/dev/null; then
       elif [[ $current_profile == tokyonight* ]]; then
         echo ">> setting profile to tokyonight-day..."
         qdbus $service_name $session org.kde.konsole.Session.setProfile "tokyonight-day"
+      elif [[ $current_profile == gruvbox* ]]; then
+        echo ">> setting profile to tokyonight-day..."
+        qdbus $service_name $session org.kde.konsole.Session.setProfile "tokyonight-day"
       fi
       FILE=$HOME/dotfiles/konsole/.config/konsolerc
+      # catppuccin
       sed -i -e 's/DefaultProfile=catppuccin-latte.profile/DefaultProfile=catppuccin-latte.profile/' $FILE
       sed -i -e 's/DefaultProfile=catppuccin-frappe.profile/DefaultProfile=catppuccin-latte.profile/' $FILE
       sed -i -e 's/DefaultProfile=catppuccin-macchiato.profile/DefaultProfile=catppuccin-latte.profile/' $FILE
       sed -i -e 's/DefaultProfile=catppuccin-mocha.profile/DefaultProfile=catppuccin-latte.profile/' $FILE
+      # everforest
       sed -i -e 's/DefaultProfile=everforest-dark.profile/DefaultProfile=everforest-light.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-darker.profile/DefaultProfile=everforest-light.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-lighter.profile/DefaultProfile=everforest-light.profile/' $FILE
+      # tokyonight
       sed -i -e 's/DefaultProfile=tokyonight-day.profile/DefaultProfile=tokyonight-day.profile/' $FILE
       sed -i -e 's/DefaultProfile=tokyonight-storm.profile/DefaultProfile=tokyonight-day.profile/' $FILE
       sed -i -e 's/DefaultProfile=tokyonight-moon.profile/DefaultProfile=tokyonight-day.profile/' $FILE
       sed -i -e 's/DefaultProfile=tokyonight-night.profile/DefaultProfile=tokyonight-day.profile/' $FILE
+      # gruvbox
+      sed -i -e 's/DefaultProfile=gruvbox-dark.profile/DefaultProfile=tokyonight-day.profile/' $FILE
     done
   done
 fi
@@ -92,14 +100,19 @@ FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/config/options.lua
 sed -i -e 's/vim.opt.background = ".*"/vim.opt.background = "light"/' $FILE
 sed -i -e 's/vim.g.everforest_background = ".*"/vim.g.everforest_background = "medium"/' $FILE
 FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/plugins/theme.lua
+# catppuccin
 sed -i -e 's/catppuccin-latte/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-latte/' $FILE
+# tokyonight
 sed -i -e 's/tokyonight-day/tokyonight-day/' $FILE
 sed -i -e 's/tokyonight-storm/tokyonight-day/' $FILE
 sed -i -e 's/tokyonight-moon/tokyonight-day/' $FILE
 sed -i -e 's/tokyonight-night/tokyonight-day/' $FILE
+# gruvbox
+sed -i -e 's|^\(\s*\)colorscheme = "gruvbox\(.*\)|\1-- colorscheme = "gruvbox\2|' $FILE
+sed -i -e 's|^\(\s*\)-- colorscheme = "tokyonight\(.*\)|\1colorscheme = "tokyonight-day",|' $FILE
 
 # gtk theme
 # ref: https://felix-kling.de/blog/2021/linux-toggle-dark-mode.html

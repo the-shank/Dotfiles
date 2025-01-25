@@ -25,18 +25,23 @@ if command -v qdbus >/dev/null; then
     for session in $sessions; do
       qdbus $service_name $session org.kde.konsole.Session.setProfile "gruvbox-dark"
       FILE=$HOME/dotfiles/konsole/.config/konsolerc
+      # catppuccin
       sed -i -e 's/DefaultProfile=catppuccin-latte.profile/DefaultProfile=gruvbox-dark.profile/' $FILE
       sed -i -e 's/DefaultProfile=catppuccin-frappe.profile/DefaultProfile=gruvbox-dark.profile/' $FILE
       sed -i -e 's/DefaultProfile=catppuccin-macchiato.profile/DefaultProfile=gruvbox-dark.profile/' $FILE
       sed -i -e 's/DefaultProfile=catppuccin-mocha.profile/DefaultProfile=gruvbox-dark.profile/' $FILE
+      # everforest
       sed -i -e 's/DefaultProfile=everforest-dark.profile/DefaultProfile=gruvbox-dark.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-darker.profile/DefaultProfile=gruvbox-dark.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-light.profile/DefaultProfile=gruvbox-dark.profile/' $FILE
       sed -i -e 's/DefaultProfile=everforest-lighter.profile/DefaultProfile=gruvbox-dark.profile/' $FILE
+      # tokyonight
       sed -i -e 's/DefaultProfile=tokyonight-day.profile/DefaultProfile=gruvbox-dark.profile/' $FILE
       sed -i -e 's/DefaultProfile=tokyonight-storm.profile/DefaultProfile=gruvbox-dark.profile/' $FILE
       sed -i -e 's/DefaultProfile=tokyonight-moon.profile/DefaultProfile=gruvbox-dark.profile/' $FILE
       sed -i -e 's/DefaultProfile=tokyonight-night.profile/DefaultProfile=gruvbox-dark.profile/' $FILE
+      # gruvbox
+      sed -i -e 's/DefaultProfile=gruvbox-dark.profile/DefaultProfile=gruvbox-dark.profile/' $FILE
     done
   done
 fi
