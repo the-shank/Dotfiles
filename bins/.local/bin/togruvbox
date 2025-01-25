@@ -3,6 +3,70 @@
 set -eu
 set -o pipefail
 
+# xfce-terminal
+# gruvbox-light
+gruvbox_light_color_palette="#5C6A72;#F85552;#8DA101;#DFA000;#3A94C5;#DF69BA;#35A77C;#DFDDC8;#4B565C;#E67E80;#A7C080;#DBBC7F;#7FBBB3;#D699B6;#83C092;#D3C6AA"
+gruvbox_light_color_foreground="#5C6A72"
+gruvbox_light_color_background="#FDF6E3"
+gruvbox_light_color_cursor=""
+gruvbox_light_color_cursor_foreground=""
+gruvbox_light_color_selection=""
+gruvbox_light_color_selection_background=""
+# gruvbox-dark
+gruvbox_dark_color_palette="#282828;#ea6962;#a9b665;#d8a657;#7daea3;#d3869b;#89b482;#a89984;#7c6f64;#ea6962;#a9b665;#d8a657;#7daea3;#d3869b;#89b482;#ddc7a1"
+gruvbox_dark_color_foreground="#ddc7a1"
+gruvbox_dark_color_background="#282828"
+gruvbox_dark_color_cursor=""
+gruvbox_dark_color_cursor_foreground=""
+gruvbox_dark_color_selection=""
+gruvbox_dark_color_selection_background=""
+# catppuccin-latte
+catppuccin_latte_color_palette="#bcc0cc;#d20f39;#40a02b;#df8e1d;#1e66f5;#ea76cb;#179299;#5c5f77;#acb0be;#d20f39;#40a02b;#df8e1d;#1e66f5;#ea76cb;#179299;#6c6f85"
+catppuccin_latte_color_foreground="#4c4f69"
+catppuccin_latte_color_background="#eff1f5"
+catppuccin_latte_color_cursor="#dc8a78"
+catppuccin_latte_color_cursor_foreground="#dce0e8"
+catppuccin_latte_color_selection="#4c4f69"
+catppuccin_latte_color_selection_background="#acb0be"
+# catppuccin-macchiato
+catppuccin_macchiato_color_palette="#494d64;#ed8796;#a6da95;#eed49f;#8aadf4;#f5bde6;#8bd5ca;#b8c0e0;#5b6078;#ed8796;#a6da95;#eed49f;#8aadf4;#f5bde6;#8bd5ca;#a5adcb"
+catppuccin_macchiato_color_foreground="#cad3f5"
+catppuccin_macchiato_color_background="#24273a"
+catppuccin_macchiato_color_cursor="#f4dbd6"
+catppuccin_macchiato_color_cursor_foreground="#181926"
+catppuccin_macchiato_color_selection="#cad3f5"
+catppuccin_macchiato_color_selection_background="#5b6078"
+if command -v xfconf-query >/dev/null; then
+  xfconf-query --channel xfce4-terminal --property /color-background-vary --set false
+  xfconf-query --channel xfce4-terminal --property /color-bold-is-bright --set false
+  xfconf-query --channel xfce4-terminal --property /color-bold-use-default --set true
+  xfconf-query --channel xfce4-terminal --property /color-cursor-use-default --set false
+  xfconf-query --channel xfce4-terminal --property /color-selection-use-default --set true
+  xfconf-query --channel xfce4-terminal --property /color-use-theme --set false
+  xfconf-query --channel xfce4-terminal --property /font-name --set "Codelia Medium 10"
+  current_palette=$(xfconf-query --channel xfce4-terminal --property /color-palette)
+  echo ">> current_palette: $current_palette"
+  if [[ "$current_palette" == "$catppuccin_latte_color_palette" ]]; then
+    xfconf-query --channel xfce4-terminal --property /color-palette --set "$gruvbox_light_color_palette"
+    xfconf-query --channel xfce4-terminal --property /color-foreground --set "$gruvbox_light_color_foreground"
+    xfconf-query --channel xfce4-terminal --property /color-background --set "$gruvbox_light_color_background"
+    xfconf-query --channel xfce4-terminal --property /color-cursor --set "$gruvbox_light_color_cursor"
+    xfconf-query --channel xfce4-terminal --property /color-cursor-foreground --set "$gruvbox_light_color_cursor_foreground"
+    xfconf-query --channel xfce4-terminal --property /color-selection --set "$gruvbox_light_color_selection"
+    xfconf-query --channel xfce4-terminal --property /color-selection-background --set "$gruvbox_light_color_selection_background"
+  elif [[ "$current_palette" == "$catppuccin_macchiato_color_palette" ]]; then
+    xfconf-query --channel xfce4-terminal --property /color-palette --set "$gruvbox_dark_color_palette"
+    xfconf-query --channel xfce4-terminal --property /color-foreground --set "$gruvbox_dark_color_foreground"
+    xfconf-query --channel xfce4-terminal --property /color-background --set "$gruvbox_dark_color_background"
+    xfconf-query --channel xfce4-terminal --property /color-cursor --set "$gruvbox_dark_color_cursor"
+    xfconf-query --channel xfce4-terminal --property /color-cursor-foreground --set "$gruvbox_dark_color_cursor_foreground"
+    xfconf-query --channel xfce4-terminal --property /color-selection --set "$gruvbox_dark_color_selection"
+    xfconf-query --channel xfce4-terminal --property /color-selection-background --set "$gruvbox_dark_color_selection_background"
+  else
+    echo ">> not changing color palette as current_palette is not in [catppuccin-latte, catppuccin-macchiato]"
+  fi
+fi
+
 # # alacritty
 # FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml
 # sed -i -e 's|^\(\s*\)# "/home/shank/.config/alacritty/themes/catppuccin\(.*\)|\1"/home/shank/.config/alacritty/themes/catppuccin\2|' $FILE

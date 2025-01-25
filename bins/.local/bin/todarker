@@ -33,10 +33,10 @@ sed -i -e "s|'bg0':        \['#232a2e'|'bg0':        ['#1f262a'|" $FILE
 sed -i -e "s|'bg0':        \['#1E2326'|'bg0':        ['#1f262a'|" $FILE
 sed -i -e "s|'bg0':        \['#21282C'|'bg0':        ['#1f262a'|" $FILE
 
-# xfce-terminal
-if command -v xfconf-query >/dev/null; then
-  xfconf-query --channel xfce4-terminal --property /color-background --set "#1f262a"
-fi
+# # xfce-terminal
+# if command -v xfconf-query >/dev/null; then
+#   xfconf-query --channel xfce4-terminal --property /color-background --set "#1f262a"
+# fi
 
 # konsole
 if command -v qdbus >/dev/null; then
