@@ -265,3 +265,8 @@ abbr -a -g renix 'ls $HOME/.nix-profile/share/applications/ | xargs -I{} unlink 
 
 # archlinux
 abbr -a -g pkgs "pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
+
+# fish themes
+abbr -a -g ft-tokyo-day "fish_config theme choose TokyoNight\ Day && yes | fish_config theme save TokyoNight\ Day"
+abbr -a -g ft-tokyo-storm "fish_config theme choose TokyoNight\ Storm && yes | fish_config theme save TokyoNight\ Storm"
+abbr -a -g ft-b16-eighties "fish_config theme choose Base16\ Eighties && yes | fish_config theme save Base16\ Eighties"
