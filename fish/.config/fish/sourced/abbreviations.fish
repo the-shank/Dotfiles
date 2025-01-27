@@ -271,3 +271,6 @@ abbr -a -g ft-tokyo-day "fish_config theme choose TokyoNight\ Day && yes | fish_
 abbr -a -g ft-tokyo-storm "fish_config theme choose TokyoNight\ Storm && yes | fish_config theme save TokyoNight\ Storm"
 abbr -a -g ft-b16-eighties "fish_config theme choose Base16\ Eighties && yes | fish_config theme save Base16\ Eighties"
 abbr -a -g ft-b16-dark "fish_config theme choose Base16\ Default\ Dark && yes | fish_config theme save Base16\ Default\ Dark"
+
+# cmake - throw errors for undefined variables
+abbr -a -g cmake "cmake -Werror=dev --warn-uninitialized"
