@@ -404,8 +404,9 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 exec --no-startup-id pamac-tray
 # exec --no-startup-id xfce4-power-manager &
-exec --no-startup-id xfce4-clipman &
-exec_always --no-startup-id greenclip daemon &
+# exec --no-startup-id xfce4-clipman &
+# exec_always --no-startup-id greenclip daemon &
+exec_always --no-startup-id copyq --start-server &
 # exec --no-startup-id blueman-applet
 exec_always --no-startup-id blueberry-tray
 # exec_always --no-startup-id sbxkb
@@ -665,5 +666,9 @@ for_window [class="Logseq"] floating enable, resize set width 80 ppt height 90 p
 bindsym $alt+p scratchpad show
 
 # fzf-greenclip for searching clipboard
-for_window [class="floating"] floating enable, resize set 900 400, move position center
-bindsym $alt+comma exec alacritty --class floating -e "/home/shank/.local/bin/fzf-greenclip"
+# for_window [class="floating"] floating enable, resize set 2304 864, move position center
+# bindsym $alt+comma exec alacritty --class floating -e "/home/shank/.local/bin/fzf-greenclip"
+
+# copyq for searching clipboard
+for_window [class="copyq"] floating enable, border normal
+bindsym $alt+comma exec --no-startup-id copyq show
