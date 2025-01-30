@@ -544,8 +544,8 @@ set --export FUZZERR_PROJ_DIR $HOME/code/research/FuzzERR
 set --export FUZZERR_AFLPLUSPLUS_DIR $HOME/code/research/FuzzERR_AFLplusplus
 
 # c and c++ compilers - clang
-set --export CC clang
-set --export CXX clang++
+set --export CC gcc
+set --export CXX g++
 
 # asdf-vm
 test -e ~/.asdf/asdf.fish; and source ~/.asdf/asdf.fish

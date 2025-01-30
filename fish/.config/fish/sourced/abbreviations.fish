@@ -7,8 +7,8 @@ test -e ~/.abbr_private; and source ~/.abbr_private
 abbr -a -g .. 'cd ..' # up one
 abbr -a -g ... 'cd ../..' # up two
 abbr -a -g .... 'cd ../../..' # up three
-abbr -a -g .... 'cd ../../../..' # up four
-abbr -a -g .... 'cd ../../../../..' # up five
+abbr -a -g ..... 'cd ../../../..' # up four
+abbr -a -g ...... 'cd ../../../../..' # up five
 abbr -a -g cdd 'cd -' # back to previous directory
 
 # quick edits to dotfiles
