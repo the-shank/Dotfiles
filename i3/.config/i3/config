@@ -335,7 +335,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r exec --no-startup-id ~/.local/bin/update_fzf_greenclip_size.sh
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec --no-startup-id archlinux-logout
+# bindsym $mod+Shift+e exec --no-startup-id archlinux-logout
 
 # A keyboard friendly exit
 # https://samsaffron.com/archive/2019/04/09/my-i3-window-manager-setup
@@ -349,7 +349,7 @@ mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
 bindsym $mod+x mode "exit: [l]ogout, [r]eboot, [s]hutdown"
 
 # Set shut down, restart and locking features
-bindsym $mod+Shift+x mode "$mode_system"
+# bindsym $mod+Shift+x mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
@@ -672,3 +672,6 @@ bindsym $alt+p scratchpad show
 # copyq for searching clipboard
 for_window [class="copyq"] floating enable, border normal
 bindsym $alt+comma exec --no-startup-id copyq show
+
+# lock screen
+bindsym $mod+shift+x exec i3lock --max --image ~/Sync/Wallpapers/wallhaven-3lrz76.jpg
