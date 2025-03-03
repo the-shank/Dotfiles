@@ -674,4 +674,4 @@ for_window [class="copyq"] floating enable, border normal
 bindsym $alt+comma exec --no-startup-id copyq show
 
 # lock screen
-bindsym $mod+shift+x exec i3lock --max --image ~/Sync/Wallpapers/wallhaven-3lrz76.jpg
+bindsym $mod+shift+x exec i3lock --fill --image ~/Sync/Wallpapers/wallhaven-3lrz76.jpg
