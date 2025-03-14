@@ -27,7 +27,8 @@ set_default "text/plain" "org.kde.kate.desktop"
 
 # web stuff
 # BROWSER=firefox
-BROWSER=vivaldi-stable
+# BROWSER=vivaldi-stable
+BROWSER=zen
 set_default "x-scheme-handler/http" "$BROWSER.desktop"
 set_default "x-scheme-handler/https" "$BROWSER.desktop"
 set_default "text/html" "$BROWSER.desktop"
