@@ -664,6 +664,7 @@ exec --no-startup-id safeeyes &
 
 # logseq
 exec --no-startup-id logseq &
+for_window [class="Logseq"] floating enable, resize set width 95 ppt height 90 ppt, move absolute position center, move scratchpad
 bindsym $alt+p scratchpad show
 
 # fzf-greenclip for searching clipboard
