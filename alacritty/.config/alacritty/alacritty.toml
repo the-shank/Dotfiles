@@ -2,30 +2,33 @@
 live_config_reload = true
 import = [
   # "/home/shank/.config/alacritty/themes/everforest_dark.toml",
-  "/home/shank/.config/alacritty/themes/catppuccin-macchiato.toml",
+  # "/home/shank/.config/alacritty/themes/catppuccin-macchiato.toml",
   # "/home/shank/.config/alacritty/themes/zenbones_dark.toml",
+  "/home/shank/.config/alacritty/themes/gruvbox_material_hard_dark.toml",
 ]
 
 [font]
 # size = 12.0
 # size = 11.0
-size = 10.0
+size = 10.5
+# size = 10.0
 # size = 9.0
 
 [font.offset]
 x = 0
 # y = 2
-y = 1
-# y = 0
+# y = 1
+y = 0
 
 [font.bold]
 # family = "CommitMonoThicker"
 style = "Bold"
 # family = "JetBrainsMono Nerd Font"
+family = "JetBrainsMono"
 # family = "SF Mono"
 # family = "Comic Mono"
 # family = "Ubuntu Mono"
-family = "Codelia"
+# family = "Codelia"
 # family = "Berkeley Mono"
 
 [font.bold_italic]
@@ -36,21 +39,24 @@ style = "Bold Italic"
 # family = "CommitMonoThicker"
 style = "Italic"
 # family = "JetBrainsMono Nerd Font"
+family = "JetBrainsMono"
 # family = "SF Mono"
 # family = "Comic Mono"
 # family = "Ubuntu Mono"
-family = "Codelia"
+# family = "Codelia"
 # family = "Berkeley Mono"
 
 [font.normal]
 # family = "CommitMonoThicker"
 # style = "Normal"
 # family = "JetBrainsMono Nerd Font"
+family = "JetBrainsMono"
 # family = "SF Mono"
 # family = "Comic Mono"
 # family = "Ubuntu Mono"
-family = "Codelia"
+# family = "Codelia"
 # family = "Berkeley Mono"
+# style = "Semibold"
 style = "Medium"
 # style = "Retina"
 
@@ -67,3 +73,6 @@ opacity = 1
 [window.padding]
 x = 2
 # y = 0
+
+[terminal]
+osc52 = "CopyPaste"
