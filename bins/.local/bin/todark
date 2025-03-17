@@ -140,6 +140,7 @@ sed -i -e 's/catppuccin-latte/catppuccin-macchiato/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-macchiato/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-macchiato/' $FILE
 sed -i -e 's/zenbones_light/zenbones_dark/' $FILE
+sed -i -e 's/gruvbox_material_hard_light/gruvbox_material_hard_dark/' $FILE
 # sed -i -e 's/CommitMonoThicker/CommitMonoThick/' $FILE
 # sed -i -e 's|^\(\s*\)style = "Medium"|\1# style = "Medium"|' $FILE
 # sed -i -e 's|^\(\s*\)#\s*style = "Retina"|\1style = "Retina"|' $FILE

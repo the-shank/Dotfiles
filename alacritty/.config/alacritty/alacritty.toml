@@ -2,8 +2,9 @@
 live_config_reload = true
 import = [
   # "/home/shank/.config/alacritty/themes/everforest_dark.toml",
-  "/home/shank/.config/alacritty/themes/catppuccin-macchiato.toml",
+  # "/home/shank/.config/alacritty/themes/catppuccin-macchiato.toml",
   # "/home/shank/.config/alacritty/themes/zenbones_dark.toml",
+  "/home/shank/.config/alacritty/themes/gruvbox_material_hard_dark.toml",
 ]
 
 [font]
@@ -55,8 +56,8 @@ family = "JetBrainsMono"
 # family = "Ubuntu Mono"
 # family = "Codelia"
 # family = "Berkeley Mono"
-style = "Semibold"
-# style = "Medium"
+# style = "Semibold"
+style = "Medium"
 # style = "Retina"
 
 [[keyboard.bindings]]
