@@ -64,7 +64,8 @@ end
 set --export EDITOR nvim
 set --export VISUAL nvim
 # set --export BROWSER firefox
-set --export BROWSER vivaldi-stable
+#set --export BROWSER vivaldi-stable
+set --export BROWSER zen-browser
 
 # nvim default config to use
 # set --export NVIM_APPNAME nvim-nvchad
@@ -494,7 +495,6 @@ abbr -a -g undopush "git push -f origin HEAD^:master"
 #set fish_pager_color_prefix white --bold --underline
 #set fish_pager_color_progress brwhite --background=cyan
 #set fish_color_search_match --background="#60AEFF"
-
 
 # MY ABBREVIATIONS ---------------------------------
 source ~/.config/fish/sourced/abbreviations.fish
