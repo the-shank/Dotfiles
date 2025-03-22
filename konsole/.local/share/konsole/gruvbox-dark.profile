@@ -3,7 +3,7 @@ BoldIntense=false
 ColorScheme=Gruvbox Material Hard Dark
 DimmValue=20
 Font=JetBrains Mono NL Medium,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Regular
-LineSpacing=0
+LineSpacing=1
 
 [General]
 DimWhenInactive=true
