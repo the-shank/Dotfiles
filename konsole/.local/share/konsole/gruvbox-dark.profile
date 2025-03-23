@@ -1,8 +1,8 @@
 [Appearance]
 BoldIntense=false
 ColorScheme=Gruvbox Material Hard Dark
-Font=Codelia,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-LineSpacing=2
+Font=JetBrains Mono NL Medium,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Regular
+LineSpacing=0
 
 [General]
 Name=gruvbox-dark
