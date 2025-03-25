@@ -60,8 +60,8 @@ floating_modifier $mod
 # bindsym Ctrl+$mod+Return exec xfce4-terminal
 # bindsym Ctrl+$mod+Return exec alacritty
 # bindsym $mod+Return exec xfce4-terminal
-# bindsym $mod+Return exec alacritty
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec alacritty
+# bindsym $mod+Return exec konsole
 # bindsym $mod+Return exec xfce4-terminal -e "distrobox-enter -n dbox-archshank-wip"
 
 # start a file explorer
@@ -301,6 +301,7 @@ for_window [class="Xfce4-dict"] floating enable
 for_window [title="Quick Format Citation"] floating enable
 for_window [class="Safeeyes"] floating enable
 for_window [class="Gpick"] floating enable
+for_window [class="Densify"] floating enable
 for_window [class="org.gnome.FileRoller"] floating enable
 for_window [class="Qemu-system-x86_64"] floating enable
 
@@ -335,7 +336,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r exec --no-startup-id ~/.local/bin/update_fzf_greenclip_size.sh
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec --no-startup-id archlinux-logout
+# bindsym $mod+Shift+e exec --no-startup-id archlinux-logout
 
 # A keyboard friendly exit
 # https://samsaffron.com/archive/2019/04/09/my-i3-window-manager-setup
@@ -349,7 +350,7 @@ mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
 bindsym $mod+x mode "exit: [l]ogout, [r]eboot, [s]hutdown"
 
 # Set shut down, restart and locking features
-bindsym $mod+Shift+x mode "$mode_system"
+# bindsym $mod+Shift+x mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
@@ -426,7 +427,8 @@ exec --no-startup-id syncthing &
 # exec --no-startup-id dropbox &
 # exec --no-startup-id i3-msg 'workspace 1:I; exec xfce4-terminal' #=> NOT WORKING
 # exec --no-startup-id i3-msg 'exec firefox -P shank.default'
-exec --no-startup-id i3-msg 'workspace $ws2; exec vivaldi'
+# exec --no-startup-id i3-msg 'workspace $ws2; exec vivaldi'
+exec --no-startup-id i3-msg 'workspace $ws2; exec zen-browser'
 
 # # Color palette used for the terminal ( ~/.Xresources file )
 # # Colors are gathered based on the documentation:
@@ -662,7 +664,7 @@ exec --no-startup-id safeeyes &
 
 # logseq
 exec --no-startup-id logseq &
-for_window [class="Logseq"] floating enable, resize set width 80 ppt height 90 ppt, move scratchpad
+for_window [class="Logseq"] floating enable, resize set width 95 ppt height 90 ppt, move absolute position center, move scratchpad
 bindsym $alt+p scratchpad show
 
 # fzf-greenclip for searching clipboard
@@ -672,3 +674,6 @@ bindsym $alt+p scratchpad show
 # copyq for searching clipboard
 for_window [class="copyq"] floating enable, border normal
 bindsym $alt+comma exec --no-startup-id copyq show
+
+# lock screen
+bindsym $mod+shift+x exec i3lock --fill --image ~/Sync/Wallpapers/wallhaven-3lrz76.jpg
