@@ -276,3 +276,6 @@ abbr -a -g ft-b16-dark "fish_config theme choose Base16\ Default\ Dark && yes | 
 
 # cmake - throw errors for undefined variables
 abbr -a -g cmake "cmake -Werror=dev --warn-uninitialized"
+
+# send slack notificaiton
+abbr -a -g slnd "ssln done"
