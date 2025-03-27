@@ -48,10 +48,10 @@ widgetStyle=qt6ct-style
 Animate Bracket Matching=false
 Auto Color Theme Selection=false
 Color Theme=gruvbox Dark
-Line Height Multiplier=1.125
+Line Height Multiplier=1
 Show Indentation Lines=false
 Show Whole Bracket Expression=false
-Text Font=Codelia,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+Text Font=Noto Sans Mono,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
 Text Font Features=
 Word Wrap Marker=false
 
