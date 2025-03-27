@@ -18,18 +18,20 @@ size = 10.0
 x = 0
 # y = 2
 # y = 1
-y = 0
+# y = 0
+y = -1
 
 [font.bold]
 # family = "CommitMonoThicker"
 style = "Bold"
 # family = "JetBrainsMono Nerd Font"
-family = "JetBrainsMono"
+# family = "JetBrainsMono"
 # family = "SF Mono"
 # family = "Comic Mono"
 # family = "Ubuntu Mono"
 # family = "Codelia"
 # family = "Berkeley Mono"
+family = "Noto Sans Mono"
 
 [font.bold_italic]
 family = "monospace"
@@ -39,23 +41,25 @@ style = "Bold Italic"
 # family = "CommitMonoThicker"
 style = "Italic"
 # family = "JetBrainsMono Nerd Font"
-family = "JetBrainsMono"
+# family = "JetBrainsMono"
 # family = "SF Mono"
 # family = "Comic Mono"
 # family = "Ubuntu Mono"
 # family = "Codelia"
 # family = "Berkeley Mono"
+family = "Noto Sans Mono"
 
 [font.normal]
 # family = "CommitMonoThicker"
 # style = "Normal"
 # family = "JetBrainsMono Nerd Font"
-family = "JetBrainsMono"
+# family = "JetBrainsMono"
 # family = "SF Mono"
 # family = "Comic Mono"
 # family = "Ubuntu Mono"
 # family = "Codelia"
 # family = "Berkeley Mono"
+family = "Noto Sans Mono"
 # style = "Semibold"
 style = "Medium"
 # style = "Retina"
