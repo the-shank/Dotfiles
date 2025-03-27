@@ -269,6 +269,7 @@ for_window [class="Blueberry.py"] floating enable
 for_window [class="Clipgrab"] floating enable
 for_window [class="Enpass"] floating enable
 for_window [class="Font-manager"] floating enable
+for_window [class="font-manager"] floating enable
 for_window [class="GParted"] floating enable border normal
 for_window [class="Galculator"] floating enable border pixel 1
 for_window [class="Lightdm-settings"] floating enable
