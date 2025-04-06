@@ -404,7 +404,8 @@ bindsym $mod+9 exec --no-startup-id blurlock
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
-exec --no-startup-id pamac-tray
+# exec --no-startup-id pamac-tray
+exec --no-startup-id snixembed --fork &
 # exec --no-startup-id xfce4-power-manager &
 # exec --no-startup-id xfce4-clipman &
 # exec_always --no-startup-id greenclip daemon &
