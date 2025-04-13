@@ -136,6 +136,9 @@ sed -i -e 's/everforest_light_hard.toml/everforest_light_medium.toml/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-latte/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-latte/' $FILE
+sed -i -e 's/tokyonight_night/tokyonight_day/' $FILE
+sed -i -e 's/tokyonight_moon/tokyonight_day/' $FILE
+sed -i -e 's/tokyonight_storm/tokyonight_day/' $FILE
 sed -i -e 's/zenbones_dark/zenbones_light/' $FILE
 sed -i -e 's/gruvbox_material_hard_dark/gruvbox_material_hard_light/' $FILE
 # sed -i -e 's/CommitMonoThick"/CommitMonoThicker"/' $FILE
