@@ -275,7 +275,8 @@ abbr -a -g ft-b16-eighties "fish_config theme choose Base16\ Eighties && yes | f
 abbr -a -g ft-b16-dark "fish_config theme choose Base16\ Default\ Dark && yes | fish_config theme save Base16\ Default\ Dark"
 
 # cmake - throw errors for undefined variables
-abbr -a -g cmake "cmake -Werror=dev --warn-uninitialized"
+# abbr -a -g cmake "cmake -Werror=dev --warn-uninitialized"
 
 # send slack notificaiton
-abbr -a -g slnd "ssln done"
+abbr -a -g ssln "send_slack_notification.sh"
+abbr -a -g slnd "send_slack_notification.sh done"
