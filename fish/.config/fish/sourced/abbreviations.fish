@@ -129,6 +129,7 @@ abbr -a -g grh 'git reset HEAD'
 abbr -a -g grhh 'git reset HEAD --hard'
 abbr -a -g lg lazygit
 abbr -a -g gcb 'git checkout -b'
+abbr -a -g gwt 'git worktree'
 
 # docker
 abbr -a -g dc 'docker container'
