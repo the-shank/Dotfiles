@@ -3,6 +3,11 @@ use = "yazi-rs/plugins:smart-enter"
 rev = "4b027c7"
 hash = "7918aab6a71caf31b58411f789195677"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:toggle-pane"
+rev = "864a021"
+hash = "f3853bbdd1da2fad09d059ab5464abfd"
+
 [[flavor.deps]]
 use = "bennyyip/gruvbox-dark"
 rev = "b4cc9f2"
