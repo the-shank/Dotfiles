@@ -59,7 +59,7 @@ if command -v xfconf-query >/dev/null; then
   xfconf-query --channel xfce4-terminal --property /color-cursor-use-default --set false
   xfconf-query --channel xfce4-terminal --property /color-selection-use-default --set true
   xfconf-query --channel xfce4-terminal --property /color-use-theme --set false
-  xfconf-query --channel xfce4-terminal --property /font-name --set "Codelia Medium 10"
+  xfconf-query --channel xfce4-terminal --property /font-name --set "NotoSansM Nerd Font Mono Medium 10"
   current_palette=$(xfconf-query --channel xfce4-terminal --property /color-palette)
   echo ">> current_palette: $current_palette"
   if [[ "$current_palette" == "$gruvbox_dark_color_palette" ]]; then
