@@ -3,6 +3,12 @@ on = ["<A-s>"]
 run = 'shell "$SHELL" --block --confirm'
 desc = "Open shell here"
 
+# open terminal in the current directory
+[[manager.prepend_keymap]]
+on = "<A-t>"
+run = 'shell --orphan --confirm alacritty --woking-directory .'
+desc = "Open terminal here"
+
 [[manager.prepend_keymap]]
 # Smart enter: enter for directory, open for file
 on = ["l"]
