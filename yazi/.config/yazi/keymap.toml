@@ -3,10 +3,16 @@ on = ["<A-s>"]
 run = 'shell "$SHELL" --block --confirm'
 desc = "Open shell here"
 
-# open terminal in the current directory
+# open tmux pane in the current directory
 [[manager.prepend_keymap]]
 on = "<A-t>"
-run = 'shell --orphan --confirm alacritty --woking-directory .'
+run = "shell 'tmux split-window -h -c \"$PWD\"'"
+desc = "Open tmux pane here"
+
+# open terminal in the current directory
+[[manager.prepend_keymap]]
+on = "<C-t>"
+run = 'shell --orphan --confirm alacritty --working-directory .'
 desc = "Open terminal here"
 
 [[manager.prepend_keymap]]
