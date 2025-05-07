@@ -142,8 +142,8 @@ abbr -a -g di 'docker image'
 abbr -a -g dil 'docker image ls'
 abbr -a -g diu 'docker image pull'
 abbr -a -g diua "docker image ls | tail --lines +2 | rg --ignore-case --invert-match \"(dbox|devc|<none>|aixcc|cve-2021)\" | awk '{printf \"%s:%s\n\",\$1,\$2}' | xargs -I{} bash -c 'echo \">> {} =============\"; docker image pull {}'"
-abbr -a -g dsp 'docker system prune'
-abbr -a -g dspy 'docker system prune --force'
+abbr -a -g dsp 'docker system prune --filter "label!=no-prune"'
+abbr -a -g dspy 'docker system prune --force --filter "label!=no-prune"'
 abbr -a -g d-c docker-compose
 # dev-container related
 abbr -a -g dcs "docker container start -i (docker container ls -a | awk '{print \$NF}' | tail --lines +2 | fzf --prompt 'container> ')"
