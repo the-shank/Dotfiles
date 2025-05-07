@@ -1,7 +1,6 @@
 {
-  "codeQL.telemetry.enableTelemetry": false,
   "codeQL.cli.executablePath": "/home/shank/code/applications/codeql-home/codeql/codeql",
-  "workbench.colorTheme": "Everforest Dark",
+  "workbench.colorTheme": "Gruvbox Material Dark",
   "workbench.tree.indent": 16,
   "window.menuBarVisibility": "toggle",
   "editor.lineNumbers": "relative",
@@ -17,14 +16,14 @@
     "optiplex7010": "linux"
   },
   // font
-  "editor.fontFamily": "Codelia, SF Mono, JetBrainsMono NF, FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
+  "editor.fontFamily": "Noto Sans Mono, JetBrains Mono, Codelia, SF Mono, FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
   "editor.fontSize": 13,
   "editor.fontWeight": "450",
   // integrated terminal
   "terminal.integrated.scrollback": 100000,
   "terminal.integrated.fontSize": 13,
-  // "terminal.integrated.fontWeight": "400",
-  // "terminal.integrated.lineHeight": 1,
+  "terminal.integrated.fontWeight": "450",
+  "terminal.integrated.lineHeight": 0.9,
   // vim keybindings
   "vim.leader": "<space>",
   "vim.useSystemClipboard": true,
@@ -93,4 +92,143 @@
       "sideBar.background": "#232a2e"
     }
   },
+  "window.zoomLevel": 0.1,
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "lualatexmk",
+      "command": "latexmk",
+      "args": [
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-lualatex",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "xelatexmk",
+      "command": "latexmk",
+      "args": [
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-xelatex",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "latexmk_rconly",
+      "command": "latexmk",
+      "args": [
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "rnw2tex",
+      "command": "Rscript",
+      "args": [
+        "-e",
+        "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+      ],
+      "env": {}
+    },
+    {
+      "name": "jnw2tex",
+      "command": "julia",
+      "args": [
+        "-e",
+        "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
+      ],
+      "env": {}
+    },
+    {
+      "name": "jnw2texminted",
+      "command": "julia",
+      "args": [
+        "-e",
+        "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+      ],
+      "env": {}
+    },
+    {
+      "name": "pnw2tex",
+      "command": "pweave",
+      "args": [
+        "-f",
+        "tex",
+        "%DOC_EXT%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "pnw2texminted",
+      "command": "pweave",
+      "args": [
+        "-f",
+        "texminted",
+        "%DOC_EXT%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "tectonic",
+      "command": "tectonic",
+      "args": [
+        "--synctex",
+        "--keep-logs",
+        "--print",
+        "%DOC%.tex"
+      ],
+      "env": {}
+    }
+  ],
+  "gruvboxMaterial.darkContrast": "hard",
+  "gruvboxMaterial.italicComments": false,
+  "gruvboxMaterial.highContrast": true,
+  "gruvboxMaterial.lightContrast": "hard"
 }
