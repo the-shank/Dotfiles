@@ -600,3 +600,8 @@ zoxide init fish | source
 #if [ -f ~/.config/fish/theme.fish ]
 #    source ~/.config/fish/theme.fish
 #end
+
+setenv CRYPTOGRAPHY_OPENSSL_NO_LEGACY 1
+
+# exercism
+fish_add_path /home/shank/.local/bin/exercism-3.5.4-linux-x86_64
