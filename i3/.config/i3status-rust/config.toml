@@ -89,5 +89,5 @@ interval = 15
 
 [[block]]
 block = "custom"
-command = ''' upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep energy-rate | awk '{print $2 $3}' '''
-interval = 10
+command = "upower -d | rg --ignore-case energy-rate | head -n1 | awk '{printf "%.2f%s\n", $2, $3}'"
+interval = 1
