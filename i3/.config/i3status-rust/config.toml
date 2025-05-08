@@ -87,7 +87,8 @@ warning = 20
 critical = 10
 interval = 15
 
+# command = ''' upower -d | rg --ignore-case energy-rate | head -n1 | awk '{printf "%.2f%s\n", $2, $3}' '''
 [[block]]
 block = "custom"
-command = "upower -d | rg --ignore-case energy-rate | head -n1 | awk '{printf "%.2f%s\n", $2, $3}'"
+command = "energy_rate.sh"
 interval = 1
