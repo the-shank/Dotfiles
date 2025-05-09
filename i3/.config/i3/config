@@ -430,7 +430,6 @@ exec --no-startup-id syncthing &
 # exec --no-startup-id i3-msg 'workspace 1:I; exec xfce4-terminal' #=> NOT WORKING
 # exec --no-startup-id i3-msg 'exec firefox -P shank.default'
 # exec --no-startup-id i3-msg 'workspace $ws2; exec vivaldi'
-exec --no-startup-id i3-msg 'workspace $ws2; exec zen-browser'
 
 # # Color palette used for the terminal ( ~/.Xresources file )
 # # Colors are gathered based on the documentation:
@@ -665,7 +664,7 @@ bindsym $alt+o exec --no-startup-id xfce4-terminal --drop-down
 exec --no-startup-id safeeyes &
 
 # logseq
-exec --no-startup-id logseq &
+exec --no-startup-id logseq  --disable-gpu &
 for_window [class="Logseq"] floating enable, resize set width 95 ppt height 90 ppt, move absolute position center, move scratchpad
 bindsym $alt+p scratchpad show
 
@@ -679,3 +678,5 @@ bindsym $alt+comma exec --no-startup-id copyq show
 
 # lock screen
 bindsym $mod+shift+x exec i3lock --fill --image ~/Sync/Wallpapers/wallhaven-3lrz76.jpg
+
+exec --no-startup-id i3-msg 'workspace $ws2; exec zen-browser'
