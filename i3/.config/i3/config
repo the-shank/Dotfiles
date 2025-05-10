@@ -409,7 +409,6 @@ exec --no-startup-id snixembed --fork &
 # exec --no-startup-id xfce4-power-manager &
 # exec --no-startup-id xfce4-clipman &
 # exec_always --no-startup-id greenclip daemon &
-exec_always --no-startup-id copyq --start-server &
 # exec --no-startup-id blueman-applet
 exec_always --no-startup-id blueberry-tray
 # exec_always --no-startup-id sbxkb
@@ -674,9 +673,10 @@ bindsym $alt+p scratchpad show
 
 # copyq for searching clipboard
 for_window [class="copyq"] floating enable, border normal
-bindsym $alt+comma exec --no-startup-id copyq show
+bindsym $alt+comma exec --no-startup-id copyq show || copyq --start-server && copyq show
 
 # lock screen
 bindsym $mod+shift+x exec i3lock --fill --image ~/Sync/Wallpapers/wallhaven-3lrz76.jpg
 
-exec --no-startup-id i3-msg 'workspace $ws2; exec zen-browser'
+# exec --no-startup-id i3-msg 'workspace $ws2; exec zen-browser'
+# exec_always --no-startup-id QT_AUTO_SCREEN_SCALE_FACTOR=1 copyq --start-server &
