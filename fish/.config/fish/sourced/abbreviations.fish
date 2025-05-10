@@ -60,9 +60,9 @@ abbr -a -g r5 'redshift -P -O 4000'
 # backlight
 abbr -a -g bl 'sudo -E xbacklight -set'
 abbr -a -g bl0 'sudo -E xbacklight -set 0' # backlight = 0% (minimum)
-abbr -a -g bl1 'sudo -E xbacklight -set 2' # backlight = 1%
+abbr -a -g bl1 'sudo -E xbacklight -set 1' # backlight = 1%
 abbr -a -g bl2 'sudo -E xbacklight -set 2' # backlight = 2%
-abbr -a -g bl3 'sudo -E xbacklight -set 2' # backlight = 3%
+abbr -a -g bl3 'sudo -E xbacklight -set 3' # backlight = 3%
 abbr -a -g bl5 'sudo -E xbacklight -set 5' # backlight = 5%
 abbr -a -g bl7 'sudo -E xbacklight -set 7' # backlight = 7%
 abbr -a -g bl8 'sudo -E xbacklight -set 8' # backlight = 8%
