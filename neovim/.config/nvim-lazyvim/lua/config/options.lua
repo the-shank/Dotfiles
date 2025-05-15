@@ -25,6 +25,7 @@ vim.opt.conceallevel = 1
 -- gruvbox theme
 vim.g.gruvbox_material_enable_italic = false
 vim.g.gruvbox_material_disable_italic_comment = 1
+vim.g.gruvbox_material_inlay_hints_background = "dimmed"
 vim.g.gruvbox_material_background = "hard"
 vim.g.gruvbox_material_foreground = "material"
 vim.g.gruvbox_material_better_performance = 1
