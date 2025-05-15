@@ -15,6 +15,7 @@ sed -i -e 's/everforest_dark/everforest_darker/' $FILE
 sed -i -e 's/catppuccin-latte/catppuccin-mocha/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-mocha/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-mocha/' $FILE
+sed -i -e 's/tokyonight_storm/tokyonight_moon/' $FILE
 
 # darker neovim
 FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/plugins/theme.lua
