@@ -162,8 +162,8 @@ sed -i -e 's/tokyonight-storm/tokyonight-day/' $FILE
 sed -i -e 's/tokyonight-moon/tokyonight-day/' $FILE
 sed -i -e 's/tokyonight-night/tokyonight-day/' $FILE
 # gruvbox
-sed -i -e 's|^\(\s*\)colorscheme = "gruvbox\(.*\)|\1-- colorscheme = "gruvbox\2|' $FILE
-sed -i -e 's|^\(\s*\)-- colorscheme = "tokyonight\(.*\)|\1colorscheme = "tokyonight-day",|' $FILE
+# sed -i -e 's|^\(\s*\)colorscheme = "gruvbox\(.*\)|\1-- colorscheme = "gruvbox\2|' $FILE
+# sed -i -e 's|^\(\s*\)-- colorscheme = "tokyonight\(.*\)|\1colorscheme = "tokyonight-day",|' $FILE
 
 # gtk theme
 # ref: https://felix-kling.de/blog/2021/linux-toggle-dark-mode.html
