@@ -150,6 +150,7 @@ sed -i -e 's|^\(\s*\)style = "Medium"|\1# style = "Medium"|' $FILE
 FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/config/options.lua
 sed -i -e 's/vim.opt.background = ".*"/vim.opt.background = "light"/' $FILE
 sed -i -e 's/vim.g.everforest_background = ".*"/vim.g.everforest_background = "medium"/' $FILE
+sed -i -e 's/vim.g.gruvbox_material_inlay_hints_background = "none"/vim.g.gruvbox_material_inlay_hints_background = "dimmed"/' $FILE
 FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/plugins/theme.lua
 # catppuccin
 sed -i -e 's/catppuccin-latte/catppuccin-latte/' $FILE
