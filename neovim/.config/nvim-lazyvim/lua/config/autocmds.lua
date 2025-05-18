@@ -54,3 +54,6 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufEnter" }, {
     vim.api.nvim_command("set syntax=vim")
   end,
 })
+
+-- disable copilot at startup
+vim.cmd("Copilot disable")
