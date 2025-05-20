@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
+devc=$1
+
+docker network disconnect bridge $devc
+# sleep 1
+docker network connect bridge $devc
