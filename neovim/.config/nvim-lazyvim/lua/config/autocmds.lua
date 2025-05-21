@@ -57,3 +57,23 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufEnter" }, {
 
 -- disable copilot at startup
 vim.cmd("Copilot disable")
+
+-- rust: hir syntax highlighting
+vim.api.nvim_create_autocmd({ "BufReadPost", "BufEnter" }, {
+  group = augroup("rustc_hir"),
+  pattern = {
+    "**/*.hir",
+  },
+  callback = function()
+    vim.api.nvim_command("set syntax=rust")
+  end,
+})
+vim.api.nvim_create_autocmd({ "BufReadPost", "BufEnter" }, {
+  group = augroup("rustc_hir_tree"),
+  pattern = {
+    "**/*.hir-tree",
+  },
+  callback = function()
+    vim.api.nvim_command("set syntax=json")
+  end,
+})
