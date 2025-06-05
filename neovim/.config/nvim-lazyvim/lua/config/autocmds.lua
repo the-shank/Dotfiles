@@ -63,6 +63,8 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufEnter" }, {
   group = augroup("rustc_hir"),
   pattern = {
     "**/*.hir",
+    "**/*.hir.identified",
+    "**/*.hir.typed",
   },
   callback = function()
     vim.api.nvim_command("set syntax=rust")
@@ -72,6 +74,7 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufEnter" }, {
   group = augroup("rustc_hir_tree"),
   pattern = {
     "**/*.hir-tree",
+    "**/*.thir-tree",
   },
   callback = function()
     vim.api.nvim_command("set syntax=json")
