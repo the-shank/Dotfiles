@@ -663,7 +663,8 @@ bindsym $alt+o exec --no-startup-id xfce4-terminal --drop-down
 exec --no-startup-id safeeyes &
 
 # logseq
-exec --no-startup-id logseq  --disable-gpu &
+# exec --no-startup-id logseq --disable-gpu &
+# exec --no-startup-id logseq &
 for_window [class="Logseq"] floating enable, resize set width 95 ppt height 90 ppt, move absolute position center, move scratchpad
 bindsym $alt+p scratchpad show
 
@@ -680,3 +681,12 @@ bindsym $mod+shift+x exec i3lock --fill --image ~/Sync/Wallpapers/wallhaven-3lrz
 
 # exec --no-startup-id i3-msg 'workspace $ws2; exec zen-browser'
 # exec_always --no-startup-id QT_AUTO_SCREEN_SCALE_FACTOR=1 copyq --start-server &
+
+# disable touchpad
+exec --no-startup-id xinput disable "ELAN0686:00 04F3:320D Touchpad"
+
+# xsettingsd
+exec --no-startup-id xsettingsd
+
+# trackpoint scrolling
+exec_always --no-startup-id xinput set-prop "TPPS/2 JYT_Synaptics TrackPoint" "libinput Scrolling Pixel Distance" 10 
