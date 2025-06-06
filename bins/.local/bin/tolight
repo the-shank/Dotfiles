@@ -142,7 +142,7 @@ sed -i -e 's/tokyonight_storm/tokyonight_day/' $FILE
 sed -i -e 's/zenbones_dark/zenbones_light/' $FILE
 sed -i -e 's/gruvbox_material_hard_dark/gruvbox_material_hard_light/' $FILE
 # sed -i -e 's/CommitMonoThick"/CommitMonoThicker"/' $FILE
-sed -i -e 's|^\(\s*\)#\s*style = "Semibold"|\1style = "Semibold"|' $FILE
+# sed -i -e 's|^\(\s*\)#\s*style = "Semibold"|\1style = "Semibold"|' $FILE
 sed -i -e 's|^\(\s*\)style = "Medium"|\1# style = "Medium"|' $FILE
 
 # nvim
