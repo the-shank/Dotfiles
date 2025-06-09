@@ -80,3 +80,11 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufEnter" }, {
     vim.api.nvim_command("set syntax=json")
   end,
 })
+
+-- latex
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "tex",
+  callback = function()
+    vim.opt_local.conceallevel = 0
+  end,
+})
