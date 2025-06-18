@@ -18,6 +18,8 @@ size = 10.0
 [font.offset]
 # x = 0
 # x = 1
+# y = 4
+# y = 3
 # y = 2
 # y = 1
 # y = 0
@@ -34,7 +36,9 @@ style = "Bold"
 # family = "Ubuntu Mono"
 # family = "Codelia"
 # family = "Berkeley Mono"
-family = "Noto Sans Mono"
+family = "NotoSansM Nerd Font Mono SemiCondensed Medium"
+# family = "Noto Sans Mono"
+# family = "Pragmasevka Nerd Font"
 
 [font.bold_italic]
 family = "monospace"
@@ -50,7 +54,9 @@ style = "Italic"
 # family = "Ubuntu Mono"
 # family = "Codelia"
 # family = "Berkeley Mono"
-family = "Noto Sans Mono"
+family = "NotoSansM Nerd Font Mono SemiCondensed Medium"
+# family = "Noto Sans Mono"
+# family = "Pragmasevka Nerd Font"
 
 [font.normal]
 # family = "CommitMonoThicker"
@@ -62,7 +68,11 @@ family = "Noto Sans Mono"
 # family = "Ubuntu Mono"
 # family = "Codelia"
 # family = "Berkeley Mono"
-family = "Noto Sans Mono"
+family = "NotoSansM Nerd Font Mono SemiCondensed Medium"
+# family = "Noto Sans Mono"
+# family = "Pragmasevka Nerd Font"
+# family = "PragmataPro"
+# style = "Bold"
 # style = "Semibold"
 style = "Medium"
 # style = "Retina"
