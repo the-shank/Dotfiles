@@ -1,9 +1,6 @@
 [profile.release]
 debug = true
-incremental = true
-
-[target.x86_64-unknown-linux-gnu]
-rustflags = ["-C", "link-arg=-fuse-ld=lld"]
+# incremental = true
 
 [expand]
 theme = "gruvbox-dark"
