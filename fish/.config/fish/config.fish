@@ -605,3 +605,7 @@ setenv CRYPTOGRAPHY_OPENSSL_NO_LEGACY 1
 
 # exercism
 fish_add_path /home/shank/.local/bin/exercism-3.5.4-linux-x86_64
+
+# sccache
+setenv SCCACHE_DIR /home/common/data/sccache
+setenv SCCACHE_CACHE_SIZE 40G
