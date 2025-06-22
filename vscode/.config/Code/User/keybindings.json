@@ -65,14 +65,15 @@
         "command": "editor.action.showHover",
         "when": "editorTextFocus && vim.mode == 'Normal'"
     },
-    {
-        "key": "space b p",
-        "command": "workbench.action.pinEditor",
-        "when": "!activeEditorIsPinned && vim.mode == 'Normal'"
-    },
-    {
-        "key": "space b p",
-        "command": "workbench.action.unpinEditor",
-        "when": "activeEditorIsPinned && vim.mode == 'Normal'"
-    }
+    // NOTE: the following will interfere with the <leader><leader> keybinding for quickOpen
+    // {
+    //     "key": "space b p",
+    //     "command": "workbench.action.pinEditor",
+    //     "when": "!activeEditorIsPinned && vim.mode == 'Normal'"
+    // },
+    // {
+    //     "key": "space b p",
+    //     "command": "workbench.action.unpinEditor",
+    //     "when": "activeEditorIsPinned && vim.mode == 'Normal'"
+    // }
 ]
