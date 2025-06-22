@@ -13,16 +13,17 @@
     "mc21.cs.purdue.edu": "linux",
     "mc19.cs.purdue.edu": "linux",
     "mc20.cs.purdue.edu": "linux",
-    "optiplex7010": "linux"
+    "optiplex7010": "linux",
+    "purs3apple": "linux"
   },
   // font
   "editor.fontFamily": "Noto Sans Mono, JetBrains Mono, Codelia, SF Mono, FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
   "editor.fontSize": 13,
-  "editor.fontWeight": "450",
+  "editor.fontWeight": "500",
   // integrated terminal
   "terminal.integrated.scrollback": 100000,
   "terminal.integrated.fontSize": 13,
-  "terminal.integrated.fontWeight": "450",
+  "terminal.integrated.fontWeight": "500",
   "terminal.integrated.lineHeight": 0.9,
   // vim keybindings
   "vim.leader": "<space>",
@@ -31,42 +32,40 @@
   "vim.hlsearch": true,
   "vim.normalModeKeyBindings": [
     {
-      "before": [
-        "leader",
-        "/"
-      ],
-      "commands": [
-        "editor.action.commentLine"
-      ]
+      "before": [ "leader", "/" ],
+      "commands": [ "editor.action.commentLine" ]
     },
     {
-      "before": [
-        "leader",
-        "w"
-      ],
+      "before": [ "leader", "w" ],
       "commands": [
         "workbench.action.files.save",
       ]
     },
     {
-      "before": [
-        "leader",
-        "h"
-      ],
-      "commands": [
-        ":nohl",
-      ]
+      "before": [ "leader", "h" ],
+      "commands": [ ":nohl", ]
     },
+    {
+      "before": [ "<leader>", "<leader>" ],
+      "commands": [ "workbench.action.quickOpen" ]
+    },
+    {
+      "before": ["<leader>", "s", "s"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    {
+      "before": ["<leader>", "s", "S"],
+      "commands": ["workbench.action.showAllSymbols"]
+    },
+    {
+      "before": ["g", "y"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    }
   ],
   "vim.visualModeKeyBindings": [
     {
-      "before": [
-        "leader",
-        "/"
-      ],
-      "commands": [
-        "editor.action.commentLine"
-      ]
+      "before": [ "leader", "/" ],
+      "commands": [ "editor.action.commentLine" ]
     },
   ],
   "editor.minimap.enabled": false,
@@ -79,7 +78,7 @@
   "solidity.telemetry": false,
   "C_Cpp.default.compilerPath": "/usr/bin/clang",
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
     "plaintext": false,
     "markdown": false,
     "scminput": false
@@ -230,5 +229,6 @@
   "gruvboxMaterial.darkContrast": "hard",
   "gruvboxMaterial.italicComments": false,
   "gruvboxMaterial.highContrast": true,
-  "gruvboxMaterial.lightContrast": "hard"
+  "gruvboxMaterial.lightContrast": "hard",
+  "terminal.integrated.inheritEnv": false
 }
