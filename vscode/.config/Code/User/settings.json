@@ -68,7 +68,11 @@
     {
       "before": ["L"],
       "commands": ["workbench.action.nextEditor"]
-    }
+    },
+    {
+      "before": ["<leader>", "b", "d"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
   ],
   "vim.visualModeKeyBindings": [
     {
