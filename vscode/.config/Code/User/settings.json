@@ -1,5 +1,5 @@
 {
-  "codeQL.cli.executablePath": "/home/shank/code/applications/codeql-home/codeql/codeql",
+  // "codeQL.cli.executablePath": "/home/shank/code/applications/codeql-home/codeql/codeql",
   "workbench.colorTheme": "Gruvbox Material Dark",
   "workbench.tree.indent": 16,
   "window.menuBarVisibility": "toggle",
@@ -73,6 +73,10 @@
       "before": ["<leader>", "b", "d"],
       "commands": ["workbench.action.closeActiveEditor"]
     },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"]
+    }
   ],
   "vim.visualModeKeyBindings": [
     {
