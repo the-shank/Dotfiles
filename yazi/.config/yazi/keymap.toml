@@ -1,46 +1,46 @@
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["<A-s>"]
 run = 'shell "$SHELL" --block --confirm'
 desc = "Open shell here"
 
 # open tmux pane in the current directory
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = "<A-t>"
 run = "shell 'tmux split-window -h -c \"$PWD\"'"
 desc = "Open tmux pane here"
 
 # open terminal in the current directory
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = "<C-t>"
 run = 'shell --orphan --confirm alacritty --working-directory .'
 desc = "Open terminal here"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 # Smart enter: enter for directory, open for file
 on = ["l"]
 run = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 # Smart enter: enter for directory, open for file
 on = ["<Enter>"]
 run = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"
 
 # search via fd (including git-ignored files)
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["<A-f>"]
 run = "search --via=fd --args='--no-ignore'"
 desc = "Search using fd with --no-ignore option"
 
 # toggle the preview pane
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = "T"
 run = "plugin toggle-pane min-preview"
 desc = "Show or hide the preview pane"
 
 # toggle the parent pane
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = "P"
 run = "plugin toggle-pane min-parent"
 desc = "Show or hide the parent pane"
