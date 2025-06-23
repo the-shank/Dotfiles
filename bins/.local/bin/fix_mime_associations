@@ -46,7 +46,7 @@ set_default "application/pdf" "org.kde.okular.desktop"
 set_default "inode/directory" "thunar.desktop"
 
 # audio/video
-set_default "audio/mpeg" "mpv.desktop"
-set_default "video/mp4" "mpv.desktop"
-set_default "video/x-matroska" "mpv.desktop"
-set_default "video/webm" "mpv.desktop"
+set_default "audio/mpeg" "vlc.desktop"
+set_default "video/mp4" "vlc.desktop"
+set_default "video/x-matroska" "vlc.desktop"
+set_default "video/webm" "vlc.desktop"
