@@ -49,3 +49,5 @@ path = ~/.gitconfig_private
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[remote "origin"]
+	fetch = +refs/heads/*:refs/remotes/origin/*
