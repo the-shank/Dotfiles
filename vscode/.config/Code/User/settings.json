@@ -32,60 +32,133 @@
   "vim.hlsearch": true,
   "vim.normalModeKeyBindings": [
     {
-      "before": [ "leader", "/" ],
-      "commands": [ "editor.action.commentLine" ]
+      "before": [
+        "leader",
+        "/"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
     },
     {
-      "before": [ "leader", "w" ],
+      "before": [
+        "leader",
+        "w"
+      ],
       "commands": [
         "workbench.action.files.save",
       ]
     },
     {
-      "before": [ "leader", "h" ],
-      "commands": [ ":nohl", ]
+      "before": [
+        "leader",
+        "h"
+      ],
+      "commands": [
+        ":nohl",
+      ]
     },
     {
-      "before": [ "<leader>", "<leader>" ],
-      "commands": [ "workbench.action.quickOpen" ]
+      "before": [
+        "<leader>",
+        "<leader>"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
     },
     {
-      "before": ["<leader>", "s", "s"],
-      "commands": ["workbench.action.gotoSymbol"]
+      "before": [
+        "<leader>",
+        "s",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.gotoSymbol"
+      ]
     },
     {
-      "before": ["<leader>", "s", "S"],
-      "commands": ["workbench.action.showAllSymbols"]
+      "before": [
+        "<leader>",
+        "s",
+        "S"
+      ],
+      "commands": [
+        "workbench.action.showAllSymbols"
+      ]
     },
     {
-      "before": ["g", "y"],
-      "commands": ["editor.action.goToTypeDefinition"]
+      "before": [
+        "g",
+        "y"
+      ],
+      "commands": [
+        "editor.action.goToTypeDefinition"
+      ]
     },
     {
-      "before": ["H"],
-      "commands": ["workbench.action.previousEditor"]
+      "before": [
+        "H"
+      ],
+      "commands": [
+        "workbench.action.previousEditor"
+      ]
     },
     {
-      "before": ["L"],
-      "commands": ["workbench.action.nextEditor"]
+      "before": [
+        "L"
+      ],
+      "commands": [
+        "workbench.action.nextEditor"
+      ]
     },
     {
-      "before": ["<leader>", "b", "d"],
-      "commands": ["workbench.action.closeActiveEditor"]
+      "before": [
+        "<leader>",
+        "b",
+        "d"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
     },
     {
-      "before": ["g", "r"],
-      "commands": ["editor.action.goToReferences"]
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.goToReferences"
+      ]
     },
     {
-      "before": ["<leader>", "c", "a"],
-      "commands": ["editor.action.quickFix"]
+      "before": [
+        "<leader>",
+        "c",
+        "a"
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ]
+    },
+    {
+      "before": ["[", "e"],
+      "commands": ["editor.action.marker.previousInFiles"]
+    },
+    {
+      "before": ["]", "e"],
+      "commands": ["editor.action.marker.nextInFiles"]
     }
   ],
   "vim.visualModeKeyBindings": [
     {
-      "before": [ "leader", "/" ],
-      "commands": [ "editor.action.commentLine" ]
+      "before": [
+        "leader",
+        "/"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
     },
   ],
   "editor.minimap.enabled": false,
@@ -250,5 +323,11 @@
   "gruvboxMaterial.italicComments": false,
   "gruvboxMaterial.highContrast": true,
   "gruvboxMaterial.lightContrast": "hard",
-  "terminal.integrated.inheritEnv": false
+  "terminal.integrated.inheritEnv": false,
+  "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+  "containers.environment": {
+    "DOCKER_HOST": "ssh://shank@purs3apple"
+  },
+  "remote.SSH.showLoginTerminal": true,
+  "remote.SSH.useLocalServer": false,
 }
