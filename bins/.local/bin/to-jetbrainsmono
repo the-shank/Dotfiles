@@ -11,5 +11,5 @@ sed -i -e 's/^family = "Noto Sans Mono"/# family = "Noto Sans Mono"/' $FILE
 sed -i -e 's/^# family = "JetBrainsMono"/family = "JetBrainsMono"/' $FILE
 sed -i -e 's/^style = "Medium"/# style = "Medium"/' $FILE
 sed -i -e 's/^# style = "Retina"/style = "Retina"/' $FILE
-sed -i -e 's/^y = /y = /' $FILE
-sed -i -e 's/^# y = 0/y = 0/' $FILE
+# sed -i -e 's/^y = /y = /' $FILE
+# sed -i -e 's/^# y = 0/y = 0/' $FILE
