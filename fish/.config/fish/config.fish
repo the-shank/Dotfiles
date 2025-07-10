@@ -608,4 +608,4 @@ fish_add_path /home/shank/.local/bin/exercism-3.5.4-linux-x86_64
 
 # sccache
 setenv SCCACHE_DIR /home/common/data/sccache
-setenv SCCACHE_CACHE_SIZE 50G
+setenv SCCACHE_CACHE_SIZE 10G
