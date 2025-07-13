@@ -3,8 +3,16 @@
 set -eu
 set -o pipefail
 
-devc=$1
+# if no arg is given, use fzf to pick up from the running containers
+if (($# == 0)); then
+  devc=$(docker container ls | tail +2 | awk '{print $NF}' | fzf)
+else
+  devc=$1
+fi
+echo ">> devc: ${devc}"
 
+set -x
 docker network disconnect bridge $devc
-# sleep 1
+sleep 1
 docker network connect bridge $devc
+set +x
