@@ -194,6 +194,7 @@ if [ -f $FILE ]; then
 fi
 FILE=$HOME/.config/gtk-3.0/settings.ini
 if [ -f $FILE ]; then
+  sed -i -e 's/gtk-theme-name=Arc-dark$/gtk-theme-name=Arc/' $FILE
   sed -i -e 's/gtk-application-prefer-dark-theme=1/gtk-application-prefer-dark-theme=0/' $FILE
   sed -i -e 's/gtk-cursor-theme-name=Qogir-dark$/gtk-cursor-theme-name=Qogir/' $FILE
 fi
