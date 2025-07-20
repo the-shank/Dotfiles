@@ -6,13 +6,17 @@ ObeyDRM=false
 [Core Performance]
 TextHinting=Enabled
 
+[Dlg Accessibility]
+RecolorBackground=226,217,208
+RecolorForeground=0,0,0
+
 [Dlg Presentation]
 SlidesBackgroundColor=46,52,54
 SlidesTransition=Random
 
 [Document]
-PaperColor=243,243,243
-RenderMode=InvertLumaSymmetric
+PaperColor=189,189,189
+RenderMode=Recolor
 
 [General]
 ShellOpenFileInTabs=true
