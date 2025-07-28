@@ -130,15 +130,18 @@ fi
 
 # alacritty
 FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml
+# everforest
 sed -i -e 's/everforest_light_soft/everforest_dark/' $FILE
 sed -i -e 's/everforest_light_medium/everforest_dark/' $FILE
 sed -i -e 's/everforest_light_hard/everforest_dark/' $FILE
 sed -i -e 's/everforest_light/everforest_dark/' $FILE
 sed -i -e 's/everforest_darker/everforest_dark/' $FILE
 sed -i -e 's/everforest_darkest/everforest_dark/' $FILE
+# catppuccin
 sed -i -e 's/catppuccin-latte/catppuccin-macchiato/' $FILE
 sed -i -e 's/catppuccin-mocha/catppuccin-macchiato/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-macchiato/' $FILE
+# tokyonight
 sed -i -e 's/tokyonight_day/tokyonight_storm/' $FILE
 sed -i -e 's/tokyonight_moon/tokyonight_storm/' $FILE
 sed -i -e 's/tokyonight_night/tokyonight_storm/' $FILE
