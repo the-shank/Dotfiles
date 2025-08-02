@@ -7,20 +7,33 @@ todark
 
 # alacritty
 FILE=$HOME/dotfiles/alacritty/.config/alacritty/alacritty.toml
+# everforest
 sed -i -e 's/everforest_light_soft/everforest_darkest/' $FILE
 sed -i -e 's/everforest_light_medium/everforest_darkest/' $FILE
 sed -i -e 's/everforest_light/everforest_darkest/' $FILE
 sed -i -e 's/everforest_darker/everforest_darkest/' $FILE
 sed -i -e 's/everforest_dark/everforest_darkest/' $FILE
+# catppuccin
 sed -i -e 's/catppuccin-latte/catppuccin-mocha/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-mocha/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-mocha/' $FILE
+# tokyonight
+sed -i -e 's/tokyonight_day/tokyonight_night/' $FILE
+sed -i -e 's/tokyonight_moon/tokyonight_night/' $FILE
+sed -i -e 's/tokyonight_storm/tokyonight_night/' $FILE
+sed -i -e 's/tokyonight_night/tokyonight_night/' $FILE
 
 # darker neovim
 FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/plugins/theme.lua
+# catppuccin
 sed -i -e 's/catppuccin-latte/catppuccin-mocha/' $FILE
 sed -i -e 's/catppuccin-frappe/catppuccin-mocha/' $FILE
 sed -i -e 's/catppuccin-macchiato/catppuccin-mocha/' $FILE
+# tokyonight
+sed -i -e 's/tokyonight-day/tokyonight-night/' $FILE
+sed -i -e 's/tokyonight-storm/tokyonight-night/' $FILE
+sed -i -e 's/tokyonight-moon/tokyonight-night/' $FILE
+sed -i -e 's/tokyonight-night/tokyonight-night/' $FILE
 FILE=$HOME/dotfiles/neovim/.local/share/nvim-lazyvim/lazy/everforest/autoload/everforest.vim
 sed -i -e "s|'bg0':        \['#272E33'|'bg0':        ['#1B1F22'|" $FILE
 sed -i -e "s|'bg0':        \['#232a2e'|'bg0':        ['#1B1F22'|" $FILE
