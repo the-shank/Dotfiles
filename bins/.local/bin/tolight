@@ -15,6 +15,7 @@
 # [x] tmux
 # [x] yazi
 # [ ] fish shell
+# [x] ghostty
 
 set -u
 set -o pipefail
@@ -236,7 +237,18 @@ fi
 # cargo-expand
 FILE=$HOME/dotfiles/cargo/.cargo/config.toml
 if [ -f $FILE ]; then
-  sed -i -e 's/theme = .*/theme = \"gruvbox-light\"'/ $FILE
+  sed -i -e 's/theme = .*/theme = \"gruvbox-light\"/' $FILE
+fi
+
+# ghostty
+FILE=$HOME/dotfiles/ghostty/.config/ghostty/config
+if [ -f $FILE ]; then
+  # theme
+  sed -i -e 's/^theme = gruvbox-material-dark-hard/# theme = gruvbox-material-dark-hard/' $FILE
+  sed -i -e 's/^# theme = GruvboxLightHard/theme = GruvboxLightHard/' $FILE
+  # font
+  sed -i -e 's/^font-family = JetBrains Mono Medium/# font-family = JetBrains Mono Medium'/ $FILE
+  sed -i -e 's/^# font-family = JetBrains Mono SemiBold/font-family = JetBrains Mono SemiBold'/ $FILE
 fi
 
 # # tmux
