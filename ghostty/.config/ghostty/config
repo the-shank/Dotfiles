@@ -51,9 +51,10 @@ font-feature = "dlig"
 font-feature = "clig"
 
 theme = gruvbox-material-dark-hard
+# theme = GruvboxLightHard
 
 # background-opacity = 0.95
 # background-blur = true
 
 # shell-integration = fish
-# window-decoration = false
+window-decoration = false

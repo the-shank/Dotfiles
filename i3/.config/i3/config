@@ -325,6 +325,7 @@ assign [class="Slack"] $ws9
 for_window [class="obsidian"] border pixel 2
 for_window [class="Logseq"] border pixel 2
 for_window [class="Evince"] border pixel 2
+for_window [class="ghostty"] border pixel 2
 for_window [class="Xfce4-terminal"] border pixel 2
 
 # switch to workspace with urgent window automatically
