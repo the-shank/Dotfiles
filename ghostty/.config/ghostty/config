@@ -58,3 +58,5 @@ theme = gruvbox-material-dark-hard
 
 # shell-integration = fish
 window-decoration = false
+
+unfocused-split-opacity = 0.95
