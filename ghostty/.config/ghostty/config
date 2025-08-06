@@ -61,3 +61,5 @@ theme = gruvbox-material-dark-hard
 window-decoration = false
 
 unfocused-split-opacity = 0.95
+
+clipboard-paste-protection = false
