@@ -62,6 +62,8 @@ window-decoration = false
 
 unfocused-split-opacity = 0.95
 
+clipboard-paste-protection = false
+
 keybind = ctrl+alt+h=goto_split:left
 keybind = ctrl+alt+j=goto_split:down
 keybind = ctrl+alt+k=goto_split:up

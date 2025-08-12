@@ -3,3 +3,9 @@
 [user]
 email = "shashanksharma21@gmail.com"
 name = "Shank"
+
+[snapshot]
+max-new-file-size = "200MiB"
+
+[aliases]
+lg = ["log", "-r", "::@", "-T", "builtin_log_oneline"]
