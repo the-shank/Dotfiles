@@ -17,3 +17,6 @@ pyrightconfig.json
 
 # temporary files created by `just`
 **/.just__*
+
+# temporary files (having .tmp extension)
+**/*.tmp
