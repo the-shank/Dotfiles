@@ -28,7 +28,8 @@ path = ~/.gitconfig_private
 [credential]
 	helper = store
 [pull]
-	rebase = true
+	rebase = false
+	ff-only = true
 [diff]
 	mnemonicPrefix = true
   tool = difftastic
