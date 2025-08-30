@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# set -x
 set -eu
 set -o pipefail
 
@@ -42,9 +43,14 @@ target=""
 check_for_target() {
   local args=("$@")
   for i in "${!args[@]}"; do
+    # echo ">> checking arg-${i} : ${args[i]}"
     if [ "${args[i]}" == "--lib" ]; then
       echo "--lib argument found"
-      target="--lib -- --test"
+      target="--lib --"
+      return
+    elif [ "${args[i]}" == "--tests" ]; then
+      echo "--tests argument found"
+      target="--tests --"
       return
     elif [ "${args[i]}" == "--test" ]; then
       local next_arg="${args[$((i + 1))]}"
