@@ -255,8 +255,9 @@ if [ -f $FILE ]; then
   sed -i -e 's/^# theme = gruvbox-material-dark-hard/theme = gruvbox-material-dark-hard/' $FILE
   sed -i -e 's/^theme = GruvboxLightHard/# theme = GruvboxLightHard/' $FILE
   # font
-  sed -i -e 's/^# font-family = JetBrains Mono Medium/font-family = JetBrains Mono Medium'/ $FILE
-  sed -i -e 's/^font-family = JetBrains Mono SemiBold/# font-family = JetBrains Mono SemiBold'/ $FILE
+  sed -i -e 's/^font-family = JetBrains Mono$/# font-family = JetBrains Mono/' $FILE
+  sed -i -e 's/^# font-family = JetBrains Mono Medium/font-family = JetBrains Mono Medium/' $FILE
+  sed -i -e 's/^font-family = JetBrains Mono SemiBold/# font-family = JetBrains Mono SemiBold/' $FILE
 fi
 
 # # tmux
