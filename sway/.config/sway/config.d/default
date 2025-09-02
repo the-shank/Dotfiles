@@ -230,3 +230,10 @@ set $powermenu ~/.config/sway/scripts/power_menu.sh
     # Screenshot the current display and pipe to swappy
     bindsym Shift+Print exec ~/.config/sway/scripts/screenshot_display.sh
 
+#
+# Notifications
+#
+    # Dismiss notification
+    bindsym $mod+semicolon exec makoctl dismiss
+    # Bring back the notification
+    bindsym $mod+Shift+semicolon exec makoctl restore
