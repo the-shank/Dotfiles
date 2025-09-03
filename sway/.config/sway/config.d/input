@@ -25,7 +25,7 @@ input type:keyboard {
 }
 
 input "2:10:TPPS/2_JYT_Synaptics_TrackPoint" {
-  pointer_accel -0.01
+  pointer_accel -0.02
   scroll_factor  0.3
 }
 
