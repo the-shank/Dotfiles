@@ -57,6 +57,9 @@ set $powermenu ~/.config/sway/scripts/power_menu.sh
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
+    # show/hide waybar
+    bindsym $mod+m exec killall -SIGUSR1 waybar
+
 #
 # Moving around:
 #
