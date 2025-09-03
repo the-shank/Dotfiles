@@ -97,7 +97,8 @@
             "deactivated": ""
         },
         "tooltip-format-activated": "Idle Inhibitor Activated",
-        "tooltip-format-deactivated": "Idle Inhibitor Deactivated"
+        "tooltip-format-deactivated": "Idle Inhibitor Deactivated",
+        "start-activated": true
     },
 
     "cpu": {
