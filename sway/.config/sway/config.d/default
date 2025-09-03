@@ -209,6 +209,7 @@ set $powermenu ~/.config/sway/scripts/power_menu.sh
 #
     # Launch the file explorer
     bindsym $mod+n exec thunar
+    bindsym $mod+Shift+Return exec thunar
 
     # Launch the browser
     bindsym $mod+o exec firefox

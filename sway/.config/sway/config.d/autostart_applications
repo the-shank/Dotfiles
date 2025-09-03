@@ -21,6 +21,10 @@ exec_always --no-startup-id foot --server
 # Autotiling
 exec autotiling
 
+# Misc.
+exec --no-startup-id megasync
+exec --no-startup-id syncthing
+
 # cliphist
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
