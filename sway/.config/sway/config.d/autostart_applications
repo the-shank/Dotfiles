@@ -9,7 +9,7 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
 # Idle configuration
-exec swayidle idlehint 1
+exec swayidle idlehint 60
 exec_always swayidle -w before-sleep "gtklock -d"
 
 # Desktop notifications
