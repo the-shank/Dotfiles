@@ -72,10 +72,11 @@
         "idle_inhibitor",
         "cpu",
         "memory",
-        "backlight",
+        // "backlight",
         "pulseaudio",
         "battery",
-        "clock",
+        "clock#India",
+        "clock#USA",
         "tray",
         "custom/power"
     ],
@@ -154,8 +155,32 @@
         "format-icons": ["", "", "", "", ""]
     },
 
-    "clock": {
-        "format": "󰅐 {:%H:%M}",
+    "clock#India": {
+        "timezone": "Asia/Kolkata",
+        // "format": "󰅐 {:%H:%M}",
+        "format": "󰅐 IND {:%b-%d %H:%M}",
+        "format-alt": "󰅐 {:%OI:%M %p}",
+        "tooltip-format": " {:%A %m/%d}\n\n<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "on-scroll": 1,
+            "format": {
+                "months":     "<span color='#ffead3'><b>{}</b></span>",
+                "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+            },
+        },
+        "actions": {
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        },
+    },
+
+    "clock#USA": {
+        // "format": "󰅐 {:%H:%M}",
+        // "format": "󰅐 WL {:%a %Y-%m-%d %H:%M}",
+        "format": "󰅐 WL {:%a: %b-%d %H:%M}",
         "format-alt": "󰅐 {:%OI:%M %p}",
         "tooltip-format": " {:%A %m/%d}\n\n<tt><small>{calendar}</small></tt>",
         "calendar": {
