@@ -24,6 +24,11 @@ input type:keyboard {
   repeat_rate 50
 }
 
+input "2:10:TPPS/2_JYT_Synaptics_TrackPoint" {
+  pointer_accel -0.01
+  scroll_factor  0.3
+}
+
 
 # Set keyboard layout and variant based on current system settings
 exec_always {
