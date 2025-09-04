@@ -57,6 +57,15 @@ abbr -a -g r3 'redshift -P -O 5000'
 abbr -a -g r4 'redshift -P -O 4500'
 abbr -a -g r5 'redshift -P -O 4000'
 
+# wlsunset (sway)
+abbr -a -g ss0 'pkill wlsunset; wlsunset -T 6500 -t 6499 &; disown %1'
+abbr -a -g sss 'pkill wlsunset; wlsunset -T 6300 -t 6299 &; disown %1'
+abbr -a -g ss1 'pkill wlsunset; wlsunset -T 6000 -t 5999 &; disown %1'
+abbr -a -g ss2 'pkill wlsunset; wlsunset -T 5500 -t 5499 &; disown %1'
+abbr -a -g ss3 'pkill wlsunset; wlsunset -T 5000 -t 4999 &; disown %1'
+abbr -a -g ss4 'pkill wlsunset; wlsunset -T 4500 -t 4499 &; disown %1'
+abbr -a -g ss5 'pkill wlsunset; wlsunset -T 4000 -t 3999 &; disown %1'
+
 # backlight
 abbr -a -g bl 'sudo -E xbacklight -set'
 abbr -a -g bl0 'sudo -E xbacklight -set 0' # backlight = 0% (minimum)
