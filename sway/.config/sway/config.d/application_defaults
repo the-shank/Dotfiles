@@ -24,3 +24,5 @@ for_window [app_id="Chromium"] inhibit_idle fullscreen
 
 for_window [app_id="Logseq"] border pixel 2
 for_window [app_id="Logseq"] floating enable, resize set width 95 ppt height 90 ppt, move absolute position center, move scratchpad
+
+for_window [app_id="blueberry.py"] floating enable
