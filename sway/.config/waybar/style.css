@@ -55,6 +55,8 @@
     background-color: @base1;
     font-family: JetBrainsMono Semibold;
     font-size: 12px;
+    margin: 0px;
+    padding: 0px;
 }
 
 /* Every modules */
@@ -69,8 +71,9 @@
 #battery,
 #clock,
 #tray {
-    padding:0.5rem 0.5rem;
-    margin: 1px 0px;
+    /* padding:0.5rem 0.5rem; */
+    padding:0rem 0.7rem;
+    margin: 0px 0px;
 }
 
 /* -----------------------------------------------------------------------------
@@ -83,13 +86,13 @@
 }
 
 #workspaces {
-    font-size:12px;
+    font-size:11px;
 }
 
 #workspaces button {
     border-radius: 5px;
     color: #eceff4;
-    padding: 0px 3px;
+    padding: 0px 0px;
     margin-right: 2px;
     margin-left: 2px;
 }
