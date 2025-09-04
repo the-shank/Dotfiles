@@ -609,8 +609,3 @@ fish_add_path /home/shank/.local/bin/exercism-3.5.4-linux-x86_64
 # sccache
 setenv SCCACHE_DIR /home/common/data/sccache
 setenv SCCACHE_CACHE_SIZE 10G
-
-# if on wayland, set special config for electron apps
-if test "$XDG_SESSION_TYPE" = wayland
-    setenv ELECTRON_OZONE_PLATFORM_HINT auto
-end
