@@ -26,3 +26,9 @@ for_window [app_id="Logseq"] border pixel 2
 for_window [app_id="Logseq"] floating enable, resize set width 95 ppt height 90 ppt, move absolute position center, move scratchpad
 
 for_window [app_id="blueberry.py"] floating enable
+
+assign [app_id="org.gnome.Boxes"] workspace number 4
+assign [app_id="Zotero"] workspace number 7
+assign [app_id="discord"] workspace number 8
+assign [app_id="Slack"] workspace number 9
+assign [app_id="obsidian"] workspace number 10
