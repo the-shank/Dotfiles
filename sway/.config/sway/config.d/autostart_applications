@@ -22,9 +22,10 @@ exec_always --no-startup-id foot --server
 exec autotiling
 
 # Misc.
-exec --no-startup-id megasync
 exec --no-startup-id syncthing
+exec --no-startup-id megasync
 exec --no-startup-id safeeyes
+exec --no-startup-id logseq
 
 # cliphist
 exec wl-paste --type text --watch cliphist store
