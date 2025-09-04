@@ -24,11 +24,12 @@ exec autotiling
 # Misc.
 exec --no-startup-id megasync
 exec --no-startup-id syncthing
+exec --no-startup-id safeeyes
 
 # cliphist
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
-     
+
 # Network Applet
 exec nm-applet --indicator
 
@@ -36,7 +37,7 @@ exec nm-applet --indicator
 exec sleep 2 && firewall-applet
 
 # Welcome App
-exec eos-welcome --startdelay=3
+# exec eos-welcome --startdelay=3
 
 # Sway Fader
 # exec python3 ~/.config/sway/scripts/swayfader.py
