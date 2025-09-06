@@ -122,6 +122,9 @@ set $powermenu ~/.config/sway/scripts/power_menu.sh
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 
+    # switch to previous workspace
+    bindsym $alt+tab workspace back_and_forth
+
 #
 # Layout stuff:
 #
