@@ -158,7 +158,7 @@
     "clock#India": {
         "timezone": "Asia/Kolkata",
         // "format": "󰅐 {:%H:%M}",
-        "format": "󰅐 <b>IND</b> {:%b-%d %H:%M}",
+        "format": "󰅐 <b>IN</b> {:%a %d/%b %H:%M}",
         "format-alt": "󰅐 {:%OI:%M %p}",
         "tooltip-format": " {:%A %m/%d}\n\n<tt><small>{calendar}</small></tt>",
         "calendar": {
@@ -180,7 +180,7 @@
     "clock#USA": {
         // "format": "󰅐 {:%H:%M}",
         // "format": "󰅐 WL {:%a %Y-%m-%d %H:%M}",
-        "format": "󰅐 <b>WL</b> {:%a: %b-%d %H:%M}",
+        "format": "󰅐 <b>WL</b> {:%a %d/%b %H:%M}",
         "format-alt": "󰅐 {:%OI:%M %p}",
         "tooltip-format": " {:%A %m/%d}\n\n<tt><small>{calendar}</small></tt>",
         "calendar": {
