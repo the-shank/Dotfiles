@@ -10,7 +10,10 @@ input type:touchpad {
 }
 
 # enable natural scroll for mouse
-input type:pointer natural_scroll enabled
+input type:pointer {
+  natural_scroll enabled
+  pointer_accel -0.22
+}
 
 input type:keyboard {
   # Enable numlock by default
