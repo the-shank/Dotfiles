@@ -227,6 +227,9 @@ set $powermenu ~/.config/sway/scripts/power_menu.sh
     bindsym $mod+Ctrl+x exec cliphist list | fuzzel -d --font "JetBrainsMono:size=11" -w 90 -l 30 -t cc9393ff -S cc9393ff -p "Select an entry to delete it from cliphist:"| cliphist delete
     # Note: you can clear all cliphist entries by running `cliphist wipe`
 
+    # dictionary
+    bindsym $mod+d exec --no-startup-id wl-paste --primary | xargs xfce4-dict
+
 #
 # Screenshots
 #
