@@ -265,6 +265,7 @@ abbr -a -g zj zellij
 # pacman/paru aliases
 abbr -a -g owns\? "paru --query --owns" # <path/to/file>
 abbr -a -g provides\? "paru --files" # <path/to/file>
+abbr -a -g paru "paru --review"
 
 # ssh -> useful in docker containers
 abbr -a -g fixssh "rm -r /tmp/ssh-agent.socket; ssh-agent -a /tmp/ssh-agent.socket >/dev/null; ssh-add"
