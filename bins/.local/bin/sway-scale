@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
+CONFIG=$HOME/dotfiles/sway/.config/sway/config.d/output
+
+curr_output=$(swaymsg --type get_outputs | jq -r '.[].name')
+echo ">> Current Output is : $curr_output"
+
+scale=$1
+echo ">> setting scale to $scale for $curr_output"
+
+sed -i -e "s/output ${curr_output} scale .*/output ${curr_output} scale $scale/" $CONFIG
+swaymsg reload
