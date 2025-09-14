@@ -66,6 +66,10 @@ abbr -a -g ss3 'pkill wlsunset; wlsunset -T 5000 -t 4999 &; disown %1'
 abbr -a -g ss4 'pkill wlsunset; wlsunset -T 4500 -t 4499 &; disown %1'
 abbr -a -g ss5 'pkill wlsunset; wlsunset -T 4000 -t 3999 &; disown %1'
 
+# sway-scale
+abbr -a -g ssc15 'sway-scale 1.5'
+abbr -a -g ssc16 'sway-scale 1.6'
+
 # backlight
 abbr -a -g bl 'sudo -E xbacklight -set'
 abbr -a -g bl0 'sudo -E xbacklight -set 0' # backlight = 0% (minimum)
