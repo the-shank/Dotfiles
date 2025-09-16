@@ -63,9 +63,9 @@ end
 # sets tools
 set --export EDITOR nvim
 set --export VISUAL nvim
-# set --export BROWSER firefox
-#set --export BROWSER vivaldi-stable
-set --export BROWSER zen-browser
+set --export BROWSER firefox
+# set --export BROWSER vivaldi-stable
+# set --export BROWSER zen-browser
 
 # nvim default config to use
 # set --export NVIM_APPNAME nvim-nvchad
