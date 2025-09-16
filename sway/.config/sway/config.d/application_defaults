@@ -24,7 +24,7 @@ for_window [class="Enpass"] floating enable
 for_window [app_id="firefox"] inhibit_idle fullscreen
 for_window [app_id="Chromium"] inhibit_idle fullscreen
 
-for_window [app_id="Logseq"] border pixel 2
+for_window [app_id="Logseq"] border pixel 3
 # for_window [app_id="Logseq"] floating enable, resize set width 95 ppt height 90 ppt, move absolute position center, move scratchpad
 assign [app_id="Logseq"] workspace number 10
 assign [app_id="Workflowy"] workspace number 10

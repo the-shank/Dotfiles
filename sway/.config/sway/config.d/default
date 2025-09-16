@@ -230,6 +230,9 @@ set $powermenu ~/.config/sway/scripts/power_menu.sh
     # dictionary
     bindsym $mod+d exec --no-startup-id wl-paste --primary | xargs xfce4-dict
 
+    # catfish
+    bindsym Ctrl+$alt+f exec --no-startup-id catfish
+
 #
 # Screenshots
 #
