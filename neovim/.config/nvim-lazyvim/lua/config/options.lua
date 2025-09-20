@@ -3,7 +3,7 @@
 -- Add any additional options here
 
 -- background
-vim.opt.background = "dark"
+vim.opt.background = "light"
 
 -- everforest theme : disable italic comment
 vim.g.everforest_disable_italic_comment = 1
@@ -25,9 +25,9 @@ vim.opt.conceallevel = 1
 -- gruvbox theme
 vim.g.gruvbox_material_enable_italic = false
 vim.g.gruvbox_material_disable_italic_comment = 1
-vim.g.gruvbox_material_inlay_hints_background = "none"
-vim.g.gruvbox_material_background = "hard"
-vim.g.gruvbox_material_foreground = "material"
+vim.g.gruvbox_material_inlay_hints_background = "dimmed"
+vim.g.gruvbox_material_background = "medium"
+vim.g.gruvbox_material_foreground = "mix"
 vim.g.gruvbox_material_better_performance = 1
 
 -- disable lazyvim animations

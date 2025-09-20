@@ -51,8 +51,8 @@ font-feature = "calt"
 font-feature = "dlig"
 font-feature = "clig"
 
-theme = gruvbox-material-dark-hard
-# theme = GruvboxLightHard
+# theme = gruvbox-material-dark-hard
+theme = GruvboxLight
 
 # background-opacity = 0.95
 # background-blur = true
