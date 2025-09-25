@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
+if [ "$XDG_SESSION_TYPE" = "wayland" ] || [ -n "$WAYLAND_DISPLAY" ]; then
+  # Running on Wayland (Sway)
+  exec /usr/bin/spotify --enable-features=UseOzonePlatform --ozone-platform=wayland "$@"
+else
+  # Running on X11 (i3)
+  exec /usr/bin/spotify "$@"
+fi
