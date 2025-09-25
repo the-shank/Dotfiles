@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
+if [ "$XDG_SESSION_TYPE" = "wayland" ] || [ -n "$WAYLAND_DISPLAY" ]; then
+    # Running on Wayland (Sway)
+    exec /usr/bin/slack --gtk-version=3 --enable-features=UseOzonePlatform --ozone-platform=wayland -s "$@"
+else
+    # Running on X11 (i3) 
+    exec /usr/bin/slack --gtk-version=3 -s "$@"
+fi
