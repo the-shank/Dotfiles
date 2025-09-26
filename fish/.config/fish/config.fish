@@ -389,13 +389,13 @@ abbr -a -g fix-keyserver "[ -d ~/.gnupg ] || mkdir ~/.gnupg ; cp /etc/pacman.d/g
 
 #fixes
 abbr -a -g fix-permissions "sudo chown -R $USER:$USER ~/.config ~/.local"
-abbr -a -g keyfix /usr/local/bin/arcolinux-fix-pacman-databases-and-keys
-abbr -a -g key-fix /usr/local/bin/arcolinux-fix-pacman-databases-and-keys
-abbr -a -g keys-fix /usr/local/bin/arcolinux-fix-pacman-databases-and-keys
-abbr -a -g fixkey /usr/local/bin/arcolinux-fix-pacman-databases-and-keys
-abbr -a -g fixkeys /usr/local/bin/arcolinux-fix-pacman-databases-and-keys
-abbr -a -g fix-key /usr/local/bin/arcolinux-fix-pacman-databases-and-keys
-abbr -a -g fix-keys /usr/local/bin/arcolinux-fix-pacman-databases-and-keys
+abbr -a -g keyfix $HOME/.local/bin/arcolinux-fix-pacman-databases-and-keys
+abbr -a -g key-fix $HOME/.local/bin/arcolinux-fix-pacman-databases-and-keys
+abbr -a -g keys-fix $HOME/.local/bin/arcolinux-fix-pacman-databases-and-keys
+abbr -a -g fixkey $HOME/.local/bin/arcolinux-fix-pacman-databases-and-keys
+abbr -a -g fixkeys $HOME/.local/bin/arcolinux-fix-pacman-databases-and-keys
+abbr -a -g fix-key $HOME/.local/bin/arcolinux-fix-pacman-databases-and-keys
+abbr -a -g fix-keys $HOME/.local/bin/arcolinux-fix-pacman-databases-and-keys
 abbr -a -g fix-sddm-config /usr/local/bin/arcolinux-fix-sddm-config
 abbr -a -g fix-pacman-conf /usr/local/bin/arcolinux-fix-pacman-conf
 abbr -a -g fix-pacman-keyserver /usr/local/bin/arcolinux-fix-pacman-gpg-conf
