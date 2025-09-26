@@ -214,7 +214,7 @@ if [ -f $FILE ]; then
   sed -i -e 's/gtk-application-prefer-dark-theme=0/gtk-application-prefer-dark-theme=1/' $FILE
   sed -i -e 's/gtk-cursor-theme-name=Qogir$/gtk-cursor-theme-name=Qogir-dark/' $FILE
 fi
-if [ $XDG_SESSION_TYPE = "x11" ]; then
+if [ -n "$XDG_SESSION_TYPE" ] && [ $XDG_SESSION_TYPE = "x11" ]; then
   killall -HUP xsettingsd || xsettingsd >/dev/null 2>&1 &
   i3-msg reload
 fi
