@@ -158,6 +158,7 @@ FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/config/options.lua
 sed -i -e 's/vim.opt.background = ".*"/vim.opt.background = "dark"/' $FILE
 sed -i -e 's/vim.g.everforest_background = ".*"/vim.g.everforest_background = "hard"/' $FILE
 sed -i -e 's/vim.g.gruvbox_material_inlay_hints_background = "dimmed"/vim.g.gruvbox_material_inlay_hints_background = "none"/' $FILE
+sed -i -e 's/vim.g.gruvbox_material_background = "medium"/vim.g.gruvbox_material_background = "hard"/' $FILE
 FILE=$HOME/dotfiles/neovim/.config/nvim-lazyvim/lua/plugins/theme.lua
 # catppuccin
 sed -i -e 's/catppuccin-latte/catppuccin-macchiato/' $FILE
@@ -203,7 +204,8 @@ if [ -f $FILE ]; then
 fi
 FILE=$HOME/.config/gtk-3.0/settings.ini
 if [ -f $FILE ]; then
-  sed -i -e 's/gtk-theme-name=Arc$/gtk-theme-name=Arc-dark/' $FILE
+  # sed -i -e 's/gtk-theme-name=Arc$/gtk-theme-name=Arc-dark/' $FILE
+  sed -i -e 's/gtk-theme-name=Qogir-Round$/gtk-theme-name=Qogir-Round-Dark/' $FILE
   sed -i -e 's/gtk-application-prefer-dark-theme=0/gtk-application-prefer-dark-theme=1/' $FILE
   sed -i -e 's/gtk-cursor-theme-name=Qogir$/gtk-cursor-theme-name=Qogir-dark/' $FILE
 fi
@@ -212,8 +214,10 @@ if [ -f $FILE ]; then
   sed -i -e 's/gtk-application-prefer-dark-theme=0/gtk-application-prefer-dark-theme=1/' $FILE
   sed -i -e 's/gtk-cursor-theme-name=Qogir$/gtk-cursor-theme-name=Qogir-dark/' $FILE
 fi
-killall -HUP xsettingsd || xsettingsd >/dev/null 2>&1 &
-i3-msg reload
+if [ $XDG_SESSION_TYPE = "x11" ]; then
+  killall -HUP xsettingsd || xsettingsd >/dev/null 2>&1 &
+  i3-msg reload
+fi
 
 # mousepad
 # ref: https://docs.xfce.org/apps/mousepad/start
@@ -253,7 +257,7 @@ FILE=$HOME/dotfiles/ghostty/.config/ghostty/config
 if [ -f $FILE ]; then
   # theme
   sed -i -e 's/^# theme = gruvbox-material-dark-hard/theme = gruvbox-material-dark-hard/' $FILE
-  sed -i -e 's/^theme = GruvboxLightHard/# theme = GruvboxLightHard/' $FILE
+  sed -i -e 's/^theme = Gruvbox Light/# theme = Gruvbox Light/' $FILE
   # font
   sed -i -e 's/^font-family = JetBrains Mono$/# font-family = JetBrains Mono/' $FILE
   sed -i -e 's/^# font-family = JetBrains Mono Medium/font-family = JetBrains Mono Medium/' $FILE
@@ -288,3 +292,4 @@ fi
 #     fish -c "source theme.fish"
 #   )
 # fi
+fish -c "fish_config theme choose Base16\ Default\ Dark && yes | fish_config theme save Base16\ Default\ Dark"
