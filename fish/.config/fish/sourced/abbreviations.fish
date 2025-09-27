@@ -67,13 +67,13 @@ abbr -a -g ss4 'pkill wlsunset; wlsunset -T 4500 -t 4499 &; disown %1'
 abbr -a -g ss5 'pkill wlsunset; wlsunset -T 4000 -t 3999 &; disown %1'
 
 # hyprsunset (hyprland)
-abbr -a -g hs0 'pkill hyprsunset; hyprsunset --temperature 6500 &; disown %1'
-abbr -a -g hss 'pkill hyprsunset; hyprsunset --temperature 6300 &; disown %1'
-abbr -a -g hs1 'pkill hyprsunset; hyprsunset --temperature 6000 &; disown %1'
-abbr -a -g hs2 'pkill hyprsunset; hyprsunset --temperature 5500 &; disown %1'
-abbr -a -g hs3 'pkill hyprsunset; hyprsunset --temperature 5000 &; disown %1'
-abbr -a -g hs4 'pkill hyprsunset; hyprsunset --temperature 4500 &; disown %1'
-abbr -a -g hs5 'pkill hyprsunset; hyprsunset --temperature 4000 &; disown %1'
+abbr -a -g hs0 'pkill hyprsunset; sleep 0.2; hyprsunset --temperature 6500 &; disown %1'
+abbr -a -g hss 'pkill hyprsunset; sleep 0.2; hyprsunset --temperature 6300 &; disown %1'
+abbr -a -g hs1 'pkill hyprsunset; sleep 0.2; hyprsunset --temperature 6000 &; disown %1'
+abbr -a -g hs2 'pkill hyprsunset; sleep 0.2; hyprsunset --temperature 5500 &; disown %1'
+abbr -a -g hs3 'pkill hyprsunset; sleep 0.2; hyprsunset --temperature 5000 &; disown %1'
+abbr -a -g hs4 'pkill hyprsunset; sleep 0.2; hyprsunset --temperature 4500 &; disown %1'
+abbr -a -g hs5 'pkill hyprsunset; sleep 0.2; hyprsunset --temperature 4000 &; disown %1'
 
 # sway-scale
 abbr -a -g ssc15 'sway-scale 1.5'
