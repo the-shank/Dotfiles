@@ -11,8 +11,10 @@
     "modules-left": [
         "custom/launcher",
         "sway/workspaces",
+        "hyprland/workspaces",
         "sway/mode",
-        "sway/window"
+        "sway/window",
+        "hyprland/window"
     ],
 
     "custom/launcher": {
@@ -37,12 +39,25 @@
         }
     },
 
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "sort-by-number": true,
+        "active-only": false
+    },
+
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>",
         "tooltip": false
     },
 
     "sway/window": {
+        "format": "{}",
+        //"all-outputs": true, // Active window shows only on active display when commented
+        "max-length": 120
+    },
+
+    "hyprland/window": {
         "format": "{}",
         //"all-outputs": true, // Active window shows only on active display when commented
         "max-length": 120
