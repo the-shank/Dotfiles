@@ -1,7 +1,7 @@
 [Appearance]
 BoldIntense=false
 ColorScheme=TokyoNightDay
-Font=NotoSansM Nerd Font Mono,10,-1,5,600,0,0,0,0,0,0,0,0,0,0,1,SemiBold
+Font=JetBrains Mono SemiBold,11,-1,5,600,0,0,0,0,0,0,0,0,0,0,1,Regular
 LineSpacing=0
 
 [General]

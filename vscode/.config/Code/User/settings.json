@@ -17,7 +17,7 @@
     "purs3apple": "linux"
   },
   // font
-  "editor.fontFamily": "Noto Sans Mono, JetBrains Mono, Codelia, SF Mono, FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
+  "editor.fontFamily": "JetBrains Mono, Noto Sans Mono, Codelia, SF Mono, FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
   "editor.fontSize": 13,
   "editor.fontWeight": "500",
   // integrated terminal
