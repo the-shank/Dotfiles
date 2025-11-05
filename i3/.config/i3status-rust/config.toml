@@ -13,17 +13,17 @@ icons = "awesome6"
 # full = " $title.str(max_w:40)  |"
 # short = " $title.str(max_w:20)  |"
 
-[[block]]
-block = "custom"
-command = ''' cat ~/.the-one-thing | tr "[:lower:]" "[:upper:]" | xargs -I{} echo " [ {} ] " '''
-watch_files = ["~/.the-one-thing"]
-interval = "once"
+# [[block]]
+# block = "custom"
+# command = ''' cat ~/.the-one-thing | tr "[:lower:]" "[:upper:]" | xargs -I{} echo " [ {} ] " '''
+# watch_files = ["~/.the-one-thing"]
+# interval = "once"
 
-[[block]]
-block = "tea_timer"
-format = " $icon {$minutes:$seconds |}"
-increment = 60
-done_cmd = "notify-send 'Timer Finished'"
+# [[block]]
+# block = "tea_timer"
+# format = " $icon {$minutes:$seconds |}"
+# increment = 60
+# done_cmd = "notify-send 'Timer Finished'"
 
 [[block]]
 block = "disk_space"
