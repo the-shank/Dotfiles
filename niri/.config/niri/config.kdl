@@ -539,7 +539,9 @@ binds {
     Alt+6 { focus-workspace 6; }
     Alt+7 { focus-workspace 7; }
     Alt+8 { focus-workspace 8; }
-    Alt+9 { focus-workspace 9; }
+    // Alt+9 { focus-workspace 9; }
+    Alt+9 { spawn "~/.config/niri/scripts/focus_window.sh" "Slack"; }
+    Alt+0 { spawn "~/.config/niri/scripts/focus_window.sh" "obsidian"; }
     Mod+Shift+1 { move-column-to-workspace 1; }
     Mod+Shift+2 { move-column-to-workspace 2; }
     Mod+Shift+3 { move-column-to-workspace 3; }
