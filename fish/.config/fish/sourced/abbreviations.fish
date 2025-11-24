@@ -75,6 +75,15 @@ abbr -a -g hs3 'pkill hyprsunset; sleep 0.2; hyprsunset --temperature 5000 &; di
 abbr -a -g hs4 'pkill hyprsunset; sleep 0.2; hyprsunset --temperature 4500 &; disown %1'
 abbr -a -g hs5 'pkill hyprsunset; sleep 0.2; hyprsunset --temperature 4000 &; disown %1'
 
+# gammastep (niri)
+abbr -a -g gs0 'pkill gammastep; sleep 0.1; gammastep -O 6500 &; disown %1'
+abbr -a -g gss 'pkill gammastep; sleep 0.1; gammastep -O 6300 &; disown %1'
+abbr -a -g gs1 'pkill gammastep; sleep 0.1; gammastep -O 6000 &; disown %1'
+abbr -a -g gs2 'pkill gammastep; sleep 0.1; gammastep -O 5500 &; disown %1'
+abbr -a -g gs3 'pkill gammastep; sleep 0.1; gammastep -O 5000 &; disown %1'
+abbr -a -g gs4 'pkill gammastep; sleep 0.1; gammastep -O 4500 &; disown %1'
+abbr -a -g gs5 'pkill gammastep; sleep 0.1; gammastep -O 4000 &; disown %1'
+
 # sway-scale
 abbr -a -g ssc15 'sway-scale 1.5'
 abbr -a -g ssc16 'sway-scale 1.6'
