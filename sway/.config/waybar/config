@@ -9,12 +9,14 @@
 // Configuration - modules-left
 
     "modules-left": [
-        "custom/launcher",
+        // "custom/launcher",
         "sway/workspaces",
         "hyprland/workspaces",
+        "niri/workspaces",
         "sway/mode",
         "sway/window",
-        "hyprland/window"
+        "hyprland/window",
+        "niri/window"
     ],
 
     "custom/launcher": {
@@ -40,6 +42,26 @@
     },
 
     "hyprland/workspaces": {
+        // "format": "{name}",
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "on-click": "activate",
+        "sort-by-number": true,
+        "active-only": false,
+        "format-icons": {
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10"
+        }
+    },
+
+    "niri/workspaces": {
         // "format": "{name}",
         "disable-scroll": true,
         "all-outputs": true,
