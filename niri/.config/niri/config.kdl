@@ -103,7 +103,7 @@ output "eDP-1" {
     mode "2560x1600"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 1.25
+    scale 1.3
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -543,16 +543,21 @@ binds {
     // For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
     // will all refer to the 3rd workspace.
     Alt+1 { focus-workspace 1; }
-    Alt+2 { focus-workspace 2; }
-    Alt+3 { focus-workspace 3; }
+    // Alt+2 { focus-workspace 2; }
+    Alt+2 { spawn "~/.config/niri/scripts/focus_window.sh" "firefox"; }
+    // Alt+3 { focus-workspace 3; }
+    Alt+3 { spawn "~/.config/niri/scripts/focus_window.sh" "thunar"; }
     Alt+4 { focus-workspace 4; }
     Alt+5 { focus-workspace 5; }
     Alt+6 { focus-workspace 6; }
-    Alt+7 { focus-workspace 7; }
-    Alt+8 { focus-workspace 8; }
+    // Alt+7 { focus-workspace 7; }
+    Alt+7 { spawn "~/.config/niri/scripts/focus_window.sh" "Zotero"; }
+    // Alt+8 { focus-workspace 8; }
+    Alt+8 { spawn "~/.config/niri/scripts/focus_window.sh" "discord"; }
     // Alt+9 { focus-workspace 9; }
     Alt+9 { spawn "~/.config/niri/scripts/focus_window.sh" "Slack"; }
     Alt+0 { spawn "~/.config/niri/scripts/focus_window.sh" "obsidian"; }
+    Alt+W { focus-workspace "W"; }
     Mod+Shift+1 { move-column-to-workspace 1; }
     Mod+Shift+2 { move-column-to-workspace 2; }
     Mod+Shift+3 { move-column-to-workspace 3; }
