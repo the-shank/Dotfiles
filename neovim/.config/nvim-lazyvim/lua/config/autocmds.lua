@@ -49,6 +49,14 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 --   end,
 -- })
 
+-- disable autoformat for markdown files
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "markdown" },
+  callback = function()
+    vim.b.autoformat = false
+  end,
+})
+
 -- vifm
 vim.api.nvim_create_autocmd({ "BufReadPost", "BufEnter" }, {
   group = augroup("vifmrc_open"),
