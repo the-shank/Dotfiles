@@ -555,7 +555,8 @@ binds {
     Alt+3 { spawn "~/.config/niri/scripts/focus_window.sh" "thunar"; }
     Alt+4 { focus-workspace 4; }
     Alt+5 { focus-workspace 5; }
-    Alt+6 { focus-workspace 6; }
+    // Alt+6 { focus-workspace 6; }
+    Alt+6 { spawn "~/.config/niri/scripts/focus_window.sh" "ncspot"; }
     // Alt+7 { focus-workspace 7; }
     Alt+7 { spawn "~/.config/niri/scripts/focus_window.sh" "Zotero"; }
     // Alt+8 { focus-workspace 8; }
