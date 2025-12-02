@@ -499,6 +499,9 @@ abbr -a -g undopush "git push -f origin HEAD^:master"
 # MY ABBREVIATIONS ---------------------------------
 source ~/.config/fish/sourced/abbreviations.fish
 
+# notify on long running task completion
+source ~/.config/fish/sourced/notify_on_long_running.fish
+
 # map caps to escape
 # setxkbmap -option caps:escape
 
