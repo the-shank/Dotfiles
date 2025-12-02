@@ -1,4 +1,5 @@
 function notify_on_long_running --on-event fish_postexec
+    set -l last_status $status
     set -l threshold 5000
 
     # Ignored bins
@@ -37,10 +38,14 @@ function notify_on_long_running --on-event fish_postexec
 
     if test $CMD_DURATION -gt $threshold
         set -l status_msg Success
-        if test $status -ne 0
+        if test $last_status -ne 0
             set status_msg Failed
         end
 
-        notify-send "Task Finished ($status_msg)" "$argv" --icon utilities-terminal
+        if type -q notify-send
+            notify-send "Task Finished ($status_msg)" "$argv" --icon utilities-terminal
+        else
+            send_slack_notification.sh "$status_msg | $argv"
+        end
     end
 end
