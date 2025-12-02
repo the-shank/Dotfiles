@@ -14,7 +14,7 @@ function notify_on_long_running --on-event fish_postexec
         # multiplexers
         tmux zellij screen \
         # file managers
-        ranger yazi nnn lf mc \
+        ranger y yazi nnn lf mc \
         # interactive
         lazygit lazydocker python ipython fzf
     set -l cmd_clean (string replace -r '^sudo\s+' '' -- $argv[1])
