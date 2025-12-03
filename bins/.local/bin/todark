@@ -16,6 +16,7 @@
 # [x] yazi
 # [ ] fish shell
 # [x] ghostty
+# [x] foot
 
 set -u
 set -o pipefail
@@ -264,6 +265,17 @@ if [ -f $FILE ]; then
   sed -i -e 's/^font-family = JetBrains Mono$/# font-family = JetBrains Mono/' $FILE
   sed -i -e 's/^# font-family = JetBrains Mono Medium/font-family = JetBrains Mono Medium/' $FILE
   sed -i -e 's/^font-family = JetBrains Mono SemiBold/# font-family = JetBrains Mono SemiBold/' $FILE
+fi
+
+# foot
+FILE=$HOME/dotfiles/foot/.config/foot/foot.ini
+if [ -f $FILE ]; then
+  # theme
+  sed -i -e 's|^# include=/home/shank/.config/foot/gruvbox-material-dark-hard|include=/home/shank/.config/foot/gruvbox-material-dark-hard|' $FILE
+  sed -i -e 's|^include=/usr/share/foot/themes/gruvbox-light|# include=/usr/share/foot/themes/gruvbox-light|' $FILE
+  # font
+  sed -i -e 's|^# font=JetBrains Mono:size|font=JetBrains Mono:size|' $FILE
+  sed -i -e 's|^font=JetBrains Mono:weight=SemiBold|# font=JetBrains Mono:weight=SemiBold|' $FILE
 fi
 
 # # tmux
