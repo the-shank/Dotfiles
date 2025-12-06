@@ -7,7 +7,7 @@ function notify_on_long_running --on-event fish_postexec
         # text editors
         nvim vim vi nano helix hx \
         # pagers & documentation
-        man less \
+        man less bat \
         # remote & shells
         ssh telnet \
         # system monitors
