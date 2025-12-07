@@ -17,7 +17,7 @@ function notify_on_long_running --on-event fish_postexec
         # file managers
         ranger y yazi nnn lf mc \
         # interactive
-        lazygit lazydocker python ipython fzf git rga-fzf
+        lazygit lazydocker python ipython fzf git rga-fzf ldconfig
     set -l cmd_clean (string replace -r '^sudo\s+' '' -- $argv[1])
     set -l cmd_name (string split -f1 " " -- $cmd_clean)
     if contains -- $cmd_name $ignored_bins
