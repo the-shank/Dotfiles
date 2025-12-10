@@ -9,7 +9,7 @@ function notify_on_long_running --on-event fish_postexec
         # pagers & documentation
         man less bat \
         # remote & shells
-        ssh telnet \
+        ssh telnet ssh-add \
         # system monitors
         top htop btop nvtop iotop glances \
         # multiplexers
