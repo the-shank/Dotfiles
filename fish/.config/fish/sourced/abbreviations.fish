@@ -88,6 +88,11 @@ abbr -a -g gs5 'pkill gammastep; sleep 0.1; gammastep -O 4000 &; disown %1'
 abbr -a -g ssc15 'sway-scale 1.5'
 abbr -a -g ssc16 'sway-scale 1.6'
 
+# kanshi-scale
+abbr -a -g ksc40 'kanshi-scale 1.40'
+abbr -a -g ksc33 'kanshi-scale 1.33'
+abbr -a -g ksc25 'kanshi-scale 1.25'
+
 # backlight
 abbr -a -g bl 'sudo -E xbacklight -set'
 abbr -a -g bl0 'sudo -E xbacklight -set 0' # backlight = 0% (minimum)

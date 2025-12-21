@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -euo pipefail
+
+CONFIG=$HOME/.config/kanshi/config
+
+scale=$1
+
+# check format
+if ! [[ $scale =~ ^1\.[0-9]{2}$ ]]; then
+  echo "[!] Error: Scale must be in format 1.xx" >&2
+  exit 1
+fi
+
+echo ">> setting scale to $scale for eDP-1"
+sed -i -e "s/output eDP-1 enable mode 2560x1600 scale 1\.[0-9][0-9]/output eDP-1 enable mode 2560x1600 scale $scale/" $CONFIG
+
+! timeout 1s kanshi 2>&1 >/dev/null
