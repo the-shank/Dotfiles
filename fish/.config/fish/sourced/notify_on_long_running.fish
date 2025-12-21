@@ -18,7 +18,7 @@ function notify_on_long_running --on-event fish_postexec
         ranger y yazi nnn lf mc \
         # interactive
         lazygit lazydocker python ipython fzf git rga-fzf ldconfig fg \
-        gdu cdh
+        gdu cdh ncspot
     set -l cmd_clean (string replace -r '^sudo\s+' '' -- $argv[1])
     set -l cmd_name (string split -f1 " " -- $cmd_clean)
     if contains -- $cmd_name $ignored_bins
