@@ -91,6 +91,7 @@ abbr -a -g ssc16 'sway-scale 1.6'
 # kanshi-scale
 abbr -a -g ksc40 'kanshi-scale 1.40'
 abbr -a -g ksc33 'kanshi-scale 1.33'
+abbr -a -g ksc30 'kanshi-scale 1.30'
 abbr -a -g ksc25 'kanshi-scale 1.25'
 
 # backlight
