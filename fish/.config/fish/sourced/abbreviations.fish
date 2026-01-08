@@ -321,3 +321,9 @@ abbr -a -g ft-mono-light "fish_config theme choose Mono\ Lace && yes | fish_conf
 # send slack notificaiton
 abbr -a -g ssln "send_slack_notification.sh"
 abbr -a -g slnd "send_slack_notification.sh done"
+
+# processes that can take a lot of cpu
+abbr -a -g cargo "nice cargo"
+abbr -a -g make "nice make"
+abbr -a -g cmake "nice cmake"
+abbr -a -g ninja "nice ninja"
