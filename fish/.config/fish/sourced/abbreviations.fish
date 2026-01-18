@@ -93,6 +93,8 @@ abbr -a -g ksc40 'kanshi-scale 1.40'
 abbr -a -g ksc33 'kanshi-scale 1.33'
 abbr -a -g ksc30 'kanshi-scale 1.30'
 abbr -a -g ksc25 'kanshi-scale 1.25'
+abbr -a -g ksc20 'kanshi-scale 1.20'
+abbr -a -g ksc10 'kanshi-scale 1.10'
 
 # backlight
 abbr -a -g bl 'sudo -E xbacklight -set'
