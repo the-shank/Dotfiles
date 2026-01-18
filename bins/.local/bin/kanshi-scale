@@ -14,5 +14,11 @@ fi
 
 echo ">> setting scale to $scale for eDP-1"
 sed -i -e "s/output eDP-1 enable mode 2560x1600 scale 1\.[0-9][0-9]/output eDP-1 enable mode 2560x1600 scale $scale/" $CONFIG
+sed -i -e "s/output eDP-1 enable mode 2560x1440 scale 1\.[0-9][0-9]/output eDP-1 enable mode 2560x1440 scale $scale/" $CONFIG
+sed -i -e "s/output eDP-1 enable mode 1920x1080 scale 1\.[0-9][0-9]/output eDP-1 enable mode 1920x1080 scale $scale/" $CONFIG
+
+echo ">> setting scale to $scale for DP-1"
+sed -i -e "s/output DP-1 enable mode 2560x1600 scale 1\.[0-9][0-9]/output DP-1 enable mode 2560x1600 scale $scale/" $CONFIG
+sed -i -e "s/output DP-1 enable mode 2560x1440 scale 1\.[0-9][0-9]/output DP-1 enable mode 2560x1440 scale $scale/" $CONFIG
 
 ! timeout 1s kanshi 2>&1 >/dev/null
