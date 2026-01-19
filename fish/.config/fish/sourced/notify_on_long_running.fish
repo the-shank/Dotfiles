@@ -5,7 +5,7 @@ function notify_on_long_running --on-event fish_postexec
     # Ignored bins
     set -l ignored_bins \
         # text editors
-        nvim vim vi nano helix hx \
+        nvim vim vi nano helix hx xed \
         # pagers & documentation
         man less bat \
         # remote & shells
