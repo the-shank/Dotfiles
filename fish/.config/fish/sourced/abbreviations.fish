@@ -314,7 +314,7 @@ abbr -a -g ft-tokyo-day "fish_config theme choose TokyoNight\ Day && yes | fish_
 abbr -a -g ft-tokyo-storm "fish_config theme choose TokyoNight\ Storm && yes | fish_config theme save TokyoNight\ Storm"
 abbr -a -g ft-b16-eighties "fish_config theme choose Base16\ Eighties && yes | fish_config theme save Base16\ Eighties"
 abbr -a -g ft-b16-dark "fish_config theme choose Base16\ Default\ Dark && yes | fish_config theme save Base16\ Default\ Dark"
-abbr -a -g ft-solarized-light "fish_config theme choose Solarized\ Light && yes | fish_config theme save Solarized\ Light"
+abbr -a -g ft-solarized-light "fish_config theme choose solarized && yes | fish_config theme save solarized"
 abbr -a -g ft-mono-light "fish_config theme choose Mono\ Lace && yes | fish_config theme save Mono\ Lace"
 
 # cmake - throw errors for undefined variables
