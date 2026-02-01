@@ -67,7 +67,7 @@ input {
     trackpoint {
         // off
         natural-scroll
-        accel-speed -0.15
+        accel-speed -0.21
         // accel-profile "flat"
         // scroll-method "on-button-down"
         // scroll-button 273
@@ -91,7 +91,7 @@ input {
 // Remember to uncomment the node by removing "/-"!
 output "eDP-1" {
     mode "2560x1600"
-    scale 1.3
+    scale 1.25
     transform "normal"
 }
 

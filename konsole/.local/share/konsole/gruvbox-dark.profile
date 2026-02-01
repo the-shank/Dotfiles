@@ -2,7 +2,7 @@
 BoldIntense=false
 ColorScheme=Gruvbox Material Hard Dark
 DimmValue=20
-Font=JetBrains Mono Medium,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Regular
+Font=Codelia,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 LineSpacing=0
 
 [General]
