@@ -65,6 +65,16 @@
         "command": "editor.action.showHover",
         "when": "editorTextFocus && vim.mode == 'Normal'"
     },
+    {
+        "key": "shift+alt+t",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
     // NOTE: the following will interfere with the <leader><leader> keybinding for quickOpen
     // {
     //     "key": "space b p",
