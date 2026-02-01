@@ -1,7 +1,7 @@
 [Appearance]
 BoldIntense=false
 ColorScheme=TokyoNightStorm
-Font=JetBrains Mono SemiBold,11,-1,5,600,0,0,0,0,0,0,0,0,0,0,1,Regular
+Font=JetBrains Mono [JB  ],12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 LineSpacing=0
 
 [General]

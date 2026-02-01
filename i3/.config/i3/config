@@ -50,8 +50,8 @@ bindsym $mod+y border pixel 2
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font xft:Noto Sans Bold 11
-font xft:Rubik, FontAwesome Medium 10
-font pango:Rubik, FontAwesome Bold 10
+font xft:Rubik, FontAwesome Medium 12
+font pango:Rubik, FontAwesome Bold 12
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -428,6 +428,7 @@ exec_always --no-startup-id fix_xcursor
 # exec --no-startup-id obsidian &
 exec --no-startup-id megasync &
 exec --no-startup-id syncthing &
+exec --no-startup-id dunst &
 # exec --no-startup-id dropbox &
 # exec --no-startup-id i3-msg 'workspace 1:I; exec xfce4-terminal' #=> NOT WORKING
 # exec --no-startup-id i3-msg 'exec firefox -P shank.default'
@@ -469,7 +470,7 @@ bar {
     # font pango: Iosevka Nerd Font, FontAwesome Medium 12
     # font pango: FiraCode Nerd Font, FontAwesome Medium 10
     # font pango: FiraSans, FontAwesome Medium 11
-    font pango: Rubik, FontAwesome 10
+    font pango: Rubik, FontAwesome 12
     # font pango: NotoSansM Nerd Font Mono, FontAwesome SemiCondensed Medium 11
 	i3bar_command i3bar
 	# status_command i3status
@@ -686,7 +687,7 @@ bindsym $mod+shift+x exec i3lock --fill --image ~/Sync/Wallpapers/wallhaven-3lrz
 # exec_always --no-startup-id QT_AUTO_SCREEN_SCALE_FACTOR=1 copyq --start-server &
 
 # disable touchpad
-exec --no-startup-id xinput disable "ELAN0686:00 04F3:320D Touchpad"
+# exec --no-startup-id xinput disable "ELAN0686:00 04F3:320D Touchpad"
 
 # xsettingsd
 exec --no-startup-id xsettingsd

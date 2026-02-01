@@ -3,4 +3,4 @@ debug = true
 # incremental = true
 
 [expand]
-theme = "gruvbox-dark"
+theme = "gruvbox-light"

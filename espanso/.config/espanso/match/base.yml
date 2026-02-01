@@ -199,3 +199,6 @@ matches:
         type: shell
         params:
           cmd: "echo `date --date=\"next month\" \"+%Y-%m-%d\"`"
+
+  - trigger: ":bsdh"
+    replace: " Be sure about what you say. Do not halluciante as that can land me in trouble."

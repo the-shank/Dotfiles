@@ -17,6 +17,7 @@ Mouse forward button action=0
 Open New Tab To The Right Of Current=false
 Output History Limit=100
 Output With Date=false
+PinnedDocuments=
 Quickopen Filter Mode=0
 Quickopen List Mode=true
 Recent File List Entry Count=10
@@ -47,11 +48,11 @@ widgetStyle=qt6ct-style
 [KTextEditor Renderer]
 Animate Bracket Matching=false
 Auto Color Theme Selection=false
-Color Theme=gruvbox Dark
+Color Theme=Breeze Dark
 Line Height Multiplier=1
 Show Indentation Lines=false
 Show Whole Bracket Expression=false
-Text Font=JetBrains Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+Text Font=JetBrains Mono,12,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
 Text Font Features=
 Word Wrap Marker=false
 
@@ -67,6 +68,7 @@ Bracket Match Preview=false
 Chars To Enclose Selection=<>(){}[]'"
 Cycle Through Bookmarks=true
 Default Mark Type=1
+Disable current line highlight if inactive=false
 Dynamic Word Wrap=true
 Dynamic Word Wrap Align Indent=80
 Dynamic Word Wrap At Static Marker=false
@@ -78,6 +80,7 @@ Enter To Insert Completion=true
 Fold First Line=false
 Folding Bar=true
 Folding Preview=true
+Hide cursor if inactive=false
 Icon Bar=false
 Input Mode=0
 Keyword Completion=true
@@ -117,8 +120,11 @@ Word Completion=true
 Word Completion Minimal Word Length=3
 Word Completion Remove Tail=true
 
-[KTextEditor::Search]
-Search History=theme
+[Kate Print Settings][Margins]
+bottom=4.94
+left=4.94
+right=4.94
+top=4.94
 
 [Konsole]
 AutoSyncronizeMode=0
@@ -129,13 +135,76 @@ RunPrefix=
 SetEditor=false
 
 [MainWindow]
-1707x1067 screen: Height=1036
-1707x1067 screen: Width=561
+1462x914 screen: Height=867
+1462x914 screen: Width=722
+1463x914 screen: Height=441
+1463x914 screen: Width=727
+1463x914 screen: Window-Maximized=true
+1575x985 screen: Height=476
+1575x985 screen: Width=783
+1600x1000 screen: Height=475
+1600x1000 screen: Width=789
+1600x1000 screen: Window-Maximized=true
+1706x1066 screen: Height=1026
+1706x1066 screen: Width=842
+1707x1067 screen: Height=1040
+1707x1067 screen: Width=849
 1707x960 screen: Height=306
 1707x960 screen: Width=505
+1829x1143 screen: Height=1102
+1829x1143 screen: Width=905
+1920x1200 screen: Height=1160
+1920x1200 screen: Width=1270
+1932x1208 screen: Height=1166
+1932x1208 screen: Width=956
+1969x1231 screen: Height=1189
+1969x1231 screen: Width=975
+2048x1280 screen: Height=1237
+2048x1280 screen: Width=1014
+2133x1333 screen: Height=1291
+2133x1333 screen: Width=1057
+2400x1350 screen: Window-Maximized=true
+2560x1440 screen: Height=1413
+2560x1440 screen: Width=1276
+2560x1440 screen: Window-Maximized=true
+2793x1571 screen: Height=511
+2793x1571 screen: Width=1392
+3491x1964 screen: Height=1921
+3491x1964 screen: Width=1735
+
+[Printing][HeaderFooter]
+FooterBackground=211,211,211
+FooterBackgroundEnabled=false
+FooterEnabled=true
+FooterForeground=0,0,0
+FooterFormatCenter=
+FooterFormatLeft=
+FooterFormatRight=%U
+HeaderBackground=211,211,211
+HeaderBackgroundEnabled=false
+HeaderEnabled=true
+HeaderFooterFont=JetBrains Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+HeaderForeground=0,0,0
+HeaderFormatCenter=%f
+HeaderFormatLeft=%y
+HeaderFormatRight=%p
+
+[Printing][Layout]
+BackgroundColorEnabled=false
+BoxColor=invalid
+BoxEnabled=false
+BoxMargin=6
+BoxWidth=1
+ColorScheme=Printing
+Font=JetBrains Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+
+[Printing][Text]
+DontPrintFoldedCode=true
+Legend=false
+LineNumbers=false
 
 [UiSettings]
-ColorScheme=KvArcDark
+ColorScheme=Arc
 
 [filetree]
 editShade=183,220,246
@@ -152,12 +221,13 @@ viewShade=211,190,222
 AllowedServerCommandLines=
 AutoHover=true
 AutoImport=true
-BlockedServerCommandLines=/home/shank/.cargo/bin/rust-analyzer,/usr/bin/clangd -log=error --background-index --limit-results=500 --completion-style=bundled,/usr/bin/pylsp --check-parent-process,/usr/bin/texlab
+BlockedServerCommandLines=/home/shank/.cargo/bin/rust-analyzer,/usr/bin/bash-language-server start,/usr/bin/clangd -log=error --background-index --limit-results=500 --completion-style=bundled,/usr/bin/pylsp --check-parent-process,/usr/bin/texlab
 CompletionDocumentation=true
 CompletionParens=true
 Diagnostics=true
 FormatOnSave=false
 HighlightGoto=true
+HighlightSymbol=true
 IncrementalSync=false
 InlayHints=false
 Messages=true

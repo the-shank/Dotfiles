@@ -6,3 +6,6 @@ set scroll-step 120
 
 # enable synctex
 set synctex true
+
+# change background color in dark mode
+set default-bg "#fffbef"

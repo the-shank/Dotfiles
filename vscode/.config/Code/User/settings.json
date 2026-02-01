@@ -1,11 +1,10 @@
 {
   // "codeQL.cli.executablePath": "/home/shank/code/applications/codeql-home/codeql/codeql",
-  "workbench.colorTheme": "Gruvbox Material Dark",
+  "workbench.colorTheme": "Gruvbox Material Light",
   "workbench.tree.indent": 16,
   "window.menuBarVisibility": "toggle",
   "editor.lineNumbers": "relative",
   "security.workspace.trust.untrustedFiles": "open",
-  "remote.SSH.useLocalServer": false,
   "remote.SSH.remotePlatform": {
     "purs3apple.ecn.purdue.edu": "linux",
     "optiplex": "linux",
@@ -14,15 +13,18 @@
     "mc19.cs.purdue.edu": "linux",
     "mc20.cs.purdue.edu": "linux",
     "optiplex7010": "linux",
-    "purs3apple": "linux"
+    "purs3apple": "linux",
+    "gpu.scholar.rcac.purdue.edu": "linux"
   },
   // font
   "editor.fontFamily": "JetBrains Mono, Noto Sans Mono, Codelia, SF Mono, FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
-  "editor.fontSize": 13,
+  "editor.fontSize": 15,
+  // "editor.fontWeight": "450",
   "editor.fontWeight": "500",
   // integrated terminal
   "terminal.integrated.scrollback": 100000,
-  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontSize": 14,
+  // "terminal.integrated.fontWeight": "450",
   "terminal.integrated.fontWeight": "500",
   "terminal.integrated.lineHeight": 0.9,
   // vim keybindings
@@ -322,7 +324,6 @@
   "gruvboxMaterial.darkContrast": "hard",
   "gruvboxMaterial.italicComments": false,
   "gruvboxMaterial.highContrast": true,
-  "gruvboxMaterial.lightContrast": "hard",
   "terminal.integrated.inheritEnv": false,
   "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
   "containers.environment": {

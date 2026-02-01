@@ -16,12 +16,13 @@ SlidesTransition=Random
 
 [Document]
 PaperColor=189,189,189
-RenderMode=Recolor
+RenderMode=InvertLumaSymmetric
 
 [General]
 MaxRecentItems=20
 
 [Main View]
+ShowLeftPanel=false
 SplitterSizes=431,1379
 
 [Nav Panel]

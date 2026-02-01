@@ -31,7 +31,7 @@
 #
 # # Any line beginning with a # is a comment. It's not possible to put
 # # a comment after a config option, since it would be interpreted as a
-# # part of the value. For example, this will have a value of "#123abc":
+# # part of the value. For exampleq this will have a value of "#123abc":
 # background = #123abc
 #
 # # Empty values are used to reset config keys to default.
@@ -42,10 +42,31 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-font-size = 10
+font-size = 12
+
+# font-family = Myna
+# font-family = Codelia Regular
+# font-family = Codelia Medium
 # font-family = JetBrains Mono
-font-family = JetBrains Mono Medium
-# font-family = JetBrains Mono SemiBold
+# font-family = JetBrains Mono Medium
+font-family = JetBrains Mono SemiBold
+# font-family = Noto Sans Mono
+# font-family = Noto Sans Mono Medium
+# font-family = Google Sans Code
+# font-family = Google Sans Code Medium
+# font-family = Google Sans Code SemiBold
+# font-family = Iosevka Term Medium
+# font-family = IosevkaTerm NF Medium
+# font-family = Recursive
+# font-family = Recursive Medium
+
+# font-family = Pragmasevka
+# font-family = Pragmasevka SemiBold
+# adjust-cell-height = 15%
+
+# font-family = Rec Mono Duotone
+# adjust-cell-height = 10%
+
 font-feature = "liga"
 font-feature = "calt"
 font-feature = "dlig"
@@ -69,4 +90,4 @@ keybind = ctrl+alt+j=goto_split:down
 keybind = ctrl+alt+k=goto_split:up
 keybind = ctrl+alt+l=goto_split:right
 
-mouse-scroll-multiplier = 1
+mouse-scroll-multiplier = 0.2

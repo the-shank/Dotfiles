@@ -1,13 +1,10 @@
 MenuBar=Disabled
 
 [Desktop Entry]
-DefaultProfile=gruvbox-dark.profile
+DefaultProfile=tokyonight-storm.profile
 
 [General]
 ConfigVersion=1
-
-[MainWindow]
-ToolBarsMovable=Disabled
 
 [Shortcut Schemes]
 Current Scheme=Default

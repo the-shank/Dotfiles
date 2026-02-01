@@ -3,10 +3,13 @@
   "IS_MAXIMIZED": false,
   "IS_MINIMIZED": false,
   "WINDOW_BOUNDS": {
-    "x": 4,
-    "y": 4,
-    "width": 1583,
-    "height": 964
+    "x": 0,
+    "y": 0,
+    "width": 2035,
+    "height": 1237
   },
-  "chromiumSwitches": {}
+  "chromiumSwitches": {},
+  "BACKGROUND_COLOR": "#121214",
+  "offloadAdmControls": true,
+  "enableHardwareAcceleration": true
 }
