@@ -26,7 +26,7 @@
   "terminal.integrated.fontSize": 14,
   // "terminal.integrated.fontWeight": "450",
   "terminal.integrated.fontWeight": "500",
-  "terminal.integrated.lineHeight": 0.9,
+  // "terminal.integrated.lineHeight": 0.9,
   // vim keybindings
   "vim.leader": "<space>",
   "vim.useSystemClipboard": true,
@@ -186,7 +186,7 @@
       "sideBar.background": "#232a2e"
     }
   },
-  "window.zoomLevel": 0.1,
+  "window.zoomLevel": 0.2,
   "cmake.pinnedCommands": [
     "workbench.action.tasks.configureTaskRunner",
     "workbench.action.tasks.runTask"
@@ -321,7 +321,6 @@
       "env": {}
     }
   ],
-  "gruvboxMaterial.darkContrast": "hard",
   "gruvboxMaterial.italicComments": false,
   "gruvboxMaterial.highContrast": true,
   "terminal.integrated.inheritEnv": false,
@@ -331,4 +330,16 @@
   },
   "remote.SSH.showLoginTerminal": true,
   "remote.SSH.useLocalServer": false,
+  "remote.defaultExtensionsIfInstalledLocally": [
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "GitHub.vscode-pull-request-github"
+  ],
+  "workbench.colorTheme": "Gruvbox Material Light",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "gruvboxMaterial.highContrast": true,
+  "gruvboxMaterial.darkContrast": "hard",
+  "chat.viewSessions.orientation": "stacked",
+  "chat.fontSize": 14,
+  "chat.editor.fontSize": 13,
 }

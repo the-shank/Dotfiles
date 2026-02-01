@@ -54,7 +54,7 @@
     color: #e3e3ea;
     background-color: @base1;
     font-family: JetBrainsMono Semibold;
-    font-size: 13px;
+    font-size: 12px;
     margin: 0px;
     padding: 0px;
 }
@@ -86,7 +86,7 @@
 }
 
 #workspaces {
-    font-size:13px;
+    font-size:12px;
 }
 
 #workspaces button {
@@ -116,7 +116,7 @@
 
 #window {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 #network.disconnected {

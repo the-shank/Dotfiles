@@ -76,8 +76,8 @@ family = "JetBrainsMono"
 # family = "Pragmasevka Nerd Font"
 # family = "PragmataPro"
 # style = "Bold"
-# style = "Semibold"
-style = "Medium"
+style = "Semibold"
+# style = "Medium"
 # style = "Retina"
 
 [[keyboard.bindings]]
