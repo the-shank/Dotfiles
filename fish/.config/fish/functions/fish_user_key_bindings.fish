@@ -8,7 +8,7 @@ function fish_user_key_bindings -d "user keybindings"
     # delete word backword
     for mode in insert default visual
         # using "fish_key_reader", found that <alt-backspace> maps to "\e\x7F"
-        bind -M $mode \b backward-kill-word
+        bind -M $mode \e\x7F backward-kill-word
     end
 end
 
