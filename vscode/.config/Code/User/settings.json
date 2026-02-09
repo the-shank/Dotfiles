@@ -144,12 +144,22 @@
       ]
     },
     {
-      "before": ["[", "e"],
-      "commands": ["editor.action.marker.previousInFiles"]
+      "before": [
+        "[",
+        "e"
+      ],
+      "commands": [
+        "editor.action.marker.previousInFiles"
+      ]
     },
     {
-      "before": ["]", "e"],
-      "commands": ["editor.action.marker.nextInFiles"]
+      "before": [
+        "]",
+        "e"
+      ],
+      "commands": [
+        "editor.action.marker.nextInFiles"
+      ]
     }
   ],
   "vim.visualModeKeyBindings": [
