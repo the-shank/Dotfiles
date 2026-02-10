@@ -15,7 +15,7 @@ function notify_on_long_running --on-event fish_postexec
         # multiplexers
         tmux zellij screen \
         # file managers
-        ranger y yazi nnn lf mc \
+        ranger y yazi nnn lf mc joshuto \
         # interactive
         lazygit lazydocker python ipython fzf git rga-fzf ldconfig fg \
         gdu cdh ncspot gemini
