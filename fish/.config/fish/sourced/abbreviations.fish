@@ -189,6 +189,16 @@ abbr -a -g dcs "docker container start -i (docker container ls -a | awk '{print 
 abbr -a -g dcnew '/home/shank/code/misc/dev-container/devc_new.sh'
 abbr -a -g dcupd '/home/shank/code/misc/dev-container/devc_update.sh'
 
+# podman
+abbr -a -g podman-prune 'podman system prune --filter "label!=no-prune"'
+abbr -a -g pcl 'podman container ls'
+abbr -a -g pcla 'podman container ls -a'
+abbr -a -g pcrm 'podman container rm'
+abbr -a -g pcst 'podman container start'
+abbr -a -g pca 'podman container attach'
+abbr -a -g pi 'podman image'
+abbr -a -g pil 'podman image ls'
+
 # distrobox
 abbr -a -g dbe 'distrobox enter'
 abbr -a -g dbl 'distrobox ls --no-stats'
