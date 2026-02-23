@@ -44,7 +44,39 @@ vim.keymap.set("n", "*", "*zz")
 vim.keymap.set("n", "#", "#zz")
 
 -- copy path+line_num (for using in gdb)
-vim.keymap.set("n", "<leader>yl", [[<cmd>let @+=expand("%:p").":".line(".")<cr>]], { desc = "yank <path>:<line_num>" })
+vim.keymap.set("n", "<leader>yl", function()
+  local path = vim.fn.expand("%:.")
+  local line = vim.fn.line(".")
+  local result = path .. ":" .. line
+  vim.fn.setreg('"', result)
+  require("osc52").copy(result) -- Pushes directly through tmux to system clipboard via OSC52
+  vim.notify("Copied relative path: " .. result)
+end, { desc = "Copy relative filepath:line" })
+
+-- copy path+line_num (for using in gdb)
+vim.keymap.set("n", "<leader>yL", function()
+  local path = vim.fn.expand("%:p")
+  local line = vim.fn.line(".")
+  local result = path .. ":" .. line
+  vim.fn.setreg('"', result)
+  require("osc52").copy(result) -- Pushes directly through tmux to system clipboard via OSC52
+  vim.notify("Copied relative path: " .. result)
+end, { desc = "Copy absolute filepath:line" })
+
+-- copy file path (relative)
+vim.keymap.set("n", "<leader>yp", function()
+  local path = vim.fn.expand("%:.")
+  vim.fn.setreg('"', path)
+  require("osc52").copy(path) -- Pushes directly through tmux to system clipboard via OSC52
+  vim.notify("Copied relative path: " .. path)
+end, { desc = "Copy relative file path" })
+
+-- copy file path (absolute)
+vim.keymap.set("n", "<leader>yP", function()
+  local path = vim.fn.expand("%:p")
+  require("osc52").copy(path) -- Pushes directly through tmux to system clipboard via OSC52
+  vim.notify("Copied absolute path: " .. path)
+end, { desc = "Copy absolute file path" })
 
 -- toggle virtual_text for diagnostic
 vim.keymap.set("n", "<leader>uD", function()
