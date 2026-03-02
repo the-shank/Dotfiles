@@ -50,7 +50,7 @@ input {
         // drag false
         // drag-lock
         natural-scroll
-        accel-speed 0.25
+        accel-speed 0.3
         // accel-profile "flat"
         // scroll-method "two-finger"
         // disabled-on-external-mouse
@@ -155,7 +155,7 @@ layout {
     }
 
     // You can change the default width of the new windows.
-    default-column-width { proportion 0.5; }
+    default-column-width { proportion 0.3; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     // default-column-width {}
 
