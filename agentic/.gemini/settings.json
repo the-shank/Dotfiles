@@ -1,0 +1,20 @@
+{
+  "general": {
+    "preferredEditor": "neovim",
+    "previewFeatures": true,
+    "vimMode": false,
+    "sessionRetention": {
+      "warningAcknowledged": true,
+      "enabled": true,
+      "maxAge": "30d"
+    }
+  },
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "ui": {
+    "theme": "Google Code"
+  }
+}
