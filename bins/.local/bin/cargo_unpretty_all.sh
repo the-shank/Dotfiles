@@ -60,7 +60,7 @@ check_for_target() {
     fi
   done
   echo "[!] --lib/--tests argument not found, atleast one needs to be provided"
-  return
+  exit 1
 }
 
 # Call the function with all the script arguments
