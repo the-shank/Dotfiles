@@ -59,7 +59,7 @@ check_for_target() {
       return
     fi
   done
-  echo "--lib/--tests argument not found"
+  echo "[!] --lib/--tests argument not found, atleast one needs to be provided"
   return
 }
 
