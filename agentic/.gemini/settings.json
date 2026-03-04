@@ -15,6 +15,7 @@
     }
   },
   "ui": {
-    "theme": "Google Code"
+    "theme": "Google Code",
+    "hideBanner": true
   }
 }
