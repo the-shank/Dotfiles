@@ -4,46 +4,23 @@
 set -eu
 set -o pipefail
 
-! rm crate.01.normal &>/dev/null
-! rm crate.02.identified &>/dev/null
-! rm crate.03.expanded &>/dev/null
-! rm crate.04.expanded.identified &>/dev/null
-! rm crate.05.expanded.hygiene &>/dev/null
-! rm crate.06.ast-tree &>/dev/null
-! rm crate.07.ast-tree.expanded &>/dev/null
-! rm crate.08.hir &>/dev/null
-! rm crate.09.hir.identified &>/dev/null
-! rm crate.10.hir.typed &>/dev/null
-! rm crate.11.hir-tree &>/dev/null
-! rm crate.12.thir-tree &>/dev/null
-! rm crate.13.thir-flat &>/dev/null
-! rm crate.14.mir &>/dev/null
-# ! rm crate.15.stable-mir &>/dev/null
-! rm crate.16.mir-cfg &>/dev/null
+# Clean old outputs
+rm -f crate.*
 
 # Check that we are in a cargo project directory.
-# We are using the existence of a Cargo.toml file as a marker for this.
 check_cargo_toml() {
   if ! [[ -f "Cargo.toml" ]]; then
-    echo "[!] Cargo.toml not found. Are you sure you are in a cargo package diretory?"
+    echo "[!] Cargo.toml not found. Are you sure you are in a cargo package directory?"
     exit 1
   fi
 }
 
-# Run a command (printing the command first).
-run() {
-  runcmd=$1
-  echo ">> ${runcmd}"
-  bash -c "${runcmd}"
-}
-
 target=""
 
-# Function to check if "--lib" or "--tests" is present in the arguments
+# Function to check for target arguments (--lib, --tests, or --test <name>)
 check_for_target() {
   local args=("$@")
   for i in "${!args[@]}"; do
-    # echo ">> checking arg-${i} : ${args[i]}"
     if [ "${args[i]}" == "--lib" ]; then
       echo "--lib argument found"
       target="--lib --"
@@ -59,30 +36,69 @@ check_for_target() {
       return
     fi
   done
-  echo "[!] --lib/--tests argument not found, atleast one needs to be provided"
+  echo "[!] --lib/--tests/--test <name> argument not found, at least one needs to be provided"
   exit 1
 }
 
-# Call the function with all the script arguments
 check_for_target "$@"
-
 check_cargo_toml
 
-run "cargo clean && cargo +nightly rustc ${target} -Z unpretty=normal >crate.01.normal 2>/dev/null"
-run "cargo clean && cargo +nightly rustc ${target} -Z unpretty=identified >crate.02.identified 2>/dev/null"
-run "cargo clean && cargo +nightly rustc ${target} -Z unpretty=expanded >crate.03.expanded 2>/dev/null"
-run "cargo clean && cargo +nightly rustc ${target} -Z unpretty=expanded,identified >crate.04.expanded.identified 2>/dev/null"
-run "cargo clean && cargo +nightly rustc ${target} -Z unpretty=expanded,hygiene >crate.05.expanded.hygiene 2>/dev/null"
-run "cargo clean && cargo +nightly rustc ${target} -Z unpretty=ast-tree >crate.06.ast-tree 2>/dev/null"
-run "cargo clean && cargo +nightly rustc ${target} -Z unpretty=ast-tree,expanded >crate.07.ast-tree.expanded 2>/dev/null"
-run "cargo clean && cargo +nightly rustc ${target} -Z unpretty=hir >crate.08.hir 2>/dev/null"
-run "cargo clean && cargo +nightly rustc ${target} -Z unpretty=hir,identified >crate.09.hir.identified 2>/dev/null"
-run "cargo clean && cargo +nightly rustc ${target} -Z unpretty=hir,typed >crate.10.hir.typed 2>/dev/null"
-run "cargo clean && cargo +nightly rustc ${target} -Z unpretty=hir-tree >crate.11.hir-tree 2>/dev/null"
-run "cargo clean && cargo +nightly rustc ${target} -Z unpretty=thir-tree >crate.12.thir-tree 2>/dev/null"
-run "cargo clean && cargo +nightly rustc ${target} -Z unpretty=thir-flat >crate.13.thir-flat 2>/dev/null"
-run "cargo clean && cargo +nightly rustc ${target} -Z unpretty=mir -Z mir-opt-level=0 -Z mir-include-spans >crate.14.mir-built 2>/dev/null"
-run "cargo clean && cargo +nightly rustc ${target} -Z unpretty=mir-cfg -Z mir-opt-level=0 >crate.15.mir-built-cfg 2>/dev/null"
-run "cargo clean && cargo +nightly rustc ${target} -Z unpretty=mir -Z mir-include-spans >crate.16.mir 2>/dev/null"
-run "cargo clean && cargo +nightly rustc ${target} -Z unpretty=mir-cfg >crate.17.mir-cfg 2>/dev/null"
-# run "cargo clean && cargo rustc ${target} -- -Z unpretty=stable-mir >crate.16.stable-mir 2>/dev/null"
+# Commands definition: index | suffix | flags
+commands=$(
+  cat <<EOF
+01|normal|-Z unpretty=normal
+02|identified|-Z unpretty=identified
+03|expanded|-Z unpretty=expanded
+04|expanded.identified|-Z unpretty=expanded,identified
+05|expanded.hygiene|-Z unpretty=expanded,hygiene
+06|ast-tree|-Z unpretty=ast-tree
+07|ast-tree.expanded|-Z unpretty=ast-tree,expanded
+08|hir|-Z unpretty=hir
+09|hir.identified|-Z unpretty=hir,identified
+10|hir.typed|-Z unpretty=hir,typed
+11|hir-tree|-Z unpretty=hir-tree
+12|thir-tree|-Z unpretty=thir-tree
+13|thir-flat|-Z unpretty=thir-flat
+14|mir-built|-Z unpretty=mir -Z mir-opt-level=0 -Z mir-include-spans
+15|mir-built-cfg|-Z unpretty=mir-cfg -Z mir-opt-level=0
+16|mir|-Z unpretty=mir -Z mir-include-spans
+17|mir-cfg|-Z unpretty=mir-cfg
+EOF
+)
+
+# Function to run a single unpretty command
+run_unpretty() {
+  local idx=$1
+  local suffix=$2
+  local flags=$3
+  local target_dir="target/unpretty_${idx}"
+  local err_log="target/unpretty_${idx}.err"
+
+  echo ">> [${idx}] Generating crate.${idx}.${suffix}..."
+  mkdir -p "${target_dir}"
+
+  # Run cargo with nice, capturing stderr. If it fails, print the error log and return the exit code.
+  if ! CARGO_TARGET_DIR="${target_dir}" nice cargo +nightly rustc ${target} ${flags} >"crate.${idx}.${suffix}" 2>"${err_log}"; then
+    echo "[!] [${idx}] Build failed for crate.${idx}.${suffix}" >&2
+    cat "${err_log}" >&2
+    return 1
+  fi
+  rm -f "${err_log}"
+}
+export -f run_unpretty
+export target
+
+# Trap to clean up temporary target directories and error logs on exit
+cleanup() {
+  echo ">> Cleaning up temporary artifacts..."
+  rm -rf target/unpretty_*
+  rm -f target/unpretty_*.err
+}
+trap cleanup EXIT
+
+# Run commands in parallel.
+# --halt now,fail=1: Exit immediately if any job fails.
+echo "${commands}" | parallel --colsep '\|' --halt now,fail=1 run_unpretty {1} {2} {3}
+
+echo ">> All outputs generated successfully."
+#!/bin/bas -- -Z unpretty=stable-mir >crate.16.stable-mir 2>/dev/null"
