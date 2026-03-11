@@ -3,6 +3,7 @@
     "preferredEditor": "neovim",
     "previewFeatures": true,
     "vimMode": false,
+    "enableNotifications": true,
     "sessionRetention": {
       "warningAcknowledged": true,
       "enabled": true,
