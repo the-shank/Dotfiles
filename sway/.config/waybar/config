@@ -160,7 +160,7 @@
 
     "cpu": {
         "interval": 5,
-        "format": "{usage:>3}%",
+        "format": "{usage:>3}% / {avg_frequency}GHz",
         "states": {
             "warning": 70,
             "critical": 90,
