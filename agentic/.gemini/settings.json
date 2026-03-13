@@ -20,9 +20,16 @@
   },
   "ui": {
     "theme": "Google Code",
-    "hideBanner": true
+    "hideBanner": true,
+    "footer": {
+      "hideModelInfo": false,
+      "hideContextPercentage": false
+    }
   },
   "experimental": {
     "plan": true
+  },
+  "model": {
+    "compressionThreshold": 0.6
   }
 }

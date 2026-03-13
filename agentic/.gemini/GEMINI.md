@@ -135,3 +135,5 @@ The XY problem occurs when someone asks about their attempted solution (Y) inste
 ### Key Principle
 Always try to understand the fundamental problem (X) before helping with the proposed solution (Y). The user's approach may not be optimal or may indicate they're solving the wrong problem entirely.
 
+## Gemini Added Memories
+- Send a Slack notification using `send_slack_notification.sh` whenever permission is needed to execute a command or when waiting for user confirmation.
