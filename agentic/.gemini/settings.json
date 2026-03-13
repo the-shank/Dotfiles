@@ -8,6 +8,9 @@
       "warningAcknowledged": true,
       "enabled": true,
       "maxAge": "30d"
+    },
+    "plan": {
+      "directory": "./plans"
     }
   },
   "security": {
@@ -18,5 +21,8 @@
   "ui": {
     "theme": "Google Code",
     "hideBanner": true
+  },
+  "experimental": {
+    "plan": true
   }
 }
