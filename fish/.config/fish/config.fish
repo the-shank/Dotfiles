@@ -606,6 +606,11 @@ zoxide init fish | source
 
 setenv CRYPTOGRAPHY_OPENSSL_NO_LEGACY 1
 
+# slack notification webhook
+if test -f ~/.slack_notification_webhook
+    set --export SLACK_WEBHOOK_URL (cat ~/.slack_notification_webhook)
+end
+
 # exercism
 fish_add_path /home/shank/.local/bin/exercism-3.5.4-linux-x86_64
 
