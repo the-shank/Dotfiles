@@ -2,7 +2,6 @@
   "$schema": "https://opencode.ai/config.json",
   "plugin": [
     "opencode-gemini-auth@latest",
-    "opencode-webhook-notify"
   ],
   "permission": {
     "external_directory": {
@@ -11,6 +10,6 @@
     "edit": {
       "/home/common/data/crates-2025-05-02-aunor/**": "deny",
       "/home/common/data/crates-2025-05-02-aunor/trials": "allow"
-    }
+    },
   }
 }
