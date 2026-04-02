@@ -3,6 +3,6 @@ return {
   lazy = false,
   dependencies = { "MunifTanjim/nui.nvim" },
   opts = {
-    max_count = 4,
+    max_count = 3,
   },
 }
