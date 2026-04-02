@@ -1,0 +1,7 @@
+gui:
+  theme:
+    # This prevents the teal block and uses inverted colors instead
+    selectedLineBgColor:
+      - reverse
+    selectedRangeBgColor:
+      - reverse
