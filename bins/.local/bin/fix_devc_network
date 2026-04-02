@@ -13,6 +13,6 @@ echo ">> devc: ${devc}"
 
 set -x
 docker network disconnect bridge $devc
-sleep 1
+sleep 0.5
 docker network connect bridge $devc
 set +x
