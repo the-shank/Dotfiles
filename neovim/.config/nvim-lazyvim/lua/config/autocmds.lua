@@ -94,6 +94,17 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufEnter" }, {
   end,
 })
 
+-- waybar config is jsonc
+vim.api.nvim_create_autocmd({ "BufReadPost", "BufEnter" }, {
+  group = augroup("waybar_config"),
+  pattern = {
+    "**/waybar/config",
+  },
+  callback = function()
+    vim.api.nvim_command("set filetype=jsonc")
+  end,
+})
+
 -- latex
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "tex",
