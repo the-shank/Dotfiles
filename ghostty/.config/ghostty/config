@@ -42,7 +42,7 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-font-size = 12
+font-size = 10
 
 # font-family = Myna
 # font-family = Codelia Regular
@@ -90,4 +90,4 @@ keybind = ctrl+alt+j=goto_split:down
 keybind = ctrl+alt+k=goto_split:up
 keybind = ctrl+alt+l=goto_split:right
 
-mouse-scroll-multiplier = 0.2
+# mouse-scroll-multiplier = 0.9
