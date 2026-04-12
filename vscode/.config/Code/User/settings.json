@@ -14,16 +14,18 @@
     "mc20.cs.purdue.edu": "linux",
     "optiplex7010": "linux",
     "purs3apple": "linux",
-    "gpu.scholar.rcac.purdue.edu": "linux"
+    "gpu.scholar.rcac.purdue.edu": "linux",
+    "qstruct": "linux",
+    "ececomp5": "linux"
   },
   // font
   "editor.fontFamily": "JetBrains Mono, Noto Sans Mono, Codelia, SF Mono, FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
-  "editor.fontSize": 15,
+  "editor.fontSize": 13,
   // "editor.fontWeight": "450",
   "editor.fontWeight": "500",
   // integrated terminal
   "terminal.integrated.scrollback": 100000,
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontSize": 13,
   // "terminal.integrated.fontWeight": "450",
   "terminal.integrated.fontWeight": "500",
   // "terminal.integrated.lineHeight": 0.9,
@@ -39,7 +41,7 @@
         "/"
       ],
       "commands": [
-        "editor.action.commentLine"
+        "workbench.action.findInFiles"
       ]
     },
     {
