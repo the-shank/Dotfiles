@@ -94,7 +94,7 @@ Color Theme=Breeze Dark
 Line Height Multiplier=1
 Show Indentation Lines=false
 Show Whole Bracket Expression=false
-Text Font=JetBrains Mono,12,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
+Text Font=JetBrains Mono [JB  ],10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 Text Font Features=
 Word Wrap Marker=false
 
@@ -110,6 +110,7 @@ Bracket Match Preview=false
 Chars To Enclose Selection=<>(){}[]'"
 Cycle Through Bookmarks=true
 Default Mark Type=1
+Disable bracket match highlight if inactive=false
 Disable current line highlight if inactive=false
 Dynamic Word Wrap=true
 Dynamic Word Wrap Align Indent=80
@@ -211,6 +212,8 @@ SetEditor=false
 2560x1440 screen: Window-Maximized=true
 2793x1571 screen: Height=511
 2793x1571 screen: Width=1392
+2954x1662 screen: Window-Maximized=true
+3072x1728 screen: Window-Maximized=true
 3491x1964 screen: Height=1921
 3491x1964 screen: Width=1735
 

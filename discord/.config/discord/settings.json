@@ -9,7 +9,7 @@
     "height": 1237
   },
   "chromiumSwitches": {},
-  "BACKGROUND_COLOR": "#121214",
+  "BACKGROUND_COLOR": "#2c2d32",
   "offloadAdmControls": true,
   "enableHardwareAcceleration": true
 }

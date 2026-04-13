@@ -16,6 +16,7 @@
     "purs3apple": "linux",
     "gpu.scholar.rcac.purdue.edu": "linux",
     "qstruct": "linux",
+    "qstruct.ecn.purdue.edu": "linux",
     "ececomp5": "linux"
   },
   // font
@@ -347,11 +348,9 @@
     "GitHub.copilot-chat",
     "GitHub.vscode-pull-request-github"
   ],
-  "workbench.colorTheme": "Gruvbox Material Light",
   "github.copilot.nextEditSuggestions.enabled": true,
-  "gruvboxMaterial.highContrast": true,
   "gruvboxMaterial.darkContrast": "hard",
   "chat.viewSessions.orientation": "stacked",
-  "chat.fontSize": 14,
   "chat.editor.fontSize": 13,
+  "debug.console.fontSize": 12,
 }
