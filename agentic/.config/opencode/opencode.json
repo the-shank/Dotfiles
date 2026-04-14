@@ -1,8 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": [
-    "opencode-gemini-auth@latest",
-  ],
+  "plugin": [],
   "permission": {
     "external_directory": {
       "/home/common/**": "allow",
