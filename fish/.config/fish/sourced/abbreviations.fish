@@ -196,8 +196,6 @@ abbr -a -g pcla 'podman container ls -a'
 abbr -a -g pcrm 'podman container rm'
 abbr -a -g pcst 'podman container start'
 abbr -a -g pca 'podman container attach'
-abbr -a -g pi 'podman image'
-abbr -a -g pil 'podman image ls'
 
 # distrobox
 abbr -a -g dbe 'distrobox enter'
