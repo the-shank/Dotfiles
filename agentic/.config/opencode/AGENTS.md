@@ -45,8 +45,6 @@ While working, if you come across any bugs, missing features, or other oddities 
 - **`quickcheck`**: Property-based testing for when you have an obviously-correct comparison you can test against.
 - **`insta`**: Snapshot testing for regression prevention. Use `cargo insta test` as a stand-in for `cargo test` to run the snapshot tests.
 
-- Before changing any test code (including assertions, expected values, fixtures, snapshots, or test inputs), explicitly ask the user for confirmation first. In that confirmation request, explain exactly what test change you want to make and why.
-
 ### Writing compile_fail Tests
 
 Use `compile_fail` doctests to verify when certain code should _not_ compile, such as for type-state patterns or trait-based enforcement. Each `compile_fail` test should target a specific error condition since the doctest only has a binary output of whether it fails to compile, not the many reasons _why_. Make sure you clearly explain exactly WHY the code should fail to compile.
