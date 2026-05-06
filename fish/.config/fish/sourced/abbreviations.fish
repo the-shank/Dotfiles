@@ -320,8 +320,8 @@ abbr -a -g pkgs "pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --
 # fish themes
 abbr -a -g ft-tokyo-day "fish_config theme choose TokyoNight\ Day && yes | fish_config theme save TokyoNight\ Day"
 abbr -a -g ft-tokyo-storm "fish_config theme choose TokyoNight\ Storm && yes | fish_config theme save TokyoNight\ Storm"
-abbr -a -g ft-b16-eighties "fish_config theme choose Base16\ Eighties && yes | fish_config theme save Base16\ Eighties"
-abbr -a -g ft-b16-dark "fish_config theme choose Base16\ Default\ Dark && yes | fish_config theme save Base16\ Default\ Dark"
+abbr -a -g ft-b16-eighties "fish_config theme choose base16-eighties && yes | fish_config theme save base16-eighties"
+abbr -a -g ft-b16-dark "fish_config theme choose base16-default && yes | fish_config theme save base16-default"
 abbr -a -g ft-solarized-light "fish_config theme choose solarized && yes | fish_config theme save solarized"
 abbr -a -g ft-mono-light "fish_config theme choose Mono\ Lace && yes | fish_config theme save Mono\ Lace"
 
