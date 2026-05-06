@@ -10,7 +10,8 @@
       "maxAge": "30d"
     },
     "plan": {
-      "directory": "./plans"
+      "directory": "./plans",
+      "enabled": true
     }
   },
   "security": {
@@ -26,11 +27,12 @@
       "hideContextPercentage": false
     }
   },
-  "experimental": {
-    "plan": true
-  },
+  "experimental": {},
   "model": {
     "compressionThreshold": 0.6,
     "name": "auto-gemini-3"
+  },
+  "agents": {
+    "overrides": {}
   }
 }

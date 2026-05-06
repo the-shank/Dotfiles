@@ -180,40 +180,53 @@ sed -i -e "s|'bg0':        \['#232a2e'|'bg0':        ['#272E33'|" $FILE
 
 # gtk theme
 # ref: https://felix-kling.de/blog/2021/linux-toggle-dark-mode.html
+
+# Theme detection
+if [ -d "/usr/share/themes/Qogir-Round-Dark" ]; then
+  GTK_THEME="Qogir-Round-Dark"
+elif [ -d "/usr/share/themes/Qogir-Dark" ]; then
+  GTK_THEME="Qogir-Dark"
+else
+  GTK_THEME="Qogir-Round-Dark"
+fi
+
+if [ -d "/usr/share/icons/Qogir-dark" ]; then
+  CURSOR_THEME="Qogir-dark"
+else
+  CURSOR_THEME="Qogir"
+fi
+
+if command -v gsettings >/dev/null; then
+  gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
+  gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+  gsettings set org.gnome.desktop.interface cursor-theme "$CURSOR_THEME"
+fi
+
 FILE=$HOME/.xsettingsd
-if [ -f $FILE ]; then
-  if ! grep -q "Net/ApplicationPreferDarkTheme" ${FILE}; then
-    echo "Net/ApplicationPreferDarkTheme 1" >>$FILE
-  else
-    sed -i -e 's#Net/ApplicationPreferDarkTheme 0#Net/ApplicationPreferDarkTheme 1#' $FILE
-  fi
-  if ! grep -q "Gtk/ApplicationPreferDarkTheme" ${FILE}; then
-    echo "Gtk/ApplicationPreferDarkTheme 1" >>$FILE
-  else
-    sed -i -e 's#Gtk/ApplicationPreferDarkTheme 0#Gtk/ApplicationPreferDarkTheme 1#' $FILE
-  fi
-  if ! grep -q "Net/ThemeName" $FILE; then
-    echo "Net/ThemeName \"Arc-Dark\"" >>$FILE
-  else
-    sed -i -e 's#Net/ThemeName "Arc"#Net/ThemeName "Arc-Dark"#' $FILE
-  fi
-  if ! grep -q "Gtk/ThemeName" $FILE; then
-    echo "Gtk/ThemeName \"Arc-Dark\"" >>$FILE
-  else
-    sed -i -e 's#Gtk/ThemeName "Arc"#Gtk/ThemeName "Arc-Dark"#' $FILE
-  fi
+if [ -f "$FILE" ]; then
+  sed -i -e "s#Net/ApplicationPreferDarkTheme [01]#Net/ApplicationPreferDarkTheme 1#" "$FILE"
+  sed -i -e "s#Gtk/ApplicationPreferDarkTheme [01]#Gtk/ApplicationPreferDarkTheme 1#" "$FILE"
+  sed -i -e "s#Net/ThemeName \".*\"#Net/ThemeName \"$GTK_THEME\"#" "$FILE"
+  sed -i -e "s#Gtk/ThemeName \".*\"#Gtk/ThemeName \"$GTK_THEME\"#" "$FILE"
 fi
+
 FILE=$HOME/.config/gtk-3.0/settings.ini
-if [ -f $FILE ]; then
-  # sed -i -e 's/gtk-theme-name=Arc$/gtk-theme-name=Arc-dark/' $FILE
-  sed -i -e 's/gtk-theme-name=Qogir-Round$/gtk-theme-name=Qogir-Round-Dark/' $FILE
-  sed -i -e 's/gtk-application-prefer-dark-theme=0/gtk-application-prefer-dark-theme=1/' $FILE
-  sed -i -e 's/gtk-cursor-theme-name=Qogir$/gtk-cursor-theme-name=Qogir-dark/' $FILE
+if [ -f "$FILE" ]; then
+  sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=$GTK_THEME/" "$FILE"
+  sed -i -e "s/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=1/" "$FILE"
+  sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$CURSOR_THEME/" "$FILE"
 fi
+
 FILE=$HOME/.config/gtk-4.0/settings.ini
-if [ -f $FILE ]; then
-  sed -i -e 's/gtk-application-prefer-dark-theme=0/gtk-application-prefer-dark-theme=1/' $FILE
-  sed -i -e 's/gtk-cursor-theme-name=Qogir$/gtk-cursor-theme-name=Qogir-dark/' $FILE
+if [ -f "$FILE" ]; then
+  sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=$GTK_THEME/" "$FILE"
+  sed -i -e "s/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=1/" "$FILE"
+  sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$CURSOR_THEME/" "$FILE"
+fi
+
+FILE=$HOME/.icons/default/index.theme
+if [ -f "$FILE" ]; then
+  sed -i -e "s/Inherits=.*/Inherits=$CURSOR_THEME/" "$FILE"
 fi
 set +u
 if [ -n "$XDG_SESSION_TYPE" ] && [ $XDG_SESSION_TYPE = "x11" ]; then
