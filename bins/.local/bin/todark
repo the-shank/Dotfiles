@@ -319,4 +319,4 @@ fi
 #     fish -c "source theme.fish"
 #   )
 # fi
-fish -c "fish_config theme choose Base16\ Default\ Dark && yes | fish_config theme save Base16\ Default\ Dark"
+fish -c "fish_config theme choose base16-default-dark

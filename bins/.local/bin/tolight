@@ -313,4 +313,4 @@ fi
 #     fish -c "source theme.fish"
 #   )
 # fi
-fish -c "fish_config theme choose Mono\ Lace && yes | fish_config theme save Mono\ Lace"
+fish -c "fish_config theme choose solarized
