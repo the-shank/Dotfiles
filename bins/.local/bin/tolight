@@ -313,4 +313,4 @@ fi
 #     fish -c "source theme.fish"
 #   )
 # fi
-fish -c "fish_config theme choose solarized"
+fish -c "fish_config theme choose solarized && yes | fish_config theme save solarized"
