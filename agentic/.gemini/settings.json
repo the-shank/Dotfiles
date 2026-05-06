@@ -34,5 +34,27 @@
   },
   "agents": {
     "overrides": {}
+  },
+  "hooks": {
+    "AfterAgent": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "msg=$(jq -r '.prompt_response // \"\"'); { [[ \"$msg\" == *'?'* ]] || [ ${#msg} -gt 150 ]; } && osc777-notify 'Gemini' 'Response complete'; echo '{}'"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osc777-notify 'Gemini' 'Approval needed'; echo '{}'"
+          }
+        ]
+      }
+    ]
   }
 }

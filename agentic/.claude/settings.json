@@ -1,0 +1,29 @@
+{
+  "enabledPlugins": {
+    "rust-analyzer-lsp@claude-plugins-official": true
+  },
+  "effortLevel": "medium",
+  "theme": "auto",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "msg=$(jq -r '.last_assistant_message // \"\"'); { [[ \"$msg\" == *'?'* ]] || [ ${#msg} -gt 150 ]; } && osc777-notify 'Claude Code' 'Waiting for input'; echo '{}'"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osc777-notify 'Claude Code' 'Approval needed'; echo '{}'"
+          }
+        ]
+      }
+    ]
+  }
+}

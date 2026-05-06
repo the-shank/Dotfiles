@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+TITLE="${1:-Notification}"
+BODY="${2:-}"
+
+if [[ -n "$TMUX" ]]; then
+    printf '\ePtmux;\e\e]777;notify;%s;%s\a\e\\' "$TITLE" "$BODY" > /dev/tty
+else
+    printf '\e]777;notify;%s;%s\a' "$TITLE" "$BODY" > /dev/tty
+fi
