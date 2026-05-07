@@ -318,8 +318,8 @@ abbr -a -g renix 'ls $HOME/.nix-profile/share/applications/ | xargs -I{} unlink 
 abbr -a -g pkgs "pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 
 # fish themes
-abbr -a -g tolight "~/.local/bin/tolight && fish_config theme choose solarized && yes | fish_config theme save"
-abbr -a -g todark "~/.local/bin/todark && fish_config theme choose base16-default && yes | fish_config theme save"
+abbr -a -g tolight "set -U | rg --ignore-case --only-matching \"^fish_color\S+\" | parallel -j1 set -e {}; ~/.local/bin/tolight && fish_config theme choose solarized && yes | fish_config theme save"
+abbr -a -g todark "set -U | rg --ignore-case --only-matching \"^fish_color\S+\" | parallel -j1 set -e {}; ~/.local/bin/todark && fish_config theme choose base16-default && yes | fish_config theme save"
 abbr -a -g ft-dark "fish_config theme choose base16-default && yes | fish_config theme save"
 abbr -a -g ft-light "fish_config theme choose solarized && yes | fish_config theme save"
 
