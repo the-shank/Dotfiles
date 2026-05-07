@@ -599,11 +599,6 @@ stty -ixon
 # abbr -a -g cd z
 zoxide init fish | source
 
-## theme
-#if [ -f ~/.config/fish/theme.fish ]
-#    source ~/.config/fish/theme.fish
-#end
-
 setenv CRYPTOGRAPHY_OPENSSL_NO_LEGACY 1
 
 # slack notification webhook
