@@ -318,12 +318,8 @@ abbr -a -g renix 'ls $HOME/.nix-profile/share/applications/ | xargs -I{} unlink 
 abbr -a -g pkgs "pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 
 # fish themes
-abbr -a -g ft-tokyo-day "fish_config theme choose TokyoNight\ Day && yes | fish_config theme save TokyoNight\ Day"
-abbr -a -g ft-tokyo-storm "fish_config theme choose TokyoNight\ Storm && yes | fish_config theme save TokyoNight\ Storm"
-abbr -a -g ft-b16-eighties "fish_config theme choose base16-eighties && yes | fish_config theme save base16-eighties"
-abbr -a -g ft-b16-dark "fish_config theme choose base16-default && yes | fish_config theme save base16-default"
-abbr -a -g ft-solarized-light "fish_config theme choose solarized && yes | fish_config theme save solarized"
-abbr -a -g ft-mono-light "fish_config theme choose Mono\ Lace && yes | fish_config theme save Mono\ Lace"
+abbr -a -g ft-dark "fish_config theme choose base16-default && yes | fish_config theme save"
+abbr -a -g ft-light "fish_config theme choose solarized && yes | fish_config theme save"
 
 # cmake - throw errors for undefined variables
 # abbr -a -g cmake "cmake -Werror=dev --warn-uninitialized"

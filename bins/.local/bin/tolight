@@ -232,7 +232,7 @@ set -u
 # mousepad
 # ref: https://docs.xfce.org/apps/mousepad/start
 if command -v gsettings >/dev/null; then
-  ! gsettings set org.xfce.mousepad.preferences.view color-scheme solarized-light
+  ! gsettings set org.xfce.mousepad.preferences.view color-scheme solarized-light 2>/dev/null
   # ! gsettings set org.xfce.mousepad.preferences.view font-name "CommitMonoThicker Medium 10"
 fi
 
@@ -304,13 +304,5 @@ fi
 #   )
 # fi
 
-# # fish-shell
-# DIR=$HOME/dotfiles/fish/.config/fish
-# if [ -d $DIR ]; then
-#   (
-#     cd $DIR
-#     ln -sf themes/tokyonight_day.fish theme.fish
-#     fish -c "source theme.fish"
-#   )
-# fi
-fish -c "fish_config theme choose solarized && yes | fish_config theme save solarized"
+# fish-shell
+# fish -c 'fish_config theme choose solarized && yes | fish_config theme save'
