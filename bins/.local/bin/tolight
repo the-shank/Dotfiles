@@ -306,3 +306,52 @@ fi
 
 # fish-shell
 # fish -c 'fish_config theme choose solarized && yes | fish_config theme save'
+
+# safeeyes
+FILE=$HOME/.config/safeeyes/style/safeeyes_style.css
+if [ -f $FILE ]; then
+  cat <<EOF > "$FILE"
+.window_main {
+    background: #fbf1c7;
+    color: #3c3836;
+    opacity: 0.95;
+    border-color: transparent;
+}
+.lbl_message {
+    font-size: 22pt;
+    color: #3c3836;
+    font-weight: bold;
+}
+.lbl_count {
+    font-size: 12pt;
+    color: #7c6f64;
+}
+.lbl_widget {
+    font-size: 10pt;
+    color: #3c3836;
+}
+.btn_skip, .btn_postpone {
+    color: #3c3836;
+    font-size: 10pt;
+    border-radius: 25px;
+    padding: 10px 25px;
+    border-color: #3c3836;
+    background: transparent;
+    border-width: 2px;
+}
+.btn_skip:hover, .btn_postpone:hover {
+    background: #3c3836;
+    color: #fbf1c7;
+}
+.toolbar { background: transparent; border-color: transparent; }
+.btn_menu { background: rgba(0, 0, 0, 0.1); color: inherit; }
+EOF
+  # Restart safeeyes to apply changes
+  if pgrep -x safeeyes > /dev/null; then
+    safeeyes --quit
+    # Wait a bit for it to die
+    sleep 0.5
+    safeeyes >/dev/null 2>&1 &
+    disown
+  fi
+fi
