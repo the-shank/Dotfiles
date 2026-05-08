@@ -308,13 +308,13 @@ fi
 # fish -c 'fish_config theme choose solarized && yes | fish_config theme save'
 
 # safeeyes
-FILE=$HOME/.config/safeeyes/style/safeeyes_style.css
+FILE=$HOME/.config/safeeyes/style/safeeyes_custom_style.css
 if [ -f $FILE ]; then
   cat <<EOF > "$FILE"
 .window_main {
     background: #fbf1c7;
     color: #3c3836;
-    opacity: 0.95;
+    opacity: 1;
     border-color: transparent;
 }
 .lbl_message {
@@ -343,7 +343,8 @@ if [ -f $FILE ]; then
     background: #3c3836;
     color: #fbf1c7;
 }
-.toolbar { background: transparent; border-color: transparent; }
+.break_screen_root { background: #fbf1c7; }
+.toolbar { background: transparent; opacity: 1; border-color: transparent; }
 .btn_menu { background: rgba(0, 0, 0, 0.1); color: inherit; }
 EOF
   # Restart safeeyes to apply changes

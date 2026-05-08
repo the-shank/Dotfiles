@@ -1,11 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # source: https://wiki.tnonline.net/w/Blog/Zswap_statistics#Zswap_tuning_and_statistics
 
 # check that the script is run with sudo/root permissions
 if [[ $EUID -ne 0 ]]; then
-	sudo $HOME/.local/bin/zswap-stats
-	exit 1
+	exec sudo "$(readlink -f "${BASH_SOURCE[0]}")" "$@"
 fi
 
 # System page size
@@ -17,43 +16,84 @@ settings_dir="/sys/module/zswap/parameters"
 # Location of zswap statistics
 statistics_dir="/sys/kernel/debug/zswap"
 
-# Array of zswap settings
-settings=("accept_threshold_percent" "compressor" "enabled" "max_pool_percent" "non_same_filled_pages_enabled" "same_filled_pages_enabled" "zpool")
+# Preferred zswap setting/statistic order. Different kernel versions expose
+# different files, so only readable entries are printed.
+settings_order=("accept_threshold_percent" "compressor" "enabled" "max_pool_percent" "non_same_filled_pages_enabled" "same_filled_pages_enabled" "shrinker_enabled" "zpool")
 
-# Array of zswap statistics
-statistics=("duplicate_entry" "pool_limit_hit" "pool_total_size" "reject_alloc_fail" "reject_compress_poor" "reject_kmemcache_fail" "reject_reclaim_fail" "same_filled_pages" "stored_pages")
+statistics_order=("duplicate_entry" "pool_limit_hit" "pool_total_size" "reject_alloc_fail" "reject_compress_poor" "reject_kmemcache_fail" "reject_reclaim_fail" "same_filled_pages" "stored_pages")
 
 # Declare an associative array to store zswap data
 declare -A zswap_data
+declare -A seen_settings
+declare -A seen_statistics
+settings=()
+statistics=()
 
 # Read zswap settings
-for setting in "${settings[@]}"; do
-	read -r value <"$settings_dir/$setting"
-	zswap_data["$setting"]=$value
-done
+if [[ -d "$settings_dir" ]]; then
+	for setting in "${settings_order[@]}"; do
+		if [[ -r "$settings_dir/$setting" ]]; then
+			read -r value <"$settings_dir/$setting"
+			settings+=("$setting")
+			seen_settings["$setting"]=1
+			zswap_data["$setting"]=$value
+		fi
+	done
+
+	for setting_path in "$settings_dir"/*; do
+		setting=${setting_path##*/}
+		if [[ -r "$setting_path" && -z "${seen_settings[$setting]:-}" ]]; then
+			read -r value <"$setting_path"
+			settings+=("$setting")
+			zswap_data["$setting"]=$value
+		fi
+	done
+else
+	printf "zswap settings directory not found: %s\n" "$settings_dir" >&2
+fi
 
 # Read zswap statistics
-for stat in "${statistics[@]}"; do
-	read -r value <"$statistics_dir/$stat"
-	zswap_data["$stat"]=$value
-done
+if [[ -d "$statistics_dir" ]]; then
+	for stat in "${statistics_order[@]}"; do
+		if [[ -r "$statistics_dir/$stat" ]]; then
+			read -r value <"$statistics_dir/$stat"
+			statistics+=("$stat")
+			seen_statistics["$stat"]=1
+			zswap_data["$stat"]=$value
+		fi
+	done
+
+	for stat_path in "$statistics_dir"/*; do
+		stat=${stat_path##*/}
+		if [[ -r "$stat_path" && -z "${seen_statistics[$stat]:-}" ]]; then
+			read -r value <"$stat_path"
+			statistics+=("$stat")
+			zswap_data["$stat"]=$value
+		fi
+	done
+else
+	printf "zswap statistics directory not found or debugfs is not mounted: %s\n" "$statistics_dir" >&2
+fi
 
 # Determine the maximum length of keys (setting/statistic names)
 max_length=0
 for key in "${!zswap_data[@]}"; do
-	if [ ${#key} -gt $max_length ]; then
+	if [ ${#key} -gt "$max_length" ]; then
 		max_length=${#key}
 	fi
 done
 ((width = max_length + 4))
 
+stored_pages=${zswap_data["stored_pages"]:-0}
+pool_total_size=${zswap_data["pool_total_size"]:-0}
+
 # Calculate the total size and compressed size in MiB
-total_size=$((zswap_data["stored_pages"] * page_size / (1024 * 1024)))
-compressed_size=$((zswap_data["pool_total_size"] / (1024 * 1024)))
+total_size=$((stored_pages * page_size / (1024 * 1024)))
+compressed_size=$((pool_total_size / (1024 * 1024)))
 
 # Calculate the compression ratio
-if [ "${zswap_data["stored_pages"]}" -ne 0 ]; then
-	compression_ratio=$(bc <<<"scale=2; (${zswap_data["stored_pages"]} * $page_size / ${zswap_data["pool_total_size"]})")
+if [[ "$stored_pages" -ne 0 && "$pool_total_size" -ne 0 ]]; then
+	compression_ratio=$(bc <<<"scale=2; ($stored_pages * $page_size / $pool_total_size)")
 else
 	compression_ratio=0
 fi
