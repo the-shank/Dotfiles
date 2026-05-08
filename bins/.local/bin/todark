@@ -318,7 +318,7 @@ STYLE_DIR=$HOME/.config/safeeyes/style
 FILE=$STYLE_DIR/safeeyes_custom_style.css
 mkdir -p "$STYLE_DIR"
 if [ -d "$STYLE_DIR" ]; then
-  cat <<EOF > "$FILE"
+  cat <<EOF >"$FILE"
 .window_main {
     background: #282828;
     background-color: #282828;
@@ -364,10 +364,10 @@ if [ -d "$STYLE_DIR" ]; then
 .btn_menu { background: rgba(255, 255, 255, 0.1); color: inherit; }
 EOF
   # Restart safeeyes to apply changes
-  if pgrep -x safeeyes > /dev/null; then
+  if pgrep -x safeeyes >/dev/null; then
     safeeyes --quit
     # Wait a bit for it to die
-    sleep 0.5
+    sleep 0.2
     safeeyes >/dev/null 2>&1 &
     disown
   fi
