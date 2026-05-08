@@ -314,14 +314,24 @@ fi
 # fish -c 'fish_config theme choose base16-default && yes | fish_config theme save'
 
 # safeeyes
-FILE=$HOME/.config/safeeyes/style/safeeyes_custom_style.css
-if [ -f $FILE ]; then
+STYLE_DIR=$HOME/.config/safeeyes/style
+FILE=$STYLE_DIR/safeeyes_custom_style.css
+mkdir -p "$STYLE_DIR"
+if [ -d "$STYLE_DIR" ]; then
   cat <<EOF > "$FILE"
 .window_main {
     background: #282828;
+    background-color: #282828;
     color: #ebdbb2;
     opacity: 1;
     border-color: transparent;
+}
+.break_screen_root {
+    background: #282828;
+    background-color: #282828;
+}
+.break_screen_root * {
+    background-color: transparent;
 }
 .lbl_message {
     font-size: 22pt;
@@ -347,10 +357,10 @@ if [ -f $FILE ]; then
 }
 .btn_skip:hover, .btn_postpone:hover {
     background: #ebdbb2;
+    background-color: #ebdbb2;
     color: #282828;
 }
-.break_screen_root { background: #282828; }
-.toolbar { background: transparent; opacity: 1; border-color: transparent; }
+.toolbar { background: transparent; background-color: transparent; opacity: 1; border-color: transparent; }
 .btn_menu { background: rgba(255, 255, 255, 0.1); color: inherit; }
 EOF
   # Restart safeeyes to apply changes
