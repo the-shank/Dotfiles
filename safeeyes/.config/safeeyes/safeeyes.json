@@ -3,7 +3,7 @@
     "fade_in_break_screen": false,
     "fade_in_break_screen_duration": 1500,
     "long_break_duration": 15,
-    "long_break_interval": 60,
+    "long_break_interval": 40,
     "long_breaks": [
         {
             "name": "Walk for a while"
@@ -116,7 +116,7 @@
     "pre_break_warning_time": 10,
     "random_order": true,
     "short_break_duration": 15,
-    "short_break_interval": 15,
+    "short_break_interval": 20,
     "short_breaks": [
         {
             "name": "Tightly close your eyes"
