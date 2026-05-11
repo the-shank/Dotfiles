@@ -16,6 +16,19 @@ check_cargo_toml() {
 }
 
 target=""
+features=""
+
+# Function to check for optional feature arguments (--features=foo,bar)
+check_for_features() {
+  local args=("$@")
+  for arg in "${args[@]}"; do
+    if [[ "${arg}" == --features=* ]]; then
+      features="${arg}"
+      echo "features argument found: ${arg#--features=}"
+      return
+    fi
+  done
+}
 
 # Function to check for target arguments (--lib, --tests, or --test <name>)
 check_for_target() {
@@ -40,6 +53,7 @@ check_for_target() {
   exit 1
 }
 
+check_for_features "$@"
 check_for_target "$@"
 check_cargo_toml
 
@@ -78,7 +92,7 @@ run_unpretty() {
   mkdir -p "${target_dir}"
 
   # Run cargo with nice, capturing stderr. If it fails, print the error log and return the exit code.
-  if ! CARGO_TARGET_DIR="${target_dir}" nice cargo +nightly rustc ${target} ${flags} >"crate.${idx}.${suffix}" 2>"${err_log}"; then
+  if ! CARGO_TARGET_DIR="${target_dir}" nice cargo +nightly rustc ${features} ${target} ${flags} >"crate.${idx}.${suffix}" 2>"${err_log}"; then
     echo "[!] [${idx}] Build failed for crate.${idx}.${suffix}" >&2
     cat "${err_log}" >&2
     return 1
@@ -87,6 +101,7 @@ run_unpretty() {
 }
 export -f run_unpretty
 export target
+export features
 
 # Trap to clean up temporary target directories and error logs on exit
 cleanup() {
