@@ -697,7 +697,7 @@ binds {
 spawn-at-startup "waybar"
 
 // wallpaper
-spawn-at-startup "swww-daemon"
+spawn-at-startup "awww-daemon"
 
 // clipboard
 spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
