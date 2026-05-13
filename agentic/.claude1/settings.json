@@ -1,9 +1,4 @@
 {
-  "enabledPlugins": {
-    "rust-analyzer-lsp@claude-plugins-official": true
-  },
-  "effortLevel": "medium",
-  "theme": "auto",
   "hooks": {
     "Stop": [
       {
@@ -25,5 +20,10 @@
         ]
       }
     ]
-  }
+  },
+  "enabledPlugins": {
+    "rust-analyzer-lsp@claude-plugins-official": true
+  },
+  "effortLevel": "medium",
+  "theme": "auto"
 }
