@@ -20,7 +20,7 @@ function notify_on_long_running --on-event fish_postexec
         lazygit lazydocker python ipython fzf git rga-fzf ldconfig fg \
         gdu cdh ncspot gemini opencode claude pi codex
     set -l cmd_clean (string replace -r '^sudo\s+' '' -- $argv[1])
-    set -l cmd_name (string split -f1 " " -- $cmd_clean)
+    set -l cmd_name (string replace -r '^([A-Z_][A-Z0-9_]*=\S+\s+)+' '' -- $cmd_clean | string split -f1 " ")
     if contains -- $cmd_name $ignored_bins
         return
     end
