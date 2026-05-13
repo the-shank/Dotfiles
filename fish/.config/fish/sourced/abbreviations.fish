@@ -336,3 +336,9 @@ abbr -a -g make "nice make"
 abbr -a -g cmake "nice cmake"
 abbr -a -g ninja "nice ninja"
 abbr -a -g build "nice build"
+
+# claude(s)
+abbr -a -g claude "CLAUDE_CONFIG_DIR=~/.claude2 claude"
+abbr -a -g c1 "CLAUDE_CONFIG_DIR=~/.claude1 claude"
+abbr -a -g c2 "CLAUDE_CONFIG_DIR=~/.claude2 claude"
+abbr -a -g c3 "CLAUDE_CONFIG_DIR=~/.claude3 claude"
