@@ -551,7 +551,7 @@ set --export CC gcc
 set --export CXX g++
 
 # asdf-vm
-test -e ~/.asdf/asdf.fish; and source ~/.asdf/asdf.fish
+# test -e ~/.asdf/asdf.fish; and source ~/.asdf/asdf.fish
 
 # set colorterm to get helix to work
 setenv COLORTERM truecolor
@@ -586,11 +586,10 @@ setenv BAT_THEME ansi
 #setenv BAT_PAGER "less -i -R -j.5"
 
 # nix
-if [ -f $HOME/.nix-profile/bin ]
-    setenv NIXPKGS_ALLOW_UNFREE 1
-    fish_add_path $HOME/.nix-profile/bin
-    set --export XDG_DATA_DIRS $HOME/.nix-profile/share:$XDG_DATA_DIRS
+if test -e /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish
+    source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish
 end
+fish_add_path --prepend ~/.nix-profile/bin
 
 # disable stty
 stty -ixon
