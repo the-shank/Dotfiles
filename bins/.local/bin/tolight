@@ -236,9 +236,22 @@ if command -v gsettings >/dev/null; then
   # ! gsettings set org.xfce.mousepad.preferences.view font-name "CommitMonoThicker Medium 10"
 fi
 
-# kvantummanager (qt applications)
-if command -v kvantummanager >/dev/null; then
-  ! kvantummanager --set KvArc
+# kvantum (qt applications)
+# Update Kvantum theme directly in configuration file to avoid spawning a Qt GUI
+# process via kvantummanager, which aborts in headless / non-X11 environments.
+FILE=$HOME/.config/Kvantum/kvantum.kvconfig
+if [ -f "$FILE" ]; then
+  if grep -q "^theme=" "$FILE"; then
+    sed -i -e 's/^theme=.*/theme=KvArc/' "$FILE"
+  else
+    sed -i -e '/^\[General\]/a theme=KvArc' "$FILE"
+  fi
+else
+  mkdir -p "$HOME/.config/Kvantum"
+  cat <<EOF >"$FILE"
+[General]
+theme=KvArc
+EOF
 fi
 
 # discord (restart it)
