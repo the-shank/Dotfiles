@@ -43,25 +43,39 @@ vim.keymap.set("n", "N", "Nzz")
 vim.keymap.set("n", "*", "*zz")
 vim.keymap.set("n", "#", "#zz")
 
--- copy path+line_num (for using in gdb)
-vim.keymap.set("n", "<leader>yl", function()
-  local path = vim.fn.expand("%:.")
-  local line = vim.fn.line(".")
-  local result = path .. ":" .. line
-  vim.fn.setreg('"', result)
-  require("osc52").copy(result) -- Pushes directly through tmux to system clipboard via OSC52
-  vim.notify("Copied relative path: " .. result)
-end, { desc = "Copy relative filepath:line" })
+-- Helper to copy filepath with line or line range (supports normal & visual mode)
+local function copy_path_and_line(opts)
+  local is_absolute = opts and opts.absolute
+  local mode = vim.fn.mode()
+  local path = vim.fn.expand(is_absolute and "%:p" or "%:.")
+  local line_str
 
--- copy path+line_num (for using in gdb)
-vim.keymap.set("n", "<leader>yL", function()
-  local path = vim.fn.expand("%:p")
-  local line = vim.fn.line(".")
-  local result = path .. ":" .. line
+  -- Handle visual mode line ranges (charwise 'v', linewise 'V', blockwise '\22')
+  if mode:find("[vV\22]") then
+    local start_line = math.min(vim.fn.line("v"), vim.fn.line("."))
+    local end_line = math.max(vim.fn.line("v"), vim.fn.line("."))
+    line_str = (start_line == end_line) and tostring(start_line) or string.format("%d-%d", start_line, end_line)
+    -- Exit visual mode back to normal mode
+    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "x", false)
+  else
+    line_str = tostring(vim.fn.line("."))
+  end
+
+  local result = path .. ":" .. line_str
   vim.fn.setreg('"', result)
+  vim.fn.setreg("+", result)
   require("osc52").copy(result) -- Pushes directly through tmux to system clipboard via OSC52
-  vim.notify("Copied relative path: " .. result)
-end, { desc = "Copy absolute filepath:line" })
+  vim.notify(string.format("Copied %s path: %s", is_absolute and "absolute" or "relative", result))
+end
+
+-- copy path+line or path+range (works in normal and visual mode)
+vim.keymap.set({ "n", "x" }, "<leader>yl", function()
+  copy_path_and_line({ absolute = false })
+end, { desc = "Copy relative filepath:line (or range)" })
+
+vim.keymap.set({ "n", "x" }, "<leader>yL", function()
+  copy_path_and_line({ absolute = true })
+end, { desc = "Copy absolute filepath:line (or range)" })
 
 -- copy file path (relative)
 vim.keymap.set("n", "<leader>yp", function()
