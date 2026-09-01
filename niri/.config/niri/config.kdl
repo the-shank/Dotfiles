@@ -96,25 +96,25 @@ input {
 // Remember to uncomment the node by removing "/-"!
 output "eDP-1" {
     mode "2560x1600"
-    scale 1.4
+    scale 1.5
     transform "normal"
 }
 
 output "DP-2" {
   mode "3840x2160"
-  scale 1.25
+  scale 1.4
   transform "normal"
 }
 
 output "DP-3" {
   mode "3840x2160"
-  scale 1.25
+  scale 1.4
   transform "normal"
 }
 
 output "HDMI-A-1" {
   mode "3840x2160"
-  scale 1.1
+  scale 1.4
   transform "normal"
 }
 
@@ -710,6 +710,9 @@ spawn-at-startup "megasync"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
 spawn-at-startup "safeeyes"
+
+// file manager daemon (provides org.freedesktop.FileManager1 for "Open Containing Folder")
+spawn-at-startup "thunar" "--daemon"
 
 
 // Start foot server
