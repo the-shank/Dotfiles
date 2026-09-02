@@ -20,3 +20,5 @@ pyrightconfig.json
 
 # temporary files (having .tmp extension)
 **/*.tmp
+
+**/.claude/settings.local.json
