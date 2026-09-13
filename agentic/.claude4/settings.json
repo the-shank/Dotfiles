@@ -1,5 +1,4 @@
 {
-  "model": "opus",
   "hooks": {
     "Stop": [
       {
@@ -25,6 +24,11 @@
   "enabledPlugins": {
     "rust-analyzer-lsp@claude-plugins-official": true
   },
-  "effortLevel": "medium",
-  "theme": "auto"
+  "theme": "auto",
+  "model": "claude-opus-4-8[1m]",
+  "effortLevel": "high",
+  "statusLine": {
+    "type": "command",
+    "command": "/home/shank/bin/claude-statusline-configdir.sh"
+  }
 }
