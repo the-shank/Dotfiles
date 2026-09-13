@@ -112,3 +112,16 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.conceallevel = 0
   end,
 })
+
+-- cursorline underline
+local function set_cursorline_underline()
+  vim.api.nvim_set_hl(0, "CursorLine", { underline = true })
+end
+
+set_cursorline_underline()
+vim.api.nvim_create_autocmd("ColorScheme", {
+  group = augroup("cursorline_underline"),
+  pattern = "*",
+  callback = set_cursorline_underline,
+})
+
