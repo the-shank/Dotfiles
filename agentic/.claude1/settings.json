@@ -29,6 +29,6 @@
   "effortLevel": "high",
   "statusLine": {
     "type": "command",
-    "command": "/home/shank/bin/claude-statusline-configdir.sh"
+    "command": "/home/shank/.local/bin/claude-statusline-configdir.sh"
   }
 }
