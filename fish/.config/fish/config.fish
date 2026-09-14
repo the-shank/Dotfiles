@@ -613,4 +613,5 @@ setenv SCCACHE_DIR /home/common/data/sccache
 setenv SCCACHE_CACHE_SIZE 10G
 
 # agentic
-setenv CLAUDE_CODE_DISABLE_1M_CONTEXT 1
+# setenv CLAUDE_CODE_DISABLE_1M_CONTEXT 1
+
