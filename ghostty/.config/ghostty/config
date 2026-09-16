@@ -49,9 +49,10 @@ font-size = 10
 # font-family = Codelia Medium
 # font-family = JetBrains Mono
 # font-family = JetBrains Mono Medium
-font-family = JetBrains Mono SemiBold
+# font-family = JetBrains Mono SemiBold
 # font-family = Noto Sans Mono
-# font-family = Noto Sans Mono Medium
+font-family = Noto Sans Mono Medium
+# font-family = Noto Sans Mono SemiBold
 # font-family = Google Sans Code
 # font-family = Google Sans Code Medium
 # font-family = Google Sans Code SemiBold
@@ -72,8 +73,8 @@ font-feature = "calt"
 font-feature = "dlig"
 font-feature = "clig"
 
-# theme = gruvbox-material-dark-hard
-theme = Gruvbox Light
+theme = gruvbox-material-dark-hard
+# theme = Gruvbox Light
 
 # background-opacity = 0.95
 # background-blur = true

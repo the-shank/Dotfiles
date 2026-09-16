@@ -1,15 +1,19 @@
 {
   "SKIP_HOST_UPDATE": true,
-  "IS_MAXIMIZED": true,
+  "IS_MAXIMIZED": false,
   "IS_MINIMIZED": false,
   "WINDOW_BOUNDS": {
-    "x": 0,
-    "y": 0,
-    "width": 2035,
-    "height": 1237
+    "x": 16,
+    "y": 10,
+    "width": 940,
+    "height": 1503
   },
   "chromiumSwitches": {},
   "BACKGROUND_COLOR": "#2c2d32",
   "offloadAdmControls": true,
-  "enableHardwareAcceleration": true
+  "enableHardwareAcceleration": true,
+  "openH264Enabled": true,
+  "DESKTOP_TTI_DNSTCP_WARMUP": true,
+  "DESKTOP_TTI_SPLASH_USE_WEBP": true,
+  "DESKTOP_TTI_UPDATE_BACKOFF_MAX_MS": 20000
 }

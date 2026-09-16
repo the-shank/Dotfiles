@@ -8,3 +8,7 @@ export BROWSER=/usr/bin/firefox
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
   export ELECTRON_OZONE_PLATFORM_HINT=auto
 fi
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/shank/.local/bin:$PATH"

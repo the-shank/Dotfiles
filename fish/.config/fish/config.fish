@@ -615,3 +615,5 @@ setenv SCCACHE_CACHE_SIZE 10G
 # agentic
 # setenv CLAUDE_CODE_DISABLE_1M_CONTEXT 1
 
+# Added by Antigravity CLI installer
+set -gx PATH "/home/shank/.local/bin" $PATH
