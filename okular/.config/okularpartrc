@@ -15,9 +15,8 @@ SlidesBackgroundColor=46,52,54
 SlidesTransition=Random
 
 [Document]
-ChangeColors=true
 PaperColor=189,189,189
-RenderMode=InvertLightness
+RenderMode=Recolor
 
 [General]
 MaxRecentItems=20

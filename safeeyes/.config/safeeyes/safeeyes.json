@@ -1,7 +1,5 @@
 {
     "allow_postpone": false,
-    "fade_in_break_screen": false,
-    "fade_in_break_screen_duration": 1500,
     "long_break_duration": 15,
     "long_break_interval": 40,
     "long_breaks": [
@@ -13,7 +11,7 @@
         }
     ],
     "meta": {
-        "config_version": "6.0.5"
+        "config_version": "6.0.4"
     },
     "persist_state": false,
     "plugins": [
