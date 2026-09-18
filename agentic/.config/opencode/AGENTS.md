@@ -38,6 +38,7 @@ While working, if you come across any bugs, missing features, or other oddities 
 - When adding dependencies to Rust projects, use `cargo add`.
 - In code that uses `eyre` or `anyhow` `Result`s, consistently use `.context()` prior to every error-propagation with `?`. Context messages in `.context` should be simple present tense, such as to complete the sentence "while attempting to ...".
 - Prefer `expect()` over `unwrap()`. The `expect` message should be very concise, and should explain why that expect call cannot fail.
+- For an invariant you believe always holds (a value that "can never" be the wrong variant/shape), assert it explicitly with idioms like `expect_item()` / `.expect("...")` rather than silently handling the impossible case with a `let ... else { return; }` or `if let` skip. A loud panic surfaces a broken assumption so it can be re-evaluated; a silent skip hides it as a hard-to-trace missing result. Pair the assertion with a concise comment stating why it cannot fail. Reserve silent `return`/`continue` for cases that legitimately occur and are meant to be skipped.
 - When designing `pub` or crate-wide Rust APIs, consult the checklist in <https://rust-lang.github.io/api-guidelines/checklist.html>.
 - For ad-hoc debugging, create a temporary Rust example in `examples/` and run it with `cargo run --example <name>`. Remove the example after use.
 
