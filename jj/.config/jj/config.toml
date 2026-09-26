@@ -52,3 +52,4 @@ lgg = [
   "builtin_log_comfortable",
 ]
 lga = ["log", "-r", "builtin_log() | ::@", "-T", "builtin_log_comfortable"]
+extract = ["split", "--insert-before", "@"]
