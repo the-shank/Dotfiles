@@ -28,6 +28,26 @@ return {
         c.green = "#485e30"
         c.teal = "#33635c"
         c.red = "#8c4351"
+
+        c.bg_popup = c.bg_dark
+        c.bg_statusline = c.bg_dark
+        c.bg_sidebar = c.bg_dark
+        c.bg_float = c.bg_dark
+        c.fg_sidebar = c.fg_dark
+        c.fg_float = c.fg
+        c.todo = c.blue
+        c.warning = c.yellow
+        c.hint = c.teal
+        c.rainbow = {
+          c.blue,
+          c.yellow,
+          c.green,
+          c.teal,
+          c.magenta,
+          c.purple,
+          c.orange,
+          c.red,
+        }
       end
     end,
     on_highlights = function(hl, c)
