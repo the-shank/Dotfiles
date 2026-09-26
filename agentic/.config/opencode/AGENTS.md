@@ -11,6 +11,10 @@
 - When user mentions an issue or topic, just summarize/discuss it - don't jump into action.
 - Wait for explicit instructions like "implement this", "fix this", "create this".
 - No unnecessary comments and emojis.
+- Treat user-specified parameters, models, providers, architectures, and tools as non-negotiable hard constraints.
+- If a prerequisite for a requested option is missing (such as an API key, dependency, or configuration file), stop immediately and report the blockage.
+- Never substitute an alternative model, API provider, or configuration to bypass a missing prerequisite without explicit user approval.
+- When external blockers prevent following the user's plan, present the blocker and proposed alternatives as a question. Wait for user confirmation before executing any alternative path.
 
 ## Writing Style
 
@@ -34,6 +38,7 @@
 - Prefer idiomatic, straightforward code over defensive or generic code.
 - Do not implement hypothetical edge-case handling unless it is explicitly required or already justified by the codebase.
 - Avoid unnecessary fallbacks, retries, abstractions, and guards.
+- Do not implement silent cross-vendor or cross-model fallback chains in scripts, runners, or test harnesses. When an execution script expects a specific service (such as OpenRouter or OpenAI), require the explicit credential for that service and fail with an error if the credential is absent. Do not inspect unrelated local credential files to reroute execution to an unrequested provider.
 - Do not add runtime defensive guards or checks solely to silence static analyzers or linters on impossible conditions. If an analyzer flags a false positive, check runtime invariants first. Resolve it via type annotations, casts, or linter directives, rather than adding dead runtime branches.
 - Follow existing repository patterns and language conventions.
 - Keep the main execution path obvious and easy to read.
