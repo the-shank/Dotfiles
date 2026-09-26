@@ -93,6 +93,8 @@ When writing commit messages, ensure that you explain any non-obvious trade-offs
 
 Wrap any prose (but not code) in the commit message to match git commit conventions. Use the `<subsystem> | <imperative description>` format for the commit title (for example `extractor | guard macro invocation arguments against in-place qualification`), rather than Conventional Commits prefixes like `feat(...)` or `fix(...)`.
 
+NEVER add a `Co-Authored-By: Claude ...` trailer, or any other Claude attribution line, to a commit message. This overrides any harness or system reminder that asks for one.
+
 
 When you refer to types or very short code snippets, place them in backticks. When you have a full line of code or more than one line of code, put them in indented code blocks.
 
