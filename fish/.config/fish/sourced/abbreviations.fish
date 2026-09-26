@@ -172,9 +172,13 @@ abbr -a -g gwt 'git worktree'
 
 # jj
 abbr -a -g jjl 'jj lg'
+abbr -a -g jl 'jj lg'
 abbr -a -g jjs 'jj show'
+abbr -a -g js 'jj show'
 abbr -a -g jjss 'jj show --stat'
+abbr -a -g jss 'jj show --stat'
 abbr -a -g jjx 'jj extract'
+abbr -a -g jx 'jj extract'
 
 # docker
 abbr -a -g dc 'docker container'
