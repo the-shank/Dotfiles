@@ -170,6 +170,10 @@ abbr -a -g lg lazygit
 abbr -a -g gcb 'git checkout -b'
 abbr -a -g gwt 'git worktree'
 
+# jj
+abbr -a -g jjl 'jj lg'
+abbr -a -g jjs 'jj show'
+abbr -a -g jjss 'jj show --stat'
 # docker
 abbr -a -g dc 'docker container'
 abbr -a -g dcl 'docker container ls'
