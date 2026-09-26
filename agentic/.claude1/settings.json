@@ -1,5 +1,5 @@
 {
-  "model": "claude-opus-4-8[1m]",
+  "model": "opus",
   "hooks": {
     "Stop": [
       {
@@ -30,8 +30,8 @@
     "rust-analyzer-lsp@claude-plugins-official": true
   },
   "effortLevel": "high",
+  "tui": "default",
   "theme": "auto",
-  "agentPushNotifEnabled": true,
   "inputNeededNotifEnabled": true,
-  "tui": "default"
+  "agentPushNotifEnabled": true
 }
