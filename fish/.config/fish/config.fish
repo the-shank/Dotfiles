@@ -603,6 +603,8 @@ if command -q nix-your-shell
     nix-your-shell fish | source
 end
 
+test -d "$HOME/.nix-profile/share/terminfo"; and set -gx TERMINFO_DIRS "$HOME/.nix-profile/share/terminfo"
+
 # Keep the terminal's TERM when its terminfo exists; warn and fall back otherwise
 if status is-interactive; and type -q infocmp; and not infocmp "$TERM" >/dev/null 2>&1
     echo "warning: terminfo for '$TERM' not found, falling back to xterm-256color" >&2
