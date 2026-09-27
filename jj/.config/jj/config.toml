@@ -31,7 +31,13 @@ label(
 ) ++ "\n"
 '''
 
-
 [aliases]
 # lg = ["log", "-r", "::@", "-T", "builtin_log_oneline"]
-lg = ["log", "-r", "::@", "-T", "oneline_log"]
+lg = [
+  "log",
+  "-r",
+  "::@ & committer_date(after:'10 days ago')",
+  "-T",
+  "oneline_log",
+]
+lga = ["log", "-r", "::@", "-T", "oneline_log"]
