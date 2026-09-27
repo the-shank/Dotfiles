@@ -25,8 +25,8 @@ label(
       description.first_line(),
       label(if(empty, "empty"), description_placeholder),
     ),
-    surround("(", ")", commit_timestamp(self).ago()),
-    surround("<", ">", coalesce(author.name(), author.email())),
+    commit_timestamp(self).ago(),
+    coalesce(author.name(), author.email())
   ),
 ) ++ "\n"
 '''
