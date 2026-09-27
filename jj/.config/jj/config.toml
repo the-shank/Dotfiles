@@ -8,27 +8,30 @@ email = "shashanksharma21@gmail.com"
 max-new-file-size = "200MiB"
 
 [template-aliases]
-'oneline_log' = '''
+'format_timestamp(timestamp)' = 'timestamp.ago()'
+'format_short_id(id)' = 'id.shortest(4)'
+
+'builtin_log_comfortable' = '''
 label(
-  separate(" ",
-    if(current_working_copy, "working_copy"),
-    if(immutable, "immutable", "mutable"),
-    if(conflict, "conflicted"),
-  ),
-  separate(" ",
-    format_short_change_id_with_change_offset(self),
-    bookmarks,
-    tags,
-    working_copies,
-    if(empty, empty_commit_marker),
-    if(description,
-      description.first_line(),
-      label(if(empty, "empty"), description_placeholder),
+  if(current_working_copy, "working_copy"),
+  concat(
+    separate(" ",
+      format_short_change_id_with_change_offset(self),
+      bookmarks,
+      tags,
+      working_copies,
+      if(conflict, label("conflict", "×")),
+      if(empty, label("empty", " ")),
+      if(description,
+        description.first_line(),
+        label(if(empty, "empty"), description_placeholder),
+      ),
+      format_timestamp(commit_timestamp(self)),
+      if(immutable, label("immutable", "🔒")),
     ),
-    commit_timestamp(self).ago(),
-    coalesce(author.name(), author.email())
+    "\n",
   ),
-) ++ "\n"
+)
 '''
 
 [aliases]
@@ -36,8 +39,8 @@ label(
 lg = [
   "log",
   "-r",
-  "::@ & committer_date(after:'10 days ago')",
+  "(builtin_log() | ::@) & committer_date(after:'10 days ago')",
   "-T",
-  "oneline_log",
+  "builtin_log_comfortable",
 ]
-lga = ["log", "-r", "::@", "-T", "oneline_log"]
+lga = ["log", "-r", "builtin_log() | ::@", "-T", "builtin_log_comfortable"]
