@@ -29,7 +29,7 @@ label(
       tags,
       working_copies,
       if(conflict, label("conflict", "×")),
-      if(empty, label("empty", " ")),
+      if(empty, label("empty", "(empty)")),
       if(description,
         description.first_line(),
         label(if(empty, "empty"), description_placeholder),
