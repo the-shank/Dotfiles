@@ -7,6 +7,11 @@ email = "shashanksharma21@gmail.com"
 [ui]
 merge-editor = "nvim"
 
+[merge-tools.nvim]
+program = "nvim"
+merge-args = ["-d", "$left", "$base", "$right", "$output"]
+merge-tool-edits-conflict-markers = false
+
 [snapshot]
 max-new-file-size = "200MiB"
 
