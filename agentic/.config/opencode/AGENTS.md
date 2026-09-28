@@ -33,6 +33,13 @@
 
 While working, if you come across any bugs, missing features, or other oddities about the implementation, structure, or workflow, **add a concise description of them to SESSION.md** to defer solving such incidental tasks until later. You do not need to fix them all straight away unless they block your progress; writing the down is often sufficient. **Do not write your accomplishments into this file.**
 
+### Prefer temp files over pipes for sub-agent CLI testing
+
+When testing a CLI with ad-hoc input, write the input to a temp file
+in `tmp/` using the Write tool (not `cat`/`echo` with heredoc + `>`),
+then pass it by path rather than piping. This avoids interactive
+permission prompts in sub-agents.
+
 ## Rust guidelines
 
 - When adding dependencies to Rust projects, use `cargo add`.
