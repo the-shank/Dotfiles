@@ -4,6 +4,9 @@
 name = "Shank"
 email = "shashanksharma21@gmail.com"
 
+[ui]
+merge-editor = "nvim"
+
 [snapshot]
 max-new-file-size = "200MiB"
 
