@@ -18,6 +18,7 @@
 - Restructure sentences instead: use periods, commas, or parentheses.
 - No flowery language, no "I'd be happy to", no "Great question!".
 - Be direct and technical.
+- Always prefer direct and simple language for writing papers, docs, and comments. Avoid inflated academic jargon, convoluted constructions, and unnecessarily complex phrasing.
 
 ## Coding Style
 
