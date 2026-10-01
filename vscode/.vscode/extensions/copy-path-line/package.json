@@ -1,0 +1,21 @@
+{
+  "name": "copy-path-line",
+  "displayName": "Copy Path Line",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "activationEvents": [
+    "onCommand:copy-path-line.copy"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "copy-path-line.copy",
+        "title": "Copy Path with Line Number"
+      }
+    ]
+  }
+}

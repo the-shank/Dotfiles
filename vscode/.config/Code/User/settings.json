@@ -1,6 +1,6 @@
 {
   // "codeQL.cli.executablePath": "/home/shank/code/applications/codeql-home/codeql/codeql",
-  "workbench.colorTheme": "Gruvbox Material Light",
+  "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.tree.indent": 16,
   "window.menuBarVisibility": "toggle",
   "editor.lineNumbers": "relative",
@@ -20,15 +20,15 @@
     "ececomp5": "linux"
   },
   // font
-  "editor.fontFamily": "JetBrains Mono, Noto Sans Mono, Codelia, SF Mono, FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
+  "editor.fontFamily": "Noto Sans Mono, JetBrains Mono, Codelia, SF Mono, FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
   "editor.fontSize": 13,
-  // "editor.fontWeight": "450",
-  "editor.fontWeight": "500",
+  // "editor.fontWeight": "400",
+  // "editor.fontWeight": "500",
   // integrated terminal
   "terminal.integrated.scrollback": 100000,
   "terminal.integrated.fontSize": 13,
   // "terminal.integrated.fontWeight": "450",
-  "terminal.integrated.fontWeight": "500",
+  // "terminal.integrated.fontWeight": "500",
   // "terminal.integrated.lineHeight": 0.9,
   // vim keybindings
   "vim.leader": "<space>",
@@ -38,8 +38,23 @@
   "vim.normalModeKeyBindings": [
     {
       "before": [
-        "leader",
-        "/"
+        "<leader>", "y", "P"
+      ],
+      "commands": [
+        "copyFilePath"
+      ]
+    },
+    {
+      "before": [
+        "<leader>", "y", "L"
+      ],
+      "commands": [
+        "copy-path-line.copy"
+      ]
+    },
+    {
+      "before": [
+        "leader", "/"
       ],
       "commands": [
         "workbench.action.findInFiles"
@@ -166,6 +181,22 @@
     }
   ],
   "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        "<leader>", "y", "P"
+      ],
+      "commands": [
+        "copyFilePath"
+      ]
+    },
+    {
+      "before": [
+        "<leader>", "y", "L"
+      ],
+      "commands": [
+        "copy-path-line.copy"
+      ]
+    },
     {
       "before": [
         "leader",
@@ -354,4 +385,6 @@
   "chat.editor.fontSize": 13,
   "geminicodeassist.project": "spiritual-flow-2qbv1",
   "debug.console.fontSize": 12,
+  "chat.disableAIFeatures": true,
+  "claudeCode.preferredLocation": "panel",
 }
