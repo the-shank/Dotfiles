@@ -46,8 +46,8 @@ label(
 '''
 
 [aliases]
-# lg = ["log", "-r", "::@", "-T", "builtin_log_oneline"]
-lg = [
+lg = ["log", "-T", "builtin_log_comfortable"]
+lgg = [
   "log",
   "-r",
   "(builtin_log() | ::@) & committer_date(after:'10 days ago')",
