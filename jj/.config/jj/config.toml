@@ -15,6 +15,9 @@ merge-tool-edits-conflict-markers = false
 [snapshot]
 max-new-file-size = "200MiB"
 
+[remotes.origin]
+auto-track-bookmarks = "*"
+
 [template-aliases]
 'format_timestamp(timestamp)' = 'timestamp.ago()'
 'format_short_id(id)' = 'id.shortest(4)'
