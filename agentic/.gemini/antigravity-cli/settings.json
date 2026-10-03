@@ -1,0 +1,50 @@
+{
+  "allowNonWorkspaceAccess": true,
+  "colorScheme": "light",
+  "permissions": {
+    "allow": [
+      "command(git status)",
+      "command(ls)",
+      "command(git ls-files)",
+      "command(jj help)",
+      "command(jj --version)",
+      "command(jj --no-pager log --help)",
+      "command(jj --no-pager help -k revsets)",
+      "command(head)",
+      "command(grep)",
+      "command(jj --no-pager status)",
+      "command(jj --no-pager lg)",
+      "command(jj config list)",
+      "command(jj --no-config --version)",
+      "command(jj --no-pager config list aliases)",
+      "command(jj --no-pager bookmark list)",
+      "command(jj --no-pager log)",
+      "command(jj --no-pager config list)",
+      "command(jj --no-pager config path)",
+      "read_url(docs.jj-vcs.dev)",
+      "command(jj --no-pager resolve --help)",
+      "command(jj --no-pager resolve --list)",
+      "command(find /home/shank -maxdepth 3 -name \"AGENTS.md\" 2\u003e/dev/null)",
+      "command(find /home/shank/.gemini -name \"*AGENT*\" -o -name \"*agent*\" -o -name \"*rule*\" 2\u003e/dev/null)",
+      "command(git -C /home/shank/dotfiles status)",
+      "command(/home/shank/.local/bin/send_slack_notification.sh)",
+      "command(jj)",
+      "read_url(antigravity.google)",
+      "command(find jj -maxdepth 3)",
+      "command(find)",
+      "command(regex:find .*)",
+      "command(agy)",
+      "command(which)",
+      "command(regex:git diff.*)"
+    ]
+  },
+  "toolPermission": "proceed-in-sandbox",
+  "trustedWorkspaces": [
+    "/home/shank",
+    "/home/shank/dotfiles",
+    "/home/shank/Sync",
+    "/home/shank/tmp/jj-playground",
+    "/home/shank/code/learning/rust-atomics-and-locks",
+    "/home/shank/code/learning/rust-atomics-and-locks/ch01-basics"
+  ]
+}
