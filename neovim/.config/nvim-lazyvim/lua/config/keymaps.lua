@@ -104,28 +104,52 @@ vim.keymap.set("n", "<leader>uD", function()
   end
 end, { desc = "toggle diagnostic virtual_text" })
 
--- toggle warning diagnostics
-local diagnostic_below_error_disabled = false
-local backup_diagnostic_config = nil
-
-local error_only_diagnostic_config = {
-  underline = { severity = { min = vim.diagnostic.severity.ERROR } },
-  virtual_text = { severity = { min = vim.diagnostic.severity.ERROR } },
-  signs = { severity = { min = vim.diagnostic.severity.ERROR } },
-}
-
+-- toggle diagnostics below error (virtual text and underline)
 vim.keymap.set("n", "<leader>tw", function()
-  if diagnostic_below_error_disabled then
-    if backup_diagnostic_config then
-      vim.diagnostic.config(backup_diagnostic_config)
-      backup_diagnostic_config = nil
+  local config = vim.diagnostic.config()
+  local current_vt = config.virtual_text
+  local current_ul = config.underline
+
+  local is_error_only = (type(current_vt) == "table" and current_vt.severity == vim.diagnostic.severity.ERROR)
+    or (
+      type(current_ul) == "table"
+      and type(current_ul.severity) == "number"
+      and current_ul.severity == vim.diagnostic.severity.ERROR
+    )
+
+  local new_vt
+  local new_ul
+
+  if is_error_only then
+    if current_vt ~= false then
+      new_vt = type(current_vt) == "table" and vim.deepcopy(current_vt) or {}
+      new_vt.severity = nil
+    else
+      new_vt = false
     end
-    diagnostic_below_error_disabled = false
-    vim.notify("Diagnostics restored to previous settings")
+
+    new_ul = (current_ul ~= false)
+
+    vim.notify("Diagnostics below error: enabled")
   else
-    backup_diagnostic_config = vim.diagnostic.config()
-    vim.diagnostic.config(error_only_diagnostic_config)
-    diagnostic_below_error_disabled = true
-    print("Diagnostics below error disabled")
+    if current_vt ~= false then
+      new_vt = type(current_vt) == "table" and vim.deepcopy(current_vt) or {}
+      new_vt.severity = vim.diagnostic.severity.ERROR
+    else
+      new_vt = false
+    end
+
+    if current_ul ~= false then
+      new_ul = { severity = vim.diagnostic.severity.ERROR }
+    else
+      new_ul = false
+    end
+
+    vim.notify("Diagnostics below error: disabled")
   end
-end, { desc = "toggle diagnostic below error" })
+
+  vim.diagnostic.config({
+    virtual_text = new_vt,
+    underline = new_ul,
+  })
+end, { desc = "Toggle diagnostics below error" })
