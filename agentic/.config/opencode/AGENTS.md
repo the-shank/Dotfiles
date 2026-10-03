@@ -25,6 +25,7 @@
 - Prefer idiomatic, straightforward code over defensive or generic code.
 - Do not implement hypothetical edge-case handling unless it is explicitly required or already justified by the codebase.
 - Avoid unnecessary fallbacks, retries, abstractions, and guards.
+- Do not add runtime defensive guards or checks solely to silence static analyzers or linters on impossible conditions. If an analyzer flags a false positive, check runtime invariants first. Resolve it via type annotations, casts, or linter directives, rather than adding dead runtime branches.
 - Follow existing repository patterns and language conventions.
 - Keep the main execution path obvious and easy to read.
 - Solve the current problem directly. Do not design for speculative future reuse.
