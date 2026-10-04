@@ -2,15 +2,6 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- toggle background (light/dark)
-vim.keymap.set("n", "<leader>tt", function()
-  local current_bg = vim.o.background
-  if current_bg == "light" then
-    vim.o.background = "dark"
-  else
-    vim.o.background = "light"
-  end
-end, { desc = "toggle light/dark theme" })
 
 -- copilot enable
 vim.keymap.set("n", "<leader>pe", function()
@@ -105,7 +96,7 @@ vim.keymap.set("n", "<leader>uD", function()
 end, { desc = "toggle diagnostic virtual_text" })
 
 -- toggle diagnostics below error (virtual text and underline)
-vim.keymap.set("n", "<leader>tw", function()
+vim.keymap.set("n", "<leader>ue", function()
   local config = vim.diagnostic.config()
   local current_vt = config.virtual_text
   local current_ul = config.underline

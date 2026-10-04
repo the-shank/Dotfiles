@@ -85,7 +85,7 @@ return {
   keys = {
     -- { "<leader><space>", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
     { "<leader><space>", LazyVim.pick("files", { cwd = vim.fn.getcwd() }), desc = "Find Files (CWD)" },
-    { "<leader>tl", toggle_preview_layout, desc = "(fzf-lua) toggle preview layout" },
+    { "<leader>uP", toggle_preview_layout, desc = "(fzf-lua) toggle preview layout" },
     { "<leader>fid", search_in_selected_folder, desc = "(fzf-lua) search files in selected directory" },
     { "<leader>sid", grep_in_selected_folder, desc = "(fzf-lua) grep files in selected directory" },
   },
