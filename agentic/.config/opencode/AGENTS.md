@@ -19,6 +19,7 @@
 - No flowery language, no "I'd be happy to", no "Great question!".
 - Be direct and technical.
 - Always prefer direct and simple language for writing papers, docs, and comments. Avoid inflated academic jargon, convoluted constructions, and unnecessarily complex phrasing.
+- In summaries and reports to me, a heading must describe the current status of the items under it. If a question was answered during the work, do not list it under "Open questions"; put it under a heading like "Resolved while implementing". Use "open", "pending", or "remaining" only for items that still need action.
 
 ## Coding Style
 
