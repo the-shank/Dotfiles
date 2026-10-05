@@ -1,9 +1,13 @@
 return {
   {
-    "sindrets/diffview.nvim",
+    "dlyongemallo/diffview-plus.nvim",
 
     dependencies = {
       { "nvim-tree/nvim-web-devicons", lazy = true },
+    },
+
+    opts = {
+      preferred_adapter = "jj",
     },
 
     keys = {
