@@ -68,8 +68,10 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufEnter" }, {
   end,
 })
 
--- disable copilot at startup
-vim.cmd("Copilot disable")
+-- disable copilot at startup if available
+if vim.fn.exists(":Copilot") == 2 then
+  vim.cmd("Copilot disable")
+end
 
 -- rust: hir syntax highlighting
 vim.api.nvim_create_autocmd({ "BufReadPost", "BufEnter" }, {
