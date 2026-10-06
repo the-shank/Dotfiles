@@ -6,7 +6,7 @@ return {
         "<leader>uq",
         function()
           if vim.g.blink_cmp_autoshow == nil then
-            vim.g.blink_cmp_autoshow = true
+            vim.g.blink_cmp_autoshow = false
           end
           vim.g.blink_cmp_autoshow = not vim.g.blink_cmp_autoshow
           
@@ -23,7 +23,7 @@ return {
     },
     opts = function(_, opts)
       if vim.g.blink_cmp_autoshow == nil then
-        vim.g.blink_cmp_autoshow = true
+        vim.g.blink_cmp_autoshow = false
       end
       
       opts.completion = opts.completion or {}
