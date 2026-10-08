@@ -45,6 +45,7 @@ permission prompts in sub-agents.
 
 ## Rust guidelines
 
+- Always run `cargo fmt` after making changes in Rust files.
 - When adding dependencies to Rust projects, use `cargo add`.
 - In code that uses `eyre` or `anyhow` `Result`s, consistently use `.context()` prior to every error-propagation with `?`. Context messages in `.context` should be simple present tense, such as to complete the sentence "while attempting to ...".
 - Prefer `expect()` over `unwrap()`. The `expect` message should be very concise, and should explain why that expect call cannot fail.
