@@ -30,10 +30,6 @@ vim.keymap.set("n", "N", "Nzz")
 vim.keymap.set("n", "*", "*zz")
 vim.keymap.set("n", "#", "#zz")
 
--- switch tabs (mirrors <S-h>/<S-l>, which switch buffers)
-vim.keymap.set("n", "<M-H>", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
-vim.keymap.set("n", "<M-L>", "<cmd>tabnext<cr>", { desc = "Next Tab" })
-
 -- Helper to copy filepath with line or line range (supports normal & visual mode)
 local function copy_path_and_line(opts)
   local is_absolute = opts and opts.absolute
