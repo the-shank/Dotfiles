@@ -77,6 +77,15 @@ Wrap any prose (but not code) in the commit message to match git commit conventi
 
 When you refer to types or very short code snippets, place them in backticks. When you have a full line of code or more than one line of code, put them in indented code blocks.
 
+### Small CLs Workflow (Git and Jujutsu)
+
+Apply the principle of Small CLs by default to ALL code changes, even when not explicitly requested (reference: <https://google.github.io/eng-practices/review/developer/small-cls.html>):
+
+- **Default to small, atomic commits**: Break any feature, bug fix, or refactor into isolated, self-contained commits (CLs). Never bundle unrelated fixes, dead-code cleanups, or refactorings into a single monolithic commit.
+- **Accompany each CL with isolated tests**: Every functional commit must include its own unit or integration tests that verify that change in isolation within the same commit.
+- **Linear stacked commits**: Structure multi-step work as a linear stack of dependent small commits, each building upon the previous one.
+- **Amend respective commits during review**: When addressing review comments or polishing an earlier commit in a stack, update that specific commit directly (such as via `jj edit <commit>` and rebase in Jujutsu, or interactive rebase in Git). Create new commits only for genuinely new, independent work.
+
 ## Documentation preferences
 
 ### Documentation examples
