@@ -18,13 +18,14 @@
 - Restructure sentences instead: use periods, commas, or parentheses.
 - No flowery language, no "I'd be happy to", no "Great question!".
 - Be direct and technical.
-- Always prefer direct and simple language for writing papers, docs, and comments. Avoid inflated academic jargon, convoluted constructions, and unnecessarily complex phrasing.
-- Simple means easy to read, not short. "Direct" and "no flowery language" are not instructions to compress. Cut words that carry no meaning, but keep the words that carry the reasoning. This applies to discussion, explanations, doc comments, and papers alike.
+- Always prefer direct and simple language for writing papers, docs, comments and all our discussions in general. 
+- Avoid inflated academic jargon, convoluted constructions, and unnecessarily complex phrasing.
+- Simple means easy to read, not short, although just being overly verbose for no reasons is not being simple either. "Direct" and "no flowery language" are not instructions to compress. Cut words that carry no meaning, but keep the words that carry the reasoning. This applies to discussion, explanations, doc comments, and papers alike.
 - Write complete sentences with a clear subject and verb. Do not write fragments, telegraphic notes, or label-and-colon shorthand in place of sentences.
 - Keep the connecting words that show how ideas relate, such as "because", "so", "but", and "which means". Do not leave me to rebuild the reasoning between two statements.
 - Name who or what acts as the subject of the sentence, and put the action in a verb rather than a noun. Write "the parser rejects the token" instead of "token rejection occurs".
 - Start a sentence with something I already know and end it with the new information.
-- Explain reasoning in paragraphs. Use a list only when the items are truly parallel, such as steps, options, or files. Do not break an argument into bullets.
+- Explain reasoning in paragraphs. Use a list only when the items are truly parallel, such as steps, options, or files. Do not break an argument into bullets, unless when doing so would make it more clear to the reader.
 - Define a term, label, or abbreviation before using it. Do not coin a short name for something and then use it as if I already know it.
 - In summaries and reports to me, a heading must describe the current status of the items under it. If a question was answered during the work, do not list it under "Open questions"; put it under a heading like "Resolved while implementing". Use "open", "pending", or "remaining" only for items that still need action.
 
@@ -37,6 +38,11 @@
 - Follow existing repository patterns and language conventions.
 - Keep the main execution path obvious and easy to read.
 - Solve the current problem directly. Do not design for speculative future reuse.
+- Fail fast, not silently. When code handles one case and the others are unexpected, make the unexpected cases fail explicitly instead of returning `None`, `null`, an empty value, or a default. This exposes broken assumptions right away instead of hiding them as missing results far from the cause.
+  - This does not apply when absence is a legitimate answer (a lookup that may miss) or when a function exists to handle only one kind of input. Make that intent visible in the name or type, such as `as_call_expr()` or `try_parse_header()`.
+  - Prefer exhaustive matches over wildcard arms like `_ => None`. List the variants and fail explicitly on the unexpected ones, so adding a new variant forces the match to be revisited.
+  - Use an assertion or panic when the program's own invariant is violated, because that is a bug in the code. Return or raise an error with context when the bad case comes from external input such as user input, files, or network data, because the caller needs to report it.
+  - In shell scripts, use `set -euo pipefail` (bash) or explicit `or return` / `or exit` checks (fish). Do not use `|| true` or `2>/dev/null` just to suppress failures.
 
 
 ### SESSION.md
@@ -78,9 +84,10 @@ Use the `commit-writer` skill, if available, to draft commit messages. It reads 
 
 Make sure you use `git mv` to move any files that are already checked into git.
 
-When writing commit messages, ensure that you explain any non-obvious trade-offs we've made in the design or implementation.
+When writing commit messages, ensure that you explain any non-obvious trade-offs we've made in the design or implementation. Use simple language for commit messages as well.
 
 Wrap any prose (but not code) in the commit message to match git commit conventions. Use the `<subsystem> | <imperative description>` format for the commit title (for example `extractor | guard macro invocation arguments against in-place qualification`), rather than Conventional Commits prefixes like `feat(...)` or `fix(...)`.
+
 
 When you refer to types or very short code snippets, place them in backticks. When you have a full line of code or more than one line of code, put them in indented code blocks.
 
