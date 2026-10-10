@@ -19,6 +19,13 @@
 - No flowery language, no "I'd be happy to", no "Great question!".
 - Be direct and technical.
 - Always prefer direct and simple language for writing papers, docs, and comments. Avoid inflated academic jargon, convoluted constructions, and unnecessarily complex phrasing.
+- Simple means easy to read, not short. "Direct" and "no flowery language" are not instructions to compress. Cut words that carry no meaning, but keep the words that carry the reasoning. This applies to discussion, explanations, doc comments, and papers alike.
+- Write complete sentences with a clear subject and verb. Do not write fragments, telegraphic notes, or label-and-colon shorthand in place of sentences.
+- Keep the connecting words that show how ideas relate, such as "because", "so", "but", and "which means". Do not leave me to rebuild the reasoning between two statements.
+- Name who or what acts as the subject of the sentence, and put the action in a verb rather than a noun. Write "the parser rejects the token" instead of "token rejection occurs".
+- Start a sentence with something I already know and end it with the new information.
+- Explain reasoning in paragraphs. Use a list only when the items are truly parallel, such as steps, options, or files. Do not break an argument into bullets.
+- Define a term, label, or abbreviation before using it. Do not coin a short name for something and then use it as if I already know it.
 - In summaries and reports to me, a heading must describe the current status of the items under it. If a question was answered during the work, do not list it under "Open questions"; put it under a heading like "Resolved while implementing". Use "open", "pending", or "remaining" only for items that still need action.
 
 ## Coding Style
