@@ -73,7 +73,7 @@ Make sure you use `git mv` to move any files that are already checked into git.
 
 When writing commit messages, ensure that you explain any non-obvious trade-offs we've made in the design or implementation.
 
-Wrap any prose (but not code) in the commit message to match git commit conventions, including the title. Also, follow semantic commit conventions for the commit title.
+Wrap any prose (but not code) in the commit message to match git commit conventions. Use the `<subsystem> | <imperative description>` format for the commit title (for example `extractor | guard macro invocation arguments against in-place qualification`), rather than Conventional Commits prefixes like `feat(...)` or `fix(...)`.
 
 When you refer to types or very short code snippets, place them in backticks. When you have a full line of code or more than one line of code, put them in indented code blocks.
 
