@@ -353,6 +353,11 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    match app-id=r#"^com\.gabm\.satty$"#
+    open-floating true
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -643,7 +648,8 @@ binds {
 
     // Print { screenshot; }
     // Print { spawn-sh "grim -g \"$(slurp)\" -s 1.25 - | swappy -f -"; }
-    Print { spawn-sh "grim -g \"$(slurp)\" - | swappy -f -"; }
+    // Print { spawn-sh "grim -g \"$(slurp)\" - | swappy -f -"; }
+    Print { spawn-sh "grim -g \"$(slurp)\" - | satty --filename -"; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 

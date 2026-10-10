@@ -1,0 +1,36 @@
+[general]
+copy-command = "wl-copy"
+output-filename = "~/Pictures/satty-%Y%m%d-%H%M%S.png"
+
+# Enter saves to disk and copies to the clipboard. Satty stops processing an
+# action list as soon as an action triggers early exit, so only copy exits
+# early, and the save runs first. As a side effect, Ctrl+S keeps the window
+# open while Ctrl+C and Enter close it.
+early-exit = ["copy"]
+actions-on-enter = ["save-to-file", "save-to-clipboard"]
+
+# Only arrow and line differ from the defaults. The full block is kept so
+# every tool key stays explicit.
+[keybinds]
+pointer = "p"
+crop = "c"
+brush = "b"
+line = "l"
+arrow = "a"
+rectangle = "r"
+ellipse = "e"
+text = "t"
+marker = "m"
+blur = "u"
+highlight = "g"
+
+# Satty starts with the first palette color selected, so red goes first.
+# The rest is the built-in palette in its original order.
+[color-palette]
+palette = [
+    "#eb4d4bff",
+    "#f0932bff",
+    "#6ab04cff",
+    "#22a6b3ff",
+    "#130f40ff",
+]
