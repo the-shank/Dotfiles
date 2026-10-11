@@ -1,6 +1,6 @@
 {
   "allowNonWorkspaceAccess": true,
-  "colorScheme": "light",
+  "colorScheme": "dark",
   "model": "Gemini 3.8 Flash (High)",
   "notifications": true,
   "permissions": {
