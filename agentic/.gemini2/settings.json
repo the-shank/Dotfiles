@@ -1,0 +1,57 @@
+{
+  "general": {
+    "preferredEditor": "neovim",
+    "previewFeatures": true,
+    "vimMode": false,
+    "enableNotifications": true,
+    "sessionRetention": {
+      "warningAcknowledged": true,
+      "enabled": true,
+      "maxAge": "30d"
+    },
+    "plan": {
+      "directory": "./plans",
+      "enabled": true
+    }
+  },
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "ui": {
+    "theme": "Google Code",
+    "hideBanner": true,
+    "footer": {
+      "hideModelInfo": false,
+      "hideContextPercentage": false
+    }
+  },
+  "experimental": {},
+  "model": {
+    "compressionThreshold": 0.6,
+    "name": "auto-gemini-3"
+  },
+  "hooks": {
+    "AfterAgent": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "msg=$(jq -r '.prompt_response // \"\"'); { [[ \"$msg\" == *'?'* ]] || [ ${#msg} -gt 150 ]; } && osc777-notify 'Gemini' 'Response complete'; echo '{}'"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osc777-notify 'Gemini' 'Approval needed'; echo '{}'"
+          }
+        ]
+      }
+    ]
+  }
+}
