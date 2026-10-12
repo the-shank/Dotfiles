@@ -173,6 +173,8 @@ abbr -a -g gwt 'git worktree'
 # jj
 abbr -a -g jjl 'jj lg'
 abbr -a -g jl 'jj lg'
+abbr -a -g jjll 'jj lgg'
+abbr -a -g jll 'jj lgg'
 abbr -a -g jjs 'jj show'
 abbr -a -g js 'jj show'
 abbr -a -g jjss 'jj show --stat'
