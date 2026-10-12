@@ -88,9 +88,13 @@ set --export QT_SCALE_FACTOR_ROUNDING_POLICY PassThrough
 # Prevent directories names from being shortened
 # set fish_prompt_pwd_dir_length 0
 
+# Terminal colors
+if type -q dircolors
+    eval (dircolors -c)
+end
+
 # fzf
-# set -x FZF_DEFAULT_OPTS "--color=16,header:13,info:5,pointer:3,marker:9,spinner:1,prompt:5,fg:7,hl:14,fg+:3,hl+:9 --inline-info --tiebreak=end,length --bind=shift-tab:toggle-down,tab:toggle-up"
-setenv FZF_DEFAULT_OPTS "--layout=reverse"
+setenv FZF_DEFAULT_OPTS "--layout=reverse --pointer='▶ ' --color=16,bg+:-1,fg+:underline,hl+:underline,pointer:1"
 
 # "bat" as manpager
 # set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
