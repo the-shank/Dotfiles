@@ -541,6 +541,8 @@ fish_add_path $HOME/Applications/ghidra
 # fish_add_path /usr/lib/llvm-13/bin
 fish_add_path $HOME/code/applications/codeql-home/codeql
 fish_add_path /opt/cuda/bin
+fish_add_path $HOME/Applications/Antigravity-x64/
+fish_add_path $HOME/Applications/AntigravityIDE/
 
 # custom env vars
 set --export FUZZERR_PROJ_DIR $HOME/code/research/FuzzERR
