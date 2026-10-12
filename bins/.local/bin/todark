@@ -284,13 +284,14 @@ fi
 # ghostty
 FILE=$HOME/dotfiles/ghostty/.config/ghostty/config
 if [ -f $FILE ]; then
-  # theme
-  sed -i -e 's/^# theme = gruvbox-material-dark-hard/theme = gruvbox-material-dark-hard/' $FILE
-  sed -i -e 's/^theme = Gruvbox Light/# theme = Gruvbox Light/' $FILE
   # font
   sed -i -e 's/^font-family = Noto Sans Mono$/# font-family = Noto Sans Mono/' $FILE
   sed -i -e 's/^# font-family = Noto Sans Mono Medium/font-family = Noto Sans Mono Medium/' $FILE
   sed -i -e 's/^font-family = Noto Sans Mono SemiBold/# font-family = Noto Sans Mono SemiBold/' $FILE
+  # The theme follows the desktop color-scheme on its own, but the font change
+  # needs a config reload. Ghostty reloads on SIGUSR2 (default action kills a
+  # Ghostty that is still in its first ~0.15s of startup).
+  pkill -USR2 -x ghostty
 fi
 
 # foot
