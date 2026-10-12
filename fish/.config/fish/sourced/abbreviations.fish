@@ -181,6 +181,8 @@ abbr -a -g jjss 'jj show --stat'
 abbr -a -g jss 'jj show --stat'
 abbr -a -g jjx 'jj extract'
 abbr -a -g jx 'jj extract'
+abbr -a -g jjst 'jj st'
+abbr -a -g jst 'jj st'
 
 # docker
 abbr -a -g dc 'docker container'
