@@ -391,4 +391,6 @@
   "catppuccin.boldKeywords": false,
   "catppuccin.italicComments": false,
   "catppuccin.italicKeywords": false,
+  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.view.pdf.viewer": "none"
 }
