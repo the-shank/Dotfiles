@@ -1,6 +1,6 @@
 {
   // "codeQL.cli.executablePath": "/home/shank/code/applications/codeql-home/codeql/codeql",
-  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.colorTheme": "Tokyo Night Light",
   "workbench.tree.indent": 16,
   "window.menuBarVisibility": "toggle",
   "editor.lineNumbers": "relative",
@@ -225,6 +225,9 @@
   "cmake.showOptionsMovedNotification": false,
   "git.openRepositoryInParentFolders": "never",
   "workbench.colorCustomizations": {
+    "[Gruvbox Dark Hard]": {
+      "editor.background": "#1d2021"
+    },
     "[Everforest Dark]": {
       "editor.background": "#1E2326",
       "sideBar.background": "#232a2e"
@@ -392,5 +395,31 @@
   "catppuccin.italicComments": false,
   "catppuccin.italicKeywords": false,
   "latex-workshop.latex.autoBuild.run": "never",
-  "latex-workshop.view.pdf.viewer": "none"
+  "latex-workshop.view.pdf.viewer": "none",
+  "editor.tokenColorCustomizations": {
+    "[Tokyo Night Light]": {
+      "textMateRules": [
+        {
+          "scope": [
+            "comment",
+            "meta.var.expr storage.type",
+            "keyword.control.flow",
+            "keyword.control.return",
+            "storage.modifier",
+            "string.quoted.docstring.multi",
+            "markup.italic",
+            "markup.italic punctuation",
+            "markup.quote"
+          ],
+          "settings": { "fontStyle": "" }
+        }
+      ]
+    }
+  },
+  "editor.semanticTokenColorCustomizations": {
+    "[Tokyo Night Light]": {
+      "enabled": true,
+      "rules": { "*": { "italic": false } }
+    }
+  }
 }
