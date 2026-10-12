@@ -75,6 +75,11 @@
         "command": "-workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
     },
+    {
+        "key": "ctrl+shift+.",
+        "command": "antigravity.insertSnippet",
+        "when": "editorTextFocus && (vim.mode == 'Visual' || vim.mode == 'VisualLine' || vim.mode == 'VisualBlock')"
+    }
     // NOTE: the following will interfere with the <leader><leader> keybinding for quickOpen
     // {
     //     "key": "space b p",
