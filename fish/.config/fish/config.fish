@@ -164,7 +164,7 @@ if which tree >/dev/null
 end
 
 if type -q direnv
-    eval (direnv hook fish)
+    direnv hook fish | source
 end
 
 ### FUNCTIONS ###
