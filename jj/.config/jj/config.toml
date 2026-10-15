@@ -43,6 +43,7 @@ label(
 '''
 
 [aliases]
+pull = ["util", "exec", "--", "bash", "-c", "jj git fetch && jj rebase -d 'trunk()'"]
 lg = ["log", "-T", "builtin_log_comfortable"]
 lgg = [
   "log",
