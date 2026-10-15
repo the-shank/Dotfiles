@@ -1,0 +1,28 @@
+# Terminal Colors
+background = #e6e7ed
+foreground = #343b59
+cursor-color = #343b59
+cursor-text = #e6e7ed
+selection-background = #d6d8df
+selection-foreground = #343b59
+
+# ANSI Colors (Normal 0-7)
+palette = 0=#343b59
+palette = 1=#8c4351
+palette = 2=#485e30
+palette = 3=#8f5e15
+palette = 4=#2959aa
+palette = 5=#5a3e8e
+palette = 6=#006c86
+palette = 7=#707280
+
+# ANSI Colors (Bright 8-15)
+palette = 8=#707280
+palette = 9=#8c4351
+palette = 10=#485e30
+palette = 11=#8f5e15
+palette = 12=#2959aa
+palette = 13=#5a3e8e
+palette = 14=#006c86
+palette = 15=#343b59
+
