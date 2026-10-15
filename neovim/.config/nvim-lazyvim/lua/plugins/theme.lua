@@ -4,9 +4,9 @@ return {
   opts = {
     -- colorscheme = "catppuccin-macchiato",
     -- colorscheme = "everforest",
-    colorscheme = "gruvbox-material",
+    -- colorscheme = "gruvbox-material",
     -- colorscheme = "zenbones",
     -- colorscheme = "melange",
-    -- colorscheme = "tokyonight-storm",
+    colorscheme = "tokyonight-day",
   },
 }
