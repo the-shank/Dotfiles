@@ -48,6 +48,8 @@ return {
           c.orange,
           c.red,
         }
+      else
+        c.comment = "#828bb8"
       end
     end,
     on_highlights = function(hl, c)
