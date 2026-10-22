@@ -421,5 +421,8 @@
       "enabled": true,
       "rules": { "*": { "italic": false } }
     }
-  }
+  },
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredDarkColorTheme": "Tokyo Night Bright",
+  "workbench.preferredLightColorTheme": "Tokyo Night Light"
 }
