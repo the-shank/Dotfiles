@@ -142,6 +142,24 @@ else
 fi
 
 # ==============================================================================
+# Live Tmux Pane Busy Detection
+# ==============================================================================
+#
+# During multi-step tool-calling turns (or after another agy instance runs
+# startup summary reconciliation), conversation_summaries.db reports
+# CASCADE_RUN_STATUS_IDLE (not_fully_idle = 0) even while the pane is still
+# executing a turn. In the agy TUI, the status bar on the last non-empty line
+# of the pane always renders "esc to cancel" while a turn is active and
+# "? for shortcuts" when idle at the prompt.
+
+is_pane_busy() {
+	local pane="$1"
+	[[ -n "$pane" && -n "${TMUX:-}" ]] || return 1
+	tmux capture-pane -p -t "$pane" |
+		awk 'NF { last = $0 } END { exit !(last ~ /^[[:space:]]*esc to cancel/) }'
+}
+
+# ==============================================================================
 # Preview Rendering Mode (invoked by fzf --preview)
 # ==============================================================================
 
@@ -171,6 +189,10 @@ render_preview() {
 					THEN 'active (unstarted)'
 					ELSE strftime('%Y-%m-%d %H:%M:%S', last_modified_time, 'localtime')
 				END,
+				CASE WHEN last_modified_time LIKE '0001-%' OR last_modified_time = ''
+					THEN 0
+					ELSE CAST(strftime('%s', last_modified_time) AS INTEGER)
+				END,
 				step_count,
 				status,
 				replace(replace(preview, char(10), ' '), char(9), ' ')
@@ -178,11 +200,28 @@ render_preview() {
 			 WHERE conversation_id = '$cid' LIMIT 1;")
 	fi
 
-	local title="" mod_time="" steps="" status="" preview_text=""
+	local title="" mod_time="" mod_epoch=0 steps=0 status="" preview_text=""
 	if [[ -n "$meta" ]]; then
-		IFS=$'\x1f' read -r title mod_time steps status preview_text <<<"$meta"
+		IFS=$'\x1f' read -r title mod_time mod_epoch steps status preview_text <<<"$meta"
 	fi
 	[[ -z "$title" ]] && title="(New / Untitled Session)"
+
+	local transcript="${BRAIN_DIR}/${cid}/.system_generated/logs/transcript.jsonl"
+	if [[ -f "$transcript" ]]; then
+		local file_epoch=0 live_steps=0
+		file_epoch=$(stat -c '%Y' "$transcript")
+		if ((file_epoch > mod_epoch)); then
+			mod_time=$(date -d "@$file_epoch" '+%Y-%m-%d %H:%M:%S')
+		fi
+		live_steps=$(wc -l <"$transcript")
+		if ((live_steps > ${steps:-0})); then
+			steps=$live_steps
+		fi
+	fi
+
+	if [[ -n "$pane" ]] && is_pane_busy "$pane"; then
+		status="CASCADE_RUN_STATUS_RUNNING"
+	fi
 
 	printf '%s%s%s\n' "$C_BLUE" "$title" "$C_RESET"
 	printf '%s────────────────────────────────────────────────────────────%s\n' "$C_MUTED" "$C_RESET"
@@ -200,7 +239,6 @@ render_preview() {
 	fi
 	printf '%s────────────────────────────────────────────────────────────%s\n\n' "$C_MUTED" "$C_RESET"
 
-	local transcript="${BRAIN_DIR}/${cid}/.system_generated/logs/transcript.jsonl"
 	if [[ -f "$transcript" ]]; then
 		jq -r --arg c_user "$C_YELLOW" --arg c_agy "$C_BLUE" --arg c_rst "$C_RESET" '
 			select(.type == "USER_INPUT" or (.type == "PLANNER_RESPONSE" and (.content // "" | length > 0)))
@@ -299,10 +337,12 @@ generate_rows() {
 	local open_rows=()
 	local closed_rows=()
 	declare -A seen_cid=()
+	local now_epoch
+	now_epoch=$(date +%s)
 
 	# Read CLI conversations ordered by most recently modified using ASCII Unit Separator (\x1f)
 	# so empty columns are never collapsed by Bash's whitespace IFS splitting.
-	while IFS=$'\x1f' read -r cid title ws_json mod_time steps status busy preview_snip; do
+	while IFS=$'\x1f' read -r cid title ws_json mod_time mod_epoch steps status busy preview_snip; do
 		[[ -z "$cid" ]] && continue
 		seen_cid["$cid"]=1
 
@@ -337,13 +377,29 @@ generate_rows() {
 
 		local badge="" row=""
 		if [[ -n "$pane" ]]; then
-			if [[ "$busy" == "1" || "$status" == *"RUNNING"* ]]; then
+			local transcript="${BRAIN_DIR}/${cid}/.system_generated/logs/transcript.jsonl"
+			local conv_db="${AGY_DIR}/conversations/${cid}.db"
+			local file_epoch=0
+			if [[ -f "$transcript" ]]; then
+				file_epoch=$(stat -c '%Y' "$transcript")
+			elif [[ -f "$conv_db" ]]; then
+				file_epoch=$(stat -c '%Y' "$conv_db")
+			fi
+			if ((file_epoch > mod_epoch)); then
+				mod_epoch=$file_epoch
+				mod_time=$(date -d "@$mod_epoch" '+%m-%d %H:%M')
+			fi
+			if ((mod_epoch == 0)); then
+				mod_epoch=$now_epoch
+			fi
+
+			if [[ "$busy" == "1" || "$status" == *"RUNNING"* ]] || is_pane_busy "$pane"; then
 				badge="⏳"
 			else
 				badge="🟢"
 			fi
-			printf -v row '%s\t%s\t%s\t%s  %s%-11s%s  %s%-24s%s  %s%s%s%s' \
-				"$cid" "$ws_path" "$pane" "$badge" "$C_MUTED" "$mod_time" "$C_RESET" "$C_PATH" "$short_ws" "$C_RESET" "$C_TITLE" "$title" "$C_RESET" "$extra_search"
+			printf -v row '%012d\x1f%s\t%s\t%s\t%s  %s%-11s%s  %s%-24s%s  %s%s%s%s' \
+				"$mod_epoch" "$cid" "$ws_path" "$pane" "$badge" "$C_MUTED" "$mod_time" "$C_RESET" "$C_PATH" "$short_ws" "$C_RESET" "$C_TITLE" "$title" "$C_RESET" "$extra_search"
 			open_rows+=("$row")
 		else
 			badge="⚪"
@@ -359,6 +415,10 @@ generate_rows() {
 			CASE WHEN last_modified_time LIKE '0001-%' OR last_modified_time = ''
 				THEN 'active'
 				ELSE strftime('%m-%d %H:%M', last_modified_time, 'localtime')
+			END,
+			CASE WHEN last_modified_time LIKE '0001-%' OR last_modified_time = ''
+				THEN 0
+				ELSE CAST(strftime('%s', last_modified_time) AS INTEGER)
 			END,
 			step_count,
 			status,
@@ -378,16 +438,20 @@ generate_rows() {
 			local ws_path="${active_cwd[$cid]:-$HOME}"
 			local short_ws
 			short_ws=$(shorten_path "$ws_path")
+			local badge="🟢"
+			if is_pane_busy "$pane"; then
+				badge="⏳"
+			fi
 			local row=""
-			printf -v row '%s\t%s\t%s\t🟢  %s%-11s%s  %s%-24s%s  %s(New session in %s)%s' \
-				"$cid" "$ws_path" "$pane" "$C_MUTED" "active" "$C_RESET" "$C_PATH" "$short_ws" "$C_RESET" "$C_TITLE" "$short_ws" "$C_RESET"
+			printf -v row '%012d\x1f%s\t%s\t%s\t%s  %s%-11s%s  %s%-24s%s  %s(New session in %s)%s' \
+				"$now_epoch" "$cid" "$ws_path" "$pane" "$badge" "$C_MUTED" "active" "$C_RESET" "$C_PATH" "$short_ws" "$C_RESET" "$C_TITLE" "$short_ws" "$C_RESET"
 			open_rows+=("$row")
 		fi
 	done
 
-	for row in "${open_rows[@]}"; do
-		printf '%s\n' "$row"
-	done
+	if ((${#open_rows[@]} > 0)); then
+		printf '%s\n' "${open_rows[@]}" | sort -t $'\x1f' -k1,1nr | cut -d $'\x1f' -f2-
+	fi
 	for row in "${closed_rows[@]}"; do
 		printf '%s\n' "$row"
 	done
