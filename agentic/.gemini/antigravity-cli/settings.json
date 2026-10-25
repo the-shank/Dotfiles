@@ -1,7 +1,7 @@
 {
+  "agentMode": "auto",
   "allowNonWorkspaceAccess": true,
-  "colorScheme": "light",
-  "model": "Gemini 3.8 Flash (Medium)",
+  "model": "Gemini 4 Argon (Medium)",
   "notifications": true,
   "permissions": {
     "allow": [
@@ -93,15 +93,14 @@
       "command(tokei)",
       "command(wc)",
       "command(which)",
-      "read_file(/home/common/aunor-ws/**)",
-      "read_file(/home/common/data/**)",
+      "read_file(/home/common/aunor-ws)",
+      "read_file(/home/common/data)",
       "read_url(antigravity.google)",
       "read_url(docs.jj-vcs.dev)",
       "read_url(github.com)",
       "read_url(raw.githubusercontent.com)"
     ]
   },
-  "toolPermission": "always-proceed",
   "trustedWorkspaces": [
     "/evaldisk",
     "/home/common/aunor-ws",
@@ -112,6 +111,7 @@
     "/home/common/data",
     "/home/shank",
     "/home/shank/.gemini/antigravity-cli",
+    "/home/shank/Downloads",
     "/home/shank/RlSync",
     "/home/shank/Sync",
     "/home/shank/code/learning/rust-atomics-and-locks",
