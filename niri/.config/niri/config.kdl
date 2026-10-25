@@ -570,6 +570,7 @@ binds {
     Alt+9 { spawn "~/.config/niri/scripts/focus_window.sh" "Slack"; }
     Alt+0 { spawn "~/.config/niri/scripts/focus_window.sh" "obsidian"; }
     Alt+W { focus-workspace "W"; }
+    Alt+Backslash hotkey-overlay-title="Focus or Open agy Terminal" { spawn "~/.config/niri/scripts/agy_terminal.sh"; }
     Mod+Shift+1 { move-column-to-workspace 1; }
     Mod+Shift+2 { move-column-to-workspace 2; }
     Mod+Shift+3 { move-column-to-workspace 3; }
@@ -727,3 +728,6 @@ spawn-at-startup "thunar" "--daemon"
 
 // auto manage display settings
 spawn-at-startup "kanshi"
+
+// Dedicated Ghostty terminal running tmux session agy-<devicename>
+spawn-at-startup "~/.config/niri/scripts/agy_terminal.sh"
