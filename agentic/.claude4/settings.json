@@ -41,5 +41,13 @@
   "tui": "default",
   "theme": "auto",
   "inputNeededNotifEnabled": true,
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "permissions": {
+    "allow": [
+      "Bash(latexmk:*)",
+      "Bash(pdftotext:*)",
+      "Bash(hunspell:*)",
+      "Bash(./build_sigmetrics.sh)"
+    ]
+  }
 }
