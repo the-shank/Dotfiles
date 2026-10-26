@@ -390,6 +390,10 @@
   "debug.console.fontSize": 12,
   "chat.disableAIFeatures": true,
   "claudeCode.preferredLocation": "panel",
+  "claudeCode.hideOnboarding": true,
+  "claudeCode.environmentVariables": [
+    { "name": "CLAUDE_CONFIG_DIR", "value": "/home/shank/.claude2" }
+  ],
   "chat.fontSize": 15,
   "catppuccin.boldKeywords": false,
   "catppuccin.italicComments": false,
