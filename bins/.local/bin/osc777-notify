@@ -2,6 +2,13 @@
 TITLE="${1:-Notification}"
 BODY="${2:-}"
 
+# No controlling terminal (e.g. Claude Code inside the VS Code panel):
+# the escape sequence has nowhere to go, so use a desktop notification.
+if ! { : > /dev/tty; } 2>/dev/null; then
+    notify-send "$TITLE" "$BODY" 2>/dev/null || true
+    exit 0
+fi
+
 if [[ -n "$TMUX" ]]; then
     printf '\ePtmux;\e\e]777;notify;%s;%s\a\e\\' "$TITLE" "$BODY" > /dev/tty
 else
