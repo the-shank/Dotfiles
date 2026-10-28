@@ -10,6 +10,7 @@ progress-color=over #eceff480
 icon-path=/usr/share/icons/Qogir:/usr/share/icons/hicolor
 max-icon-size=70
 layer=overlay
+anchor=top-center
 
 border-size=3
 border-radius=5
