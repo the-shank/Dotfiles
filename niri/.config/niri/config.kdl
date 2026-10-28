@@ -10,6 +10,13 @@
 //   // }
 // }
 
+// Point everything niri spawns (fuzzel, Obsidian, ...) at the ssh-agent that
+// `ssh-add` fills, not the gcr agent, which prompts for the passphrase on every use.
+// KDL does not expand $XDG_RUNTIME_DIR, so the uid is hard-coded.
+environment {
+    SSH_AUTH_SOCK "/run/user/1000/ssh-agent.socket"
+}
+
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://yalter.github.io/niri/Configuration:-Input
