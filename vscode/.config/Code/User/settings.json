@@ -429,4 +429,5 @@
   "window.autoDetectColorScheme": true,
   "workbench.preferredDarkColorTheme": "Tokyo Night Bright",
   "workbench.preferredLightColorTheme": "Tokyo Night Light"
+  "window.density.layout": "compact"
 }
