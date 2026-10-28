@@ -1,6 +1,7 @@
 ## General best practices
 
 - Run shell scripts through shellcheck.
+- Prefer standard command-line tools (`ripgrep`, `fd`, `jq`, `sed`, `awk`, `cut`, `sort`, `uniq`, `xargs`) over writing ad-hoc Python scripts for file inspection, text searches, and JSON extraction. Write a Python script only when the logic genuinely requires multiline data structures, complex parsing, or calculations that shell utilities cannot express cleanly.
 - Use `tmp/` (project-local) for intermediate files and comparison artifacts, not `/tmp`. This keeps outputs discoverable and project-scoped, and avoids requesting permissions for `/tmp`.
 - Send a Slack notification using `send_slack_notification.sh` whenever permission is needed to execute a command or when waiting for user confirmation.
 - `agy` saves `~/.gemini/antigravity-cli/settings.json` atomically (`rename()`), which replaces the GNU Stow file symlink with a regular file; sync changes between `~/.gemini/antigravity-cli/settings.json` and `~/dotfiles/agentic/.gemini/antigravity-cli/settings.json` and re-run `stow --no-folding --restow agentic` when updating `agy` settings.
