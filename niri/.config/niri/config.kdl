@@ -95,25 +95,11 @@ input {
 // https://yalter.github.io/niri/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
 output "eDP-1" {
-    mode "2560x1600"
     scale 1.5
     transform "normal"
 }
 
-output "DP-2" {
-  mode "3840x2160"
-  scale 1.4
-  transform "normal"
-}
-
-output "DP-3" {
-  mode "3840x2160"
-  scale 1.4
-  transform "normal"
-}
-
-output "HDMI-A-1" {
-  mode "3840x2160"
+output "Dell Inc. DELL S3221QS 6CW07N3" {
   scale 1.4
   transform "normal"
 }
