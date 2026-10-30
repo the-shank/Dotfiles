@@ -1,7 +1,8 @@
 {
   "agentMode": "auto",
   "allowNonWorkspaceAccess": true,
-  "model": "Gemini 4 Argon (Medium)",
+  "colorScheme": "light",
+  "model": "Gemini 3.8 Flash (Medium)",
   "notifications": true,
   "permissions": {
     "allow": [
@@ -31,8 +32,8 @@
       "command(docker ps)",
       "command(du)",
       "command(find /home/common/aunor-ws/Aunor-logs/pipeline/run-125 -name \"*rustdoc-json*\")",
-      "command(find /home/shank -maxdepth 3 -name \"AGENTS.md\" 2>/dev/null)",
-      "command(find /home/shank/.gemini -name \"*AGENT*\" -o -name \"*agent*\" -o -name \"*rule*\" 2>/dev/null)",
+      "command(find /home/shank -maxdepth 3 -name \"AGENTS.md\" 2\u003e/dev/null)",
+      "command(find /home/shank/.gemini -name \"*AGENT*\" -o -name \"*agent*\" -o -name \"*rule*\" 2\u003e/dev/null)",
       "command(find jj -maxdepth 3)",
       "command(find)",
       "command(gdu)",
@@ -98,9 +99,11 @@
       "read_url(antigravity.google)",
       "read_url(docs.jj-vcs.dev)",
       "read_url(github.com)",
-      "read_url(raw.githubusercontent.com)"
+      "read_url(raw.githubusercontent.com)",
+      "command(uname)"
     ]
   },
+  "toolPermission": "proceed-in-sandbox",
   "trustedWorkspaces": [
     "/evaldisk",
     "/home/common/aunor-ws",

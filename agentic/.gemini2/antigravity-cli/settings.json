@@ -1,7 +1,6 @@
 {
   "allowNonWorkspaceAccess": true,
-  "colorScheme": "dark",
-  "model": "Gemini 3.8 Flash (High)",
+  "model": "Gemini 3.8 Flash (Medium)",
   "notifications": true,
   "permissions": {
     "allow": [
@@ -77,8 +76,8 @@
       "read_url(docs.jj-vcs.dev)",
       "command(jj --no-pager resolve --help)",
       "command(jj --no-pager resolve --list)",
-      "command(find /home/shank -maxdepth 3 -name \"AGENTS.md\" 2>/dev/null)",
-      "command(find /home/shank/.gemini -name \"*AGENT*\" -o -name \"*agent*\" -o -name \"*rule*\" 2>/dev/null)",
+      "command(find /home/shank -maxdepth 3 -name \"AGENTS.md\" 2\u003e/dev/null)",
+      "command(find /home/shank/.gemini -name \"*AGENT*\" -o -name \"*agent*\" -o -name \"*rule*\" 2\u003e/dev/null)",
       "command(git -C /home/shank/dotfiles status)",
       "command(/home/shank/.local/bin/send_slack_notification.sh)",
       "command(jj)",
