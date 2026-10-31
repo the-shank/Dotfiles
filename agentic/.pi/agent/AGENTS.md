@@ -65,6 +65,15 @@ Wrap any prose (but not code) in the commit message to match git commit conventi
 
 When you refer to types or very short code snippets, place them in backticks. When you have a full line of code or more than one line of code, put them in indented code blocks.
 
+### Jujutsu (jj) workflow
+
+Always check whether the repository uses Jujutsu (a `.jj` directory exists). When working in a repository managed with Jujutsu (including `dotfiles`), always use `jj` commands instead of raw `git` commands:
+- Describe and finalize changes with `jj describe -m "..."`.
+- Create new change branches with `jj new`.
+- Push changes with `jj git push` (or `jj git push -b <bookmark>`).
+- Inspect history and status with `jj status` and `jj log`.
+Do not invoke raw `git commit`, `git add`, or `git push` directly in Jujutsu repositories, because doing so bypasses Jujutsu's working copy tracking and revsets.
+
 ## Documentation preferences
 
 ### Documentation examples
