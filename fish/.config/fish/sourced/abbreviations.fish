@@ -352,11 +352,11 @@ abbr -a -g ninja "nice ninja"
 abbr -a -g build "nice build"
 
 # claude(s)
-abbr -a -g claude "CLAUDE_CONFIG_DIR=~/.claude2 claude"
-abbr -a -g c1 "CLAUDE_CONFIG_DIR=~/.claude1 claude"
-abbr -a -g c2 "CLAUDE_CONFIG_DIR=~/.claude2 claude"
-abbr -a -g c3 "CLAUDE_CONFIG_DIR=~/.claude3 claude"
-abbr -a -g c4 "CLAUDE_CONFIG_DIR=~/.claude4 claude"
+abbr -a -g claude "CLAUDE_CONFIG_DIR=~/.claude CLAUDE_CODE_OAUTH_TOKEN=$CLAUDE_CODE_OAUTH_TOKEN_1 claude"
+abbr -a -g c1 "CLAUDE_CONFIG_DIR=~/.claude1  CLAUDE_CODE_OAUTH_TOKEN=$CLAUDE_CODE_OAUTH_TOKEN_1 claude"
+abbr -a -g c2 "CLAUDE_CONFIG_DIR=~/.claude2  CLAUDE_CODE_OAUTH_TOKEN=$CLAUDE_CODE_OAUTH_TOKEN_1 claude"
+abbr -a -g c3 "CLAUDE_CONFIG_DIR=~/.claude3  CLAUDE_CODE_OAUTH_TOKEN=$CLAUDE_CODE_OAUTH_TOKEN_1 claude"
+abbr -a -g c4 "CLAUDE_CONFIG_DIR=~/.claude4  CLAUDE_CODE_OAUTH_TOKEN=$CLAUDE_CODE_OAUTH_TOKEN_1 claude"
 
 # gemini(s)
 abbr -a -g agy2 "agy --gemini_dir=$HOME/.gemini2"
