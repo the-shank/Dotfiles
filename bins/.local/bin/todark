@@ -305,15 +305,14 @@ if [ -f $FILE ]; then
   sed -i -e 's|^font=JetBrains Mono:weight=SemiBold|# font=JetBrains Mono:weight=SemiBold|' $FILE
 fi
 
-# # tmux
-# DIR=$HOME/dotfiles/tmux/.tmux
-# if [ -d $DIR ]; then
-#   (
-#     cd $DIR
-#     ln -sf themes/tokyonight_storm.tmux theme.tmux
-#     tmux source-file ~/.tmux.conf
-#   )
-# fi
+# tmux
+FILE=$HOME/dotfiles/tmux/.tmux.conf
+if [ -f "$FILE" ]; then
+  sed -i -e 's|source-file ~/.tmux/themes/tokyonight_.*.tmux|source-file ~/.tmux/themes/tokyonight_storm.tmux|' "$FILE"
+  if tmux info >/dev/null 2>&1; then
+    tmux source-file "$FILE"
+  fi
+fi
 
 # # yazi
 # DIR=$HOME/dotfiles/yazi/.config/yazi
