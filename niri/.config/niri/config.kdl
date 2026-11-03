@@ -79,7 +79,7 @@ input {
     trackpoint {
         // off
         natural-scroll
-        accel-speed -0.20
+        // accel-speed -0.20
         // accel-profile "flat"
         // scroll-method "on-button-down"
         // scroll-button 273
@@ -724,7 +724,8 @@ spawn-at-startup "megasync"
 // polkit agent
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
-spawn-at-startup "safeeyes"
+// Force GTK4 Cairo (CPU) rendering so SafeEyes does not leak NVIDIA/DRM kernel buffers across breaks
+spawn-at-startup "env" "GSK_RENDERER=cairo" "safeeyes"
 
 // file manager daemon (provides org.freedesktop.FileManager1 for "Open Containing Folder")
 spawn-at-startup "thunar" "--daemon"
