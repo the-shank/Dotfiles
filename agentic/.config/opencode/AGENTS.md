@@ -40,6 +40,8 @@
 - Prefer idiomatic, straightforward code over defensive or generic code.
 - Do not implement hypothetical edge-case handling unless it is explicitly required or already justified by the codebase.
 - Avoid unnecessary fallbacks, retries, abstractions, and guards.
+- Do not introduce intermediate wrapper structs, `Context` bags, or adapter types just to pass data around or group functions, unless explicitly requested or required by language constraints.
+- Match the domain vocabulary of the surrounding codebase when naming new types, functions, and variables.
 - Do not implement silent cross-vendor or cross-model fallback chains in scripts, runners, or test harnesses. When an execution script expects a specific service (such as OpenRouter or OpenAI), require the explicit credential for that service and fail with an error if the credential is absent. Do not inspect unrelated local credential files to reroute execution to an unrequested provider.
 - Do not add runtime defensive guards or checks solely to silence static analyzers or linters on impossible conditions. If an analyzer flags a false positive, check runtime invariants first. Resolve it via type annotations, casts, or linter directives, rather than adding dead runtime branches.
 - Follow existing repository patterns and language conventions.
@@ -50,6 +52,10 @@
   - Prefer exhaustive matches over wildcard arms like `_ => None`. List the variants and fail explicitly on the unexpected ones, so adding a new variant forces the match to be revisited.
   - Use an assertion or panic when the program's own invariant is violated, because that is a bug in the code. Return or raise an error with context when the bad case comes from external input such as user input, files, or network data, because the caller needs to report it.
   - In shell scripts, use `set -euo pipefail` (bash) or explicit `or return` / `or exit` checks (fish). Do not use `|| true` or `2>/dev/null` just to suppress failures.
+
+### Post-Coding Vocabulary Check
+
+**IMPORTANT:** After completing a coding or refactoring task, if you introduced any new types (`struct`, `enum`, `type`, `trait`, `class`) or non-trivial functions, ALWAYS end your final response with a **New Vocabulary** section so we can align on terminology for review. For each new symbol, write a single sentence stating what it represents or does (including key fields or variants for types). Omit this section when no new symbols were added, or during Q&A, debugging, and shell tasks.
 
 
 ### SESSION.md
