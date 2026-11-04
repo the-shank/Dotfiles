@@ -75,7 +75,7 @@ font-feature = "clig"
 
 # Follows the desktop color-scheme (set by todark/tolight via gsettings),
 # so open windows switch live without a config reload.
-theme = light:tokyonight-day-vscode,dark:gruvbox-material-dark-hard
+theme = light:tokyonight-day-vscode,dark:TokyoNight Storm
 
 # background-opacity = 0.95
 # background-blur = true

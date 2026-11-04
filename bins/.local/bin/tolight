@@ -278,6 +278,8 @@ fi
 # ghostty
 FILE=$HOME/dotfiles/ghostty/.config/ghostty/config
 if [ -f $FILE ]; then
+  # theme
+  sed -i -e 's/^theme = .*/theme = light:tokyonight-day-vscode,dark:TokyoNight Storm/' "$FILE"
   # font
   sed -i -e 's/^font-family = Noto Sans Mono$/# font-family = Noto Sans Mono/' $FILE
   sed -i -e 's/^font-family = Noto Sans Mono Medium/# font-family = Noto Sans Mono Medium/' $FILE
