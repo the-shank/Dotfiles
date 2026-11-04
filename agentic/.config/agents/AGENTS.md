@@ -97,7 +97,13 @@ Use the `commit-writer` skill, if available, to draft commit messages. It reads 
 
 Make sure you use `git mv` to move any files that are already checked into git.
 
-When writing commit messages, ensure that you explain any non-obvious trade-offs we've made in the design or implementation. Use simple language for commit messages as well.
+Keep commit messages short and use simple language. Write the title, then either no body or a body of two or three wrapped lines that says what was wrong and what the change does. Mention a non-obvious trade-off in one clause only if a reviewer would otherwise miss it. Put longer rationale in code comments, not in the commit message. Match the length of recent messages in the log. For example:
+
+    rewriter | defer E0433 on a name bound by a gated std import to SP
+
+    TD gates `use std::time;` but does not rewrite `time::...` paths inside
+    macro arguments, so the no_std build fails on `time`. Like a bare `std::`
+    path, this is left for SP to gate.
 
 Wrap any prose (but not code) in the commit message to match git commit conventions. Use the `<subsystem> | <imperative description>` format for the commit title (for example `extractor | guard macro invocation arguments against in-place qualification`), rather than Conventional Commits prefixes like `feat(...)` or `fix(...)`.
 
