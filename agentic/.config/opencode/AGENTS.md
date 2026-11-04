@@ -109,10 +109,14 @@ When you refer to types or very short code snippets, place them in backticks. Wh
 ### Jujutsu (jj) workflow
 
 Always check whether the repository uses Jujutsu (a `.jj` directory exists). When working in a repository managed with Jujutsu (including `dotfiles`), always use `jj` commands instead of raw `git` commands:
+- Before editing files for a new commit or splitting a commit, always run `jj status` (or `jj log -n 5`) first to verify which revision `@` points to and whether target files already have uncommitted changes.
 - Describe and finalize changes with `jj describe -m "..."`.
+- Commit isolated files out of a dirty working copy with `jj commit -m "..." <paths...>`, which keeps only the listed files in the finalized commit (`@-`) and moves all other modified files into the new working-copy commit (`@`).
+- When building a multi-commit feature, commit each atomic step (`jj commit -m "..." <paths...>`) before editing the same files for the next step. If a file in `@` already contains mixed hunks (`C1 + C2`), snapshot `@` and record its commit ID (`jj log -r @ --no-graph -T 'commit_id.short()'` -> `<snapshot-commit-id>`), edit `<file>` so only `C1` remains, run `jj commit -m "..." <file>`, and run `jj restore --from <snapshot-commit-id> <file>` so `@` gets `C1 + C2` back (leaving only `C2` as the diff in `@`).
 - Create new change branches with `jj new`.
 - Push changes with `jj git push` (or `jj git push -b <bookmark>`).
 - Inspect history and status with `jj status` and `jj log`.
+- Avoid whole-tree checkout commands (`jj edit`, `jj restore` without paths, or `jj op restore`) when sandbox bind-mounted files (such as `vscode/.config/Code/User/settings.json`) have uncommitted changes in `@`, because `unlink()` on bind-mounted files fails with `EBUSY` and leaves the working copy stale. Prefer path-scoped commands (`jj commit <paths...>`, `jj squash --into <commit> <paths...>`, `jj restore <paths...>`) instead. If a working copy becomes stale from `EBUSY`, recover with `jj --ignore-working-copy op restore <op-id>` followed by `jj status`.
 Do not invoke raw `git commit`, `git add`, or `git push` directly in Jujutsu repositories, because doing so bypasses Jujutsu's working copy tracking and revsets.
 
 ### Small CLs Workflow (Git and Jujutsu)
@@ -122,7 +126,7 @@ Apply the principle of Small CLs by default to ALL code changes, even when not e
 - **Default to small, atomic commits**: Break any feature, bug fix, or refactor into isolated, self-contained commits (CLs). Never bundle unrelated fixes, dead-code cleanups, or refactorings into a single monolithic commit.
 - **Accompany each CL with isolated tests**: Every functional commit must include its own unit or integration tests that verify that change in isolation within the same commit.
 - **Linear stacked commits**: Structure multi-step work as a linear stack of dependent small commits, each building upon the previous one.
-- **Amend respective commits during review**: When addressing review comments or polishing an earlier commit in a stack, update that specific commit directly (such as via `jj edit <commit>` and rebase in Jujutsu, or interactive rebase in Git). Create new commits only for genuinely new, independent work.
+- **Amend respective commits during review**: When addressing review comments or polishing an earlier commit in a stack, update that specific commit directly (such as via `jj squash --into <commit> <paths...>` or `jj edit <commit>` in Jujutsu, or interactive rebase in Git). Create new commits only for genuinely new, independent work.
 
 ## Documentation preferences
 
