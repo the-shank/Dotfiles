@@ -100,7 +100,8 @@
       "read_url(docs.jj-vcs.dev)",
       "read_url(github.com)",
       "read_url(raw.githubusercontent.com)",
-      "command(uname)"
+      "command(uname)",
+      "command(stow)"
     ]
   },
   "toolPermission": "proceed-in-sandbox",
