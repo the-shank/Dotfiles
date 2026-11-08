@@ -13,17 +13,6 @@
 @define-color highlight #685878 ;
 @define-color base1  #19191e ;
 
-@keyframes blink-warning {
-    70% {
-        color: white;
-    }
-
-    to {
-        color: white;
-        background-color: orange;
-    }
-}
-
 @keyframes blink-critical {
     70% {
       color: white;
@@ -174,8 +163,8 @@
 }
 
 #battery.warning.discharging {
-    animation-name: blink-warning;
-    animation-duration: 3s;
+    background-color: orange;
+    color: @base1;
 }
 
 #battery.critical.discharging {
