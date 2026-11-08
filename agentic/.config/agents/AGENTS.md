@@ -21,18 +21,7 @@
 
 ## Writing Style
 
-- NEVER use em dashes (—), en dashes, or hyphens surrounded by spaces as sentence interrupters.
-- Restructure sentences instead: use periods, commas, or parentheses.
-- No flowery language, no "I'd be happy to", no "Great question!".
-- Be direct and technical.
-- Always prefer direct and simple language for writing papers, docs, comments and all our discussions in general. 
-- Avoid inflated academic jargon, convoluted constructions, and unnecessarily complex phrasing.
-- Simple means easy to read, not short, although just being overly verbose for no reasons is not being simple either. "Direct" and "no flowery language" are not instructions to compress. Cut words that carry no meaning, but keep the words that carry the reasoning. This applies to discussion, explanations, doc comments, and papers alike.
-- Write complete sentences with a clear subject and verb. Do not write fragments, telegraphic notes, or label-and-colon shorthand in place of sentences.
-- Keep the relevant connecting words that show how ideas relate, such as "because", "so", "but", and "which means". Do not leave me to rebuild the reasoning between two statements.
-- Name who or what acts as the subject of the sentence, and put the action in a verb rather than a noun. Write "the parser rejects the token" instead of "token rejection occurs".
-- Start a sentence with something I already know and end it with the new information.
-- Define a term, label, or abbreviation before using it. Do not coin a short name for something and then use it as if I already know it.
+- Keep responses direct, dry, and matter-of-fact. Avoid LLM clichés, consultant phrasing (e.g., "moves the needle", "here is how X breaks down", "it's not just X, it's Y"), and sycophancy.
 
 ## Coding Style
 
@@ -41,6 +30,7 @@
 - Avoid unnecessary fallbacks, retries, abstractions, and guards.
 - Do not introduce intermediate wrapper structs, `Context` bags, or adapter types just to pass data around or group functions, unless explicitly requested or required by language constraints.
 - Match the domain vocabulary of the surrounding codebase when naming new types, functions, and variables.
+- Use realistic names for types and variables in documentation and examples.
 - Do not implement silent cross-vendor or cross-model fallback chains in scripts, runners, or test harnesses. When an execution script expects a specific service (such as OpenRouter or OpenAI), require the explicit credential for that service and fail with an error if the credential is absent. Do not inspect unrelated local credential files to reroute execution to an unrequested provider.
 - Do not add runtime defensive guards or checks solely to silence static analyzers or linters on impossible conditions. If an analyzer flags a false positive, check runtime invariants first. Resolve it via type annotations, casts, or linter directives, rather than adding dead runtime branches.
 - Follow existing repository patterns and language conventions.
@@ -138,9 +128,3 @@ Apply the principle of Small CLs by default to ALL code changes, even when not e
 - **Accompany each CL with isolated tests**: Every functional commit must include its own unit or integration tests that verify that change in isolation within the same commit.
 - **Linear stacked commits**: Structure multi-step work as a linear stack of dependent small commits, each building upon the previous one.
 - **Amend respective commits during review**: When addressing review comments or polishing an earlier commit in a stack, update that specific commit directly (such as via `jj squash --into <commit> <paths...>` or `jj edit <commit>` in Jujutsu, or interactive rebase in Git). Create new commits only for genuinely new, independent work.
-
-## Documentation preferences
-
-### Documentation examples
-
-- Use realistic names for types and variables.
