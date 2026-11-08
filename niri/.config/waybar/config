@@ -223,7 +223,7 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon} {capacity}% ({power}W)",
+    "format": "{icon} {capacity}% ({power:.2f}W)",
     "format-icons": [
       "",
       "",
