@@ -296,7 +296,7 @@ abbr -a -g asanopts "ASAN_OPTIONS=\"detect_leaks=0:abort_on_error=1:symbolize=1:
 abbr -a -g dpi\? "cat $HOME/.xsession | rg --ignore-case dpi="
 abbr -a -g d120 "dpi.sh 120"
 abbr -a -g d114 "dpi.sh 114"
-abbr -a -g nf neofetch
+abbr -a -g nf macchina
 abbr -a -g jb "just build"
 abbr -a -g procs "procs --color disable"
 abbr -a -g procsl "procs --theme light"
