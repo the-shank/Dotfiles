@@ -281,9 +281,9 @@ if [ -f $FILE ]; then
   # theme
   sed -i -e 's/^theme = .*/theme = light:tokyonight-day-vscode,dark:TokyoNight Storm/' "$FILE"
   # font
-  sed -i -e 's/^font-family = Noto Sans Mono$/# font-family = Noto Sans Mono/' $FILE
-  sed -i -e 's/^font-family = Noto Sans Mono Medium/# font-family = Noto Sans Mono Medium/' $FILE
-  sed -i -e 's/^# font-family = Noto Sans Mono SemiBold/font-family = Noto Sans Mono SemiBold/' $FILE
+  sed -i -e 's/^font-family = Iosvmata Nerd Font$/# font-family = Iosvmata Nerd Font/' "$FILE"
+  sed -i -e 's/^font-family = Iosvmata Nerd Font Medium/# font-family = Iosvmata Nerd Font Medium/' "$FILE"
+  sed -i -e 's/^# font-family = Iosvmata Nerd Font SemiBold/font-family = Iosvmata Nerd Font SemiBold/' "$FILE"
   # The theme follows the desktop color-scheme on its own, but the font change
   # needs a config reload. Ghostty reloads on SIGUSR2 (default action kills a
   # Ghostty that is still in its first ~0.15s of startup).
