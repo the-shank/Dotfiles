@@ -54,3 +54,19 @@ lgg = [
 ]
 lga = ["log", "-r", "builtin_log() | ::@", "-T", "builtin_log_comfortable"]
 extract = ["split", "--insert-before", "@"]
+restow = [
+  "util",
+  "exec",
+  "--",
+  "bash",
+  "-c",
+  """
+  test "$(basename "$(jj root 2>/dev/null)")" = dotfiles || { echo "jj restow only works inside dotfiles" >&2; exit 1; }
+  cd "$(jj root)"
+  jj diff -r "committer_date(after:'${1:-30} days ago') & ~@" --name-only | cut -d/ -f1 | sort -u | while read -r p; do
+    [ -d "$p" ] && [ "$p" != ".git" ] && [ "$p" != ".jj" ] && [ "$p" != "tmp" ] && stow --no-folding -R "$p"
+  done
+  """,
+  "bash",
+]
+
