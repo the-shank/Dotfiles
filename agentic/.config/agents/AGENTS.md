@@ -3,17 +3,18 @@
 - Run shell scripts through shellcheck.
 - Prefer standard command-line tools (`ripgrep`, `fd`, `jq`, `sed`, `awk`, `cut`, `sort`, `uniq`, `xargs`) over writing ad-hoc Python scripts for file inspection, text searches, and JSON extraction. Write a Python script only when the logic genuinely requires multiline data structures, complex parsing, or calculations that shell utilities cannot express cleanly.
 - Use `tmp/` (project-local) for intermediate files and comparison artifacts, not `/tmp`. This keeps outputs discoverable and project-scoped, and avoids requesting permissions for `/tmp`.
-- Send a Slack notification using `send_slack_notification.sh` whenever permission is needed to execute a command or when waiting for user confirmation.
 - `agy` saves `~/.gemini/antigravity-cli/settings.json` atomically (`rename()`), which replaces the GNU Stow file symlink with a regular file; sync changes between `~/.gemini/antigravity-cli/settings.json` and `~/dotfiles/agentic/.gemini/antigravity-cli/settings.json` and re-run `stow --no-folding --restow agentic` when updating `agy` settings.
-- Act as an intellectually honest senior peer: prioritize technical integrity over literal compliance, challenge assumptions with evidence, reject suboptimal hacks that violate project patterns, and call out logical contradictions in user directives. Your goal is to protect the codebase, not just to please the user.
 
 ## Behavior
 
 - Do NOT start implementing, designing, or modifying code unless explicitly asked.
-- When user mentions an issue or topic, just summarize/discuss it - don't jump into action.
+- When user mentions an issue or topic, just summarize and discuss it rather than jumping into action.
 - Wait for explicit instructions like "implement this", "fix this", "create this".
 - No unnecessary comments and emojis.
-- Treat user-specified parameters, models, providers, architectures, and tools as non-negotiable hard constraints.
+- Prioritize technical integrity over pleasing the user. Verify the user's premise against the codebase and facts before building on it, and state directly at the start of the response if an assumption is wrong or if user directives contradict each other.
+- Propose a better way upfront when the user's approach breaks project patterns, adds real complexity, or overlooks an existing or much simpler solution, and ask about the underlying goal when a narrow request looks unusually roundabout. When the user's approach is already sound, proceed without manufacturing caveats or nitpicking style preferences and minor trade-offs.
+- Pause on an explicit implementation request only when inspection exposes a false premise, a bug or broken invariant, or existing functionality that already solves the problem. State the issue and the alternative concisely, and wait for confirmation. Once the user confirms a choice after hearing the trade-off, execute it cleanly without repeating the objection.
+- Never silently alter or substitute user-specified parameters, models, providers, architectures, or tools during execution. You may question those choices upfront when you see a concrete flaw or a substantially better option, but only the user can change them.
 - If a prerequisite for a requested option is missing (such as an API key, dependency, or configuration file), stop immediately and report the blockage.
 - Never substitute an alternative model, API provider, or configuration to bypass a missing prerequisite without explicit user approval.
 - When external blockers prevent following the user's plan, present the blocker and proposed alternatives as a question. Wait for user confirmation before executing any alternative path.
@@ -45,8 +46,10 @@
 - Do not implement silent cross-vendor or cross-model fallback chains in scripts, runners, or test harnesses. When an execution script expects a specific service (such as OpenRouter or OpenAI), require the explicit credential for that service and fail with an error if the credential is absent. Do not inspect unrelated local credential files to reroute execution to an unrequested provider.
 - Do not add runtime defensive guards or checks solely to silence static analyzers or linters on impossible conditions. If an analyzer flags a false positive, check runtime invariants first. Resolve it via type annotations, casts, or linter directives, rather than adding dead runtime branches.
 - Follow existing repository patterns and language conventions.
-- Keep the main execution path obvious and easy to read.
+- Keep the main execution path obvious and easy to read. Prefer clear inline code over splitting sequential, context-dependent logic into single-use helper functions; extract functions for genuine reuse rather than file organization, and keep straightforward logic self-contained when practical.
 - Solve the current problem directly. Do not design for speculative future reuse.
+- Write comments that explain *why* (business rules, design rationale, invariants, and integration context) right before complex or multi-phase blocks, rather than narrating *what* the code already says. Do not add decorative section banners or comment simple helpers, trivial wrappers, and obvious patterns.
+- Document intentional omissions when a reader would otherwise expect code to be present, and add `TODO` comments for features or nuances intentionally deferred.
 - Fail fast, not silently. When code handles one case and the others are unexpected, make the unexpected cases fail explicitly instead of returning `None`, `null`, an empty value, or a default. This exposes broken assumptions right away instead of hiding them as missing results far from the cause.
   - This does not apply when absence is a legitimate answer (a lookup that may miss) or when a function exists to handle only one kind of input. Make that intent visible in the name or type, such as `as_call_expr()` or `try_parse_header()`.
   - Prefer exhaustive matches over wildcard arms like `_ => None`. List the variants and fail explicitly on the unexpected ones, so adding a new variant forces the match to be revisited.
@@ -60,7 +63,7 @@
 
 ### SESSION.md
 
-While working, if you come across any bugs, missing features, or other oddities about the implementation, structure, or workflow, **add a concise description of them to SESSION.md** to defer solving such incidental tasks until later. You do not need to fix them all straight away unless they block your progress; writing the down is often sufficient. **Do not write your accomplishments into this file.**
+While working, if you come across any bugs, missing features, or other oddities about the implementation, structure, or workflow, **add a concise description of them to SESSION.md** to defer solving such incidental tasks until later. You do not need to fix them all straight away unless they block your progress; writing them down is often sufficient. **Do not write your accomplishments into this file.**
 
 ### Prefer temp files over pipes for sub-agent CLI testing
 
@@ -91,7 +94,7 @@ permission prompts in sub-agents.
 
 Use `compile_fail` doctests to verify when certain code should _not_ compile, such as for type-state patterns or trait-based enforcement. Each `compile_fail` test should target a specific error condition since the doctest only has a binary output of whether it fails to compile, not the many reasons _why_. Make sure you clearly explain exactly WHY the code should fail to compile.
 
-If there is no obvious item to add the doctest to, create a new private item with `#[allow(dead_code)]` that you add the compile-fail tests to. Document that thats' its purpose.
+If there is no obvious item to add the doctest to, create a new private item with `#[allow(dead_code)]` that you add the compile-fail tests to. Document that that is its purpose.
 
 Before committing, create a temporary example file for each compile-fail test and check the output of `cargo run --example <name>` to ensure it fails for the correct reason. Remove the temporary example after.
 
@@ -143,93 +146,3 @@ Apply the principle of Small CLs by default to ALL code changes, even when not e
 ### Documentation examples
 
 - Use realistic names for types and variables.
-
-## Code style preferences
-
-Document when you have intentionally omitted code that the reader might otherwise expect to be present.
-
-Add TODO comments for features or nuances that were deemed not important to add, support, or implement right away.
-
-### Literate Programming
-
-Apply literate programming principles to make code self-documenting and maintainable across all languages:
-
-#### Core Principles
-
-1. **Explain the Why, Not Just the What**: Focus on business logic, design decisions, and reasoning rather than describing what the code obviously does.
-
-2. **Top-Down Narrative Flow**: Structure the code to read like a story with clear sections that build logically:
-   ```rust
-   // ==============================================================================
-   // Plugin Configuration Extraction
-   // ==============================================================================
-
-   // First, we extract plugin metadata from Cargo.toml to determine
-   // what files we need to build and where to put them.
-   ```
-
-3. **Inline Context**: Place explanatory comments immediately before relevant code blocks, explaining the purpose and any important considerations:
-   ```python
-   # Convert timestamps to UTC for consistent comparison across time zones.
-   # This prevents edge cases where local time changes affect rebuild detection.
-   utc_timestamp = datetime.utcfromtimestamp(file_stat.st_mtime)
-   ```
-
-4. **Avoid Over-Abstraction**: Prefer clear, well-documented inline code over excessive function decomposition when logic is sequential and context-dependent. Functions should serve genuine reusability, not just file organization.
-
-5. **Self-Contained When Practical**: Reduce dependencies on external shared utilities when the logic is straightforward enough to inline with good documentation.
-
-#### Implementation Benefits
-
-- **Maintainability**: Future developers can quickly understand both implementation and design rationale.
-- **Debugging**: When code fails, documentation helps identify which logical step failed and why.
-- **Knowledge Transfer**: Code serves as documentation of the problem domain, not just the solution.
-- **Reduced Cognitive Load**: Readers don't need to mentally reconstruct the author's reasoning.
-
-#### When to Apply
-
-Use literate programming for:
-- Complex algorithms with multiple phases or decision points.
-- Code implementing business logic rather than simple plumbing.
-- Code where the "why" is not immediately obvious from the "what".
-- Integration point between systems where context matters.
-
-Avoid over-documenting:
-- Simple utility functions where intent is clear from the signature
-- Trivial getters/setters or obvious wrapper code
-- Code that's primarily syntactic sugar over well-known patterns
-
-# Common failure modes when helping
-
-## The XY Problem
-
-The XY problem occurs when someone asks about their attempted solution (Y) instead of their actual underlying problem (X).
-
-### The Pattern
-1. User wants to accomplish goal X
-2. User thinks Y is the best approach to solve X
-3. User asks specifically about Y, not X
-4. Helper becomes confused by the odd/narrow request
-5. Time is wasted on suboptimal solutions
-
-### Warning Signs to Watch For
-- Focus on a specific technical method without explaining why
-- Resistance to providing broader context when asked
-- Rejecting alternative approaches outright
-- Questions that seem oddly narrow or convoluted
-- "How do I get the last 3 characters of a filename?" (when they want file extension)
-
-### How to Avoid It (As Helper)
-- **Ask probing questions**: "What are you trying to accomplish overall?"
-- **Request context**: "Can you explain the bigger picture?"
-- **Challenge assumptions**: "Why do you think this approach will work?"
-- **Offer alternatives**: "Have you considered...?"
-
-### Red Flags in User Requests
-- Very specific technical questions without motivation
-- Unusual or roundabout approaches to common problems
-- Dismissal of "why do you want to do that?" questions
-- Focus on implementation details before problem definition
-
-### Key Principle
-Always try to understand the fundamental problem (X) before helping with the proposed solution (Y). The user's approach may not be optimal or may indicate they're solving the wrong problem entirely.

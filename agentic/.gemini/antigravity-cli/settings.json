@@ -100,8 +100,9 @@
       "read_url(docs.jj-vcs.dev)",
       "read_url(github.com)",
       "read_url(raw.githubusercontent.com)",
+      "command(stow)",
       "command(uname)",
-      "command(stow)"
+      "command(typst)"
     ]
   },
   "toolPermission": "proceed-in-sandbox",
@@ -125,6 +126,7 @@
     "/home/shank/dotfiles",
     "/home/shank/tmp/jj-playground",
     "/workdisk/shank/data",
-    "/workdisk/shank/tianoshield-ws/uefi-rs-shank"
+    "/workdisk/shank/tianoshield-ws/uefi-rs-shank",
+    "/home/shank/RlSync/Zotero_Files/Shanks Collection/Books"
   ]
 }
