@@ -56,6 +56,15 @@ return {
       if vim.o.background == "light" then
         hl["@markup.heading"] = { fg = c.fg, bold = true }
         hl.Title = { fg = c.fg, bold = true }
+
+        -- High-contrast cursor word references
+        local ref_bg = "#dbe1ec"
+        hl.LspReferenceText = { bg = ref_bg }
+        hl.LspReferenceRead = { bg = ref_bg }
+        hl.LspReferenceWrite = { bg = ref_bg, underline = true, sp = c.orange }
+
+        -- Crisp inlay hints without muddy background boxes
+        hl.LspInlayHint = { fg = c.comment, bg = "none", italic = true }
       end
     end,
   },
