@@ -708,6 +708,9 @@ binds {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
+// lock when closing lid
+spawn-at-startup "swayidle" "-w" "before-sleep" "pgrep -x gtklock || gtklock -d" "lock" "pgrep -x gtklock || gtklock -d"
+
 // wallpaper
 spawn-at-startup "awww-daemon"
 
