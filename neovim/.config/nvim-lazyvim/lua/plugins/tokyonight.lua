@@ -58,13 +58,13 @@ return {
         hl.Title = { fg = c.fg, bold = true }
 
         -- High-contrast cursor word references
-        local ref_bg = "#dbe1ec"
+        local ref_bg = "#c8d0df"
         hl.LspReferenceText = { bg = ref_bg }
         hl.LspReferenceRead = { bg = ref_bg }
         hl.LspReferenceWrite = { bg = ref_bg, underline = true, sp = c.orange }
 
-        -- Crisp inlay hints without muddy background boxes
-        hl.LspInlayHint = { fg = c.comment, bg = "none", italic = true }
+        -- Inlay hints with a faint background
+        hl.LspInlayHint = { fg = c.comment, bg = c.bg_highlight }
       end
     end,
   },
