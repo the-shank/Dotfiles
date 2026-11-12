@@ -126,6 +126,7 @@
     "format": "{text}",
     "tooltip": true,
     "on-click": "tomat toggle",
+    "on-click-middle": "pomo undo",
     "on-click-right": "tomat skip"
   },
   "bluetooth": {
