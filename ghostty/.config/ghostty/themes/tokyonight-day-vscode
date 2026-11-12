@@ -1,9 +1,9 @@
 # Terminal Colors
-background = #e6e7ed
+background = #dddee4
 foreground = #343b59
 cursor-color = #343b59
-cursor-text = #e6e7ed
-selection-background = #d6d8df
+cursor-text = #dddee4
+selection-background = #cbccd3
 selection-foreground = #343b59
 
 # ANSI Colors (Normal 0-7)
