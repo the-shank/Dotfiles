@@ -120,7 +120,7 @@
     "custom/power"
   ],
   "custom/tomat": {
-    "exec": "tomat status -f '󰔛 {time} {state}'",
+    "exec": "tomat status | sed -e 's/🍅/󰔛/' -e 's/☕/󰛊/' -e 's/🏖️/󰛊/' -e 's/🏖/󰛊/'",
     "interval": 1,
     "return-type": "json",
     "format": "{text}",
