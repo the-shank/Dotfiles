@@ -190,6 +190,7 @@
 }
 
 #custom-tomat {
+  color: #000000;
   padding: 0 10px;
   margin: 0 5px;
   border-radius: 5px;
@@ -197,31 +198,31 @@
 
 #custom-tomat.work {
   background-color: #ff6b6b;
-  color: #ffffff;
+  color: #000000;
 }
 
 #custom-tomat.work-paused {
   background-color: #ff9999;
-  color: #ffffff;
+  color: #000000;
 }
 
 #custom-tomat.break {
   background-color: #4ecdc4;
-  color: #ffffff;
+  color: #000000;
 }
 
 #custom-tomat.break-paused {
   background-color: #7dd3db;
-  color: #ffffff;
+  color: #000000;
 }
 
 #custom-tomat.long-break {
   background-color: #45b7d1;
-  color: #ffffff;
+  color: #000000;
 }
 
 #custom-tomat.long-break-paused {
   background-color: #74c0db;
-  color: #ffffff;
+  color: #000000;
 }
 
