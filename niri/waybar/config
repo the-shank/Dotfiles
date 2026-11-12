@@ -104,9 +104,9 @@
   // },
   // Configuration - modules-right
   "modules-right": [
-    "custom/keyboard-layout",
-    "idle_inhibitor",
     "custom/tomat",
+    "custom/keyboard-layout",
+    // "idle_inhibitor",
     "disk",
     "cpu",
     "memory",
