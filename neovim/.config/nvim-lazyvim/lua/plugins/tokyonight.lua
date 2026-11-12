@@ -50,6 +50,7 @@ return {
         }
       else
         c.comment = "#828bb8"
+        c.fg_gutter = "#737aa2"
       end
     end,
     on_highlights = function(hl, c)
