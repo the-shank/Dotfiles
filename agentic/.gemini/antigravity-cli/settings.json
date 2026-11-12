@@ -2,7 +2,7 @@
   "agentMode": "auto",
   "allowNonWorkspaceAccess": true,
   "colorScheme": "light",
-  "model": "Gemini 3.8 Flash (Medium)",
+  "model": "Gemini 4 Hydrogen (Medium)",
   "notifications": true,
   "permissions": {
     "allow": [
