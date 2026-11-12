@@ -1,0 +1,239 @@
+#!/bin/sh
+set -eu
+
+VAULT_DIR="${POMO_VAULT_DIR:-/home/shank/RlSync/MyBrain}"
+LOG_FILE="${POMO_LOG_FILE:-$VAULT_DIR/pomodoro_log.md}"
+TOMAT_CONFIG="${POMO_TOMAT_CONFIG:-$HOME/.config/tomat/config.toml}"
+
+ensure_file() {
+    mkdir -p "$(dirname "$LOG_FILE")"
+    if [ ! -f "$LOG_FILE" ] || [ ! -s "$LOG_FILE" ]; then
+        cat << 'EOF' > "$LOG_FILE"
+# Pomodoro Log
+
+| Date | Time | Duration | Status |
+| :--- | :--- | :---: | :--- |
+EOF
+    fi
+}
+
+send_notification() {
+    urgency="${1:-normal}"
+    shift
+    if command -v notify-send >/dev/null 2>&1; then
+        notify-send -u "$urgency" "Tomat" "$@" 2>/dev/null || true
+    fi
+}
+
+get_work_duration() {
+    if [ -f "$TOMAT_CONFIG" ]; then
+        duration=$(awk -F'=' '/^[[:space:]]*work[[:space:]]*=/ {gsub(/[^0-9.]/, "", $2); print int($2)}' "$TOMAT_CONFIG" 2>/dev/null || true)
+        if [ -n "$duration" ] && [ "$duration" -gt 0 ] 2>/dev/null; then
+            printf '%dm' "$duration"
+            return
+        fi
+    fi
+    printf '50m'
+}
+
+cmd_log() {
+    ensure_file
+    date=$(date +'%Y-%m-%d')
+    time=$(date +'%H:%M')
+    duration=$(get_work_duration)
+
+    printf '| %s | %s | %s | completed |\n' "$date" "$time" "$duration" >> "$LOG_FILE"
+}
+
+cmd_undo() {
+    # Guard 1: Active timer check
+    if command -v tomat >/dev/null 2>&1; then
+        tomat_status=$(tomat status 2>/dev/null || true)
+        if [ -n "$tomat_status" ]; then
+            phase_class=$(printf '%s' "$tomat_status" | jq -r '.class // empty' 2>/dev/null || true)
+            case "$phase_class" in
+                work*)
+                    send_notification normal "Timer is currently active. Stop or skip before discarding."
+                    printf 'Timer is currently active (%s). Discard refused.\n' "$phase_class" >&2
+                    return 0
+                    ;;
+            esac
+        fi
+    fi
+
+    # Guard 2: Missing or empty file
+    if [ ! -f "$LOG_FILE" ] || [ ! -s "$LOG_FILE" ]; then
+        send_notification low "No recorded sessions to discard."
+        printf 'No recorded sessions to discard.\n' >&2
+        return 0
+    fi
+
+    # Guard 3: Find last non-empty line
+    last_line=$(awk 'NF {last=$0} END {print last}' "$LOG_FILE")
+    if [ -z "$last_line" ] || ! printf '%s\n' "$last_line" | grep -qE '^\|\s*[0-9]{4}-[0-9]{2}-[0-9]{2}'; then
+        send_notification low "No recorded sessions to discard."
+        printf 'No recorded sessions to discard.\n' >&2
+        return 0
+    fi
+
+    today=$(date +'%Y-%m-%d')
+    entry_date=$(printf '%s\n' "$last_line" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2); print $2}')
+    entry_time=$(printf '%s\n' "$last_line" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $3); print $3}')
+    entry_status=$(printf '%s\n' "$last_line" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $5); print $5}')
+
+    # Guard 4: Recency (today only)
+    if [ "$entry_date" != "$today" ]; then
+        send_notification low "No sessions from today to discard (last was $entry_date)."
+        printf 'No sessions from today to discard (last was %s).\n' "$entry_date" >&2
+        return 0
+    fi
+
+    # Guard 5: Already discarded
+    if [ "$entry_status" = "discarded" ]; then
+        send_notification low "Session at $entry_time is already marked discarded."
+        printf 'Session at %s is already marked discarded.\n' "$entry_time" >&2
+        return 0
+    fi
+
+    # In-place update of the last non-empty line from completed to discarded
+    tmp_file=$(mktemp "$(dirname "$LOG_FILE")/.pomo_tmp.XXXXXX")
+    awk '
+        NF { last_nr=NR }
+        { lines[NR]=$0 }
+        END {
+            for (i=1; i<=NR; i++) {
+                if (i == last_nr && lines[i] ~ /completed/) {
+                    sub(/completed/, "discarded", lines[i])
+                }
+                print lines[i]
+            }
+        }
+    ' "$LOG_FILE" > "$tmp_file"
+    mv "$tmp_file" "$LOG_FILE"
+
+    today_completed=$(grep -cE "^\|\s*${today}\s*\|.*\|\s*completed\s*\|" "$LOG_FILE" 2>/dev/null || true)
+    today_completed="${today_completed:-0}"
+
+    send_notification normal "Marked ${entry_time} session as discarded (Today: ${today_completed} completed)"
+    printf 'Marked %s session as discarded (Today: %s completed).\n' "$entry_time" "$today_completed"
+}
+
+cmd_stats() {
+    if [ ! -f "$LOG_FILE" ] || [ ! -s "$LOG_FILE" ]; then
+        printf 'No Pomodoro logs found at %s\n' "$LOG_FILE"
+        return 0
+    fi
+
+    awk -F'|' '
+    function trim(str) {
+        gsub(/^[[:space:]]+|[[:space:]]+$/, "", str)
+        return str
+    }
+    function repeat(char, count) {
+        res = ""
+        for (i=0; i<count; i++) res = res char
+        return res
+    }
+
+    BEGIN {
+        "date +%Y-%m-%d" | getline today
+        close("date +%Y-%m-%d")
+    }
+
+    /^\|\s*[0-9]{4}-[0-9]{2}-[0-9]{2}/ {
+        date = trim($2)
+        duration_str = trim($4)
+        status = trim($5)
+
+        # Parse duration (e.g. 50m)
+        dur = duration_str
+        gsub(/[^0-9]/, "", dur)
+        if (dur == "" || dur == 0) dur = 50
+
+        if (status == "completed") {
+            completed[date]++
+            minutes[date] += dur
+            all_dates[date] = 1
+        } else if (status == "discarded") {
+            discarded[date]++
+            all_dates[date] = 1
+        }
+    }
+
+    END {
+        c_today = completed[today] + 0
+        d_today = discarded[today] + 0
+        m_today = minutes[today] + 0
+        h_today = m_today / 60
+
+        printf "\n=== Pomodoro Focus Statistics ===\n"
+        printf "Today (%s): %d completed (%.1fh)", today, c_today, h_today
+        if (d_today > 0) {
+            printf ", %d discarded\n", d_today
+        } else {
+            printf "\n"
+        }
+        printf "\nRecent Activity:\n"
+
+        # Generate last 7 days list
+        total_week_completed = 0
+        total_week_minutes = 0
+
+        for (d=6; d>=0; d--) {
+            cmd = "date -d \"" d " days ago\" +%Y-%m-%d"
+            cmd | getline day_str
+            close(cmd)
+
+            cnt = completed[day_str] + 0
+            min = minutes[day_str] + 0
+            hrs = min / 60
+            bar = repeat("█", cnt)
+
+            printf "%s  [%2d]  %-14s  %4.1fh\n", day_str, cnt, bar, hrs
+
+            total_week_completed += cnt
+            total_week_minutes += min
+        }
+
+        printf "\nPast 7 days total: %d completed sessions (%.1f focus hours)\n\n", \
+            total_week_completed, (total_week_minutes / 60)
+    }
+    ' "$LOG_FILE"
+}
+
+cmd_edit() {
+    ensure_file
+    editor="${EDITOR:-nvim}"
+    if ! command -v "$editor" >/dev/null 2>&1; then
+        editor="nvim"
+    fi
+    exec "$editor" "$LOG_FILE"
+}
+
+case "${1:-stats}" in
+    -h|--help|help)
+        printf 'Usage: pomo [stats|log|undo|edit]\n\n'
+        printf 'Commands:\n'
+        printf '  stats (default)  Show focus summary and 7-day bar chart\n'
+        printf '  log              Record a completed work session\n'
+        printf '  undo             Mark the most recent session today as discarded\n'
+        printf '  edit             Open the log file in an editor (nvim) for manual editing\n'
+        exit 0
+        ;;
+    log)
+        cmd_log
+        ;;
+    undo|discard)
+        cmd_undo
+        ;;
+    edit)
+        cmd_edit
+        ;;
+    stats)
+        cmd_stats
+        ;;
+    *)
+        printf 'Usage: pomo [stats|log|undo|edit]\n' >&2
+        exit 1
+        ;;
+esac
