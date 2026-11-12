@@ -54,7 +54,7 @@
     color: #e3e3ea;
     background-color: @base1;
     font-family: "Iosvmata Nerd Font SemiBold, JetBrainsMono Semibold";
-    font-size: 12px;
+    font-size: 13px;
     margin: 0px;
     padding: 0px;
 }
@@ -86,7 +86,7 @@
 }
 
 #workspaces {
-    font-size:12px;
+    font-size:13px;
 }
 
 #workspaces button {
@@ -116,7 +116,7 @@
 
 #window {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 #network.disconnected {
@@ -186,5 +186,42 @@
 #custom-power {
     margin-left:14px;
     margin-right:14px;
-    font-size:12px;
+    font-size:13px;
 }
+
+#custom-tomat {
+  padding: 0 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+#custom-tomat.work {
+  background-color: #ff6b6b;
+  color: #ffffff;
+}
+
+#custom-tomat.work-paused {
+  background-color: #ff9999;
+  color: #ffffff;
+}
+
+#custom-tomat.break {
+  background-color: #4ecdc4;
+  color: #ffffff;
+}
+
+#custom-tomat.break-paused {
+  background-color: #7dd3db;
+  color: #ffffff;
+}
+
+#custom-tomat.long-break {
+  background-color: #45b7d1;
+  color: #ffffff;
+}
+
+#custom-tomat.long-break-paused {
+  background-color: #74c0db;
+  color: #ffffff;
+}
+

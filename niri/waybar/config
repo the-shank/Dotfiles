@@ -106,6 +106,7 @@
   "modules-right": [
     "custom/keyboard-layout",
     "idle_inhibitor",
+    "custom/tomat",
     "disk",
     "cpu",
     "memory",
@@ -118,6 +119,15 @@
     "tray",
     "custom/power"
   ],
+  "custom/tomat": {
+    "exec": "tomat status",
+    "interval": 1,
+    "return-type": "json",
+    "format": "{text}",
+    "tooltip": true,
+    "on-click": "tomat toggle",
+    "on-click-right": "tomat skip"
+  },
   "bluetooth": {
     "format": " {status}",
     "format-connected": " {device_alias}",

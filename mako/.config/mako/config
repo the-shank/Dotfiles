@@ -21,3 +21,9 @@ default-timeout=10000
 [urgency=high]
 
 ignore-timeout=1
+
+[app-name="Tomat"]
+background-color=#2d3748
+text-color=#ffffff
+border-color=#4a5568
+default-timeout=5000

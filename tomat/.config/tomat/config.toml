@@ -1,0 +1,6 @@
+[timer]
+work = 50.0
+break = 10.0
+long_break = 15.0
+sessions = 3
+auto_advance = "none"
