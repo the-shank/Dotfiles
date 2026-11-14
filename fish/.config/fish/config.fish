@@ -596,6 +596,18 @@ if test -e /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish
     source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish
 end
 fish_add_path --prepend ~/.nix-profile/bin
+# Fish initializes $fish_complete_path before nix-daemon.fish updates $XDG_DATA_DIRS,
+# so register Nix profile vendor_completions.d explicitly after user completions.
+for profile in (string split ' ' -- $NIX_PROFILES)
+    set -l comp_dir "$profile/share/fish/vendor_completions.d"
+    if test -d "$comp_dir"; and not contains -- "$comp_dir" $fish_complete_path
+        if set -q fish_complete_path[2]
+            set fish_complete_path $fish_complete_path[1] "$comp_dir" $fish_complete_path[2..]
+        else
+            set -a fish_complete_path "$comp_dir"
+        end
+    end
+end
 
 # disable stty
 stty -ixon
