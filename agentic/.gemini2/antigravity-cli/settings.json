@@ -88,7 +88,6 @@
       "command(regex:git diff.*)"
     ]
   },
-  "toolPermission": "always-proceed",
   "trustedWorkspaces": [
     "/home/common/aunor-ws",
     "/home/common/aunor-ws/Aunor.git/wt-llm",
