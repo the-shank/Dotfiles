@@ -66,6 +66,11 @@ return {
 
         -- Inlay hints with a faint background
         hl.LspInlayHint = { fg = c.comment, bg = c.bg_highlight }
+
+        -- Lighter indent guides (~50% blended toward c.bg)
+        hl.SnacksIndent = { fg = "#bdbfc8", nocombine = true }
+        hl.SnacksIndentScope = { fg = "#88a1a0", nocombine = true }
+        hl.SnacksIndentChunk = { fg = "#88a1a0", nocombine = true }
       end
     end,
   },
