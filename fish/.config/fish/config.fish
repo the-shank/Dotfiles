@@ -113,13 +113,6 @@ setenv GROFF_NO_SGR 1
 
 set -g theme_nerd_fonts yes
 
-if status --is-login
-    # set -gx PATH $PATH ~/.bin
-    # set -gx PATH $PATH ~/.local/bin
-    fish_add_path --global $HOME/.bin
-    fish_add_path --global $HOME/.local/bin
-end
-
 if type -q bat
     abbr -a -g cat "bat --paging=never"
 end
@@ -530,23 +523,23 @@ if type -q ssh-agent
     end
 end
 
-# user paths
-fish_add_path $HOME/.bin
-fish_add_path $HOME/.local/bin
-fish_add_path /usr/local/go/bin
-fish_add_path $HOME/.local/gobin
-fish_add_path $HOME/.cargo/bin
-# fish_add_path $HOME/Applications/bear/bin
-fish_add_path $HOME/Applications/aflplusplus/bin
-fish_add_path $HOME/Applications/aflplusplus/usr/local/bin
-fish_add_path $HOME/.npm-global/bin
-fish_add_path $HOME/Applications/ghidra
-# fish_add_path $HOME/Applications/llvm-13-release/bin
-# fish_add_path /usr/lib/llvm-13/bin
-fish_add_path $HOME/code/applications/codeql-home/codeql
-fish_add_path /opt/cuda/bin
-fish_add_path $HOME/Applications/Antigravity-x64/
-fish_add_path $HOME/Applications/AntigravityIDE/
+# user paths (lowest-to-highest priority; each fish_add_path --path prepends)
+fish_add_path --path $HOME/Applications/AntigravityIDE/
+fish_add_path --path $HOME/Applications/Antigravity-x64/
+fish_add_path --path /opt/cuda/bin
+fish_add_path --path $HOME/code/applications/codeql-home/codeql
+# fish_add_path --path /usr/lib/llvm-13/bin
+# fish_add_path --path $HOME/Applications/llvm-13-release/bin
+fish_add_path --path $HOME/Applications/ghidra
+fish_add_path --path $HOME/.npm-global/bin
+fish_add_path --path $HOME/Applications/aflplusplus/usr/local/bin
+fish_add_path --path $HOME/Applications/aflplusplus/bin
+# fish_add_path --path $HOME/Applications/bear/bin
+fish_add_path --path $HOME/.cargo/bin
+fish_add_path --path $HOME/.local/gobin
+fish_add_path --path /usr/local/go/bin
+fish_add_path --path $HOME/.local/bin
+fish_add_path --path $HOME/.bin
 
 # custom env vars
 set --export FUZZERR_PROJ_DIR $HOME/code/research/FuzzERR
@@ -580,7 +573,9 @@ if [ -d /evaldisk/shank/.cargo ]
     setenv CARGO_HOME /evaldisk/shank/.cargo
 end
 
-fish_add_path $CARGO_HOME/bin
+if test -n "$CARGO_HOME"
+    fish_add_path --path $CARGO_HOME/bin
+end
 
 # purs3lab stuff (end) <<<<<
 
@@ -595,7 +590,6 @@ setenv BAT_THEME ansi
 if test -e /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish
     source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish
 end
-fish_add_path --prepend ~/.nix-profile/bin
 # Fish initializes $fish_complete_path before nix-daemon.fish updates $XDG_DATA_DIRS,
 # so register Nix profile vendor_completions.d explicitly after user completions.
 for profile in (string split ' ' -- $NIX_PROFILES)
@@ -624,7 +618,7 @@ if test -f ~/.slack_notification_webhook
 end
 
 # exercism
-fish_add_path /home/shank/.local/bin/exercism-3.5.4-linux-x86_64
+fish_add_path --path /home/shank/.local/bin/exercism-3.5.4-linux-x86_64
 
 # sccache
 setenv SCCACHE_DIR /home/common/data/sccache
@@ -632,6 +626,3 @@ setenv SCCACHE_CACHE_SIZE 10G
 
 # agentic
 # setenv CLAUDE_CODE_DISABLE_1M_CONTEXT 1
-
-# Added by Antigravity CLI installer
-set -gx PATH "/home/shank/.local/bin" $PATH
