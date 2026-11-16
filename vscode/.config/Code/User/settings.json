@@ -235,7 +235,7 @@
       "sideBar.background": "#232a2e"
     }
   },
-  "window.zoomLevel": 0.4,
+  "window.zoomLevel": 0.5,
   "cmake.pinnedCommands": [
     "workbench.action.tasks.configureTaskRunner",
     "workbench.action.tasks.runTask"
