@@ -1,3 +1,14 @@
+local function blend_50(fg, bg)
+  local r1, g1, b1 = tonumber(fg:sub(2, 3), 16), tonumber(fg:sub(4, 5), 16), tonumber(fg:sub(6, 7), 16)
+  local r2, g2, b2 = tonumber(bg:sub(2, 3), 16), tonumber(bg:sub(4, 5), 16), tonumber(bg:sub(6, 7), 16)
+  return string.format(
+    "#%02x%02x%02x",
+    math.floor((r1 + r2) / 2 + 0.5),
+    math.floor((g1 + g2) / 2 + 0.5),
+    math.floor((b1 + b2) / 2 + 0.5)
+  )
+end
+
 return {
   "folke/tokyonight.nvim",
   opts = {
@@ -66,12 +77,13 @@ return {
 
         -- Inlay hints with a faint background
         hl.LspInlayHint = { fg = c.comment, bg = c.bg_highlight }
-
-        -- Lighter indent guides (~50% blended toward c.bg)
-        hl.SnacksIndent = { fg = "#bdbfc8", nocombine = true }
-        hl.SnacksIndentScope = { fg = "#88a1a0", nocombine = true }
-        hl.SnacksIndentChunk = { fg = "#88a1a0", nocombine = true }
       end
+
+      -- Dampen indent guides (~50% blended toward c.bg) for both light and dark
+      hl.SnacksIndent = { fg = blend_50(c.fg_gutter, c.bg), nocombine = true }
+      local scope_fg = blend_50(c.blue1, c.bg)
+      hl.SnacksIndentScope = { fg = scope_fg, nocombine = true }
+      hl.SnacksIndentChunk = { fg = scope_fg, nocombine = true }
     end,
   },
 }
