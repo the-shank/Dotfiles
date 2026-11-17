@@ -29,8 +29,17 @@ function fish_prompt --description 'Write out the prompt'
         set prompt_status $status_color "[" $last_status "]" $normal
     end
 
+    set -l nix_prompt ""
+    if test -n "$IN_NIX_SHELL"
+        set -l nix_color (set_color brcyan)
+        set nix_prompt $nix_color "[nix:" $IN_NIX_SHELL "]" $normal " "
+    else if string match -q '/nix/store/*' $PATH
+        set -l nix_color (set_color brcyan)
+        set nix_prompt $nix_color "[nix]" $normal " "
+    end
+
     # echo -s (prompt_login) ' ' $cwd_color (prompt_pwd) $vcs_color (fish_vcs_prompt) $normal ' ' $prompt_status
     # echo -s $time_color '(' $current_time ') ' $normal (prompt_login) ' ' $cwd_color (prompt_pwd) $vcs_color (fish_vcs_prompt) $normal ' ' $prompt_status
     echo -s (prompt_login) ' ' $cwd_color (prompt_pwd) $vcs_color (fish_vcs_prompt) $normal ' ' $prompt_status $time_color ' (' $current_time ')' $normal
-    echo -n -s $status_color $suffix ' ' $normal
+    echo -n -s $nix_prompt $status_color $suffix ' ' $normal
 end
