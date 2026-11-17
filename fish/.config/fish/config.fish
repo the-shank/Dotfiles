@@ -602,6 +602,9 @@ for profile in (string split ' ' -- $NIX_PROFILES)
         end
     end
 end
+if command -q nix-your-shell
+    nix-your-shell fish | source
+end
 
 # disable stty
 stty -ixon
