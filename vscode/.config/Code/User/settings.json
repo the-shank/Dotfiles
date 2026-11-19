@@ -17,7 +17,8 @@
     "gpu.scholar.rcac.purdue.edu": "linux",
     "qstruct": "linux",
     "qstruct.ecn.purdue.edu": "linux",
-    "ececomp5": "linux"
+    "ececomp5": "linux",
+    "purs3guava": "linux"
   },
   // font
   "editor.fontFamily": "Iosvmata Nerd Font, Noto Sans Mono, JetBrains Mono, Codelia, SF Mono, FiraCode Nerd Font, NotoSansMono Nerd Font, Iosevka, Droid Sans Mono, monospace",
