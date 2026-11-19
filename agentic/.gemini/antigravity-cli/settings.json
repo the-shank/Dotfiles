@@ -1,5 +1,4 @@
 {
-  "agentMode": "auto",
   "allowNonWorkspaceAccess": true,
   "colorScheme": "light",
   "model": "Gemini 4 Hydrogen (Medium)",
