@@ -116,8 +116,19 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- cursorline underline
+local function blend_color(fg, bg, alpha)
+  local r1, g1, b1 = bit.rshift(fg, 16), bit.band(bit.rshift(fg, 8), 0xff), bit.band(fg, 0xff)
+  local r2, g2, b2 = bit.rshift(bg, 16), bit.band(bit.rshift(bg, 8), 0xff), bit.band(bg, 0xff)
+  local r = math.floor(r1 * alpha + r2 * (1 - alpha) + 0.5)
+  local g = math.floor(g1 * alpha + g2 * (1 - alpha) + 0.5)
+  local b = math.floor(b1 * alpha + b2 * (1 - alpha) + 0.5)
+  return string.format("#%02x%02x%02x", r, g, b)
+end
+
 local function set_cursorline_underline()
-  vim.api.nvim_set_hl(0, "CursorLine", { underline = true })
+  local normal = vim.api.nvim_get_hl(0, { name = "Normal", link = false })
+  local sp = (normal.fg and normal.bg) and blend_color(normal.fg, normal.bg, 0.5) or nil
+  vim.api.nvim_set_hl(0, "CursorLine", { underline = true, sp = sp })
 end
 
 set_cursorline_underline()
@@ -126,4 +137,3 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",
   callback = set_cursorline_underline,
 })
-
