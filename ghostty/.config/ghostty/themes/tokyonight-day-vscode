@@ -26,3 +26,6 @@ palette = 13=#5a3e8e
 palette = 14=#006c86
 palette = 15=#343b59
 
+# Match Glamour's light-theme inline code background (ANSI 254) to the terminal background
+palette = 254=#dddee4
+
