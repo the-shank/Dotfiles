@@ -71,12 +71,6 @@ set --export BROWSER firefox
 # set --export NVIM_APPNAME nvim-nvchad
 set --export NVIM_APPNAME nvim-lazyvim
 
-# Keep the terminal's TERM when its terminfo exists; warn and fall back otherwise
-if status is-interactive; and type -q infocmp; and not infocmp "$TERM" >/dev/null 2>&1
-    echo "warning: terminfo for '$TERM' not found, falling back to xterm-256color" >&2
-    set --export TERM xterm-256color
-end
-
 # Suppresses fish's intro message
 set fish_greeting
 #function fish_greeting
@@ -607,6 +601,12 @@ for profile in (string split ' ' -- $NIX_PROFILES)
 end
 if command -q nix-your-shell
     nix-your-shell fish | source
+end
+
+# Keep the terminal's TERM when its terminfo exists; warn and fall back otherwise
+if status is-interactive; and type -q infocmp; and not infocmp "$TERM" >/dev/null 2>&1
+    echo "warning: terminfo for '$TERM' not found, falling back to xterm-256color" >&2
+    set --export TERM xterm-256color
 end
 
 # disable stty
