@@ -102,3 +102,7 @@ keybind = ctrl+alt+l=goto_split:right
 
 # alpha-blending = native
 freetype-load-flags = hinting,no-autohint,light
+
+# Distance in pixels or percentage from the top of the cell to the top of the underline.
+# Positive values move the underline DOWN.
+adjust-underline-position = 3
