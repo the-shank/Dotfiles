@@ -1,3 +1,41 @@
+[
+{
+  // Mask ~5% dead-pixel edges on the Dell S3221QS (2560px logical width at kanshi scale 1.5 -> 128px each side)
+  "name": "deadzone",
+  "output": [
+    "Dell Inc. - DELL S3221QS - HDMI-A-1",
+    "Dell Inc. - DELL S3221QS - HDMI-A-2",
+    "Dell Inc. - DELL S3221QS - DP-1",
+    "Dell Inc. - DELL S3221QS - DP-2",
+    "Dell Inc. - DELL S3221QS - DP-3",
+    "Dell Inc. - DELL S3221QS - DP-4"
+  ],
+  "layer": "overlay",
+  "position": "left",
+  "width": 128,
+  "exclusive": true,
+  "modules-left": [],
+  "modules-center": [],
+  "modules-right": []
+},
+{
+  "name": "deadzone",
+  "output": [
+    "Dell Inc. - DELL S3221QS - HDMI-A-1",
+    "Dell Inc. - DELL S3221QS - HDMI-A-2",
+    "Dell Inc. - DELL S3221QS - DP-1",
+    "Dell Inc. - DELL S3221QS - DP-2",
+    "Dell Inc. - DELL S3221QS - DP-3",
+    "Dell Inc. - DELL S3221QS - DP-4"
+  ],
+  "layer": "overlay",
+  "position": "right",
+  "width": 128,
+  "exclusive": true,
+  "modules-left": [],
+  "modules-center": [],
+  "modules-right": []
+},
 {
   "layer": "top", // Waybar at top layer
   "position": "bottom", // Waybar position (top|bottom|left|right)
@@ -284,3 +322,4 @@
     "tooltip": false
   },
 }
+]

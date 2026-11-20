@@ -107,7 +107,7 @@ output "eDP-1" {
 }
 
 output "Dell Inc. DELL S3221QS 6CW07N3" {
-  scale 1.4
+  scale 1.5
   transform "normal"
 }
 
