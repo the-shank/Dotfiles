@@ -22,9 +22,9 @@ return {
     },
     on_colors = function(c)
       if vim.o.background == "light" then
-        c.bg = "#dddee4"
-        c.bg_dark = "#cdcfd6"
-        c.bg_highlight = "#d3d5da"
+        c.bg = "#eef0f4"
+        c.bg_dark = "#dfe1e7"
+        c.bg_highlight = "#e4e6eb"
         c.fg = "#343b59"
         c.fg_dark = "#363c4d"
         c.fg_gutter = "#9da0ab"
