@@ -83,6 +83,8 @@ font-feature = "clig"
 # so open windows switch live without a config reload.
 theme = light:tokyonight-day-vscode,dark:TokyoNight Storm
 
+minimum-contrast = 1.5
+
 # background-opacity = 0.95
 # background-blur = true
 
