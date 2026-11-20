@@ -77,6 +77,26 @@ return {
 
         -- Inlay hints with a faint background
         hl.LspInlayHint = { fg = c.comment, bg = c.bg_highlight }
+
+        -- The stock day diff colors are all blue-grey, the same hue as Visual
+        -- and LspReferenceText, so added, changed and selected text blur
+        -- together. Give each diff kind its own hue; the DiffDelete fg keeps
+        -- the filler hatching faint.
+        hl.DiffAdd = { bg = "#d6e6cc" }
+        hl.DiffDelete = { bg = "#f2dadd", fg = "#e3c3c8" }
+        hl.DiffChange = { bg = "#efe9da" }
+        hl.DiffText = { bg = "#e3cf9c" }
+        hl.DiffTextAdd = { bg = "#b9d6a4" }
+      else
+        -- Same hue split as light, blended onto c.bg so it tracks the
+        -- moon/storm/night background. The palette's green and yellow are
+        -- pastels that blend to grey, so use saturated bases like stock
+        -- DiffDelete's red1, which is already distinct.
+        local util = require("tokyonight.util")
+        hl.DiffAdd = { bg = util.blend_bg("#3d9a3d", 0.25) }
+        hl.DiffChange = { bg = util.blend_bg("#c8902a", 0.10) }
+        hl.DiffText = { bg = util.blend_bg("#c8902a", 0.30) }
+        hl.DiffTextAdd = { bg = util.blend_bg("#3d9a3d", 0.45) }
       end
 
       -- Dampen indent guides (~50% blended toward c.bg) for both light and dark
