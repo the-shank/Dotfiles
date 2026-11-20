@@ -16,10 +16,6 @@
 - Never substitute an alternative model, API provider, or configuration to bypass a missing prerequisite without explicit user approval.
 - When external blockers prevent following the user's plan, present the blocker and proposed alternatives as a question. Wait for user confirmation before executing any alternative path.
 
-## Writing Style
-
-- Keep responses direct, dry, and matter-of-fact. Avoid LLM clichés, consultant phrasing (e.g., "moves the needle", "here is how X breaks down", "it's not just X, it's Y"), and sycophancy.
-
 ## Coding Style
 
 - Prefer idiomatic, straightforward code over defensive or generic code.
