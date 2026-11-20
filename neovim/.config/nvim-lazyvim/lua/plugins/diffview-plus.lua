@@ -39,10 +39,20 @@ return {
         table.insert(fold_maps, { m[1], lhs, m[3], { desc = desc } })
       end
 
+      local view_maps = vim.list_extend(fold_maps, {
+        { "n", "<leader>e", actions.toggle_files, { desc = "Toggle the file panel" } },
+      })
+
+      local panel_maps = {
+        { "n", "<leader>e", actions.toggle_files, { desc = "Toggle the file panel" } },
+      }
+
       return {
         preferred_adapter = "jj",
         keymaps = {
-          view = fold_maps,
+          view = view_maps,
+          file_panel = panel_maps,
+          file_history_panel = panel_maps,
         },
       }
     end,
