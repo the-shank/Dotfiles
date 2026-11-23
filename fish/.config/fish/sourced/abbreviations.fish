@@ -359,4 +359,5 @@ abbr -a -g c3 "CLAUDE_CONFIG_DIR=~/.claude3  CLAUDE_CODE_OAUTH_TOKEN=$CLAUDE_COD
 abbr -a -g c4 "CLAUDE_CONFIG_DIR=~/.claude4  CLAUDE_CODE_OAUTH_TOKEN=$CLAUDE_CODE_OAUTH_TOKEN_1 claude"
 
 # gemini(s)
-abbr -a -g agy2 "agy --gemini_dir=$HOME/.gemini2"
+abbr -a -g agy "agy --remote-control"
+abbr -a -g agy2 "agy --gemini_dir=$HOME/.gemini2 --remote-control"
