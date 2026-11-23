@@ -49,6 +49,7 @@ return {
 
       return {
         preferred_adapter = "jj",
+        persist_selections = { enabled = true },
         keymaps = {
           view = view_maps,
           file_panel = panel_maps,
