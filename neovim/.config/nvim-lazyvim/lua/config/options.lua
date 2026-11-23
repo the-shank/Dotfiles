@@ -36,3 +36,6 @@ vim.g.snacks_animate = false
 
 -- add a ruler at 120
 vim.opt.colorcolumn = "120"
+
+-- match tmux copy-mode 1-line scroll step (default is ver:3,hor:6)
+vim.opt.mousescroll = "ver:1,hor:6"
