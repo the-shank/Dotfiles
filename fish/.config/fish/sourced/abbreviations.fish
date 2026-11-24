@@ -327,6 +327,7 @@ abbr -a -g memst 'zswap-stats; printf "\n"; free -mt'
 
 # nix
 abbr -a -g renix 'ls $HOME/.nix-profile/share/applications/ | xargs -I{} unlink $HOME/.local/share/applications/{}; ln -s $HOME/.nix-profile/share/applications/* $HOME/.local/share/applications'
+abbr -a -g nix-pkgs "nix profile list --json | jq -r '.elements|to_entries[]|[.value.originalUrl,.key]|@tsv' | sed 's/^flake://;s/\t/#/'"
 
 # archlinux
 abbr -a -g pkgs "pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
