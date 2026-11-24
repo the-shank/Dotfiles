@@ -52,14 +52,6 @@ return {
         persist_selections = { enabled = true },
         -- Dim the filler hatching and show old-side insertions as deletions.
         enhanced_diff_hl = true,
-        hooks = {
-          -- gitsigns marks the working-copy buffer, repeating the diff in one
-          -- pane only. Hiding the sign column per window keeps the buffer's
-          -- signs elsewhere; diagnostic signs and fold icons go with it here.
-          diff_buf_win_enter = function(_, winid)
-            vim.wo[winid].signcolumn = "no"
-          end,
-        },
         keymaps = {
           view = view_maps,
           file_panel = panel_maps,
