@@ -75,6 +75,12 @@ return {
         hl.LspReferenceRead = { bg = ref_bg }
         hl.LspReferenceWrite = { bg = ref_bg, underline = true, sp = c.orange }
 
+        -- Stock inline code uses a terminal_black bg, which day inverts into a
+        -- mid blue-grey that leaves the blue fg at ~2.8:1 in hover docs.
+        local code_bg = "#d0d6e4"
+        hl["@markup.raw.markdown_inline"] = { fg = c.blue, bg = code_bg }
+        hl.helpCommand = { fg = c.blue, bg = code_bg }
+
         -- Inlay hints with a faint background
         hl.LspInlayHint = { fg = c.comment, bg = c.bg_highlight }
 
