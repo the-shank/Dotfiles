@@ -354,9 +354,9 @@ abbr -a -g build "nice build"
 # claude(s)
 abbr -a -g claude "CLAUDE_CONFIG_DIR=~/.claude CLAUDE_CODE_OAUTH_TOKEN=$CLAUDE_CODE_OAUTH_TOKEN_1 claude"
 abbr -a -g c1 "CLAUDE_CONFIG_DIR=~/.claude1  CLAUDE_CODE_OAUTH_TOKEN=$CLAUDE_CODE_OAUTH_TOKEN_1 claude"
-abbr -a -g c2 "CLAUDE_CONFIG_DIR=~/.claude2  CLAUDE_CODE_OAUTH_TOKEN=$CLAUDE_CODE_OAUTH_TOKEN_1 claude"
-abbr -a -g c3 "CLAUDE_CONFIG_DIR=~/.claude3  CLAUDE_CODE_OAUTH_TOKEN=$CLAUDE_CODE_OAUTH_TOKEN_1 claude"
-abbr -a -g c4 "CLAUDE_CONFIG_DIR=~/.claude4  CLAUDE_CODE_OAUTH_TOKEN=$CLAUDE_CODE_OAUTH_TOKEN_1 claude"
+abbr -a -g c2 "CLAUDE_CONFIG_DIR=~/.claude2  CLAUDE_CODE_OAUTH_TOKEN=$CLAUDE_CODE_OAUTH_TOKEN_2 claude"
+abbr -a -g c3 "CLAUDE_CONFIG_DIR=~/.claude3  CLAUDE_CODE_OAUTH_TOKEN=$CLAUDE_CODE_OAUTH_TOKEN_3 claude"
+abbr -a -g c4 "CLAUDE_CONFIG_DIR=~/.claude4  CLAUDE_CODE_OAUTH_TOKEN=$CLAUDE_CODE_OAUTH_TOKEN_4 claude"
 
 # gemini(s)
 abbr -a -g agy "agy --remote-control"
