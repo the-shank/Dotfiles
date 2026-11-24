@@ -99,6 +99,12 @@ return {
         hl.DiffTextAdd = { bg = util.blend_bg("#3d9a3d", 0.45) }
       end
 
+      -- Stock TreesitterContext is 80% fg_gutter, which the brighter
+      -- fg_gutter overrides above turn into a mid-tone band that washes out
+      -- the code text. Keep it subtle and mark its edge with an underline.
+      hl.TreesitterContext = { bg = c.bg_highlight }
+      hl.TreesitterContextBottom = { underline = true, sp = c.fg_gutter }
+
       -- Dampen indent guides (~50% blended toward c.bg) for both light and dark
       hl.SnacksIndent = { fg = blend_50(c.fg_gutter, c.bg), nocombine = true }
       local scope_fg = blend_50(c.blue1, c.bg)
