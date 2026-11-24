@@ -61,7 +61,6 @@ return {
         }
       else
         c.comment = "#828bb8"
-        c.fg_gutter = "#737aa2"
       end
     end,
     on_highlights = function(hl, c)
@@ -103,16 +102,24 @@ return {
         hl.DiffChange = { bg = util.blend_bg("#c8902a", 0.10) }
         hl.DiffText = { bg = util.blend_bg("#c8902a", 0.30) }
         hl.DiffTextAdd = { bg = util.blend_bg("#3d9a3d", 0.45) }
+
+        -- Brighten line numbers here rather than overriding c.fg_gutter,
+        -- which tokyonight also uses as the bg for LSP references, folds and
+        -- PmenuSel, where a brighter value washes out the text on top.
+        local line_nr_fg = "#737aa2"
+        hl.LineNr = { fg = line_nr_fg }
+        hl.LineNrAbove = { fg = line_nr_fg }
+        hl.LineNrBelow = { fg = line_nr_fg }
       end
 
-      -- Stock TreesitterContext is 80% fg_gutter, which the brighter
-      -- fg_gutter overrides above turn into a mid-tone band that washes out
+      -- Stock TreesitterContext is 80% fg_gutter, which the brighter light
+      -- fg_gutter override above turns into a mid-tone band that washes out
       -- the code text. Keep it subtle and mark its edge with an underline.
       hl.TreesitterContext = { bg = c.bg_highlight }
-      hl.TreesitterContextBottom = { underline = true, sp = c.fg_gutter }
+      hl.TreesitterContextBottom = { underline = true, sp = hl.LineNr.fg }
 
       -- Dampen indent guides (~50% blended toward c.bg) for both light and dark
-      hl.SnacksIndent = { fg = blend_50(c.fg_gutter, c.bg), nocombine = true }
+      hl.SnacksIndent = { fg = blend_50(hl.LineNr.fg, c.bg), nocombine = true }
       local scope_fg = blend_50(c.blue1, c.bg)
       hl.SnacksIndentScope = { fg = scope_fg, nocombine = true }
       hl.SnacksIndentChunk = { fg = scope_fg, nocombine = true }
