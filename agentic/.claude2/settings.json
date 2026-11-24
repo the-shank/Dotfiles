@@ -8,28 +8,6 @@
     ]
   },
   "model": "opus",
-  "hooks": {
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "msg=$(jq -r '.last_assistant_message // \"\"'); { [[ \"$msg\" == *'?'* ]] || [ ${#msg} -gt 150 ]; } && osc777-notify 'Claude Code' 'Waiting for input'; echo '{}'"
-          }
-        ]
-      }
-    ],
-    "Notification": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "osc777-notify 'Claude Code' 'Approval needed'; echo '{}'"
-          }
-        ]
-      }
-    ]
-  },
   "statusLine": {
     "type": "command",
     "command": "/home/shank/.local/bin/claude-statusline-configdir.sh"
@@ -45,6 +23,6 @@
   },
   "tui": "default",
   "theme": "auto",
-  "inputNeededNotifEnabled": false,
-  "agentPushNotifEnabled": false
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true
 }
