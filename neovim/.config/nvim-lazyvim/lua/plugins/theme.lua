@@ -1,4 +1,4 @@
--- Configure LazyVim to load everforest
+-- Configure the LazyVim colorscheme (rewritten by the to* theme scripts)
 return {
   "LazyVim/LazyVim",
   opts = {
