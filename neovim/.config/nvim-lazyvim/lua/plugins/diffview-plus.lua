@@ -50,12 +50,29 @@ return {
       return {
         preferred_adapter = "jj",
         persist_selections = { enabled = true },
+        -- Dim the filler hatching and show old-side insertions as deletions.
+        enhanced_diff_hl = true,
+        hooks = {
+          -- gitsigns marks the working-copy buffer, repeating the diff in one
+          -- pane only. Hiding the sign column per window keeps the buffer's
+          -- signs elsewhere; diagnostic signs and fold icons go with it here.
+          diff_buf_win_enter = function(_, winid)
+            vim.wo[winid].signcolumn = "no"
+          end,
+        },
         keymaps = {
           view = view_maps,
           file_panel = panel_maps,
           file_history_panel = panel_maps,
         },
       }
+    end,
+
+    -- `require("diffview")` builds its highlights before `setup()` receives
+    -- opts, so `enhanced_diff_hl` would only apply after the next ColorScheme.
+    config = function(_, opts)
+      require("diffview").setup(opts)
+      require("diffview.hl").setup()
     end,
 
     -- `keys` alone makes lazy.nvim defer loading until <leader>dv is pressed,
