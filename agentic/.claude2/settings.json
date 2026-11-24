@@ -1,4 +1,12 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(latexmk:*)",
+      "Bash(pdftotext:*)",
+      "Bash(hunspell:*)",
+      "Bash(./build_sigmetrics.sh)"
+    ]
+  },
   "model": "opus",
   "hooks": {
     "Stop": [
@@ -30,16 +38,13 @@
     "rust-analyzer-lsp@claude-plugins-official": true
   },
   "effortLevel": "high",
+  "modelSettings": {
+    "claude-sonnet-5-5": {
+      "effortLevel": "high"
+    }
+  },
   "tui": "default",
   "theme": "auto",
-  "inputNeededNotifEnabled": true,
-  "agentPushNotifEnabled": true,
-  "permissions": {
-    "allow": [
-      "Bash(latexmk:*)",
-      "Bash(pdftotext:*)",
-      "Bash(hunspell:*)",
-      "Bash(./build_sigmetrics.sh)"
-    ]
-  }
+  "inputNeededNotifEnabled": false,
+  "agentPushNotifEnabled": false
 }
