@@ -39,3 +39,8 @@ vim.opt.colorcolumn = "120"
 
 -- match tmux copy-mode 1-line scroll step (default is ver:3,hor:6)
 vim.opt.mousescroll = "ver:1,hor:6"
+
+-- diff: inline:char splits words on shared letters (`b` vs `binding`), so
+-- highlight whole changed words; linematch:60 pairs up larger reshaped hunks.
+vim.opt.diffopt:remove({ "inline:char", "linematch:40" })
+vim.opt.diffopt:append({ "inline:word", "linematch:60" })
