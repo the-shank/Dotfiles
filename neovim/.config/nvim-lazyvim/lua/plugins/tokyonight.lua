@@ -27,7 +27,6 @@ return {
         c.bg_highlight = "#e4e6eb"
         c.fg = "#343b59"
         c.fg_dark = "#363c4d"
-        c.fg_gutter = "#9da0ab"
         c.comment = "#707280"
         c.blue = "#2959aa"
         c.cyan = "#006c86"
@@ -40,6 +39,10 @@ return {
         c.teal = "#33635c"
         c.red = "#8c4351"
 
+        -- tokyonight derives these from the stock day palette before calling
+        -- on_colors, so they would otherwise ignore the overrides above.
+        -- blend_bg needs c.bg passed explicitly because Util.bg still holds
+        -- the stock day background.
         c.bg_popup = c.bg_dark
         c.bg_statusline = c.bg_dark
         c.bg_sidebar = c.bg_dark
@@ -49,6 +52,12 @@ return {
         c.todo = c.blue
         c.warning = c.yellow
         c.hint = c.teal
+        c.error = c.red
+        c.info = c.cyan
+        c.border_highlight = require("tokyonight.util").blend_bg(c.blue1, 0.8, c.bg)
+        c.git.add = c.green
+        c.git.change = c.blue
+        c.git.delete = c.red
         c.rainbow = {
           c.blue,
           c.yellow,
@@ -67,6 +76,12 @@ return {
       if vim.o.background == "light" then
         hl["@markup.heading"] = { fg = c.fg, bold = true }
         hl.Title = { fg = c.fg, bold = true }
+
+        -- See the dark branch for why line numbers are not set via c.fg_gutter.
+        local line_nr_fg = "#9da0ab"
+        hl.LineNr = { fg = line_nr_fg }
+        hl.LineNrAbove = { fg = line_nr_fg }
+        hl.LineNrBelow = { fg = line_nr_fg }
 
         -- High-contrast cursor word references
         local ref_bg = "#c8d0df"
@@ -112,9 +127,7 @@ return {
         hl.LineNrBelow = { fg = line_nr_fg }
       end
 
-      -- Stock TreesitterContext is 80% fg_gutter, which the brighter light
-      -- fg_gutter override above turns into a mid-tone band that washes out
-      -- the code text. Keep it subtle and mark its edge with an underline.
+      -- Keep the context band subtle and mark its edge with an underline.
       hl.TreesitterContext = { bg = c.bg_highlight }
       hl.TreesitterContextBottom = { underline = true, sp = hl.LineNr.fg }
 
