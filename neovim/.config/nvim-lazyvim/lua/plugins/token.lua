@@ -5,8 +5,6 @@ return {
   priority = 1000,
   opts = {
     plugins = { all = true },
-    styles = {
-      comments = { italic = false },
-    },
+    attributes = { italic = false },
   },
 }
