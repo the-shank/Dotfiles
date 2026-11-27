@@ -110,6 +110,10 @@ setenv GROFF_NO_SGR 1
 
 set -g theme_nerd_fonts yes
 
+# Not `fish_config theme save`: a theme saved to universal variables stays on
+# one variant, while `choose` follows the terminal's light/dark background.
+fish_config theme choose token-ultra
+
 if type -q bat
     abbr -a -g cat "bat --paging=never"
 end
