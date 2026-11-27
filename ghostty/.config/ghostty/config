@@ -110,3 +110,4 @@ freetype-load-flags = hinting,no-autohint,light
 adjust-underline-position = 3
 
 app-notifications = no-clipboard-copy
+window-inherit-working-directory = false
